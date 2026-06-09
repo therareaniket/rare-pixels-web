@@ -4,6 +4,7 @@
 	--primary: #ED0180;
 	--background: #ffffff;
 	--text-black: #000000;
+    --border-color: #ffffff;
 }
 
 
@@ -11,6 +12,7 @@
 	--primary: #ED0180;
 	--background: #000000;
 	--text-black: #ffffff;
+    --border-color: #000000;
 }
 
 
@@ -62,12 +64,17 @@ body {
   	font-family: 'strichpunkt-rg';
 }
 
-.text-rg { font-family: 'strichpunkt-rg'; }
+.text-rg { font-family: 'strichpunkt-rg'; font-weight: 200; }
 .text-md { font-family: 'strichpunkt-md'; }
 .text-sb { font-family: 'strichpunkt-sb'; }
 .text-bd { font-family: 'strichpunkt-bd'; }
 
 .container { max-width: calc(1600px + 36px); padding: 0 18px; margin: 0 auto; }
+.section{ padding: 150px 0; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: 'strichpunkt-sb'; }
-h1, .h1 { font-size: 70px; line-height: 80px; margin-bottom: 20px; text-align: center; }
+/* h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: 'strichpunkt-rg'; } */
+h1, .h1 { font-size: 64px; line-height: 70px; margin-bottom: 20px; }
+h2, .h2 { font-size: 48px; line-height: 54px; margin-bottom: 20px; }
+h6, .h6 { font-size: 22px; line-height: 32px; margin-bottom: 16px; }
+.text-20 { font-size: 20px; line-height: 30px; }
+.text-18 { font-size: 18px; line-height: 24px; }
