@@ -1,18 +1,25 @@
-import Image from "next/image";
+"use client"
+import { useEffect, useState } from "react";
+import HeroSectionMobile from "@/components/Homepage/Mobile/HeroSectionMobile";
+import HeroSectionDesktop from "@/components/Homepage/Desktop/HeroSectionDesktop";
 
 export default function Home() {
-	return (
-    	<>
-			<section>
-				<div className="container">
-					<h1></h1>
-					<h1>ॐ</h1>
-					<h1>Jay Shree Ganesha</h1>
-					<h1>Jay Shree Sai Nath</h1>
-					<h1>Jay Shree Krishna</h1>
-					<h1>Har Har Mahadev</h1>
-				</div>
-			</section>
-    	</>
-  	);
+	const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  	useEffect(() => {
+    	const handleResize = () => { setIsSmallScreen(window.innerWidth < 450); };
+    	
+		window.addEventListener("resize", handleResize);
+    	handleResize();
+    	return () => window.removeEventListener("resize", handleResize);
+  	}, []);
+
+  return (
+    <>
+      	<main>
+			{/* HERO SECTION */}
+        	{isSmallScreen ? <HeroSectionMobile /> : <HeroSectionDesktop />}
+      	</main>
+    </>
+  );
 }
