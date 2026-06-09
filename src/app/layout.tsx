@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/context/ThemeContext";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "RarePixels Design | UI UX Design & Development Company",
@@ -10,7 +12,12 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   	return (
 		<html lang="en" className="h-full antialiased" >
       		<body className="min-h-full flex flex-col">
-				{children}
+				<ThemeProvider>
+					<Header />
+
+					{children}
+					
+				</ThemeProvider>
 			</body>
     	</html>
   	);
