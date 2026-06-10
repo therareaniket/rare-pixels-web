@@ -7,7 +7,7 @@ export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   	useEffect(() => {
-    	const handleResize = () => { setIsSmallScreen(window.innerWidth < 450); };
+    	const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479); };
     	
 		window.addEventListener("resize", handleResize);
     	handleResize();
@@ -17,8 +17,17 @@ export default function Home() {
   return (
     <>
       	<main>
-			{/* HERO SECTION */}
-        	{isSmallScreen ? <HeroSectionMobile /> : <HeroSectionDesktop />}
+        	{isSmallScreen ? 
+				<>
+					{/* MOBILE COMPONENTS */}
+					<HeroSectionMobile />
+				</>
+				: 
+				<>
+					{/* DESKTOP COMPONENTS */}
+					<HeroSectionDesktop />
+				</>
+			}
       	</main>
     </>
   );
