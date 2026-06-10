@@ -78,4 +78,3 @@ const GlassEffect: React.FC<GlassEffectProps> = ({
 };
 
 export default GlassEffect;
-``
