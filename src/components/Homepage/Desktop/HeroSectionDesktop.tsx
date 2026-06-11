@@ -75,14 +75,14 @@ export default function HeroSectionDesktop() {
                     <div className="home-hero-wrapper-desktop">
                         <div className="hm-hero-row-1-wrapper">
                             <div className="hm-hero-text-left">
-                                <h1 className="text-md hm-hero-title">
+                                <h1 className="text-sb hm-hero-title">
                                     Seen.
                                     Remembered.
                                     Chosen.
                                 </h1>
                                 <p className="text-18 text-rg hm-hero-subtitle">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to.</p>
 
-                                <Link href="/" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
+                                <Link href="/" title="Let's Make it Rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
                                     <span className="text-20 text-white">Make It Rare</span>
                                     <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                 </Link>
@@ -100,11 +100,11 @@ export default function HeroSectionDesktop() {
                                             <GlassEffect className="dock site-radius-30">
                                                 <div className="hm-services-title">
                                                     <Image src={service.icon} alt={service.alternate} width={22} height={34}></Image>
-                                                    <span className="text-md h6">{service.title}</span>
+                                                    <span className="text-sb h6">{service.title}</span>
                                                 </div>
                                             </GlassEffect>
 
-                                            <div className={`hm-services-subtitle ${activeIndex === index ? "show" : ""
+                                            <div className={`hm-services-subtitle ${activeIndex === index && showDescription ? "show" : ""
                                                 }`}>
                                                 <p className="text-18 text-rg">{service.description}</p>
                                             </div>
@@ -140,16 +140,16 @@ export default function HeroSectionDesktop() {
                         <div className="hm-hero-row-2-wrapper">
                             <div className="hm-hero-stats-wrapper">
                                 <div className="hm-hero-stats">
-                                    <h2 className="text-md text-primary">100+</h2>
-                                    <p className="text-18 text-rg">Brands Empowered</p>
+                                    <h2 className="text-sb text-primary">100+</h2>
+                                    <p className="text-18 text-md">Brands Empowered</p>
                                 </div>
                                 <div className="hm-hero-stats">
-                                    <h2 className="text-md text-primary">120K+</h2>
-                                    <p className="text-18 text-rg">Lines of Code Crafted</p>
+                                    <h2 className="text-sb text-primary">120K+</h2>
+                                    <p className="text-18 text-md">Lines of Code Crafted</p>
                                 </div>
                                 <div className="hm-hero-stats">
-                                    <h2 className="text-md text-primary">250+</h2>
-                                    <p className="text-18 text-rg">Creative Campaigns</p>
+                                    <h2 className="text-sb text-primary">250+</h2>
+                                    <p className="text-18 text-md">Creative Campaigns</p>
                                 </div>
                             </div>
                         </div>

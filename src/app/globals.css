@@ -10,6 +10,12 @@
     --border-color: #000000;
 
     --glass-box-shadow: inset 2px 2px 1px 0 rgba(66, 66, 66, 0.1), inset -1px -1px 1px 1px rgba(66, 66, 66, 0.1);
+
+    --testimonial-card-1: #F5F8F5;
+    --testimonial-card-2: #FBF9E9;
+    --testimonial-card-3: #FCD4E9;
+    --testimonial-card-4: #D5D8E2;
+    --testimonial-card-5: #FBF8F5;
 }
 
 [data-theme="dark"] {
@@ -19,6 +25,12 @@
     --border-color: #ffffff;
 
     --glass-box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.1), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
+
+    --testimonial-card-1: #424842;
+    --testimonial-card-2: #9A9253;
+    --testimonial-card-3: #760040;
+    --testimonial-card-4: #59638B;
+    --testimonial-card-5: #52504E;
 }
  
 /* ::selection { background-color: ; } */
@@ -114,6 +126,7 @@ h2, .h2 { font-size: 48px; line-height: 54px; margin-bottom: 20px; }
 h6, .h6 { font-size: 22px; line-height: 32px; margin-bottom: 16px; }
 .text-20 { font-size: 20px; line-height: 30px; }
 .text-18 { font-size: 18px; line-height: 24px; }
+.text-14 { font-size: 14px; line-height: 22px; }
  
  
  

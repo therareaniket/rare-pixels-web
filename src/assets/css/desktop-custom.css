@@ -1,5 +1,6 @@
 .text-primary{ color: var(--primary); }
 .link-padding{ padding: 10px 20px; }
+.site-radius-20{ border-radius: 20px; }
 .site-radius-30{ border-radius: 30px; }
 .btn-bg-primary{ background-color: var(--primary); }
 @keyframes eyeFade {  from{ opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
@@ -18,18 +19,55 @@
 .hm-services-title img{ width: 22px; height: auto; object-fit: contain; }
 .hm-services-title .h6{ margin-bottom: 0; }
 .hm-services-content-wrapper{ width: 454px; padding-left: 20px; margin-bottom: 30px; position: relative; transition: all 1s ease-in; }
-.hm-services-subtitle{ width: 414px; padding-left: 20px; max-height: 0; padding-top: 0; overflow: hidden; opacity: 0; transition: max-height 1s ease, opacity 0.5s ease, padding-top 0.4s ease; }
+.hm-services-subtitle{ width: 414px; padding-left: 20px; max-height: 0; padding-top: 0; overflow: hidden; opacity: 0; transition: max-height 1s ease, padding-top 0.4s ease; }
 .hm-services-subtitle.show{ max-height: 100px; opacity: 1; padding-top: 12px; }
 .liquidGlass-wrapper{ border-radius: 30px; width: max-content; }
 .liquidGlass-shine{ border-radius: 30px; }
 .home-hero-banner-image{ display: flex; align-items: center; justify-content: center; position: absolute; right: 265; top: -55px; width: 1000px;  height: 530px; object-fit: contain; animation: eyeFade 0.8s ease; }
-.hm-services-content-wrapper{ opacity: 50%; transition: all 1s ease in out; }
-.hm-services-content-wrapper.active{ opacity: 100%; transition: all 2s ease-in; }
+.hm-services-content-wrapper{ opacity: 50%; }
+.hm-services-content-wrapper.active{ opacity: 100%;  }
 .hm-services-content-wrapper::before{ content: ''; width: 3px; height: 0; background-color: var(--border-color); opacity: 0; position: absolute; top: 0; left: 0; border-radius: 20px; transition: height 1.5s ease, opacity 1s ease; }
 .hm-services-content-wrapper.active::before{ opacity: 30%; height: 100%; }
-.hm-services-content-wrapper .h6{ transition: all 1s ease-in; }
+/* .hm-services-content-wrapper .h6{ transition: all 0.5s ease-in; } */
 .hm-services-content-wrapper.active .h6{ color: var(--primary); }
 
 .hm-hero-stats-wrapper{ display: flex; align-items: flex-start;  gap: 62px; justify-content: space-between; width: max-content; }
 .hm-hero-stats h2{ margin-bottom: 6px; }
 .home-hero-services-highlight-wrapper.for-tablet{ display: none !important; }
+
+/* testimonial section */
+
+.hm-testimonial-section{ padding-top: 50px; padding-bottom: 150px; }
+.testimonial-stats-wrapper{ display: flex; align-items: flex-start; gap: 90px; }
+.testimonial-stats .h2, .testimonial-stats p{ margin-bottom: 0; }
+.testimonial-stats .h2{ margin-bottom: 6px; }
+.hm-testimonial-txt-wrapper{ display: flex; align-items: flex-start; justify-content: space-between; }
+.hm-testimonial-left-text{ width: 615px; }
+
+.testimonial-review-wrapper{ margin-top: 60px; display: flex; align-items: flex-start; gap: 40px; }
+.testimonial-review-video-wrapper{ position: relative; width: 690px; display: flex; align-items: center; justify-content: center; }
+.testimonialreview-main{ width: 508px; height: 508px; background-color: var(--testimonial-card-5); display: flex; align-items: center; justify-content: center; border-radius: 20px; }
+.testimonial-image-2{ position: absolute; left: 0; bottom: 65px; }
+.testimonial-image-3{ position: absolute; right: 0; top: 60px;}
+
+.testimonial-cards-wrapper{ width: 870px; }
+
+.testimonial-client-text{ padding: 20px; }
+.client-review-wrapper { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 14px; }
+.client-initital{ display: flex; gap: 20px; }
+.client-name-designation .h6{ margin-bottom: 4px; }
+.client-initital span{ margin-bottom: 0; padding: 14px 16px; background-color: var(--primary);  border-radius: 20px; }
+
+.client-rating{ display: flex; align-items: center; gap: 4px; }
+.testimonial-text-1{ background-color: var(--testimonial-card-1); }
+.testimonial-text-2{ background-color: var(--testimonial-card-2); }
+.testimonial-text-3{ background-color: var(--testimonial-card-3); }
+.testimonial-text-4{ background-color: var(--testimonial-card-4); }
+.testimonial-text-5{ background-color: var(--testimonial-card-5); }
+.testimonial-swiper-wrapper{ margin-top: 40px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+
+.testimonial-swiper-arrow{ padding: 14px; border-radius: 20px; background-color: var(--primary); cursor: pointer; transition: all 0.5s ease-in; }
+.testimonial-swiper-right:hover { background-color: #061651; }
+.testimonial-swiper-left:hover { background-color: #061651; }
+.testimonial-swiper-left:hover .testimonial-arrow{ fill: var(--primary); }
+.testimonial-swiper-right:hover .testimonial-arrow{ fill: var(--primary); }
