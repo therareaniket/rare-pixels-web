@@ -7,15 +7,12 @@
 
 @media (max-width: 1799px) {
  .container { max-width: calc(1360px + 36px); }   .section   { padding: 130px 0px; }
-  h1         { font-size: 60px; line-height: 70px; }
-  h2         { font-size: 44px; line-height: 52px; }
+  h1{ font-size: 60px; line-height: 70px; }
+  h2   { font-size: 44px; line-height: 52px; }
   h3         { font-size: 38px; line-height: 46px; }
   h4         { font-size: 32px; line-height: 40px; }
   h5         { font-size: 28px; line-height: 36px; }
   h6         { font-size: 22px; line-height: 30px; }
-  body       { font-size: 20px; line-height: 28px; }
-  p          { font-size: 18px; line-height: 26px; }
-  .small-text   { font-size: 14px; line-height: 22px; }
 
   .hm-services-content-wrapper .h6{ font-size: 20px; line-height: 28px; }
   .hm-services-content-wrapper{ width: 420px; }
@@ -36,14 +33,12 @@
   h4         { font-size: 32px; }
   h5         { font-size: 28px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
+
   .text-18 { font-size: 16px; line-height: 22px; }
   .hm-services-content-wrapper .h6{ font-size: 18px; line-height: 26px; }
   .hm-services-content-wrapper{ width: 400px; }
   .hm-hero-text-left{ width: 405px; }
-  .home-hero-banner-image{ right: 380px; }
+  .home-hero-banner-image{ right: 420px; width: 427px; }
   .home-heart{ width: 350px;height: max-content; object-fit: contain; }
   .home-hero-banner-image{ height: 440px; }
 }
@@ -57,9 +52,7 @@
   h4         { font-size: 32px; }
   h5         { font-size: 28px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
+
   .text-20{ font-size: 18px; line-height: 24px; }
   .text-18{ font-size: 14px; line-height: 20px; }
 
@@ -86,10 +79,6 @@
   h4         { font-size: 32px; }
   h5         { font-size: 28px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
-
   .text-20{ font-size: 16px; line-height: 20px; }
 
   .home-hero-banner-image{ right: 350px; width: 300px; align-items: flex-start; }
@@ -110,13 +99,10 @@
   h4         { font-size: 32px; }
   h5         { font-size: 28px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
+
   .text-18{ font-size: 18px; line-height: 26px ; }
 
   .hm-hero-text-left{ width: 495px; }
-  .home-hero-banner-image{ position: static; width: 425px; height: 225px; }
   .for-desktop{ display: none; }
   .hm-services-paragrph{ opacity: 1; }
   .hm-services-content-wrapper{ display: flex; align-items: center; text-align: center; justify-content: center; flex-direction: column; gap: 10px; opacity: 1; }
@@ -125,11 +111,10 @@
   .hm-services-content-wrapper .h6{ font-size: 26px; line-height: 34px; }
   .hm-services-title img{ width: 26px; }
   .hm-services-content-wrapper{ width: 435px;  }
-  .home-hero-banner-image{ width: 600px; height: 450px; }
+  .hm-services-left{ width: 600px; height: 350px; position: relative; justify-content: center; }
+  .home-hero-banner-image{ width: 600px; height: 350px; top: 0; left: 50%; position: static; }
   .home-hero-banner-image img{ width: 100%; height: 100%; object-fit: contain; }
-  /* .home-hero-services-highlight-wrapper{ height: 400px; } */
-    .home-hero-services-highlight-wrapper.for-tablet{ display: flex !important; }
-  /* .hm-services-right{ height: 320px; } */
+  .home-hero-services-highlight-wrapper.for-tablet{ display: flex !important; }
 }
 
 @media (max-width: 1023px) {
@@ -140,9 +125,7 @@
   h4         { font-size: 32px; }
   h5         { font-size: 28px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
+
 }
 
 @media (max-width: 991px) {
@@ -153,11 +136,9 @@
   h4         { font-size: 28px; }
   h5         { font-size: 24px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
 
   .hm-hero-text-left h1{ width: 400px; }
+  .hm-services-left{ width: 450px; height: 350px; }
   .home-hero-banner-image{ width: 450px; height: 350px; }
   .hm-hero-text-left{ width: 535px; }
   .hm-services-content-wrapper .h6{ font-size: 24px; line-height: 32px; }
@@ -172,11 +153,9 @@
   h4         { font-size: 28px; }
   h5         { font-size: 24px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
 
   .home-hero-wrapper-desktop{ gap: 20px; }
+  .hm-services-left{ width: 400px; height: 280px; }
   .home-hero-banner-image{ width: 400px; height: 280px; }
   .hm-hero-row-1-wrapper{ gap: 0; }
   .hm-services-content-wrapper .h6{ font-size: 22px; line-height: 30px; }
@@ -191,9 +170,7 @@
   h4         { font-size: 28px; }
   h5         { font-size: 24px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
+
   .text-18{ font-size: 16px; line-height: 24px; }
   .hm-services-paragraph{ width: 80%; margin: 0 auto; }
 }
@@ -205,13 +182,14 @@
   h3         { font-size: 30px; }
   h4         { font-size: 28px; }
   h5         { font-size: 24px; }
-  h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
-  .small-text   { font-size: 14px; }
 
+  .small-text   { font-size: 14px; }
+  .hm-services-left{ width: 350px; height: 220px; }
   .home-hero-banner-image{ width: 350px; height: 220px; }
   .hm-services-content-wrapper .h6{ font-size: 20px; line-height: 28px; }
+  .hm-hero-stats{ width: max-content; }
+  .hm-hero-stats-wrapper { width: 100%; justify-content: space-between; }
+  .hm-services-paragraph{ width: 100%; }
 }
 
 @media (max-width: 575px) {
@@ -222,12 +200,12 @@
   h4         { font-size: 26px; }
   h5         { font-size: 22px; }
   h6         { font-size: 22px; }
-  body       { font-size: 20px; }
-  p          { font-size: 18px; }
+
   .small-text   { font-size: 14px; }
   .text-18{ font-size: 14px; line-height: 22px; }
-
-  .hm-hero-stats-wrapper{ gap: 20px; justify-content: space-between !important; }
+  .hm-services-left{ width: 390px; height: 200px; }
+  .home-hero-banner-image{ width: 390px; height: 200px; }
+  .hm-hero-stats-wrapper{ gap: 20px; width: 100%; justify-content: space-between; }
   .hm-hero-text-left{ width: 100%; }
   .hm-hero-text-left h1{ width: 310px; }
   .hm-services-paragraph{ width:100%; }
