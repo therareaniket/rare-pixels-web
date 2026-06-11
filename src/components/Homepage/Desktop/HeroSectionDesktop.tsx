@@ -75,14 +75,14 @@ export default function HeroSectionDesktop() {
                     <div className="home-hero-wrapper-desktop">
                         <div className="hm-hero-row-1-wrapper">
                             <div className="hm-hero-text-left">
-                                <h1 className="text-sb hm-hero-title">
+                                <h1 className="text-md hm-hero-title">
                                     Seen.
                                     Remembered.
                                     Chosen.
                                 </h1>
                                 <p className="text-18 text-rg hm-hero-subtitle">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to.</p>
 
-                                <Link href="/" title="Let's Make it Rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
+                                <Link href="/" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
                                     <span className="text-20 text-white">Make It Rare</span>
                                     <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                 </Link>
@@ -92,19 +92,18 @@ export default function HeroSectionDesktop() {
                                 <div className="hm-services-left home-hero-banner-image">
                                     <Image key={activeIndex} className={services[activeIndex].class} src={services[activeIndex].image} loading="eager" draggable={false} alt={services[activeIndex].title} width={services[activeIndex].width} height={services[activeIndex].height}></Image>
                                 </div>
+
                                 <div className="hm-services-right">
                                     {services.map((service, index) => (
-                                        <div key={index} className={`hm-services-content-wrapper ${activeIndex === index ? "active" : ""
-                                            }`}
-                                        >
+                                        <div key={index} className={`hm-services-content-wrapper ${activeIndex === index ? "active" : "" }`}>
                                             <GlassEffect className="dock site-radius-30">
                                                 <div className="hm-services-title">
                                                     <Image src={service.icon} alt={service.alternate} width={22} height={34}></Image>
-                                                    <span className="text-sb h6">{service.title}</span>
+                                                    <span className="text-md h6">{service.title}</span>
                                                 </div>
                                             </GlassEffect>
 
-                                            <div className={`hm-services-subtitle ${activeIndex === index && showDescription ? "show" : ""
+                                            <div className={`hm-services-subtitle ${activeIndex === index ? "show" : ""
                                                 }`}>
                                                 <p className="text-18 text-rg">{service.description}</p>
                                             </div>
@@ -119,9 +118,9 @@ export default function HeroSectionDesktop() {
                                         <Image className="" src="/images/homepage/eye-image-for-tablet.png" loading="eager" draggable={false} alt={services[activeIndex].title} width={281} height={224}></Image>
                                     </div>
                                 </div>
+
                                 <div className="hm-services-right">
-                                    <div className="hm-services-content-wrapper"
-                                    >
+                                    <div className="hm-services-content-wrapper">
                                         <GlassEffect>
                                             <div className="hm-services-title">
                                                 👁️
@@ -137,19 +136,19 @@ export default function HeroSectionDesktop() {
                             </div>
                         </div>
 
-                        <div className="hm-hero-row-2-wrapper">
+                        <div className="hm-h    ero-row-2-wrapper">
                             <div className="hm-hero-stats-wrapper">
                                 <div className="hm-hero-stats">
-                                    <h2 className="text-sb text-primary">100+</h2>
-                                    <p className="text-18 text-md">Brands Empowered</p>
+                                    <h2 className="text-md text-primary">100+</h2>
+                                    <p className="text-18 text-rg">Brands Empowered</p>
                                 </div>
                                 <div className="hm-hero-stats">
-                                    <h2 className="text-sb text-primary">120K+</h2>
-                                    <p className="text-18 text-md">Lines of Code Crafted</p>
+                                    <h2 className="text-md text-primary">120K+</h2>
+                                    <p className="text-18 text-rg">Lines of Code Crafted</p>
                                 </div>
                                 <div className="hm-hero-stats">
-                                    <h2 className="text-sb text-primary">250+</h2>
-                                    <p className="text-18 text-md">Creative Campaigns</p>
+                                    <h2 className="text-md text-primary">250+</h2>
+                                    <p className="text-18 text-rg">Creative Campaigns</p>
                                 </div>
                             </div>
                         </div>

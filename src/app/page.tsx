@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
 import HeroSectionMobile from "@/components/Homepage/Mobile/HeroSectionMobile";
-import HeroSectionDesktop from "@/components/Homepage/Desktop/HeroSectionDesktop";
 import TestimonialSectionDesktop from "@/components/Homepage/Desktop/TestimonialSectionDesktop";
+import HeroSectionDesktop from "@/components/Homepage/Desktop/HeroSectionDesktop";
 
 export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -27,7 +27,7 @@ export default function Home() {
 				<>
 					{/* DESKTOP COMPONENTS */}
 					<HeroSectionDesktop />
-					<TestimonialSectionDesktop />
+					{/* <TestimonialSectionDesktop /> */}
 				</>
 			}
       	</main>
