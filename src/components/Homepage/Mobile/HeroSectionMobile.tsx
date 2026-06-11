@@ -1,4 +1,5 @@
-// "use client";
+"use client";
+
 // import "@/assets/css/mobile-custom.css";
 // import "@/assets/css/responsive/mobile-responsive.css"
 // import GlassEffect from "@/components/LiquideGlass";
@@ -66,10 +67,6 @@
 
 
 
-
-
-
-"use client";
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
 import GlassEffect from "@/components/LiquideGlass";
@@ -204,7 +201,7 @@ export default function HeroSectionMobile() {
                                     <span>Chosen.</span>
                                 </h1>
                                 <p>Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to.</p>
-                                <Link href="/about" title="Make it RARE" className="hero-link-cta text-rg">
+                                <Link href="#" title="Make it RARE" className="hero-link-cta text-rg">
                                     Make it Rare <span className="icon-hero-cta-arrow cta-arrow"></span>
                                 </Link>
                                 </div>

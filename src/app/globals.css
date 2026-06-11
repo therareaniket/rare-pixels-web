@@ -4,15 +4,14 @@
     --primary: #ED0180;
     --background: #ffffff;
     --text-black: #000000;
- 
+
     --all-white: #ffffff;
     --all-black: #000000;
     --border-color: #000000;
 
     --glass-box-shadow: inset 2px 2px 1px 0 rgba(66, 66, 66, 0.1), inset -1px -1px 1px 1px rgba(66, 66, 66, 0.1);
 }
- 
- 
+
 [data-theme="dark"] {
 	--primary: #ED0180;
 	--background: #000000;
