@@ -16,6 +16,8 @@
     --testimonial-card-3: #FCD4E9;
     --testimonial-card-4: #D5D8E2;
     --testimonial-card-5: #FBF8F5;
+
+    --section-bg: #040E36;
 }
 
 [data-theme="dark"] {
@@ -26,11 +28,13 @@
 
     --glass-box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.1), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
 
-    --testimonial-card-1: #424842;
-    --testimonial-card-2: #9A9253;
-    --testimonial-card-3: #760040;
-    --testimonial-card-4: #59638B;
-    --testimonial-card-5: #52504E;
+    --testimonial-card-1: #212421;
+    --testimonial-card-2: #4D4929;
+    --testimonial-card-3: #4F002A;
+    --testimonial-card-4: #2F3C6E;
+    --testimonial-card-5: #292827;
+
+    --section-bg: #040E36;
 }
  
 /* ::selection { background-color: ; } */

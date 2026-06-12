@@ -1,11 +1,24 @@
 "use client"
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import HeroSectionMobile from "@/components/Homepage/Mobile/HeroSectionMobile";
-import TestimonialSectionDesktop from "@/components/Homepage/Desktop/TestimonialSectionDesktop";
-import HeroSectionDesktop from "@/components/Homepage/Desktop/HeroSectionDesktop";
+import TestimonialSectionMobile from "@/components/Homepage/Mobile/TestimonialSectionMobile";
+
+const HeroSectionDesktop = dynamic(
+  () => import("@/components/Homepage/Desktop/HeroSectionDesktop"),
+  { ssr: false }
+);
+const TestimonialSectionDesktop = dynamic(
+  () => import("@/components/Homepage/Desktop/TestimonialSectionDesktop"),
+  { ssr: false }
+);
+const AboutSectionDesktop = dynamic(
+  () => import("@/components/Homepage/Desktop/AboutSectionDesktop"),
+  { ssr: false }
+);
 
 export default function Home() {
-	const [isSmallScreen, setIsSmallScreen] = useState(false);
+	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
 
   	useEffect(() => {
     	const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479); };
@@ -15,6 +28,10 @@ export default function Home() {
     	return () => window.removeEventListener("resize", handleResize);
   	}, []);
 
+  if (isSmallScreen === null) {
+    return null;
+  }
+
   return (
     <>
       	<main>
@@ -22,12 +39,14 @@ export default function Home() {
 				<>
 					{/* MOBILE COMPONENTS */}
 					<HeroSectionMobile />
+					<TestimonialSectionMobile />
 				</>
 				: 
 				<>
 					{/* DESKTOP COMPONENTS */}
 					<HeroSectionDesktop />
-					{/* <TestimonialSectionDesktop /> */}
+					<TestimonialSectionDesktop />
+					<AboutSectionDesktop />
 				</>
 			}
       	</main>
