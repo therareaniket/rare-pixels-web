@@ -4,10 +4,20 @@ import GlassEffect from "@/components/LiquideGlass";
 import Image from "next/image";
 
 export default function AboutSectionDesktop() {
+
+    const cols = 76;
+    const rows = 33;
+
     return (
         <>
             <section className="section section-bg-blue ">
                 <div className="container">
+                    <div className="abt-grid-wrapper">
+                        {Array.from ({ length: cols * rows }).map ((_, index) =>(
+                        <div key={index} className="abt-background-grid"></div>
+                        ))}
+                    </div>
+
                     <div className="hm-about-main">
                         <div className="hm-abt-text-wrapper">
                             <h2 className="text-sb text-white">Where Ideas Turn Into Impact</h2>

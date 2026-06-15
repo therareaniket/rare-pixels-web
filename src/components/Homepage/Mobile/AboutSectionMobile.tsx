@@ -4,10 +4,19 @@ import GlassEffect from "@/components/LiquideGlass";
 import Image from "next/image";
 
 export default function AboutSectionMobile() {
+
+    const cols = 37;
+    const rows = 97;
+
     return (
         <>
             <section className="section section-bg-blue">
                 <div className="container">
+                    <div className="abt-grid-wrapper">
+                        {Array.from ({ length: cols * rows }).map ((_, index) =>(
+                        <div key={index} className="abt-background-grid"></div>
+                        ))}
+                    </div>
                     <div className="abt-mobile-bg">
                         <h2 className="text-sb hm-abt-title text-white">Where Ideas Turn Into Impact</h2>
 

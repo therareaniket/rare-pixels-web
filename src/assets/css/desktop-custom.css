@@ -43,7 +43,7 @@
 .testimonial-stats-wrapper{ display: flex; align-items: flex-start; gap: 90px; }
 .testimonial-stats .h2, .testimonial-stats p{ margin-bottom: 0; }
 .testimonial-stats .h2{ margin-bottom: 6px; }
-.hm-testimonial-txt-wrapper{ display: flex; align-items: flex-start; justify-content: space-between; }
+.hm-testimonial-txt-wrapper{ display: flex; align-items: flex-start; gap: 130px; }
 .hm-testimonial-left-text{ width: 615px; }
 
 .testimonial-review-wrapper{ margin-top: 60px; display: flex; align-items: flex-start; gap: 40px; }
@@ -81,7 +81,10 @@
 .client-initial-5{ background-color: var(--testimonial-card-5); }
 
 /* About Section */
-.hm-about-main{ background-image: url(/images/homepage/abt-section-background-grid-desktop.png); background-repeat: repeat; padding: 40px; }
+
+.abt-grid-wrapper{ position: absolute; display: grid; grid-template-rows: repeat(33, 21px); grid-template-columns: repeat(76, 21px); z-index: 0; background-color: transparent; }
+.abt-background-grid { width: 21px; height: 21px; border: 1px solid var(--all-white); opacity: 5%;   }
+.hm-about-main{ padding: 40px; }
 
 .hm-abt-text-wrapper{ display: flex; align-items: flex-start; justify-content: space-between; }
 .hm-abt-text-wrapper h2{ width: 440px; margin-bottom: 0; }
@@ -92,8 +95,6 @@
 .hm-abt-pointers-right{ width: 822px; display: flex; align-items: flex-start; gap: 30px; flex-wrap: wrap; }
 .hm-abt-card{ display: flex; gap: 10px; padding: 20px; width: 396px; }
 .hm-abt-card-title{ width: 338px; }
-.hm-abt-logo-left{ padding-left: 70px; }
-
+.hm-abt-logo-left{ margin-left: 65px; width: 273px; height: 349px; background-color: red; object-fit: contain; }
 .hm-abt-pixel{ width: 8px; height: 8; border-radius: 1px; background-color: var(--primary); margin-top: 12px; }
-
 .hm-abt-card-title .h6{ margin-bottom: 10px; }

@@ -82,7 +82,7 @@ button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%
 
     /* About Section */
 
-    .abt-mobile-bg{ background-image: url(/images/homepage/abt-section-background-grid-mobile.png); padding: 18px; }
+    .abt-mobile-bg{ padding: 18px; }
     .hm-abt-card-mobile{ display: flex; align-items: flex-start; gap: 10px; padding: 14px; border-radius: 20px;  }
     .hm-abt-pixel{ width: 6px; height: 6px; border-radius: 1px; background-color: var(--primary); margin-top: 9px; }
     .hm-abt-card-text h3{ color: var(--primary); margin-bottom: 6px; }
@@ -90,6 +90,9 @@ button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%
     .hm-abt-cards-wrapper{ display: flex; flex-direction: column; gap: 20px; }
     .hm-abt-site-logo img{ margin: 30px auto; }
     .hm-abt-title{ margin-bottom: 14px; }
+
+    .abt-grid-wrapper{ position: absolute; display: grid; grid-template-rows: repeat(97, 12px); grid-template-columns: repeat(37, 12px); }
+    .abt-background-grid{ width: 12px; height: 12px; border: 1px solid var(--all-white); opacity: 5%; }
 }
 
 @media (max-width: 439px) {
@@ -163,7 +166,4 @@ button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%
     h4, .h4 { font-size: 24px; }
     h6, .h6 { font-size: 18px; }
     body { font-size: 16px; }
-
-    /* .testi-clt-img-2{ left: 25px; }
-    .testi-clt-img-3{ right: 25px; } */
 }
