@@ -50,7 +50,7 @@ export default function TestimonialSectionDesktop() {
 
                             <Image className="testimonial-image-2" src="/images/homepage/testimonial-image-2-2.webp" alt="testimonial-image" width={200} height={200} loading="lazy"></Image>
 
-                            <Image className="testimonial-image-3" src="/images/homepage/testimonial-image-3.webp" alt="testimonial-image" width={130} height={130} loading="lazy"></Image>
+                            <Image className="testimonial-image-3" src="/images/homepage/testimonial-image-3.png" alt="testimonial-image" width={130} height={130} loading="lazy"></Image>
                         </div>
 
                         <div className="testimonial-cards-wrapper">
