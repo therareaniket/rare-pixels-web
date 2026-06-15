@@ -6,6 +6,11 @@ import GlassEffect from "@/components/LiquideGlass";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
+
+const Scene3D = dynamic(() => import('@/components/3d/Scene3D'), {
+  ssr: false,
+})
 
 const services = [
     {
@@ -63,7 +68,7 @@ export default function HeroSectionDesktop() {
                 setActiveIndex((prev) => (prev + 1) % services.length);
                 setShowDescription(true);
             }, 500);
-        }, 2000);
+        }, 20000);
 
         return () => clearInterval(interval);
     })
@@ -90,7 +95,8 @@ export default function HeroSectionDesktop() {
 
                             <div className="home-hero-services-highlight-wrapper for-desktop">
                                 <div className="hm-services-left home-hero-banner-image">
-                                    <Image key={activeIndex} className={services[activeIndex].class} src={services[activeIndex].image} loading="eager" draggable={false} alt={services[activeIndex].title} width={services[activeIndex].width} height={services[activeIndex].height}></Image>
+                                    {/* <Image key={activeIndex} className={services[activeIndex].class} src={services[activeIndex].image} loading="eager" draggable={false} alt={services[activeIndex].title} width={services[activeIndex].width} height={services[activeIndex].height}></Image> */}
+                                    <Scene3D activeIndex={activeIndex} />
                                 </div>
 
                                 <div className="hm-services-right">
