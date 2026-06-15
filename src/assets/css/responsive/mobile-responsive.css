@@ -79,6 +79,17 @@ button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%
     .client-initial-3{ background-color: var(--testimonial-card-3); }
     .client-initial-4{ background-color: var(--testimonial-card-4); }
     .client-initial-5{ background-color: var(--testimonial-card-5); }
+
+    /* About Section */
+
+    .abt-mobile-bg{ background-image: url(/images/homepage/abt-section-background-grid-mobile.png); padding: 18px; }
+    .hm-abt-card-mobile{ display: flex; align-items: flex-start; gap: 10px; padding: 14px; border-radius: 20px;  }
+    .hm-abt-pixel{ width: 6px; height: 6px; border-radius: 1px; background-color: var(--primary); margin-top: 9px; }
+    .hm-abt-card-text h3{ color: var(--primary); margin-bottom: 6px; }
+    .hm-abt-card-text{ width: 100%; }
+    .hm-abt-cards-wrapper{ display: flex; flex-direction: column; gap: 20px; }
+    .hm-abt-site-logo img{ margin: 30px auto; }
+    .hm-abt-title{ margin-bottom: 14px; }
 }
 
 @media (max-width: 439px) {
@@ -96,9 +107,11 @@ button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%
     .service-item p { width: 82%; }
     
     .hm-testi-stats-wrapper{ gap: 37px; }
-    .testi-clt-img-2{ width: 80px; height: 80px; left: 30px; }
-    .testi-clt-img-3{ right: 35px; }
+    .testi-clt-img-2{ width: 90px; height: 90px; left: 25px; }
+    .testi-clt-img-3{ width: 80px; height: 80px; right: 25px; }
     .mobile-review-rating-wrapper img{ width: 12px; height: 12px; }
+
+    .hm-abt-site-logo img{ width: 150px; }
 }
 
 @media (max-width: 400px) {
@@ -118,6 +131,12 @@ button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%
     
     .hm-testi-stats-wrapper{ gap: 10px; margin: 20px 0; }
     .testimonial-stats{ width: 80px; }
+    
+    .testimonial-client-video-wrapper{ margin: 50px 0; }
+    .testimonial-client-video img{ width: 300px; height: 220px; object-fit: cover; border-radius: 20px; object-position: top; }
+    .testi-clt-img-2{ width: 80px; height: 80px; left: 15px; bottom: -30px; }
+    .testi-clt-img-3{ width: 70px; height: 70px; right: 15px; top: -30px; }
+
 }
 
 @media (max-width: 374px) {
@@ -133,7 +152,7 @@ button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%
     .service-item p { width: 95%; }
 
     .testimonial-client-video img{ width: 200px; height: 200px; }
-    .testi-clt-img-2{ width: 70px; height: 70px; }
+    /* .testi-clt-img-2{ width: 70px; height: 70px; } */
     .mobile-client-initial{ gap: 14px; }
 }
 

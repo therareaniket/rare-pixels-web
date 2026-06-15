@@ -15,11 +15,11 @@ export default function TestimonialSectionDesktop() {
 
     return (
         <>
-            <section className="hm-testimonial-section">
+            <section className="section hm-testimonial-section">
                 <div className="container">
                     <div className="hm-testimonial-txt-wrapper">
                         <div className="hm-testimonial-left-text">
-                            <h2 className="text-md">Voices Behind the Work</h2>
+                            <h2 className="text-sb">Voices Behind the Work</h2>
 
                             <p className="text-18 text-rg">Every project tells a story shaped through collaboration and creativity. Here’s what our clients have to say about the experiences we build.</p>
                         </div>
@@ -45,12 +45,12 @@ export default function TestimonialSectionDesktop() {
                     <div className="testimonial-review-wrapper">
                         <div className="testimonial-review-video-wrapper">
                             <div className="testimonialreview-main">
-                                <Image src="/images/homepage/testimonial-image-1-1.webp" alt="testimonial-image" width={480} height={480} loading="lazy"></Image>
+                                <Image src="/images/homepage/bernard-image.webp" alt="testimonial-image" width={480} height={480} loading="lazy"></Image>
                             </div>
 
-                            <Image className="testimonial-image-2" src="/images/homepage/testimonial-image-2-2.webp" alt="testimonial-image" width={200} height={200} loading="lazy"></Image>
+                            <Image className="testimonial-image-2" src="/images/homepage/eric-image.webp" alt="testimonial-image" width={200} height={200} loading="lazy"></Image>
 
-                            <Image className="testimonial-image-3" src="/images/homepage/testimonial-image-3.webp" alt="testimonial-image" width={130} height={130} loading="lazy"></Image>
+                            <Image className="testimonial-image-3" src="/images/homepage/client-3.webp" alt="testimonial-image" width={130} height={130} loading="lazy"></Image>
                         </div>
 
                         <div className="testimonial-cards-wrapper">
@@ -60,7 +60,7 @@ export default function TestimonialSectionDesktop() {
                                 slidesPerView={2}
                                 loop={true}
                                 speed={2200}
-                                autoplay={{ delay: 1500, disableOnInteraction: true }}
+                                autoplay={{ delay: 1500, disableOnInteraction: true, pauseOnMouseEnter: true }}
                                 onSwiper={(swiper) => {
                                     swiperRef.current = swiper;
                                 }}

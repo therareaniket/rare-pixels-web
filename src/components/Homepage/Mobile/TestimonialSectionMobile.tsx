@@ -39,11 +39,11 @@ export default function TestimonialSectionMobile() {
 
                         <div className="testimonial-client-video-wrapper">
                             <div className="testimonial-client-video">
-                                <Image className="testi-clt-img-1" src="/images/homepage/testimonial-image-1-1.webp" alt="hm-testimonial-image" width={236} height={236}></Image>
+                                <Image className="testi-clt-img-1" src="/images/homepage/bernard-image.webp" alt="hm-testimonial-image" width={236} height={236}></Image>
                             </div>
 
-                            <Image className="testi-clt-img-2" src="/images/homepage/testimonial-image-2-2.webp" alt="hm-testimonial-image" width={100} height={100}></Image>
-                            <Image className="testi-clt-img-3" src="/images/homepage/testimonial-image-3.webp" alt="hm-testimonial-image" width={100} height={100}></Image>
+                            <Image className="testi-clt-img-2" src="/images/homepage/eric-image.webp" alt="hm-testimonial-image" width={100} height={100}></Image>
+                            <Image className="testi-clt-img-3" src="/images/homepage/client-3.webp" alt="hm-testimonial-image" width={100} height={100}></Image>
                         </div>
 
                         <Swiper
@@ -52,7 +52,7 @@ export default function TestimonialSectionMobile() {
                             slidesPerView={1.3}
                             loop={true}
                             speed={2000}
-                            autoplay={{ delay: 2000, disableOnInteraction: true }}
+                            autoplay={{ delay: 2000, disableOnInteraction: true, pauseOnMouseEnter: true }}
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
                             }}

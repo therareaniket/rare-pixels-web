@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import HeroSectionMobile from "@/components/Homepage/Mobile/HeroSectionMobile";
 import TestimonialSectionMobile from "@/components/Homepage/Mobile/TestimonialSectionMobile";
+import AboutSectionMobile from "@/components/Homepage/Mobile/AboutSectionMobile";
 
 const HeroSectionDesktop = dynamic(
   () => import("@/components/Homepage/Desktop/HeroSectionDesktop"),
@@ -40,6 +41,7 @@ export default function Home() {
 					{/* MOBILE COMPONENTS */}
 					<HeroSectionMobile />
 					<TestimonialSectionMobile />
+					<AboutSectionMobile />
 				</>
 				: 
 				<>

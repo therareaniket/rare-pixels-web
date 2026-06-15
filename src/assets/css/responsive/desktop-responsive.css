@@ -119,6 +119,16 @@
   .testimonialreview-main{ width: 300px; height: 300px; }
   .testimonial-image-2{ width: 100px; height: 100px; }
   .testimonial-image-3{ width: 80px; height: 80px; }
+
+  /* about us */
+  .hm-abt-pointers-right{ width: 650px; gap: 20px; }
+  .hm-abt-text-wrapper p{ width: 525px; }
+  .hm-abt-card{ width: 314px; height: 235px; }
+  .hm-about-main{ padding: 30px; }
+
+  .hm-abt-logo-left img{ width: 210px; }
+  .hm-abt-logo-left{ padding-left: 30px; }
+  .hm-abt-card-title{ width: 255px; }
 }
 
 @media (max-width: 1359px) {
@@ -132,12 +142,13 @@
   .text-20{ font-size: 16px; line-height: 20px; }
   .text-14{ font-size: 12px; line-height: 20px; }
 
-  .home-hero-banner-image{ right: 350px; width: 300px; align-items: flex-start; }
+  .home-hero-banner-image{ right: 350px; width: 300px; align-items: flex-start; margin-top: 50px; }
+  .hm-services-subtitle.show{ padding-top: 8px; }
   .home-brain{ width: 300px; object-fit: contain; }
   .home-heart{ width: 240px; object-fit: contain; }
   .hm-services-title img{ width: 18px; }
   .hm-services-content-wrapper{ width: 345px; margin-bottom: 15px; }
-  .hm-hero-row-1-wrapper{ margin-top: 30px; }
+  .hm-hero-row-1-wrapper{ margin-top: 30px; align-items: flex-start; }
   .hm-hero-text-left h1{ margin-bottom: 16px; }
   .hm-hero-subtitle{ padding-bottom: 25px; }
 
@@ -151,7 +162,22 @@
   .testimonial-image-3{ width: 60px; height: 60px; top: 40px; }
 
   .tst-swiper-arrow-wrapper{ margin-top: 35px; }
-}
+
+  /* About Section */
+  .hm-abt-text-wrapper h2{ width: 265px; }
+  .hm-abt-text-wrapper p{ width: 580px; }
+
+  .hm-about-main{ padding: 20px; }
+  .hm-abt-logo-left img{ width: 175px; }
+  .hm-abt-card-title .h6{ font-size: 20px; line-height: 26px; margin-bottom: 12px; }
+  .hm-abt-card-title{ width: 222px; }
+
+  .hm-abt-card-wrapper{ margin-top: 20px; }
+  .hm-abt-card{ width: 280px; height: 225px; }
+  .hm-abt-pointers-right{ width: 580px; }
+
+  .testimonial-stats{ width: 120px; }
+} 
 
 @media (max-width: 1199px) {
  .container { max-width: calc(800px + 36px); }  
@@ -179,6 +205,7 @@
   .home-hero-services-highlight-wrapper.for-tablet{ display: flex !important; }
 
   /* testimonial section */
+  .testimonial-stats{ width: 180px; }
 
   .hm-testimonial-txt-wrapper{ flex-direction: column; gap: 30px; }
   .hm-testimonial-left-text{ width: 90%; }
@@ -194,6 +221,19 @@
   .testimonial-image-3{ width: 100px; height: 100px; }
 
   .testimonial-stats p{ font-size: 18px; line-height: 26px; }
+
+  /* About Section */
+
+  .hm-abt-text-wrapper{ flex-direction: column; }
+  .hm-abt-text-wrapper h2{ width: 100%; margin-bottom: 14px; }
+  .hm-abt-text-wrapper p{ width: 100%; }
+
+  .hm-abt-card-wrapper{ flex-direction: column; margin-top: 30px; gap: 30px; }
+
+  .hm-abt-pointers-right{ width: 100%; }
+  .hm-abt-card{ width: 370px; height: 230px; }
+  .hm-abt-card-title{ width: 310px; }
+  .hm-abt-logo-left{ padding-left: 0; }
 } 
 
 @media (max-width: 1023px) {
@@ -203,9 +243,14 @@
   h3, .h3 { font-size: 30px; }
   h4, .h4 { font-size: 32px; }
   h5, .h5 { font-size: 28px; }
-  h6, .h6 { font-size: 22px; }
+  h6, .h6 { font-size: 22px; line-height: 30px; }
 
   .testimonial-client-text{ font-size: 16px; line-height: 24px; }
+
+  .hm-abt-card{ width: 100%; height: 160px; }
+  .hm-abt-card-title{ width: 100%; }
+
+  .hm-abt-card-title .h6{ font-size: 22px; line-height: 30px; }
 }
 
 @media (max-width: 991px) {
@@ -270,6 +315,9 @@
   .client-name-designation .text-18{ font-size: 14px; }
   .testimonial-review-wrapper{ gap: 30px; }
   .client-rating img{ width: 14px; height: 14px; }
+
+  /* About Section */
+  .hm-about-main{ padding: 18px; }
 }
 
 @media (max-width: 639px) {
@@ -288,6 +336,10 @@
   .hm-hero-stats-wrapper { width: 100%; justify-content: space-between; }
   .hm-services-paragraph{ width: 100%; }
   .hm-testimonial-left-text{ width: 100%; }
+
+  /* About Section */
+  .hm-about-main{ background-image: url(/images/homepage/abt-section-background-grid-mobile.png); background-size: cover; background-repeat: no-repeat; padding: 18px; }
+  .hm-abt-card{ height: 175px; }
 }
 
 @media (max-width: 575px) {
@@ -310,4 +362,8 @@
   .link-padding{ padding: 6px 12px; }
 
   .testimonial-stats p{ font-size: 14px; line-height: 22px; }
+
+  .hm-abt-card-title .h6{ font-size: 18px; line-height: 26px; margin-bottom: 6px; }
+  .hm-abt-card{ padding: 14px; height: 145px; } 
+  .hm-abt-pixel{ width: 6px; height: 6px; }
 }

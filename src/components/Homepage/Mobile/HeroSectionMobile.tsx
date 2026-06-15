@@ -195,7 +195,7 @@ export default function HeroSectionMobile() {
                         <div className="scroll-effect-wrapper">
                             <div className="hero-content">
                                 <div className="site-hero-discrp">
-                                <h1 className="text-md">
+                                <h1 className="text-sb">
                                     <span>Seen.</span>
                                     <span>Remembered.</span>
                                     <span>Chosen.</span>
@@ -208,16 +208,16 @@ export default function HeroSectionMobile() {
 
                                 <div className="brand-statistics">
                                 <div className="stat-item">
-                                    <h2 className="h5 text-md">100+</h2>
-                                    <p>Brands Empowered</p>
+                                    <h2 className="h5 text-sb">100+</h2>
+                                    <p className="text-md">Brands Empowered</p>
                                 </div>
                                 <div className="stat-item">
-                                    <h2 className="h5 text-md">120K+</h2>
-                                    <p>Lines of Code Crafted</p>
+                                    <h2 className="h5 text-sb">120K+</h2>
+                                    <p className="text-md">Lines of Code Crafted</p>
                                 </div>
                                 <div className="stat-item">
-                                    <h2 className="h5 text-md">250+</h2>
-                                    <p>Creative Campaigns</p>
+                                    <h2 className="h5 text-sb">250+</h2>
+                                    <p className="text-md">Creative Campaigns</p>
                                 </div>
                                 </div>
                             </div>
@@ -229,7 +229,7 @@ export default function HeroSectionMobile() {
                             <div className="services-highlight">
                                 <div className="service-item">
                                     <GlassEffect>
-                                        <h5 className="text-md">👁️ UI/UX Design Services</h5>
+                                        <h5 className="text-sb">👁️ UI/UX Design Services</h5>
                                     </GlassEffect>
 
                                     <p className="text-rg">Experiences users remember and businesses benefit from</p>
