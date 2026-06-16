@@ -5,17 +5,67 @@ import Image from "next/image";
 
 export default function AboutSectionDesktop() {
 
-    const cols = 76;
-    const rows = 33;
+    const cols =
+        typeof window !== "undefined"
+            ? window.innerWidth < 575
+                ? 10
+                : window.innerWidth < 640
+                    ? 10
+                    : window.innerWidth < 768
+                        ? 10
+                        : window.innerWidth < 992
+                            ? 30
+                            : window.innerWidth < 1024
+                                ? 43
+                                : window.innerWidth < 1200
+                                    ? 51
+                                    : window.innerWidth < 1360
+                                        ? 55
+                                        : window.innerWidth < 1440
+                                            ? 55
+                                            : window.innerWidth < 1600
+                                                ? 65
+                                                : 76
+            : 76;
+
+    const rows =
+        typeof window !== "undefined"
+            ? window.innerWidth <= 575
+                ? 338
+                : window.innerWidth <= 640
+                    ? 115
+                    : window.innerWidth <= 768
+                        ? 69
+                        : window.innerWidth <= 840
+                            ? 79
+                            : window.innerWidth <= 992
+                                ? 55
+                                : window.innerWidth <= 1024
+                                    ? 44
+                                    : window.innerWidth <= 1200
+                                        ? 30
+                                        : window.innerWidth <= 1360
+                                            ? 37
+                                            : window.innerWidth <= 1440
+                                                ? 33
+                                                : window.innerWidth <= 1600
+                                                    ? 30
+                                                    : 33
+            : 33;
+
+    // const cols = 76;
+    // const rows = 33;
 
     return (
         <>
             <section className="section section-bg-blue ">
                 <div className="container">
-                    <div className="abt-grid-wrapper">
-                        {Array.from ({ length: cols * rows }).map ((_, index) =>(
-                        <div key={index} className="abt-background-grid"></div>
-                        ))}
+                    <div className="abt-section-wrapper">
+                        <div className="abt-grid-wrapper">
+                            {Array.from({ length: cols * rows }).map((_, index) => (
+                                <div key={index} className="abt-background-grid"></div>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="hm-about-main">

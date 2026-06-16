@@ -82,9 +82,10 @@
 
 /* About Section */
 
-.abt-grid-wrapper{ position: absolute; display: grid; grid-template-rows: repeat(33, 21px); grid-template-columns: repeat(76, 21px); z-index: 0; background-color: transparent; }
+.abt-grid-wrapper{ display: grid; grid-template-rows: repeat(33, 21px); grid-template-columns: repeat(76, 21px); z-index: 0; background-color: transparent; }
 .abt-background-grid { width: 21px; height: 21px; border: 1px solid var(--all-white); opacity: 5%;   }
-.hm-about-main{ padding: 40px; }
+.hm-about-main{ padding: 40px;  }
+
 
 .hm-abt-text-wrapper{ display: flex; align-items: flex-start; justify-content: space-between; }
 .hm-abt-text-wrapper h2{ width: 440px; margin-bottom: 0; }
@@ -98,3 +99,12 @@
 .hm-abt-logo-left{ margin-left: 65px; width: 273px; height: 349px; background-color: red; object-fit: contain; }
 .hm-abt-pixel{ width: 8px; height: 8; border-radius: 1px; background-color: var(--primary); margin-top: 12px; }
 .hm-abt-card-title .h6{ margin-bottom: 10px; }
+
+.abt-section-wrapper{ 
+    position: absolute;
+    width: fit-content; 
+    overflow: hidden; 
+    mask-image: linear-gradient(to top, transparent, black 5%, black 95%, transparent ), 
+                linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-composite: intersect;
+}

@@ -142,7 +142,7 @@ export default function HeroSectionDesktop() {
                             </div>
                         </div>
 
-                        <div className="hm-h    ero-row-2-wrapper">
+                        <div className="hm-hero-row-2-wrapper">
                             <div className="hm-hero-stats-wrapper">
                                 <div className="hm-hero-stats">
                                     <h2 className="text-sb text-primary">100+</h2>
