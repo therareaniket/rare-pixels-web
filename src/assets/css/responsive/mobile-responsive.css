@@ -96,7 +96,7 @@ button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%
     .abt-background-grid{ width: 12px; height: 12px; border: 1px solid var(--all-white); opacity: 5%; }
     .abt-section-wrapper{ 
         position: absolute;
-        /* width: fit-content;  */
+        width: fit-content; 
         overflow: hidden; 
         mask-image: linear-gradient(to top, transparent, black 5%, black 98%, transparent ), 
                     linear-gradient(to right, transparent, black 1%, black 95%, transparent);

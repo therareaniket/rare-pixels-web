@@ -16,7 +16,7 @@ export default function AboutSectionMobile() {
 
     const rows =
         typeof window !== "undefined"
-            ? window.innerWidth < 401
+            ? window.innerWidth <= 401
                 ? 100
                 : window.innerWidth <= 479
                     ? 100
@@ -82,7 +82,7 @@ export default function AboutSectionMobile() {
                                             <p className="text-14 text-rg text-white">We build fast, scalable, and reliable digital platforms that are designed to perform under real-world conditions. Every line of code is written with efficiency, flexibility, and long-term growth in mind.</p>
                                         </div>
                                     </div>
-                                </GlassEffect>
+                                </GlassEffect>  
 
                                 <GlassEffect className="site-radius-20">
                                     <div className="hm-abt-card-mobile">

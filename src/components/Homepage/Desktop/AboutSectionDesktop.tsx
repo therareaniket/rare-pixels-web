@@ -7,7 +7,7 @@ export default function AboutSectionDesktop() {
 
     const cols =
         typeof window !== "undefined"
-            ? window.innerWidth < 575
+            ? window.innerWidth < 576
                 ? 10
                 : window.innerWidth < 640
                     ? 10
@@ -30,12 +30,12 @@ export default function AboutSectionDesktop() {
 
     const rows =
         typeof window !== "undefined"
-            ? window.innerWidth <= 575
-                ? 338
+            ? window.innerWidth <= 576
+                ? 300
                 : window.innerWidth <= 640
-                    ? 115
+                    ? 543
                     : window.innerWidth <= 768
-                        ? 69
+                        ? 80
                         : window.innerWidth <= 840
                             ? 79
                             : window.innerWidth <= 992
@@ -47,7 +47,7 @@ export default function AboutSectionDesktop() {
                                         : window.innerWidth <= 1360
                                             ? 37
                                             : window.innerWidth <= 1440
-                                                ? 33
+                                                ? 37
                                                 : window.innerWidth <= 1600
                                                     ? 30
                                                     : 33

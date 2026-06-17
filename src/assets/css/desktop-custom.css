@@ -96,7 +96,7 @@
 .hm-abt-pointers-right{ width: 822px; display: flex; align-items: flex-start; gap: 30px; flex-wrap: wrap; }
 .hm-abt-card{ display: flex; gap: 10px; padding: 20px; width: 396px; }
 .hm-abt-card-title{ width: 338px; }
-.hm-abt-logo-left{ margin-left: 65px; width: 273px; height: 349px; background-color: red; object-fit: contain; }
+.hm-abt-logo-left{ margin-left: 65px; width: 273px; height: 349px; object-fit: contain; }
 .hm-abt-pixel{ width: 8px; height: 8; border-radius: 1px; background-color: var(--primary); margin-top: 12px; }
 .hm-abt-card-title .h6{ margin-bottom: 10px; }
 

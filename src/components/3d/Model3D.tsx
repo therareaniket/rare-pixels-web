@@ -12,7 +12,7 @@ interface Model3DProps {
 
 // One matcap per service — add/replace paths as needed
 const MATCAP_PATHS = [
-//   '/matcap/mat-1.png',
+  // '/matcap/mat-1.png',
 //   '/matcap/mat-2.png',
 //   '/matcap/mat-3.png',
 //   '/matcap/mat-4.png',

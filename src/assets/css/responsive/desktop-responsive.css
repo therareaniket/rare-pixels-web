@@ -351,7 +351,7 @@
   /* About Section */
   .hm-about-main{ padding: 18px; }
 
-  .abt-grid-wrapper{ grid-template-rows: repeat(115, 12px); grid-template-columns: repeat(50, 12px);}
+  .abt-grid-wrapper{ grid-template-rows: repeat(105, 12px); grid-template-columns: repeat(51, 12px);}
   .abt-background-grid{ width: 12px; height: 12px; }
 }
 
@@ -375,7 +375,7 @@
   /* About Section */
   /* .hm-about-main{ background-image: url(/images/homepage/abt-section-background-grid-mobile.png); background-size: cover; background-repeat: no-repeat; padding: 18px; } */
   
-  .abt-grid-wrapper{ grid-template-rows: repeat(113, 12px); grid-template-columns: repeat(45, 12px);}
+  .abt-grid-wrapper{ grid-template-rows: repeat(80, 12px); grid-template-columns: repeat(45, 12px);}
   .hm-abt-card{ height: 175px; }
 }
 
@@ -407,8 +407,6 @@
   .hm-abt-card{ padding: 14px; height: 145px; } 
   .hm-abt-pixel{ width: 6px; height: 6px; }
 
-  .abt-grid-wrapper{ grid-template-rows: repeat(80, 12px); grid-template-columns: repeat(37, 12px);}
-  .abt-section-wrapper { 
-    mask-image: linear-gradient(to top, #0000, #000 3% 99%, #0000), linear-gradient(to right, #0000, #000 5% 96%, #0000);
-  }
+  .abt-grid-wrapper{ grid-template-rows: repeat(50, 12px); grid-template-columns: repeat(37, 12px);}
+  .abt-section-wrapper {  mask-image: linear-gradient(to top, #0000, #000 3% 99%, #0000), linear-gradient(to right, #0000, #000 5% 96%, #0000); }
 }
