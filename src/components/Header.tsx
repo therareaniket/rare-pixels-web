@@ -47,7 +47,7 @@ export default function Header() {
                                         <li className="text-18 text-md"><Link href="/" title="projects">Projects</Link></li>
                                         <li className="text-18 text-md"><Link href="/" title="industries">Industries</Link></li>
                                         <li className="text-18 text-md"><Link href="/" title="process">Process</Link></li>
-                                        <li className="text-18 text-md"><Link href="/" title="life at rpd">Life at RPD</Link></li>
+                                        <li className="text-18 text-md"><Link href="/" title="life at RarePixels Design">Life at RPD</Link></li>
                                         <li className="text-18 text-md"><Link href="/" title="articles">Articles</Link></li>
                                         <li className="text-18 text-md"><Link href="/" title="contact">Contact</Link></li>
                                     </ul>

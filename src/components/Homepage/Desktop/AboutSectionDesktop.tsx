@@ -35,7 +35,7 @@ export default function AboutSectionDesktop() {
             ? window.innerWidth <= 481
                 ? 300
                 : window.innerWidth <= 576
-                    ? 300
+                    ? 465
                     : window.innerWidth <= 640
                         ? 492
                         : window.innerWidth <= 768
