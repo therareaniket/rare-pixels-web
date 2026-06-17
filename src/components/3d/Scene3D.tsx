@@ -9,7 +9,7 @@ interface Scene3DProps { activeIndex: number }
 
 const Scene3D = ({ activeIndex }: Scene3DProps) => {
     return (
-        <Canvas camera={{ position: [16, -2, 8], fov: 26 }} dpr={[1, 2]}>
+        <Canvas camera={{ position: [16, -2, 14], fov: 25 }} dpr={[1, 2]}>
             <ambientLight intensity={0.5} />
 
             <directionalLight position={[0, 5, 5]} color={0xffffff} intensity={10} />

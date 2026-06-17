@@ -9,7 +9,7 @@
 /* home hero */
 .home-hero-wrapper-desktop{ display: flex; flex-direction: column-reverse; gap: 40px; overflow: hidden; }
 
-.hm-hero-row-1-wrapper{ display: flex; align-items: flex-start; justify-content: space-between; position: relative; margin-top: 60px; margin-bottom: 80px; }
+.hm-hero-row-1-wrapper{ display: flex; align-items: flex-start; justify-content: space-between;  margin-top: 60px; margin-bottom: 80px; }
 
 .home-hero-services-highlight-wrapper{ display: flex; }
 .hm-hero-text-left{ width: 527px; }
@@ -24,7 +24,7 @@
 .hm-services-subtitle.show{ max-height: 100px; opacity: 1; padding-top: 12px; }
 .liquidGlass-wrapper{ border-radius: 30px; width: max-content; }
 .liquidGlass-shine{ border-radius: 30px; }
-.home-hero-banner-image{ display: flex; align-items: center; justify-content: center; position: absolute; right: 265; top: -55px; width: 1000px; height: 530px; object-fit: contain; animation: eyeFade 0.8s ease; }
+.home-hero-banner-image{ display: flex; align-items: center; justify-content: center; position: absolute; right: 100px; top: 0px; width: 1500px; height: 750px; object-fit: contain; animation: eyeFade 0.8s ease; }
 .hm-services-content-wrapper{ opacity: 50%; }
 .hm-services-content-wrapper.active{ opacity: 100%;  }
 .hm-services-content-wrapper::before{ content: ''; width: 3px; height: 0; background-color: var(--border-color); opacity: 0; position: absolute; top: 0; left: 0; border-radius: 20px; transition: height 1.5s ease, opacity 1s ease; }
