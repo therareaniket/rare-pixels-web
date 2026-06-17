@@ -27,17 +27,17 @@ export default function TestimonialSectionDesktop() {
                         <div className="testimonial-stats-wrapper">
                             <div className="testimonial-stats-1 testimonial-stats">
                                 <h3 className="h2 text-sb text-primary">3X</h3>
-                                <p className="h6 text-md">ROI Impact</p>
+                                <p className="text-18 text-md">ROI Impact</p>
                             </div>
 
                             <div className="testimonial-stats-2 testimonial-stats">
                                 <h3 className="h2 text-sb text-primary">100%</h3>
-                                <p className="h6 text-md">Client Satisfaction Rate</p>
+                                <p className="text-18 text-md">Client Satisfaction Rate</p>
                             </div>
 
                             <div className="testimonial-stats-3 testimonial-stats">
                                 <h3 className="h2 text-sb text-primary">95%</h3>
-                                <p className="h6 text-md">Projects Delivered On Time</p>
+                                <p className="text-18 text-md">Projects Delivered On Time</p>
                             </div>
                         </div>
                     </div>

@@ -59,7 +59,8 @@ export default function TestimonialSectionMobile() {
                             className="testimonial-mobile-swiper"
 
                             breakpoints={{
-                                0: { slidesPerView: 1 }
+                                0: { slidesPerView: 1 },
+                                460: { slidesPerView: 1.2 }
                             }}
                         >
                             <SwiperSlide>

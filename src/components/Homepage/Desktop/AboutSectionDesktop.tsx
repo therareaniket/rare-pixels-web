@@ -7,51 +7,55 @@ export default function AboutSectionDesktop() {
 
     const cols =
         typeof window !== "undefined"
-            ? window.innerWidth < 576
+            ? window.innerWidth < 481
                 ? 10
-                : window.innerWidth < 640
+                : window.innerWidth < 576
                     ? 10
-                    : window.innerWidth < 768
+                    : window.innerWidth < 640
                         ? 10
-                        : window.innerWidth < 992
-                            ? 30
-                            : window.innerWidth < 1024
-                                ? 43
-                                : window.innerWidth < 1200
-                                    ? 51
-                                    : window.innerWidth < 1360
-                                        ? 55
-                                        : window.innerWidth < 1440
+                        : window.innerWidth < 768
+                            ? 10
+                            : window.innerWidth < 992
+                                ? 30
+                                : window.innerWidth < 1024
+                                    ? 43
+                                    : window.innerWidth < 1200
+                                        ? 53
+                                        : window.innerWidth < 1360
                                             ? 55
-                                            : window.innerWidth < 1600
-                                                ? 65
-                                                : 76
+                                            : window.innerWidth < 1440
+                                                ? 55
+                                                : window.innerWidth < 1600
+                                                    ? 65
+                                                    : 76
             : 76;
 
     const rows =
         typeof window !== "undefined"
-            ? window.innerWidth <= 576
+            ? window.innerWidth <= 481
                 ? 300
-                : window.innerWidth <= 640
-                    ? 543
-                    : window.innerWidth <= 768
-                        ? 80
-                        : window.innerWidth <= 840
-                            ? 79
-                            : window.innerWidth <= 992
-                                ? 55
-                                : window.innerWidth <= 1024
-                                    ? 44
-                                    : window.innerWidth <= 1200
-                                        ? 30
-                                        : window.innerWidth <= 1360
-                                            ? 37
-                                            : window.innerWidth <= 1440
+                : window.innerWidth <= 576
+                    ? 300
+                    : window.innerWidth <= 640
+                        ? 492
+                        : window.innerWidth <= 768
+                            ? 80
+                            : window.innerWidth <= 840
+                                ? 79
+                                : window.innerWidth <= 992
+                                    ? 55
+                                    : window.innerWidth <= 1024
+                                        ? 44
+                                        : window.innerWidth <= 1200
+                                            ? 30
+                                            : window.innerWidth <= 1360
                                                 ? 37
-                                                : window.innerWidth <= 1600
-                                                    ? 30
-                                                    : 33
-            : 33;
+                                                : window.innerWidth <= 1440
+                                                    ? 33
+                                                    : window.innerWidth <= 1600
+                                                        ? 30
+                                                        : 33
+                    : 33;
 
     // const cols = 76;
     // const rows = 33;
