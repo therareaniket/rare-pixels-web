@@ -1,165 +1,240 @@
-'use client'
+// 'use client'
 
-import React, { useEffect, useMemo, useRef } from 'react'
-import * as THREE from 'three'
-import { useGLTF, useTexture, useAnimations } from '@react-three/drei' 
-import { useThree, useFrame } from '@react-three/fiber'
-import gsap from 'gsap'
+// import gsap from 'gsap'
+// import React, { useEffect, useMemo, useRef } from 'react'
+// import * as THREE from 'three'
+// import { useGLTF, useTexture, useAnimations } from '@react-three/drei'
+// import { useThree, useFrame } from '@react-three/fiber'
 
-interface Model3DProps { activeIndex: number }
+// interface Model3DProps { activeIndex: number }
 
-// One matcap per service — add/replace paths as needed
-const MATCAP_PATHS = [ '/matcap/mat-1.png', ]
+// const Model3D = ({ activeIndex }: Model3DProps) => {
+//     const { scene, animations } = useGLTF('/models/eye.element.glb')
+//     const { actions } = useAnimations(animations, scene)
 
-const Model3D = ({ activeIndex }: Model3DProps) => {
-    const { scene, animations } = useGLTF('/models/eye.element.glb')
-    const { actions } = useAnimations(animations, scene)
+//     useThree(({ camera, gl }) => {
+//         camera.position.z = 0.55;
+//         gl.toneMapping = THREE.ReinhardToneMapping;
+//         gl.outputColorSpace = THREE.SRGBColorSpace;
 
-    useThree(({ camera, gl }) => {
-        camera.position.z = 0.55;
-        gl.toneMapping = THREE.ReinhardToneMapping;
-        gl.outputColorSpace = THREE.SRGBColorSpace;
-    });
+//         gl.toneMapping = THREE.ACESFilmicToneMapping
+//         gl.toneMappingExposure = 1.3
 
-    // Play first available animation, if any
-    useEffect(() => {
-        const firstAction = Object.values(actions)[0]
-        firstAction?.play()
-    }, [actions])
+//     });
 
-    const matcaps = useTexture(MATCAP_PATHS) as THREE.Texture[]
+//     // Play first available animation, if any
+//     useEffect(() => {
+//         const firstAction = Object.values(actions)[0]
+//         firstAction?.play()
+//         const iridescentMaterial = createIridescentMaterial()
 
-    useEffect(() => {
-        matcaps.forEach((tex) => {
-            tex.colorSpace = THREE.SRGBColorSpace
-        })
-    }, [matcaps])
+//         scene.traverse((child: any) => {
+//             if (child.isMesh) {
 
-    // Shared uniform refs so GSAP can animate them directly
-    const uniforms = useRef({
-        uMatcap1: { value: matcaps[0] },
-        uMatcap2: { value: matcaps[0] },
-        uProgress: { value: 1.0 },
-    })
+//                 if (child.name.toLowerCase().includes('sphere')) {
+//                     // ✅ Chrome spheres
+//                     child.material = new THREE.MeshStandardMaterial({
+//                         color: '#ffffff',
+//                         metalness: 1,
+//                         roughness: 0.05,
+//                     })
+//                 } else {
+//                     // ✅ Main body → shader
+//                     child.material = iridescentMaterial
+//                 }
+//             }
+//         })
 
-    const material = useMemo(() => {
-        const mat = new THREE.MeshMatcapMaterial({ matcap: matcaps[0], })
+//     }, [actions, scene])
 
-        mat.onBeforeCompile = (shader) => {
-            shader.uniforms.uMatcapTexture1 = uniforms.current.uMatcap1
-            shader.uniforms.uMatcapTexture2 = uniforms.current.uMatcap2
-            shader.uniforms.uProgress = uniforms.current.uProgress
+//     // Shared uniform refs so GSAP can animate them directly
+//     const uniforms = useRef({
+//         // uMatcap1: { value: matcaps[0] },
+//         // uMatcap2: { value: matcaps[0] },
+//         uProgress: { value: 1.0 },
+//     })
 
-            shader.fragmentShader = shader.fragmentShader.replace(
-                'void main() {',
-                `
-                uniform sampler2D uMatcapTexture1;
-                uniform sampler2D uMatcapTexture2;
-                uniform float uProgress;
+//     const groupRef = useRef<THREE.Group>(null)
+//     const mouse = useRef({ x: 0, y: 0 })
 
-                void main() {
-                `
-            )
+//     useEffect(() => {
+//         const handleMouseMove = (e: MouseEvent) => {
+//             // Normalize between -1 and +1
+//             mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1
+//             mouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1
+//         }
 
-            shader.fragmentShader = shader.fragmentShader.replace(
-                'vec4 matcapColor = texture2D( matcap, uv );',
-                `
-                vec4 matcapColor1 = texture2D( uMatcapTexture1, uv );
-                vec4 matcapColor2 = texture2D( uMatcapTexture2, uv );
-                float transitionFactor = 0.2;
+//         window.addEventListener('mousemove', handleMouseMove)
 
-                float progress = smoothstep(uProgress - transitionFactor, uProgress, (vViewPosition.x + vViewPosition.y) * 0.5 + 0.5);
+//         return () => { window.removeEventListener('mousemove', handleMouseMove) } 
+//     }, [])
 
-                vec4 matcapColor = mix(matcapColor2, matcapColor1, progress);
-                `
-        )}
+//     useFrame((state) => {
+//         if (!groupRef.current) return
 
-        return mat
-    }, [matcaps])
+//         const targetX = mouse.current.x
+//         const targetY = mouse.current.y
 
-    // Apply material to every mesh in the model
-    useEffect(() => {
-        scene.traverse((child) => {
-            if ((child as THREE.Mesh).isMesh) {
-                (child as THREE.Mesh).material = material
-        }})
-    }, [scene, material])
+//         // 👉 2D FLOATING MOVEMENT — model drifts toward cursor
+//         groupRef.current.position.x = THREE.MathUtils.lerp(
+//             groupRef.current.position.x,
+//             targetX * 0.4,        // was 0.2 — increase for wider horizontal drift
+//             0.08                  // was 0.05 — snappier follow
+//         )
 
-    // Crossfade matcap whenever the active service changes
-    useEffect(() => {
-        const nextMatcap = matcaps[activeIndex % matcaps.length]
-        uniforms.current.uMatcap1.value = nextMatcap
-
-        gsap.to(uniforms.current.uProgress, {
-        value: 0.0,
-        duration: 0.5,
-        ease: 'power2.inOut',
-        onComplete: () => {
-            uniforms.current.uMatcap2.value = uniforms.current.uMatcap1.value
-            uniforms.current.uProgress.value = 1.0
-        },
-        })
-    }, [activeIndex, matcaps])
-
-    const groupRef = useRef<THREE.Group>(null)
-    const mouse = useRef({ x: 0, y: 0 })
-
-    useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-        // Normalize between -1 and +1
-        mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1
-        mouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1
-    }
-
-    window.addEventListener('mousemove', handleMouseMove)
-
-    return () => { window.removeEventListener('mousemove', handleMouseMove) } }, [])
-
-    useFrame(() => {
-        if (!groupRef.current) return
-
-        const targetX = mouse.current.x
-        const targetY = mouse.current.y
-
-        // 👉 2D FLOATING MOVEMENT — model drifts toward cursor
-        groupRef.current.position.x = THREE.MathUtils.lerp(
-            groupRef.current.position.x,
-            targetX * 0.4,        // was 0.2 — increase for wider horizontal drift
-            0.08                    // was 0.05 — snappier follow
-        )
-
-        groupRef.current.position.y = THREE.MathUtils.lerp(
-            groupRef.current.position.y,
-            targetY * 0.3 - 0.4,    // was 0.2 — increase for taller vertical drift
-            0.08
-        )
+//         groupRef.current.position.y = THREE.MathUtils.lerp(
+//             groupRef.current.position.y,
+//             targetY * 0.3 - 0.4,    // was 0.2 — increase for taller vertical drift
+//             0.08
+//         )
         
-        groupRef.current.position.z = THREE.MathUtils.lerp(
-            groupRef.current.position.z,
-            targetX * 1,
-            0.08
-        )
+//         groupRef.current.position.z = THREE.MathUtils.lerp(
+//             groupRef.current.position.z,
+//             targetX * 1,
+//             0.08
+//         )
 
-        // 👉 ROTATION stays the same
-        groupRef.current.rotation.y = THREE.MathUtils.lerp(
-            groupRef.current.rotation.y,
-            Math.PI / 2 + targetX * 0.4,
-            0.05
-        )
+//         // 👉 ROTATION stays the same
+//         groupRef.current.rotation.y = THREE.MathUtils.lerp(
+//             groupRef.current.rotation.y,
+//             Math.PI / 2 + targetX * 0.4,
+//             0.05
+//         )
 
-        groupRef.current.rotation.x = THREE.MathUtils.lerp(
-            groupRef.current.rotation.x,
-            targetY * 0.3,
-            0.05
-        )
-    })
+//         groupRef.current.rotation.x = THREE.MathUtils.lerp(
+//             groupRef.current.rotation.x,
+//             targetY * 0.3,
+//             0.05
+//         )
+//     })
+
+//     const createIridescentMaterial = () => {
+//         return new THREE.ShaderMaterial({
+//             uniforms: {
+//                 uColor1: { value: new THREE.Color('#ff4ecd') }, // pink
+//                 uColor2: { value: new THREE.Color('#7b5cff') }, // purple
+//                 uColor3: { value: new THREE.Color('#ff8a3d') }, // orange
+//             },
+
+//             vertexShader: `
+//                 varying vec3 vNormal;
+//                 varying vec3 vViewPosition;
+
+//                 void main() {
+//                     vNormal = normalize(normalMatrix * normal);
+
+//                     vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+//                     vViewPosition = -mvPosition.xyz;
+
+//                     gl_Position = projectionMatrix * mvPosition;
+//                 }
+//             `,
+
+//             fragmentShader: `
+//                 uniform vec3 uColor1;
+//                 uniform vec3 uColor2;
+//                 uniform vec3 uColor3;
+
+//                 varying vec3 vNormal;
+//                 varying vec3 vViewPosition;
+
+//                 void main() {
+//                     vec3 normal = normalize(vNormal);
+//                     vec3 viewDir = normalize(vViewPosition);
+
+//                     float gradientX = normal.x * 0.5 + 0.5;
+//                     float gradientY = normal.y * 0.5 + 0.5;
+
+//                     vec3 color = mix(uColor1, uColor2, gradientY);
+//                     color = mix(color, uColor3, gradientX * 0.6);
+
+//                     float fresnel = pow(1.0 - dot(normal, viewDir), 3.0);
+//                     color += fresnel * 0.6;
+
+//                     gl_FragColor = vec4(color, 1.0);
+//                 }
+//             `
+//         })
+//     }
+
+//     return (
+//         <primitive ref={groupRef} object={scene} position={[0, -0.4, 0]} scale={1} />
+//     );
+// }
+
+// useGLTF.preload('/models/eye.element.glb')
+
+// export default Model3D
 
 
-    return (
-        <primitive ref={groupRef} object={scene} position={[0, -0.4, 0]} scale={1} />
-    );
+'use client'
+import React, { useEffect, useRef } from 'react'
+import * as THREE from 'three'
+import gsap from 'gsap'
+import { useGLTF, useAnimations } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { MODEL_CONFIG } from './modelConfig'
+
+// Preload all models upfront so switches feel instant
+MODEL_CONFIG.forEach(({ modelPath }) => useGLTF.preload(modelPath))
+
+interface Model3DProps {
+  config: (typeof MODEL_CONFIG)[number]
 }
 
-useGLTF.preload('/models/eye.element.glb')
+const Model3D = ({ config }: Model3DProps) => {
+  const groupRef = useRef<THREE.Group>(null)
+  const { scene, animations } = useGLTF(config.modelPath)
+  const { actions } = useAnimations(animations, scene)
 
-export default Model3D
+  // Play the first baked animation if the GLB has one
+  useEffect(() => {
+    const first = Object.values(actions)[0]
+    first?.reset().play()
+  }, [actions])
+
+  // Smooth scale + spin intro on every model swap (triggered by key= on parent)
+  useEffect(() => {
+    if (!groupRef.current) return
+
+    gsap.fromTo(
+      groupRef.current.scale,
+      { x: 0.6, y: 0.6, z: 0.6 },
+      { x: config.scale, y: config.scale, z: config.scale, duration: 0.9, ease: 'power3.out' }
+    )
+
+    gsap.fromTo(
+      groupRef.current.rotation,
+      { y: -1 },
+      { y: Math.PI * 2, duration: 1.3, ease: 'power2.out' }
+    )
+  }, [config.scale])
+
+  // Subtle mouse-follow float
+  useFrame(({ mouse }) => {
+    if (!groupRef.current) return
+
+    groupRef.current.position.x = THREE.MathUtils.lerp(
+      groupRef.current.position.x,
+      config.position[0] + mouse.x * 0.4,
+      0.08
+    )
+
+    groupRef.current.position.y = THREE.MathUtils.lerp(
+      groupRef.current.position.y,
+      config.position[1] + mouse.y * 0.3,
+      0.08
+    )
+  })
+
+  return (
+    <primitive
+      ref={groupRef}
+      object={scene}
+      position={config.position}
+      scale={config.scale}
+    />
+  )
+}
+
+export default React.memo(Model3D)
