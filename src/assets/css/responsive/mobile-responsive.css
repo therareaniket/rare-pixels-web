@@ -17,16 +17,17 @@
     body { font-size: 18px; }
     p { font-size: 14px; line-height: 18px; }
 
-    .hero-content { display: flex; flex-direction: column-reverse; gap: 40px; }
-
+    .hero-content { display: flex; flex-direction: column; gap: 20px; }
+    .hm-hero-wrapper-responsive{ padding-top: 0 !important; padding-top: 40px !important; }
     .site-hero-discrp h1 span { display: block; }
-    .site-hero-discrp p { width: 95%; }
-    .hero-link-cta { display: inline-block; font-size: 16px; line-height: 18px; background-color: var(--primary); color: var(--all-white); padding: 6px 12px; border-radius: 76px; margin-top: 20px; }
+    /* .site-hero-discrp p { width: 95%; } */
+    .hero-link-cta { display: inline-block; font-size: 16px; line-height: 18px; background-color: var(--primary); color: var(--all-white); padding: 6px 12px; border-radius: 76px; }
     .cta-arrow { font-size: 12px; display: inline-block; margin-left: 6px; }
 
-    .brand-statistics { display: flex; justify-content: space-between; }
-    .stat-item { width: 90px; }
+    .brand-statistics { display: flex; justify-content: space-between; margin: 20px 0; }
+    .stat-item { width: 110px; }
     .stat-item .h5 { color: var(--primary);  }
+    .hm-hero-desc-wrapper{ display: flex; flex-direction: column; gap: 18px; }
 
     .element-box { width: 100%; height: 225px; margin-top: 30px; display: flex; align-items: center; justify-content: center; will-change: contents; }
 
@@ -46,7 +47,7 @@
 
     .hm-testi-stats-wrapper .h5{ margin-bottom: 0; color: var(--primary); }
 
-    .testimonial-client-video-wrapper{ position: relative; }
+    .testimonial-client-video-wrapper{ position: relative; margin-top: 30px; }
     .testimonial-client-video{ width: 300px; height: 230px; background-color: var(--testimonial-card-5); padding: 6px; border-radius: 10px; margin: 0 auto;}
     .testimonial-client-video img{ width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 10px; }
     .testi-clt-img-2{ width: 90px; height: 90px; position: absolute; bottom: 30px; left: 35px; }
@@ -55,8 +56,9 @@
     .testimonial-mobile-swiper{ margin-top: 30px; }
     .hm-testimonial-mobile-card > p{ padding: 20px; border-radius: 20px; }
 
+    .hm-testimonial-card{ color: black; }
     .mobile-client-initial{ display: flex; align-items: flex-start; gap: 20px; }
-    .mobile-client-initial span{ padding: 12px 13px; border-radius: 10px; }
+    .mobile-client-initial span{ padding: 12px 13px; border-radius: 10px; color: black; }
     .mobile-client-review-wrapper{ margin-top: 14px; display: flex; justify-content: space-between; align-items: flex-start; }
     .mobile-review-rating-wrapper{ display: flex; align-items: center; gap: 4px; }
 
@@ -84,7 +86,7 @@
     /* About Section */
 
     .abt-mobile-bg{ padding: 18px; }
-    .hm-abt-card-mobile{ display: flex; align-items: flex-start; gap: 10px; padding: 14px; border-radius: 20px;  }
+    .hm-abt-card-mobile{ display: flex; align-items: flex-start; gap: 10px; padding: 14px; border-radius: 10px; }
     .hm-abt-pixel{ width: 6px; height: 6px; border-radius: 1px; background-color: var(--primary); margin-top: 9px; }
     .hm-abt-card-text h3{ color: var(--primary); margin-bottom: 6px; }
     .hm-abt-card-text{ width: 100%; }
@@ -104,12 +106,13 @@
     }
 
     .abt-mobile-section { position: relative ; overflow: hidden; }
+
 }
 
 @media (max-width: 439px) {
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
-    h1, .h1 { font-size: 34px; }
-    h2, .h2 { font-size: 32px; }
+    h1, .h1 { font-size: 30px; line-height: 38px; }
+    h2, .h2 { font-size: 28px; line-height: 36px; }
     h3, .h3 { font-size: 28px; }
     h4, .h4 { font-size: 26px; }
     h6, .h6 { font-size: 22px; }
@@ -129,18 +132,22 @@
     .testimonial-client-video{ height: 210px; }
 
     .abt-grid-wrapper{ grid-template-rows: repeat(40, 12px); grid-template-columns: repeat(31, 12px); }
+    .hm-hero-desc-wrapper{ gap: 12px; }
+    .hero-link-cta{ font-size: 14px; line-height: 16px; }
+    .cta-arrow{ font-size: 10px; }
 }
 
 @media (max-width: 400px) {
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
-    h1, .h1 { font-size: 32px; line-height: 38px; }
-    h2, .h2 { font-size: 30px; }
+    h1, .h1 { font-size: 28px; line-height: 34px; }
+    h2, .h2 { font-size: 26px; line-height: 32px; }
     h3, .h3 { font-size: 26px; }
     h4, .h4 { font-size: 24px; }
     h6, .h6 { font-size: 18px; }
     body { font-size: 16px; }
 
-    .stat-item { width: 84px; }
+    .stat-item { width: 92px; }
+    .stat-item p{ font-size: 12px; line-height: 16px; }
     .hero-content { gap: 35px; }
     .element-box { margin-top: 20px; }
     .service-item p { margin-top: 14px; }
@@ -153,7 +160,6 @@
 
 @media (max-width: 374px) {
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
-    h2, .h2 { font-size: 28px; }
     h3, .h3 { font-size: 26px; }
     h4, .h4 { font-size: 24px; }
     h6, .h6 { font-size: 18px; }
@@ -172,7 +178,6 @@
 
 @media (max-width: 359px) {
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
-    /* h2, .h2 { font-size: 30px; } */
     h3, .h3 { font-size: 26px; }
     h4, .h4 { font-size: 24px; }
     h6, .h6 { font-size: 18px; }
@@ -181,5 +186,4 @@
     .testi-clt-img-2{ width: 70px; height: 70px; left: 0px; top: 90px; }
     .testimonial-client-video{ width: 230px; height: 180px; }
     .testi-clt-img-3{ width: 70px; height: 70px; }
-    /* .testi-clt-img-2{  } */
 }

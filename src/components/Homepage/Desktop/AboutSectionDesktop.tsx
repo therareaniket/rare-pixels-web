@@ -65,11 +65,11 @@ export default function AboutSectionDesktop() {
             <section className="section section-bg-blue ">
                 <div className="container">
                     <div className="abt-section-wrapper">
-                        <div className="abt-grid-wrapper">
+                        {/* <div className="abt-grid-wrapper">
                             {Array.from({ length: cols * rows }).map((_, index) => (
                                 <div key={index} className="abt-background-grid"></div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="hm-about-main">
@@ -89,9 +89,9 @@ export default function AboutSectionDesktop() {
                                     <div className="hm-abt-card">
                                         <span className="hm-abt-pixel"></span>
                                         <div className="hm-abt-card-title">
-                                            <h3 className="h6 text-primary text-white">Design that leads, not follows</h3>
+                                            <h3 className="h6 text-primary text-md">Design that leads, not follows</h3>
 
-                                            <p className="text-18 text-rg text-white">We craft user experiences that go beyond visuals focusing on clarity, usability, and engagement. Every interface is designed to guide users intuitively while maintaining a strong visual identity.</p>
+                                            <p className="text-18 text-white">We craft user experiences that go beyond visuals focusing on clarity, usability, and engagement. Every interface is designed to guide users intuitively while maintaining a strong visual identity.</p>
                                         </div>
                                     </div>
                                 </GlassEffect>
@@ -100,9 +100,9 @@ export default function AboutSectionDesktop() {
                                     <div className="hm-abt-card">
                                         <span className="hm-abt-pixel"></span>
                                         <div className="hm-abt-card-title">
-                                            <h3 className="h6 text-primary text-white">Built to perform beyond visuals</h3>
+                                            <h3 className="h6 text-primary text-md">Built to perform beyond visuals</h3>
 
-                                            <p className="text-18 text-rg text-white">We build fast, scalable, and reliable digital platforms that are designed to perform under real-world conditions. Every line of code is written with efficiency and long-term growth in mind.</p>
+                                            <p className="text-18 text-white">We build fast, scalable, and reliable digital platforms that are designed to perform under real-world conditions. Every line of code is written with efficiency and long-term growth in mind.</p>
                                         </div>
                                     </div>
                                 </GlassEffect>
@@ -111,9 +111,9 @@ export default function AboutSectionDesktop() {
                                     <div className="hm-abt-card">
                                         <span className="hm-abt-pixel"></span>
                                         <div className="hm-abt-card-title">
-                                            <h3 className="h6 text-primary text-white">Where code meets creativity</h3>
+                                            <h3 className="h6 text-primary text-md">Where code meets creativity</h3>
 
-                                            <p className="text-18 text-rg text-white">We craft user experiences that go beyond visuals focusing on clarity, usability, and engagement. Every interface is designed to guide users intuitively while maintaining a strong visual identity.</p>
+                                            <p className="text-18 text-white">We craft user experiences that go beyond visuals focusing on clarity, usability, and engagement. Every interface is designed to guide users intuitively while maintaining a strong visual identity.</p>
                                         </div>
                                     </div>
                                 </GlassEffect>
@@ -122,9 +122,9 @@ export default function AboutSectionDesktop() {
                                     <div className="hm-abt-card">
                                         <span className="hm-abt-pixel"></span>
                                         <div className="hm-abt-card-title">
-                                            <h3 className="h6 text-primary text-white">Brands that truly stand out</h3>
+                                            <h3 className="h6 text-primary text-md">Brands that truly stand out</h3>
 
-                                            <p className="text-18 text-rg text-white">We build strong brand identities that extend across every touchpoint from visuals to voice to digital presence. Our approach ensures your brand is not only recognizable but also meaningful.</p>
+                                            <p className="text-18 text-white">We build strong brand identities that extend across every touchpoint from visuals to voice to digital presence. Our approach ensures your brand is not only recognizable but also meaningful.</p>
                                         </div>
                                     </div>
                                 </GlassEffect>

@@ -15,27 +15,12 @@ export default function TestimonialSectionMobile() {
 
     return (
         <>
-            <section className="section">
+            <section className="section" style={{paddingTop: 0}}>
                 <div className="container">
                     <div className="hm-testimonial-wrapper">
                         <h2 className="text-sb">Voices Behind the Work</h2>
 
                         <p className="text-14 text-rg">Every project tells a story shaped through collaboration and creativity. Here’s what our clients have to say about the experiences we build.</p>
-
-                        <div className="hm-testi-stats-wrapper">
-                            <div className="testimonial-stats">
-                                <h3 className="h5 text-sb text-primary">3X</h3>
-                                <p className="text-md">ROI Impact</p>
-                            </div>
-                            <div className="testimonial-stats">
-                                <h3 className="h5 text-sb text-primary">100%</h3>
-                                <p className="text-md">Client Satisfaction</p>
-                            </div>
-                            <div className="testimonial-stats">
-                                <h3 className="h5 text-sb text-primary">95%</h3>
-                                <p className="text-md">Projects Delivered</p>
-                            </div>
-                        </div>
 
                         <div className="testimonial-client-video-wrapper">
                             <div className="testimonial-client-video">
@@ -65,7 +50,7 @@ export default function TestimonialSectionMobile() {
                         >
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-14 hm-testimonial-card-1">Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.</p>
+                                    <p className="text-rg text-14 hm-testimonial-card hm-testimonial-card-1">Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.</p>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -88,7 +73,7 @@ export default function TestimonialSectionMobile() {
 
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-14 hm-testimonial-card-2"> Rarepixels enhanced our online presence with their outstanding website design and development services. From concept to launch, their team delivered a fully responsive, SEO-optimized site that boosted our traffic. Their creativity, technical expertise, and seamless collaboration made the process effortless.</p>
+                                    <p className="text-rg text-14 hm-testimonial-card hm-testimonial-card-2"> Rarepixels enhanced our online presence with their outstanding website design and development services. From concept to launch, their team delivered a fully responsive, SEO-optimized site that boosted our traffic. Their creativity, technical expertise, and seamless collaboration made the process effortless.</p>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -111,7 +96,7 @@ export default function TestimonialSectionMobile() {
 
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-14 hm-testimonial-card-3">The RarePixels team is indeed working in the line of their brand. I came across many teams during my professional journey but the Team RarePixels are indeed rarest RARE! I have seen them growing as a team and it&apos;s really commendable the freedom and spirit with which they enjoy working and that reflects through their creativity, makes their work very special and unique by matching the present trend & technologies.</p>
+                                    <p className="text-rg text-14 hm-testimonial-card hm-testimonial-card-3">The RarePixels team is indeed working in the line of their brand. I came across many teams during my professional journey but the Team RarePixels are indeed rarest RARE! I have seen them growing as a team and it&apos;s really commendable the freedom and spirit with which they enjoy working and that reflects through their creativity, makes their work very special and unique by matching the present trend & technologies.</p>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -134,7 +119,7 @@ export default function TestimonialSectionMobile() {
 
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-14 hm-testimonial-card-4">Working with RarePixels team is awesome. They are a highly professional team experts in design, development and digital marketing. They analysed and integrated our needs and translated them into proposals and results that exceeded our expectations. I highly recommend this team.</p>
+                                    <p className="text-rg text-14 hm-testimonial-card hm-testimonial-card-4">Working with RarePixels team is awesome. They are a highly professional team experts in design, development and digital marketing. They analysed and integrated our needs and translated them into proposals and results that exceeded our expectations. I highly recommend this team.</p>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -157,7 +142,7 @@ export default function TestimonialSectionMobile() {
 
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-14 hm-testimonial-card-5">RarePixels has delivered their services with outstanding professionalism throughout. Their work is consistently creative, fresh, and always on time. They maintain clear and transparent communication. Every detail is handled with care and explained upfront. Truly a dependable and highly recommended team.</p>
+                                    <p className="text-rg text-14 hm-testimonial-card hm-testimonial-card-5">RarePixels has delivered their services with outstanding professionalism throughout. Their work is consistently creative, fresh, and always on time. They maintain clear and transparent communication. Every detail is handled with care and explained upfront. Truly a dependable and highly recommended team.</p>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">

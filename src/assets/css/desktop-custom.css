@@ -1,5 +1,6 @@
 .text-primary{ color: var(--primary); }
 .link-padding{ padding: 10px 20px; }
+.site-radius-10{ border-radius: 10px; }
 .site-radius-20{ border-radius: 20px; }
 .site-radius-30{ border-radius: 30px; }
 .site-radius-50{ border-radius: 50%; }
@@ -8,23 +9,26 @@
 @keyframes eyeFade {  from{ opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 
 /* home hero */
-.home-hero-wrapper-desktop{ display: flex; flex-direction: column-reverse; gap: 40px; overflow: hidden; }
+.home-hero-wrapper-desktop{ display: flex; flex-direction: column-reverse; overflow: hidden; }
+.client-initital span, .testimonial-client-text{ color: black; }
+.home-hero-wrapper-tablet{ display: none; }
+.hm-hero-main{ padding-top: 0 !important; padding-top: 60px !important; }
 
 .hm-hero-row-1-wrapper{ display: flex; align-items: flex-start; justify-content: space-between;  margin-top: 60px; margin-bottom: 80px; }
 
 .home-hero-services-highlight-wrapper{ display: flex; }
 .hm-hero-text-left{ width: 527px; }
 .hm-hero-redirect-link{ display: flex; gap: 6px; width: max-content; align-items: center; }
-.hm-hero-subtitle{ padding-bottom: 40px; }
+.hm-hero-paragraph-wrapper{ display: flex; flex-direction: column; gap: 18px; padding-bottom: 40px; }
 
 .hm-services-title{ display: flex; gap: 10px;  padding: 6px 20px; border-radius: 30px;  width: max-content;  justify-content: flex-start;  align-items: center; color: var(--text-black);  }
 .hm-services-title img{ width: 22px; height: auto; object-fit: contain; }
 .hm-services-title .h6{ margin-bottom: 0; }
-.hm-services-content-wrapper{ width: 454px; padding-left: 20px; margin-bottom: 30px; position: relative; transition: all 1s ease-in; }
+.hm-services-content-wrapper{ width: 426px; padding-left: 20px; margin-bottom: 30px; position: relative; transition: all 1s ease-in; }
 .hm-services-subtitle{ width: 414px; padding-left: 20px; max-height: 0; padding-top: 0; overflow: hidden; opacity: 0; transition: max-height 1s ease, padding-top 0.4s ease; }
 .hm-services-subtitle.show{ max-height: 100px; opacity: 1; padding-top: 12px; }
-.liquidGlass-wrapper{ border-radius: 30px; width: max-content; }
-.liquidGlass-shine{ border-radius: 30px; }
+/* .liquidGlass-wrapper{ border-radius: 30px; width: max-content; } */
+/* .liquidGlass-shine{ border-radius: 30px; } */
 .home-hero-banner-image { width: 100vw; height: 100%; display: flex; align-items: center; justify-content: center; position: absolute; right: 0px; top: 0px; object-fit: contain; animation: eyeFade 0.8s ease; }
 .hm-services-content-wrapper .h6{ opacity: 50%; }
 .hm-services-content-wrapper p{ opacity: 50%; }
@@ -35,7 +39,7 @@
 .hm-services-content-wrapper.active .h6{ color: var(--primary); opacity: 100%; }
 .hm-services-content-wrapper.active p{ opacity: 100%; }
 
-.hm-hero-stats-wrapper{ display: flex; align-items: flex-start;  gap: 62px; justify-content: space-between; width: max-content; }
+.hm-hero-stats-wrapper{ display: flex; align-items: flex-start;  gap: 40px; justify-content: space-between; width: max-content; }
 .hm-hero-stats h2{ margin-bottom: 6px; }
 .home-hero-services-highlight-wrapper.for-tablet{ display: none !important; }
 
@@ -47,7 +51,9 @@
 .testimonial-stats .h2, .testimonial-stats p{ margin-bottom: 0; }
 .testimonial-stats .h2{ margin-bottom: 6px; }
 .hm-testimonial-txt-wrapper{ display: flex; align-items: flex-start; gap: 130px; }
-.hm-testimonial-left-text{ width: 615px; }
+/* .hm-testimonial-left-text{ width: 615px; } */
+.hm-testimonial-left-text{ display: flex; width: 100%; align-items: flex-start; justify-content: space-between; }
+.hm-testimonial-left-text p{ width: 850px; }
 
 .testimonial-review-wrapper{ margin-top: 60px; display: flex; align-items: flex-start; gap: 40px; }
 .testimonial-review-video-wrapper{ position: relative; width: 690px; display: flex; align-items: center; justify-content: center; }
@@ -114,9 +120,15 @@
 
 
 /* Navbar */
-header{ position: fixed; width: 100%; bottom: 50px; z-index: 99999; }
+header{ 
+    position: fixed; 
+    width: 100%; 
+    z-index: 99999; 
+    bottom: 50px;
+}
 .navbar-wrapper { display: flex; align-items: center; justify-content: space-between; }
 .navbar-links ul{ display: flex; padding: 14px 10px; }
 .navbar-links ul li{ padding: 0 20px; }
 .navbar-links-wrapper{ display: flex; gap: 20; align-items: center; }
 .mode-switching-toggle-button{ padding: 14px; cursor: pointer; }
+.menu-for-responsive, .hamburger-wrapper{ display: none; }

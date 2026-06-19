@@ -23,23 +23,6 @@ export default function TestimonialSectionDesktop() {
 
                             <p className="text-18 text-rg">Every project tells a story shaped through collaboration and creativity. Here’s what our clients have to say about the experiences we build.</p>
                         </div>
-
-                        <div className="testimonial-stats-wrapper">
-                            <div className="testimonial-stats-1 testimonial-stats">
-                                <h3 className="h2 text-sb text-primary">3X</h3>
-                                <p className="text-18 text-md">ROI Impact</p>
-                            </div>
-
-                            <div className="testimonial-stats-2 testimonial-stats">
-                                <h3 className="h2 text-sb text-primary">100%</h3>
-                                <p className="text-18 text-md">Client Satisfaction Rate</p>
-                            </div>
-
-                            <div className="testimonial-stats-3 testimonial-stats">
-                                <h3 className="h2 text-sb text-primary">95%</h3>
-                                <p className="text-18 text-md">Projects Delivered On Time</p>
-                            </div>
-                        </div>
                     </div>
 
                     <div className="testimonial-review-wrapper">
@@ -78,7 +61,7 @@ export default function TestimonialSectionDesktop() {
                                         <p className="text-18 text-rg testimonial-client-text testimonial-text-1 site-radius-20">Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.
                                         </p>
                                         <div className="client-review-wrapper">
-                                            <div className="client-initital ">
+                                            <div className="client-initital">
                                                 <span className="h6 text-md client-initial-1">SP</span>
 
                                                 <div className="client-name-designation">

@@ -22,7 +22,7 @@
 //                                     </h1>
 
 //                                     <p>Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to.</p>
-                                    
+
 //                                     <Link href="/about" title="Make it RARE" className="hero-link-cta text-rg">Make it Rare <span className="icon-hero-cta-arrow cta-arrow"></span></Link>
 //                                 </div>
 
@@ -53,7 +53,7 @@
 //                                     <GlassEffect>
 //                                         <h5 className="text-md">👁️ UI/UX Design Services</h5>
 //                                     </GlassEffect>
-                                    
+
 //                                     <p className="text-rg">Experiences users remember and businesses benefit from</p>
 //                                 </div>
 //                             </div>
@@ -143,7 +143,7 @@ export default function HeroSectionMobile() {
             if (seqIndex < 0) seqIndex = 0;
 
             // Progress within this segment (0 to 1)
-            const segmentProgress = Math.min( Math.max((overallProgress - seqIndex * segmentSize) / segmentSize, 0), 1 );
+            const segmentProgress = Math.min(Math.max((overallProgress - seqIndex * segmentSize) / segmentSize, 0), 1);
 
             const frameCount = seqLengths[seqIndex];
             const frameIndex = Math.round(segmentProgress * (frameCount - 1));
@@ -154,9 +154,9 @@ export default function HeroSectionMobile() {
                 current.frame = frameIndex;
 
                 if (rafRef.current) cancelAnimationFrame(rafRef.current);
-                    rafRef.current = requestAnimationFrame(() => {
-                        drawFrame(seqIndex, frameIndex);
-                    });
+                rafRef.current = requestAnimationFrame(() => {
+                    drawFrame(seqIndex, frameIndex);
+                });
             }
         };
 
@@ -189,36 +189,42 @@ export default function HeroSectionMobile() {
 
     return (
         <>
-            <section className="section">
+            <section className="section hm-hero-wrapper-responsive">
                 <div className="container">
                     <div className="hero-wrapper" ref={wrapperRef}>
                         <div className="scroll-effect-wrapper">
                             <div className="hero-content">
                                 <div className="site-hero-discrp">
-                                <h1 className="text-sb">
-                                    <span>Seen.</span>
-                                    <span>Remembered.</span>
-                                    <span>Chosen.</span>
-                                </h1>
-                                <p>Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to.</p>
-                                <Link href="#" title="Make it RARE" className="hero-link-cta text-rg">
-                                    Make it Rare <span className="icon-hero-cta-arrow cta-arrow"></span>
-                                </Link>
-                                </div>
+                                    <h1 className="text-sb">
+                                        Building Brands People Choose First.
+                                    </h1>
 
-                                <div className="brand-statistics">
-                                <div className="stat-item">
-                                    <h2 className="h5 text-sb">100+</h2>
-                                    <p className="text-md">Brands Empowered</p>
-                                </div>
-                                <div className="stat-item">
-                                    <h2 className="h5 text-sb">120K+</h2>
-                                    <p className="text-md">Lines of Code Crafted</p>
-                                </div>
-                                <div className="stat-item">
-                                    <h2 className="h5 text-sb">250+</h2>
-                                    <p className="text-md">Creative Campaigns</p>
-                                </div>
+                                    <div className="hm-hero-desc-wrapper">
+                                        <p className="text-rg text-14">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
+
+                                        <p className="text-sb text-14">Creativity That Businesses Can Measure.</p>
+
+                                        <p className="text-rg text-14">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to. Nothing off the shelf. Nothing assembled from parts that existed before you walked in. Everything built for you. </p>
+                                    </div>
+
+                                    <div className="brand-statistics">
+                                        <div className="stat-item">
+                                            <h2 className="h5 text-sb">100+</h2>
+                                            <p className="text-md">Brands Transformed</p>
+                                        </div>
+                                        <div className="stat-item">
+                                            <h2 className="h5 text-sb">6000+</h2>
+                                            <p className="text-md">Hours of Strategic Design</p>
+                                        </div>
+                                        <div className="stat-item">
+                                            <h2 className="h5 text-sb">50+</h2>
+                                            <p className="text-md">Digital Products Engineered </p>
+                                        </div>
+                                    </div>
+
+                                    <Link href="#" title="Make it RARE" className="hero-link-cta text-md">
+                                        Start Your Project <span className="icon-hero-cta-arrow cta-arrow"></span>
+                                    </Link>
                                 </div>
                             </div>
 
