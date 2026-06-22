@@ -64,7 +64,7 @@ export default function HeroSectionDesktop() {
                 setActiveIndex((prev) => (prev + 1) % services.length);
                 setShowDescription(true);
             }, 500);
-        }, 20000);
+        }, 2000);
 
         return () => clearInterval(interval);
     })
@@ -95,9 +95,9 @@ export default function HeroSectionDesktop() {
                             </div>
 
                             <div className="home-hero-services-highlight-wrapper for-desktop">
-                                {/* <div className="hm-services-left home-hero-banner-image">
+                                <div className="hm-services-left home-hero-banner-image">
                                     <Scene3D activeIndex={activeIndex} />
-                                </div> */}
+                                </div>
 
                                 <div className="hm-services-right">
                                     {services.map((service, index) => (
