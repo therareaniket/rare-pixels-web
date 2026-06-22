@@ -49,7 +49,7 @@
     .hm-testi-stats-wrapper .h5{ margin-bottom: 0; color: var(--primary); }
 
     .testimonial-client-video-wrapper{ position: relative; margin-top: 30px; }
-    .testimonial-client-video{ width: 300px; height: 230px; background-color: var(--testimonial-card-5); padding: 6px; border-radius: 10px; margin: 0 auto;}
+    .testimonial-client-video{ width: 300px; height: 230px; background-color: var(--client-review-bg); padding: 6px; border-radius: 10px; margin: 0 auto;}
     .testimonial-client-video img{ width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 10px; }
     .testi-clt-img-2{ width: 90px; height: 90px; position: absolute; bottom: 30px; left: 35px; }
     .testi-clt-img-3{ width: 70px; height: 70px; position: absolute; top: 30px; right: 35px; }
@@ -106,7 +106,7 @@
         mask-composite: intersect;
     }
 
-    .abt-mobile-section { position: relative ; overflow: hidden; background-image: url(/images/homepage/abt-section-background-grid-mobile.png); width: 100%; height: 100%; background-repeat: no-repeat; }
+    .abt-mobile-section { position: relative ; overflow: hidden; background-image: url(/images/homepage/abt-section-background-grid-mobile.png); width: 100%; height: 100%; background-repeat: repeat; padding: 18px; }
 
     .services-mobile-title{ text-align: center; }
     .services-mobile-title h2{ margin-bottom: 14px; }

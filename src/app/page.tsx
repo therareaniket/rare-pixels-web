@@ -24,10 +24,10 @@ const ServicesSectionDesktop = dynamic(
 	{ ssr: false }
 );
 
-// const IndustriesSectionDesktop = dynamic(
-// 	() => import("@/components/Homepage/Desktop/IndustriesSectionDesktop"),
-// 	{ ssr: false }
-// );
+const IndustriesSectionDesktop = dynamic(
+	() => import("@/components/Homepage/Desktop/IndustriesSectionDesktop"),
+	{ ssr: false }
+);
 
 export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
@@ -62,7 +62,7 @@ export default function Home() {
 						<TestimonialSectionDesktop />
 						<AboutSectionDesktop />
 						<ServicesSectionDesktop />
-						{/* <IndustriesSectionDesktop /> */}
+						<IndustriesSectionDesktop />
 					</>
 				}
 			</main>

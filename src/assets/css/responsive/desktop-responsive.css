@@ -52,6 +52,12 @@
   .services-detail-text{ margin-top: 30px; }
   .services-art-board{ width: 325px; height: 325px; }
   .services-text .h6{ font-size: 20px; line-height: 28px; }
+
+  .industries-image-wrapper{ width: 950px; height: 550px; }
+  .industries-text-wrapper span{ font-size: 70px; line-height: 80px; }
+  .industries-text-wrapper{ height: 500px; }
+
+  .hm-abt-card-wrapper{ margin-top: 40px; }
 }
 
 @media (max-width: 1599px) {
@@ -75,7 +81,7 @@
   .home-hero-banner-image{ height: 440px; }
 
   /* testimonial section */
-  .testimonial-review-wrapper{ margin-top: 20px; }
+  /* .testimonial-review-wrapper{ margin-top: 20px; } */
   .hm-testimonial-left-text p{ width: 700px; }
   
 
@@ -111,11 +117,14 @@
   .hm-services-content-wrapper{ margin-bottom: 20px; }
   .hm-hero-row-1-wrapper{ margin-top: 40px; }
 
-  .services-text h3{ margin-bottom: 8px; }
+  .services-text h3{ margin-bottom: 8px; font-size: 38px; line-height: 46px; }
+  .services-text .h6{ font-size: 18px; line-height: 26px; }
   .services-detail-text{ gap: 8px; }
-  .services-card-wrapper{ flex-wrap: wrap; margin-top: 40px; }
-  .services-card{ width: calc(50% - 10px); height: 300px; }
-  .services-art-board{ width: 614px; height: 300px; }
+  .services-card-wrapper{  margin-top: 40px; }
+  .services-card{ width: 297px; height: 460px; }
+  .services-art-board{ width: 297px; height: 297px; }
+
+  .industries-text-wrapper span{ font-size: 60px; line-height: 70px; }
 }
 
 @media (max-width: 1439px) {

@@ -27,7 +27,7 @@ export default function ServicesSectionDesktop() {
                                 <Image src="/images/homepage/services-ui-ux.png" alt="ui-ux service" width={386} height={255}></Image>
                             </div>
                             <GlassEffect className="site-radius-20 services-text">
-                                <h3 className="h2 text-sb text-black">CLARITY</h3>
+                                <h3 className="text-sb text-black">CLARITY</h3>
 
                                 <span className="h6 text-sb text-black">UI/UX Design</span>
 
@@ -44,7 +44,7 @@ export default function ServicesSectionDesktop() {
                                 <Image src="/images/homepage/services-development.png" alt="development service" width={270} height={282}></Image>
                             </div>
                             <GlassEffect className="site-radius-20 services-text">
-                                <h3 className="h2 text-sb text-black">MOMENTUM</h3>
+                                <h3 className="text-sb text-black">MOMENTUM</h3>
 
                                 <span className="h6 text-sb text-black">Web & App Development</span>
 
@@ -61,7 +61,7 @@ export default function ServicesSectionDesktop() {
                                 <Image src="/images/homepage/services-brand-identity.png" alt="brand service" width={270} height={270}></Image>
                             </div>
                             <GlassEffect className="site-radius-20 services-text">
-                                <h3 className="h2 text-sb text-black">PERCEPTION</h3>
+                                <h3 className="text-sb text-black">PERCEPTION</h3>
 
                                 <span className="h6 text-sb text-black">Brand Identity Design</span>
 
@@ -79,7 +79,7 @@ export default function ServicesSectionDesktop() {
                                 <Image src="/images/homepage/services-sm-management.png" alt="social-media services" width={346} height={346}></Image>
                             </div>
                             <GlassEffect className="site-radius-20 services-text">
-                                <h3 className="h2 text-sb text-black">RELEVANCE</h3>
+                                <h3 className="text-sb text-black">RELEVANCE</h3>
 
                                 <span className="h6 text-sb text-black">Social Media Management</span>
 
