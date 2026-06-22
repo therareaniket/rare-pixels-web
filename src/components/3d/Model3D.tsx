@@ -167,6 +167,89 @@
 // export default Model3D
 
 
+
+
+// ALL MODELS ADD
+
+
+
+// 'use client'
+// import React, { useEffect, useRef } from 'react'
+// import * as THREE from 'three'
+// import gsap from 'gsap'
+// import { useGLTF, useAnimations } from '@react-three/drei'
+// import { useFrame } from '@react-three/fiber'
+// import { MODEL_CONFIG } from './modelConfig'
+
+// // Preload all models upfront so switches feel instant
+// MODEL_CONFIG.forEach(({ modelPath }) => useGLTF.preload(modelPath))
+
+// interface Model3DProps {
+//   config: (typeof MODEL_CONFIG)[number]
+// }
+
+// const Model3D = ({ config }: Model3DProps) => {
+//   const groupRef = useRef<THREE.Group>(null)
+//   const { scene, animations } = useGLTF(config.modelPath)
+//   const { actions } = useAnimations(animations, scene)
+
+//   // Play the first baked animation if the GLB has one
+//   useEffect(() => {
+//     const first = Object.values(actions)[0]
+//     first?.reset().play()
+//   }, [actions])
+
+//   // Smooth scale + spin intro on every model swap (triggered by key= on parent)
+//   useEffect(() => {
+//     if (!groupRef.current) return
+
+//     gsap.fromTo(
+//       groupRef.current.scale,
+//       { x: 0.6, y: 0.6, z: 0.6 },
+//       { x: config.scale, y: config.scale, z: config.scale, duration: 0.9, ease: 'power3.out' }
+//     )
+
+//     gsap.fromTo(
+//       groupRef.current.rotation,
+//       { y: -1 },
+//       { y: Math.PI * 2, duration: 1.3, ease: 'power2.out' }
+//     )
+//   }, [config.scale])
+
+//   // Subtle mouse-follow float
+//   useFrame(({ mouse }) => {
+//     if (!groupRef.current) return
+
+//     groupRef.current.position.x = THREE.MathUtils.lerp(
+//       groupRef.current.position.x,
+//       config.position[0] + mouse.x * 0.4,
+//       0.08
+//     )
+
+//     groupRef.current.position.y = THREE.MathUtils.lerp(
+//       groupRef.current.position.y,
+//       config.position[1] + mouse.y * 0.3,
+//       0.08
+//     )
+//   })
+
+//   return ( <primitive ref={groupRef} object={scene} position={config.position} scale={config.scale} /> )
+// }
+
+// export default React.memo(Model3D)
+
+
+
+
+
+
+
+
+
+
+
+
+
 'use client'
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
@@ -184,6 +267,10 @@ interface Model3DProps {
 
 const Model3D = ({ config }: Model3DProps) => {
   const groupRef = useRef<THREE.Group>(null)
+
+  // null = no mouse event received yet → useFrame stays idle until user actually moves mouse
+  const mouse = useRef<{ x: number; y: number } | null>(null)
+
   const { scene, animations } = useGLTF(config.modelPath)
   const { actions } = useAnimations(animations, scene)
 
@@ -193,9 +280,25 @@ const Model3D = ({ config }: Model3DProps) => {
     first?.reset().play()
   }, [actions])
 
-  // Smooth scale + spin intro on every model swap (triggered by key= on parent)
+  // Only start tracking after the first real mouse move
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      mouse.current = {
+        x: (e.clientX / window.innerWidth) * 2 - 1,
+        y: -(e.clientY / window.innerHeight) * 2 + 1,
+      }
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
+  // Smooth scale + spin intro on every model swap
   useEffect(() => {
     if (!groupRef.current) return
+
+    // Reset mouse so the new model also holds its position until user moves
+    mouse.current = null
 
     gsap.fromTo(
       groupRef.current.scale,
@@ -210,20 +313,39 @@ const Model3D = ({ config }: Model3DProps) => {
     )
   }, [config.scale])
 
-  // Subtle mouse-follow float
-  useFrame(({ mouse }) => {
-    if (!groupRef.current) return
+  // Mouse interaction — skipped entirely until user moves the mouse
+  useFrame(() => {
+    if (!groupRef.current || mouse.current === null) return
+
+    const { x: targetX, y: targetY } = mouse.current
 
     groupRef.current.position.x = THREE.MathUtils.lerp(
       groupRef.current.position.x,
-      config.position[0] + mouse.x * 0.4,
+      config.position[0] + targetX * 0.4,
       0.08
     )
 
     groupRef.current.position.y = THREE.MathUtils.lerp(
       groupRef.current.position.y,
-      config.position[1] + mouse.y * 0.3,
+      config.position[1] + targetY * 0.3,
       0.08
+    )
+
+    groupRef.current.position.z = THREE.MathUtils.lerp(
+      groupRef.current.position.z,
+      config.position[2] + targetX * 1,
+      0.08
+    )
+
+    groupRef.current.rotation.y = THREE.MathUtils.lerp(
+      groupRef.current.rotation.y,
+      targetX * 0.4, 0.05
+    )
+
+    groupRef.current.rotation.x = THREE.MathUtils.lerp(
+      groupRef.current.rotation.x,
+      targetY * 0.3,
+      0.05
     )
   })
 
