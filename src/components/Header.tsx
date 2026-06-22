@@ -3,38 +3,58 @@ import { useTheme } from "@/context/ThemeContext";
 import Image from "next/image";
 import GlassEffect from "./LiquideGlass";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 
 export default function Header() {
     const { theme, toggleTheme } = useTheme();
-
-    const [isSticky, setIsSticky] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+
+    const menuRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
+        const hero = document.querySelector(".hero-section");
         const handleScroll = () => {
-            if (window.scrollY > window.innerHeight - 60) {
-                setIsSticky(true);
-            } else {
-                setIsSticky(false);
-            };
+            if (!hero) return;
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            setIsSticky(heroBottom <= 0);
         };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                isOpen &&
+                menuRef.current &&
+                event.target instanceof Node &&
+                !menuRef.current.contains(event.target)
+            ) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen])
 
     return (
         <>
-            <header className={`${isSticky ? "atTop" : "atBottom"}`}>
+            <header className={isSticky ? "sticky-top" : "initial-bottom"} >
                 <div className="container">
                     <div className="navbar-wrapper">
                         <div className="nav-logo">
                             <Link href="/">
                                 {theme === "light" ? <Image src="/images/rp-logo-black.png" alt="rare-logo" width={174} height={28} /> : <Image src="/images/rp-logo-white.png" alt="rare-logo" width={174} height={28} />}
-                                {/* <Image className="rare-website-logo" src="/images/rp-logo-black.png" alt="rare-logo" width={174} height={28}></Image> */}
                             </Link>
                         </div>
 
@@ -62,8 +82,7 @@ export default function Header() {
                                     </button>
                                 </GlassEffect>
                             </div>
-
-                            <button className={`hamburger-wrapper ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+                            <button className={`hamburger-wrapper ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen) }>
                                 <GlassEffect className="site-radius-50">
                                     <div className="hamburger-image">
                                         {theme === "light" ? <Image src="/images/light-mode-hamburger.svg" alt="hamburger-light" width={24} height={24} /> : <Image src="/images/dark-mode-hamburger.svg" alt="hamburger-dark" width={24} height={24} />}
@@ -71,7 +90,7 @@ export default function Header() {
                                 </GlassEffect>
                             </button>
 
-                            <div className={`menu-for-responsive ${isOpen ? "active" : ""}`}>
+                            <div ref={menuRef} className={`menu-for-responsive ${isOpen ? "active" : ""}`}>
                                 <GlassEffect className="site-radius-20">
                                     <div className="mobile-menu">
                                         <div className="menu-cross-icon" onClick={() => setIsOpen(false)}>

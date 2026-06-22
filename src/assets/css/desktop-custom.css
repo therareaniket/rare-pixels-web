@@ -1,4 +1,6 @@
 .text-primary{ color: var(--primary); }
+.text-black{ color: #000000 }
+
 .link-padding{ padding: 10px 20px; }
 .site-radius-10{ border-radius: 10px; }
 .site-radius-20{ border-radius: 20px; }
@@ -6,6 +8,13 @@
 .site-radius-50{ border-radius: 50%; }
 .btn-bg-primary{ background-color: var(--primary); }
 .section-bg-blue{ background-color: var(--section-bg); }
+
+.bg-purple-shade{ background-color: #D5D8E2; }
+.bg-light-yellow{ background-color: #FBF9E9; }
+.bg-light-pink{ background-color: #FCD4E9; }
+.bg-light-green{ background-color: #F5F8F5; }
+
+
 @keyframes eyeFade {  from{ opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 
 /* home hero */
@@ -93,7 +102,7 @@
 
 .abt-grid-wrapper{ display: grid; grid-template-rows: repeat(33, 21px); grid-template-columns: repeat(76, 21px); z-index: 0; background-color: transparent; }
 .abt-background-grid { width: 21px; height: 21px; border: 1px solid var(--all-white); opacity: 5%;   }
-.hm-about-main{ padding: 40px;  }
+.hm-about-main{ padding: 40px; background-image: url(/images/homepage/abt-section-background-grid-desktop.png); width: 100%; height: 100%; background-repeat: repeat; }
 
 
 .hm-abt-text-wrapper{ display: flex; align-items: flex-start; justify-content: space-between; }
@@ -120,15 +129,35 @@
 
 
 /* Navbar */
-header{ 
-    position: fixed; 
-    width: 100%; 
-    z-index: 99999; 
-    bottom: 50px;
-}
+header {  position: fixed; width: 100%;  z-index: 99999;  transition: top 0.3s ease, bottom 0.3s ease; }
+header.initial-bottom { bottom: 50px; top: auto; }
+header.sticky-top { top: 20px; bottom: auto; }
+
 .navbar-wrapper { display: flex; align-items: center; justify-content: space-between; }
 .navbar-links ul{ display: flex; padding: 14px 10px; }
 .navbar-links ul li{ padding: 0 20px; }
-.navbar-links-wrapper{ display: flex; gap: 20; align-items: center; }
+.navbar-links-wrapper{ display: flex; gap: 20px; align-items: center; }
 .mode-switching-toggle-button{ padding: 14px; cursor: pointer; }
 .menu-for-responsive, .hamburger-wrapper{ display: none; }
+
+/* services */
+
+.hm-services-title-wrapper{ text-align: center; }
+.services-card-wrapper{ display: flex; align-items: flex-start; gap: 20px; justify-content: space-between; margin-top: 60px; }
+.services-art-board{ width: 386px; height: 386px; overflow: hidden; display: flex; align-items: center; justify-content: center; position: absolute; left: 0; bottom: 0; }
+.services-art-board img{ object-fit: contain; }
+.services-card{ width: 385px; height: 500px; position: relative; overflow: hidden; }
+.services-text{ width: 100%; height: 100%; padding: 30px; }
+
+.services-text h3{ margin-bottom: 10px; }
+.services-detail-text{ margin-top: 40px; display: flex; flex-direction: column; gap: 10px; }
+
+/* industries */
+
+.industries-text-title{ text-align: center; }
+
+.industries-card-wrapper{ margin-top: 60px; display: flex; align-items: center; gap: 80px; }
+.industries-image-wrapper{ width: 1000px; height: 600px; border-radius: 0 0 100px 0; background-color: red; }
+
+.industries-text-wrapper{ width: 540px; height: 540px; display: flex; flex-direction: column; justify-content: space-between; }
+.industries-text-wrapper span{ font-size: 80px; line-height: 90px; }

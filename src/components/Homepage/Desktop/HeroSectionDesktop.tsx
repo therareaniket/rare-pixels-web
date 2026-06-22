@@ -71,7 +71,7 @@ export default function HeroSectionDesktop() {
 
     return (
         <>
-            <section className="section hm-hero-main">
+            <section className="section hm-hero-main hero-section">
                 <div className="container">
                     <div className="home-hero-wrapper-desktop">
                         <div className="hm-hero-row-1-wrapper">
@@ -204,7 +204,7 @@ export default function HeroSectionDesktop() {
 
                                 <div className="hm-services-right">
                                     <div className="hm-services-content-wrapper">
-                                        <GlassEffect>
+                                        <GlassEffect className="site-radius-30">
                                             <div className="hm-services-title">
                                                 👁️
                                                 <span className="text-md h6">UI/UX Design Services</span>
