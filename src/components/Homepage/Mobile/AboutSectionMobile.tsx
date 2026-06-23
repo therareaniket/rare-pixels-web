@@ -2,6 +2,8 @@
 
 import GlassEffect from "@/components/LiquideGlass";
 import Image from "next/image";
+import "@/assets/css/mobile-custom.css";
+import "@/assets/css/responsive/mobile-responsive.css";
 
 export default function AboutSectionMobile() {
 
@@ -16,12 +18,14 @@ export default function AboutSectionMobile() {
 
     const rows =
         typeof window !== "undefined"
-            ? window.innerWidth <= 401
-                ? 100
-                : window.innerWidth <= 479
-                    ? 100
-                    : 100
-            : 100;
+            ? window.innerWidth <= 360
+                ? 130
+                    : window.innerWidth <= 401
+                        ? 100
+                        : window.innerWidth <= 479
+                            ? 107
+                            : 107
+                    : 107;
 
     // const cols = 37;
     // const rows = 100;
@@ -31,17 +35,20 @@ export default function AboutSectionMobile() {
             <section className="section section-bg-blue">
                 <div className="container">
                     <div className="abt-mobile-section">
-                        {/* <div className="abt-section-wrapper">
+                        <div className="abt-section-wrapper">
                             <div className="abt-grid-wrapper">
                                 {Array.from({ length: cols * rows }).map((_, index) => (
                                     <div key={index} className="abt-background-grid"></div>
                                 ))}
                             </div>
-                        </div> */}
+                        </div>
                         <div className="abt-mobile-bg">
-                            <h2 className="text-sb hm-abt-title text-white">Where Ideas Turn Into Impact</h2>
+                            <h2 className="text-sb hm-abt-title text-white">Making Businesses Easier To Notice, Trust, And Remember.</h2>
 
-                            <p className="text-14 text-rg text-white">At RarePixels, we combine design, development, and strategy to create meaningful digital experiences. Every project we take on is approached with clarity, creativity, and precision ensuring that every detail contributes to a larger vision.</p>
+                            <p className="text-14 text-rg text-white">
+                                <span>At RarePixels, we bring together strategy, creativity, and technology to create brands and digital experiences that leave a lasting impact. Everything we build is designed with purpose, shaped by insight, and aligned with business growth. Nothing generic. Nothing without intent.</span>
+                                <span>Because being noticed gets you seen. Being remembered gets you chosen.</span>
+                            </p>
 
                             <div className="hm-abt-site-logo">
                                 <Image src="/images/homepage/rare-logo-white.png" alt="rare-logo" width={197} height={250}></Image>
@@ -53,9 +60,12 @@ export default function AboutSectionMobile() {
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
-                                            <h3 className="text-18 text-md">Design that leads, not follows</h3>
+                                            <h3 className="text-18 text-sb">Design That Creates Clarity</h3>
 
-                                            <p className="text-14 text-rg text-white">We craft user experiences that go beyond visuals focusing on clarity, usability, and engagement. Every interface is designed to guide users intuitively while maintaining a strong visual identity.</p>
+                                            <p className="text-14 text-rg text-white">
+                                                <span>Great experiences don&apos;t happen by accident.</span>
+                                                <span>We believe every interaction should feel natural, every journey should feel effortless, and every decision should help users move forward with confidence.</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </GlassEffect>
@@ -65,9 +75,12 @@ export default function AboutSectionMobile() {
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
-                                            <h3 className="text-18 text-md">Built to perform beyond visuals</h3>
+                                            <h3 className="text-18 text-sb">Technology Built Around Growth</h3>
 
-                                            <p className="text-14 text-rg text-white">We build fast, scalable, and reliable digital platforms that are designed to perform under real-world conditions. Every line of code is written with efficiency and long-term growth in mind.</p>
+                                            <p className="text-14 text-rg text-white">
+                                                <span>Technology should support ambition, not limit it.</span>
+                                                <span>From websites to digital products, we build solutions designed to perform reliably today and scale with your business tomorrow.</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </GlassEffect>
@@ -77,21 +90,27 @@ export default function AboutSectionMobile() {
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
-                                            <h3 className="text-18 text-md">Where code meets creativity</h3>
+                                            <h3 className="text-18 text-sb">Creativity With Direction</h3>
 
-                                            <p className="text-14 text-rg text-white">We build fast, scalable, and reliable digital platforms that are designed to perform under real-world conditions. Every line of code is written with efficiency, flexibility, and long-term growth in mind.</p>
+                                            <p className="text-14 text-rg text-white">
+                                                <span>Creativity is powerful when it has a purpose.</span>
+                                                <span>Every idea, design, and experience we create is guided by strategy, ensuring it contributes to a larger business objective.</span>
+                                            </p>
                                         </div>
                                     </div>
-                                </GlassEffect>  
+                                </GlassEffect>
 
                                 <GlassEffect className="site-radius-10">
                                     <div className="hm-abt-card-mobile">
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
-                                            <h3 className="text-18 text-md">Brands that truly stand out</h3>
+                                            <h3 className="text-18 text-sb">Brands People Remember</h3>
 
-                                            <p className="text-14 text-rg text-white">We build strong brand identities that extend across every touchpoint from visuals to voice to digital presence. Our approach ensures your brand is not only recognizable but also meaningful.</p>
+                                            <p className="text-14 text-rg text-white">
+                                                <span>Recognition is earned through consistency.</span>
+                                                <span>We help businesses create meaningful brand experiences that stay relevant, build trust, and leave a lasting impression over time.</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </GlassEffect>

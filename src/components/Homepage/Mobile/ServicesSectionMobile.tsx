@@ -26,7 +26,7 @@ export default function ServicesSectionMobile() {
                             </div>
 
                             <GlassEffect className="services-mobile-text-wrapper site-radius-10">
-                                <h3 className="h4 text-black">CLARITY</h3>
+                                <h3 className="h4 text-black text-sb">CLARITY</h3>
 
                                 <p className="text-18 text-sb text-black">UI/UX Design</p>
 
@@ -44,7 +44,7 @@ export default function ServicesSectionMobile() {
                             </div>
 
                             <GlassEffect className="services-mobile-text-wrapper site-radius-10">
-                                <h3 className="h4 text-black">MOMENTUM</h3>
+                                <h3 className="h4 text-black text-sb">MOMENTUM</h3>
 
                                 <p className="text-18 text-sb text-black">Web & App Development</p>
 
@@ -62,7 +62,7 @@ export default function ServicesSectionMobile() {
                             </div>
 
                             <GlassEffect className="services-mobile-text-wrapper site-radius-10">
-                                <h3 className="h4 text-black">PERCEPTION</h3>
+                                <h3 className="h4 text-black text-sb">PERCEPTION</h3>
 
                                 <p className="text-18 text-sb text-black">Brand Identity Design</p>
 
@@ -80,7 +80,7 @@ export default function ServicesSectionMobile() {
                             </div>
 
                             <GlassEffect className="services-mobile-text-wrapper site-radius-10">
-                                <h3 className="h4 text-black">RELEVANCE</h3>
+                                <h3 className="h4 text-black text-sb">RELEVANCE</h3>
 
                                 <p className="text-18 text-sb text-black">Social Media Management</p>
 

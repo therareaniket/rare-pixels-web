@@ -19,9 +19,9 @@ export default function TestimonialSectionDesktop() {
                 <div className="container">
                     <div className="hm-testimonial-txt-wrapper">
                         <div className="hm-testimonial-left-text">
-                            <h2 className="text-sb">Voices Behind the Work</h2>
+                            <h2 className="text-sb">Proof Over Promises </h2>
 
-                            <p className="text-18 text-rg">Every project tells a story shaped through collaboration and creativity. Here’s what our clients have to say about the experiences we build.</p>
+                            <p className="text-18 text-rg text-grey">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@ export default function TestimonialSectionDesktop() {
                                                 <span className="h6 text-md client-initial-1">SP</span>
 
                                                 <div className="client-name-designation">
-                                                    <p className="h6 text-md">Surya Mani Prasad</p>
+                                                    <p className="text-18 text-sb">Surya Mani Prasad</p>
                                                     <p className="text-18 text-rg">COO</p>
                                                 </div>
                                             </div>
@@ -87,7 +87,7 @@ export default function TestimonialSectionDesktop() {
                                                 <span className="h6 text-md client-initial-2">ES</span>
 
                                                 <div className="client-name-designation">
-                                                    <p className="h6 text-md">Edvin Simon</p>
+                                                    <p className="text-18 text-sb">Edvin Simon</p>
                                                     <p className="text-18 text-rg">Senior Manager</p>
                                                 </div>
                                             </div>
@@ -109,7 +109,7 @@ export default function TestimonialSectionDesktop() {
                                                 <span className="h6 text-md client-initial-3">AD</span>
 
                                                 <div className="client-name-designation">
-                                                    <p className="h6 text-md">Ami Desai</p>
+                                                    <p className="text-18 text-sb">Ami Desai</p>
                                                     <p className="text-18 text-rg">Founder</p>
                                                 </div>
                                             </div>
@@ -130,7 +130,7 @@ export default function TestimonialSectionDesktop() {
                                                 <span className="h6 text-md client-initial-4">BY</span>
 
                                                 <div className="client-name-designation">
-                                                    <p className="h6 text-md">Bernard Saint Yves</p>
+                                                    <p className="text-18 text-sb">Bernard Saint Yves</p>
                                                     <p className="text-18 text-rg">Director</p>
                                                 </div>
                                             </div>
@@ -149,10 +149,10 @@ export default function TestimonialSectionDesktop() {
                                         </p>
                                         <div className="client-review-wrapper">
                                             <div className="client-initital">
-                                                <span className="h6 text-md client-initial-5">CP</span>
+                                                <span className="h6 text-sb client-initial-5">CP</span>
 
                                                 <div className="client-name-designation">
-                                                    <p className="h6 text-md">Chintan Patel</p>
+                                                    <p className="text-18 text-sb">Chintan Patel</p>
                                                     <p className="text-18 text-rg">Managing Director</p>
                                                 </div>
                                             </div>

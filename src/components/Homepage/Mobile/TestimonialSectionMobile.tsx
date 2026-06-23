@@ -18,9 +18,9 @@ export default function TestimonialSectionMobile() {
             <section className="section" style={{paddingTop: 0}}>
                 <div className="container">
                     <div className="hm-testimonial-wrapper">
-                        <h2 className="text-sb">Voices Behind the Work</h2>
+                        <h2 className="text-sb">Proof Over Promises </h2>
 
-                        <p className="text-14 text-rg">Every project tells a story shaped through collaboration and creativity. Here’s what our clients have to say about the experiences we build.</p>
+                        <p className="text-14 text-rg text-grey">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
 
                         <div className="testimonial-client-video-wrapper">
                             <div className="testimonial-client-video">
@@ -57,7 +57,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-1 ">SP</span>
 
                                             <div>
-                                                <p className="text-18 text-md">Surya Mani Prasad</p>
+                                                <p className="text-18 text-rg">Surya Mani Prasad</p>
                                                 <p className="text-14 text-rg">COO</p>
                                             </div>
                                         </div>
@@ -80,7 +80,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-2">ES</span>
 
                                             <div>
-                                                <p className="text-18 text-md">Edvin Simon</p>
+                                                <p className="text-18 text-rg">Edvin Simon</p>
                                                 <p className="text-14 text-rg">Senior Manager</p>
                                             </div>
                                         </div>
@@ -103,7 +103,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-3">AD</span>
 
                                             <div>
-                                                <p className="text-18 text-md">Ami Desai</p>
+                                                <p className="text-18 text-rg">Ami Desai</p>
                                                 <p className="text-14 text-rg">Founder</p>
                                             </div>
                                         </div>
@@ -126,7 +126,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-4">BY</span>
 
                                             <div>
-                                                <p className="text-18 text-md">Bernard Saint Yves</p>
+                                                <p className="text-18 text-rg">Bernard Saint Yves</p>
                                                 <p className="text-14 text-rg">Director</p>
                                             </div>
                                         </div>
@@ -149,7 +149,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-5">CP</span>
 
                                             <div>
-                                                <p className="text-18 text-md">Chintan Patel</p>
+                                                <p className="text-18 text-rg">Chintan Patel</p>
                                                 <p className="text-14 text-rg">Managing Director</p>
                                             </div>
                                         </div>

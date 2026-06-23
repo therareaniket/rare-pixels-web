@@ -11,7 +11,10 @@ export default function IndustriesSectionDesktop() {
                 <div className="container">
                     <div className="industries-text-title">
                         <h2 className="text-sb">Industries We Serve</h2>
-                        <p className="text-rg text-18">We partner with brands across diverse industries, delivering tailored solutions that adapt, perform, and scale in every space.</p>
+                        <p className="text-rg text-18">
+                            <span>Every industry is different.</span>
+                            <span> But the need to earn trust, create memorable experiences, and stay relevant isn&apos;t.</span>
+                        </p>
                     </div>
 
                     <div className="industries-card-wrapper">
@@ -38,9 +41,12 @@ export default function IndustriesSectionDesktop() {
 
                         </div>
                         <div className="industries-text-wrapper">
-                            <span className="text-sb">Real Estate & PropTech</span>
+                            <span className="text-sb industries-title-name">Technology & SaaS</span>
 
-                            <p className="text-18 text-md">We create digital experiences that elevate real estate brands from property showcases to high converting platforms that build trust and drive inquiries.</p>
+                            <p className="text-18">
+                                <span className="text-md">Complex products fail when users don&apos;t understand them.</span>
+                                <span className="text-rg">We transform powerful SaaS platforms into intuitive experiences that drive adoption, retention, and growth.</span>
+                            </p>
                         </div>
                     </div>
                 </div>

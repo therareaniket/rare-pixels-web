@@ -199,7 +199,7 @@ export default function HeroSectionMobile() {
                                         Building Brands People Choose First.
                                     </h1>
 
-                                    <div className="hm-hero-desc-wrapper">
+                                    <div className="hm-hero-desc-wrapper text-grey">
                                         <p className="text-rg text-14">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
 
                                         <p className="text-sb text-14">Creativity That Businesses Can Measure.</p>
@@ -210,15 +210,15 @@ export default function HeroSectionMobile() {
                                     <div className="brand-statistics">
                                         <div className="stat-item">
                                             <h2 className="h5 text-sb">100+</h2>
-                                            <p className="text-md">Brands Transformed</p>
+                                            <p className="text-md text-grey">Brands Transformed</p>
                                         </div>
                                         <div className="stat-item">
                                             <h2 className="h5 text-sb">6000+</h2>
-                                            <p className="text-md">Hours of Strategic Design</p>
+                                            <p className="text-md text-grey">Hours of Strategic Design</p>
                                         </div>
                                         <div className="stat-item">
                                             <h2 className="h5 text-sb">50+</h2>
-                                            <p className="text-md">Digital Products Engineered </p>
+                                            <p className="text-md text-grey">Digital Products Engineered </p>
                                         </div>
                                     </div>
 
@@ -238,7 +238,7 @@ export default function HeroSectionMobile() {
                                         <h5 className="text-sb">👁️ UI/UX Design Services</h5>
                                     </GlassEffect>
 
-                                    <p className="text-rg">Experiences users remember and businesses benefit from</p>
+                                    <p className="text-rg text-grey">Experiences users remember and businesses benefit from</p>
                                 </div>
                             </div>
                         </div>

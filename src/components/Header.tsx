@@ -11,24 +11,51 @@ export default function Header() {
     const { theme, toggleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
+    const [headerTop, setHeaderTop] = useState<number | null>(null);
 
     const menuRef = useRef<HTMLDivElement | null>(null);
+    const headerRef = useRef<HTMLElement | null>(null);
 
     useEffect(() => {
-        const hero = document.querySelector(".hero-section");
         const handleScroll = () => {
-            if (!hero) return;
+            const hero = document.querySelector<HTMLElement>('#hero-section');
+            if (!hero || !headerRef.current) {
+                setIsSticky(false);
+                setHeaderTop(null);
+                return;
+            }
+
             const heroBottom = hero.getBoundingClientRect().bottom;
-            setIsSticky(heroBottom <= 0);
+            const headerHeight = headerRef.current.offsetHeight;
+            const viewportHeight = window.innerHeight;
+            const bottomOffset = 50;
+            const stickyOffset = 20;
+            const initialTop = viewportHeight - headerHeight - bottomOffset;
+            const trackedTop = heroBottom - headerHeight;
+
+            if (trackedTop >= initialTop) {
+                setIsSticky(false);
+                setHeaderTop(initialTop);
+            } else if (trackedTop <= stickyOffset) {
+                setIsSticky(true);
+                setHeaderTop(stickyOffset);
+            } else {
+                setIsSticky(false);
+                setHeaderTop(trackedTop);
+            }
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const headerStyle: React.CSSProperties = headerTop !== null
+        ? { top: `${headerTop}px`, bottom: 'auto' }
+        : { top: 'auto', bottom: '50px' };
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -49,7 +76,7 @@ export default function Header() {
 
     return (
         <>
-            <header className={isSticky ? "sticky-top" : "initial-bottom"} >
+            <header ref={headerRef} className={isSticky ? "sticky-top" : "initial-bottom"} style={headerStyle}>
                 <div className="container">
                     <div className="navbar-wrapper">
                         <div className="nav-logo">
@@ -82,7 +109,7 @@ export default function Header() {
                                     </button>
                                 </GlassEffect>
                             </div>
-                            <button className={`hamburger-wrapper ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen) }>
+                            <button className={`hamburger-wrapper ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen)}>
                                 <GlassEffect className="site-radius-50">
                                     <div className="hamburger-image">
                                         {theme === "light" ? <Image src="/images/light-mode-hamburger.svg" alt="hamburger-light" width={24} height={24} /> : <Image src="/images/dark-mode-hamburger.svg" alt="hamburger-dark" width={24} height={24} />}

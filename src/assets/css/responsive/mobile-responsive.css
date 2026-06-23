@@ -106,7 +106,7 @@
         mask-composite: intersect;
     }
 
-    .abt-mobile-section { position: relative ; overflow: hidden; background-image: url(/images/homepage/abt-section-background-grid-mobile.png); width: 100%; height: 100%; background-repeat: repeat; padding: 18px; }
+    .abt-mobile-section { position: relative ; overflow: hidden; }
 
     .services-mobile-title{ text-align: center; }
     .services-mobile-title h2{ margin-bottom: 14px; }
@@ -117,6 +117,10 @@
     .services-mobile-text-wrapper h3{ margin-bottom: 10px; }
     .services-detail-text{ display: flex; flex-direction: column; gap: 6px; margin-top: 30px; }
     .services-art-board{ width: 350px; height: 350px; }
+
+    .hm-abt-card-text p{ display: flex; flex-direction: column; gap: 14px; }
+    .abt-mobile-bg{ padding: 18px; }
+    /* header{ position: static; margin-top: 20px; margin-bottom: 30px; } */
 }
 
 @media (max-width: 439px) {
@@ -150,6 +154,7 @@
 
     .services-mobile-card{ height: 370px; }
     .services-detail-text{ margin-top: 25px; }
+    .hm-abt-card-text p{ gap: 10px; }
 }
 
 @media (max-width: 400px) {
@@ -175,6 +180,7 @@
     .menu-links-wrapper{ padding-top: 30px; }
     .mode-switching-toggle-button img, .hamburger-image img{ width: 20px; height: 20px; }
     .hamburger-image, .mode-switching-toggle-button{ padding: 12px; }
+    .hm-abt-card-text p{ gap: 6px; }
 }
 
 @media (max-width: 374px) {

@@ -12,83 +12,84 @@ export default function ServicesSectionDesktop() {
                 <div className="container">
                     <div className="hm-services-title-wrapper">
                         <div className="services-title">
-                            <h2 className="text-sb">Services</h2>
+                            <h2 className="text-sb">What Businesses Need. Not Just What We Do.</h2>
                         </div>
 
                         <div className="services-subtitle">
-                            <p className="text-18 text-rg">Every business has different goals. The challenge is often the same.</p>
-                            <p className="text-18 text-rg">Standing out in a world full of choices.</p>
+                            <p className="text-18 text-rg text-grey">
+                                <span>Every business is trying to earn attention, build trust, and stay memorable. The tools may differ. The objective never does.</span>
+                                <span>We help brands create experiences, identities, platforms, and conversations that make them easier to choose in a crowded market.</span>
+                            </p>
                         </div>
                     </div>
 
                     <div className="services-card-wrapper">
                         <div className="services-card services-ui-ux site-radius-20 bg-purple-shade">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-ui-ux.png" alt="ui-ux service" width={386} height={255}></Image>
+                                <Image src="/images/homepage/services-ui-ux.svg" alt="services ui-ux" width={385} height={285}></Image>
                             </div>
-                            <GlassEffect className="site-radius-20 services-text">
+                            <div className="site-radius-20 services-text">
                                 <h3 className="text-sb text-black">CLARITY</h3>
 
                                 <span className="h6 text-sb text-black">UI/UX Design</span>
 
                                 <div className="services-detail-text">
-                                    <p className="text-md text-18 text-black">People do not leave because they are not interested.</p>
+                                    <p className="text-rg text-18 text-black">People don&apos;t abandon products. They abandon experiences that feel difficult to understand.</p>
 
-                                    <p className="text-18 text-rg text-black">They leave because the experience was not built for them. We design interfaces from the ground up specific to your users, their journey, and the actions your business needs them to take. </p>
+                                    <p className="text-18 text-rg text-black">We design interfaces that simplify decisions, remove friction, and help users move from curiosity to confidence without second-guessing their next step.</p>
                                 </div>
-                            </GlassEffect>
+                            </div>
                         </div>
 
                         <div className="services-card services-development site-radius-20 bg-light-yellow">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-development.png" alt="development service" width={270} height={282}></Image>
+                                <Image src="/images/homepage/services-development.svg" alt="services development" width={300} height={314}></Image>
                             </div>
-                            <GlassEffect className="site-radius-20 services-text">
+                            <div className="site-radius-20 services-text">
                                 <h3 className="text-sb text-black">MOMENTUM</h3>
 
                                 <span className="h6 text-sb text-black">Web & App Development</span>
 
                                 <div className="services-detail-text">
-                                    <p className="text-md text-18 text-black">A platform built for someone else&apos;s business will always limit yours. </p>
+                                    <p className="text-rg text-18 text-black">Growth shouldn&apos;t be limited by the technology behind it.</p>
 
-                                    <p className="text-18 text-rg text-black">We engineer every digital product from scratch bespoke platforms, web applications, and e-commerce builds designed for your exact requirements. No templates. No ceiling. </p>
+                                    <p className="text-18 text-rg text-black">We build websites and applications that are reliable, scalable, and ready for the opportunities, challenges, and ambitions that come with business growth.</p>
                                 </div>
-                            </GlassEffect>
+                            </div>
                         </div>
 
                         <div className="services-card services-brand-identity site-radius-20 bg-light-pink">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-brand-identity.png" alt="brand service" width={270} height={270}></Image>
+                                <Image src="/images/homepage/services-brand-identity.svg" alt="services brand-identity" width={300} height={300}></Image>
                             </div>
-                            <GlassEffect className="site-radius-20 services-text">
+                            <div className="site-radius-20 services-text">
                                 <h3 className="text-sb text-black">PERCEPTION</h3>
 
                                 <span className="h6 text-sb text-black">Brand Identity Design</span>
 
                                 <div className="services-detail-text">
-                                    <p className="text-md text-18 text-black">Before people trust your business, they judge your brand. </p>
+                                    <p className="text-rg text-18 text-black">People form opinions long before they become customers.</p>
 
-                                    <p className="text-18 text-rg text-black">We build identities from first principles original marks, bespoke visual systems, and brand architectures conceived entirely for you. Not reskinned. Not recycled. Distinctly yours.</p>
+                                    <p className="text-18 text-rg text-black">We create brand identities that communicate credibility, consistency, and confidence from the very first interaction, helping businesses leave a stronger and more lasting impression.</p>
                                 </div>
-                            </GlassEffect>
-
+                            </div>
                         </div>
 
                         <div className="services-card services-social-media site-radius-20 bg-light-green">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-sm-management.png" alt="social-media services" width={346} height={346}></Image>
+                                <Image src="/images/homepage/services-social-media.svg" alt="services development" width={346} height={346}></Image>
                             </div>
-                            <GlassEffect className="site-radius-20 services-text">
+                            <div className="site-radius-20 services-text">
                                 <h3 className="text-sb text-black">RELEVANCE</h3>
 
-                                <span className="h6 text-sb text-black">Social Media Management</span>
+                                <span className="h6 text-sb text-black">SM Management</span>
 
                                 <div className="services-detail-text">
-                                    <p className="text-md text-18 text-black">Attention is rented. Recall is earned.</p>
+                                    <p className="text-rg text-18 text-black">Being visible is easy. Staying relevant takes intention.</p>
 
                                     <p className="text-18 text-rg text-black">We help brands stay worth remembering with content strategies built around your specific voice, your audience&apos;s behaviour, and the platforms where they actually spend their time.</p>
                                 </div>
-                            </GlassEffect>
+                            </div>
                         </div>
                     </div>
                 </div>

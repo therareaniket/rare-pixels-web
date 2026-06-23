@@ -9,6 +9,8 @@
     --all-black: #000000;
     --border-color: #000000;
 
+    --text-grey: #000000;
+
     --glass-box-shadow: inset 2px 2px 1px 0 rgba(66, 66, 66, 0.1), inset -1px -1px 1px 1px rgba(66, 66, 66, 0.1);
 
     --testimonial-card-1: #F5F8F5;
@@ -27,6 +29,8 @@
 	--background: #000000;
 	--text-black: #ffffff;
     --border-color: #ffffff;
+
+    --text-grey: #C6C6C6;
 
     --glass-box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.1), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
 

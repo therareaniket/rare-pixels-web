@@ -71,7 +71,7 @@ export default function HeroSectionDesktop() {
 
     return (
         <>
-            <section className="section hm-hero-main hero-section">
+            <section id="hero-section" className="section hm-hero-main">
                 <div className="container">
                     <div className="home-hero-wrapper-desktop">
                         <div className="hm-hero-row-1-wrapper">
@@ -80,7 +80,7 @@ export default function HeroSectionDesktop() {
                                     Building Brands People Choose First.
                                 </h1>
 
-                                <div className="hm-hero-paragraph-wrapper">
+                                <div className="hm-hero-paragraph-wrapper text-grey">
                                     <p className="text-18 text-rg">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
 
                                     <p className="text-18 text-sb">Creativity That Businesses Can Measure.</p>
@@ -110,7 +110,7 @@ export default function HeroSectionDesktop() {
 
                                             <div className={`hm-services-subtitle ${activeIndex === index ? "show" : ""
                                                 }`}>
-                                                <p className="text-18 text-rg">{service.description}</p>
+                                                <p className="text-18 text-rg text-grey">{service.description}</p>
                                             </div>
                                         </div>
                                     ))}

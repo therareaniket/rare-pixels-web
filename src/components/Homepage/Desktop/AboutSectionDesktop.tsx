@@ -5,57 +5,57 @@ import Image from "next/image";
 
 export default function AboutSectionDesktop() {
 
-    // const cols =
-    //     typeof window !== "undefined"
-    //         ? window.innerWidth < 481
-    //             ? 10
-    //             : window.innerWidth < 576
-    //                 ? 10
-    //                 : window.innerWidth < 640
-    //                     ? 10
-    //                     : window.innerWidth < 768
-    //                         ? 10
-    //                         : window.innerWidth < 992
-    //                             ? 30
-    //                             : window.innerWidth < 1024
-    //                                 ? 43
-    //                                 : window.innerWidth < 1200
-    //                                     ? 53
-    //                                     : window.innerWidth < 1360
-    //                                         ? 55
-    //                                         : window.innerWidth < 1440
-    //                                             ? 55
-    //                                             : window.innerWidth < 1600
-    //                                                 ? 65
-    //                                                 : 76
-    //         : 76;
+    const cols =
+        typeof window !== "undefined"
+            ? window.innerWidth < 481
+                ? 10
+                : window.innerWidth < 576
+                    ? 10
+                    : window.innerWidth < 640
+                        ? 10
+                        : window.innerWidth < 768
+                            ? 10
+                            : window.innerWidth < 992
+                                ? 30
+                                : window.innerWidth < 1024
+                                    ? 40
+                                    : window.innerWidth < 1200
+                                        ? 53
+                                        : window.innerWidth < 1360
+                                            ? 55
+                                            : window.innerWidth < 1440
+                                                ? 55
+                                                : window.innerWidth < 1600
+                                                    ? 65
+                                                    : 76
+            : 76;
 
-    // const rows =
-    //     typeof window !== "undefined"
-    //         ? window.innerWidth <= 481
-    //             ? 300
-    //             : window.innerWidth <= 576
-    //                 ? 465
-    //                 : window.innerWidth <= 640
-    //                     ? 492
-    //                     : window.innerWidth <= 768
-    //                         ? 80
-    //                         : window.innerWidth <= 840
-    //                             ? 79
-    //                             : window.innerWidth <= 992
-    //                                 ? 55
-    //                                 : window.innerWidth <= 1024
-    //                                     ? 44
-    //                                     : window.innerWidth <= 1200
-    //                                         ? 30
-    //                                         : window.innerWidth <= 1360
-    //                                             ? 37
-    //                                             : window.innerWidth <= 1440
-    //                                                 ? 33
-    //                                                 : window.innerWidth <= 1600
-    //                                                     ? 30
-    //                                                     : 33
-    //                 : 33;
+    const rows =
+        typeof window !== "undefined"
+            ? window.innerWidth <= 481
+                ? 396
+                : window.innerWidth <= 576
+                    ? 542
+                    : window.innerWidth <= 640
+                        ? 585
+                        : window.innerWidth <= 768
+                            ? 83
+                            : window.innerWidth <= 840
+                                ? 88
+                                : window.innerWidth <= 992
+                                    ? 71
+                                    : window.innerWidth <= 1024
+                                        ? 59
+                                        : window.innerWidth <= 1200
+                                            ? 39
+                                            : window.innerWidth <= 1360
+                                                ? 40
+                                                : window.innerWidth <= 1440
+                                                    ? 34
+                                                    : window.innerWidth <= 1600
+                                                        ? 35
+                                                        : 40
+                    : 40;
 
     // const cols = 76;
     // const rows = 33;
@@ -65,18 +65,21 @@ export default function AboutSectionDesktop() {
             <section className="section section-bg-blue ">
                 <div className="container">
                     <div className="abt-section-wrapper">
-                        {/* <div className="abt-grid-wrapper">
+                        <div className="abt-grid-wrapper">
                             {Array.from({ length: cols * rows }).map((_, index) => (
                                 <div key={index} className="abt-background-grid"></div>
                             ))}
-                        </div> */}
+                        </div>
                     </div>
 
                     <div className="hm-about-main">
                         <div className="hm-abt-text-wrapper">
-                            <h2 className="text-sb text-white">Where Ideas Turn Into Impact</h2>
+                            <h2 className="text-sb text-white">Making Businesses Easier To Notice, Trust, And Remember.</h2>
 
-                            <p className="text-18 text-rg text-white">At RarePixels, we combine design, development, and strategy to create meaningful digital experiences. Every project we take on is approached with clarity, creativity, and precision ensuring that every detail contributes to a larger vision.</p>
+                            <p className="text-18 text-rg text-white">
+                                <span>At RarePixels, we bring together strategy, creativity, and technology to create brands and digital experiences that leave a lasting impact. Everything we build is designed with purpose, shaped by insight, and aligned with business growth. Nothing generic. Nothing without intent.</span>
+                                <span>Because being noticed gets you seen. Being remembered gets you chosen.</span>
+                            </p>
                         </div>
 
                         <div className="hm-abt-card-wrapper">
@@ -89,9 +92,12 @@ export default function AboutSectionDesktop() {
                                     <div className="hm-abt-card">
                                         <span className="hm-abt-pixel"></span>
                                         <div className="hm-abt-card-title">
-                                            <h3 className="h6 text-primary text-md">Design that leads, not follows</h3>
+                                            <h3 className="h6 text-primary text-sb">Design That Creates Clarity</h3>
 
-                                            <p className="text-18 text-white">We craft user experiences that go beyond visuals focusing on clarity, usability, and engagement. Every interface is designed to guide users intuitively while maintaining a strong visual identity.</p>
+                                            <p className="text-18 text-white">
+                                                <span>Great experiences don&apos;t happen by accident.</span>
+                                                <span>We believe every interaction should feel natural, every journey should feel effortless, and every decision should help users move forward with confidence.</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </GlassEffect>
@@ -100,9 +106,12 @@ export default function AboutSectionDesktop() {
                                     <div className="hm-abt-card">
                                         <span className="hm-abt-pixel"></span>
                                         <div className="hm-abt-card-title">
-                                            <h3 className="h6 text-primary text-md">Built to perform beyond visuals</h3>
+                                            <h3 className="h6 text-primary text-sb">Technology Built Around Growth</h3>
 
-                                            <p className="text-18 text-white">We build fast, scalable, and reliable digital platforms that are designed to perform under real-world conditions. Every line of code is written with efficiency and long-term growth in mind.</p>
+                                            <p className="text-18 text-white">
+                                                <span>Technology should support ambition, not limit it.</span>
+                                                <span>From websites to digital products, we build solutions designed to perform reliably today and scale with your business tomorrow.</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </GlassEffect>
@@ -111,9 +120,12 @@ export default function AboutSectionDesktop() {
                                     <div className="hm-abt-card">
                                         <span className="hm-abt-pixel"></span>
                                         <div className="hm-abt-card-title">
-                                            <h3 className="h6 text-primary text-md">Where code meets creativity</h3>
+                                            <h3 className="h6 text-primary text-sb">Creativity With Direction</h3>
 
-                                            <p className="text-18 text-white">We craft user experiences that go beyond visuals focusing on clarity, usability, and engagement. Every interface is designed to guide users intuitively while maintaining a strong visual identity.</p>
+                                            <p className="text-18 text-white">
+                                                <span>Creativity is powerful when it has a purpose.</span>
+                                                <span>Every idea, design, and experience we create is guided by strategy, ensuring it contributes to a larger business objective.</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </GlassEffect>
@@ -122,9 +134,12 @@ export default function AboutSectionDesktop() {
                                     <div className="hm-abt-card">
                                         <span className="hm-abt-pixel"></span>
                                         <div className="hm-abt-card-title">
-                                            <h3 className="h6 text-primary text-md">Brands that truly stand out</h3>
+                                            <h3 className="h6 text-primary text-sb">Brands People Remember</h3>
 
-                                            <p className="text-18 text-white">We build strong brand identities that extend across every touchpoint from visuals to voice to digital presence. Our approach ensures your brand is not only recognizable but also meaningful.</p>
+                                            <p className="text-18 text-white">
+                                                <span>Recognition is earned through consistency.</span>
+                                                <span>We help businesses create meaningful brand experiences that stay relevant, build trust, and leave a lasting impression over time.</span>
+                                            </p>
                                         </div>
                                     </div>
                                 </GlassEffect>
