@@ -2,7 +2,6 @@
 
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
-import GlassEffect from "@/components/LiquideGlass";
 import Image from "next/image";
 
 export default function ServicesSectionMobile() {
@@ -11,85 +10,86 @@ export default function ServicesSectionMobile() {
             <section className="section">
                 <div className="container">
                     <div className="services-mobile-title">
-                        <h2 className="text-sb">Services</h2>
+                        <h2 className="text-sb">What Businesses Need. Not Just What We Do.</h2>
 
-                        <p className="text-rg text-14">
-                            <span> Every business has different goals. The challenge is often the same.</span>
-                            <span> Standing out in a world full of choices.</span>
+                        <p className="text-rg text-14 text-grey">
+                            <span>Every business is trying to earn attention, build trust, and stay memorable. The tools may differ. The objective never does. </span>
+                            <span> We help brands create experiences, identities, platforms, and conversations that make them easier to choose in a crowded market.</span>
                         </p>
                     </div>
 
                     <div className="services-mobile-card-wrapper">
                         <div className="services-mobile-card services-ui-ux site-radius-10 bg-purple-shade">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-ui-ux.png" alt="services ui/ux" width={350} height={231}></Image>
+                                <Image src="/images/homepage/services-ui-ux.svg" alt="services ui-ux" width={270} height={178}></Image>
                             </div>
 
-                            <GlassEffect className="services-mobile-text-wrapper site-radius-10">
-                                <h3 className="h4 text-black text-sb">CLARITY</h3>
+                            <div className="services-mobile-text-wrapper site-radius-10">
+                                <h3 className="h5 text-black text-sb">CLARITY</h3>
 
                                 <p className="text-18 text-sb text-black">UI/UX Design</p>
 
                                 <p className="text-14 services-detail-text">
-                                    <span className="text-md text-black">People do not leave because they are not interested.</span>
+                                    <span className="text-rg text-black">People don&apos;t abandon products. They abandon experiences that feel difficult to understand.</span>
 
-                                    <span className="text-rg text-black">They leave because the experience was not built for them. We design interfaces from the ground up specific to your users, their journey, and the actions your business needs them to take. </span>
+                                    <span className="text-rg text-black">We design interfaces that simplify decisions, remove friction, and help users move from curiosity to confidence without second-guessing their next step.</span>
                                 </p>
-                            </GlassEffect>
+                            </div>
                         </div>
 
                         <div className="services-mobile-card services-development site-radius-10 bg-light-yellow">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-development.png" alt="services development" width={245} height={255}></Image>
+                                <Image src="/images/homepage/services-development.svg" alt="services development" width={219} height={229}></Image>
                             </div>
 
-                            <GlassEffect className="services-mobile-text-wrapper site-radius-10">
-                                <h3 className="h4 text-black text-sb">MOMENTUM</h3>
+                            <div className="services-mobile-text-wrapper site-radius-10">
+                                <h3 className="h5 text-black text-sb">MOMENTUM</h3>
 
                                 <p className="text-18 text-sb text-black">Web & App Development</p>
 
                                 <p className="text-14 services-detail-text">
-                                    <span className="text-md text-black">A platform built for someone else&apos;s business will always limit yours. </span>
+                                    <span className="text-rg text-black">Growth shouldn&apos;t be limited by the technology behind it.</span>
 
-                                    <span className="text-rg text-black">We engineer every digital product from scratch bespoke platforms, web applications, and e-commerce builds designed for your exact requirements. No templates. No ceiling. </span>
+                                    <span className="text-rg text-black">We build websites and applications that are reliable, scalable, and ready for the opportunities, challenges, and ambitions that come with business growth.</span>
                                 </p>
-                            </GlassEffect>
+                            </div>
                         </div>
 
                         <div className="services-mobile-card servicesbrand-identity site-radius-10 bg-light-pink">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-brand-identity.png" alt="services brand identity" width={245} height={245}></Image>
+                                <Image src="/images/homepage/services-brand-identity.svg" alt="services brand-identity" width={219} height={229}></Image>
                             </div>
 
-                            <GlassEffect className="services-mobile-text-wrapper site-radius-10">
-                                <h3 className="h4 text-black text-sb">PERCEPTION</h3>
+                            <div className="services-mobile-text-wrapper site-radius-10">
+                                <h3 className="h5 text-black text-sb">PERCEPTION</h3>
 
                                 <p className="text-18 text-sb text-black">Brand Identity Design</p>
 
                                 <p className="text-14 services-detail-text">
-                                    <span className="text-md text-black">Before people trust your business, they judge your brand. </span>
+                                    <span className="text-rg text-black">People form opinions long before they become customers.</span>
 
-                                    <span className="text-rg text-black">We engineer every digital product from scratch bespoke platforms, web applications, and e-commerce builds designed for your exact requirements. No templates. No ceiling. </span>
+                                    <span className="text-rg text-black"> We create brand identities that communicate credibility, consistency, and confidence from the very first interaction, helping businesses leave a stronger and more lasting impression. </span>
                                 </p>
-                            </GlassEffect>
+                            </div>
                         </div>
 
                         <div className="services-mobile-card services-social-media site-radius-10 bg-light-green">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-sm-management.png" alt="services social-media-management" width={315} height={315}></Image>
+                                <Image src="/images/homepage/services-social-media.svg" alt="services development" width={267} height={268}></Image>
+
                             </div>
 
-                            <GlassEffect className="services-mobile-text-wrapper site-radius-10">
-                                <h3 className="h4 text-black text-sb">RELEVANCE</h3>
+                            <div className="services-mobile-text-wrapper site-radius-10">
+                                <h3 className="h5 text-black text-sb">RELEVANCE</h3>
 
                                 <p className="text-18 text-sb text-black">Social Media Management</p>
 
                                 <p className="text-14 services-detail-text">
-                                    <span className="text-md text-black">Attention is rented. Recall is earned.</span>
+                                    <span className="text-rg text-black"> Being visible is easy. Staying relevant takes intention. </span>
 
-                                    <span className="text-rg text-black">We engineer every digital product from scratch bespoke platforms, web applications, and e-commerce builds designed for your exact requirements. No templates. No ceiling. </span>
+                                    <span className="text-rg text-black">We create content and strategies that keep brands present, recognizable, and connected to the audiences that matter most over time.</span>
                                 </p>
-                            </GlassEffect>
+                            </div>
                         </div>
                     </div>
                 </div>

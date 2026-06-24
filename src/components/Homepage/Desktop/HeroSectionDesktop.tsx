@@ -14,7 +14,7 @@ const Scene3D = dynamic(() => import('@/components/3d/Scene3D'), {
 
 const services = [
     {
-        title: "UI/UX Design Services",
+        title: "UI/UX Design",
         description: "Frictionless experiences designed specifically for your users, not adapted from a template.",
         image: "/images/homepage/home-hero-eye-1.png",
         width: 665,
@@ -23,7 +23,7 @@ const services = [
         class: "home-eye"
     },
     {
-        title: "Custom Web & App Development",
+        title: "Web & App Development",
         description: "Bespoke platforms, SaaS products and e-commerce builds engineered from the ground up for your exact business requirements.",
         image: "/images/homepage/home-hero-mind-1.png",
         width: 586,
@@ -41,7 +41,7 @@ const services = [
         class: "home-heart"
     },
     {
-        title: "Social Media Management Services",
+        title: "Social Media Management",
         description: "Custom content strategies built around your brand voice, your audience behaviour, and your business goals.",
         image: "/images/homepage/home-hero-hand-1.png",
         width: 624,

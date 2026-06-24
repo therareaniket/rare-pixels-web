@@ -57,7 +57,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-1 ">SP</span>
 
                                             <div>
-                                                <p className="text-18 text-rg">Surya Mani Prasad</p>
+                                                <p className="text-14 text-sb">Surya Mani Prasad</p>
                                                 <p className="text-14 text-rg">COO</p>
                                             </div>
                                         </div>
@@ -80,7 +80,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-2">ES</span>
 
                                             <div>
-                                                <p className="text-18 text-rg">Edvin Simon</p>
+                                                <p className="text-14 text-sb">Edvin Simon</p>
                                                 <p className="text-14 text-rg">Senior Manager</p>
                                             </div>
                                         </div>
@@ -103,7 +103,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-3">AD</span>
 
                                             <div>
-                                                <p className="text-18 text-rg">Ami Desai</p>
+                                                <p className="text-14 text-sb">Ami Desai</p>
                                                 <p className="text-14 text-rg">Founder</p>
                                             </div>
                                         </div>
@@ -126,7 +126,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-4">BY</span>
 
                                             <div>
-                                                <p className="text-18 text-rg">Bernard Saint Yves</p>
+                                                <p className="text-14 text-sb">Bernard Saint Yves</p>
                                                 <p className="text-14 text-rg">Director</p>
                                             </div>
                                         </div>
@@ -149,7 +149,7 @@ export default function TestimonialSectionMobile() {
                                             <span className="text-md text-18 client-initial-5">CP</span>
 
                                             <div>
-                                                <p className="text-18 text-rg">Chintan Patel</p>
+                                                <p className="text-14 text-sb">Chintan Patel</p>
                                                 <p className="text-14 text-rg">Managing Director</p>
                                             </div>
                                         </div>

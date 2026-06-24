@@ -12,12 +12,28 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
     const [headerTop, setHeaderTop] = useState<number | null>(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     const menuRef = useRef<HTMLDivElement | null>(null);
     const headerRef = useRef<HTMLElement | null>(null);
 
     useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 767px)');
+        const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+
+        updateIsMobile();
+        mediaQuery.addEventListener('change', updateIsMobile);
+        return () => mediaQuery.removeEventListener('change', updateIsMobile);
+    }, []);
+
+    useEffect(() => {
         const handleScroll = () => {
+            if (isMobile) {
+                setIsSticky(true);
+                setHeaderTop(0);
+                return;
+            }
+
             const hero = document.querySelector<HTMLElement>('#hero-section');
             if (!hero || !headerRef.current) {
                 setIsSticky(false);
@@ -51,11 +67,13 @@ export default function Header() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [isMobile]);
 
-    const headerStyle: React.CSSProperties = headerTop !== null
-        ? { top: `${headerTop}px`, bottom: 'auto' }
-        : { top: 'auto', bottom: '50px' };
+    const headerStyle: React.CSSProperties = isMobile
+        ? { top: '0px', bottom: 'auto' }
+        : headerTop !== null
+            ? { top: `${headerTop}px`, bottom: 'auto' }
+            : { top: 'auto', bottom: '50px' };
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -79,14 +97,14 @@ export default function Header() {
             <header ref={headerRef} className={isSticky ? "sticky-top" : "initial-bottom"} style={headerStyle}>
                 <div className="container">
                     <div className="navbar-wrapper">
-                        <div className="nav-logo">
-                            <Link href="/">
-                                {theme === "light" ? <Image src="/images/rp-logo-black.png" alt="rare-logo" width={174} height={28} /> : <Image src="/images/rp-logo-white.png" alt="rare-logo" width={174} height={28} />}
-                            </Link>
-                        </div>
+                            <div className="nav-logo">
+                                <Link href="/">
+                                    {theme === "light" ? <Image src="/images/rp-logo-black.png" alt="rare-logo" width={174} height={28} /> : <Image src="/images/rp-logo-white.png" alt="rare-logo" width={174} height={28} />}
+                                </Link>
+                            </div>
 
-                        <div className="navbar-links-wrapper">
-                            <GlassEffect className="site-radius-30">
+                            <div className="navbar-links-wrapper">
+                                <GlassEffect className="site-radius-30">
                                 <div className="navbar-links">
                                     <ul>
                                         <li className="text-18 text-md"><Link href="/" title="home">Home</Link></li>
@@ -100,25 +118,25 @@ export default function Header() {
                                         <li className="text-18 text-md"><Link href="/" title="contact">Contact</Link></li>
                                     </ul>
                                 </div>
-                            </GlassEffect>
+                                </GlassEffect>
 
-                            <div className="navbar-theme-btn">
-                                <GlassEffect className="site-radius-50">
+                                <div className="navbar-theme-btn">
+                                    <GlassEffect className="site-radius-50">
                                     <button className="mode-switching-toggle-button toggle-button" onClick={toggleTheme}>
                                         {theme === "light" ? <Image className="dark-mode-icon" src="/images/dark-mode-icon.svg" alt="dark-mode" width={24} height={24} /> : <Image className="light-mode-icon" src="/images/light-mode-icon.svg" alt="dark-mode" width={24} height={24} />}
                                     </button>
-                                </GlassEffect>
-                            </div>
-                            <button className={`hamburger-wrapper ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen)}>
-                                <GlassEffect className="site-radius-50">
+                                    </GlassEffect>
+                                </div>
+                                <button className={`hamburger-wrapper ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+                                    <GlassEffect className="site-radius-50">
                                     <div className="hamburger-image">
                                         {theme === "light" ? <Image src="/images/light-mode-hamburger.svg" alt="hamburger-light" width={24} height={24} /> : <Image src="/images/dark-mode-hamburger.svg" alt="hamburger-dark" width={24} height={24} />}
                                     </div>
-                                </GlassEffect>
-                            </button>
+                                    </GlassEffect>
+                                </button>
 
-                            <div ref={menuRef} className={`menu-for-responsive ${isOpen ? "active" : ""}`}>
-                                <GlassEffect className="site-radius-20">
+                                <div ref={menuRef} className={`menu-for-responsive ${isOpen ? "active" : ""}`}>
+                                    <GlassEffect className="site-radius-20">
                                     <div className="mobile-menu">
                                         <div className="menu-cross-icon" onClick={() => setIsOpen(false)}>
                                             {theme === "light" ? <Image className="dark-mode-icon" src="/images/light-menu-cross-icon.svg" alt="dark-mode" width={24} height={24} /> : <Image className="light-mode-icon" src="/images/dark-menu-cross-icon.svg" alt="dark-mode" width={24} height={24} />}
@@ -141,12 +159,20 @@ export default function Header() {
                                             </ul>
                                         </div>
                                     </div>
-                                </GlassEffect>
+                                    </GlassEffect>
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+                    {/* <GlassEffect className="navbar-glass-effect">
+                        <div className="navbar-wrapper-mob">
+                            <Image src="/images/rp-logo-black.png" alt="rare-logo" width={125} height={20}></Image>
+                            <Image src="/images/light-mode-hamburger.svg" alt="" width={20} height={20}></Image>
+                        </div>
+                    </GlassEffect> */}
                 </div>
             </header>
+
         </>
     )
 }

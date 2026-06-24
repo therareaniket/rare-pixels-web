@@ -172,6 +172,8 @@ header.sticky-top { top: 20px; bottom: auto; }
 .indus-box-50{ width: 50px; height: 50px; background-color: var(--background); position: absolute; }
 .indus-box-40{ width: 40px; height: 40px; background-color: var(--background); position: absolute; }
 .indus-box-30{ width: 30px; height: 30px; background-color: var(--background); position: absolute; }
+.industries-text-title > p{ display: flex; flex-direction: column;  }
+
 
 .indus-box-1{ top: 0px; left: 0px; }
 .indus-box-2{ top: 100px; left: 0px; }

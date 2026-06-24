@@ -5,6 +5,7 @@ import HeroSectionMobile from "@/components/Homepage/Mobile/HeroSectionMobile";
 import TestimonialSectionMobile from "@/components/Homepage/Mobile/TestimonialSectionMobile";
 import AboutSectionMobile from "@/components/Homepage/Mobile/AboutSectionMobile";
 import ServicesSectionMobile from "@/components/Homepage/Mobile/ServicesSectionMobile";
+import IndustriesSectionMobile from "@/components/Homepage/Mobile/IndustriesSectionMobile";
 
 const HeroSectionDesktop = dynamic(
 	() => import("@/components/Homepage/Desktop/HeroSectionDesktop"),
@@ -54,6 +55,7 @@ export default function Home() {
 						<TestimonialSectionMobile />
 						<AboutSectionMobile />
 						<ServicesSectionMobile />
+						<IndustriesSectionMobile />
 					</>
 					:
 					<>
