@@ -230,3 +230,5 @@ header{ margin-top: 0; }
 }
 .dark-mode-hover-icon{ transition: all .3s ease-in-out; }
 .light-mode-hover-icon{ transition: all .3s ease-in-out; }
+
+.nav-main .container { min-width: 1600px; }
