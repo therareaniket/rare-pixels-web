@@ -10,87 +10,87 @@ import "@/assets/css/responsive/desktop-responsive.css";
 export default function Header() {
     const { theme, toggleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
-    // const [isSticky, setIsSticky] = useState(false);
-    // const [headerTop, setHeaderTop] = useState<number | null>(null);
-    // const [isMobile, setIsMobile] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+    const [headerTop, setHeaderTop] = useState<number | null>(null);
+    const [isMobile, setIsMobile] = useState(false);
 
     const menuRef = useRef<HTMLDivElement | null>(null);
     const headerRef = useRef<HTMLElement | null>(null);
 
-    // useEffect(() => {
-    //     const mediaQuery = window.matchMedia('(max-width: 767px)');
-    //     const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 767px)');
+        const updateIsMobile = () => setIsMobile(mediaQuery.matches);
 
-    //     updateIsMobile();
-    //     mediaQuery.addEventListener('change', updateIsMobile);
-    //     return () => mediaQuery.removeEventListener('change', updateIsMobile);
-    // }, []);
+        updateIsMobile();
+        mediaQuery.addEventListener('change', updateIsMobile);
+        return () => mediaQuery.removeEventListener('change', updateIsMobile);
+    }, []);
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if (isMobile) {
-    //             setIsSticky(true);
-    //             setHeaderTop(0);
-    //             return;
-    //         }
+    useEffect(() => {
+        const handleScroll = () => {
+            if (isMobile) {
+                setIsSticky(true);
+                setHeaderTop(0);
+                return;
+            }
 
-    //         const hero = document.querySelector<HTMLElement>('#hero-section');
-    //         if (!hero || !headerRef.current) {
-    //             setIsSticky(false);
-    //             setHeaderTop(null);
-    //             return;
-    //         }
+            const hero = document.querySelector<HTMLElement>('#hero-section');
+            if (!hero || !headerRef.current) {
+                setIsSticky(false);
+                setHeaderTop(null);
+                return;
+            }
 
-    //         const heroBottom = hero.getBoundingClientRect().bottom;
-    //         const headerHeight = headerRef.current.offsetHeight;
-    //         const viewportHeight = window.innerHeight;
-    //         const bottomOffset = 50;
-    //         const stickyOffset = 20;
-    //         const initialTop = viewportHeight - headerHeight - bottomOffset;
-    //         const trackedTop = heroBottom - headerHeight;
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            const headerHeight = headerRef.current.offsetHeight;
+            const viewportHeight = window.innerHeight;
+            const bottomOffset = 50;
+            const stickyOffset = 20;
+            const initialTop = viewportHeight - headerHeight - bottomOffset;
+            const trackedTop = heroBottom - headerHeight;
 
-    //         if (trackedTop >= initialTop) {
-    //             setIsSticky(false);
-    //             setHeaderTop(initialTop);
-    //         } else if (trackedTop <= stickyOffset) {
-    //             setIsSticky(true);
-    //             setHeaderTop(stickyOffset);
-    //         } else {
-    //             setIsSticky(false);
-    //             setHeaderTop(trackedTop);
-    //         }
-    //     };
+            if (trackedTop >= initialTop) {
+                setIsSticky(false);
+                setHeaderTop(initialTop);
+            } else if (trackedTop <= stickyOffset) {
+                setIsSticky(true);
+                setHeaderTop(stickyOffset);
+            } else {
+                setIsSticky(false);
+                setHeaderTop(trackedTop);
+            }
+        };
 
-    //     window.addEventListener('scroll', handleScroll, { passive: true });
-    //     handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
 
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, [isMobile]);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [isMobile]);
 
-    // const headerStyle: React.CSSProperties = isMobile
-    //     ? { top: '0px', bottom: 'auto' }
-    //     : headerTop !== null
-    //         ? { top: `${headerTop}px`, bottom: 'auto' }
-    //         : { top: 'auto', bottom: '50px' };
+    const headerStyle: React.CSSProperties = isMobile
+        ? { top: '0px', bottom: 'auto' }
+        : headerTop !== null
+            ? { top: `${headerTop}px`, bottom: 'auto' }
+            : { top: 'auto', bottom: '50px' };
 
-    // useEffect(() => {
-    //     const handleClickOutside = (event: MouseEvent) => {
-    //         if (
-    //             isOpen &&
-    //             menuRef.current &&
-    //             event.target instanceof Node &&
-    //             !menuRef.current.contains(event.target)
-    //         ) {
-    //             setIsOpen(false);
-    //         }
-    //     };
-    //     document.addEventListener("mousedown", handleClickOutside);
-    //     return () => {
-    //         document.removeEventListener("mousedown", handleClickOutside);
-    //     };
-    // }, [isOpen])
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                isOpen &&
+                menuRef.current &&
+                event.target instanceof Node &&
+                !menuRef.current.contains(event.target)
+            ) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen])
 
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -135,7 +135,7 @@ export default function Header() {
                                 </div>
                             </div>
 
-                            <button type="button" className={`navbar-hamburger-bottom for-mobile ${isScrolled ? "active" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+                            <div className={`navbar-hamburger-bottom for-mobile ${isScrolled ? "active" : ""}`}>
                                 <div className="bottom-wrapper">
                                     <GlassEffect className="nav-theme-change-icon">
                                         <button className="nav-theme-change-icon" onClick={toggleTheme}>
@@ -147,7 +147,13 @@ export default function Header() {
                                         </button>
                                     </GlassEffect>
                                     <GlassEffect className="navbar-hamburger-effect">
-                                        {theme === "light" ? <Image src="/images/light-mode-hamburger.svg" alt="hamburger-light" width={30} height={30} /> : <Image src="/images/dark-mode-hamburger.svg" alt="hamburger-dark" width={30} height={30} />}
+                                        <button className={`hamburger-wrapper ${isOpen ? "active" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+                                        <div className="site-radius-50">
+                                            <div className="hamburger-image">
+                                                {theme === "light" ? <Image src="/images/light-mode-hamburger.svg" alt="hamburger-light" width={24} height={24} /> : <Image src="/images/dark-mode-hamburger.svg" alt="hamburger-dark" width={24} height={24} />}
+                                            </div>
+                                        </div>
+                                        </button>
                                     </GlassEffect>
                                 </div>
 
@@ -177,7 +183,7 @@ export default function Header() {
                                         </div>
                                     </GlassEffect>
                                 </div>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </GlassEffect>

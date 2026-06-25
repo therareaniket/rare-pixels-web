@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function IndustriesSectionDesktop() {
     return (
         <>
-            <section className="section" style={{ paddingTop: 0 }}>
+            <section>
                 <div className="container">
                     <div className="industries-text-title">
                         <h2 className="text-sb">Industries We Serve</h2>
