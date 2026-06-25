@@ -166,8 +166,8 @@
     .navbar-wrapper{ justify-content: space-between !important; }
 
     /* .navbar-wrapper GlassEffect { width: 100%; height: 100%; } */
-    .navbar-wrapper-mob{ height: max-content; display: flex; align-items: center; justify-content: space-around; gap: 190px; padding: 10px 0; }
-    header .liquidGlass-shine{ inset: none; }
+    /* .navbar-wrapper-mob{ height: max-content; display: flex; align-items: center; justify-content: space-around; gap: 190px; padding: 10px 0; }
+    header .liquidGlass-shine{ inset: none; } */
 }
 
 @media (max-width: 439px) {

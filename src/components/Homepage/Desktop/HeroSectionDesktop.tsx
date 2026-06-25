@@ -116,29 +116,6 @@ export default function HeroSectionDesktop() {
                                     ))}
                                 </div>
                             </div>
-
-                            <div className="home-hero-services-highlight-wrapper for-tablet">
-                                <div className="hm-services-left">
-                                    <div className="home-hero-banner-image">
-                                        <Image className="" src="/images/homepage/eye-image-for-tablet.png" loading="eager" draggable={false} alt={services[activeIndex].title} width={281} height={224}></Image>
-                                    </div>
-                                </div>
-
-                                <div className="hm-services-right">
-                                    <div className="hm-services-content-wrapper">
-                                        <GlassEffect>
-                                            <div className="hm-services-title">
-                                                👁️
-                                                <span className="text-md h6">UI/UX Design Services</span>
-                                            </div>
-                                        </GlassEffect>
-
-                                        <div className="hm-services-paragraph">
-                                            <p className="text-18 text-rg">Experiences users remember and businesses benefit from</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                         <div className="hm-hero-row-2-wrapper">

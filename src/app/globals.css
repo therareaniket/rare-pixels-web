@@ -83,28 +83,34 @@ body {
  
 @font-face {
     font-family: 'icomoon';
-    src:  url('../../public/fonts/icon/icomoon.ttf?pd7klg') format('truetype'),
-        url('../../public/fonts/icon/icomoon.woff?pd7klg') format('woff');
+    src:  url('../../public/fonts/icon/icomoon.ttf?bwbe99') format('truetype'),
+        url('../../public/fonts/icon/icomoon.woff?bwbe99') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
  
 [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    /* speak: never; */
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-   
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
- 
+
+.icon-dark-mode-icon:before {
+  content: "\1f32b";
+}
+.icon-light-mode-icon:before {
+  content: "\e902";
+}
 .icon-hero-cta-arrow:before {
   content: "\e900";
 }
@@ -134,11 +140,6 @@ h6, .h6 { font-size: 22px; line-height: 32px; margin-bottom: 16px; }
 .text-18 { font-size: 18px; line-height: 24px; }
 .text-14 { font-size: 14px; line-height: 22px; }
  
- 
- 
- 
- 
- 
 /* LIQUID GLASS STYLES START */
 
 .liquidGlass-wrapper { position: relative; display: flex; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2); }
@@ -147,4 +148,3 @@ h6, .h6 { font-size: 22px; line-height: 32px; margin-bottom: 16px; }
 .liquidGlass-text { z-index: 3; }
 
 /* LIQUID GLASS STYLES END */
- 
