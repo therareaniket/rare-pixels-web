@@ -195,7 +195,7 @@ export default function HeroSectionDesktop() {
                                 </div>
                             </div> */}
 
-                            <div className="home-hero-services-highlight-wrapper for-tablet">
+                            {/* <div className="home-hero-services-highlight-wrapper for-tablet">
                                 <div className="element-box-tablet">
                                     <Scene3D activeIndex={activeIndex} />
                                 </div>
@@ -215,7 +215,7 @@ export default function HeroSectionDesktop() {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
