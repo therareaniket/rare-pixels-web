@@ -15,7 +15,7 @@ export default function TestimonialSectionDesktop() {
 
     return (
         <>
-            <section className="section hm-testimonial-section">
+            <section className="section hm-testimonial-section" style={{paddingTop: 0}}>
                 <div className="container">
                     <div className="hm-testimonial-txt-wrapper">
                         <div className="hm-testimonial-left-text">

@@ -172,26 +172,48 @@ export default function HeroSectionDesktop() {
                                 </Link>
                             </div>
 
-                            <div className="home-hero-services-highlight-wrapper for-tablet">
-                                <div className="hm-services-left">
-                                    <div className="home-hero-banner-image">
-                                        <Image className="" src="/images/homepage/eye-image-for-tablet.png" loading="eager" draggable={false} alt={services[activeIndex].title} width={281} height={224}></Image>
-                                    </div>
+                            {/* <div className="home-hero-services-highlight-wrapper for-tablet">
+                                <div className="hm-services-left home-hero-banner-image">
+                                    <Scene3D activeIndex={activeIndex} />
                                 </div>
 
                                 <div className="hm-services-right">
-                                    <div className="hm-services-content-wrapper">
-                                        <GlassEffect className="site-radius-30">
-                                            <div className="hm-services-title">
-                                                👁️
-                                                <span className="text-md h6">UI/UX Design Services</span>
-                                            </div>
-                                        </GlassEffect>
+                                    {services.map((service, index) => (
+                                        <div key={index} className={`hm-services-content-wrapper ${activeIndex === index ? "active" : ""}`}>
+                                            <GlassEffect className="dock site-radius-30">
+                                                <div className="hm-services-title">
+                                                    <span className="text-sb h6">{service.title}</span>
+                                                </div>
+                                            </GlassEffect>
 
-                                        <div className="hm-services-paragraph">
-                                            <p className="text-18 text-rg">Experiences users remember and businesses benefit from</p>
+                                            <div className={`hm-services-subtitle ${activeIndex === index ? "show" : ""
+                                                }`}>
+                                                <p className="text-18 text-rg text-grey">{service.description}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    ))}
+                                </div>
+                            </div> */}
+
+                            <div className="home-hero-services-highlight-wrapper for-tablet">
+                                <div className="element-box-tablet">
+                                    <Scene3D activeIndex={activeIndex} />
+                                </div>
+
+                                <div className="services-highlight-tablet">
+                                    {services.map((service, index) => (
+                                        <div key={index} className={`hm-services-content-wrapper-tab ${activeIndex === index ? "active" : ""}`}>
+                                            <div className={`services-highlight-content-tab ${activeIndex === index ? "show" : ""
+                                                }`}>
+                                                <GlassEffect className="dock site-radius-30">
+                                                    <div className="hm-services-title-tab">
+                                                        <span className="text-sb h6">{service.title}</span>
+                                                    </div>
+                                                </GlassEffect>
+                                                <p className="text-18 text-rg text-grey">{service.description}</p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>

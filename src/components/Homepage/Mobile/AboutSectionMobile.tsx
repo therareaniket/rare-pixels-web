@@ -7,41 +7,11 @@ import "@/assets/css/responsive/mobile-responsive.css";
 
 export default function AboutSectionMobile() {
 
-    const cols =
-        typeof window !== "undefined"
-            ? window.innerWidth < 401
-                ? 31
-                : window.innerWidth < 479
-                    ? 37
-                    : 37
-            : 37;
-
-    const rows =
-        typeof window !== "undefined"
-            ? window.innerWidth <= 360
-                ? 130
-                    : window.innerWidth <= 401
-                        ? 100
-                        : window.innerWidth <= 479
-                            ? 107
-                            : 107
-                    : 107;
-
-    // const cols = 37;
-    // const rows = 100;
-
     return (
         <>
             <section className="section section-bg-blue">
                 <div className="container">
                     <div className="abt-mobile-section">
-                        <div className="abt-section-wrapper">
-                            <div className="abt-grid-wrapper">
-                                {Array.from({ length: cols * rows }).map((_, index) => (
-                                    <div key={index} className="abt-background-grid"></div>
-                                ))}
-                            </div>
-                        </div>
                         <div className="abt-mobile-bg">
                             <h2 className="text-sb hm-abt-title text-white">Making Businesses Easier To Notice, Trust, And Remember.</h2>
 
