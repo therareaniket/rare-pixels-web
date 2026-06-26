@@ -64,7 +64,7 @@ export default function HeroSectionDesktop() {
                 setActiveIndex((prev) => (prev + 1) % services.length);
                 setShowDescription(true);
             }, 500);
-        }, 2000);
+        }, 20000);
 
         return () => clearInterval(interval);
     })

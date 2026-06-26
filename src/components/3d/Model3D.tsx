@@ -258,14 +258,26 @@ const Model3D = ({ config }: Model3DProps) => {
       0.08
     )
 
+    // groupRef.current.rotation.y = THREE.MathUtils.lerp(
+    //   groupRef.current.rotation.y,
+    //   targetX * 0.4, 0.05
+    // )
+
     groupRef.current.rotation.y = THREE.MathUtils.lerp(
       groupRef.current.rotation.y,
-      targetX * 0.4, 0.05
+      targetX * 0.5,
+      0.05
     )
 
     groupRef.current.rotation.x = THREE.MathUtils.lerp(
       groupRef.current.rotation.x,
-      targetY * 0.3,
+      -targetY * 0.5,
+      0.05
+    )
+
+    groupRef.current.rotation.z = THREE.MathUtils.lerp(
+      groupRef.current.rotation.z,
+      targetY * 0.5,
       0.05
     )
   })

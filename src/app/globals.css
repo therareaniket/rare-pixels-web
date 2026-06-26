@@ -11,7 +11,7 @@
 
     --text-grey: #000000;
 
-    --glass-box-shadow: inset 2px 2px 1px 0 rgba(66, 66, 66, 0.1), inset -1px -1px 1px 1px rgba(66, 66, 66, 0.1);
+    --glass-box-shadow: inset 2px 2px 1px 0 rgba(204, 204, 204, 0.1), inset -1px -1px 1px 1px rgba(204, 204, 204, 0.1);
 
     --testimonial-card-1: #F5F8F5;
     --testimonial-card-2: #FBF9E9;
