@@ -59,8 +59,8 @@ export default function Home() {
 						<HeroSectionMobile />
 						<TestimonialSectionMobile />
 						<AboutSectionMobile />
-						<ServicesSectionMobile />
-						<IndustriesSectionMobile />
+						{/* <ServicesSectionMobile /> */}
+						{/* <IndustriesSectionMobile /> */}
 					</>
 					:
 					<>
