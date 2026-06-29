@@ -88,7 +88,7 @@ export default function HeroSectionDesktop() {
                                     <p className="text-rg text-18">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to. Nothing off the shelf. Nothing assembled from parts that existed before you walked in. Everything built for you. </p>
                                 </div>
 
-                                <Link href="/" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
+                                <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
                                     <span className="text-20 text-md text-white">Start Your Project </span>
                                     <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                 </Link>
@@ -166,11 +166,13 @@ export default function HeroSectionDesktop() {
                                     </div>
                                 </div>
 
-                                <Link href="/" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
+                                <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
                                     <span className="text-20 text-md text-white">Start Your Project </span>
                                     <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                 </Link>
                             </div>
+
+                            {/* BELOW IS THE CODE WITH ALL 4 SERVICES VISIBLE FOR TABLET */}
 
                             {/* <div className="home-hero-services-highlight-wrapper for-tablet">
                                 <div className="hm-services-left home-hero-banner-image">
@@ -186,14 +188,15 @@ export default function HeroSectionDesktop() {
                                                 </div>
                                             </GlassEffect>
 
-                                            <div className={`hm-services-subtitle ${activeIndex === index ? "show" : ""
-                                                }`}>
+                                            <div className={`hm-services-subtitle ${activeIndex === index ? "show" : ""}`}>
                                                 <p className="text-18 text-rg text-grey">{service.description}</p>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
                             </div> */}
+
+                            {/* BELOW IS THE CODE WITH ONLY 1 SERVICE VISIBLE FOR TABLET */}
 
                             {/* <div className="home-hero-services-highlight-wrapper for-tablet">
                                 <div className="element-box-tablet">

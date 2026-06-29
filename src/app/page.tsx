@@ -56,7 +56,7 @@ export default function Home() {
 				{isSmallScreen ?
 					<>
 						{/* MOBILE COMPONENTS */}
-						<HeroSectionMobile />
+						{/* <HeroSectionMobile /> */}
 						<TestimonialSectionMobile />
 						<AboutSectionMobile />
 						<ServicesSectionMobile />
@@ -65,7 +65,7 @@ export default function Home() {
 					:
 					<>
 						{/* DESKTOP COMPONENTS */}
-						<HeroSectionDesktop />
+						{/* <HeroSectionDesktop /> */}
 						<TestimonialSectionDesktop />
 						<AboutSectionDesktop />
 						<ServicesSectionDesktop />
