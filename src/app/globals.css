@@ -129,6 +129,7 @@ body {
 .text-bd { font-family: 'strichpunkt-bd'; }
  
 .container { max-width: calc(1600px + 36px); padding: 0 18px; margin: 0 auto; }
+.container-sm { max-width: calc(1440px + 36px); margin: 0 auto; }  
 .section{ padding: 150px 0; }
  
 /* h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: 'strichpunkt-sb'; } */

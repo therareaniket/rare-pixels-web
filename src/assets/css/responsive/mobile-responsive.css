@@ -7,7 +7,9 @@
 /* button { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); } */
 
 @media (max-width: 479px) {
-    .container { width: 100%; max-width: 100%; padding: 0 18px; }  .section { padding: 50px 0px; }
+    .container { width: 100%; max-width: 100%; padding: 0 18px; }  
+    .section { padding: 50px 0px; } 
+
     h1, .h1 { font-size: 34px; line-height: 40px; margin-bottom: 14px; }
     h2, .h2 { font-size: 32px; line-height: 38px; }
     h3, .h3 { font-size: 28px; line-height: 34px; }
@@ -96,14 +98,14 @@
     .hm-abt-title{ margin-bottom: 14px; }
 
     .abt-mobile-bg{ width: 100%; height: max-content; background-image: url(/images/homepage/abt-section-background-grid-mobile.png); background-repeat: repeat; }
-    .abt-mobile-section{ 
-        /* position: absolute; */
+    /* .abt-mobile-section{ 
+        position: absolute;
         width: fit-content; 
         overflow: hidden; 
         mask-image: linear-gradient(to top, transparent, black 1%, black 99%, transparent ), 
                     linear-gradient(to right, transparent, black 2%, black 98%, transparent);
         mask-composite: intersect;
-    }
+    } */
 
     .services-mobile-title{ text-align: center; }
     .services-mobile-title h2{ margin-bottom: 14px; }
@@ -123,7 +125,6 @@
     .bg-light-green{ background-color: #F5F8F5; }
 
     .hm-abt-card-text p{ display: flex; flex-direction: column; gap: 14px; }
-    .abt-mobile-bg{ padding: 18px; }
     .services-mobile-title h2{ width: 90%; margin: 0 auto; margin-bottom: 14px; }
     /* header{ position: static; margin-top: 20px; margin-bottom: 30px; } */
 
@@ -163,6 +164,8 @@
     .element-box{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
     .services-highlight-content-mob{ margin-top: 80px; }
+
+    .testimonial-stars-mobile{ display: flex; gap: 6px; margin-top: 14px; }
 }
 
 @media (max-width: 439px) {
@@ -174,7 +177,7 @@
     h6, .h6 { font-size: 22px; }
     body { font-size: 24px; }
 
-    .text-18{ font-size: 16px; line-height: 16px; }
+    .text-18{ font-size: 16px; line-height: 22px; }
     .text-14{ font-size: 12px; line-height: 20px; }
 
     .service-item p { width: 82%; }
@@ -198,11 +201,13 @@
     .hm-abt-card-text p{ gap: 10px; }
     .services-mobile-text-wrapper h3{ margin-bottom: 6px; }
     .services-art-board{ width: 160px; height: 160px; }
-    .industries-mobile-video{ height: 370px; }
+    .industries-mobile-video{ height: 310px; }
     .services-highlight-responsive{ width: 100%; }
 
     .hm-hero-desc-wrapper{ gap: 10px; }
-    .abt-mobile-bg{ padding: 14px; }
+
+    .testimonial-stars-mobile img{ width: 16px; height: 16px; }
+    .testimonial-stars-mobile{ gap: 4px; margin-top: 12px; }
 }
 
 @media (max-width: 400px) {
@@ -236,15 +241,23 @@
     .navbar-theme-btn{ height: 100%; }
 
     .mode-switching-toggle-button img, .hamburger-image img{ width: 18px; height: 18px; }
-    .services-mobile-card{ height: 240px; }
+    .services-mobile-card{ height: 220px; }
     .services-detail-text span:first-child{ height: 35px; }
     .services-art-board{ width: 160px; height: 160px; }
     .mobile-client-initial{ gap: 10px; }
+    .services-detail-text{ margin-top: 15px; }
 
     .dark-mode-hover-icon, .light-mode-hover-icon{ width: 20px; height: 20px; }
     .nav-theme-change-icon{ font-size: 20px; }
     .navbar-hamburger-effect{ width: 38px; height: 38px; }
     .nav-btn-wrapper{ gap: 2px; }
+
+    .hm-testimonial-mobile-card > p{ padding: 14px; font-size: 12px; line-height: 18px; }
+    .testimonial-stars-mobile img{ width: 14px; height: 14px; }
+
+    .services-mobile-text-wrapper{ padding: 14px; }
+    .services-detail-text .text-14{ font-size: 12px; line-height: 16px; }
+    .industries-mobile-video{ height: 310px; }
 }
 
 @media (max-width: 374px) {

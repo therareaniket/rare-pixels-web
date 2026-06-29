@@ -60,7 +60,7 @@ export default function Home() {
 						<TestimonialSectionMobile />
 						<AboutSectionMobile />
 						<ServicesSectionMobile />
-						{/* <IndustriesSectionMobile /> */}
+						<IndustriesSectionMobile />
 					</>
 					:
 					<>
@@ -69,8 +69,8 @@ export default function Home() {
 						<TestimonialSectionDesktop />
 						<AboutSectionDesktop />
 						<ServicesSectionDesktop />
-						{/* <IndustriesSectionDesktop /> */}
-						{/* <WhyChooseUsSectionDesktop /> */}
+						<IndustriesSectionDesktop />
+						<WhyChooseUsSectionDesktop />
 					</>
 				}
 			</main>

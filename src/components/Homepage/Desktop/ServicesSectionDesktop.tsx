@@ -17,8 +17,8 @@ export default function ServicesSectionDesktop() {
 
                         <div className="services-subtitle">
                             <p className="text-18 text-rg text-grey">
-                                <span>Every business is trying to earn attention, build trust, and stay memorable. The tools may differ. The objective never does.</span>
-                                <span>We help brands create experiences, identities, platforms, and conversations that make them easier to choose in a crowded market.</span>
+                                Every business is trying to earn attention, build trust, and stay memorable. The tools may differ. The objective never does.
+                                We help brands create experiences, identities, platforms, and conversations that make them easier to choose in a crowded market.
                             </p>
                         </div>
                     </div>
