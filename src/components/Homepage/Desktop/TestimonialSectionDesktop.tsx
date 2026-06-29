@@ -49,9 +49,9 @@ export default function TestimonialSectionDesktop() {
                                 }}
                                 className="testimonial-swiper-wrapper"
                                 breakpoints={{
-                                    0: { slidesPerView: 1.4, spaceBetween: 20 },
+                                    0: { slidesPerView: 1.2, spaceBetween: 20 },
                                     768: { slidesPerView: 1.6, spaceBetween: 20 },
-                                    1024: { slidesPerView: 2 },
+                                    1024: { slidesPerView: 1.5 },
                                     1200: { slidesPerView: 1.6, spaceBetween: 20 },
                                     1360: { slidesPerView: 2, spaceBetween: 30 }
                                 }}

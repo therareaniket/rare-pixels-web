@@ -12,7 +12,7 @@ export default function IndustriesSectionMobile() {
                     <div className="industries-text-wrapper-mobile">
                         <h2 className="text-sb">Industries We Serve</h2>
 
-                        <p className="text-14 text-rg">
+                        <p className="text-16 text-rg">
                             <span>Every industry is different.</span>
                             <span> But the need to earn trust, create memorable experiences, and stay relevant isn&apos;t.</span>
                         </p>
@@ -38,9 +38,9 @@ export default function IndustriesSectionMobile() {
                         <div className="industry-name">
                             <span className="text-sb">Technology & SaaS</span>
 
-                            <div className="text-18 text-rg">
-                                <p>Complex products fail when user&apos;s understand them.</p>
-                                <p>We transform powerful SaaS platforms into intuitive experiences that drive adoption, retention, and growth.</p>
+                            <div className="text-16 text-rg">
+                                <p className="text-16">Complex products fail when user&apos;s understand them.</p>
+                                <p className="text-16">We transform powerful SaaS platforms into intuitive experiences that drive adoption, retention, and growth.</p>
                             </div>
                         </div>
                     </div>

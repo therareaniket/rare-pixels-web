@@ -410,11 +410,12 @@
   .hm-abt-text-wrapper{ flex-direction: column; }
   .hm-abt-text-wrapper h2{ width: 100%; margin-bottom: 14px; }
   .hm-abt-text-wrapper p{ width: 100%; }
+  .hm-abt-card-title .h6{ width: 100%; }
 
-  .hm-abt-card-wrapper{ flex-direction: column; margin-top: 30px; gap: 30px; }
+  .hm-abt-card-wrapper{ flex-direction: column; margin-top: 50px; gap: 30px; }
 
   .hm-abt-pointers-right{ width: 100%; flex-wrap: wrap; }
-  .hm-abt-card{ width: 390px; height: 300px; }
+  .hm-abt-card{ width: 390px; height: 275px; }
   .hm-abt-card-title{ width: 100%; }
   .hm-abt-logo-left{ padding-left: 0; margin-left: 0; width: max-content; height: max-content; }
   .hm-abt-pointers-right .liquidGlass-wrapper{ width: max-content; }
@@ -424,11 +425,12 @@
   .testimonial-stats{ width: 100%; }
   .testimonial-stats-wrapper{ width: 100%; justify-content: space-between; }
 
-  .services-card{ width: 100%; height: 325px; display: flex; align-items: center; }
-  .services-detail-text{ width: 60%; }
+  .services-card{ width: 100%; height: 310px; display: flex; align-items: center; }
+  .services-text{ padding: 30px; }
+  .services-detail-text{ width: 80%; }
   .services-text h3{ margin-bottom: 10px; }
   .services-art-board{ width: 220px; height: 220px; left: 80%; }
-  .services-detail-text p:first-child{ height: 60px; }
+  .services-detail-text p:first-child{ height: max-content; margin-bottom: 10px; }
   .services-text .h6{ font-size: 22px; line-height: 30px; }
   .services-card-wrapper{ margin-top: 30px; flex-direction: column; }
   .hm-services-title-wrapper h2{ width: 60%; margin: 0 auto; }
@@ -436,10 +438,11 @@
   /* .hm-services-title-wrapper{ text-align: left; } */
   .hm-abt-card-title .h6{ font-size: 22px; line-height: 30px; }
 
-  .industries-card-wrapper{ flex-direction: column; align-items: flex-start; gap: 30px; }
+  .industries-card-wrapper{ flex-direction: column; align-items: flex-start; gap: 40px; }
   .industries-text-wrapper{ width: 100%; height: max-content; gap: 20px; }
-  .industries-image-wrapper{ width: 100%; }
+  .industries-image-wrapper{ width: 100%; height: 910px; }
   .industries-text-wrapper > span{ font-size: 50px; line-height: 60px; }
+  .industries-text-wrapper p{ width: 80%; }
 
   .rare-logo-wrapper{ width: 130px; }
 
@@ -451,8 +454,34 @@
   .services-highlight-content-tab{ width: 100%; align-items: center; display: flex; flex-direction: column; gap: 10px; text-align: center; }
   .hm-about-main{ padding: 0; }
 
-  .why-choose-us-for-desktop{ display: none; }
+  /* .why-choose-us-for-desktop{ display: none; }
   .why-choose-us-tablet{ display:block; }
+
+  .why-choose-us-image-wrapper{ width: 100%; height: 600px; position: relative; background-color: red; }
+  .why-choose-us-image-wrapper img{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); overflow: hidden;} */
+
+  .why-choose-us-pointer-wrapper{ flex-direction: column; gap: 30px; margin-top: 30px; }
+  .why-choose-us-pointer-cards{ gap: 30px; }
+  .why-choose-us-content-wrapper{ display: flex; flex-direction: column-reverse; }
+  .why-choose-us-card{ width: 100%; border-bottom: 1px solid #C6C6C6; padding-bottom: 20px; }
+
+  .why-choose-us-eclipse{ z-index: 3; }
+
+  .why-choose-us-image-wrapper{ position: relative; }
+  .why-choose-us-images{ width: 100%; height: 400px; margin-top: 30px; background-color: red; }
+
+  .why-choose-us-eclipse-1{ width: 180px; }
+  .why-choose-us-eclipse-2{ width: 280px; }
+  .why-choose-us-eclipse-3{ width: 380px; }
+  .why-choose-us-eclipse-4{ width: 480px; }
+  .why-choose-us-eclipse-5{ width: 580px; }
+  .why-choose-us-eclipse-6{ width: 680px; }
+  .why-choose-us-eclipse-7{ width: 780px; }
+  .why-choose-us-eclipse-8{ width: 880px; }
+  /* .why-choose-us-eclipse{ width: 180px; } */
+  .why-choose-us-hand-image img{ width: 240px; }
+
+  .why-choose-us-text-wrapper{ width: 100%; }
 } 
 
 @media (max-width: 1023px) {
@@ -485,10 +514,12 @@
 
   /* .services-card-wrapper{ flex-direction: column; }
   .services-card{ width: 100%; height: 370px; } */
-  .services-art-board{ width: 200px; height: 200px; }
+  .services-art-board{ width: 170px; height: 170px; left: 85%; }
   .services-card{ height: 270px; }
-  .services-detail-text p:first-child{ height: 55px; }
+  .services-detail-text p:first-child{ margin-bottom: 7px; }
   .services-detail-text{ width: 90%; }
+  .hm-abt-card-title .h6 { width: 90%; }
+  .industries-image-wrapper{ height: 840px; }
 }
 
 @media (max-width: 991px) {
@@ -513,7 +544,7 @@
   .mobile-menu{ width: 390px; }
   .menu-for-responsive.active{ right: 70px; }
 
-  .hm-abt-card-title .h6{ font-size: 20px; line-height: 26px; }
+  .hm-abt-card-title .h6{ font-size: 20px; line-height: 26px; width: 80%; }
   .hm-abt-card{ height: 280px; }
   /* .services-detail-text p:first-child{ height: 70px; } */
   .services-card{ height: 270px; }
@@ -521,6 +552,7 @@
   .hm-services-title-wrapper p{ width: 90%; }
 
   .industries-text-wrapper > span { font-size: 40px; line-height: 50px; }
+  .industries-image-wrapper{ height: 780px; }
 
   .dark-mode-hover-icon, .light-mode-hover-icon{ width: 26px; height: 26px; }
   .nav-theme-change-icon{ font-size: 26px; }
@@ -561,11 +593,22 @@
   .services-text .h6{ font-size: 20px; line-height: 28px; }
   .services-card-wrapper{ flex-direction: column; }
   .services-card{ width: 100%; height: 275px; }
-  .services-detail-text p:first-child{ height: 50px; }
+  .services-detail-text p:first-child{ margin-bottom: 4px; }
   .services-detail-text{ margin-top: 20px; }
   .services-card{ height: 265px; }
   /* .services-art-board{ width: 220px; height: 220px; } */
   .services-detail-text{ width: 100%; }
+
+  .industries-image-wrapper{ height: 650px; }
+
+  .why-choose-us-eclipse-1{ width: 90px; }
+  .why-choose-us-eclipse-2{ width: 160px; }
+  .why-choose-us-eclipse-3{ width: 240px; }
+  .why-choose-us-eclipse-4{ width: 320px; }
+  .why-choose-us-eclipse-5{ width: 400px; }
+  .why-choose-us-eclipse-6{ width: 480px; }
+  .why-choose-us-eclipse-7{ width: 550px; }
+  .why-choose-us-eclipse-8{ width: 800px; }
 }
 
 @media (max-width: 767px) {
@@ -605,7 +648,22 @@
   .services-text .h6{ font-size: 18px; line-height: 24px; }
   .hm-services-title-wrapper p{ width: 100%; }
 
-  .industries-image-wrapper{ height: 360px; }
+  .industries-image-wrapper{ height: 600px; }
+
+  .services-card{ height: 280px; }
+  .services-art-board{ left: 80%; }
+
+  .why-choose-us-eclipse-1{ width: 60px; }
+  .why-choose-us-eclipse-2{ width: 120px; }
+  .why-choose-us-eclipse-3{ width: 190px; }
+  .why-choose-us-eclipse-4{ width: 260px; }
+  .why-choose-us-eclipse-5{ width: 340px; }
+  .why-choose-us-eclipse-6{ width: 420px; }
+  .why-choose-us-eclipse-7{ width: 500px; }
+  .why-choose-us-eclipse-8{ width: 800px; }
+  .why-choose-us-hand-image img{ width: 185px; }
+
+  .why-choose-us-images{ height: 320px; }
 }
 
 @media (max-width: 639px) {
@@ -636,6 +694,19 @@
   .navbar-hamburger-effect{ width: 40px; height: 40px; }
   .nav-theme-change-icon{ width: 40px; height: 40px; font-size: 24px; }
   .dark-mode-hover-icon, .light-mode-hover-icon{ width: 24px; height: 24px; }
+
+  .industries-text-wrapper p{ width: 90%; }
+
+
+  .why-choose-us-eclipse-1{ width: 60px; }
+  .why-choose-us-eclipse-2{ width: 120px; }
+  .why-choose-us-eclipse-3{ width: 190px; }
+  .why-choose-us-eclipse-4{ width: 260px; }
+  .why-choose-us-eclipse-5{ width: 340px; }
+  .why-choose-us-eclipse-6{ width: 450px; }
+  .why-choose-us-eclipse-7{ width: 800px; }
+  .why-choose-us-eclipse-8{ width: 800px; }
+  .why-choose-us-hand-image img{ width: 185px; }
 }
 
 @media (max-width: 575px) {
@@ -667,15 +738,15 @@
   .hm-abt-card-title .h6{ font-size: 18px; line-height: 26px; margin-bottom: 6px; }
   .hm-abt-card{ padding: 14px; height: 160px; } 
   .hm-abt-pixel{ width: 6px; height: 6px; }
-  .services-art-board{ left: 80%; }
+  .services-art-board{ width: 180px; height: 180px; left: 75%; }
 
   .testimonial-stats{ width: 135px; }
   .hm-testimonial-left-text p { width: 100%; }
 
   .hm-services-title-wrapper h2{ width: 70%; }
-  .services-detail-text p:first-child{ height: 40px; }
-  .services-detail-text{ gap: 12px; }
-  .services-card{ height: 270px; }
+  /* .services-detail-text p:first-child{ height: 40px; } */
+  .services-detail-text{ gap: 8px; }
+  .services-card{ height: 260px; }
 
   .industries-image-wrapper{ height: 400px; }
   .hm-abt-pixel{ margin-top: 10px; }
@@ -683,4 +754,6 @@
   .testimonial-stars img{ width: 16px; height: 16px; }
   .testimonial-stars{ gap: 3px; }
   .client-initital span.h6{ font-size: 16px; line-height: 24px;  }
+  .services-text{ padding: 25px; }
+  .services-detail-text{ margin-top: 15px; }
 }

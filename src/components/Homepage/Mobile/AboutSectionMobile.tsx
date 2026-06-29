@@ -15,7 +15,7 @@ export default function AboutSectionMobile() {
                         <div className="abt-mobile-bg">
                             <h2 className="text-sb hm-abt-title text-white">Making Businesses Easier To Notice, Trust, And Remember.</h2>
 
-                            <p className="text-14 text-rg text-white">
+                            <p className="text-16 text-rg text-white">
                                 <span>At RarePixels, we bring together strategy, creativity, and technology to create brands and digital experiences that leave a lasting impact. Everything we build is designed with purpose, shaped by insight, and aligned with business growth. Nothing generic. Nothing without intent.</span>
                                 <span>Because being noticed gets you seen. Being remembered gets you chosen.</span>
                             </p>
@@ -32,7 +32,7 @@ export default function AboutSectionMobile() {
                                         <div className="hm-abt-card-text">
                                             <h3 className="text-18 text-sb">Design That Creates Clarity</h3>
 
-                                            <p className="text-14 text-rg text-white">
+                                            <p className="text-16 text-rg text-white">
                                                 <span>Great experiences don&apos;t happen by accident.</span>
                                                 <span>We believe every interaction should feel natural, every journey should feel effortless, and every decision should help users move forward with confidence.</span>
                                             </p>
@@ -47,7 +47,7 @@ export default function AboutSectionMobile() {
                                         <div className="hm-abt-card-text">
                                             <h3 className="text-18 text-sb">Technology Built Around Growth</h3>
 
-                                            <p className="text-14 text-rg text-white">
+                                            <p className="text-16 text-rg text-white">
                                                 <span>Technology should support ambition, not limit it.</span>
                                                 <span>From websites to digital products, we build solutions designed to perform reliably today and scale with your business tomorrow.</span>
                                             </p>
@@ -62,7 +62,7 @@ export default function AboutSectionMobile() {
                                         <div className="hm-abt-card-text">
                                             <h3 className="text-18 text-sb">Creativity With Direction</h3>
 
-                                            <p className="text-14 text-rg text-white">
+                                            <p className="text-16 text-rg text-white">
                                                 <span>Creativity is powerful when it has a purpose.</span>
                                                 <span>Every idea, design, and experience we create is guided by strategy, ensuring it contributes to a larger business objective.</span>
                                             </p>
@@ -77,7 +77,7 @@ export default function AboutSectionMobile() {
                                         <div className="hm-abt-card-text">
                                             <h3 className="text-18 text-sb">Brands People Remember</h3>
 
-                                            <p className="text-14 text-rg text-white">
+                                            <p className="text-16 text-rg text-white">
                                                 <span>Recognition is earned through consistency.</span>
                                                 <span>We help businesses create meaningful brand experiences that stay relevant, build trust, and leave a lasting impression over time.</span>
                                             </p>

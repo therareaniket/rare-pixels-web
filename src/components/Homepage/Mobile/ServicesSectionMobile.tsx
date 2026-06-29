@@ -12,7 +12,7 @@ export default function ServicesSectionMobile() {
                     <div className="services-mobile-title">
                         <h2 className="text-sb">What Businesses Need. Not Just What We Do.</h2>
 
-                        <p className="text-rg text-14 text-grey"> Every business is trying to earn attention, build trust, and stay memorable. The tools may differ. The objective never does. We help brands create experiences, identities, platforms, and conversations that make them easier to choose in a crowded market.
+                        <p className="text-rg text-16 text-grey"> Every business is trying to earn attention, build trust, and stay memorable. The tools may differ. The objective never does. We help brands create experiences, identities, platforms, and conversations that make them easier to choose in a crowded market.
                         </p>
                     </div>
 
@@ -27,7 +27,7 @@ export default function ServicesSectionMobile() {
 
                                 <p className="text-18 text-sb text-black">UI/UX Design</p>
 
-                                <p className="text-14 services-detail-text">
+                                <p className="text-16 services-detail-text">
                                     <span className="text-rg text-black">People don&apos;t abandon products. They abandon experiences that feel difficult to understand.</span>
 
                                     <span className="text-rg text-black">We design interfaces that simplify decisions, remove friction, and help users move from curiosity to confidence without second-guessing their next step.</span>
@@ -45,7 +45,7 @@ export default function ServicesSectionMobile() {
 
                                 <p className="text-18 text-sb text-black">Web & App Development</p>
 
-                                <p className="text-14 services-detail-text">
+                                <p className="text-16 services-detail-text">
                                     <span className="text-rg text-black">Growth shouldn&apos;t be limited by the technology behind it.</span>
 
                                     <span className="text-rg text-black">We build websites and applications that are reliable, scalable, and ready for the opportunities, challenges, and ambitions that come with business growth.</span>
@@ -63,7 +63,7 @@ export default function ServicesSectionMobile() {
 
                                 <p className="text-18 text-sb text-black">Brand Identity Design</p>
 
-                                <p className="text-14 services-detail-text">
+                                <p className="text-16 services-detail-text">
                                     <span className="text-rg text-black">People form opinions long before they become customers.</span>
 
                                     <span className="text-rg text-black"> We create brand identities that communicate credibility, consistency, and confidence from the very first interaction, helping businesses leave a stronger and more lasting impression. </span>
@@ -82,7 +82,7 @@ export default function ServicesSectionMobile() {
 
                                 <p className="text-18 text-sb text-black">Social Media Management</p>
 
-                                <p className="text-14 services-detail-text">
+                                <p className="text-16 services-detail-text">
                                     <span className="text-rg text-black"> Being visible is easy. Staying relevant takes intention. </span>
 
                                     <span className="text-rg text-black">We create content and strategies that keep brands present, recognizable, and connected to the audiences that matter most over time.</span>
