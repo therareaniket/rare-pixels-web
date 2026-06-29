@@ -65,7 +65,7 @@ export default function Home() {
 					:
 					<>
 						{/* DESKTOP COMPONENTS */}
-						{/* <HeroSectionDesktop /> */}
+						<HeroSectionDesktop />
 						<TestimonialSectionDesktop />
 						<AboutSectionDesktop />
 						<ServicesSectionDesktop />
