@@ -57,7 +57,7 @@ const Model3D = ({ config }: Model3DProps) => {
 
 		// Hard-set the START state immediately (right side, big)
 		group.position.set(
-		config.position[0] + ENTRY_OFFSET_X,
+		config.position[0],
 		config.position[1],
 		config.position[2] + ENTRY_OFFSET_X
 		)

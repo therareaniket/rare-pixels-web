@@ -24,7 +24,7 @@ export const MODEL_CONFIG = [
     	// Hand — Social Media Management Services
     	modelPath: '/models/hand.element.glb',
     	camera: [0, 0, 7.4] as [number, number, number],
-    	position: [0.7, 0, 0] as [number, number, number],
+    	position: [0.35, 0, 0] as [number, number, number],
     	scale: 1,
 	},
 ]

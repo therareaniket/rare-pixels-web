@@ -8,8 +8,9 @@ export function useResponsiveCameraZ() {
             const w = window.innerWidth
             if (w < 480)       setZMultiplier(1)   //
             else if (w < 768)  setZMultiplier(1)   //
-            else if (w < 1280) setZMultiplier(1)   //
-            else               setZMultiplier(1)   // 1920
+            else if (w < 1440)  setZMultiplier(1.6)
+            else if (w < 1600) setZMultiplier(1.4)   //
+            else if (w < 1800) setZMultiplier(1.3)   //
         }
         update()
         window.addEventListener('resize', update)

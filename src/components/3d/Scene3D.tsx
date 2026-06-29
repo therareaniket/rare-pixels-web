@@ -32,11 +32,12 @@ const Scene3D = ({ activeIndex }: Scene3DProps) => {
   	const initialCamera: [number, number, number] = [icx, icy, icz * zMultiplier]
 
   	return (
-		<Canvas camera={{ position: MODEL_CONFIG[0].camera, fov: 25 }} dpr={[1, 2]} >
+		// <Canvas camera={{ position: MODEL_CONFIG[0].camera, fov: 25 }} dpr={[1, 2]} >
+		<Canvas camera={{ position:initialCamera, fov: 25 }} dpr={[1, 2]} >
 			<ambientLight intensity={0.5} />
 			<directionalLight position={[0, 5, 5]} intensity={8} />
 
-			<CameraController x={cx} y={cy} z={cz} />
+			<CameraController x={cx} y={cy} z={responsiveCz} />
 
 			<Suspense fallback={null}>
 				{/* key= unmounts/remounts Model3D on switch, triggering the GSAP intro */}
