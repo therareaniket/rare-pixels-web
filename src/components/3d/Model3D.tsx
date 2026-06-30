@@ -6,7 +6,8 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { MODEL_CONFIG } from './modelConfig'
 
-MODEL_CONFIG.forEach(({ modelPath }) => useGLTF.preload(modelPath))
+// MODEL_CONFIG.forEach(({ modelPath }) => useGLTF.preload(modelPath))
+useGLTF.preload(MODEL_CONFIG[0].modelPath, '/draco/')
 
 interface Model3DProps {
   	config: (typeof MODEL_CONFIG)[number]
@@ -23,6 +24,15 @@ const Model3D = ({ config }: Model3DProps) => {
 
 	const { scene, animations } = useGLTF(config.modelPath)
 	const { actions } = useAnimations(animations, scene)
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			MODEL_CONFIG.slice(1).forEach(({ modelPath }) =>
+			useGLTF.preload(modelPath, '/draco/')
+			)
+		}, 1500) // after hero is interactive
+		return () => clearTimeout(timer)
+	}, [])
 
 	useEffect(() => {
 		const first = Object.values(actions)[0]
