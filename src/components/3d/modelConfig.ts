@@ -1,7 +1,7 @@
 export const MODEL_CONFIG = [
 	{
     // Eye — UI/UX Design Services
-    	modelPath: '/models/eye.element.glb',
+    	modelPath: '/models/eye-optimized.glb',
     	camera: [2, -2, 20] as [number, number, number],
     	position: [0.5, 0, 0] as [number, number, number],
     	scale: 1,

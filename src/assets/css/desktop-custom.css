@@ -243,7 +243,7 @@ header{ margin-top: 0; }
 .why-choose-us-content-wrapper{ position: relative; }
 .why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 .why-choose-us-tablet{ display: none; }
-.hm-hero-main { padding-top: 0px; }
+.hm-hero-main { padding-top: 0px !important; }
 
 
 /* hero scroll-driven sticky section */

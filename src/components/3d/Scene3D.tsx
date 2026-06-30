@@ -33,8 +33,9 @@ const Scene3D = ({ activeIndex }: Scene3DProps) => {
 	// Also scale the initial camera Z for Canvas on first mount
   	const [icx, icy, icz] = MODEL_CONFIG[0].camera
   	const initialCamera: [number, number, number] = [icx + xOffset, icy, icz * zMultiplier]
-
+	
   	return (
+
 		// <Canvas camera={{ position: MODEL_CONFIG[0].camera, fov: 25 }} dpr={[1, 2]} >
 		<Canvas camera={{ position:initialCamera, fov: 25 }} dpr={[1, 2]} >
 			<ambientLight intensity={0.5} />

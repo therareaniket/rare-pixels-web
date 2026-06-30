@@ -101,65 +101,6 @@ const Model3D = ({ config }: Model3DProps) => {
 
   	const idleClock = useRef(0)
 
-	// useFrame(({ camera, size }) => {
-	// 	if (!groupRef.current || mouse.current === null) return
-		
-	// 	// Sine wave on Z axis = zoom in/out (adjust * 0.5 for breath depth)
-	// 	const isIdle = lastMouseMove.current !== null && Date.now() - lastMouseMove.current > 50
-		
-	// 	if (isIdle) {
-	// 		idleClock.current += 0.02
-	// 		const breathZ = Math.sin(idleClock.current) * 0.5  // ← 0.5 = how far it zooms
-
-	// 		// Snap back to rest position when mouse stops
-	// 		groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, config.position[0], 0.05)
-	// 		groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, config.position[1], 0.05)
-	// 		groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, config.position[2] + breathZ, 0.05)
-
-	// 		groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, 0, 0.05)
-	// 		groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, 0, 0.05)
-	// 		groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, 0, 0.05)
-			
-	// 	} else {
-	// 		const { x: mouseX, y: mouseY } = mouse.current
-	// 		idleClock.current = 0
-
-	// 		// Unproject mouse NDC coords into world space at the model's Z depth
-	// 		const worldTarget = new THREE.Vector3(mouseX, mouseY, 0.5)
-	// 		worldTarget.unproject(camera)
-
-	// 		// Direction from camera to that world point
-	// 		const dir = worldTarget.sub(camera.position).normalize()
-
-	// 		// Travel along that ray to reach the model's Z plane
-	// 		const distance = (config.position[2] - camera.position.z) / dir.z
-	// 		const targetPos = camera.position.clone().add(dir.multiplyScalar(distance))
-
-	// 		// LEASH — clamp how far from rest position the model can drift
-	// 		const leashRadius = 3  // ← tune this: higher = follows further
-	// 		const offset = new THREE.Vector2(
-	// 			targetPos.x - config.position[0],
-	// 			targetPos.y - config.position[1]
-	// 		)
-	// 		if (offset.length() > leashRadius) {
-	// 			offset.setLength(leashRadius)
-	// 		}
-
-	// 		// Smooth follow (towing van lag — lower = more lag, higher = snappier)
-	// 		const followSpeed = 0.09  // ← tune this
-	// 		groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, config.position[0] + offset.x, followSpeed)
-	// 		groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, config.position[1] + offset.y, followSpeed)
-	// 		groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, config.position[2], followSpeed)
-
-	// 		// Tilt to face direction of travel
-	// 		groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, offset.x * 0.4, 0.05)
-	// 		groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, -offset.y * 0.3, 0.05)
-	// 		groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, offset.y * 0.2, 0.05)
-	// 	}
-	// })
-
-	// Don't pass position/scale as props — GSAP and useFrame own those now
-	
 	useFrame(({ camera }) => {
 		if (!groupRef.current) return  // ← removed mouse.current === null check
 
@@ -191,7 +132,7 @@ const Model3D = ({ config }: Model3DProps) => {
 			const distance = (config.position[2] - camera.position.z) / dir.z
 			const targetPos = camera.position.clone().add(dir.multiplyScalar(distance))
 
-			const leashRadius = 3
+			const leashRadius = 8
 			const offset = new THREE.Vector2(
 			targetPos.x - config.position[0],
 			targetPos.y - config.position[1]
