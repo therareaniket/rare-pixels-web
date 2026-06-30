@@ -76,11 +76,11 @@ export default function HeroSectionMobile() {
                                     </h1>
 
                                     <div className="hm-hero-desc-wrapper text-grey">
-                                        <p className="text-rg text-14">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
+                                        <p className="text-rg text-16">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
 
-                                        <p className="text-sb text-14">Creativity That Businesses Can Measure.</p>
+                                        <p className="text-sb text-16">Creativity That Businesses Can Measure.</p>
 
-                                        <p className="text-rg text-14">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to. Nothing off the shelf. Nothing assembled from parts that existed before you walked in. Everything built for you. </p>
+                                        <p className="text-rg text-16">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to. Nothing off the shelf. Nothing assembled from parts that existed before you walked in. Everything built for you. </p>
                                     </div>
 
                                     <div className="brand-statistics">

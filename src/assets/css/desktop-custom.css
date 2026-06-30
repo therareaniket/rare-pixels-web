@@ -14,6 +14,8 @@
 .bg-light-yellow{ background-color: #FBF9E9; }
 .bg-light-pink{ background-color: #FCD4E9; }
 .bg-light-green{ background-color: #F5F8F5; }
+.bg-yellowish{ background-color: #FBF9E9; }
+
 
 
 @keyframes eyeFade {  from{ opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
@@ -239,13 +241,7 @@ header{ margin-top: 0; }
 .why-choose-us-pointer-cards{ display: flex; flex-direction: column; gap: 120px; }
 .why-choose-us-eclipse{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; }
 .why-choose-us-content-wrapper{ position: relative; }
-.why-choose-us-hand-image{
-    position: absolute;  
-    bottom: 0; 
-    left: 50%; 
-    transform: translateX(-50%); 
-}
-
+.why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 .why-choose-us-tablet{ display: none; }
 .hm-hero-main { padding-top: 0px; }
 
@@ -254,3 +250,26 @@ header{ margin-top: 0; }
 .hm-hero-scroll-track { position: relative; height: 400vh; /* 4 parts, one per service */ }
 .hm-hero-sticky-inner { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden; }
 .hm-hero-sticky-inner .home-hero-wrapper-desktop { width: 100%; }
+
+/* Process Section */
+
+.process-title-wrapper{ width: 697px; text-align: center; margin: 0 auto; }
+
+.process-pointer-wrapper{ margin-top: 60px; }
+
+.process-pointer{ width: 533px; display: flex; align-items: flex-start; gap: 20px; opacity: 50%; }
+.process-icon span{ font-size: 24px; color: #1C1B1F; }
+.process-icon{ width: 52px; height: 52px; border-radius: 20px; background-color: #E8DB7D; display: flex; align-items: center; justify-content: center; }
+.process-desc p{ width: 461px; display: flex; flex-direction: column; gap: 10px; }
+
+.process-desc p{ display: none; }
+.process-desc.active p{ display: flex; padding-top: 20px; }
+.process-pointer-wrapper{ display: flex; flex-direction: column; align-items: flex-start; gap: 30px; }
+
+.process-pointer-2{ margin-left: 227px; }
+.process-pointer-3{ margin-left: 454px; }
+.process-pointer-4{ margin-left: 681px; }
+.process-pointer-5{ margin-left: 907px; }
+
+.process-pointer .h2{ margin-bottom: 0; }
+.process-pointer.active{ opacity: 100%; }

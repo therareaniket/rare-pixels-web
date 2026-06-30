@@ -1,5 +1,7 @@
 'use client';
 
+import "@/assets/css/desktop-custom.css";
+import "@/assets/css/responsive/desktop-responsive.css";
 import { useTheme } from "@/context/ThemeContext";
 import Image from "next/image";
 
@@ -19,12 +21,12 @@ export default function WhyChooseUsSectionDesktop() {
                         <div className="why-choose-us-content-wrapper why-choose-us-for-desktop">
                             <div className="why-choose-us-pointer-wrapper">
                                 <div className="why-choose-us-pointer-cards">
-                                    <div className="why-choose-us-card">
+                                    <div className="why-choose-us-card why-choose-us-card-1">
                                         <h3 className="h6 text-sb">No Shortcuts, Ever</h3>
 
                                         <p className="text-18 text-rg">We don’t rely on quick fixes or reused solutions. Every project is approached with intent, built from the ground up to match your needs and deliver long-term value.</p>
                                     </div>
-                                    <div className="why-choose-us-card">
+                                    <div className="why-choose-us-card why-choose-us-card-2">
                                         <h3 className="h6 text-sb">Clarity Over Complexity</h3>
 
                                         <p className="text-18 text-rg">We simplify ideas and focus on what truly matters. No unnecessary elements just clear structure, purposeful design, and decisions that improve usability.</p>
@@ -32,17 +34,17 @@ export default function WhyChooseUsSectionDesktop() {
                                 </div>
 
                                 <div className="why-choose-us-pointer-cards">
-                                    <div className="why-choose-us-card">
+                                    <div className="why-choose-us-card why-choose-us-card-3">
                                         <h3 className="h6 text-sb">Execution That Matches Vision</h3>
 
                                         <p className="text-18 text-rg">We ensure every idea translates into the final product exactly as intended. From design to development, everything stays aligned with precision and consistency.</p>
                                     </div>
-                                    <div className="why-choose-us-card">
+                                    <div className="why-choose-us-card why-choose-us-card-4">
                                         <h3 className="h6 text-sb">Partners, Not Vendors</h3>
 
                                         <p className="text-18 text-rg">We work as an extension of your team, not just a service provider. Our focus is on collaboration, trust, and building relationships that go beyond project delivery.</p>
                                     </div>
-                                    <div className="why-choose-us-card">
+                                    <div className="why-choose-us-card why-choose-us-card-5">
                                         <h3 className="h6 text-sb">Focused on Real Outcomes</h3>
 
                                         <p className="text-18 text-rg">Our work is guided by performance. We design and build solutions that not only look good but also deliver results, scale smoothly, and evolve with your brand.</p>

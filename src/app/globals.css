@@ -22,6 +22,8 @@
     --client-review-bg: #FBF8F5;
 
     --section-bg: #040E36;
+
+    --border-bottom: #C6C6C6;
 }
 
 [data-theme="dark"] {
@@ -36,6 +38,8 @@
 
     --client-review-bg: #242324;
     --section-bg: #040E36;
+
+    --border-bottom: #424242;
 }
  
 /* ::selection { background-color: ; } */
@@ -83,8 +87,8 @@ body {
  
 @font-face {
     font-family: 'icomoon';
-    src:  url('../../public/fonts/icon/icomoon.ttf?bwbe99') format('truetype'),
-        url('../../public/fonts/icon/icomoon.woff?bwbe99') format('woff');
+    src:  url('../../public/fonts/icon/icomoon.ttf?mgmded') format('truetype'),
+        url('../../public/fonts/icon/icomoon.woff?mgmded') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -105,6 +109,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-strategy-process:before {
+  content: "\e906";
+}
+.icon-refine-process:before {
+  content: "\e901";
+}
+.icon-create-process:before {
+  content: "\e903";
+}
+.icon-discover-process:before {
+  content: "\e904";
+}
+.icon-engineer-process:before {
+  content: "\e905";
+}
 .icon-dark-mode-icon:before {
   content: "\1f32b";
 }
@@ -114,8 +133,6 @@ body {
 .icon-hero-cta-arrow:before {
   content: "\e900";
 }
- 
- 
  
 body {
     background: var(--background);
@@ -129,7 +146,7 @@ body {
 .text-bd { font-family: 'strichpunkt-bd'; }
  
 .container { max-width: calc(1600px + 36px); padding: 0 18px; margin: 0 auto; }
-.container-sm { max-width: calc(1440px + 36px); margin: 0 auto; }  
+.container-sm { max-width: calc(1440px + 36px); padding: 0 18px; margin: 0 auto; }  
 .section{ padding: 150px 0; }
  
 /* h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: 'strichpunkt-sb'; } */
