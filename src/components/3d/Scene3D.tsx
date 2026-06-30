@@ -23,13 +23,16 @@ const CameraController = ({ x, y, z }: { x: number; y: number; z: number }) => {
 
 const Scene3D = ({ activeIndex }: Scene3DProps) => {
   	const config = MODEL_CONFIG[activeIndex]
-	const zMultiplier = useResponsiveCameraZ()
+	// const zMultiplier = useResponsiveCameraZ()
+	const { zMultiplier, xOffset } = useResponsiveCameraZ()
+	
   	const [cx, cy, cz] = config.camera
+	const responsiveCx = cx + xOffset
 	const responsiveCz = cz * zMultiplier
 
 	// Also scale the initial camera Z for Canvas on first mount
   	const [icx, icy, icz] = MODEL_CONFIG[0].camera
-  	const initialCamera: [number, number, number] = [icx, icy, icz * zMultiplier]
+  	const initialCamera: [number, number, number] = [icx + xOffset, icy, icz * zMultiplier]
 
   	return (
 		// <Canvas camera={{ position: MODEL_CONFIG[0].camera, fov: 25 }} dpr={[1, 2]} >
@@ -37,7 +40,7 @@ const Scene3D = ({ activeIndex }: Scene3DProps) => {
 			<ambientLight intensity={0.5} />
 			<directionalLight position={[0, 5, 5]} intensity={8} />
 
-			<CameraController x={cx} y={cy} z={responsiveCz} />
+			<CameraController x={responsiveCx} y={cy} z={responsiveCz} />
 
 			<Suspense fallback={null}>
 				{/* key= unmounts/remounts Model3D on switch, triggering the GSAP intro */}
