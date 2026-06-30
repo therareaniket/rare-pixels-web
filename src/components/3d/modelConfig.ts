@@ -1,5 +1,12 @@
 export const MODEL_CONFIG = [
 	{
+    	// Heart — Brand Identity Design
+    	modelPath: '/models/heart.element.glb',
+    	camera: [0, 0, 4] as [number, number, number],
+    	position: [0.2, -0.35, 0] as [number, number, number],
+    	scale: 1,
+	},
+	{
     // Eye — UI/UX Design Services
     	modelPath: '/models/eye.element.glb',
     	camera: [2, -2, 20] as [number, number, number],
@@ -13,13 +20,7 @@ export const MODEL_CONFIG = [
     	position: [0.5, -1.2, 0] as [number, number, number],
     	scale: 1,
 	},
-	{
-    	// Heart — Brand Identity Design
-    	modelPath: '/models/heart.element.glb',
-    	camera: [0, 0, 4] as [number, number, number],
-    	position: [0.2, -0.35, 0] as [number, number, number],
-    	scale: 1,
-	},
+	
 	{
     	// Hand — Social Media Management Services
     	modelPath: '/models/hand.element.glb',
