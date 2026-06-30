@@ -16,16 +16,13 @@
 .bg-light-green{ background-color: #F5F8F5; }
 
 
-
 @keyframes eyeFade {  from{ opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-
 @keyframes industries{ from{ transform: scale(0.95); } to{ transform: scale(1); } }
 
 /* home hero */
 .home-hero-wrapper-desktop{ display: flex; flex-direction: column-reverse; overflow: hidden; }
 .client-initital span, .testimonial-client-text{ color: black; }
 .home-hero-wrapper-tablet{ display: none; }
-.hm-hero-main{ padding-top: 0 !important; padding-top: 60px !important; height: 100vh !important; }
 
 .hm-hero-row-1-wrapper{ display: flex; align-items: flex-start; justify-content: space-between;  margin-top: 60px; margin-bottom: 80px; }
 
@@ -37,12 +34,10 @@
 
 .hm-services-title{ display: flex; gap: 10px;  padding: 6px 20px; border-radius: 30px;  width: max-content;  justify-content: flex-start;  align-items: center; color: var(--text-black);  }
 .hm-services-title img{ width: 22px; height: auto; object-fit: contain; }
-.hm-services-title .h6{ margin-bottom: 0; }
+.hm-services-title .h6 { margin-bottom: 0; }
 .hm-services-content-wrapper{ width: 426px; padding-left: 20px; margin-bottom: 30px; position: relative; z-index: 3; transition: all 1s ease-in; }
 .hm-services-subtitle{ width: 414px; padding-left: 20px; max-height: 0; padding-top: 0; overflow: hidden; opacity: 0; transition: max-height 1s ease, padding-top 0.4s ease; }
 .hm-services-subtitle.show{ max-height: 100px; opacity: 1; padding-top: 12px; }
-/* .liquidGlass-wrapper{ border-radius: 30px; width: max-content; } */
-/* .liquidGlass-shine{ border-radius: 30px; } */
 .home-hero-banner-image { width: 100vw; height: 100%; display: flex; align-items: center; justify-content: center; position: absolute; z-index: 2; right: 0px; top: 0px; object-fit: contain; animation: eyeFade 0.8s ease; }
 .hm-services-content-wrapper .h6{ opacity: 50%; }
 .hm-services-content-wrapper p{ opacity: 50%; }
@@ -252,3 +247,10 @@ header{ margin-top: 0; }
 }
 
 .why-choose-us-tablet{ display: none; }
+.hm-hero-main { padding-top: 0px; }
+
+
+/* hero scroll-driven sticky section */
+.hm-hero-scroll-track { position: relative; height: 400vh; /* 4 parts, one per service */ }
+.hm-hero-sticky-inner { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden; }
+.hm-hero-sticky-inner .home-hero-wrapper-desktop { width: 100%; }

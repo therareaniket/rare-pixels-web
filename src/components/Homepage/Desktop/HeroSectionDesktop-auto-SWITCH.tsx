@@ -5,7 +5,7 @@ import "@/assets/css/responsive/desktop-responsive.css";
 import GlassEffect from "@/components/LiquideGlass";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import dynamic from 'next/dynamic';
 
 const Scene3D = dynamic(() => import('@/components/3d/Scene3D'), {
@@ -55,116 +55,87 @@ export default function HeroSectionDesktop() {
 
     const [activeIndex, setActiveIndex] = useState(0)
     const [showDescription, setShowDescription] = useState(true);
-    const scrollTrackRef = useRef<HTMLDivElement>(null);
-    const lastIndexRef = useRef(0);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const trackEl = scrollTrackRef.current;
-            if (!trackEl) return;
+        const interval = setInterval(() => {
+            setShowDescription(false);
 
-            const rect = trackEl.getBoundingClientRect();
-            const totalScrollable = trackEl.offsetHeight - window.innerHeight;
+            setTimeout(() => {
+                setActiveIndex((prev) => (prev + 1) % services.length);
+                setShowDescription(true);
+            }, 500);
+        }, 2000);
 
-            // How far we've scrolled into the track, clamped between 0 and totalScrollable
-            const scrolled = Math.min(
-                Math.max(-rect.top, 0),
-                totalScrollable
-            );
-
-            const progress = totalScrollable > 0 ? scrolled / totalScrollable : 0;
-            // progress 0 -> 1 mapped across services.length equal parts
-            let index = Math.floor(progress * services.length);
-            if (index >= services.length) index = services.length - 1;
-            if (index < 0) index = 0;
-
-            if (index !== lastIndexRef.current) {
-                lastIndexRef.current = index;
-                setShowDescription(false);
-                setTimeout(() => {
-                    setActiveIndex(index);
-                    setShowDescription(true);
-                }, 200);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll();
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
+        return () => clearInterval(interval);
+    })
 
     return (
         <>
-            <section id="hero-section" ref={scrollTrackRef} className="section hm-hero-main hm-hero-scroll-track">
-                <div className="hm-hero-sticky-inner">
-                    <div className="container">
-                        <div className="home-hero-wrapper-desktop">
-                            <div className="hm-hero-row-1-wrapper">
-                                <div className="hm-hero-text-left">
-                                    <h1 className="text-sb hm-hero-title">
-                                        Building Brands People Choose First.
-                                    </h1>
+            <section id="hero-section" className="section hm-hero-main">
+                <div className="container">
+                    <div className="hm-services-left home-hero-banner-image 3d-models">
+                        <Scene3D activeIndex={activeIndex} />
+                    </div>
 
-                                    <div className="hm-hero-paragraph-wrapper text-grey">
-                                        <p className="text-18 text-rg">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
+                    <div className="home-hero-wrapper-desktop">
+                        <div className="hm-hero-row-1-wrapper">
+                            <div className="hm-hero-text-left">
+                                <h1 className="text-sb hm-hero-title">
+                                    Building Brands People Choose First.
+                                </h1>
 
-                                        <p className="text-18 text-sb">Creativity That Businesses Can Measure.</p>
+                                <div className="hm-hero-paragraph-wrapper text-grey">
+                                    <p className="text-18 text-rg">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
 
-                                        <p className="text-rg text-18">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to. Nothing off the shelf. Nothing assembled from parts that existed before you walked in. Everything built for you. </p>
-                                    </div>
+                                    <p className="text-18 text-sb">Creativity That Businesses Can Measure.</p>
 
-                                    <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
-                                        <span className="text-20 text-md text-white">Start Your Project </span>
-                                        <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
-                                    </Link>
+                                    <p className="text-rg text-18">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to. Nothing off the shelf. Nothing assembled from parts that existed before you walked in. Everything built for you. </p>
                                 </div>
 
-                                <div className="home-hero-services-highlight-wrapper for-desktop">
-                                    <div className="hm-services-left home-hero-banner-image">
-                                        <Scene3D activeIndex={activeIndex} />
-                                    </div>
-
-                                    <div className="hm-services-right">
-                                        {services.map((service, index) => (
-                                            <div key={index} className={`hm-services-content-wrapper ${activeIndex === index ? "active" : ""}`}>
-                                                <GlassEffect className="dock site-radius-30">
-                                                    <div className="hm-services-title">
-                                                        <span className="text-sb h6">{service.title}</span>
-                                                    </div>
-                                                </GlassEffect>
-
-                                                <div className={`hm-services-subtitle ${activeIndex === index && showDescription ? "show" : ""
-                                                    }`}>
-                                                    <p className="text-18 text-rg text-grey">{service.description}</p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
+                                <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
+                                    <span className="text-20 text-md text-white">Start Your Project </span>
+                                    <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
+                                </Link>
                             </div>
 
-                            <div className="hm-hero-row-2-wrapper">
-                                <div className="hm-hero-stats-wrapper">
-                                    <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">100+</h2>
-                                        <p className="text-18 text-md">Brands Transformed</p>
-                                    </div>
-                                    <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">6000+</h2>
-                                        <p className="text-18 text-md">Hours of Strategic Design</p>
-                                    </div>
-                                    <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">50+</h2>
-                                        <p className="text-18 text-md">Digital Products Engineered </p>
-                                    </div>
+                            <div className="home-hero-services-highlight-wrapper for-desktop">                            
+                                <div className="hm-services-right">
+                                    {services.map((service, index) => (
+                                        <div key={index} className={`hm-services-content-wrapper ${activeIndex === index ? "active" : ""}`}>
+                                            <GlassEffect className="dock site-radius-30">
+                                                <div className="hm-services-title">
+                                                    <span className="text-sb h6">{service.title}</span>
+                                                </div>
+                                            </GlassEffect>
+
+                                            <div className={`hm-services-subtitle ${activeIndex === index ? "show" : ""
+                                                }`}>
+                                                <p className="text-18 text-rg text-grey">{service.description}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="hm-hero-row-2-wrapper">
+                            <div className="hm-hero-stats-wrapper">
+                                <div className="hm-hero-stats">
+                                    <h2 className="text-sb text-primary">100+</h2>
+                                    <p className="text-18 text-md">Brands Transformed</p>
+                                </div>
+                                <div className="hm-hero-stats">
+                                    <h2 className="text-sb text-primary">6000+</h2>
+                                    <p className="text-18 text-md">Hours of Strategic Design</p>
+                                </div>
+                                <div className="hm-hero-stats">
+                                    <h2 className="text-sb text-primary">50+</h2>
+                                    <p className="text-18 text-md">Digital Products Engineered </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="container">
                     <div className="home-hero-wrapper-tablet">
                         <div className="hm-hero-row-1-wrapper">
                             <div className="hm-hero-text-left">
@@ -235,7 +206,7 @@ export default function HeroSectionDesktop() {
                                 <div className="services-highlight-tablet">
                                     {services.map((service, index) => (
                                         <div key={index} className={`hm-services-content-wrapper-tab ${activeIndex === index ? "active" : ""}`}>
-                                            <div className={`services-highlight-content-tab ${activeIndex === index && showDescription ? "show" : ""
+                                            <div className={`services-highlight-content-tab ${activeIndex === index ? "show" : ""
                                                 }`}>
                                                 <GlassEffect className="dock site-radius-30">
                                                     <div className="hm-services-title-tab">
