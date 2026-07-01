@@ -24,6 +24,9 @@
     --section-bg: #040E36;
 
     --border-bottom: #C6C6C6;
+
+    --why-choose-desktop-box: inset 0 -47px 22px 18px rgba(255, 255, 255, 1);
+    --why-choose-mobile-box: inset 0 -45px 15px -3px rgba(255, 255, 255, 1);
 }
 
 [data-theme="dark"] {
@@ -40,6 +43,9 @@
     --section-bg: #040E36;
 
     --border-bottom: #424242;
+
+    --why-choose-desktop-box: inset 0 -50px 36px -8px rgb(0, 0, 0);
+    --why-choose-mobile-box: inset 0 -52px 32px -6px rgba(0, 0, 0, 1);
 }
  
 /* ::selection { background-color: ; } */
@@ -87,8 +93,8 @@ body {
  
 @font-face {
     font-family: 'icomoon';
-    src:  url('../../public/fonts/icon/icomoon.ttf?mgmded') format('truetype'),
-        url('../../public/fonts/icon/icomoon.woff?mgmded') format('woff');
+    src:  url('../../public/fonts/icon/icomoon.ttf?pjcdtv') format('truetype'),
+        url('../../public/fonts/icon/icomoon.woff?pjcdtv') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -109,6 +115,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-deliver-svg:before {
+  content: "\e907";
+}
 .icon-strategy-process:before {
   content: "\e906";
 }

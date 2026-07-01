@@ -6,7 +6,8 @@ import TestimonialSectionMobile from "@/components/Homepage/Mobile/TestimonialSe
 import AboutSectionMobile from "@/components/Homepage/Mobile/AboutSectionMobile";
 import ServicesSectionMobile from "@/components/Homepage/Mobile/ServicesSectionMobile";
 import IndustriesSectionMobile from "@/components/Homepage/Mobile/IndustriesSectionMobile";
-// import WhyChooseUsSectionMobile from "@/components/Homepage/Mobile/WhyChooseUsSectionMobile";
+import WhyChooseUsSectionMobile from "@/components/Homepage/Mobile/WhyChooseUsSectionMobile";
+import ProcessSectionMobile from "@/components/Homepage/Mobile/ProcessSectionMobile";
 
 const HeroSectionDesktop = dynamic(
 	() => import("@/components/Homepage/Desktop/HeroSectionDesktop"),
@@ -36,10 +37,15 @@ const WhyChooseUsSectionDesktop = dynamic(
 	{ ssr: false }
 );
 
-// const ProcessSectionDesktop = dynamic(
-// 	() => import("@/components/Homepage/Desktop/ProcessSectionDesktop"),
-// 	{ ssr: false }
-// );
+const ProcessSectionDesktop = dynamic(
+	() => import("@/components/Homepage/Desktop/ProcessSectionDesktop"),
+	{ ssr: false }
+);
+
+const ProjectsSectionDesktop = dynamic(
+	() => import("@/components/Homepage/Desktop/ProjectsSectionDesktop"),
+	{ ssr: false }
+);
 
 export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
@@ -67,7 +73,8 @@ export default function Home() {
 						<AboutSectionMobile />
 						<ServicesSectionMobile />
 						<IndustriesSectionMobile />
-						{/* <WhyChooseUsSectionMobile /> */}
+						<WhyChooseUsSectionMobile />
+						<ProcessSectionMobile />
 					</>
 					:
 					<>
@@ -78,7 +85,8 @@ export default function Home() {
 						<ServicesSectionDesktop />
 						<IndustriesSectionDesktop />
 						<WhyChooseUsSectionDesktop />
-						{/* <ProcessSectionDesktop /> */}
+						<ProcessSectionDesktop />
+						<ProjectsSectionDesktop />
 					</>
 				}
 			</main>

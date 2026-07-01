@@ -34,22 +34,31 @@ export default function TestimonialSectionMobile() {
                         <Swiper
                             modules={[Autoplay]}
                             spaceBetween={20}
-                            slidesPerView={1.3}
+                            slidesPerView={1.2}
                             loop={true}
-                            speed={2000}
-                            autoplay={{ delay: 2000, disableOnInteraction: true }}
+                            speed={1000}
+                            autoplay={{ delay: 2500 }}
+                            allowTouchMove={true}
+                            grabCursor={true}
+                            simulateTouch={true}
+                            threshold={10}
+                            resistance={true}
+                            resistanceRatio={0.85}
+                            shortSwipes={true}
+                            longSwipes={true}
+                            longSwipesRatio={0.4}
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
                             }}
                             className="testimonial-mobile-swiper"
-
                             breakpoints={{
                                 0: { slidesPerView: 1.2 },
                             }}
                         >
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-16 hm-testimonial-card hm-testimonial-card-1">Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.
+                                    <div className="text-rg text-16 hm-testimonial-card hm-testimonial-card-1">
+                                        <p>Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.</p>
                                         <div className="testimonial-stars-mobile">
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
@@ -57,7 +66,7 @@ export default function TestimonialSectionMobile() {
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                         </div>
-                                    </p>
+                                    </div>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -74,7 +83,8 @@ export default function TestimonialSectionMobile() {
 
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-16 hm-testimonial-card hm-testimonial-card-2"> Rarepixels enhanced our online presence with their outstanding website design and development services. From concept to launch, their team delivered a fully responsive, SEO-optimized site that boosted our traffic. Their creativity, technical expertise, and seamless collaboration made the process effortless.
+                                    <div className="text-rg text-16 hm-testimonial-card hm-testimonial-card-2">
+                                        <p>Rarepixels enhanced our online presence with their outstanding website design and development services. From concept to launch, their team delivered a fully responsive, SEO-optimized site that boosted our traffic. Their creativity, technical expertise, and seamless collaboration made the process effortless.</p>
                                         <div className="testimonial-stars-mobile">
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
@@ -82,7 +92,7 @@ export default function TestimonialSectionMobile() {
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                         </div>
-                                    </p>
+                                    </div>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -99,7 +109,8 @@ export default function TestimonialSectionMobile() {
 
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-16 hm-testimonial-card hm-testimonial-card-3">The RarePixels team is indeed working in the line of their brand. I came across many teams during my professional journey but the Team RarePixels are indeed rarest RARE! I have seen them growing as a team and it&apos;s really commendable the freedom and spirit with which they enjoy working and that reflects through their creativity, makes their work very special and unique by matching the present trend & technologies.
+                                    <div className="text-rg text-16 hm-testimonial-card hm-testimonial-card-3">
+                                        <p>The RarePixels team is indeed working in the line of their brand. I came across many teams during my professional journey but the Team RarePixels are indeed rarest RARE! I have seen them growing as a team and it&apos;s really commendable the freedom and spirit with which they enjoy working and that reflects through their creativity, makes their work very special and unique by matching the present trend & technologies.</p>
                                         <div className="testimonial-stars-mobile">
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
@@ -107,7 +118,7 @@ export default function TestimonialSectionMobile() {
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                         </div>
-                                    </p>
+                                    </div>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -124,7 +135,8 @@ export default function TestimonialSectionMobile() {
 
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-16 hm-testimonial-card hm-testimonial-card-4">Working with RarePixels team is awesome. They are a highly professional team experts in design, development and digital marketing. They analysed and integrated our needs and translated them into proposals and results that exceeded our expectations. I highly recommend this team.
+                                    <div className="text-rg text-16 hm-testimonial-card hm-testimonial-card-4">
+                                        <p>Working with RarePixels team is awesome. They are a highly professional team experts in design, development and digital marketing. They analysed and integrated our needs and translated them into proposals and results that exceeded our expectations. I highly recommend this team.</p>
                                         <div className="testimonial-stars-mobile">
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
@@ -132,7 +144,7 @@ export default function TestimonialSectionMobile() {
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                         </div>
-                                    </p>
+                                    </div>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -149,7 +161,8 @@ export default function TestimonialSectionMobile() {
 
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
-                                    <p className="text-rg text-16 hm-testimonial-card hm-testimonial-card-5">RarePixels has delivered their services with outstanding professionalism throughout. Their work is consistently creative, fresh, and always on time. They maintain clear and transparent communication. Every detail is handled with care and explained upfront. Truly a dependable and highly recommended team.
+                                    <div className="text-rg text-16 hm-testimonial-card hm-testimonial-card-5">
+                                        <p>RarePixels has delivered their services with outstanding professionalism throughout. Their work is consistently creative, fresh, and always on time. They maintain clear and transparent communication. Every detail is handled with care and explained upfront. Truly a dependable and highly recommended team.</p>
                                         <div className="testimonial-stars-mobile">
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
@@ -157,7 +170,7 @@ export default function TestimonialSectionMobile() {
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                             <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-star" width={20} height={20}></Image>
                                         </div>
-                                    </p>
+                                    </div>
 
                                     <div className="mobile-client-review-wrapper">
                                         <div className="mobile-client-initial">
@@ -172,41 +185,6 @@ export default function TestimonialSectionMobile() {
                                 </div>
                             </SwiperSlide>
                         </Swiper>
-
-                        {/* <div className="tst-swiper-arrow-wrapper">
-                            <div
-                                className="testimonial-swiper-left testimonial-swiper-arrow"
-                                role="button"
-                                tabIndex={0}
-                                onClick={() => swiperRef.current?.slidePrev()}
-                                aria-label="Previous Testimonial"
-                            >
-                                <svg className="testimonial-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_2178_856" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                        <rect x="24" y="24" width="24" height="24" transform="rotate(-180 24 24)" fill="#D9D9D9" />
-                                    </mask>
-                                    <g mask="url(#mask0_2178_856)">
-                                        <path className="testimonial-arrow" d="M9 6L3 12L9 18L10.4 16.6L6.8 13L21 13V11L6.8 11L10.4 7.4L9 6Z" fill="white" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div
-                                className="testimonial-swiper-right testimonial-swiper-arrow"
-                                role="button"
-                                tabIndex={0}
-                                onClick={() => swiperRef.current?.slideNext()}
-                                aria-label="Next Testimonial"
-                            >
-                                <svg className="testimonial-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_2178_853" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                        <rect width="24" height="24" fill="#D9D9D9" />
-                                    </mask>
-                                    <g mask="url(#mask0_2178_853)">
-                                        <path className="testimonial-arrow" d="M15 18L21 12L15 6L13.6 7.4L17.2 11H3V13H17.2L13.6 16.6L15 18Z" fill="white" />
-                                    </g>
-                                </svg>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </section>

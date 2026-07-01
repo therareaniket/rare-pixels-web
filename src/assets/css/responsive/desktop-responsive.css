@@ -120,7 +120,6 @@
   .hm-abt-card{ width: 385px; height: 205px; }
   /* .hm-abt-card-title .h6{ width: 90%; } */
   .hm-abt-card-title{ width: 325px; }
-  .hm-abt-text-wrapper h2{ width: 350px; }
   /* .hm-abt-logo-left{ padding-left: 40px; } */
   .hm-abt-logo-left{ width: 200px; height: max-content; margin-left: 45px; }
 
@@ -138,8 +137,8 @@
   .services-detail-text p:first-child{ height: 65px; }
 
   /* .industries-text-wrapper span{ font-size: 60px; line-height: 70px; } */
-  .hm-abt-text-wrapper p{ gap: 16px; width: 900px; }
-  .hm-abt-text-wrapper h2{ width: 90%; }
+  .hm-abt-text-wrapper p{ gap: 16px; width: 100%; }
+  .hm-abt-text-wrapper h2{ width: 100%; }
   .hm-abt-text-wrapper{ flex-direction: column; gap: 20px; }
   .hm-abt-card-title p{ gap: 16px; }
 
@@ -219,7 +218,6 @@
   /* about us */
   .hm-abt-logo-left{ width: 170px; margin-left: 40px; }
   .hm-abt-pointers-right{ width: 680px; gap: 20px; }
-  .hm-abt-text-wrapper p{ width: 525px; }
   .hm-abt-card{ width: 330px; height: 205px; }
   .hm-about-main{ padding: 30px; }
 
@@ -227,8 +225,6 @@
   /* .hm-abt-logo-left{ padding-left: 30px; } */
   .hm-abt-card-title{ width: 270px; }
   .hm-abt-card-title p{ gap: 10px; }
-  .hm-abt-text-wrapper p{ width: 635px; }
-  .hm-abt-text-wrapper p{ width: 720px; }
 
   .services-detail-text{ margin-top: 25px; }
   .services-card{ width: 250px; height: 340px; }
@@ -387,8 +383,8 @@
 
   /* About Section */
 
-  .hm-abt-text-wrapper{ flex-direction: column; }
-  .hm-abt-text-wrapper h2{ width: 100%; margin-bottom: 14px; }
+  .hm-abt-text-wrapper{ flex-direction: column; gap: 0; }
+  .hm-abt-text-wrapper h2{ width: 100%;margin-bottom: 16px; }
   .hm-abt-text-wrapper p{ width: 100%; }
   .hm-abt-card-title .h6{ width: 100%; }
 
@@ -414,7 +410,7 @@
   .services-text .h6{ font-size: 22px; line-height: 30px; }
   .services-card-wrapper{ margin-top: 30px; flex-direction: column; }
   .hm-services-title-wrapper h2{ width: 60%; margin: 0 auto; }
-  .hm-services-title-wrapper p{ width: 80%; margin: 0 auto; margin-top: 20px; }
+  .hm-services-title-wrapper p{ width: 80%; margin: 0 auto; margin-top: 16px; }
   /* .hm-services-title-wrapper{ text-align: left; } */
   .hm-abt-card-title .h6{ font-size: 22px; line-height: 30px; }
 

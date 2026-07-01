@@ -43,7 +43,7 @@ export default function TestimonialSectionDesktop() {
                                 slidesPerView={2}
                                 loop={true}
                                 speed={2200}
-                                autoplay={{ delay: 1500, disableOnInteraction: true, pauseOnMouseEnter: true }}
+                                autoplay={{ delay: 1500 }}
                                 onSwiper={(swiper) => {
                                     swiperRef.current = swiper;
                                 }}
@@ -58,7 +58,8 @@ export default function TestimonialSectionDesktop() {
                             >
                                 <SwiperSlide>
                                     <div className="tesctimonial-card testimonial-card-1">
-                                        <p className="text-18 text-rg testimonial-client-text testimonial-text-1 site-radius-20">Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.
+                                        <div className="text-18 text-rg testimonial-client-text testimonial-text-1 site-radius-20">
+                                            <p>Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.</p>
 
                                             <div className="testimonial-stars">
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
@@ -67,7 +68,7 @@ export default function TestimonialSectionDesktop() {
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                             </div>
-                                        </p>
+                                        </div>
                                         <div className="client-review-wrapper">
                                             <div className="client-initital">
                                                 <span className="h6 text-md client-initial-1">SP</span>
@@ -82,8 +83,9 @@ export default function TestimonialSectionDesktop() {
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="tesctimonial-card testimonial-card-1">
-                                        <p className="text-18 text-rg testimonial-client-text testimonial-text-2 site-radius-20">Rarepixels enhanced our online presence with their outstanding website design and development services. From concept to launch, their team delivered a fully responsive, SEO-optimized site that boosted our traffic. Their creativity, technical expertise, and seamless collaboration made the process effortless.
+                                    <div className="tesctimonial-card testimonial-card-2">
+                                        <div className="text-18 text-rg testimonial-client-text testimonial-text-2 site-radius-20">
+                                            <p>Rarepixels enhanced our online presence with their outstanding website design and development services. From concept to launch, their team delivered a fully responsive, SEO-optimized site that boosted our traffic. Their creativity, technical expertise, and seamless collaboration made the process effortless.</p>
                                             <div className="testimonial-stars">
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
@@ -91,7 +93,7 @@ export default function TestimonialSectionDesktop() {
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                             </div>
-                                        </p>
+                                        </div>
                                         <div className="client-review-wrapper">
                                             <div className="client-initital">
                                                 <span className="h6 text-md client-initial-2">ES</span>
@@ -106,8 +108,9 @@ export default function TestimonialSectionDesktop() {
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="tesctimonial-card testimonial-card-1">
-                                        <p className="text-18 text-rg testimonial-client-text testimonial-text-3 site-radius-20">The RarePixels team is indeed working in the line of their brand. I came across many teams during my professional journey but the Team RarePixels are indeed rarest RARE! I have seen them growing as a team and it&apos;s really commendable the freedom and spirit with which they enjoy working and that reflects through their creativity, makes their work very special and unique by matching the present trend & technologies.
+                                    <div className="tesctimonial-card testimonial-card-3">
+                                        <div className="text-18 text-rg testimonial-client-text testimonial-text-3 site-radius-20">
+                                            <p>The RarePixels team is indeed working in the line of their brand. I came across many teams during my professional journey but the Team RarePixels are indeed rarest RARE! I have seen them growing as a team and it&apos;s really commendable the freedom and spirit with which they enjoy working and that reflects through their creativity, makes their work very special and unique by matching the present trend & technologies.</p>
                                             <div className="testimonial-stars">
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
@@ -115,7 +118,7 @@ export default function TestimonialSectionDesktop() {
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                             </div>
-                                        </p>
+                                        </div>
                                         <div className="client-review-wrapper">
                                             <div className="client-initital">
                                                 <span className="h6 text-md client-initial-3">AD</span>
@@ -130,8 +133,9 @@ export default function TestimonialSectionDesktop() {
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="tesctimonial-card testimonial-card-1">
-                                        <p className="text-18 text-rg testimonial-client-text testimonial-text-4 site-radius-20">Working with RarePixels team is awesome. They are a highly professional team experts in design, development and digital marketing. They analysed and integrated our needs and translated them into proposals and results that exceeded our expectations. I highly recommend this team.
+                                    <div className="tesctimonial-card testimonial-card-4">
+                                        <div className="text-18 text-rg testimonial-client-text testimonial-text-4 site-radius-20">
+                                            <p>Working with RarePixels team is awesome. They are a highly professional team experts in design, development and digital marketing. They analysed and integrated our needs and translated them into proposals and results that exceeded our expectations. I highly recommend this team.</p>
                                             <div className="testimonial-stars">
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
@@ -139,7 +143,7 @@ export default function TestimonialSectionDesktop() {
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                             </div>
-                                        </p>
+                                        </div>
                                         <div className="client-review-wrapper">
                                             <div className="client-initital">
                                                 <span className="h6 text-md client-initial-4">BY</span>
@@ -154,8 +158,9 @@ export default function TestimonialSectionDesktop() {
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="tesctimonial-card testimonial-card-1">
-                                        <p className="text-18 text-rg testimonial-client-text testimonial-text-5 site-radius-20">RarePixels has delivered their services with outstanding professionalism throughout. Their work is consistently creative, fresh, and always on time. They maintain clear and transparent communication. Every detail is handled with care and explained upfront. Truly a dependable and highly recommended team.
+                                    <div className="tesctimonial-card testimonial-card-5">
+                                        <div className="text-18 text-rg testimonial-client-text testimonial-text-5 site-radius-20">
+                                            <p>RarePixels has delivered their services with outstanding professionalism throughout. Their work is consistently creative, fresh, and always on time. They maintain clear and transparent communication. Every detail is handled with care and explained upfront. Truly a dependable and highly recommended team.</p>
                                             <div className="testimonial-stars">
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
@@ -163,7 +168,7 @@ export default function TestimonialSectionDesktop() {
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                                 <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
                                             </div>
-                                        </p>
+                                        </div>
                                         <div className="client-review-wrapper">
                                             <div className="client-initital">
                                                 <span className="h6 text-md client-initial-5">CP</span>
@@ -177,41 +182,6 @@ export default function TestimonialSectionDesktop() {
                                     </div>
                                 </SwiperSlide>
                             </Swiper>
-
-                            {/* <div className="tst-swiper-arrow-wrapper">
-                                <div
-                                    className="testimonial-swiper-left testimonial-swiper-arrow"
-                                    role="button"
-                                    tabIndex={0}
-                                    onClick={() => swiperRef.current?.slidePrev()}
-                                    aria-label="Previous Testimonial"
-                                >
-                                    <svg className="testimonial-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="mask0_2178_856" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                            <rect x="24" y="24" width="24" height="24" transform="rotate(-180 24 24)" fill="#D9D9D9" />
-                                        </mask>
-                                        <g mask="url(#mask0_2178_856)">
-                                            <path className="testimonial-arrow" d="M9 6L3 12L9 18L10.4 16.6L6.8 13L21 13V11L6.8 11L10.4 7.4L9 6Z" fill="white" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div
-                                    className="testimonial-swiper-right testimonial-swiper-arrow"
-                                    role="button"
-                                    tabIndex={0}
-                                    onClick={() => swiperRef.current?.slideNext()}
-                                    aria-label="Next Testimonial"
-                                >
-                                    <svg className="testimonial-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <mask id="mask0_2178_853" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                                            <rect width="24" height="24" fill="#D9D9D9" />
-                                        </mask>
-                                        <g mask="url(#mask0_2178_853)">
-                                            <path className="testimonial-arrow" d="M15 18L21 12L15 6L13.6 7.4L17.2 11H3V13H17.2L13.6 16.6L15 18Z" fill="white" />
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 </div>
