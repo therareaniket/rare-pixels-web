@@ -221,8 +221,9 @@ header{ margin-top: 0; }
 .dark-mode-hover-icon{ transition: all .3s ease-in-out; }
 .light-mode-hover-icon{ transition: all .3s ease-in-out; }
 
-.nav-main{ display: flex; align-items: center; justify-content: center; }
+.nav-main { display: flex; align-items: center; justify-content: center; }
 .nav-main .container { width: 100vw; }
+.nav-main .liquidGlass-shine { box-shadow: none; }
 
 .menu-for-responsive{ display: flex; position: absolute; right: -100%; bottom: 72px; transition: all .5s ease-in; opacity: 0;  }
 .mobile-menu{ width: 424px; height: 284px; padding: 20px; }

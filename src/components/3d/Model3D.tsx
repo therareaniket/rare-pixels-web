@@ -9,9 +9,7 @@ import { MODEL_CONFIG } from './modelConfig'
 // MODEL_CONFIG.forEach(({ modelPath }) => useGLTF.preload(modelPath))
 useGLTF.preload(MODEL_CONFIG[0].modelPath, '/draco/')
 
-interface Model3DProps {
-  	config: (typeof MODEL_CONFIG)[number]
-}
+interface Model3DProps { config: (typeof MODEL_CONFIG)[number] }
 
 // How far right the model starts (in world units) — tune this to taste
 const ENTRY_OFFSET_X = 6
@@ -29,8 +27,7 @@ const Model3D = ({ config }: Model3DProps) => {
 		const timer = setTimeout(() => {
 			MODEL_CONFIG.slice(1).forEach(({ modelPath }) =>
 			useGLTF.preload(modelPath, '/draco/')
-			)
-		}, 1500) // after hero is interactive
+		)}, 1500) // after hero is interactive
 		return () => clearTimeout(timer)
 	}, [])
 
@@ -67,34 +64,34 @@ const Model3D = ({ config }: Model3DProps) => {
 
 		// Hard-set the START state immediately (right side, big)
 		group.position.set(
-		config.position[0],
-		config.position[1],
-		config.position[2] + ENTRY_OFFSET_X
+			config.position[0],
+			config.position[1],
+			config.position[2] + ENTRY_OFFSET_X
 		)
 		group.scale.set(ENTRY_SCALE, ENTRY_SCALE, ENTRY_SCALE)
 		group.rotation.y = Math.PI * 2
 
 		// Animate INTO the resting position
 		gsap.to(group.position, {
-		x: config.position[0],
-		y: config.position[1],
-		z: config.position[2],
-		duration: 0.9,
-		ease: 'power3.out',
+			x: config.position[0],
+			y: config.position[1],
+			z: config.position[2],
+			duration: 0.9,
+			ease: 'power3.out',
 		})
 
 		gsap.to(group.scale, {
-		x: config.scale,
-		y: config.scale,
-		z: config.scale,
-		duration: 0.9,
-		ease: 'power3.out',
+			x: config.scale,
+			y: config.scale,
+			z: config.scale,
+			duration: 0.9,
+			ease: 'power3.out',
 		})
 
 		gsap.to(group.rotation, {  // ← add this block
-		y: 0,
-		duration: 3,
-		ease: 'power3.out',
+			y: 0,
+			duration: 3,
+			ease: 'power3.out',
 		})
 
 	}, [config.modelPath]) // ← modelPath is unique per model, always fires
@@ -109,17 +106,18 @@ const Model3D = ({ config }: Model3DProps) => {
 			(lastMouseMove.current !== null && Date.now() - lastMouseMove.current > 50)
 
 		if (isIdle) {
-			idleClock.current += 0.01
+			idleClock.current += 0.03
+			const breathScale = 0.92 + Math.cos(idleClock.current) * 0.050;
 
-			const breathZ = Math.sin(idleClock.current) * 0.5
+			groupRef.current.scale.lerp(new THREE.Vector3(breathScale, breathScale, breathScale), 0.05);
 
-			groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, config.position[0], 0.05)
-			groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, config.position[1], 0.05)
-			groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, config.position[2] + breathZ, 0.05)
+			groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, config.position[0], 0.02)
+			groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, config.position[1], 0.02)
+			groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, config.position[2], 0.02)
 
-			groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, 0, 0.05)
-			groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, 0, 0.05)
-			groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, 0, 0.05)
+			groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, 0, 0.02)
+			groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, 0, 0.02)
+			groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, 0, 0.02)
 		} else {
 			idleClock.current = 0  // reset so breath always starts from 0 when idle resumes
 
@@ -132,20 +130,20 @@ const Model3D = ({ config }: Model3DProps) => {
 			const distance = (config.position[2] - camera.position.z) / dir.z
 			const targetPos = camera.position.clone().add(dir.multiplyScalar(distance))
 
-			const leashRadius = 8
+			const leashRadius = 9
 			const offset = new THREE.Vector2(
-			targetPos.x - config.position[0],
-			targetPos.y - config.position[1]
+				targetPos.x - config.position[0],
+				targetPos.y - config.position[1]
 			)
 			if (offset.length() > leashRadius) offset.setLength(leashRadius)
 
-			const followSpeed = 0.09
+			const followSpeed = 0.02
 			groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, config.position[0] + offset.x, followSpeed)
 			groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, config.position[1] + offset.y, followSpeed)
 			groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, config.position[2], followSpeed)
 
-			groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, offset.x * 0.4, 0.05)
-			groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, -offset.y * 0.3, 0.05)
+			groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, offset.x * 0.1, 0.05)
+			groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, offset.y * 0.1, 0.05)
 			groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, offset.y * 0.2, 0.05)
 		}
 	})

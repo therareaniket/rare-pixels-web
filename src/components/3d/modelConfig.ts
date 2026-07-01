@@ -1,23 +1,23 @@
 export const MODEL_CONFIG = [
 	{
     // Eye — UI/UX Design Services
-    	modelPath: '/models/eye-optimized.glb',
+    	modelPath: '/models/eye-draco.glb',
     	camera: [2, -2, 20] as [number, number, number],
     	position: [0.5, 0, 0] as [number, number, number],
     	scale: 1,
 	},
 	{
     	// Brain — Custom Web & App Development
-    	modelPath: '/models/brain.element1.glb',
-    	camera: [1, -0.6, 12] as [number, number, number],
-    	position: [0.5, -1.2, 0] as [number, number, number],
+    	modelPath: '/models/brain.element.glb',
+    	camera: [1, -1, 12] as [number, number, number],
+    	position: [0.5, 0, 0] as [number, number, number],
     	scale: 1,
 	},
 	{
     	// Heart — Brand Identity Design
-    	modelPath: '/models/heart.element.glb',
+    	modelPath: '/models/heart.element-new.glb',
     	camera: [0, 0, 4] as [number, number, number],
-    	position: [0.2, -0.35, 0] as [number, number, number],
+    	position: [0.2, -0, 0] as [number, number, number],
     	scale: 1,
 	},
 	{
