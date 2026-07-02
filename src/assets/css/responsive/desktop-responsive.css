@@ -75,8 +75,6 @@
   .why-choose-us-eclipse-7{ width: 1120px; }
   .why-choose-us-eclipse-8{ width: 1300px; }
 
-  .process-pointer{ width: 480px; }
-  .process-desc p{ width: 395px; }
 }
 
 @media (max-width: 1599px) {
@@ -173,6 +171,7 @@
   .why-choose-us-hand-image{ width: 290px; }
   .why-choose-us-card{ width: 415px; }
   .why-choose-us-pointer-cards{ gap: 75px; }
+
 }
 
 @media (max-width: 1439px) {
