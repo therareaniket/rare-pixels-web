@@ -235,9 +235,7 @@
 .hm-projects-card-wrapper { display: flex; gap: 30px; width: max-content; margin-top: 60px; position: relative; }
 
 .hm-projects-card-lg,
-.hm-projects-card-sm {
-    width: 513px;
-    flex-shrink: 0;
-    position: relative;
-    will-change: transform;
-}
+.hm-projects-card-sm { width: 513px; flex-shrink: 0; position: relative; will-change: transform; }
+
+
+.navbar-theme-btn{ position: fixed; z-index: 10; top: 20px; right: 30px; background-color: red; }

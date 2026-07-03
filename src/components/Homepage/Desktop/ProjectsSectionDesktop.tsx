@@ -108,7 +108,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="hm-projects-images-lg site-radius-20 bg-purple-shade">
                                     <Image className="site-radius-20" src="/images/homepage/djk-project.png" alt="rare-projects" width={523} height={423} priority></Image>
                                 </div>
-                                <div className="hm-projects-desc site-radius-20 bg-purple-shade">
+                                <div className="hm-projects-desc site-radius-20 bg-purple-shade text-black">
                                     <h3 className="text-sb text-black">DJK</h3>
                                     <p className="text-rg text-18 text-black">DJK has delivered trusted HVAC solutions for pharma and food sectors.</p>
                                 </div>
@@ -118,7 +118,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="hm-projects-images-sm site-radius-20 bg-light-green">
                                     <Image className="site-radius-20" src="/images/homepage/sart-project.png" alt="rare-projects" width={523} height={423}></Image>
                                 </div>
-                                <div className="hm-projects-desc site-radius-20 bg-light-green">
+                                <div className="hm-projects-desc site-radius-20 bg-light-green text-black">
                                     <h3 className="text-sb text-black">S.ART</h3>
                                     <p className="text-rg text-18 text-black">A modern logo designed for S.Art, blending abstract style with a touch of tradition.</p>
                                 </div>
@@ -128,7 +128,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="hm-projects-images-lg site-radius-20 bg-light-pink">
                                     <Image className="site-radius-20" src="/images/homepage/coverize-project.png" alt="rare-projects" width={523} height={423}></Image>
                                 </div>
-                                <div className="hm-projects-desc site-radius-20 bg-light-pink">
+                                <div className="hm-projects-desc site-radius-20 bg-light-pink text-black">
                                     <h3 className="text-sb text-black">COVRIZE</h3>
                                     <p className="text-rg text-18 text-black">Transform your business with our platform, providing tailored software solutions to meet your unique needs.</p>
                                 </div>
@@ -138,7 +138,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="hm-projects-images-sm site-radius-20 bg-light-yellow">
                                     <Image className="site-radius-20" src="/images/homepage/seahub-project.png" alt="rare-projects" width={523} height={423}></Image>
                                 </div>
-                                <div className="hm-projects-desc site-radius-20 bg-light-yellow">
+                                <div className="hm-projects-desc site-radius-20 bg-light-yellow text-black">
                                     <h3 className="text-sb text-black">4SEAHUB</h3>
                                     <p className="text-rg text-18 text-black">4SEAHUB is a purpose driven logistics and import-export company, setting new standards in trust and quality.</p>
                                 </div>
@@ -148,7 +148,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="hm-projects-images-lg site-radius-20 bg-skin">
                                     <Image className="site-radius-20" src="/images/homepage/sales-project.png" alt="rare-projects" width={523} height={423}></Image>
                                 </div>
-                                <div className="hm-projects-desc site-radius-20 bg-skin">
+                                <div className="hm-projects-desc site-radius-20 bg-skin text-black">
                                     <h3 className="text-sb text-black">SALES DASHBOARD</h3>
                                     <p className="text-rg text-18 text-black">Enhanced decision making, and improved performance tracking.</p>
                                 </div>

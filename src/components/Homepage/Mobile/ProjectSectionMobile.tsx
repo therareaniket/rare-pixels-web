@@ -57,7 +57,7 @@ export default function ProjectSectionMobile() {
                                 <Image src="/images/homepage/djk-project.png" alt="" width={330} height={350}></Image>
                             </div>
 
-                            <div className="process-text-mob bg-purple-shade">
+                            <div className="process-text-mob bg-purple-shade text-black">
                                 <h3 className="text-sb h5">DJK</h3>
                                 <p className="text-16 text-rg">DJK has delivered trusted HVAC solutions for pharma and food sectors.</p>
                             </div>
@@ -68,14 +68,14 @@ export default function ProjectSectionMobile() {
                                 <Image src="/images/homepage/sart-project.png" alt="" width={330} height={350}></Image>
                             </div>
 
-                            <div className="process-text-mob bg-light-green">
+                            <div className="process-text-mob bg-light-green text-black">
                                 <h3 className="text-sb h5">S.ART</h3>
                                 <p className="text-16 text-rg">A modern logo designed for S.Art, blending abstract style with a touch of tradition.</p>
                             </div>
                         </div>
 
                         <div className="process-card-mobile">
-                            <div className="process-image-mob bg-light-pink">
+                            <div className="process-image-mob bg-light-pink text-black">
                                 <Image src="/images/homepage/coverize-project.png" alt="" width={330} height={350}></Image>
                             </div>
 
@@ -90,7 +90,7 @@ export default function ProjectSectionMobile() {
                                 <Image src="/images/homepage/seahub-project.png" alt="" width={330} height={350}></Image>
                             </div>
 
-                            <div className="process-text-mob bg-light-yellow">
+                            <div className="process-text-mob bg-light-yellow text-black">
                                 <h3 className="text-sb h5">4SEAHUB</h3>
                                 <p className="text-16 text-rg">4SEAHUB is a purpose driven logistics and import-export company, setting new standards in trust and quality.</p>
                             </div>
@@ -101,7 +101,7 @@ export default function ProjectSectionMobile() {
                                 <Image src="/images/homepage/sales-project.png" alt="" width={330} height={350}></Image>
                             </div>
 
-                            <div className="process-text-mob bg-skin">
+                            <div className="process-text-mob bg-skin text-black">
                                 <h3 className="text-sb h5">SALES DASHBOARD</h3>
                                 <p className="text-16 text-rg">Enhanced decision making, and improved performance tracking.</p>
                             </div>
