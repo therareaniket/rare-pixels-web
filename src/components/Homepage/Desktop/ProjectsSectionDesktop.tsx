@@ -1,7 +1,7 @@
 'use client';
 
 
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -92,33 +92,6 @@ export default function ProjectsSectionDesktop() {
 
     }, []);
 
-    const sliderRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        const slider = sliderRef.current;
-        const section = sectionRef.current;
-
-        if (!slider || !section) return;
-
-        const totalScroll = slider.scrollWidth - window.innerWidth;
-
-        const tween = gsap.to(slider, {
-            x: -totalScroll,
-            ease: "none",
-            scrollTrigger: {
-                trigger: section,
-                start: "top top",
-                end: `+=${totalScroll}`,
-                scrub: 1,
-                pin: true,
-            },
-        });
-
-        return () => {
-            tween.kill();
-            ScrollTrigger.getAll().forEach(st => st.kill());
-        };
-    }, []);
 
     return (
         <section ref={sectionRef} className="section projects-section-desktop">
@@ -179,58 +152,6 @@ export default function ProjectsSectionDesktop() {
                                     <h3 className="text-sb text-black">SALES DASHBOARD</h3>
                                     <p className="text-rg text-18 text-black">Enhanced decision making, and improved performance tracking.</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="hm-projects-tablet process-card-wrapper-tablet" ref={sliderRef}>
-                        <div className="hm-projects-card-lg hm-projects-card-1">
-                            <div className="hm-projects-images-lg site-radius-20 bg-purple-shade">
-                                <Image className="site-radius-20" src="/images/homepage/djk-project.png" alt="rare-projects" width={523} height={423} priority></Image>
-                            </div>
-                            <div className="hm-projects-desc site-radius-20 bg-purple-shade">
-                                <h3 className="text-sb text-black">DJK</h3>
-                                <p className="text-rg text-18 text-black">DJK has delivered trusted HVAC solutions for pharma and food sectors.</p>
-                            </div>
-                        </div>
-
-                        <div className="hm-projects-card-sm hm-projects-card-2">
-                            <div className="hm-projects-images-sm site-radius-20 bg-light-green">
-                                <Image className="site-radius-20" src="/images/homepage/sart-project.png" alt="rare-projects" width={523} height={423}></Image>
-                            </div>
-                            <div className="hm-projects-desc site-radius-20 bg-light-green">
-                                <h3 className="text-sb text-black">S.ART</h3>
-                                <p className="text-rg text-18 text-black">A modern logo designed for S.Art, blending abstract style with a touch of tradition.</p>
-                            </div>
-                        </div>
-
-                        <div className="hm-projects-card-lg hm-projects-card-3">
-                            <div className="hm-projects-images-lg site-radius-20 bg-light-pink">
-                                <Image className="site-radius-20" src="/images/homepage/coverize-project.png" alt="rare-projects" width={523} height={423}></Image>
-                            </div>
-                            <div className="hm-projects-desc site-radius-20 bg-light-pink">
-                                <h3 className="text-sb text-black">COVRIZE</h3>
-                                <p className="text-rg text-18 text-black">Transform your business with our platform, providing tailored software solutions to meet your unique needs.</p>
-                            </div>
-                        </div>
-
-                        <div className="hm-projects-card-sm hm-projects-card-4">
-                            <div className="hm-projects-images-sm site-radius-20 bg-light-yellow">
-                                <Image className="site-radius-20" src="/images/homepage/seahub-project.png" alt="rare-projects" width={523} height={423}></Image>
-                            </div>
-                            <div className="hm-projects-desc site-radius-20 bg-light-yellow">
-                                <h3 className="text-sb text-black">4SEAHUB</h3>
-                                <p className="text-rg text-18 text-black">4SEAHUB is a purpose driven logistics and import-export company, setting new standards in trust and quality.</p>
-                            </div>
-                        </div>
-
-                        <div className="hm-projects-card-lg hm-projects-card-5">
-                            <div className="hm-projects-images-lg site-radius-20 bg-skin">
-                                <Image className="site-radius-20" src="/images/homepage/sales-project.png" alt="rare-projects" width={523} height={423}></Image>
-                            </div>
-                            <div className="hm-projects-desc site-radius-20 bg-skin">
-                                <h3 className="text-sb text-black">SALES DASHBOARD</h3>
-                                <p className="text-rg text-18 text-black">Enhanced decision making, and improved performance tracking.</p>
                             </div>
                         </div>
                     </div>
