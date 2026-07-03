@@ -75,6 +75,10 @@
   .why-choose-us-eclipse-7{ width: 1120px; }
   .why-choose-us-eclipse-8{ width: 1300px; }
 
+  .hm-projects-card-lg, .hm-projects-card-sm{ width: 433px; }
+  .projects-section-desktop { --card-peek: 0.46; }
+  .hm-projects-desc{ height: 165px; }
+  .hm-projects-images-lg{ height: 390px; }
 }
 
 @media (max-width: 1599px) {
@@ -172,6 +176,12 @@
   .why-choose-us-card{ width: 415px; }
   .why-choose-us-pointer-cards{ gap: 75px; }
 
+  .hm-projects-card-lg, .hm-projects-card-sm{ width: 390px; }
+  .hm-projects-images-lg{ height: 350px; }
+  .hm-projects-desc{ padding: 15px; height: 150px; }
+  .hm-projects-images-sm{ height: 280px; }
+
+  .hm-projects-card-wrapper{ margin-top: 40px; }
 }
 
 @media (max-width: 1439px) {
@@ -180,7 +190,7 @@
 
   h1, .h1 { font-size: 46px; line-height: 54px; }
   h2, .h2 { font-size: 36px; line-height: 44px; margin-bottom: 16px; }
-  h3, .h3 { font-size: 32px; line-height: 40px; }
+  h3, .h3 { font-size: 30px; line-height: 38px; }
   h4, .h4 { font-size: 32px; }
   h5, .h5 { font-size: 28px; }
   h6, .h6 { font-size: 20px; line-height: 28px; }
@@ -244,6 +254,12 @@
   .why-choose-us-pointer-cards{ gap: 50px; }
   .why-choose-us-hand-image{ width: 305px; }
   .why-choose-us-text-wrapper{ width: 615px; }
+
+  .hm-projects-card-lg, .hm-projects-card-sm{ width: 336px; }
+  .hm-projects-card-wrapper{ gap: 20px; }
+  .hm-projects-images-lg{ height: 280px; }
+  .hm-projects-images-sm{ height: 250px; }
+  .hm-projects-desc{ height: 145px; }
 }
 
 @media (max-width: 1359px) {
@@ -253,7 +269,7 @@
 
   h1, .h1{ font-size: 40px; line-height: 48px; }
   h2, .h2{ font-size: 32px; line-height: 40px; }
-  h3, .h3{ font-size: 30px; line-height: 36px; }
+  h3, .h3{ font-size: 28px; line-height: 34px; }
   h4, .h4{ font-size: 32px; }
   h5, .h5{ font-size: 28px; }
   /* h6, .h6{ font-size: 22px; } */
@@ -323,6 +339,9 @@
   .why-choose-us-pointer-cards{ gap: 45px; }
 
   .why-choose-us-card .h6{ margin-bottom: 14px; }
+
+  .hm-projects-card-lg, .hm-projects-card-sm{ width: 305px; }
+  .hm-projects-desc{ height: 140px; }
 } 
 
 @media (max-width: 1199px) {
@@ -459,6 +478,13 @@
 
   .why-choose-us-text-wrapper{ width: 100%; }
   .why-choose-us-card-5{ padding-bottom: 0; border: none; }
+
+  .hm-projects-desktop{ display: none; }
+  .hm-projects-tablet { display: flex; flex-direction: row; gap: 20px; margin-top: 30px; width: max-content; }
+  .hm-projects-card-lg, .hm-projects-card-sm { width: 390px; }
+  .hm-projects-desc{ padding: 14px; border-radius: 20px; height: max-content; }
+  .hm-projects-images-lg, .hm-projects-images-sm{ height: 325px; }
+  .hm-project-container{ overflow: hidden; }
 } 
 
 @media (max-width: 1023px) {

@@ -8,6 +8,7 @@ import ServicesSectionMobile from "@/components/Homepage/Mobile/ServicesSectionM
 import IndustriesSectionMobile from "@/components/Homepage/Mobile/IndustriesSectionMobile";
 import WhyChooseUsSectionMobile from "@/components/Homepage/Mobile/WhyChooseUsSectionMobile";
 import ProcessSectionMobile from "@/components/Homepage/Mobile/ProcessSectionMobile";
+import ProjectSectionMobile from "@/components/Homepage/Mobile/ProjectSectionMobile";
 
 const HeroSectionDesktop = dynamic(
 	() => import("@/components/Homepage/Desktop/HeroSectionDesktop"),
@@ -37,10 +38,10 @@ const WhyChooseUsSectionDesktop = dynamic(
 	{ ssr: false }
 );
 
-const ProcessSectionDesktop = dynamic(
-	() => import("@/components/Homepage/Desktop/ProcessSectionDesktop"),
-	{ ssr: false }
-);
+// const ProcessSectionDesktop = dynamic(
+// 	() => import("@/components/Homepage/Desktop/ProcessSectionDesktop"),
+// 	{ ssr: false }
+// );
 
 const ProjectsSectionDesktop = dynamic(
 	() => import("@/components/Homepage/Desktop/ProjectsSectionDesktop"),
@@ -74,7 +75,8 @@ export default function Home() {
 						<ServicesSectionMobile />
 						<IndustriesSectionMobile />
 						<WhyChooseUsSectionMobile />
-						<ProcessSectionMobile />
+						{/* <ProcessSectionMobile /> */}
+						<ProjectSectionMobile />
 					</>
 					:
 					<>
@@ -85,7 +87,7 @@ export default function Home() {
 						<ServicesSectionDesktop />
 						<IndustriesSectionDesktop />
 						<WhyChooseUsSectionDesktop />
-						<ProcessSectionDesktop />
+						{/* <ProcessSectionDesktop /> */}
 						<ProjectsSectionDesktop />
 					</>
 				}
