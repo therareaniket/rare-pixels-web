@@ -479,12 +479,25 @@
   .why-choose-us-text-wrapper{ width: 100%; }
   .why-choose-us-card-5{ padding-bottom: 0; border: none; }
 
-  .hm-projects-desktop{ display: none; }
-  .hm-projects-tablet { display: flex; flex-direction: row; gap: 20px; margin-top: 30px; width: max-content; }
-  .hm-projects-card-lg, .hm-projects-card-sm { width: 390px; }
-  .hm-projects-desc{ padding: 14px; border-radius: 20px; height: max-content; }
-  .hm-projects-images-lg, .hm-projects-images-sm{ height: 325px; }
-  .hm-project-container{ overflow: hidden; }
+  /* process-section */
+
+  .process-mob-icon{ width: 40px; height: 40px; border-radius: 10px; background-color: #E8DB7D; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #000; }
+  .process-section-mobile-wrapper{ margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
+  .process-card-mobile{ display: flex; gap: 14px; height: 40px; overflow: hidden;  }
+  .process-card-mobile .h2{ margin-bottom: 0; }
+  .process-card-mob-text{ width: 370px; }
+  .process-card-mob-text p{ display: flex; flex-direction: column; gap: 6px; padding-top: 14px; }
+
+  /* project section */
+
+  .hm-projects-card-wrapper{ position: relative; flex-direction: column; width: 100%; overflow: visible; }
+  .hm-projects-card-lg, .hm-projects-card-sm{ width: 100%; }
+  .hm-projects-images-lg, .hm-projects-images-sm{ height: 480px; }
+  /* .hm-projects-card-2{ position: absolute; top: 100px; } */
+  /* .hm-projects-card-3{ position: absolute; top: 200px; } */
+  /* .hm-projects-card-4{ position: absolute; top: 300px; } */
+  /* .hm-projects-card-5{ position: absolute; top: 400px; } */
+  .hm-projects-horizontal-pin-viewport{ overflow: visible; }
 } 
 
 @media (max-width: 1023px) {

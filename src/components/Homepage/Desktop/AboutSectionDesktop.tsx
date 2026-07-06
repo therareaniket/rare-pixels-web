@@ -2,6 +2,8 @@
 
 import GlassEffect from "@/components/LiquideGlass";
 import Image from "next/image";
+import "@/assets/css/desktop-custom.css";
+import "@/assets/css/responsive/desktop-responsive.css";
 
 export default function AboutSectionDesktop() {
 

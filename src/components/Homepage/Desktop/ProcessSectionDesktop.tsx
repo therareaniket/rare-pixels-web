@@ -95,8 +95,8 @@ export default function ProcessSectionDesktop() {
             const stepStartTime = 1.0 + index * 1.0;
             if (index > 0) {
                 const prevPointer = pointers[index - 1];
-                const prevDesc = prevPointer.querySelector(".process-desc");
-                const prevP = prevPointer.querySelector(".process-desc p");
+                const prevDesc = prevPointer.querySelector(".process-pointer-text-wrapper");
+                const prevP = prevPointer.querySelector(".process-pointer-text-wrapper p");
 
                 if (prevP && prevDesc) {
                     tl.to(prevP, { display: "none", height: 0, opacity: 0, duration: 0.4 }, stepStartTime)
@@ -132,27 +132,27 @@ export default function ProcessSectionDesktop() {
             <section ref={sectionRef} className="section bg-light-yellow">
                 <div className="container-sm">
                     <div ref={containerRef}>
-                        <div ref={titleWrapperRef} className="process-text-wrapper">
-                            <h2 className="text-sb">Work Process We Follow</h2>
+                        <div ref={titleWrapperRef} className="process-text-wrapper active">
+                            <h2 className="text-sb text-black">Work Process We Follow</h2>
 
-                            <p className="text-rg text-18">Every project flows through a defined path understanding, planning, designing, building, and refining. This ensures that every decision is intentional and every outcome is crafted with clarity and precision.</p>
+                            <p className="text-rg text-18 text-black">Every project flows through a defined path understanding, planning, designing, building, and refining. This ensures that every decision is intentional and every outcome is crafted with clarity and precision.</p>
                         </div>
 
                         <div className="process-elements-wrapper">
-                            <div ref={elementsRef} className="process-element-art-board">
+                            {/* <div ref={elementsRef} className="process-element-art-board active">
                                 <Image src="/images/homepage/discover-elements.svg" alt="process-elements" width={347} height={348}></Image>
-                            </div>
+                            </div> */}
 
-                            <div ref={pointerWrapperRef} className="process-pointer-wrapper">
+                            <div ref={pointerWrapperRef} className="process-pointer-wrapper active">
                                 <div className="process-pointer">
                                     <div className="process-pointer-svg site-radius-20">
-                                        <span className="icon-discover-process"></span>
+                                        <span className="icon-discover-process text-black"></span>
                                     </div>
 
                                     <div className="process-pointer-text-wrapper">
-                                        <h2 className="text-sb">DISCOVER</h2>
+                                        <h2 className="text-sb text-black">DISCOVER</h2>
 
-                                        <p className="text-rg text-18">
+                                        <p className="text-rg text-18 text-black">
                                             <span>Understanding the foundation</span>
                                             <span>We begin by learning about your business, goals, and audience to build a strong foundation for everything that follows.</span>
                                         </p>
@@ -161,13 +161,13 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer">
                                     <div className="process-pointer-svg site-radius-20">
-                                        <span className="icon-strategy-process"></span>
+                                        <span className="icon-strategy-process text-black"></span>
                                     </div>
 
                                     <div className="process-pointer-text-wrapper">
-                                        <h2 className="text-sb">STRATEGISE</h2>
+                                        <h2 className="text-sb text-black">STRATEGISE</h2>
 
-                                        <p className="text-rg text-18">
+                                        <p className="text-rg text-18 text-black">
                                             <span>Defining the direction</span>
                                             <span>We shape the structure, user flow, and key decisions to ensure a clear and focused path before execution begins.</span>
                                         </p>
@@ -176,13 +176,13 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer">
                                     <div className="process-pointer-svg site-radius-20">
-                                        <span className="icon-create-process"></span>
+                                        <span className="icon-create-process text-black"></span>
                                     </div>
 
                                     <div className="process-pointer-text-wrapper">
-                                        <h2 className="text-sb">CREATE</h2>
+                                        <h2 className="text-sb text-black">CREATE</h2>
 
-                                        <p className="text-rg text-18">
+                                        <p className="text-rg text-18 text-black">
                                             <span>Designing the experience</span>
                                             <span>We craft intuitive, visually strong designs that align with your brand and deliver meaningful user experiences.</span>
                                         </p>
@@ -191,13 +191,13 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer">
                                     <div className="process-pointer-svg site-radius-20">
-                                        <span className="icon-engineer-process"></span>
+                                        <span className="icon-engineer-process text-black"></span>
                                     </div>
 
                                     <div className="process-pointer-text-wrapper">
-                                        <h2 className="text-sb">ENGINEER</h2>
+                                        <h2 className="text-sb text-black">ENGINEER</h2>
 
-                                        <p className="text-rg text-18">
+                                        <p className="text-rg text-18 text-black">
                                             <span>Building the solution</span>
                                             <span>We develop scalable, high-performing systems where design and functionality come together seamlessly.</span>
                                         </p>
@@ -206,13 +206,13 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer">
                                     <div className="process-pointer-svg site-radius-20">
-                                        <span className="icon-refine-process"></span>
+                                        <span className="icon-refine-process text-black"></span>
                                     </div>
 
                                     <div className="process-pointer-text-wrapper">
-                                        <h2 className="text-sb">REFINE</h2>
+                                        <h2 className="text-sb text-black">REFINE</h2>
 
-                                        <p className="text-rg text-18">
+                                        <p className="text-rg text-18 text-black">
                                             <span>Improving with precision</span>
                                             <span>We test, optimize, and fine-tune every detail to ensure the product performs smoothly and meets expectations.</span>
                                         </p>
@@ -221,13 +221,13 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer">
                                     <div className="process-pointer-svg site-radius-20">
-                                        <span className="icon-deliver-svg"></span>
+                                        <span className="icon-deliver-svg text-black"></span>
                                     </div>
 
                                     <div className="process-pointer-text-wrapper">
-                                        <h2 className="text-sb">DELIVER</h2>
+                                        <h2 className="text-sb text-black">DELIVER</h2>
 
-                                        <p className="text-rg text-18">
+                                        <p className="text-rg text-18 text-black">
                                             <span>Launching with confidence</span>
                                             <span>We finalize, deploy, and ensure everything is ready to go live built to perform, scale, and support your growth.</span>
                                         </p>

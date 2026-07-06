@@ -14,34 +14,77 @@ export default function ProjectsSectionDesktop() {
     useLayoutEffect(() => {
         const section = sectionRef.current;
         if (!section) return;
-        const cards = gsap.utils.toArray<HTMLElement>('.hm-projects-card-lg, .hm-projects-card-sm');
 
-        const wrapper = section.querySelector('.hm-projects-card-wrapper');
+        const cards = gsap.utils.toArray<HTMLElement>(
+            '.hm-projects-card-lg, .hm-projects-card-sm'
+        );
 
         const buildAnimation = () => {
-
-            ScrollTrigger.getAll().forEach(st => st.kill());
-
+            ScrollTrigger.getAll().forEach((st) => st.kill());
             gsap.set(cards, { clearProps: 'all' });
 
-            const sectionStyles = getComputedStyle(section);
-            const peekRatio = parseFloat(
-                sectionStyles.getPropertyValue('--card-peek')
-            ) || 0.45;
+            const isTablet = window.innerWidth < 1200;
 
-            cards.forEach((card, index) => {
-                gsap.set(card, {
-                    zIndex: index + 1
+            if (isTablet) {
+                cards.forEach((card, index) => {
+                    gsap.set(card, {
+                        zIndex: index + 1,
+                    });
                 });
-            });
+
+                const cardHeight = cards[0].offsetHeight;
+                const stackGap = 120;
+
+                const overlapDistance = cardHeight - stackGap;
+
+                const totalScrollDistance =
+                    overlapDistance * (cards.length - 1);
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top top',
+                        end: `+=${totalScrollDistance}`,
+                        scrub: 1,
+                        pin: true,
+                        anticipatePin: 1,
+                        invalidateOnRefresh: true,
+                    },
+                });
+
+                cards.slice(1).forEach((card, index) => {
+                    const level = index + 1;
+
+                    tl.to(
+                        card,
+                        {
+                            y: -overlapDistance * level,
+                            ease: 'none',
+                            duration: 1,
+                        },
+                        0
+                    );
+                });
+                return;
+            }
+
+            const sectionStyles = getComputedStyle(section);
+
+            const peekRatio =
+                parseFloat(
+                    sectionStyles.getPropertyValue('--card-peek')
+                ) || 0.45;
 
             const firstCardWidth = cards[0].offsetWidth;
 
-            const visiblePart =
-                firstCardWidth * peekRatio;
+            const visiblePart = firstCardWidth * peekRatio;
+            const overlapDistance = firstCardWidth - visiblePart;
 
-            const overlapDistance =
-                firstCardWidth - visiblePart;
+            cards.forEach((card, index) => {
+                gsap.set(card, {
+                    zIndex: cards.length + index,
+                });
+            });
 
             const totalScrollDistance =
                 overlapDistance * (cards.length - 1);
@@ -55,19 +98,17 @@ export default function ProjectsSectionDesktop() {
                     pin: true,
                     anticipatePin: 1,
                     invalidateOnRefresh: true,
-                }
+                },
             });
 
             cards.slice(1).forEach((card, index) => {
-
                 const level = index + 1;
 
                 tl.to(card, {
                     x: -overlapDistance * level,
                     ease: 'none',
-                    duration: 4
+                    duration: 4,
                 });
-
             });
         };
 
@@ -81,20 +122,13 @@ export default function ProjectsSectionDesktop() {
         window.addEventListener('resize', onResize);
 
         return () => {
-
-            window.removeEventListener(
-                'resize',
-                onResize
-            );
-
-            ScrollTrigger.getAll().forEach(st => st.kill());
+            window.removeEventListener('resize', onResize);
+            ScrollTrigger.getAll().forEach((st) => st.kill());
         };
-
     }, []);
 
-
     return (
-        <section ref={sectionRef} className="section projects-section-desktop">
+        <section ref={sectionRef} className="section projects-section-desktop projects-section-sticky">
             <div className="container">
                 <div className="hm-project-container">
                     <div className="hm-projects-text">
@@ -102,7 +136,7 @@ export default function ProjectsSectionDesktop() {
                         <p className="text-rg text-18">A curated selection of work that reflects how we design, build, and deliver impactful digital experiences.</p>
                     </div>
 
-                    <div className="hm-projects-horizontal-pin-viewport hm-projects-desktop">
+                    <div className="hm-projects-horizontal-pin-viewport">
                         <div className="hm-projects-card-wrapper">
                             <div className="hm-projects-card-lg hm-projects-card-1">
                                 <div className="hm-projects-images-lg site-radius-20 bg-purple-shade">

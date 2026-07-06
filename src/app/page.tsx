@@ -10,43 +10,15 @@ import WhyChooseUsSectionMobile from "@/components/Homepage/Mobile/WhyChooseUsSe
 import ProcessSectionMobile from "@/components/Homepage/Mobile/ProcessSectionMobile";
 import ProjectSectionMobile from "@/components/Homepage/Mobile/ProjectSectionMobile";
 
-const HeroSectionDesktop = dynamic(
-	() => import("@/components/Homepage/Desktop/HeroSectionDesktop"),
-	{ ssr: false }
-);
-const TestimonialSectionDesktop = dynamic(
-	() => import("@/components/Homepage/Desktop/TestimonialSectionDesktop"),
-	{ ssr: false }
-);
-const AboutSectionDesktop = dynamic(
-	() => import("@/components/Homepage/Desktop/AboutSectionDesktop"),
-	{ ssr: false }
-);
-
-const ServicesSectionDesktop = dynamic(
-	() => import("@/components/Homepage/Desktop/ServicesSectionDesktop"),
-	{ ssr: false }
-);
-
-const IndustriesSectionDesktop = dynamic(
-	() => import("@/components/Homepage/Desktop/IndustriesSectionDesktop"),
-	{ ssr: false }
-);
-
-const WhyChooseUsSectionDesktop = dynamic(
-	() => import("@/components/Homepage/Desktop/WhyChooseUsSectionDesktop"),
-	{ ssr: false }
-);
-
-// const ProcessSectionDesktop = dynamic(
-// 	() => import("@/components/Homepage/Desktop/ProcessSectionDesktop"),
-// 	{ ssr: false }
-// );
-
-const ProjectsSectionDesktop = dynamic(
-	() => import("@/components/Homepage/Desktop/ProjectsSectionDesktop"),
-	{ ssr: false }
-);
+const HeroSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/HeroSectionDesktop"), { ssr: false } );
+const TestimonialSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/TestimonialSectionDesktop"), { ssr: false } );
+const AboutSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/AboutSectionDesktop"), { ssr: false } );
+const ServicesSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ServicesSectionDesktop"), { ssr: false } );
+const IndustriesSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/IndustriesSectionDesktop"), { ssr: false } );
+const WhyChooseUsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/WhyChooseUsSectionDesktop"), { ssr: false } );
+const ProcessSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProcessSectionDesktop"), { ssr: false } );
+const ProjectsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProjectsSectionDesktop"), { ssr: false } );
+const StatsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/StatsSectionDesktop"), { ssr: false } );
 
 export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
@@ -75,7 +47,7 @@ export default function Home() {
 						<ServicesSectionMobile />
 						<IndustriesSectionMobile />
 						<WhyChooseUsSectionMobile />
-						{/* <ProcessSectionMobile /> */}
+						<ProcessSectionMobile />
 						<ProjectSectionMobile />
 					</>
 					:
@@ -87,8 +59,9 @@ export default function Home() {
 						<ServicesSectionDesktop />
 						<IndustriesSectionDesktop />
 						<WhyChooseUsSectionDesktop />
-						{/* <ProcessSectionDesktop /> */}
+						<ProcessSectionDesktop />
 						<ProjectsSectionDesktop />
+						<StatsSectionDesktop/>
 					</>
 				}
 			</main>
