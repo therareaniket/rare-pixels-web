@@ -1,10 +1,76 @@
 'use client';
 
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 export default function ProcessSectionMobile() {
+
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const cards = gsap.utils.toArray<HTMLElement>(".process-card-mobile");
+
+        const setActive = (activeIndex: number) => {
+            cards.forEach((card, i) => {
+                const content = card.querySelector("p");
+
+                if (i === activeIndex) {
+                    card.classList.add("active");
+
+                    gsap.to(content, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.4,
+                        overwrite: true,
+                    });
+                } else {
+                    card.classList.remove("active");
+
+                    gsap.to(content, {
+                        opacity: 0,
+                        y: 20,
+                        duration: 0.4,
+                        overwrite: true,
+                    });
+                }
+            });
+        };
+
+        setActive(0);
+
+        ScrollTrigger.create({
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "+=3000",
+            pin: true,
+            scrub: true,
+
+            onUpdate: (self) => {
+                const progress = self.progress;
+
+                const activeIndex = Math.min(
+                    cards.length - 1,
+                    Math.floor(progress * cards.length)
+                );
+
+                setActive(activeIndex);
+            },
+        });
+
+        return () => {
+            ScrollTrigger.getAll().forEach((st) => st.kill());
+        };
+    }, []);
+
+
     return (
         <>
-            <section className="section bg-yellowish process-section-sticky">
+            <section ref={sectionRef} className="section bg-yellowish process-section-sticky">
                 <div className="container">
+
                     <h2 className="text-sb text-black">Work Process We Follow</h2>
 
                     <p className="text-16 text-rg text-black">Every project flows through a defined path understanding, planning, designing, building, and refining. This ensures that every decision is intentional and every outcome is crafted with clarity and precision.</p>

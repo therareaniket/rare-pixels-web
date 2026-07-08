@@ -68,7 +68,7 @@ export default function StatsSectionDesktop() {
 
                                 <div className="stats-global-text-wrapper">
                                     <div className="stats-global-left">
-                                        <h3 className="h2 text-sb">7</h3>
+                                        <h3 className="h2 text-sb text-white">7</h3>
                                         <p className="text-upper-case text-white text-18 text-sb">Global Markets Served</p>
                                     </div>
 
