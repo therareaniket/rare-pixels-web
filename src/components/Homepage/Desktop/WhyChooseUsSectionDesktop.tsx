@@ -14,7 +14,7 @@ export default function WhyChooseUsSectionDesktop() {
                 <div className="container">
                     <div className="why-choose-us-text-wrapper">
                         <h2 className="text-sb">Why Choose Us</h2>
-                        <p className="text-18 text-rg">We don&apos;t believe in shortcuts or surface-level work everything we create is carefully thought through, built with precision, and designed to perform consistently as your brand grows.</p>
+                        <p className="text-18 text-rg">We bring together strategy, design, technology, and creativity to build experiences that are easy to use, hard to ignore, and built to perform.</p>
                     </div>
 
                     <div className="container-sm">
@@ -22,32 +22,36 @@ export default function WhyChooseUsSectionDesktop() {
                             <div className="why-choose-us-pointer-wrapper">
                                 <div className="why-choose-us-pointer-cards">
                                     <div className="why-choose-us-card why-choose-us-card-1">
-                                        <h3 className="h6 text-sb">No Shortcuts, Ever</h3>
+                                        <h3 className="h6 text-sb">Built, Not Borrowed</h3>
 
-                                        <p className="text-18 text-rg">We don’t rely on quick fixes or reused solutions. Every project is approached with intent, built from the ground up to match your needs and deliver long-term value.</p>
+                                        <p className="text-18 text-rg">We don&apos;t believe in templates or recycled thinking. Every solution is created from the ground up to fit your business, your users, and your ambitions.</p>
                                     </div>
-                                    <div className="why-choose-us-card why-choose-us-card-2">
-                                        <h3 className="h6 text-sb">Clarity Over Complexity</h3>
 
-                                        <p className="text-18 text-rg">We simplify ideas and focus on what truly matters. No unnecessary elements just clear structure, purposeful design, and decisions that improve usability.</p>
+                                    <div className="why-choose-us-card why-choose-us-card-2">
+                                        <h3 className="h6 text-sb">Simplicity With Purpose</h3>
+
+                                        <p className="text-18 text-rg">Great experiences feel effortless. We remove complexity, sharpen every interaction, and design with clarity at the center of every decision.
+                                        </p>
                                     </div>
                                 </div>
 
                                 <div className="why-choose-us-pointer-cards">
                                     <div className="why-choose-us-card why-choose-us-card-3">
-                                        <h3 className="h6 text-sb">Execution That Matches Vision</h3>
+                                        <h3 className="h6 text-sb">Ideas That Get Built</h3>
 
-                                        <p className="text-18 text-rg">We ensure every idea translates into the final product exactly as intended. From design to development, everything stays aligned with precision and consistency.</p>
+                                        <p className="text-18 text-rg">A vision means little without execution. From first sketch to final launch, every detail is delivered with precision, consistency, and care.</p>
                                     </div>
+
                                     <div className="why-choose-us-card why-choose-us-card-4">
-                                        <h3 className="h6 text-sb">Partners, Not Vendors</h3>
+                                        <h3 className="h6 text-sb">Partners In The Process</h3>
 
-                                        <p className="text-18 text-rg">We work as an extension of your team, not just a service provider. Our focus is on collaboration, trust, and building relationships that go beyond project delivery.</p>
+                                        <p className="text-18 text-rg">We work alongside you, not around you. The best outcomes come from trust, collaboration, and relationships that grow beyond a single project.</p>
                                     </div>
-                                    <div className="why-choose-us-card why-choose-us-card-5">
-                                        <h3 className="h6 text-sb">Focused on Real Outcomes</h3>
 
-                                        <p className="text-18 text-rg">Our work is guided by performance. We design and build solutions that not only look good but also deliver results, scale smoothly, and evolve with your brand.</p>
+                                    <div className="why-choose-us-card why-choose-us-card-5">
+                                        <h3 className="h6 text-sb">Measured By Impact</h3>
+
+                                        <p className="text-18 text-rg">Beautiful work is only the beginning. We create solutions that drive adoption, strengthen brands, and deliver meaningful business outcomes.</p>
                                     </div>
                                 </div>
                             </div>

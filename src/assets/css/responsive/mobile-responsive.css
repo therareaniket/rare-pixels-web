@@ -221,6 +221,18 @@
     .projects-image-mob { width: 100%; height: 350px; padding: 3px; border-radius: 10px; }
     .projects-image-mob img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
     .projects-text-mob{ padding: 14px; border-radius: 10px; }
+
+    .section-bg-blue { background-color: var(--section-bg); }
+    .stats-mob-hr{ width: 100%; height: 1px; background-color: #424242; margin: 20px 0; }
+
+    .stats-mob-art-board{ width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; margin: 20px 0; }
+    .stats-mob-art-board img{ width: 100%; height: 100%; }
+    .stats-mob-card-5{ display: flex; flex-direction: column; gap: 20px; }
+    .stats-mob-card-2{ background-color: rgba(247, 243, 211, 0.1); padding: 14px; }
+    .stats-mob-card-3{ background-color: rgba(252, 212, 233, 0.1); padding: 14px; }
+    .stats-mob-card-4{ background-color: rgba(245, 248, 245, 0.1); padding: 14px; }
+    .stats-mob-card-6{ background-color: rgba(213, 216, 226, 0.1); padding: 14px;}
+    .stats-mob-card-7{ background-color: rgba(253, 252, 251, 0.1); padding: 14px;}
 }
 
 @media (max-width: 439px) {
@@ -289,6 +301,8 @@
     .process-card-mob-text{ width: 315px; }
     .process-card-mob-text p{ padding-top: 10px; }
     .process-card-mobile.active{ height: 140px; }
+
+    .stats-mob-art-board{ height: 120px; }
 }
 
 @media (max-width: 400px) {
@@ -357,6 +371,9 @@
     .process-mob-icon{ width: 32px; height: 32px; font-size: 18px; }
     .process-card-mob-text{ width: 290px; }
     .process-section-mobile-wrapper{ gap: 15px; }
+
+    .stats-mob-card-7 .h1{ margin-bottom: 6px; }
+    .stats-mob-hr{ margin: 15px 0; }
 }
 
 @media (max-width: 374px) {
