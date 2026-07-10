@@ -13,11 +13,7 @@ interface Scene3DProps { activeIndex: number }
 // Spread target into primitives so the effect only fires when values actually change.
 const CameraController = ({ x, y, z }: { x: number; y: number; z: number }) => {
   	const { camera } = useThree()
-
-    useEffect(() => {
-    	gsap.to(camera.position, { x, y, z, duration: 1.2, ease: 'power3.out', })
-	}, [x, y, z])
-
+    useEffect(() => { gsap.to(camera.position, { x, y, z, duration: 1.2, ease: 'power3.out', }) }, [x, y, z])
   	return null
 }
 
@@ -36,8 +32,7 @@ const Scene3D = ({ activeIndex }: Scene3DProps) => {
 	
   	return (
 
-		// <Canvas camera={{ position: MODEL_CONFIG[0].camera, fov: 25 }} dpr={[1, 2]} >
-		<Canvas camera={{ position:initialCamera, fov: 25 }} dpr={[1, 2]} >
+		<Canvas camera={{ position:initialCamera, fov: 25 }} dpr={[1, 2]} className='canvas-3d-wrapper'>
 			<ambientLight intensity={0.5} />
 			<directionalLight position={[0, 5, 5]} intensity={8} />
 
@@ -45,7 +40,7 @@ const Scene3D = ({ activeIndex }: Scene3DProps) => {
 
 			<Suspense fallback={null}>
 				{/* key= unmounts/remounts Model3D on switch, triggering the GSAP intro */}
-				<Model3D key={activeIndex} config={config} />
+				<Model3D key={activeIndex} config={config} xOffset={xOffset} />
 			</Suspense>
 
 			<OrbitControls enableZoom={false} enablePan={false} />

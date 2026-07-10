@@ -50,6 +50,8 @@
 .hm-services-content-wrapper.active .h6{ opacity: 100%; }
 .hm-services-content-wrapper.active p{ opacity: 100%; }
 
+.canvas-3d-wrapper canvas {  width: 100vw !important; height: 100vh !important; }
+
 .hm-hero-stats-wrapper{ display: flex; align-items: flex-start;  gap: 40px; justify-content: space-between; width: max-content; }
 .hm-hero-stats h2{ margin-bottom: 6px; }
 .home-hero-services-highlight-wrapper.for-tablet{ display: none !important; }
@@ -182,7 +184,7 @@
 .why-choose-us-content-wrapper{ position: relative; }
 .why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; overflow: hidden; box-shadow: var(--why-choose-desktop-box); }
 .why-choose-us-tablet{ display: none; }
-.hm-hero-main { padding-top: 0; }
+.hm-hero-main { padding-top: 0 !important; }
 
 .why-choose-us-image-wrapper {  position: relative; box-shadow: var(--why-choose-desktop-box); }
 

@@ -55,6 +55,7 @@ export default function HeroSectionDesktop() {
 
     const [activeIndex, setActiveIndex] = useState(0)
     const [showDescription, setShowDescription] = useState(true);
+    const [isTablet, setIsTablet] = useState(false);
     const scrollTrackRef = useRef<HTMLDivElement>(null);
     const lastIndexRef = useRef(0);
 
@@ -94,6 +95,16 @@ export default function HeroSectionDesktop() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
 
+    // useEffect for Services to show single or all 4
+    useEffect(() => {
+        const update = () => setIsTablet(window.innerWidth <= 991);
+
+        update();
+        window.addEventListener("resize", update);
+
+        return () => window.removeEventListener("resize", update);
+    }, []);
+
     return (
         <>
             <section id="hero-section" ref={scrollTrackRef} className="section hm-hero-main hm-hero-scroll-track">
@@ -126,7 +137,7 @@ export default function HeroSectionDesktop() {
                                     </div>
 
                                     <div className="hm-services-right">
-                                        {services.map((service, index) => (
+                                        {/* {services.map((service, index) => (
                                             <div key={index} className={`hm-services-content-wrapper ${activeIndex === index ? "active" : ""}`}>
                                                 <GlassEffect className="dock site-radius-30">
                                                     <div className="hm-services-title">
@@ -139,7 +150,36 @@ export default function HeroSectionDesktop() {
                                                     <p className="text-18 text-rg text-grey">{service.description}</p>
                                                 </div>
                                             </div>
-                                        ))}
+                                        ))} */}
+
+                                        {services.map((service, index) => {
+                                            if (isTablet && index !== activeIndex) return null;
+
+                                            return (
+                                                <div
+                                                    key={index}
+                                                    className={`hm-services-content-wrapper ${
+                                                        activeIndex === index ? "active" : ""
+                                                    }`}
+                                                >
+                                                    <GlassEffect className="dock site-radius-30">
+                                                        <div className="hm-services-title">
+                                                            <span className="text-sb h6">{service.title}</span>
+                                                        </div>
+                                                    </GlassEffect>
+
+                                                    <div
+                                                        className={`hm-services-subtitle ${
+                                                            activeIndex === index && showDescription ? "show" : ""
+                                                        }`}
+                                                    >
+                                                        <p className="text-18 text-rg text-grey">
+                                                            {service.description}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             </div>
@@ -160,94 +200,6 @@ export default function HeroSectionDesktop() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="container">
-                    <div className="home-hero-wrapper-tablet">
-                        <div className="hm-hero-row-1-wrapper">
-                            <div className="hm-hero-text-left">
-                                <h1 className="text-sb hm-hero-title">
-                                    Building Brands People Choose First.
-                                </h1>
-
-                                <div className="hm-hero-paragraph-wrapper">
-                                    <p className="text-18 text-rg">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
-
-                                    <p className="text-18 text-sb">Creativity That Businesses Can Measure.</p>
-
-                                    <p className="text-rg text-18">Most brands compete for attention. The memorable ones earn it. At RarePixels, we blend strategy, creativity, and technology to create digital experiences that people notice, trust, and return to. Nothing off the shelf. Nothing assembled from parts that existed before you walked in. Everything built for you. </p>
-                                </div>
-
-                                <div className="hm-hero-stats-wrapper">
-                                    <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">100+</h2>
-                                        <p className="text-18 text-md">Brands Transformed</p>
-                                    </div>
-                                    <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">6000+</h2>
-                                        <p className="text-18 text-md">Hours of Strategic Design</p>
-                                    </div>
-                                    <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">50+</h2>
-                                        <p className="text-18 text-md">Digital Products Engineered </p>
-                                    </div>
-                                </div>
-
-                                <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
-                                    <span className="text-20 text-md text-white">Start Your Project </span>
-                                    <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
-                                </Link>
-                            </div>
-
-                            {/* BELOW IS THE CODE WITH ALL 4 SERVICES VISIBLE FOR TABLET */}
-
-                            {/* <div className="home-hero-services-highlight-wrapper for-tablet">
-                                <div className="hm-services-left home-hero-banner-image">
-                                    <Scene3D activeIndex={activeIndex} />
-                                </div>
-
-                                <div className="hm-services-right">
-                                    {services.map((service, index) => (
-                                        <div key={index} className={`hm-services-content-wrapper ${activeIndex === index ? "active" : ""}`}>
-                                            <GlassEffect className="dock site-radius-30">
-                                                <div className="hm-services-title">
-                                                    <span className="text-sb h6">{service.title}</span>
-                                                </div>
-                                            </GlassEffect>
-
-                                            <div className={`hm-services-subtitle ${activeIndex === index ? "show" : ""}`}>
-                                                <p className="text-18 text-rg text-grey">{service.description}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div> */}
-
-                            {/* BELOW IS THE CODE WITH ONLY 1 SERVICE VISIBLE FOR TABLET */}
-
-                            {/* <div className="home-hero-services-highlight-wrapper for-tablet">
-                                <div className="element-box-tablet">
-                                    <Scene3D activeIndex={activeIndex} />
-                                </div>
-
-                                <div className="services-highlight-tablet">
-                                    {services.map((service, index) => (
-                                        <div key={index} className={`hm-services-content-wrapper-tab ${activeIndex === index ? "active" : ""}`}>
-                                            <div className={`services-highlight-content-tab ${activeIndex === index && showDescription ? "show" : ""
-                                                }`}>
-                                                <GlassEffect className="dock site-radius-30">
-                                                    <div className="hm-services-title-tab">
-                                                        <span className="text-sb h6">{service.title}</span>
-                                                    </div>
-                                                </GlassEffect>
-                                                <p className="text-18 text-rg text-grey">{service.description}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 </div>

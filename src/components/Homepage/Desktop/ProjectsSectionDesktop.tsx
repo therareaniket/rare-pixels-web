@@ -16,7 +16,7 @@ export default function ProjectsSectionDesktop() {
                         <div className="hm-projects-card-wrapper">
                             <div className="hm-projects-card-lg hm-projects-card-1">
                                 <div className="hm-projects-images-lg site-radius-20 bg-purple-shade">
-                                    <Image className="site-radius-20" src="/images/homepage/djk-project.png" alt="rare-projects" width={523} height={423} priority></Image>
+                                    <video className="site-radius-20" src="/images/homepage/projects/AutoBot_proj.mp4" width={523} height={423} autoPlay loop muted></video>
                                 </div>
                                 <div className="hm-projects-desc site-radius-20 bg-purple-shade text-black">
                                     <h3 className="text-sb text-black">DJK</h3>
@@ -26,7 +26,7 @@ export default function ProjectsSectionDesktop() {
 
                             <div className="hm-projects-card-sm hm-projects-card-2">
                                 <div className="hm-projects-images-sm site-radius-20 bg-light-green">
-                                    <Image className="site-radius-20" src="/images/homepage/sart-project.png" alt="rare-projects" width={523} height={423}></Image>
+                                    <video className="site-radius-20" src="/images/homepage/projects/SteamOvap_proj.mp4" width={523} height={423} autoPlay loop muted></video>
                                 </div>
                                 <div className="hm-projects-desc site-radius-20 bg-light-green text-black">
                                     <h3 className="text-sb text-black">S.ART</h3>
@@ -36,7 +36,7 @@ export default function ProjectsSectionDesktop() {
 
                             <div className="hm-projects-card-lg hm-projects-card-3">
                                 <div className="hm-projects-images-lg site-radius-20 bg-light-pink">
-                                    <Image className="site-radius-20" src="/images/homepage/coverize-project.png" alt="rare-projects" width={523} height={423}></Image>
+                                    <video className="site-radius-20" src="/images/homepage/projects/Jedon.mp4" width={523} height={423} autoPlay loop muted></video>
                                 </div>
                                 <div className="hm-projects-desc site-radius-20 bg-light-pink text-black">
                                     <h3 className="text-sb text-black">COVRIZE</h3>

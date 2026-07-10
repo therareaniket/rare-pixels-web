@@ -25,7 +25,7 @@ export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
 
 	useEffect(() => {
-		const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479); };
+		const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479);};
 
 		window.addEventListener("resize", handleResize);
 		handleResize();
