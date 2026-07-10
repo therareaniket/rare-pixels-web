@@ -309,6 +309,9 @@
     .process-card-mobile.active{ height: 140px; }
 
     .stats-mob-art-board{ height: 120px; }
+
+    .process-vertical-line{ left: 18px; }
+    .process-vertical-line-active{ left: 18px; }
 }
 
 @media (max-width: 400px) {
@@ -380,6 +383,9 @@
 
     .stats-mob-card-7 .h1{ margin-bottom: 6px; }
     .stats-mob-hr{ margin: 15px 0; }
+
+    .process-vertical-line{ left: 16px; }
+    .process-vertical-line-active{ left: 16px; }
 }
 
 @media (max-width: 374px) {
