@@ -30,7 +30,7 @@ export default function ProcessSectionDesktop() {
             !pointerWrapperRef.current
         ) return;
 
-        gsap.set(elementsRef.current, { display: "block",yPercent: -50, opacity: 0 });
+        gsap.set(elementsRef.current, { display: "block", yPercent: -50, opacity: 0 });
 
         const pointers = gsap.utils.toArray<HTMLElement>(".process-pointer");
         const elements = gsap.utils.toArray<HTMLElement>(".process-element");
@@ -99,9 +99,9 @@ export default function ProcessSectionDesktop() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionRef.current,
-                start: "top -50px",
+                start: "top top",
                 end: `+=${window.innerHeight * 4}`,
-                pin: true,
+                // pin: true,
                 scrub: 1.2,
                 invalidateOnRefresh: true,
 
