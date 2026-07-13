@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ProcessSectionDesktop() {
 
-    const sectionRef = useRef<HTMLElement | null>(null);
+    const processSectionRef = useRef<HTMLElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
     const titleWrapperRef = useRef<HTMLDivElement | null>(null);
     const elementsRef = useRef<HTMLDivElement | null>(null);
@@ -23,7 +23,7 @@ export default function ProcessSectionDesktop() {
 
     useGSAP(() => {
         if (
-            !sectionRef.current ||
+            !processSectionRef.current ||
             !containerRef.current ||
             !titleWrapperRef.current ||
             !elementsRef.current ||
@@ -98,7 +98,7 @@ export default function ProcessSectionDesktop() {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: sectionRef.current,
+                trigger: processSectionRef.current,
                 start: "top top",
                 end: `+=${window.innerHeight * 4}`,
                 // pin: true,
@@ -163,7 +163,7 @@ export default function ProcessSectionDesktop() {
             .to(pointers, {
                 translateX: 0,
                 stagger: 0.02,
-                duration: 0.8,
+                duration: 1,
                 ease: "power2.inOut"
             }, 0)
 
@@ -206,7 +206,7 @@ export default function ProcessSectionDesktop() {
             tl.to({}, { duration: 1 });
         });
 
-    }, { scope: sectionRef });
+    }, { scope: processSectionRef });
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -253,12 +253,13 @@ export default function ProcessSectionDesktop() {
             card.classList.add("active");
         });
 
-        ScrollTrigger.create({
-            trigger: sectionRef.current,
+        const tabletTrigger = ScrollTrigger.create({
+            trigger: processSectionRef.current,
             start: "top top",
             end: "+=3000",
             // pin: true,
             scrub: true,
+            // markers: true,
 
             onUpdate: (self) => {
                 const activeIndex = Math.min(
@@ -271,13 +272,13 @@ export default function ProcessSectionDesktop() {
         });
 
         return () => {
-            ScrollTrigger.getAll().forEach((st) => st.kill());
+            tabletTrigger.kill();
         };
     }, []);
 
     return (
         <>
-            <section ref={sectionRef} className="section bg-light-yellow process-section process-tab-sticky">
+            <section ref={processSectionRef} className="section bg-light-yellow process-section process-tab-sticky">
                 <div className="process-tab-inner">
                     <div className="container-sm">
                         <div ref={containerRef} className="process-for-desktop">

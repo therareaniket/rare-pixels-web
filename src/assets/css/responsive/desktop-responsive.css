@@ -49,8 +49,8 @@
 
 
 	.industries-image-wrapper{ width: 850px; height: 500px; }
-	.industries-text-wrapper > span{ font-size: 70px; line-height: 80px; }
-	.industries-text-wrapper{ width: 460px; height: 460px; }
+	.industries-text-wrapper > span{ font-size: 66px; line-height: 74px; }
+	.industries-text-wrapper{ width: 460px; height: 410px; }
 
 	.hm-abt-card-wrapper{ margin-top: 40px; }
 
@@ -160,10 +160,10 @@
 	.hm-abt-text-wrapper{ flex-direction: column; gap: 20px; }
 	.hm-abt-card-title p{ gap: 16px; }
 
-	.industries-text-wrapper > span{ font-size: 60px; line-height: 70px; }
-	.industries-text-wrapper{ width: 410px; height: 410px; }
+	.industries-text-wrapper > span{ font-size: 60px; line-height: 68px; }
+	.industries-text-wrapper{ width: 410px; height: 370px; }
 	.industries-text-wrapper p{ gap: 10px; }
-	.industries-image-wrapper{ width: 770px; height: 450px; }
+	.industries-image-wrapper{ width: 790px; height: 450px; }
 	.indus-box-50{ width: 40px; height: 40px; }
 	.indus-box-40{ width: 30px; height: 30px; }
 	.indus-box-30{ width: 20px; height: 20px; }
