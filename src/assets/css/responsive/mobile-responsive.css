@@ -120,10 +120,12 @@
     .services-mobile-title p{ display: flex; flex-direction: column; }
     .abt-mobile-bg > p{ display: flex; flex-direction: column; }
 
+    /* .industry-section-sticky{ position: relative; height: 100vh; }
+    .industry-section-inner{ position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; } */
     .industries-text-wrapper-mobile{ text-align: center; }
     .industries-text-wrapper-mobile h2{ margin-bottom: 14px; }
     .industries-text-wrapper-mobile p{ display: flex; flex-direction: column; }
-    .industries-mobile-video{ width: 100%; height: 550px; overflow: hidden; border-radius: 0 0 50px 0; position: relative; }
+    .industries-mobile-video{ width: 100%; height: 460px; overflow: hidden; border-radius: 0 0 50px 0; position: relative; }
     .industries-mobile-video-wrapper{ margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
     .industry-name span{ font-size: 30px; line-height: 36px; }
     .industry-name div{ display: flex; flex-direction: column; gap: 14px; margin-top: 14px; }
@@ -140,6 +142,9 @@
     .industry-mob-7{ top: 0; right: 25px; }
     .industry-mob-8{ top: 25px; right: 50px; }
     .industry-mob-9{ bottom: 0; left: 0; }
+
+    .next-video{ z-index: 1; }
+    .prev-video{ z-index: 2; }
 
     /* hero section for 3d elements */
     .hm-services-title-mob{ padding: 6px 20px; height: max-content !important; }
