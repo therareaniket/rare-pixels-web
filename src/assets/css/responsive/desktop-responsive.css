@@ -73,7 +73,7 @@
 	.why-choose-us-eclipse-8{ width: 1300px; }
 
 	.hm-projects-card-lg, .hm-projects-card-sm{ width: 433px; }
-	.projects-section-desktop { --card-peek: 0.46; }
+	.hm-projects-card-wrapper { --project-stack-peek: 230px; }
 	.hm-projects-desc{ height: 165px; }
 	.hm-projects-images-lg{ height: 390px; }
 
@@ -197,7 +197,7 @@
 	.hm-projects-desc{ padding: 15px; height: 150px; }
 	.hm-projects-images-sm{ height: 280px; }
 
-	.hm-projects-card-wrapper{ margin-top: 40px; }
+	.hm-projects-card-wrapper{ margin-top: 40px; --project-stack-peek: 213px; }
 
 	.why-choose-us-pointer-wrapper{ margin-top: 40px; }
 
@@ -316,7 +316,7 @@
 	.why-choose-us-eclipse-8{ width: 900px; }
 
 	.hm-projects-card-lg, .hm-projects-card-sm{ width: 336px; }
-	.hm-projects-card-wrapper{ gap: 20px; }
+	.hm-projects-card-wrapper{ gap: 20px; --project-stack-peek: 190px; }
 	.hm-projects-images-lg{ height: 280px; }
 	.hm-projects-images-sm{ height: 250px; }
 	.hm-projects-desc{ height: 145px; }
@@ -420,6 +420,7 @@
 
 	.hm-projects-card-lg, .hm-projects-card-sm{ width: 305px; }
 	.hm-projects-desc{ height: 140px; }
+	.hm-projects-card-wrapper { --project-stack-peek: 173px; }
 
 	.stats-card-1, .stats-card-2, .stats-card-3, .stats-card-4, .stats-card-7{ width: 240px; height: 345px; }
 	.stats-card-5{ width: 240px; }
@@ -585,6 +586,14 @@
 	.stats-card-5 p{ width: 370px; padding-bottom: 0; }
 
 	.stats-wrapper-for-tablet{ display: flex; flex-direction: column; }
+
+	.hm-projects-card-wrapper{ flex-direction: column; width: 100%; height: max-content; }
+	.hm-projects-card-lg, .hm-projects-card-sm{ width: 100%; }
+	.hm-projects-images-lg, .hm-projects-images-sm{ height: 390px; }
+
+    .hm-projects-card-wrapper { position: relative; height: 100vh;  }
+    .hm-projects-card-lg, .hm-projects-card-sm { position: absolute; top: 0; left: 0; width: 100%; }
+
 } 
 
 @media (max-width: 1023px) {
@@ -667,14 +676,11 @@
 	.nav-theme-change-icon{ font-size: 26px; }
 	.nav-btn-wrapper{ gap: 8px; }
 
-  .why-choose-us-hand-image img{ width: 225px; }
-  .why-choose-us-images{ height: 350px; }
+  	.why-choose-us-hand-image img{ width: 225px; }
+  	.why-choose-us-images{ height: 350px; }
 
-  /* .why-choose-us-image-wrapper{ background-color: red; } */
-  /* .why-choose-us-eclipse{ z-index: 5; } */
-
-  .why-choose-us-eclipse-7, .why-choose-us-eclipse-8{ width: 630px; }
-  .why-choose-us-eclipse-5, .why-choose-us-eclipse-6{ width: 555px; }
+  	.why-choose-us-eclipse-7, .why-choose-us-eclipse-8{ width: 630px; }
+  	.why-choose-us-eclipse-5, .why-choose-us-eclipse-6{ width: 555px; }
 	.why-choose-us-hand-image img{ width: 225px; }
 	.why-choose-us-images{ height: 350px; }
 	.why-choose-us-eclipse-7, .why-choose-us-eclipse-8{ width: 630px; }
@@ -687,9 +693,9 @@
 	.stats-element-art-board, .stats-global-element{ height: 210px; }
 	.stats-specification{ height: max-content; }
 
-  .process-text-wrapper{ width: 555px; }
+  	.process-text-wrapper{ width: 555px; }
 
-	.process-text-wrapper{ width: 555px; }
+	.hm-projects-images-lg, .hm-projects-images-sm{ height: 340px; }
 }
 
 @media (max-width: 839px) {
@@ -741,9 +747,11 @@
 	.why-choose-us-images{ margin-top: 40px; height: 310px; }
 	.why-choose-us-pointer-wrapper{ margin-top: 40px; }
 
-  .stats-global-text-wrapper{ width: 620px; }
+	.stats-global-text-wrapper{ width: 620px; }
 
-  .process-text-wrapper{ width: 505px; }
+	.process-text-wrapper{ width: 505px; }
+	.hm-projects-card-wrapper { --project-stack-peek: 90px; }
+
 }
 
 @media (max-width: 767px) {
@@ -796,14 +804,15 @@
 	.why-choose-us-hand-image img{ width: 220px; }
 	.why-choose-us-images{ height: 305px; }
 
-  .stats-global-text-wrapper{ width: 570px; }
-  .stats-element-art-board, .stats-global-element{ height: 170px; }
+	.stats-global-text-wrapper{ width: 570px; }
+	.stats-element-art-board, .stats-global-element{ height: 170px; }
 
-  .process-icon{ width: 38px; height: 38px; font-size: 24px; }
-  .process-pointer-tablet{ max-height: 38px; }
-  .process-vertical-line-for-tab{ left: 19px; }
-  .process-vertical-active-line-for-tab{ left: 19px; }
-  .process-text-wrapper{ width: 478px; }
+	.process-icon{ width: 38px; height: 38px; font-size: 24px; }
+	.process-pointer-tablet{ max-height: 38px; }
+	.process-vertical-line-for-tab{ left: 19px; }
+	.process-vertical-active-line-for-tab{ left: 19px; }
+	.process-text-wrapper{ width: 478px; }
+
 }
 
 @media (max-width: 639px) {

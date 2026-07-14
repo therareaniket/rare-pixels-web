@@ -17,7 +17,8 @@ export default function ProjectSectionMobile() {
 
         if (!slider || !section) return;
 
-        const totalScroll = slider.scrollWidth - section.clientWidth;
+        const totalScroll =
+            slider.scrollWidth - slider.parentElement!.clientWidth;
 
         const tween = gsap.to(slider, {
             x: -totalScroll,
@@ -40,7 +41,6 @@ export default function ProjectSectionMobile() {
         };
     }, []);
 
-
     return (
         <section className="section" ref={sectionRef}>
             <div className="container">
@@ -58,7 +58,7 @@ export default function ProjectSectionMobile() {
                     <div className="projects-card-wrapper-mobile" ref={sliderRef}>
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-purple-shade">
-                                <Image src="/images/homepage/djk-project.png" alt="" width={330} height={350}></Image>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted></video>
                             </div>
 
                             <div className="projects-text-mob bg-purple-shade text-black">
@@ -69,7 +69,7 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-green">
-                                <Image src="/images/homepage/sart-project.png" alt="" width={330} height={350}></Image>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={513} height={406} autoPlay loop muted></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-green text-black">
@@ -80,7 +80,7 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-pink text-black">
-                                <Image src="/images/homepage/coverize-project.png" alt="" width={330} height={350}></Image>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-pink">
@@ -91,7 +91,7 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-yellow">
-                                <Image src="/images/homepage/seahub-project.png" alt="" width={330} height={350}></Image>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={513} height={406} autoPlay loop muted></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-yellow text-black">
@@ -102,7 +102,7 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-skin">
-                                <Image src="/images/homepage/sales-project.png" alt="" width={330} height={350}></Image>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted></video>
                             </div>
 
                             <div className="projects-text-mob bg-skin text-black">

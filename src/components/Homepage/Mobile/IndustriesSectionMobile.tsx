@@ -81,7 +81,7 @@ export default function IndustriesSectionMobile() {
                 trigger: sectionRef.current,
                 start: "top 50px",
                 end: "+=" + (industries.length * window.innerHeight),
-                pin: true,
+                // pin: true,
                 scrub: true,
                 // markers: true,
                 refreshPriority: 10,
