@@ -199,8 +199,8 @@
 
 /* Process Section */
 
-.process-tab-sticky{ position: relative; height: 6000px; }
-.process-tab-inner{ position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; }
+/* .process-tab-sticky{ position: relative; height: 6000px; }
+.process-tab-inner{ position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; } */
 
 .process-text-wrapper { width: 697px; margin: 0 auto; text-align: center; transition: all 0.5s ease; }
 .process-text-wrapper.active { width: 100%; margin: 0; text-align: left; }

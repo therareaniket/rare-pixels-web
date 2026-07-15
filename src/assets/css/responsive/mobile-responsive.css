@@ -142,7 +142,7 @@
     .industry-mob-7{ top: 0; right: 25px; }
     .industry-mob-8{ top: 25px; right: 50px; }
     .industry-mob-9{ bottom: 0; left: 0; }
-
+    .industries-video{ width: 100%; height: 100%; position: absolute;  }
     .next-video{ z-index: 1; }
     .prev-video{ z-index: 2; }
 
@@ -214,7 +214,7 @@
     .projects-card-mobile { width: 330px; }
     .projects-image-mob { width: 100%; height: 350px; padding: 3px; border-radius: 10px; }
     .mobile-projects-videos{ width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
-    .projects-text-mob{ padding: 14px; border-radius: 10px; }
+    .projects-text-mob{ padding: 14px; border-radius: 10px; height: 122px; }
 
     .section-bg-blue { background-color: var(--section-bg); }
     .stats-mob-hr{ width: 100%; height: 1px; background-color: #424242; margin: 20px 0; }
@@ -395,6 +395,7 @@
     .hm-abt-card-mobile{ height: 170px; }
 
     .process-card-mob-text{ width: 275px; }
+    .projects-text-mob{ height: 115px; }
 }
 
 @media (max-width: 359px) {

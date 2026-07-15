@@ -151,7 +151,7 @@ export default function IndustriesSectionMobile() {
         next.src = nextSrc;
         next.load();
 
-        next.onloadeddata = () => {
+        next.oncanplay = () => {
 
             gsap.set(current, {
                 clipPath: "inset(0% 0% 0% 0%)"
@@ -167,14 +167,25 @@ export default function IndustriesSectionMobile() {
                 ease: "power4.inOut",
 
                 onComplete: () => {
+
+                    gsap.set(current, {
+                        opacity: 0
+                    });
+
                     current.src = nextSrc;
                     current.load();
 
-                    gsap.set(current, {
-                        clipPath: "inset(0% 0% 0% 0%)"
-                    });
+                    current.oncanplay = () => {
 
-                    prevIndex.current = activeIndex;
+                        gsap.set(current, {
+                            clipPath: "inset(0% 0% 0% 0%)",
+                            opacity: 1
+                        });
+
+                        current.play();
+
+                        prevIndex.current = activeIndex;
+                    };
                 }
             });
         };
@@ -182,7 +193,7 @@ export default function IndustriesSectionMobile() {
 
     return (
         <>
-            <section ref={sectionRef}  className="industry-section-sticky">
+            <section ref={sectionRef} className="industry-section-sticky">
                 <div className="industry-section-inner">
                     <div className="container">
                         <div className="industries-text-wrapper-mobile">

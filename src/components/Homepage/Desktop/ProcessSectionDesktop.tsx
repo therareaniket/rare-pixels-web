@@ -99,23 +99,28 @@ export default function ProcessSectionDesktop() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: processSectionRef.current,
-                start: "top top",
-                end: `+=${window.innerHeight * 4}`,
-                // pin: true,
+                start: "top -80px",
+                end: `+=${window.innerHeight * pointers.length * 2}`,
+                pin: true,
                 scrub: 1.2,
                 invalidateOnRefresh: true,
 
                 snap: {
                     snapTo: 1 / (pointers.length - 1),
-                    duration: { min: 0.2, max: 0.5 },
+                    duration: { min: 1, max: 1.3 },
                     ease: "power2.out"
                 },
 
-                onUpdate: () => {
-                    const activeIndex = Math.min(
-                        pointers.length,
-                        Math.floor(tl.progress() * (pointers.length + 1))
-                    );
+                onUpdate: (self) => {
+                    let activeIndex;
+
+                    if (self.progress > 0.99) {
+                        activeIndex = pointers.length;
+                    } else {
+                        activeIndex = Math.floor(
+                            self.progress * pointers.length
+                        );
+                    }
 
                     if (activeIndex !== currentStep) {
                         currentStep = activeIndex;
