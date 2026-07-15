@@ -100,6 +100,10 @@
 	.process-pointer{ max-height: 50px; }
 	.process-pointer-svg{ width: 50px; height: 50px; }
 	.process-element-art-board{ width: 250px; height: 250px; }
+
+	.hm-faq-title{ width: 725px; }
+	.faq-accordion{ width: 1150px; }
+	.faq-accordion-title{ padding: 5px 0; }
 }
 
 @media (max-width: 1599px) {
@@ -223,6 +227,8 @@
 	.process-pointer-text-wrapper p{ width: 460px; }
 	.process-pointer{ width: 540px; }
 	.process-elements-wrapper{ margin-top: 40px; }
+	.faq-accordion{ width: 1050px; }
+	.faq-accordion-wrapper{ margin-top: 40px; }
 }
 
 @media (max-width: 1439px) {
@@ -337,6 +343,8 @@
 	.process-element-art-board{ width: 200px; height: 200px; }
 
 	.process-pointer-wrapper{ gap: 20px; }
+
+	.faq-accordion{ width: 875px; }
 }
 
 @media (max-width: 1359px) {
@@ -438,6 +446,11 @@
 	.process-element-art-board{ width: 200px; height: 200px; }
 	.process-complete-tick{ width: 40px; height: 40px; right: 65px; }
 	.process-complete-tick img{ width: 20px; height: auto; }
+
+	.faq-accordion{ width: 800px; border-radius: 12px; }
+	.faq-accordion-title{ padding: 0; }
+	.accordion-number{ width: 40px; height: 40px; border-radius: 15px; }
+	.hm-faq-title{ width: 550px; }
 } 
 
 @media (max-width: 1199px) {
@@ -593,7 +606,12 @@
 
     .hm-projects-card-wrapper { position: relative; height: 100vh;  }
     .hm-projects-card-lg, .hm-projects-card-sm { position: absolute; top: 0; left: 0; width: 100%; }
-
+	.hm-faq-title{ width: 600px; }
+	.faq-accordion{ width: 650px; padding: 10px 20px; }
+	.faq-accordion-title{ padding: 10px 0; align-items: flex-start; }
+	.accordion-number{ width: 52px; height: 52px; }
+	.faq-content{ padding-bottom: 10px; }
+	.arrw-up, .arrw-down{ margin-top: 5px; }
 } 
 
 @media (max-width: 1023px) {
@@ -641,8 +659,7 @@
 	.hm-services-content-wrapper .h6 { font-size: 22px; line-height: 30px; }
 
 	.process-text-wrapper{ width: 564px; }
-
-	.process-text-wrapper{ width: 564px; }
+	.faq-accordion{ width: 560px; }
 }
 
 @media (max-width: 991px) {
@@ -654,7 +671,7 @@
 	h3, .h3 { font-size: 30px;  }
 	h4, .h4 { font-size: 28px; }
 	h5, .h5 { font-size: 24px; }
-	h6, .h6 { font-size: 22px; }
+	h6, .h6 { font-size: 20px; line-height: 28px; }
 
 	.text-18{ font-size: 16px; line-height: 24px; }
 	
@@ -696,6 +713,7 @@
   	.process-text-wrapper{ width: 555px; }
 
 	.hm-projects-images-lg, .hm-projects-images-sm{ height: 340px; }
+	.faq-accordion-title{ padding: 5px 0; }
 }
 
 @media (max-width: 839px) {
@@ -708,7 +726,7 @@
 	h3, .h3 { font-size: 28px; line-height: 36px; }
 	h4, .h4 { font-size: 28px; }
 	h5, .h5 { font-size: 24px; }
-	h6, .h6 { font-size: 22px; }
+	/* h6, .h6 { font-size: 22px; } */
 
 	.hm-services-left{ width: 400px; height: 280px; }
 	.home-hero-banner-image{ width: 400px; height: 280px; }
@@ -752,6 +770,8 @@
 	.process-text-wrapper{ width: 505px; }
 	.hm-projects-card-wrapper { --project-stack-peek: 90px; }
 
+	.faq-accordion{ width: 500px; }
+	.faq-content{ padding-left: 20px; }
 }
 
 @media (max-width: 767px) {
@@ -763,7 +783,7 @@
 	h3, .h3 { font-size: 28px; line-height: 36px; }
 	h4, .h4 { font-size: 28px; }
 	h5, .h5 { font-size: 24px; }
-	h6, .h6 { font-size: 22px; }
+	h6, .h6 { font-size: 18px; line-height: 26px; }
 
 	.text-18{ font-size: 16px; line-height: 24px; }
 	.text-14{ font-size: 14px; line-height: 22px; }
@@ -813,6 +833,10 @@
 	.process-vertical-active-line-for-tab{ left: 19px; }
 	.process-text-wrapper{ width: 478px; }
 
+	.accordion-number{ width: 40px; height: 40px; }
+	.faq-accordion{ width: 480px; }
+	.faq-accordion-title{ padding: 0; }
+	.hm-faq-title{ width: 550px; }
 }
 
 @media (max-width: 639px) {
@@ -822,6 +846,7 @@
 	h3, .h3 { font-size: 30px; }
 	h4, .h4 { font-size: 28px; }
 	h5, .h5 { font-size: 24px; }
+	h6, .h6 { font-size: 16px; line-height: 24px; }
 
 	.small-text   { font-size: 14px; }
 	.hm-services-left{ width: 350px; height: 220px; }
@@ -857,6 +882,8 @@
 	.process-text-wrapper{ width: 425px; }
 	.industries-image-wrapper{ height: 500px; }
 	.why-choose-us-images{ margin-top: 20px; }
+
+	.faq-accordion{ width: 445px; }
 }
 
 @media (max-width: 575px) {
@@ -869,7 +896,7 @@
 	h3, .h3 { font-size: 28px; }
 	h4, .h4 { font-size: 26px; }
 	h5, .h5 { font-size: 22px; }
-	h6, .h6 { font-size: 22px; }
+	/* h6, .h6 { font-size: 22px; } */
 
 	.small-text   { font-size: 14px; }
 	.text-18{ font-size: 14px; line-height: 22px; }
@@ -912,4 +939,7 @@
 
 	.industries-image-wrapper{ height: 410px; }
 	.industries-text-wrapper > span{ font-size: 38px; height: 36px; }
+
+	.hm-faq-title{ width: 100%; }
+	.faq-accordion{ width: 350px; }
 }

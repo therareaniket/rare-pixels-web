@@ -287,7 +287,7 @@ export default function ProcessSectionDesktop() {
                 <div className="process-tab-inner">
                     <div className="container-sm">
                         <div ref={containerRef} className="process-for-desktop">
-                            <div ref={titleWrapperRef} className="process-text-wrapper">
+                            <div ref={titleWrapperRef} className="process-text-wrapper text-black">
                                 <h2 className="text-sb">Work Process We Follow</h2>
 
                                 <p className="text-rg text-18">Every great outcome starts with understanding. We move from insight to execution through a process designed to reduce guesswork, improve collaboration, and build solutions that perform.</p>
@@ -304,15 +304,15 @@ export default function ProcessSectionDesktop() {
                                 </div>
 
                                 <div ref={pointerWrapperRef} className="process-pointer-wrapper active">
-                                    <div className="process-pointer-1 process-pointer active">
+                                    <div className="process-pointer-1 process-pointer active text-black">
                                         <div className="process-pointer-svg site-radius-20">
                                             <span className="icon-discover-process"></span>
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb">DISCOVER</h2>
+                                            <h2 className="text-sb text-black">DISCOVER</h2>
 
-                                            <p className="text-rg text-18">
+                                            <p className="text-rg text-18 text-black">
                                                 <span>Every meaningful solution begins with understanding.</span>
                                                 <span>We take time to understand your business, your users, and the challenges standing in the way of growth. The better the questions, the better the outcome.</span>
                                             </p>
@@ -324,14 +324,14 @@ export default function ProcessSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-2 process-pointer">
-                                        <div className="process-pointer-svg site-radius-20">
+                                        <div className="process-pointer-svg site-radius-20 text-black">
                                             <span className="icon-strategy-process"></span>
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb">STRATEGISE</h2>
+                                            <h2 className="text-sb text-black">STRATEGISE</h2>
 
-                                            <p className="text-rg text-18">
+                                            <p className="text-rg text-18 text-black">
                                                 <span>Direction creates momentum.</span>
                                                 <span>Ideas become impactful when backed by clarity. We bring together research, insights, and business goals to build a roadmap that gives every decision a purpose.</span>
                                             </p>
@@ -343,14 +343,14 @@ export default function ProcessSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-3 process-pointer">
-                                        <div className="process-pointer-svg site-radius-20">
+                                        <div className="process-pointer-svg site-radius-20 text-black">
                                             <span className="icon-create-process"></span>
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb">CREATE</h2>
+                                            <h2 className="text-sb text-black">CREATE</h2>
 
-                                            <p className="text-rg text-18">
+                                            <p className="text-rg text-18 text-black">
                                                 <span>Creativity with intention.</span>
                                                 <span>We design experiences, identities, and interactions that feel intuitive, leave an impression, and make your brand impossible to overlook.</span>
                                             </p>
@@ -362,14 +362,14 @@ export default function ProcessSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-4 process-pointer">
-                                        <div className="process-pointer-svg site-radius-20">
+                                        <div className="process-pointer-svg site-radius-20 text-black">
                                             <span className="icon-engineer-process"></span>
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb">ENGINEER</h2>
+                                            <h2 className="text-sb text-black">ENGINEER</h2>
 
-                                            <p className="text-rg text-18">
+                                            <p className="text-rg text-18 text-black">
                                                 <span>Built for the real world.</span>
                                                 <span>From websites to digital products, we develop solutions that are scalable, reliable, and engineered to perform long after launch.</span>
                                             </p>
@@ -381,14 +381,14 @@ export default function ProcessSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-5 process-pointer">
-                                        <div className="process-pointer-svg site-radius-20">
+                                        <div className="process-pointer-svg site-radius-20 text-black">
                                             <span className="icon-refine-process"></span>
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb">REFINE</h2>
+                                            <h2 className="text-sb text-black">REFINE</h2>
 
-                                            <p className="text-rg text-18">
+                                            <p className="text-rg text-18 text-black">
                                                 <span>The details shape the experience.</span>
                                                 <span>We test, improve, and fine-tune every interaction because the smallest refinements often make the biggest difference.</span>
                                             </p>
@@ -400,14 +400,14 @@ export default function ProcessSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-6 process-pointer">
-                                        <div className="process-pointer-svg site-radius-20">
+                                        <div className="process-pointer-svg site-radius-20 text-black">
                                             <span className="icon-deliver-svg"></span>
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb">DELIVER</h2>
+                                            <h2 className="text-sb text-black">DELIVER</h2>
 
-                                            <p className="text-rg text-18">
+                                            <p className="text-rg text-18 text-black">
                                                 <span>Launch is where the journey expands.</span>
                                                 <span>We deliver solutions with precision and stay invested in their growth, ensuring they continue to create value as your business evolves.</span>
                                             </p>

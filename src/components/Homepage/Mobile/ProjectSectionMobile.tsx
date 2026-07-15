@@ -47,7 +47,7 @@ export default function ProjectSectionMobile() {
                     <div className="projects-title-wrapper">
                         <h2 className="text-sb">Our Projects</h2>
 
-                        <p className="text-16 text-rg">
+                        <p className="text-14 text-rg">
                             A curated selection of work that reflects how we
                             design, build, and deliver impactful digital
                             experiences.
@@ -82,7 +82,7 @@ export default function ProjectSectionMobile() {
                                 <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
-                            <div className="projects-text-mob bg-light-pink">
+                            <div className="projects-text-mob bg-light-pink text-black">
                                 <h3 className="text-sb h5">COVRIZE</h3>
                                 <p className="text-16 text-rg">Transform your business with our platform, providing tailored software solutions to meet your unique needs.</p>
                             </div>

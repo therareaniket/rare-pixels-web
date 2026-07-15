@@ -85,7 +85,7 @@ export default function StatsSectionDesktop() {
                                     <Image src="images/homepage/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
-                                <p className="text-18 text-light text-rg text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                <p className="text-18 text-rg text-light-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                             </div>
                         </div>
                     </div>

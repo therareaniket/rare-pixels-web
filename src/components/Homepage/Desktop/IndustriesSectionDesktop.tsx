@@ -163,7 +163,7 @@ export default function IndustriesSectionDesktop() {
                 clipPath: isHorizontal
                     ? "inset(0% 50% 0% 50%)"
                     : "inset(50% 0% 50% 0%)",
-                duration: 1,
+                duration: 0.5,
                 ease: "power4.inOut",
 
                 onComplete: () => {
