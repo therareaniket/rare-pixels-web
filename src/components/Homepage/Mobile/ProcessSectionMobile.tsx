@@ -57,7 +57,7 @@ export default function ProcessSectionMobile() {
         ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
-            end: "+=3000",
+            end: "+=4000",
             // pin: true,
             scrub: true,
 

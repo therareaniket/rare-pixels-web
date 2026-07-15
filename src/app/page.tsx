@@ -20,6 +20,7 @@ const WhyChooseUsSectionDesktop = dynamic( () => import("@/components/Homepage/D
 const ProcessSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProcessSectionDesktop"), { ssr: false } );
 const ProjectsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProjectsSectionDesktop"), { ssr: false } );
 const StatsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/StatsSectionDesktop"), { ssr: false } );
+const BlogSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/BlogSectionDesktop"), { ssr: false } );
 
 export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
@@ -64,6 +65,7 @@ export default function Home() {
 						<ProcessSectionDesktop />
 						<ProjectsSectionDesktop />
 						<StatsSectionDesktop/>
+						<BlogSectionDesktop />
 					</>
 				}
 			</main>

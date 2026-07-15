@@ -65,12 +65,11 @@ export default function ProjectsSectionDesktop() {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
-                        start: "top 50px",
+                        start: "top -80px",
                         end: () => `+=${cards.length * 1000}`,
                         pin: true,
                         scrub: true,
                         invalidateOnRefresh: true,
-                        markers: true,
                     },
                 });
 
@@ -106,9 +105,9 @@ export default function ProjectsSectionDesktop() {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
-                        start: "top 50px",
+                        start: "top top",
                         end: () => `+=${cards.length * 800}`,
-                        pin: true,
+                        // pin: true,
                         scrub: true,
                         invalidateOnRefresh: true,
                     },

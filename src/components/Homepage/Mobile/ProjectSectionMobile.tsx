@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useEffect } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -58,7 +57,7 @@ export default function ProjectSectionMobile() {
                     <div className="projects-card-wrapper-mobile" ref={sliderRef}>
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-purple-shade">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-purple-shade text-black">
@@ -69,7 +68,7 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-green">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={513} height={406} autoPlay loop muted></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-green text-black">
@@ -80,7 +79,7 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-pink text-black">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-pink">
@@ -91,7 +90,7 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-yellow">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={513} height={406} autoPlay loop muted></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-yellow text-black">
@@ -102,7 +101,7 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-skin">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-skin text-black">
