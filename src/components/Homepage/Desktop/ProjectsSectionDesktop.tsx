@@ -105,9 +105,9 @@ export default function ProjectsSectionDesktop() {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
-                        start: "top top",
+                        start: "top -30px",
                         end: () => `+=${cards.length * 800}`,
-                        // pin: true,
+                        pin: true,
                         scrub: true,
                         invalidateOnRefresh: true,
                     },

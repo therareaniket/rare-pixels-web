@@ -79,7 +79,7 @@ export default function IndustriesSectionMobile() {
 
             ScrollTrigger.create({
                 trigger: sectionRef.current,
-                start: "top 30px",
+                start: "top -30px",
                 end: "+=" + (industries.length * window.innerHeight),
                 // pin: true,
                 scrub: true,

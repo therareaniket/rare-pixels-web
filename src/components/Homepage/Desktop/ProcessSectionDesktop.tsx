@@ -41,8 +41,8 @@ export default function ProcessSectionDesktop() {
                 const p = pointer.querySelector(".process-pointer-text-wrapper p");
                 const tick = pointer.querySelector(".process-complete-tick");
 
-                const isActive = i === activeIndex;
-                const isCompleted = i < activeIndex;
+                const isActive = activeIndex >= 0 && i === activeIndex;
+                const isCompleted = activeIndex > 0 && i < activeIndex;
 
                 pointer.classList.toggle("active", isActive);
 
@@ -74,27 +74,27 @@ export default function ProcessSectionDesktop() {
             });
 
             elements.forEach((el, i) => {
+                const shouldShow =
+                    activeIndex >= 0 && i === activeIndex;
+
                 gsap.to(el, {
-                    autoAlpha: i === activeIndex ? 1 : 0,
+                    autoAlpha: shouldShow ? 1 : 0,
                     duration: 0.4,
                     ease: "power2.out",
                     overwrite: true,
                     onStart: () => {
-                        if (i === activeIndex) {
+                        if (shouldShow) {
                             gsap.set(el, { display: "block" });
                         }
                     },
                     onComplete: () => {
-                        if (i !== activeIndex) {
+                        if (!shouldShow) {
                             gsap.set(el, { display: "none" });
                         }
                     }
                 });
             });
         };
-
-        console.log("Pointers:", pointers.length);
-        console.log("Elements:", elements.length);
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -112,15 +112,12 @@ export default function ProcessSectionDesktop() {
                 },
 
                 onUpdate: (self) => {
-                    let activeIndex;
+                    const totalSteps = pointers.length + 1;
 
-                    if (self.progress > 0.99) {
-                        activeIndex = pointers.length;
-                    } else {
-                        activeIndex = Math.floor(
-                            self.progress * pointers.length
-                        );
-                    }
+                    const activeIndex = Math.min(
+                        pointers.length - 1,
+                        Math.floor(self.progress * totalSteps) - 1
+                    );
 
                     if (activeIndex !== currentStep) {
                         currentStep = activeIndex;
@@ -131,16 +128,20 @@ export default function ProcessSectionDesktop() {
         });
 
         gsap.set(pointers, { opacity: 0.5 });
-        if (pointers[0]) {
-            gsap.set(pointers[0], { opacity: 1 });
-        }
 
-        gsap.set(elements, { autoAlpha: 0, display: "none" });
-        if (elements[0]) {
-            gsap.set(elements[0], { autoAlpha: 1, display: "block" });
-        }
+        gsap.set(elements, {
+            autoAlpha: 0,
+            display: "none"
+        });
 
-        setActiveStep(0);
+        pointers.forEach((pointer) => {
+            const p = pointer.querySelector(".process-pointer-text-wrapper p");
+
+            gsap.set(p, {
+                height: 0,
+                opacity: 0
+            });
+        });
 
         tl.to(containerRef.current, {
             display: "flex",

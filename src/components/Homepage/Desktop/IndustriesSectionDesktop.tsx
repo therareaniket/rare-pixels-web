@@ -84,6 +84,7 @@ export default function IndustriesSectionDesktop() {
                 pin: true,
                 scrub: true,
                 // markers: true,
+                invalidateOnRefresh: true,
                 refreshPriority: 10,
 
                 onUpdate: (self) => {
@@ -101,7 +102,6 @@ export default function IndustriesSectionDesktop() {
 
         return () => {
             clearTimeout(timer);
-            // industriesTrigger.kill();
         };
 
     }, []);
@@ -111,7 +111,7 @@ export default function IndustriesSectionDesktop() {
             '.industries-title-name',
             {
                 opacity: 0,
-                x: 100,
+                x: 300,
             },
             {
                 opacity: 1,
@@ -127,7 +127,7 @@ export default function IndustriesSectionDesktop() {
             '.industry-detailtext',
             {
                 opacity: 0,
-                y: 100,
+                y: 300,
             },
             {
                 opacity: 1,
@@ -163,7 +163,7 @@ export default function IndustriesSectionDesktop() {
                 clipPath: isHorizontal
                     ? "inset(0% 50% 0% 50%)"
                     : "inset(50% 0% 50% 0%)",
-                duration: 0.5,
+                duration: 0.8,
                 ease: "power4.inOut",
 
                 onComplete: () => {

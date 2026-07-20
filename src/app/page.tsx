@@ -11,6 +11,7 @@ import ProcessSectionMobile from "@/components/Homepage/Mobile/ProcessSectionMob
 import ProjectSectionMobile from "@/components/Homepage/Mobile/ProjectSectionMobile";
 import StatsSectionMobile from "@/components/Homepage/Mobile/StatsSectionMobile";
 import FaqSectionMobile from "@/components/Homepage/Mobile/FaqSectionMobile";
+import InquirySectionMobile from "@/components/Homepage/Mobile/InquirySectionMobile";
 
 const HeroSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/HeroSectionDesktop"), { ssr: false } );
 const TestimonialSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/TestimonialSectionDesktop"), { ssr: false } );
@@ -23,6 +24,7 @@ const ProjectsSectionDesktop = dynamic( () => import("@/components/Homepage/Desk
 const StatsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/StatsSectionDesktop"), { ssr: false } );
 // const BlogSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/BlogSectionDesktop"), { ssr: false } );
 const FaqSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/FaqSectionDesktop"), { ssr: false } );
+const InquirySectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/InquirySectionDesktop"), { ssr: false } );
 
 export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
@@ -55,6 +57,7 @@ export default function Home() {
 						<ProjectSectionMobile />
 						<StatsSectionMobile />
 						<FaqSectionMobile />
+						<InquirySectionMobile />
 					</>
 					:
 					<>
@@ -70,6 +73,7 @@ export default function Home() {
 						<StatsSectionDesktop/>
 						{/* <BlogSectionDesktop /> */}
 						<FaqSectionDesktop />
+						<InquirySectionDesktop />
 					</>
 				}
 			</main>

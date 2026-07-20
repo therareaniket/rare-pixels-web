@@ -230,6 +230,14 @@
 
     .faq-accordion { width: 390px; }
     .accordion-item-wrapper { gap: 6px; }
+
+    .inquiry-form-mob-wrapper{ display: flex; flex-direction: column; gap: 22px; margin-top: 30px; }
+    .inqury-form-mob-fields{ display: flex; flex-direction: column; gap: 14px; margin-top: 10px; }
+    .inquiry-mob-field{ padding: 6px 14px; width: max-content; }
+    .inquiry-mob-field div{ display: flex; align-items: center; gap: 6px;  }
+    .inquiry-form-input{ background-color: red; width: 18px; height: 18px; fill: transparent; outline-color: #C6C6C6; }
+    .inquiry-form-enter-field{  border: none; outline: none; border-bottom: 1px solid #8C8B8C; color: #8C8B8C; }
+    .inquiry-mob-cta-link{ margin-top: 20px; }
 }
 
 @media (max-width: 439px) {
@@ -238,6 +246,7 @@
     h2, .h2 { font-size: 28px; line-height: 36px; }
     h3, .h3 { font-size: 26px; line-height: 34px; }
     h4, .h4 { font-size: 26px; line-height: 34px; }
+    h5, .h5 { font-size: 24px; line-height: 32px; }
     h6, .h6 { font-size: 22px; }
     body { font-size: 24px; }
 
@@ -370,6 +379,8 @@
     .process-vertical-line{ left: 16px; }
     .process-vertical-line-active{ left: 16px; }
     .process-card-mobile.active{ max-height: 200px; }
+
+    .inquiry-form-mob-wrapper{ gap: 20px; }
 }
 
 @media (max-width: 374px) {
@@ -401,6 +412,8 @@
 
     .process-card-mob-text{ width: 275px; }
     .projects-text-mob{ height: 115px; }
+
+    .faq-accordion{ width: 275px; }
 }
 
 @media (max-width: 359px) {
@@ -416,4 +429,6 @@
     .hm-abt-card-mobile{ height: 185px; }
 
     .process-card-mob-text{ width: 260px; }
+
+    .faq-accordion{ width: 265px; }
 }

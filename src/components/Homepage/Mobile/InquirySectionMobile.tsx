@@ -1,0 +1,86 @@
+'use client';
+
+import GlassEffect from "@/components/LiquideGlass";
+import Link from "next/link";
+import "@/assets/css/mobile-custom.css";
+import "@/assets/css/responsive/mobile-responsive.css";
+
+export default function InquirySectionMobile() {
+    return (
+        <>
+            <section className="section bg-yellowish">
+                <div className="container">
+                    <h2 className="text-sb text-black">Project Inquiry Form</h2>
+
+                    <p className="text-rg text-16 text-black">Whether you&apos;re launching a new brand, designing a digital product, or scaling an existing business, we&apos;d love to hear your vision. Tell us about your project, and we&apos;ll help transform ideas into impactful digital experiences.</p>
+
+                    <div className="inquiry-form-mob-wrapper">
+                        <div className="inquiry-form-mob-name">
+                            <h3 className="text-rg text-black h5">Hello! My name is</h3>
+                            <input className="text-rg h5 inquiry-form-enter-field" type="text" name="" id="" placeholder="your full name" />
+                        </div>
+
+                        <h3 className="text-rg text-black h5">and I want to discuss a potential project. </h3>
+
+                        <div className="inquiry-form-mob-email">
+                            <h3 className="text-rg text-black h5">You can email me at </h3>
+                            <input className="text-rg h5  inquiry-form-enter-field" type="email" name="" id="" placeholder="your@email.com" />
+                        </div>
+
+                        <div className="inquiry-form-mob-phone">
+                            <h3 className="text-rg text-black h5">or reach me on</h3>
+                            <input className="text-rg h5  inquiry-form-enter-field" type="number" name="" id="" placeholder="your phone" />
+                        </div>
+
+                        <div className="inquiry-form-mob-subject">
+                            <h3 className="text-rg text-black h5">Here are some details about my project:</h3>
+                            <input className="text-rg h5  inquiry-form-enter-field" type="text" name="" id="" placeholder="My project is about...." />
+                        </div>
+
+                        <div className="inquiry-form-mob-interests">
+                            <h3 className="h5 text-rg text-black">I’m interested in (select one or more)</h3>
+
+                            <div className="inqury-form-mob-fields">
+                                <GlassEffect className="inquiry-mob-field">
+                                    <div>
+                                        <input type="checkbox" name="" id="" className="inquiry-form-input" />
+
+                                        <label htmlFor="" className="text-rg text-18 text-black">UI/UX Design</label>
+                                    </div>
+                                </GlassEffect>
+
+                                <GlassEffect className="inquiry-mob-field">
+                                    <div>
+                                        <input type="checkbox" name="" id="" className="inquiry-form-input" />
+
+                                        <label htmlFor="" className="text-rg text-18 text-black">Web & App Development</label>
+                                    </div>
+                                </GlassEffect>
+
+                                <GlassEffect className="inquiry-mob-field">
+                                    <div>
+                                        <input type="checkbox" name="" id="" className="inquiry-form-input" />
+
+                                        <label htmlFor="" className="text-rg text-18 text-black">Brand Identity Design</label>
+                                    </div>
+                                </GlassEffect>
+
+                                <GlassEffect className="inquiry-mob-field">
+                                    <div>
+                                        <input type="checkbox" name="" id="" className="inquiry-form-input" />
+
+                                        <label htmlFor="" className="text-rg text-18 text-black">Social Media Management</label>
+                                    </div>
+                                </GlassEffect>
+                            </div>
+                        </div>
+                    </div>
+
+                    <Link href="#" title="Make it RARE" className="hero-link-cta inquiry-mob-cta-link text-md">
+                        Start Your Project <span className="icon-hero-cta-arrow cta-arrow"></span>
+                    </Link>
+                </div>
+            </section>
+        </>
+    );
+}
