@@ -104,6 +104,8 @@
 	.hm-faq-title{ width: 725px; }
 	.faq-accordion{ width: 1150px; }
 	.faq-accordion-title{ padding: 5px 0; }
+
+	.process-title-wrapper{ min-height: 140px; }
 }
 
 @media (max-width: 1599px) {
@@ -347,9 +349,9 @@
 	.process-pointer{ width: 470px; max-height: 44px; }
 	.process-elements-wrapper{ height: 470px; }
 	.process-pointer-svg{ width: 44px; height: 44px; border-radius: 15px !important; }
-	.process-element-art-board{ width: 200px; height: 200px; }
-
+	.process-element-art-board{ width: 250px; height: 250px; }
 	.process-pointer-wrapper{ gap: 20px; }
+	.process-title-wrapper{ min-height: 105px; }
 
 	.faq-accordion{ width: 875px; }
 }

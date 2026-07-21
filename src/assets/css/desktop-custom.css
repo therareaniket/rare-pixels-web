@@ -201,7 +201,7 @@
 
 /* Process Section */
 
-/* .process-tab-sticky{ position: relative; height: 6000px; }
+/* .process-tab-sticky{ position: relative; height: 11000px; }
 .process-tab-inner{ position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; } */
 
 .process-pointer { position: relative; display: flex; align-items: flex-start; width: 590px; gap: 20px; max-height: 54px; overflow: hidden; }
@@ -366,7 +366,9 @@
 
 .inquiry-form-link{ margin-top: 40px; }
 
-.process-title-wrapper { position: relative; width: 100%; min-height: 180px; }
+.inquiry-form-contact-fields-tablet{ display: none; }
+
+.process-title-wrapper { position: relative; width: 100%; min-height: 150px; }
 .process-title-text-wrapper { width: 697px; }
 .process-title-center { position: absolute; top: 0; left: 50%; transform: translateX(-50%); text-align: center; opacity: 1; }
 .process-title-left { position: absolute; top: 0; left: 0; text-align: left; opacity: 0; }

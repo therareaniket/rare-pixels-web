@@ -101,7 +101,7 @@ export default function ProcessSectionDesktop() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: processSectionRef.current,
-                start: "top -80px",
+                start: "top -50px",
                 end: `+=${window.innerHeight * pointers.length * 2}`,
                 pin: true,
                 scrub: 1.2,
@@ -233,73 +233,72 @@ export default function ProcessSectionDesktop() {
 
     }, { scope: processSectionRef });
 
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-    //     const cards = gsap.utils.toArray<HTMLElement>(".process-pointer-tablet");
+        const cards = gsap.utils.toArray<HTMLElement>(".process-pointer-tablet");
 
-    //     const activeLine = document.querySelector(".process-vertical-active-line-for-tab") as HTMLElement
+        const activeLine = document.querySelector(".process-vertical-active-line-for-tab") as HTMLElement
 
-    //     const setActive = (activeIndex: number) => {
-    //         cards.forEach((card, i) => {
-    //             const content = card.querySelector("p");
-    //             const tick = card.querySelector(".process-tick-tab");
+        const setActive = (activeIndex: number) => {
+            cards.forEach((card, i) => {
+                const content = card.querySelector("p");
+                const tick = card.querySelector(".process-mobile-tick");
 
-    //             const isOpen = i >= activeIndex;
+                const isOpen = i >= activeIndex;
 
-    //             card.classList.toggle("active", isOpen);
-    //             card.classList.toggle("completed", !isOpen);
+                card.classList.toggle("active", isOpen);
+                card.classList.toggle("completed", !isOpen);
 
-    //             gsap.to(content, {
-    //                 opacity: 1,
-    //                 y: isOpen ? 0 : 20,
-    //                 duration: 0.4,
-    //                 overwrite: true,
-    //             });
+                gsap.to(content, {
+                    opacity: 1,
+                    y: isOpen ? 0 : 20,
+                    duration: 0.4,
+                    overwrite: true,
+                });
 
-    //             gsap.to(tick, {
-    //                 opacity: isOpen ? 0 : 1,
-    //                 scale: isOpen ? 0.5 : 1,
-    //                 duration: 0.3,
-    //                 overwrite: true,
-    //             });
-    //         });
+                gsap.to(tick, {
+                    opacity: isOpen ? 0 : 1,
+                    scale: isOpen ? 0.5 : 1,
+                    duration: 0.3,
+                    overwrite: true,
+                });
+            });
 
-    //         const progress = activeIndex / cards.length;
+            const progress = activeIndex / cards.length;
 
-    //         gsap.to(activeLine, {
-    //             height: `${progress * 90}%`,
-    //             duration: 1,
-    //             overwrite: true,
-    //         });
-    //     };
+            gsap.to(activeLine, {
+                height: `${progress * 90}%`,
+                duration: 1,
+                overwrite: true,
+            });
+        };
 
-    //     cards.forEach((card) => {
-    //         card.classList.add("active");
-    //     });
+        cards.forEach((card) => {
+            card.classList.add("active");
+        });
 
-    //     const tabletTrigger = ScrollTrigger.create({
-    //         trigger: processSectionRef.current,
-    //         start: "top top",
-    //         end: "+=3000",
-    //         // pin: true,
-    //         scrub: true,
-    //         // markers: true,
+        ScrollTrigger.create({
+            trigger: processSectionRef.current,
+            start: "top top",
+            end: "+=4000",
+            // pin: true,
+            scrub: true,
 
-    //         onUpdate: (self) => {
-    //             const activeIndex = Math.min(
-    //                 cards.length,
-    //                 Math.floor(self.progress * (cards.length + 1))
-    //             );
+            onUpdate: (self) => {
+                const activeIndex = Math.min(
+                    cards.length,
+                    Math.floor(self.progress * (cards.length + 1))
+                );
 
-    //             setActive(activeIndex);
-    //         },
-    //     });
+                setActive(activeIndex);
+            },
+        });
 
-    //     return () => {
-    //         tabletTrigger.kill();
-    //     };
-    // }, []);
+        return () => {
+            ScrollTrigger.getAll().forEach((st) => st.kill());
+        };
+    }, []);
 
     return (
         <>

@@ -45,21 +45,21 @@ const industries = [
     },
 
     {
-        video: "/images/homepage/industries/video-pending-image.png",
+        video: "/images/homepage/industries/education-industry.mp4",
         title: "Education & EdTech",
         desc1: "The best learning experiences never feel complicated.",
         desc2: "We create intuitive platforms that keep students focused on learning, not figuring out how things work.",
     },
 
     {
-        video: "/images/homepage/industries/video-pending-image.png",
+        video: "/images/homepage/industries/ai-industry.mp4",
         title: "AI & Emerging Tech",
         desc1: "Innovation means little if people can't understand it.",
         desc2: "We humanize emerging technologies through experiences that make complex products easier to adopt and trust.",
     },
 
     {
-        video: "/images/homepage/industries/video-pending-image.png",
+        video: "/images/homepage/industries/food-industry.mp4",
         title: "Food & Lifestyle",
         desc1: "People remember how brands make them feel.",
         desc2: "We help food and lifestyle brands create memorable identities that drive loyalty beyond the first purchase.",
@@ -83,7 +83,7 @@ export default function IndustriesSectionMobile() {
             ScrollTrigger.create({
                 trigger: sectionRef.current,
                 start: "top -30px",
-                end: "+=" + (industries.length * window.innerHeight),
+                end: "bottom bottom",
                 // pin: true,
                 scrub: true,
                 // markers: true,
@@ -112,23 +112,22 @@ export default function IndustriesSectionMobile() {
     useEffect(() => {
         if (!titleRef.current) return;
 
-        gsap.fromTo(
-            titleRef.current,
+        gsap.set(titleRef.current,
             {
                 opacity: 0,
                 x: -100,
-            },
-            {
-                opacity: 1,
-                x: 0,
-                duration: 1,
-                ease: 'power3.out',
-            }
+            })
+        gsap.to(titleRef.current, {
+            opacity: 1,
+            x: 0,
+            duration: 1.5,
+            ease: 'power3.out',
+        }
         );
     }, [displayIndex]);
 
     useEffect(() => {
-        if(!detailTextRef.current) return;
+        if (!detailTextRef.current) return;
 
         gsap.fromTo(
             detailTextRef.current,
@@ -139,7 +138,7 @@ export default function IndustriesSectionMobile() {
             {
                 opacity: 1,
                 y: 0,
-                duration: 1,
+                duration: 1.5,
                 ease: 'power3.out',
             }
         );
@@ -172,8 +171,8 @@ export default function IndustriesSectionMobile() {
                 clipPath: isHorizontal
                     ? "inset(0% 50% 0% 50%)"
                     : "inset(50% 0% 50% 0%)",
-                duration: 1,
-                ease: "power4.inOut",
+                duration: 0.5,
+                ease: "power3.inOut",
 
                 onComplete: () => {
                     setDisplayIndex(activeIndex);

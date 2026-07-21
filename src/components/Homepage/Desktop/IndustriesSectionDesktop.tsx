@@ -45,21 +45,21 @@ const industries = [
     },
 
     {
-        video: "/images/homepage/industries/video-pending-image.png",
+        video: "/images/homepage/industries/education-industry.mp4",
         title: "Education & EdTech",
         desc1: "The best learning experiences never feel complicated.",
         desc2: "We create intuitive platforms that keep students focused on learning, not figuring out how things work.",
     },
 
     {
-        video: "/images/homepage/industries/video-pending-image.png",
+        video: "/images/homepage/industries/ai-industry.mp4",
         title: "AI & Emerging Tech",
         desc1: "Innovation means little if people can't understand it.",
         desc2: "We humanize emerging technologies through experiences that make complex products easier to adopt and trust.",
     },
 
     {
-        video: "/images/homepage/industries/video-pending-image.png",
+        video: "/images/homepage/industries/food-industry.mp4",
         title: "Food & Lifestyle",
         desc1: "People remember how brands make them feel.",
         desc2: "We help food and lifestyle brands create memorable identities that drive loyalty beyond the first purchase.",
