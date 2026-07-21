@@ -70,6 +70,7 @@ export default function IndustriesSectionDesktop() {
 
     const sectionRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [displayIndex, setDisplayIndex] = useState(0);
     const currentVideoRef = useRef<HTMLVideoElement | null>(null);
     const nextVideoRef = useRef<HTMLVideoElement | null>(null);
     const prevIndex = useRef(0);
@@ -116,11 +117,11 @@ export default function IndustriesSectionDesktop() {
             {
                 opacity: 1,
                 x: 0,
-                duration: 2,
+                duration: 0.8,
                 ease: 'power3.out',
             }
         );
-    }, [activeIndex]);
+    }, [displayIndex]);
 
     useEffect(() => {
         gsap.fromTo(
@@ -132,11 +133,11 @@ export default function IndustriesSectionDesktop() {
             {
                 opacity: 1,
                 y: 0,
-                duration: 2,
+                duration: 0.8,
                 ease: 'power3.out',
             }
         );
-    }, [activeIndex]);
+    }, [displayIndex]);
 
     useEffect(() => {
         if (activeIndex === prevIndex.current) return;
@@ -152,6 +153,8 @@ export default function IndustriesSectionDesktop() {
         next.load();
 
         next.onloadeddata = () => {
+                    setDisplayIndex(activeIndex); // <-- add this
+
 
             gsap.set(current, {
                 clipPath: "inset(0% 0% 0% 0%)"
@@ -173,6 +176,7 @@ export default function IndustriesSectionDesktop() {
                     gsap.set(current, {
                         clipPath: "inset(0% 0% 0% 0%)"
                     });
+
 
                     prevIndex.current = activeIndex;
                 }
@@ -234,11 +238,13 @@ export default function IndustriesSectionDesktop() {
                             </div>
 
                             <div className="industries-text-wrapper industry-content" key={activeIndex}>
-                                <span className="text-sb industries-title-name"> {industries[activeIndex].title} </span>
+                                <span className="text-sb industries-title-name">
+                                    {industries[displayIndex].title}
+                                </span>
 
                                 <p className="text-18 text-grey industry-detailtext">
-                                    <span className="text-rg"> {industries[activeIndex].desc1} </span>
-                                    <span className="text-rg"> {industries[activeIndex].desc2} </span>
+                                    <span className="text-rg"> {industries[displayIndex].desc1} </span>
+                                    <span className="text-rg"> {industries[displayIndex].desc2} </span>
                                 </p>
                             </div>
                         </div>

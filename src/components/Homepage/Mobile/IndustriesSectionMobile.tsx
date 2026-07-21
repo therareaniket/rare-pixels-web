@@ -116,7 +116,7 @@ export default function IndustriesSectionMobile() {
             {
                 opacity: 1,
                 x: 0,
-                duration: 2,
+                duration: 1,
                 ease: 'power3.out',
             }
         );
@@ -132,7 +132,7 @@ export default function IndustriesSectionMobile() {
             {
                 opacity: 1,
                 y: 0,
-                duration: 2,
+                duration: 1,
                 ease: 'power3.out',
             }
         );
@@ -151,7 +151,7 @@ export default function IndustriesSectionMobile() {
         next.src = nextSrc;
         next.load();
 
-        next.oncanplay = () => {
+        next.onloadeddata = () => {
 
             gsap.set(current, {
                 clipPath: "inset(0% 0% 0% 0%)"
@@ -167,24 +167,22 @@ export default function IndustriesSectionMobile() {
                 ease: "power4.inOut",
 
                 onComplete: () => {
+                    prevIndex.current = activeIndex;
 
                     gsap.set(current, {
                         opacity: 0
                     });
 
                     current.src = nextSrc;
-                    current.load();
 
-                    current.oncanplay = () => {
+                    current.onloadeddata = () => {
 
                         gsap.set(current, {
                             clipPath: "inset(0% 0% 0% 0%)",
                             opacity: 1
                         });
 
-                        current.play();
-
-                        prevIndex.current = activeIndex;
+                        current.play(); 
                     };
                 }
             });

@@ -18,6 +18,8 @@ export default function ProcessSectionDesktop() {
     const elementsRef = useRef<HTMLDivElement | null>(null);
     const pointerWrapperRef = useRef<HTMLDivElement | null>(null);
     const elementWrapperRef = useRef<HTMLDivElement | null>(null);
+    const centerTitleRef = useRef<HTMLDivElement | null>(null);
+    const leftTitleRef = useRef<HTMLDivElement | null>(null);
 
     let currentStep = -1;
 
@@ -134,6 +136,18 @@ export default function ProcessSectionDesktop() {
             display: "none"
         });
 
+        const centerRect = centerTitleRef.current?.getBoundingClientRect();
+        const leftRect = leftTitleRef.current?.getBoundingClientRect();
+
+        if (centerRect && leftRect) {
+            const offset = centerRect.left - leftRect.left;
+
+            gsap.set(leftTitleRef.current, {
+                x: offset,
+                opacity: 0
+            });
+        }
+
         pointers.forEach((pointer) => {
             const p = pointer.querySelector(".process-pointer-text-wrapper p");
 
@@ -152,13 +166,18 @@ export default function ProcessSectionDesktop() {
             duration: 1
         }, 0)
 
-            .to(titleWrapperRef.current, {
-                marginLeft: "0px",
-                marginRight: "auto",
-                textAlign: "left",
-                duration: 0.8,
-                ease: "power2.inOut"
-            }, 0)
+        tl.to(centerTitleRef.current, {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.out"
+        }, 0);
+
+        tl.to(leftTitleRef.current, {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power2.inOut"
+        }, 0)
 
             .to(pointerWrapperRef.current, {
                 marginLeft: "auto",
@@ -214,73 +233,73 @@ export default function ProcessSectionDesktop() {
 
     }, { scope: processSectionRef });
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
 
-        const cards = gsap.utils.toArray<HTMLElement>(".process-pointer-tablet");
+    //     const cards = gsap.utils.toArray<HTMLElement>(".process-pointer-tablet");
 
-        const activeLine = document.querySelector(".process-vertical-active-line-for-tab") as HTMLElement
+    //     const activeLine = document.querySelector(".process-vertical-active-line-for-tab") as HTMLElement
 
-        const setActive = (activeIndex: number) => {
-            cards.forEach((card, i) => {
-                const content = card.querySelector("p");
-                const tick = card.querySelector(".process-tick-tab");
+    //     const setActive = (activeIndex: number) => {
+    //         cards.forEach((card, i) => {
+    //             const content = card.querySelector("p");
+    //             const tick = card.querySelector(".process-tick-tab");
 
-                const isOpen = i >= activeIndex;
+    //             const isOpen = i >= activeIndex;
 
-                card.classList.toggle("active", isOpen);
-                card.classList.toggle("completed", !isOpen);
+    //             card.classList.toggle("active", isOpen);
+    //             card.classList.toggle("completed", !isOpen);
 
-                gsap.to(content, {
-                    opacity: 1,
-                    y: isOpen ? 0 : 20,
-                    duration: 0.4,
-                    overwrite: true,
-                });
+    //             gsap.to(content, {
+    //                 opacity: 1,
+    //                 y: isOpen ? 0 : 20,
+    //                 duration: 0.4,
+    //                 overwrite: true,
+    //             });
 
-                gsap.to(tick, {
-                    opacity: isOpen ? 0 : 1,
-                    scale: isOpen ? 0.5 : 1,
-                    duration: 0.3,
-                    overwrite: true,
-                });
-            });
+    //             gsap.to(tick, {
+    //                 opacity: isOpen ? 0 : 1,
+    //                 scale: isOpen ? 0.5 : 1,
+    //                 duration: 0.3,
+    //                 overwrite: true,
+    //             });
+    //         });
 
-            const progress = activeIndex / cards.length;
+    //         const progress = activeIndex / cards.length;
 
-            gsap.to(activeLine, {
-                height: `${progress * 90}%`,
-                duration: 1,
-                overwrite: true,
-            });
-        };
+    //         gsap.to(activeLine, {
+    //             height: `${progress * 90}%`,
+    //             duration: 1,
+    //             overwrite: true,
+    //         });
+    //     };
 
-        cards.forEach((card) => {
-            card.classList.add("active");
-        });
+    //     cards.forEach((card) => {
+    //         card.classList.add("active");
+    //     });
 
-        const tabletTrigger = ScrollTrigger.create({
-            trigger: processSectionRef.current,
-            start: "top top",
-            end: "+=3000",
-            // pin: true,
-            scrub: true,
-            // markers: true,
+    //     const tabletTrigger = ScrollTrigger.create({
+    //         trigger: processSectionRef.current,
+    //         start: "top top",
+    //         end: "+=3000",
+    //         // pin: true,
+    //         scrub: true,
+    //         // markers: true,
 
-            onUpdate: (self) => {
-                const activeIndex = Math.min(
-                    cards.length,
-                    Math.floor(self.progress * (cards.length + 1))
-                );
+    //         onUpdate: (self) => {
+    //             const activeIndex = Math.min(
+    //                 cards.length,
+    //                 Math.floor(self.progress * (cards.length + 1))
+    //             );
 
-                setActive(activeIndex);
-            },
-        });
+    //             setActive(activeIndex);
+    //         },
+    //     });
 
-        return () => {
-            tabletTrigger.kill();
-        };
-    }, []);
+    //     return () => {
+    //         tabletTrigger.kill();
+    //     };
+    // }, []);
 
     return (
         <>
@@ -288,10 +307,28 @@ export default function ProcessSectionDesktop() {
                 <div className="process-tab-inner">
                     <div className="container-sm">
                         <div ref={containerRef} className="process-for-desktop">
-                            <div ref={titleWrapperRef} className="process-text-wrapper text-black">
+                            {/* <div ref={titleWrapperRef} className="process-title-text-wrapper text-black">
                                 <h2 className="text-sb">Work Process We Follow</h2>
 
                                 <p className="text-rg text-18">Every great outcome starts with understanding. We move from insight to execution through a process designed to reduce guesswork, improve collaboration, and build solutions that perform.</p>
+                            </div> */}
+
+                            <div ref={titleWrapperRef} className="process-title-wrapper">
+                                <div ref={centerTitleRef} className="process-title-text-wrapper process-title-center">
+                                    <h2 className="text-sb">Work Process We Follow</h2>
+
+                                    <p className="text-rg text-18">
+                                        Every great outcome starts with understanding. We move from insight to execution through a process designed to reduce guesswork, improve collaboration, and build solutions that perform.
+                                    </p>
+                                </div>
+
+                                <div ref={leftTitleRef} className="process-title-text-wrapper process-title-left">
+                                    <h2 className="text-sb">Work Process We Follow</h2>
+
+                                    <p className="text-rg text-18">
+                                        Every great outcome starts with understanding. We move from insight to execution through a process designed to reduce guesswork, improve collaboration, and build solutions that perform.
+                                    </p>
+                                </div>
                             </div>
 
                             <div ref={elementWrapperRef} className="process-elements-wrapper">

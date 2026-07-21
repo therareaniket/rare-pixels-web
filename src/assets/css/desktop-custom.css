@@ -204,8 +204,6 @@
 /* .process-tab-sticky{ position: relative; height: 6000px; }
 .process-tab-inner{ position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; } */
 
-.process-text-wrapper { width: 697px; margin: 0 auto; text-align: center; transition: all 0.5s ease; }
-.process-text-wrapper.active { width: 100%; margin: 0; text-align: left; }
 .process-pointer { position: relative; display: flex; align-items: flex-start; width: 590px; gap: 20px; max-height: 54px; overflow: hidden; }
 .process-pointer.active { max-height: 220px; }
 .process-pointer-svg{ font-size: 24px; background-color: #E8DB7D; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; }
@@ -367,3 +365,8 @@
 .inquiry-checkbox-wrapper input { width: 30px; height: 30px; border: 1px solid #C6C6C6; outline-color: #C6C6C6; background-color: red; }
 
 .inquiry-form-link{ margin-top: 40px; }
+
+.process-title-wrapper { position: relative; width: 100%; min-height: 180px; }
+.process-title-text-wrapper { width: 697px; }
+.process-title-center { position: absolute; top: 0; left: 50%; transform: translateX(-50%); text-align: center; opacity: 1; }
+.process-title-left { position: absolute; top: 0; left: 0; text-align: left; opacity: 0; }
