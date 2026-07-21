@@ -238,6 +238,8 @@
     .inquiry-form-input{ background-color: red; width: 18px; height: 18px; fill: transparent; outline-color: #C6C6C6; }
     .inquiry-form-enter-field{  border: none; outline: none; border-bottom: 1px solid #8C8B8C; color: #8C8B8C; }
     .inquiry-mob-cta-link{ margin-top: 20px; }
+
+    .faq-link-mob{ display: flex; align-items: center; width: max-content; gap: 6px; padding: 6px 12px; margin-top: 30px; margin-left: auto; }
 }
 
 @media (max-width: 439px) {

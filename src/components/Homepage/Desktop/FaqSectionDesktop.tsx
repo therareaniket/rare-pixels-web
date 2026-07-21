@@ -145,7 +145,7 @@ export default function FaqSectionDesktop() {
                                 </div>
                             </Accordion>
 
-                            <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-btn">
+                            <Link href="#" title="Ask Your Queries" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-btn">
                                 <span className="text-20 text-md text-white">Ask Your Queries</span>
                                 <Image src="/images/homepage/faq-mic.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                             </Link>

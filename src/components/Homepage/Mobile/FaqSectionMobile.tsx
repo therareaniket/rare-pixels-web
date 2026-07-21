@@ -6,6 +6,8 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function FaqSectionMobile() {
     return (
@@ -139,6 +141,10 @@ export default function FaqSectionMobile() {
                             </AccordionItem>
                         </div>
                     </Accordion>
+
+                    <Link href="#" title="Ask Yout Queries" className="hero-link-cta text-md faq-link-mob">
+                        Ask Your Queries <Image src="/images/homepage/faq-mic.svg" alt="arrow-for-navigation" width= {18} height={18}></Image>
+                    </Link>
                 </div>
             </section>
         </>
