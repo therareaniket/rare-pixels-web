@@ -70,9 +70,12 @@ export default function IndustriesSectionMobile() {
 
     const sectionRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [displayIndex, setDisplayIndex] = useState(0);
     const currentVideoRef = useRef<HTMLVideoElement | null>(null);
     const nextVideoRef = useRef<HTMLVideoElement | null>(null);
     const prevIndex = useRef(0);
+    const titleRef = useRef<HTMLElement | null>(null);
+    const detailTextRef = useRef<HTMLDivElement | null>(null);
 
     useLayoutEffect(() => {
         const timer = setTimeout(() => {
@@ -107,11 +110,13 @@ export default function IndustriesSectionMobile() {
     }, []);
 
     useEffect(() => {
+        if (!titleRef.current) return;
+
         gsap.fromTo(
-            '.industries-title-name',
+            titleRef.current,
             {
                 opacity: 0,
-                x: 100,
+                x: -100,
             },
             {
                 opacity: 1,
@@ -120,11 +125,13 @@ export default function IndustriesSectionMobile() {
                 ease: 'power3.out',
             }
         );
-    }, [activeIndex]);
+    }, [displayIndex]);
 
     useEffect(() => {
+        if(!detailTextRef.current) return;
+
         gsap.fromTo(
-            '.industry-detailtext',
+            detailTextRef.current,
             {
                 opacity: 0,
                 y: 100,
@@ -136,7 +143,7 @@ export default function IndustriesSectionMobile() {
                 ease: 'power3.out',
             }
         );
-    }, [activeIndex]);
+    }, [displayIndex]);
 
     useEffect(() => {
         if (activeIndex === prevIndex.current) return;
@@ -153,6 +160,8 @@ export default function IndustriesSectionMobile() {
 
         next.onloadeddata = () => {
 
+            setDisplayIndex(activeIndex);
+
             gsap.set(current, {
                 clipPath: "inset(0% 0% 0% 0%)"
             });
@@ -167,6 +176,8 @@ export default function IndustriesSectionMobile() {
                 ease: "power4.inOut",
 
                 onComplete: () => {
+                    setDisplayIndex(activeIndex);
+
                     prevIndex.current = activeIndex;
 
                     gsap.set(current, {
@@ -182,7 +193,7 @@ export default function IndustriesSectionMobile() {
                             opacity: 1
                         });
 
-                        current.play(); 
+                        current.play();
                     };
                 }
             });
@@ -237,12 +248,12 @@ export default function IndustriesSectionMobile() {
                                 </div>
                             </div>
 
-                            <div className="industry-name" key={activeIndex}>
-                                <span className="text-sb"> {industries[activeIndex].title} </span>
+                            <div className="industry-name" key={displayIndex}>
+                                <span ref={titleRef} className="text-sb industries-title-name"> {industries[displayIndex].title} </span>
 
-                                <div className="text-16 text-rg">
-                                    <p className="text-16">{industries[activeIndex].desc1} </p>
-                                    <p className="text-16">{industries[activeIndex].desc2} </p>
+                                <div ref={detailTextRef} className="text-16 text-rg industry-detailtext">
+                                    <p className="text-16">{industries[displayIndex].desc1} </p>
+                                    <p className="text-16">{industries[displayIndex].desc2} </p>
                                 </div>
                             </div>
                         </div>
