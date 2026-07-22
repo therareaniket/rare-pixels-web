@@ -3,6 +3,8 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "@/assets/css/desktop-custom.css";
+import "@/assets/css/responsive/desktop-responsive.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +44,7 @@ export default function ProjectsSectionDesktop() {
 
             const mm = gsap.matchMedia();
 
-            mm.add("(min-width: 1025px)", () => {
+            mm.add("(min-width: 1200px)", () => {
                 const cardWidth = cards[0].offsetWidth;
 
                 let peek = 0;
@@ -82,7 +84,7 @@ export default function ProjectsSectionDesktop() {
                 }
             });
 
-            mm.add("(max-width: 1024px)", () => {
+            mm.add("(max-width: 1199px)", () => {
                 const cardHeight = cards[0].offsetHeight;
 
                 let peek = 0;

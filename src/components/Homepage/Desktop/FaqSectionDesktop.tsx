@@ -1,5 +1,7 @@
 'use client';
 
+import "@/assets/css/desktop-custom.css";
+import "@/assets/css/responsive/desktop-responsive.css";
 import {
     Accordion,
     AccordionContent,

@@ -17,6 +17,8 @@
 	h5, .h5{ font-size: 28px; line-height: 36px; }
 	h6, .h6{ font-size: 22px; line-height: 30px; }
 
+	.text-20{ font-size: 18px; line-height: 26px; }
+
 	.hm-services-content-wrapper .h6{ font-size: 20px; line-height: 28px; }
 	.hm-services-content-wrapper{ width: 420px; }
 	.hm-hero-row-1-wrapper{ margin-bottom: 0; }
@@ -106,6 +108,15 @@
 	.faq-accordion-title{ padding: 5px 0; }
 
 	.process-title-wrapper{ min-height: 140px; }
+
+	.blog-card-right-2{ width: 665px; }
+	.blog-card-right-3{ width: 665px; }
+	.hm-blog-card-left{ width: 665px; }
+	.blog-card-2-text{ width: 340px; }
+	.hm-blog-link span{ font-size: 14px; }
+
+	.blog-card-3-left{ width: 290px; height: 430px;}
+	.blog-card-3-right{ width: 351px; }
 }
 
 @media (max-width: 1599px) {
@@ -238,6 +249,18 @@
 	.inquiry-checkbox-wrapper input{ width: 25px; height: 25px; }
 	.inquiry-form-desktop-select-project{ gap: 14px; }
 	.inquiry-form-link{ margin-top: 30px; }
+
+	.blog-card-right-2{ width: 609px; padding: 20px; }
+	.blog-card-right-3{ width: 609px; }
+	.hm-blog-card-left{ width: 609px; }
+
+	.blog-card-2-text{ width: 315px; }
+	.hm-blog-social, .hm-blog-social-icons{ gap: 15px; }
+	.hm-blog-image{ height: 420px; }
+	.hm-blog-wrapper{ margin-top: 40px; }
+
+	.blog-card-3-right{ width: 315px; }
+	.blog-card-3-left{ width: 275px; height: 430px; }
 }
 
 @media (max-width: 1439px) {

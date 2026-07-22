@@ -153,8 +153,7 @@ export default function IndustriesSectionDesktop() {
         next.load();
 
         next.onloadeddata = () => {
-                    setDisplayIndex(activeIndex); // <-- add this
-
+                    setDisplayIndex(activeIndex);
 
             gsap.set(current, {
                 clipPath: "inset(0% 0% 0% 0%)"
@@ -176,7 +175,6 @@ export default function IndustriesSectionDesktop() {
                     gsap.set(current, {
                         clipPath: "inset(0% 0% 0% 0%)"
                     });
-
 
                     prevIndex.current = activeIndex;
                 }
