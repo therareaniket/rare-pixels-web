@@ -12,6 +12,7 @@ import ProjectSectionMobile from "@/components/Homepage/Mobile/ProjectSectionMob
 import StatsSectionMobile from "@/components/Homepage/Mobile/StatsSectionMobile";
 import FaqSectionMobile from "@/components/Homepage/Mobile/FaqSectionMobile";
 import InquirySectionMobile from "@/components/Homepage/Mobile/InquirySectionMobile";
+import BlogSectionMobile from "@/components/Homepage/Mobile/BlogSectionMobile";
 // import TeamsSectionDesktop from "@/components/Homepage/Desktop/TeamsSectionDesktop";
 
 const HeroSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/HeroSectionDesktop"), { ssr: false } );
@@ -59,6 +60,7 @@ export default function Home() {
 						<ProcessSectionMobile />
 						<ProjectSectionMobile />
 						<StatsSectionMobile />
+						<BlogSectionMobile />
 						<FaqSectionMobile />
 						<InquirySectionMobile />
 					</>

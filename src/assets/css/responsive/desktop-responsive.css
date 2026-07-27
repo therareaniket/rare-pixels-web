@@ -117,6 +117,15 @@
 
 	.blog-card-3-left{ width: 290px; height: 430px;}
 	.blog-card-3-right{ width: 351px; }
+
+	.teams-section-title{ font-size: 76px; line-height: 84px; }
+	/* .teams-section-quote-wrapper{ width: 345px; height: auto; } */
+	.teams-author-image{ width: 350px; right: -270px; }
+	.teams-pixels-bottom-right{ width: 210px; }
+	.teams-pixels-top-left{ width: 120px; }
+	.teams-pixels-bottom-left{ width: 150px; }
+	.teams-pixels-top-right{ width: 150px; height: auto; }
+	.teams-section-wrapper{ padding-left: 105px; gap: 90px; }
 }
 
 @media (max-width: 1599px) {
@@ -128,7 +137,7 @@
 	h2, .h2 { font-size: 42px; line-height: 50px; }
 	h3, .h3 { font-size: 34px; line-height: 42px; }
 	h4, .h4 { font-size: 30px; line-height: 48px; }
-	h5, .h5 { font-size: 28px; }
+	h5, .h5 { font-size: 26px; line-height: 34px; }
 	h6, .h6 { font-size: 20px; line-height: 28px; }
 
 	.text-18 { font-size: 16px; line-height: 22px; }
@@ -261,6 +270,17 @@
 
 	.blog-card-3-right{ width: 315px; }
 	.blog-card-3-left{ width: 275px; height: 430px; }
+
+	.teams-pixels-top-right{ width: 120px; }
+	.teams-quote-image{ width: 340px; }
+	.teams-section-wrapper{ padding-left: 80px; }
+
+	.teams-section-title{ font-size: 72px; line-height: 80px; }
+	.teams-author-image{ width: 320px; right: -265px; }
+
+	.teams-sec-owner-desi{ padding-top: 15px; margin-top: 15px; }
+
+	.teams-section-quote-text{ width: 290px; }
 }
 
 @media (max-width: 1439px) {
@@ -271,7 +291,7 @@
 	h2, .h2 { font-size: 36px; line-height: 44px; margin-bottom: 16px; }
 	h3, .h3 { font-size: 30px; line-height: 38px; }
 	h4, .h4 { font-size: 28px; line-height: 36px; }
-	h5, .h5 { font-size: 28px; }
+	h5, .h5 { font-size: 24px; line-height: 32px; }
 	h6, .h6 { font-size: 20px; line-height: 28px; }
 
 	.text-20{ font-size: 16px; line-height: 22px; }
@@ -377,6 +397,26 @@
 	.process-title-wrapper{ min-height: 105px; }
 
 	.faq-accordion{ width: 875px; }
+
+	.blog-card-right-3, .hm-blog-card-left{ width: 513px; }
+	.blog-card-right-2{ width: 513px; }
+	.blog-card-2-text, .blog-card-3-right{ width: 250px; }
+	.blog-card-3-left{ width: 240px; }
+
+	.hm-blog-text-wrapper{ width: 510px; }
+
+	.teams-section-title{ font-size: 68px; line-height: 76px; }
+	.teams-quote-image{ width: 280px; }
+	.teams-section-quote-text{ width: 260px; }
+	.teams-section-wrapper{ gap: 35px; }
+	.teams-pixels-top-right{ width: 100px; }
+	.teams-pixels-top-left{ width: 100px; z-index: -1; }
+	.teams-pixels-bottom-left{ width: 120px; z-index: -1; }
+	.teams-section-title{ font-size: 62px; line-height: 70px; }
+	.hm-teams-link{ margin-top: 25px; }
+	.teams-section-wrapper{ gap: 0; }
+	.teams-section-quote-text{ left: 10px; bottom: 10px; }
+	.teams-author-image{ width: 280px; }
 }
 
 @media (max-width: 1359px) {
@@ -384,13 +424,13 @@
 	.section   { padding: 80px 0px; }
 	.container-sm { max-width: calc(864px + 36px); }
 
-	h1, .h1{ font-size: 40px; line-height: 48px; }
-	h2, .h2{ font-size: 32px; line-height: 40px; }
-	h3, .h3{ font-size: 28px; line-height: 34px; }
-	h4, .h4{ font-size: 26px; line-height: 34px; }
-	h5, .h5{ font-size: 28px; }
-	.text-20{ font-size: 16px; line-height: 20px; }
-	.text-14{ font-size: 12px; line-height: 20px; }
+	h1, .h1 { font-size: 40px; line-height: 48px; }
+	h2, .h2 { font-size: 32px; line-height: 40px; }
+	h3, .h3 { font-size: 28px; line-height: 34px; }
+	h4, .h4 { font-size: 26px; line-height: 34px; }
+	h5, .h5 { font-size: 22px; line-height: 30px; }
+	.text-20 { font-size: 16px; line-height: 20px; }
+	.text-14 { font-size: 12px; line-height: 20px; }
 
 	.hm-services-subtitle.show{ padding-top: 8px; }
 	.home-brain{ width: 300px; object-fit: contain; }
@@ -483,6 +523,29 @@
 	.faq-accordion-title{ padding: 0; }
 	.accordion-number{ width: 40px; height: 40px; border-radius: 15px; }
 	.hm-faq-title{ width: 550px; }
+
+	.hm-blog-author-icon-wrapper{ flex-direction: column; gap: 15px; align-items: flex-start; }
+	.hm-blog-social, .hm-blog-social-icons{ font-size: 18px; }
+	.blog-card-right-3, .hm-blog-card-left, .blog-card-right-2{ width: 470px; }
+	.blog-card-right-3{ flex-direction: column; gap: 20px; }
+	.blog-card-3-left{ width: 100%; height: 200px; }
+	.blog-card-3-right{ width: 100%; }
+
+	.hm-blog-wrapper, .hm-blog-card-right{ gap: 20px; }
+	.hm-blog-image{ margin-bottom: 20px; }
+
+	.blog-card-2-text{ width: 100%; }
+
+	.blog-card-2-text h3{ margin-bottom: 10px; }
+
+	.blog-card-right-2{ flex-direction: column; align-items: flex-start; gap: 15px; }
+	.hm-blog-image{ height: 410px; }
+
+	.teams-pixels-bottom-right{ width: 125px; }
+	.teams-pixels-top-left{ width: 90px; }
+	.teams-pixels-bottom-left{ width: 140px; }
+	.teams-section-title{ width: 265px; font-size: 58px; line-height: 66px; }
+	.teams-author-image { width: 248px; right: -225px; }
 } 
 
 @media (max-width: 1199px) {
@@ -650,6 +713,15 @@
 	.inquiry-form-contact-fields-tablet h3, .h3{ margin-bottom: 0; }
 	.inquiry-form-contact-fields-tablet input{ border-bottom: 1px solid #C6C6C6; outline: none; margin-top: 3px; }
 	.inquiry-form-text-wrapper{ width: 100%; }
+
+	.hm-blog-text-wrapper{ width: 100%; }
+	.hm-blog-wrapper{ flex-direction: column; }
+	.hm-blog-card-right{ flex-direction: column-reverse; }
+	.blog-card-right-3, .hm-blog-card-left{ width: 100%; }
+
+	.hm-blog-image, .blog-card-3-left{ height: 350px; }
+
+	.blog-card-right-2{ width: 100%; align-items: center; text-align: center; }
 } 
 
 @media (max-width: 1023px) {
@@ -752,6 +824,8 @@
 
 	.hm-projects-images-lg, .hm-projects-images-sm{ height: 340px; }
 	.faq-accordion-title{ padding: 5px 0; }
+
+	.hm-blog-image, .blog-card-3-left{ height: 300px; }
 }
 
 @media (max-width: 839px) {
