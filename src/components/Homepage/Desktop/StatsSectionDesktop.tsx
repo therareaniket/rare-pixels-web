@@ -80,7 +80,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Specialised Solutions Crafted</p>
 
                                 <div className="stats-element-art-board">
-                                    <ResponsiveContainer className="stats-elements" width="100%" height="100%">
+                                    {/* <ResponsiveContainer className="stats-elements" width="100%" height="100%">
                                         <PieChart>
                                             <Pie
                                                 data={data}
@@ -95,9 +95,9 @@ export default function StatsSectionDesktop() {
                                                 ))}
                                             </Pie>
                                         </PieChart>
-                                    </ResponsiveContainer>
+                                    </ResponsiveContainer> */}
 
-                                    {/* <Image src="images/homepage/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={200} height={200}></Image> */}
+                                    <Image src="images/homepage/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -108,19 +108,19 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Industries Transformed Globally</p>
 
                                 <div className="stats-element-art-board">
-                                    <ResponsiveContainer className="stats-elements" width="100%" height="100%">
-                                        <RadarChart data={chartData}>
-                                            <PolarGrid />
+                                    {/* <ResponsiveContainer className="stats-elements" width="100%" height="100%"> */}
+                                        {/* <RadarChart data={chartData}> */}
+                                            {/* <PolarGrid /> */}
                                             {/* <PolarAngleAxis dataKey="month" /> */}
-                                            <Radar
-                                                dataKey="desktop"
-                                                fill="#ED0180"
-                                                fillOpacity={1}
-                                            />
-                                        </RadarChart>
-                                    </ResponsiveContainer>
+                                            {/* <Radar/> */}
+                                                {/* dataKey="desktop" */}
+                                                {/* fill="#ED0180" */}
+                                                {/* fillOpacity={1} */}
+                                            {/* /> */}
+                                        {/* </RadarChart> */}
+                                    {/* </ResponsiveContainer> */}
 
-                                    {/* <Image src="images/homepage/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={215} height={200}></Image> */}
+                                    <Image src="images/homepage/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={215} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -169,7 +169,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-white text-light-grey text-18 text-sb stats-specification">Projects Delivered With Precision</p>
 
                                 <div className="stats-element-art-board">
-                                    <ResponsiveContainer className="stats-elements" width="100%" height="100%">
+                                    {/* <ResponsiveContainer className="stats-elements" width="100%" height="100%">
                                         <PieChart>
                                             <Pie
                                                 data={projectDeliveredData}
@@ -187,9 +187,9 @@ export default function StatsSectionDesktop() {
                                                 ))}
                                             </Pie>
                                         </PieChart>
-                                    </ResponsiveContainer>
+                                    </ResponsiveContainer> */}
 
-                                    {/* <Image src="images/homepage/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image> */}
+                                    <Image src="images/homepage/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>

@@ -546,6 +546,7 @@
 	.teams-pixels-bottom-left{ width: 140px; }
 	.teams-section-title{ width: 265px; font-size: 58px; line-height: 66px; }
 	.teams-author-image { width: 248px; right: -225px; }
+	.teams-section-wrapper{ padding-left: 40px; }
 } 
 
 @media (max-width: 1199px) {
