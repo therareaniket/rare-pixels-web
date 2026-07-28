@@ -223,7 +223,7 @@
 .why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; overflow: hidden; }
 .why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; overflow: hidden; }
 .why-choose-us-tablet{ display: none; }
-.hm-hero-main { padding-top: 0 !important; }
+.hm-hero-main { padding-top: 40px !important; }
 
 .why-choose-us-image-wrapper {  position: relative; box-shadow: var(--why-choose-desktop-box); }
 
@@ -370,7 +370,7 @@
 
 .teams-section-desktop{ position: relative !important; }
 .teams-pixels{ position: absolute;  }
-.teams-pixels-top-left{ top: 0; left: 0; }
+.teams-pixels-top-left{ top: 0; left: 0; z-index: -1; }
 .teams-pixels-bottom-left{ bottom: 0; left: 0; z-index: -1; }
 .teams-pixels-top-right{ top: 0; right: 0; }
 .teams-pixels-bottom-right{ bottom: 0; right: 0; }

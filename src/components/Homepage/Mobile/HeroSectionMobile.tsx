@@ -98,7 +98,7 @@ export default function HeroSectionMobile() {
                                         </div>
                                     </div>
 
-                                    <Link href="#" title="Make it RARE" className="hero-link-cta text-md">
+                                    <Link href="#" title="Make it RARE" className="hero-link-cta text-md text-16">
                                         Start Your Project <span className="icon-hero-cta-arrow cta-arrow"></span>
                                     </Link>
                                 </div>

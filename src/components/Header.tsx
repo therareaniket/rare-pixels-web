@@ -5,6 +5,7 @@ import "@/assets/css/responsive/desktop-responsive.css";
 import GlassEffect from "./LiquideGlass";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
 
@@ -38,7 +39,14 @@ export default function Header() {
                                         }`}
                                 >
                                     <ul>
-                                        <li>Home</li>
+                                        <li>
+                                            <Link href="#">
+                                            <span></span> 
+                                            <div className="">
+                                                <p className="text-18 text-sb">Home</p>
+                                                <p className="text-16 text-rg">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                            </Link></li>
                                         <li>About</li>
                                         <li>Projects</li>
                                         <li>Contact</li>
