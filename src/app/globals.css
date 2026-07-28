@@ -135,8 +135,8 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:  url('../../public/fonts/icon/icomoon.ttf?dxyftj') format('truetype'),
-        url('../../public/fonts/icon/icomoon.woff?dxyftj') format('woff');
+    src:  url('../../public/fonts/icon/icomoon.ttf?r2h6sg') format('truetype'),
+        url('../../public/fonts/icon/icomoon.woff?r2h6sg') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -157,6 +157,49 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-automation:before {
+  content: "\e90e";
+}
+.icon-business_center:before {
+  content: "\e90f";
+}
+.icon-call:before {
+  content: "\e910";
+}
+.icon-code_xml:before {
+  content: "\e911";
+}
+.icon-conversion_path:before {
+  content: "\e912";
+}
+.icon-crowdsource:before {
+  content: "\e913";
+}
+.icon-diamond_shine:before {
+  content: "\e914";
+}
+.icon-draw:before {
+  content: "\e915";
+}
+.icon-info:before {
+  content: "\e916";
+}
+.icon-mail:before {
+  content: "\e917";
+  color: #585858;
+}
+.icon-newsmode:before {
+  content: "\e918";
+}
+.icon-note_stack:before {
+  content: "\e919";
+}
+.icon-other_houses:before {
+  content: "\e91a";
+}
+.icon-support_agent:before {
+  content: "\e91b";
+}
 .icon-youtube:before {
   content: "\e908";
 }

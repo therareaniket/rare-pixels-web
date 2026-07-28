@@ -33,7 +33,7 @@ export default function Header() {
 
                                 </div>
 
-                                <div
+                                {/* <div
                                     className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""
                                         }`}
                                 >
@@ -43,7 +43,7 @@ export default function Header() {
                                         <li>Projects</li>
                                         <li>Contact</li>
                                     </ul>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </nav>
