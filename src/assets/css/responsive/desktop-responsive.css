@@ -723,6 +723,26 @@
 	.hm-blog-image, .blog-card-3-left{ height: 350px; }
 
 	.blog-card-right-2{ width: 100%; align-items: center; text-align: center; }
+
+	.teams-section-wrapper{ flex-direction: column; align-items: flex-start; gap: 50px; padding-left: 0; }
+	.teams-section-title{ width: 400px; }
+	.teams-author-image{ position: static; width: 400px; transform: translateY(-100px);  }
+	.teams-section-right{ flex-direction: column; align-items: center; justify-content: center; margin: 0 auto; }
+	.teams-quote-image{ width: 450px; }
+	.teams-section-quote-text{ left: 20px; bottom: 600px; width: 430px; }
+
+	.teams-section-right{ display: none; }
+	.teams-section-tablet{ display: flex; }
+
+	.teams-section-tablet{ position: relative; margin: 0 auto; }
+	.teams-tablet-author-image{ position: absolute; z-index: 2; top: -100px; width: 480px; left: 50%; transform: translateX(-50%); }
+	.teams-tablet-author-image img{ width: 500px; }
+
+	.teams-quote-tab-wrapper{ position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center; width: 100%; margin-top: 200px; }
+	.teams-quote-tab-text{ position: absolute; width: 90%; bottom: 20px; left: 20px; }
+
+	.teams-pixels-bottom-right{ bottom: 345px; width: 250px; z-index: 3; }
+	.teams-pixels-bottom-left{ width: 200px; z-index: 3; top: 250px; }
 } 
 
 @media (max-width: 1023px) {
@@ -771,6 +791,10 @@
 
 	.process-text-wrapper{ width: 564px; }
 	.faq-accordion{ width: 560px; }
+
+	.teams-section-title{ font-size: 56px; line-height: 64px; }
+	.teams-tablet-author-image img{ width: 455px; }
+	.teams-tablet-author-image{ top: -63px; }
 }
 
 @media (max-width: 991px) {
@@ -885,6 +909,8 @@
 
 	.faq-accordion{ width: 500px; }
 	.faq-content{ padding-left: 20px; }
+
+	.teams-pixels-bottom-left{ width: 160px; }
 }
 
 @media (max-width: 767px) {
@@ -950,6 +976,17 @@
 	.faq-accordion{ width: 480px; }
 	.faq-accordion-title{ padding: 0; }
 	.hm-faq-title{ width: 550px; }
+
+	.teams-pixels-bottom-left{ width: 135px; }
+	.teams-pixels-bottom-right{ width: 220px; bottom: 367px; }
+
+	.teams-tablet-author-image img{ width: 400px; }
+	.teams-tablet-author-image{ width: max-content; }
+	.teams-quote-image{ width: 395px; }
+	.teams-quote-tab-wrapper{ margin-top: 168px; }
+	.teams-pixels-bottom-right{ bottom: 330px; }
+
+	.teams-section-title{ font-size: 50px; line-height: 58px; }
 }
 
 @media (max-width: 639px) {

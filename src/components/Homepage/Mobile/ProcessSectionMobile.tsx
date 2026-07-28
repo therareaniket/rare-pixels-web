@@ -78,13 +78,13 @@ export default function ProcessSectionMobile() {
 
     return (
         <>
-            <section ref={sectionRef} className="section bg-yellowish process-section-sticky">
+            <section ref={sectionRef} className="section section-yellow-background process-section-sticky">
                 <div className="process-section-inner">
                     <div className="container">
 
-                        <h2 className="text-sb text-black">Work Process We Follow</h2>
+                        <h2 className="text-sb">Work Process We Follow</h2>
 
-                        <p className="text-16 text-rg text-black">Every project flows through a defined path understanding, planning, designing, building, and refining. This ensures that every decision is intentional and every outcome is crafted with clarity and precision.</p>
+                        <p className="text-16 text-rg">Every project flows through a defined path understanding, planning, designing, building, and refining. This ensures that every decision is intentional and every outcome is crafted with clarity and precision.</p>
 
                         <div className="process-section-mobile-wrapper">
 
@@ -98,13 +98,13 @@ export default function ProcessSectionMobile() {
 
                                 <div className="process-card-mob-text">
                                     <div className="process-title-text">
-                                        <h3 className="h2 text-sb text-black text-upper-case">Discover</h3>
+                                        <h3 className="h2 text-sb text-upper-case">Discover</h3>
                                         <div className="process-mobile-tick">
                                             <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
-                                    <p className="text-16 text-rg text-black">
+                                    <p className="text-16 text-rg">
                                         <span>Every meaningful solution begins with understanding.</span>
                                         <span>We take time to understand your business, your users, and the challenges standing in the way of growth. The better the questions, the better the outcome.</span>
                                     </p>
@@ -118,13 +118,13 @@ export default function ProcessSectionMobile() {
 
                                 <div className="process-card-mob-text">
                                     <div className="process-title-text">
-                                        <h3 className="h2 text-sb text-black text-upper-case">Strategise</h3>
+                                        <h3 className="h2 text-sb text-upper-case">Strategise</h3>
                                         <div className="process-mobile-tick">
                                             <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
-                                    <p className="text-16 text-rg text-black">
+                                    <p className="text-16 text-rg">
                                         <span>Direction creates momentum.</span>
                                         <span>Ideas become impactful when backed by clarity. We bring together research, insights, and business goals to build a roadmap that gives every decision a purpose.</span>
                                     </p>
@@ -138,13 +138,13 @@ export default function ProcessSectionMobile() {
 
                                 <div className="process-card-mob-text">
                                     <div className="process-title-text">
-                                        <h3 className="h2 text-sb text-black text-upper-case">Create</h3>
+                                        <h3 className="h2 text-sb text-upper-case">Create</h3>
                                         <div className="process-mobile-tick">
                                             <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
-                                    <p className="text-16 text-rg text-black">
+                                    <p className="text-16 text-rg ">
                                         <span>Creativity with intention.</span>
                                         <span>We design experiences, identities, and interactions that feel intuitive, leave an impression, and make your brand impossible to overlook.</span>
                                     </p>
@@ -158,13 +158,13 @@ export default function ProcessSectionMobile() {
 
                                 <div className="process-card-mob-text">
                                     <div className="process-title-text">
-                                        <h3 className="h2 text-sb text-black text-upper-case">Engineer</h3>
+                                        <h3 className="h2 text-sb text-upper-case">Engineer</h3>
                                         <div className="process-mobile-tick">
                                             <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
-                                    <p className="text-16 text-rg text-black">
+                                    <p className="text-16 text-rg">
                                         <span>Built for the real world.</span>
                                         <span>We develop scalable, high-performing systems where design and functionality come together seamlessly.</span>
                                     </p>
@@ -178,14 +178,14 @@ export default function ProcessSectionMobile() {
 
                                 <div className="process-card-mob-text">
                                     <div className="process-title-text">
-                                        <h3 className="h2 text-sb text-black  text-upper-case">Refine</h3>
+                                        <h3 className="h2 text-sb text-upper-case">Refine</h3>
 
                                         <div className="process-mobile-tick">
                                             <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
-                                    <p className="text-16 text-rg text-black">
+                                    <p className="text-16 text-rg">
                                         <span>The details shape the experience.</span>
                                         <span>We test, improve, and fine-tune every interaction because the smallest refinements often make the biggest difference.</span>
                                     </p>
@@ -199,14 +199,14 @@ export default function ProcessSectionMobile() {
 
                                 <div className="process-card-mob-text">
                                     <div className="process-title-text">
-                                        <h3 className="h2 text-sb text-black text-upper-case">Deliver</h3>
+                                        <h3 className="h2 text-sb text-upper-case">Deliver</h3>
 
                                         <div className="process-mobile-tick">
                                             <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
-                                    <p className="text-16 text-rg text-black">
+                                    <p className="text-16 text-rg">
                                         <span>Launch is where the journey expands.</span>
                                         <span>We deliver solutions with precision and stay invested in their growth, ensuring they continue to create value as your business evolves.</span>
                                     </p>

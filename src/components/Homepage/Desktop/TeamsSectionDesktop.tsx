@@ -43,19 +43,39 @@ export default function TeamsSectionDesktop() {
                             </div>
                         </div>
 
-                        <div className="teams-section-pixels">
-                            <div className="teams-pixels-top-left teams-pixels">
-                                {theme === "light" ? <Image src="/images/homepage/teams-left-top-svg.svg" alt="" width={152} height={232}></Image> : <Image src="/images/homepage/teams-left-top-dark-svg.svg" alt="" width={152} height={232}></Image>}
+                        <div className="teams-section-tablet">
+                            <div className="teams-tablet-author-image">
+                                <Image src="/images/homepage/bina-mam-img.png" alt="Bina Yogesh" width={437} height={541}></Image>
                             </div>
-                            <div className="teams-pixels-bottom-left teams-pixels">
-                                {theme === "light" ? <Image src="/images/homepage/teams-left-bottom-svg.svg" alt="" width={186} height={205}></Image> : <Image src="/images/homepage/teams-left-bottom-dark-svg.svg" alt="" width={186} height={205}></Image>}
+
+                            <div className="teams-quote-tab-wrapper">
+                                <Image className="teams-quote-image" src="/images/homepage/teams-section-quote.svg" alt="quote image" width="382" height="572"></Image>
+
+                                <div className="teams-quote-tab-text">
+                                    <p className="text-18 text-rg text-white">At RarePixels, great work starts with great people. We are a multidisciplinary team of designers, developers, strategists, branding specialists, and creative thinkers who share a passion for building meaningful digital experiences.</p>
+
+                                    <div className="teams-sec-owner-desi">
+                                        <h3 className="text-sb h5 text-white">Bina Yogesh</h3>
+                                        <p className="text-rg text-18 text-white">Founder, Creative Director</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="teams-pixels-top-right teams-pixels">
-                                {theme === "light" ? <Image src="/images/homepage/teams-right-top-svg.svg" alt="" width={186} height={205}></Image> : <Image src="/images/homepage/teams-right-top-dark-svg.svg" alt="" width={186} height={205}></Image>}
-                            </div>
-                            <div className="teams-pixels-bottom-right teams-pixels">
-                                {theme === "light" ? <Image src="/images/homepage/teams-right-bottom-svg.svg" alt="" width={309} height={296}></Image> : <Image src="/images/homepage/teams-right-bottom-dark-svg.svg" alt="" width={309} height={296}></Image>}
-                            </div>
+                        </div>
+
+                        <div className="teams-pixels-top-left teams-pixels">
+                            {theme === "light" ? <Image src="/images/homepage/teams-left-top-svg.svg" alt="" width={152} height={232}></Image> : <Image src="/images/homepage/teams-left-top-dark-svg.svg" alt="" width={152} height={232}></Image>}
+                        </div>
+
+                        <div className="teams-pixels-bottom-left teams-pixels">
+                            {theme === "light" ? <Image src="/images/homepage/teams-left-bottom-svg.svg" alt="" width={186} height={205}></Image> : <Image src="/images/homepage/teams-left-bottom-dark-svg.svg" alt="" width={186} height={205}></Image>}
+                        </div>
+
+                        <div className="teams-pixels-top-right teams-pixels">
+                            {theme === "light" ? <Image src="/images/homepage/teams-right-top-svg.svg" alt="" width={186} height={205}></Image> : <Image src="/images/homepage/teams-right-top-dark-svg.svg" alt="" width={186} height={205}></Image>}
+                        </div>
+
+                        <div className="teams-pixels-bottom-right teams-pixels">
+                            {theme === "light" ? <Image src="/images/homepage/teams-right-bottom-svg.svg" alt="" width={309} height={296}></Image> : <Image src="/images/homepage/teams-right-bottom-dark-svg.svg" alt="" width={309} height={296}></Image>}
                         </div>
                     </div>
                 </div>

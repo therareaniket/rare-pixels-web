@@ -310,7 +310,7 @@ export default function ProcessSectionDesktop() {
 
     return (
         <>
-            <section ref={processSectionRef} className="section bg-light-yellow process-section process-tab-sticky">
+            <section ref={processSectionRef} className="section section-yellow-background process-section process-tab-sticky">
                 <div className="process-tab-inner">
                     <div className="container-sm">
                         <div ref={containerRef} className="process-for-desktop">
@@ -322,17 +322,17 @@ export default function ProcessSectionDesktop() {
 
                             <div ref={titleWrapperRef} className="process-title-wrapper">
                                 <div ref={centerTitleRef} className="process-title-text-wrapper process-title-center">
-                                    <h2 className="text-sb text-black">Work Process We Follow</h2>
+                                    <h2 className="text-sb">Work Process We Follow</h2>
 
-                                    <p className="text-rg text-18 text-black">
+                                    <p className="text-rg text-18">
                                         Every great outcome starts with understanding. We move from insight to execution through a process designed to reduce guesswork, improve collaboration, and build solutions that perform.
                                     </p>
                                 </div>
 
                                 <div ref={leftTitleRef} className="process-title-text-wrapper process-title-left">
-                                    <h2 className="text-sb text-black">Work Process We Follow</h2>
+                                    <h2 className="text-sb">Work Process We Follow</h2>
 
-                                    <p className="text-rg text-18 text-black">
+                                    <p className="text-rg text-18">
                                         Every great outcome starts with understanding. We move from insight to execution through a process designed to reduce guesswork, improve collaboration, and build solutions that perform.
                                     </p>
                                 </div>
@@ -349,15 +349,15 @@ export default function ProcessSectionDesktop() {
                                 </div>
 
                                 <div ref={pointerWrapperRef} className="process-pointer-wrapper active">
-                                    <div className="process-pointer-1 process-pointer active text-black">
+                                    <div className="process-pointer-1 process-pointer active">
                                         <div className="process-pointer-svg site-radius-20">
-                                            <span className="icon-discover-process"></span>
+                                            <span className="icon-discover-process text-black"></span>
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb text-black">DISCOVER</h2>
+                                            <h3 className="text-sb h2">DISCOVER</h3>
 
-                                            <p className="text-rg text-18 text-black">
+                                            <p className="text-rg text-18">
                                                 <span>Every meaningful solution begins with understanding.</span>
                                                 <span>We take time to understand your business, your users, and the challenges standing in the way of growth. The better the questions, the better the outcome.</span>
                                             </p>
@@ -374,9 +374,9 @@ export default function ProcessSectionDesktop() {
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb text-black">STRATEGISE</h2>
+                                            <h3 className="text-sb h2">STRATEGISE</h3>
 
-                                            <p className="text-rg text-18 text-black">
+                                            <p className="text-rg text-18">
                                                 <span>Direction creates momentum.</span>
                                                 <span>Ideas become impactful when backed by clarity. We bring together research, insights, and business goals to build a roadmap that gives every decision a purpose.</span>
                                             </p>
@@ -393,9 +393,9 @@ export default function ProcessSectionDesktop() {
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb text-black">CREATE</h2>
+                                            <h3 className="text-sb h2">CREATE</h3>
 
-                                            <p className="text-rg text-18 text-black">
+                                            <p className="text-rg text-18">
                                                 <span>Creativity with intention.</span>
                                                 <span>We design experiences, identities, and interactions that feel intuitive, leave an impression, and make your brand impossible to overlook.</span>
                                             </p>
@@ -412,9 +412,9 @@ export default function ProcessSectionDesktop() {
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb text-black">ENGINEER</h2>
+                                            <h3 className="text-sb h2">ENGINEER</h3>
 
-                                            <p className="text-rg text-18 text-black">
+                                            <p className="text-rg text-18">
                                                 <span>Built for the real world.</span>
                                                 <span>From websites to digital products, we develop solutions that are scalable, reliable, and engineered to perform long after launch.</span>
                                             </p>
@@ -431,9 +431,9 @@ export default function ProcessSectionDesktop() {
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb text-black">REFINE</h2>
+                                            <h3 className="text-sb h2">REFINE</h3>
 
-                                            <p className="text-rg text-18 text-black">
+                                            <p className="text-rg text-18">
                                                 <span>The details shape the experience.</span>
                                                 <span>We test, improve, and fine-tune every interaction because the smallest refinements often make the biggest difference.</span>
                                             </p>
@@ -450,9 +450,9 @@ export default function ProcessSectionDesktop() {
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h2 className="text-sb text-black">DELIVER</h2>
+                                            <h3 className="text-sb h2">DELIVER</h3>
 
-                                            <p className="text-rg text-18 text-black">
+                                            <p className="text-rg text-18">
                                                 <span>Launch is where the journey expands.</span>
                                                 <span>We deliver solutions with precision and stay invested in their growth, ensuring they continue to create value as your business evolves.</span>
                                             </p>
@@ -479,7 +479,7 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer-tablet active">
                                     <div className="process-icon">
-                                        <span className="icon-discover-process"></span>
+                                        <span className="icon-discover-process text-black"></span>
                                     </div>
 
                                     <div className="process-text-wrapper">
@@ -501,7 +501,7 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer-tablet">
                                     <div className="process-icon">
-                                        <span className="icon-strategy-process"></span>
+                                        <span className="icon-strategy-process text-black"></span>
                                     </div>
 
                                     <div className="process-text-wrapper">
@@ -523,7 +523,7 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer-tablet">
                                     <div className="process-icon">
-                                        <span className="icon-create-process"></span>
+                                        <span className="icon-create-process text-black"></span>
                                     </div>
 
                                     <div className="process-text-wrapper">
@@ -545,7 +545,7 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer-tablet">
                                     <div className="process-icon">
-                                        <span className="icon-engineer-process"></span>
+                                        <span className="icon-engineer-process text-black"></span>
                                     </div>
 
                                     <div className="process-text-wrapper">
@@ -567,7 +567,7 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer-tablet">
                                     <div className="process-icon">
-                                        <span className="icon-refine-process"></span>
+                                        <span className="icon-refine-process text-black"></span>
                                     </div>
 
                                     <div className="process-text-wrapper">
@@ -589,7 +589,7 @@ export default function ProcessSectionDesktop() {
 
                                 <div className="process-pointer-tablet">
                                     <div className="process-icon">
-                                        <span className="icon-deliver-svg"></span>
+                                        <span className="icon-deliver-svg text-black"></span>
                                     </div>
 
                                     <div className="process-text-wrapper">

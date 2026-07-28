@@ -48,7 +48,7 @@ export default function BlogSectionDesktop() {
                                 </div>
                             </div>
 
-                            <p className="text-18 text-rg text-grey">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
+                            <p className="text-18 text-rg text-grey">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
                         </div>
 
                         <div className="hm-blog-card-right">
@@ -93,7 +93,7 @@ export default function BlogSectionDesktop() {
                                     </div>
 
                                     <div className="hm-blog-read-detail">
-                                        <p className="text-18 text-rg">A visually attractive interface may convince users to explore your platform once. But whether they stay, engage, and return depends entirely on experience. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
+                                        <p className="text-18 text-rg">A visually attractive interface may convince users to explore your platform once. But whether they stay, engage, and return depends entirely on experience. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
                                     </div>
                                 </div>
                             </div>

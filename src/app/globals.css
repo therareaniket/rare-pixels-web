@@ -26,8 +26,13 @@
 
     --section-bg: #040E36;
     --blog-text-black: #000000;
+    --bg-yellow: #FBF9E9;
 
     --border-bottom: #C6C6C6;
+
+    --inquiry-form-border: #C6C6C6;
+
+    --placeholder-text: #8C8B8C;
 
     --why-choose-desktop-box: inset 0 -47px 22px 18px rgba(255, 255, 255, 1);
     --why-choose-mobile-box: inset 0 -45px 15px -3px rgba(255, 255, 255, 1);
@@ -82,6 +87,12 @@
 
   --why-choose-desktop-box: inset 0 -50px 36px -8px rgb(0, 0, 0);
   --why-choose-mobile-box: inset 0 -52px 32px -6px rgba(0, 0, 0, 1);
+
+  --bg-yellow: #080708;
+
+  --inquiry-form-border: #3C3C3C;
+
+  --placeholder-text: #3C3C3C;
 }
 
 /* ::selection { background-color: ; } */

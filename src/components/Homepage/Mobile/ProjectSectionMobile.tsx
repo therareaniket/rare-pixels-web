@@ -57,7 +57,7 @@ export default function ProjectSectionMobile() {
                     <div className="projects-card-wrapper-mobile" ref={sliderRef}>
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-purple-shade">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/djk-project.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-purple-shade text-black">
@@ -68,44 +68,44 @@ export default function ProjectSectionMobile() {
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-green">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-green text-black">
-                                <h3 className="text-sb h5">S.ART</h3>
+                                <h3 className="text-sb h5">AUTOBOT</h3>
                                 <p className="text-16 text-rg">A modern logo designed for S.Art, blending abstract style with a touch of tradition.</p>
                             </div>
                         </div>
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-pink text-black">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/cameriz-project.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-pink text-black">
-                                <h3 className="text-sb h5">COVRIZE</h3>
+                                <h3 className="text-sb h5">CAMERIZ</h3>
                                 <p className="text-16 text-rg">Transform your business with our platform, providing tailored software solutions to meet your unique needs.</p>
                             </div>
                         </div>
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-light-yellow">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/ra-project.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-light-yellow text-black">
-                                <h3 className="text-sb h5">4SEAHUB</h3>
+                                <h3 className="text-sb h5">RA</h3>
                                 <p className="text-16 text-rg">4SEAHUB is a purpose driven logistics and import-export company, setting new standards in trust and quality.</p>
                             </div>
                         </div>
 
                         <div className="projects-card-mobile">
                             <div className="projects-image-mob bg-skin">
-                                <video className="site-radius-20 mobile-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
+                                <video className="site-radius-20 mobile-projects-videos" src="images/homepage/projects/steamovap-project.mp4" width={513} height={406} autoPlay loop muted playsInline></video>
                             </div>
 
                             <div className="projects-text-mob bg-skin text-black">
-                                <h3 className="text-sb h5">SALES DASHBOARD</h3>
+                                <h3 className="text-sb h5">STEAMOVAP</h3>
                                 <p className="text-16 text-rg">Enhanced decision making, and improved performance tracking.</p>
                             </div>
                         </div>

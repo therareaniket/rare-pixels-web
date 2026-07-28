@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function BlogSectionMobile() {
     return (
         <>
-            <section className="section" style={{ paddingBottom: 0 }}>
+            <section>
                 <div className="container">
                     <div className="hm-mob-blog-title">
                         <h2 className="text-sb">Our Blog</h2>

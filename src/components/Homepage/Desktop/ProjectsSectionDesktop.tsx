@@ -144,7 +144,7 @@ export default function ProjectsSectionDesktop() {
                             <div className="hm-projects-card-wrapper">
                                 <div ref={addToRefs} className="hm-projects-card-lg hm-projects-card-1">
                                     <div className="hm-projects-images-lg site-radius-20 bg-purple-shade">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={523} height={423} autoPlay loop muted></video>
+                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/djk-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
                                     <div className="hm-projects-desc site-radius-20 bg-purple-shade text-black">
                                         <h3 className="text-sb text-black">DJK</h3>
@@ -154,40 +154,40 @@ export default function ProjectsSectionDesktop() {
 
                                 <div ref={addToRefs} className="hm-projects-card-sm hm-projects-card-2">
                                     <div className="hm-projects-images-sm site-radius-20 bg-light-green">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={523} height={423} autoPlay loop muted></video>
+                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
                                     <div className="hm-projects-desc site-radius-20 bg-light-green text-black">
-                                        <h3 className="text-sb text-black">S.ART</h3>
+                                        <h3 className="text-sb text-black">AUTOBOT</h3>
                                         <p className="text-rg text-18 text-black">A modern logo designed for S.Art, blending abstract style with a touch of tradition.</p>
                                     </div>
                                 </div>
 
                                 <div ref={addToRefs} className="hm-projects-card-lg hm-projects-card-3">
                                     <div className="hm-projects-images-lg site-radius-20 bg-light-pink">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={523} height={423} autoPlay loop muted></video>
+                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/cameriz-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
                                     <div className="hm-projects-desc site-radius-20 bg-light-pink text-black">
-                                        <h3 className="text-sb text-black">COVRIZE</h3>
+                                        <h3 className="text-sb text-black">CAMERIZ</h3>
                                         <p className="text-rg text-18 text-black">Transform your business with our platform, providing tailored software solutions to meet your unique needs.</p>
                                     </div>
                                 </div>
 
                                 <div ref={addToRefs} className="hm-projects-card-sm hm-projects-card-4">
                                     <div className="hm-projects-images-sm site-radius-20 bg-light-yellow">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/steamovap-video.mp4" width={523} height={423} autoPlay loop muted></video>
+                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/ra-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
                                     <div className="hm-projects-desc site-radius-20 bg-light-yellow text-black">
-                                        <h3 className="text-sb text-black">4SEAHUB</h3>
+                                        <h3 className="text-sb text-black">RA</h3>
                                         <p className="text-rg text-18 text-black">4SEAHUB is a purpose driven logistics and import-export company, setting new standards in trust and quality.</p>
                                     </div>
                                 </div>
 
                                 <div ref={addToRefs} className="hm-projects-card-lg hm-projects-card-5">
                                     <div className="hm-projects-images-lg site-radius-20 bg-skin">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/AutoBot_proj.mp4" width={523} height={423} autoPlay loop muted></video>
+                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/steamovap-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
                                     <div className="hm-projects-desc site-radius-20 bg-skin text-black">
-                                        <h3 className="text-sb text-black">SALES DASHBOARD</h3>
+                                        <h3 className="text-sb text-black">STEAMOVAP</h3>
                                         <p className="text-rg text-18 text-black">Enhanced decision making, and improved performance tracking.</p>
                                     </div>
                                 </div>
