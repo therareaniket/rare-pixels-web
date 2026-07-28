@@ -23,6 +23,11 @@
 
 @keyframes eyeFade {  from{ opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 
+/* HEADER - NAVBAR */
+.site-header { position: sticky; top: 0; z-index: 9999; }
+.nav { width: 100vw; }
+
+
 /* home hero */
 .home-hero-wrapper-desktop{ display: flex; flex-direction: column-reverse; overflow: hidden; }
 .client-initital span, .testimonial-client-text{ color: black; }

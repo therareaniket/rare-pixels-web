@@ -2,6 +2,7 @@
 import { useTheme } from "@/context/ThemeContext";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import GlassEffect from "./LiquideGlass";
 import Image from "next/image";
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="navbar-main">
+            {/* <header className="navbar-main">
                 <div className="container">
                     <div className="navbar-wrapper">
                         <div className="navbar-links-wrapper">
@@ -21,8 +22,17 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-            </header>
+            </header> */}
 
+            <header className="site-header">
+                <GlassEffect>
+                    <nav className="nav">
+                        <div className="container">
+                            <p>Hello</p>
+                        </div>
+                    </nav>
+                </GlassEffect>
+            </header>
         </>
     )
 }
