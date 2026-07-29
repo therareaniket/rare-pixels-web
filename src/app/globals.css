@@ -69,7 +69,7 @@
     --sidebar-ring: oklch(0.708 0 0);
 }
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
 	--primary: #ED0180;
 	--background: #000000;
 	--text-black: #ffffff;
@@ -93,7 +93,7 @@
   --inquiry-form-border: #3C3C3C;
 
   --placeholder-text: #3C3C3C;
-}
+} */
 
 /* ::selection { background-color: ; } */
 
@@ -186,7 +186,6 @@
 }
 .icon-mail:before {
   content: "\e917";
-  color: #585858;
 }
 .icon-newsmode:before {
   content: "\e918";

@@ -26,7 +26,7 @@ export default function BlogSectionDesktop() {
                                 </div>
                             </div>
 
-                            <h3 className="text-sb">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
+                            <h3 className="text-sb blog-desk-title">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
 
                             <div className="hm-blog-author-icon-wrapper">
                                 <div className="hm-blog-author">
@@ -72,7 +72,7 @@ export default function BlogSectionDesktop() {
                                 </div>
 
                                 <div className="blog-card-3-right">
-                                    <h3 className="text-sb">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers</h3>
+                                    <h3 className="text-sb blog-desk-title">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers</h3>
 
                                     <div className="hm-blog-author-name">
                                         <p className="text-dark-grey text-18 text-rg"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>

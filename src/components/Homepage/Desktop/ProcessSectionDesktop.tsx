@@ -238,76 +238,6 @@ export default function ProcessSectionDesktop() {
 
     }, { scope: processSectionRef });
 
-    useEffect(() => {
-        mm.add("(max-width: 1199", () => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const cards = gsap.utils.toArray<HTMLElement>(".process-pointer-tablet");
-
-        const activeLine = document.querySelector(".process-vertical-active-line-for-tab") as HTMLElement
-
-        const setActive = (activeIndex: number) => {
-            cards.forEach((card, i) => {
-                const content = card.querySelector("p");
-                const tick = card.querySelector(".process-mobile-tick");
-
-                const isOpen = i >= activeIndex;
-
-                card.classList.toggle("active", isOpen);
-                card.classList.toggle("completed", !isOpen);
-
-                gsap.to(content, {
-                    opacity: 1,
-                    y: isOpen ? 0 : 20,
-                    duration: 0.4,
-                    overwrite: true,
-                });
-
-                gsap.to(tick, {
-                    opacity: isOpen ? 0 : 1,
-                    scale: isOpen ? 0.5 : 1,
-                    duration: 0.3,
-                    overwrite: true,
-                });
-            });
-
-            const progress = activeIndex / cards.length;
-
-            gsap.to(activeLine, {
-                height: `${progress * 90}%`,
-                duration: 1,
-                overwrite: true,
-            });
-        };
-
-        cards.forEach((card) => {
-            card.classList.add("active");
-        });
-
-        ScrollTrigger.create({
-            trigger: processSectionRef.current,
-            start: "top -30px",
-            end: "+=4000",
-            // pin: true,
-            scrub: true,
-
-            onUpdate: (self) => {
-                const activeIndex = Math.min(
-                    cards.length,
-                    Math.floor(self.progress * (cards.length + 1))
-                );
-
-                setActive(activeIndex);
-            },
-        });
-
-        return () => {
-            ScrollTrigger.getAll().forEach((st) => st.kill());
-        };
-
-        });
-    }, []);
-
     return (
         <>
             <section ref={processSectionRef} className="section section-yellow-background process-section process-tab-sticky">
@@ -497,6 +427,10 @@ export default function ProcessSectionDesktop() {
                                             <span>We take time to understand your business, your users, and the challenges standing in the way of growth. The better the questions, the better the outcome.</span>
                                         </p>
                                     </div>
+
+                                    <div className="element-tab-wrapper">
+                                        <Image className="process-element" src="/images/homepage/discover-elements.svg" alt="process-elements" width={347} height={348}></Image>
+                                    </div>
                                 </div>
 
                                 <div className="process-pointer-tablet">
@@ -518,6 +452,10 @@ export default function ProcessSectionDesktop() {
 
                                             <span>Ideas become impactful when backed by clarity. We bring together research, insights, and business goals to build a roadmap that gives every decision a purpose.</span>
                                         </p>
+                                    </div>
+
+                                    <div className="element-tab-wrapper">
+                                        <Image className="process-element" src="/images/homepage/strategies-elements.svg" alt="process-elements" width={332} height={344}></Image>
                                     </div>
                                 </div>
 
@@ -541,6 +479,10 @@ export default function ProcessSectionDesktop() {
                                             <span>We design experiences, identities, and interactions that feel intuitive, leave an impression, and make your brand impossible to overlook.</span>
                                         </p>
                                     </div>
+
+                                    <div className="element-tab-wrapper">
+                                        <Image className="process-element" src="/images/homepage/create-elements.svg" alt="process-elements" width={292} height={350}></Image>
+                                    </div>
                                 </div>
 
                                 <div className="process-pointer-tablet">
@@ -562,6 +504,10 @@ export default function ProcessSectionDesktop() {
 
                                             <span>From websites to digital products, we develop solutions that are scalable, reliable, and engineered to perform long after launch.</span>
                                         </p>
+                                    </div>
+
+                                    <div className="element-tab-wrapper">
+                                        <Image className="process-element" src="/images/homepage/engineer-elements.svg" alt="process-elements" width={317} height={350}></Image>
                                     </div>
                                 </div>
 
@@ -585,6 +531,10 @@ export default function ProcessSectionDesktop() {
                                             <span>We test, improve, and fine-tune every interaction because the smallest refinements often make the biggest difference.</span>
                                         </p>
                                     </div>
+
+                                    <div className="element-tab-wrapper">
+                                        <Image className="process-element" src="/images/homepage/refine-elements.svg" alt="process-elements" width={347} height={348}></Image>
+                                    </div>
                                 </div>
 
                                 <div className="process-pointer-tablet">
@@ -606,6 +556,10 @@ export default function ProcessSectionDesktop() {
 
                                             <span>We deliver solutions with precision and stay invested in their growth, ensuring they continue to create value as your business evolves.</span>
                                         </p>
+                                    </div>
+
+                                    <div className="element-tab-wrapper">
+                                        <Image className="process-element" src="/images/homepage/deliver-elements.svg" alt="process-elements" width={341} height={338}></Image>
                                     </div>
                                 </div>
                             </div>

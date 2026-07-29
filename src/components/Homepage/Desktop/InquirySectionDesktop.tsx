@@ -32,7 +32,7 @@ export default function InquirySectionDesktop() {
                         <input type="text" name="" id="" className="text-rg h3" placeholder="My project is about...." />
                     </div>
 
-                    <div className="inquiry-form-contact-fields-tablet">
+                    {/* <div className="inquiry-form-contact-fields-tablet">
                         <div className="inquiry-name-tab">
                             <h3 className="text-rg">Hello! My name is</h3>
                             <input className="text-rg h3 placeholder-text" type="text" name="" id="" placeholder="enter name" />
@@ -54,7 +54,7 @@ export default function InquirySectionDesktop() {
                             <h3 className="text-rg">Here are some details about my project:</h3>
                             <input className="text-rg h3 placeholder-text" type="text" name="" id="" placeholder="My project is about...." />
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="inquiry-form-project-field">
                         <h3 className="text-rg">I&apos;m interested in (select one or more)</h3>
