@@ -6,6 +6,12 @@ import GlassEffect from "./LiquideGlass";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+// import {
+//     Accordion,
+//     AccordionContent,
+//     AccordionItem,
+//     AccordionTrigger,
+// } from "@/components/ui/accordion"
 
 export default function Header() {
 
@@ -300,7 +306,7 @@ export default function Header() {
                                             </ul>
                                         </div>
 
-                                        <div className="header-links-wrapper">
+                                        <div className="header-links-wrapper header-links-wrapper-for-desktop">
                                             <div className="header-mega-links-wrapper">
                                                 <div className="header-mega-link-title">
                                                     <div className="mega-links-icon">
@@ -466,6 +472,130 @@ export default function Header() {
                                             </div>
                                         </div>
 
+                                        <div className="header-links-wrapper-for-mobile">
+                                            <ul>
+                                                <li className="menu-link">
+                                                    <Link href="#">
+                                                        <div className="menu-link-icon">
+                                                            <span className="icon-other_houses"></span>
+                                                        </div>
+                                                        <div className="">
+                                                            <p className="text-18 text-rg">Home</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+
+                                                <li className="menu-link">
+                                                    <Link href="#">
+                                                        <div className="menu-link-icon">
+                                                            <span className="icon-info"></span>
+                                                        </div>
+                                                        <div className="">
+                                                            <p className="text-18 text-rg">About</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+
+                                                {/* <Accordion type="single" collapsible>
+                                                    <AccordionItem value="products">
+                                                        <AccordionTrigger>Products</AccordionTrigger>
+
+                                                        <AccordionContent>
+                                                            <Accordion type="single" collapsible>
+                                                                <AccordionItem value="cat1">
+                                                                    <AccordionTrigger>Category 1</AccordionTrigger>
+                                                                    <AccordionContent>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                    </AccordionContent>
+                                                                </AccordionItem>
+
+                                                                <AccordionItem value="cat2">
+                                                                    <AccordionTrigger>Category 2</AccordionTrigger>
+                                                                    <AccordionContent>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                        <Link href="#" title="hello">hello</Link>
+                                                                    </AccordionContent>
+                                                                </AccordionItem>
+                                                            </Accordion>
+                                                        </AccordionContent>
+                                                    </AccordionItem>
+                                                </Accordion> */}
+
+                                                <li className="menu-link">
+                                                    <Link href="#">
+                                                        <div className="menu-link-icon">
+                                                            <span className="icon-business_center"></span>
+                                                        </div>
+                                                        <div className="">
+                                                            <p className="text-18 text-rg">Industries</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+
+                                                <li className="menu-link">
+                                                    <Link href="#">
+                                                        <div className="menu-link-icon">
+                                                            <span className="icon-note_stack"></span>
+                                                        </div>
+                                                        <div className="">
+                                                            <p className="text-18 text-rg">Projects</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+
+                                                <li className="menu-link">
+                                                    <Link href="#">
+                                                        <div className="menu-link-icon">
+                                                            <span className="icon-conversion_path"></span>
+                                                        </div>
+                                                        <div className="">
+                                                            <p className="text-18 text-rg">Process</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+
+                                                <li className="menu-link">
+                                                    <Link href="#">
+                                                        <div className="menu-link-icon">
+                                                            <span className="icon-crowdsource"></span>
+                                                        </div>
+                                                        <div className="">
+                                                            <p className="text-18 text-rg">Life at RPD</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+
+                                                <li className="menu-link">
+                                                    <Link href="#">
+                                                        <div className="menu-link-icon">
+                                                            <span className="icon-newsmode"></span>
+                                                        </div>
+                                                        <div className="">
+                                                            <p className="text-18 text-rg">Articles</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+
+                                                <li className="menu-link">
+                                                    <Link href="#">
+                                                        <div className="menu-link-icon">
+                                                            <span className="icon-support_agent"></span>
+                                                        </div>
+                                                        <div className="">
+                                                            <p className="text-18 text-rg">Contact</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+
                                         <div className="header-website-detail">
                                             <div className="brand-quote">
                                                 <span className="h3 text-sb">Elevate Your Brand</span>
@@ -495,7 +625,7 @@ export default function Header() {
                                             <div className="header-contact-detail">
                                                 <div className="menu-company-contact">
                                                     <div className="contact-title">
-                                                        <p className="text-16 text-md">Contact</p>
+                                                        <p className="text-16 text-sb">Contact</p>
                                                     </div>
 
                                                     <div className="contact-phone">
@@ -519,7 +649,7 @@ export default function Header() {
 
                                                 <div className="menu-social-icon">
                                                     <div className="menu-social-title">
-                                                        <p className="text-16 text-md">Follow</p>
+                                                        <p className="text-16 text-sb">Follow</p>
                                                     </div>
 
                                                     <div className="menu-social-icons">
@@ -552,11 +682,11 @@ export default function Header() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </nav>
-                </GlassEffect>
-            </header>
+                            </div >
+                        </div >
+                    </nav >
+                </GlassEffect >
+            </header >
         </>
     )
 }

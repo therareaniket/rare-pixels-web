@@ -835,21 +835,25 @@
 	.inquiry-checkbox-wrapper { flex-direction: column; align-items: flex-start; }
 
 	.header-links-for-tablet { display: flex; flex-wrap: wrap; }
-	.header-pages-link-wrapper ul { display: flex; flex-wrap: wrap; }
-
-	.menu-link a { width: 233px; }
+	.header-pages-link-wrapper ul { display: flex; flex-wrap: wrap; gap: 20px; }
+	.menu-link { width: calc( 50% - 10px ); }
+	.menu-link a { width: 100%; }
 	.header-links-for-desktop { display: none; }
 	.header-mega-menu { width: 800px; }
-	.header-links-wrapper { flex-wrap: wrap; gap: 20px; }
-	.header-mega-links-wrapper { width: calc( 50% - 10px ); }
+	.header-links-wrapper { flex-wrap: wrap; gap: 10px; }
+	.header-mega-links-wrapper { width: calc( 50% - 5px ); }
 	.header-pages-link-wrapper { flex-direction: row; flex-wrap: wrap; }
 
 	.header-website-detail { flex-direction: column; gap: 30px; }
 	.menu-company-contact, .menu-social-icon { width: 275px; }
+	.menu-link-icon, .mega-links-icon { width: 50px; height: 50px; font-size: 24px; }
+	.mega-links ul { padding-left: 65px; gap: 0; }
+	.menu-link a .text-18{ line-height: 18px; margin-bottom: 5px; }
+	.menu-link a .text-16{ line-height: 12px; }
 
-	.header-pages-link-wrapper ul { gap: 30px; }
+	.header-pages-link-wrapper { padding-bottom: 15px; margin-bottom: 15px; }
 
-	.mega-links ul { padding-left: 50px; }
+	.header-links-wrapper { padding-bottom: 15px; margin-bottom: 15px; }
 } 
 
 @media (max-width: 1023px) {
@@ -909,8 +913,8 @@
 	/* .element-map-wrapper { height: 170px; } */
 
 	.header-mega-menu { width: 700px; }
-	.menu-link a{ width: 203px; }
-	.header-pages-link-wrapper ul { gap: 25px; }
+	/* .menu-link a{ width: 203px; } */
+	/* .header-pages-link-wrapper ul { gap: 25px; } */
 }
 
 @media (max-width: 991px) {
@@ -967,7 +971,10 @@
 	.inquiry-form-text-wrapper { width: 100%; }
 
 	/* .element-map-wrapper { height: 170px; } */
-	.header-mega-menu-open { top: 50px; }
+	.menu-link-icon, .mega-links-icon { width: 46px; height: 46px; font-size: 20px; }
+	.mega-links ul { padding-left: 60px; }
+
+	.menu-link a .text-18 { margin-bottom: 3px; line-height: 16px; }
 }
 
 @media (max-width: 839px) {
@@ -1040,6 +1047,10 @@
 	/* .element-map-wrapper { height: 170px; } */
 	.stats-tablet-card .h1, .stats-tablet-card-map .h1, .stats-tablet-card h2 { margin-bottom: 10px; }
 	.stats-tablet-card, .stats-tablet-card-map { padding: 20px; }
+
+	.header-mega-menu { width: 640px; height: 100vh; overflow-y: scroll; padding-bottom: 30px; }
+
+	.menu-link-icon, .mega-links-icon { width: 44px; height: 44px; }
 }
 
 @media (max-width: 767px) {
@@ -1111,6 +1122,16 @@
 
 	.stats-element-art-board { margin: 10px 0; }
 	.stats-tablet-card .h1, .stats-tablet-card-map .h1, .stats-tablet-card h2 { margin-bottom: 6px; }
+
+	.header-mega-menu { width: 550px; }
+	.header-links-wrapper { gap: 10px; }
+	.header-mega-links-wrapper { width: calc( 50% - 5px ); }
+	.menu-company-contact, .menu-social-icon { width: max-content; }
+
+	.menu-link-icon, .mega-links-icon { width: 42px; height: 42px; font-size: 18px; }
+	.header-pages-link-wrapper ul { gap: 10px; }
+	.menu-link { width: calc( 50% - 5px ); }
+	.mega-links ul { padding-left: 57px; }
 }
 
 @media (max-width: 639px) {
@@ -1164,6 +1185,10 @@
 	.teams-section-quote-text { width: 260px; }
 	.teams-quote-image { width: 320px; }
 	.teams-author-image { width: 275px; right: -220px; }
+
+	.header-website-detail { gap: 24px; }
+	.menu-company-contact .contact-phone { margin-bottom: 0; }
+	.menu-social-icons { gap: 10px; }
 }
 
 @media (max-width: 575px) {
