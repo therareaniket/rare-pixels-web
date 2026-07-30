@@ -13,6 +13,22 @@ import "@/assets/css/responsive/desktop-responsive.css";
 export default function TestimonialSectionDesktop() {
     const swiperRef = useRef<SwiperType | null>(null);
 
+    const handleFullscreen = (
+        e: React.MouseEvent<HTMLVideoElement>
+    ) => {
+        const video = e.currentTarget as HTMLVideoElement & {
+            webkitEnterFullscreen?: () => void;
+        };
+        if (video.webkitEnterFullscreen) {
+            video.webkitEnterFullscreen();
+        }
+        else if (video.requestFullscreen) {
+            video.requestFullscreen();
+        }
+
+        video.play();
+    };
+
     return (
         <>
             <section className="section hm-testimonial-section" style={{ paddingTop: 0 }}>
@@ -28,12 +44,16 @@ export default function TestimonialSectionDesktop() {
                     <div className="testimonial-review-wrapper">
                         <div className="testimonial-review-video-wrapper">
                             <div className="testimonialreview-main">
-                                <Image src="/images/homepage/bernard-image.webp" alt="testimonial-image" width={480} height={480} loading="lazy"></Image>
+                                <video className="testimonial-video site-radius-20" src="/images/homepage/testimonialvideos/dummy-1.mp4" width={480} height={480} autoPlay muted loop playsInline onClick={handleFullscreen}></video>
                             </div>
 
-                            <Image className="testimonial-image-2" src="/images/homepage/eric-image.webp" alt="testimonial-image" width={200} height={200} loading="lazy"></Image>
+                            <div className="testimonial-image-2">
+                                <video className="testimonial-video" src="/images/homepage/testimonialvideos/dummy-2.mp4" width={200} height={200} autoPlay muted loop playsInline onClick={handleFullscreen}></video>
+                            </div>
 
-                            <Image className="testimonial-image-3" src="/images/homepage/client-3.webp" alt="testimonial-image" width={130} height={130} loading="lazy"></Image>
+                            <div className="testimonial-image-3">
+                                <video className="testimonial-video" src="/images/homepage/testimonialvideos/dummy-3.mp4" width={130} height={130} autoPlay muted loop playsInline onClick={handleFullscreen}></video>
+                            </div>
                         </div>
 
                         <div className="testimonial-cards-wrapper">

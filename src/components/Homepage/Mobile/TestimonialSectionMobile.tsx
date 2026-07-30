@@ -13,6 +13,22 @@ import 'swiper/css/pagination';
 export default function TestimonialSectionMobile() {
     const swiperRef = useRef<SwiperType | null>(null);
 
+    const handleFullscreen = (
+        e: React.MouseEvent<HTMLVideoElement>
+    ) => {
+        const video = e.currentTarget as HTMLVideoElement & {
+            webkitEnterFullscreen?: () => void;
+        };
+        if (video.webkitEnterFullscreen) {
+            video.webkitEnterFullscreen();
+        }
+        else if (video.requestFullscreen) {
+            video.requestFullscreen();
+        }
+
+        video.play();
+    };
+
     return (
         <>
             <section className="section" style={{ paddingTop: 0 }}>
@@ -24,11 +40,16 @@ export default function TestimonialSectionMobile() {
 
                         <div className="testimonial-client-video-wrapper">
                             <div className="testimonial-client-video">
-                                <Image className="testi-clt-img-1" src="/images/homepage/bernard-image.webp" alt="hm-testimonial-image" width={236} height={236}></Image>
+                                <video className="testi-clt-img-1 site-radius-10" src="/images/homepage/testimonialvideos/dummy-1.mp4" width={236} height={236} autoPlay loop playsInline muted onClick={handleFullscreen}></video>
                             </div>
 
-                            <Image className="testi-clt-img-2" src="/images/homepage/eric-image.webp" alt="hm-testimonial-image" width={100} height={100}></Image>
-                            <Image className="testi-clt-img-3" src="/images/homepage/client-3.webp" alt="hm-testimonial-image" width={100} height={100}></Image>
+                            <div className="testi-clt-img-2">
+                                <video className="testi-clt-img-1 site-radius-10" src="/images/homepage/testimonialvideos/dummy-2.mp4" width={100} height={100} autoPlay loop playsInline muted onClick={handleFullscreen}></video>
+                            </div>
+
+                            <div className="testi-clt-img-3">
+                                <video className="testi-clt-img-1 site-radius-10" src="/images/homepage/testimonialvideos/dummy-3.mp4" width={100} height={100} autoPlay loop playsInline muted onClick={handleFullscreen}></video>
+                            </div>
                         </div>
 
                         <Swiper
