@@ -50,7 +50,7 @@
 	.services-art-board img{ width: 100%; height: 100%; object-fit: contain; }
 
 
-	.industries-image-wrapper{ width: 850px; height: 600px; }
+	.industries-image-wrapper{ width: 850px; }
 	.industries-text-wrapper > span{ font-size: 66px; line-height: 74px; }
 	.industries-text-wrapper{ width: 460px; height: 475px; }
 
@@ -139,6 +139,18 @@
   		-webkit-box-orient: vertical;
   		overflow: hidden;
 	}
+
+	.menu-link a { width: 300px; }
+	.header-links-wrapper  { gap: 0; padding: 0; padding-bottom: 30px; }
+	.header-mega-menu { width: max-content; }
+	.header-pages-link-wrapper ul { padding: 0; gap: 50px; }
+	.menu-link-icon, .mega-links-icon { width: 48px; height: 48px; font-size: 20px; border-radius: 14px; }
+	.menu-social-icons { font-size: 20px; }
+	.menu-company-contact .contact-phone span { font-size: 20px; }
+
+	.brand-quote a span{ font-size: 14px; }
+
+	.header-mega-menu { padding: 70px 40px; }
 }
 
 @media (max-width: 1599px) {
@@ -203,7 +215,7 @@
 	.industries-text-wrapper > span{ font-size: 60px; line-height: 68px; }
 	.industries-text-wrapper{ width: 410px; height: 470px; }
 	.industries-text-wrapper p{ gap: 10px; }
-	.industries-image-wrapper{ width: 790px; height: 650px; }
+	.industries-image-wrapper{ width: 790px; }
 	.indus-box-50{ width: 40px; height: 40px; }
 	.indus-box-40{ width: 30px; height: 30px; }
 	.indus-box-30{ width: 20px; height: 20px; }
@@ -305,6 +317,19 @@
 	.nav-hamburger img { width: 24px; height: 24px; }
 
 	.process-element-art-board{ margin-left: 80px; }
+
+	.header-mega-links-wrapper { width: 315px; }
+	.header-mega-menu { padding: 30px; }
+	.menu-link a { width: 265px; }
+	.menu-link-icon, .mega-links-icon { width: 46px; height: 46px; }
+
+	.brand-quote .text-20{ font-size: 14px; line-height: 22px; }
+	.brand-quote a span { font-size: 10px; }
+	.brand-quote .h3 { margin-bottom: 15px; }
+
+	.menu-social-icons, .menu-company-contact .contact-phone span { font-size: 18px; }
+
+	.mega-links ul { padding-left: 60px; }
 }
 
 @media (max-width: 1439px) {
@@ -377,7 +402,7 @@
 
 	.hm-abt-card-title .h6{ font-size: 18px; line-height: 24px; }
 	.industries-text-wrapper > span{ font-size: 50px; line-height: 60px; }
-	.industries-image-wrapper{ width: 680px; height: 430px; }
+	.industries-image-wrapper{ width: 680px; }
 	.industries-text-wrapper{ width: 340px; height: 340px; }
 
 	.navbar-hamburger-effect{ width: 45px; height: 45px; }
@@ -448,6 +473,22 @@
 
 	.website-header-logo{ width: 140px; }
 	.navbar-wrapper{ padding: 10px 0; }
+
+	.mega-links ul { gap: 5px; padding-left: 55px; }
+	.menu-link a { width: 230px; }
+	.header-mega-links-wrapper { width: 280px; }
+
+	.menu-link-icon, .mega-links-icon { width: 40px; height: 40px; font-size: 18px; }
+	.header-mega-menu { padding: 20px; top: 65px; }
+	.menu-company-contact, .menu-social-icon { width: 230px; }
+	.header-contact-detail { gap: 30px; }
+	.menu-social-icons, .menu-company-contact .contact-phone span  { font-size: 14px; }
+	.menu-social-icons { gap: 15px; }
+	.menu-social-title, .contact-title, .head-add-country { margin-bottom: 10px; }
+
+	.header-pages-link-wrapper { padding-bottom: 20px; margin-bottom: 20px; gap: 20px; }
+	.header-links-wrapper { padding-bottom: 20px; margin-bottom: 20px; }
+	.brand-quote a { padding: 6px 20px; }
 }
 
 @media (max-width: 1359px) {
@@ -504,7 +545,7 @@
 	.services-card{ width: 225px; height: 360px; }
 	.services-art-board{ width: 200px; height: 200px; }
 
-	.industries-image-wrapper{ width: 645px; height: 500px; }
+	.industries-image-wrapper{ width: 645px; }
 	.industries-text-wrapper{ width: 280px; height: 390px; }
 	.industries-text-wrapper > span{ font-size: 40px; line-height: 50px; }
 	.indus-box-50{ width: 35px; height: 35px; }
@@ -592,6 +633,12 @@
         overflow: hidden;
 		margin-bottom: 12px;
     }
+	/* .header-mega-menu { width: 960px; }
+	.header-pages-link-wrapper ul { flex-wrap: wrap; } */
+
+	.header-mega-links-wrapper { width: 270px; }
+	.header-pages-link-wrapper ul { gap: 40px; }
+	.menu-link-icon, .mega-links-icon { width: 36px; height: 36px; font-size: 16px; }
 } 
 
 @media (max-width: 1199px) {
@@ -728,6 +775,7 @@
 	.process-vertical-active-line-for-tab { width: 1px; height: 0%; background-color: #E8DB7D; position: absolute; left: 24px; z-index: -1; transform-origin: top; }
 
 	.stats-wrapper-for-desktop{ display: none; }
+	.stats-section-for-tablet { display: flex; flex-direction: column; }
 
 	.stats-section-card-row { display: flex; }
 	.stats-tablet-card { width: 50%; padding: 30px 20px; border-bottom: 1px solid #424242; }
@@ -773,10 +821,10 @@
 
 	.blog-card-right-2{ width: 100%; align-items: center; text-align: center; }
 
-	.teams-section-wrapper{ flex-direction: column; align-items: flex-start; gap: 50px; padding-left: 0; }
+	.teams-section-wrapper{ flex-direction: column; align-items: flex-start; gap: 50px; padding-left: 0;  }
 	.teams-section-title{ width: 400px; }
 	.teams-quote-image{ width: 400px; }
-
+	.hm-blog-text-wrapper { padding-top: 50px; }
 	.teams-section-quote-text{ width: 330px; left: 15px; bottom: 15px; }
 
 	.teams-author-image{ width: 460px; right: -400px; }
@@ -785,6 +833,23 @@
 	.teams-pixels-bottom-right{ width: 240px; }
 	
 	.inquiry-checkbox-wrapper { flex-direction: column; align-items: flex-start; }
+
+	.header-links-for-tablet { display: flex; flex-wrap: wrap; }
+	.header-pages-link-wrapper ul { display: flex; flex-wrap: wrap; }
+
+	.menu-link a { width: 233px; }
+	.header-links-for-desktop { display: none; }
+	.header-mega-menu { width: 800px; }
+	.header-links-wrapper { flex-wrap: wrap; gap: 20px; }
+	.header-mega-links-wrapper { width: calc( 50% - 10px ); }
+	.header-pages-link-wrapper { flex-direction: row; flex-wrap: wrap; }
+
+	.header-website-detail { flex-direction: column; gap: 30px; }
+	.menu-company-contact, .menu-social-icon { width: 275px; }
+
+	.header-pages-link-wrapper ul { gap: 30px; }
+
+	.mega-links ul { padding-left: 50px; }
 } 
 
 @media (max-width: 1023px) {
@@ -1159,7 +1224,7 @@
 	.hm-projects-images-lg, .hm-projects-images-sm{ height: 280px; }
 	.hm-projects-desc{ height: 120px; }
 
-	.stats-section-for-tablet { display: flex; flex-direction: column; gap: 20px; }
+	.stats-section-for-tablet { display: flex !important; flex-direction: column; gap: 20px; }
 	.stats-section-card-row { flex-direction: column; gap: 20px; }
 	.stats-tablet-card, .stats-tablet-card-map { width: 100%; border-radius: 20px; border: 1px solid #424242; }
 	.stats-tablet-card-7 { border-radius: 20px; }

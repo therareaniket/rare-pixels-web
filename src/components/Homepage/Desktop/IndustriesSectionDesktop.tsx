@@ -80,7 +80,7 @@ export default function IndustriesSectionDesktop() {
 
             ScrollTrigger.create({
                 trigger: sectionRef.current,
-                start: "top 50px",
+                start: "top -20px",
                 end: "+=" + (industries.length * window.innerHeight),
                 pin: true,
                 scrub: true,
@@ -184,7 +184,7 @@ export default function IndustriesSectionDesktop() {
 
     return (
         <>
-            <section className="industries-section-sticky" ref={sectionRef} >
+            <section className="industries-section-sticky section" ref={sectionRef} >
                 <div className="industirs-section-inner">
                     <div className="container">
                         <div className="industries-text-title">

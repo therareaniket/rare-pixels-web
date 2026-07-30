@@ -2,7 +2,6 @@
 
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
-import GlassEffect from "@/components/LiquideGlass";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -60,33 +59,27 @@ export default function InquirySectionDesktop() {
                         <h3 className="text-rg">I&apos;m interested in (select one or more)</h3>
 
                         <div className="inquiry-checkbox-wrapper">
-                            <GlassEffect className="site-radius-30">
-                                <div className="inquiry-form-desktop-select-project">
-                                    <input type="checkbox" name="" id="" />
-                                    <label htmlFor="" className="text-rg h4">UI/UX Design</label>
-                                </div>
-                            </GlassEffect>
+                            <div className="inquiry-form-desktop-select-project">
+                                {/* <input type="checkbox" name="" id="" />
+                                <label htmlFor="" className="text-rg h4">UI/UX Design</label> */}
+                                <input type="checkbox" id="uiux" name="uiux" value="ui-ux" />
+                                <label htmlFor="uiux" className="text-rg h4">UI/UX Design</label>
+                            </div>
 
-                            <GlassEffect className="site-radius-30">
-                                <div className="inquiry-form-desktop-select-project">
-                                    <input type="checkbox" name="" id="" />
-                                    <label htmlFor="" className="text-rg h4">Web & App Development</label>
-                                </div>
-                            </GlassEffect>
+                            <div className="inquiry-form-desktop-select-project">
+                                <input type="checkbox" name="webdevelopment" id="webdevelopment" />
+                                <label htmlFor="webdevelopment" className="text-rg h4">Web & App Development</label>
+                            </div>
 
-                            <GlassEffect className="site-radius-30">
-                                <div className="inquiry-form-desktop-select-project">
-                                    <input type="checkbox" name="" id="" />
-                                    <label htmlFor="" className="text-rg h4">Brand Identity Design</label>
-                                </div>
-                            </GlassEffect>
+                            <div className="inquiry-form-desktop-select-project">
+                                <input type="checkbox" name="brandidentity" id="brandidentity" />
+                                <label htmlFor="brandidentity" className="text-rg h4">Brand Identity Design</label>
+                            </div>
 
-                            <GlassEffect className="site-radius-30">
-                                <div className="inquiry-form-desktop-select-project">
-                                    <input type="checkbox" name="" id="" />
-                                    <label htmlFor="" className="text-rg h4">Social Media Management</label>
-                                </div>
-                            </GlassEffect>
+                            <div className="inquiry-form-desktop-select-project">
+                                <input type="checkbox" name="socialmedia" id="socialmedia" />
+                                <label htmlFor="socialmedia" className="text-rg h4">Social Media Management</label>
+                            </div>
                         </div>
                     </div>
 

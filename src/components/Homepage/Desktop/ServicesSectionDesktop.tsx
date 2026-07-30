@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function ServicesSectionDesktop() {
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ paddingBottom : 0 }}>
                 <div className="container">
                     <div className="hm-services-title-wrapper">
                         <div className="services-title">

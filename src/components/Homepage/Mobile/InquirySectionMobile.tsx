@@ -1,6 +1,5 @@
 'use client';
 
-import GlassEffect from "@/components/LiquideGlass";
 import Link from "next/link";
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
@@ -41,37 +40,29 @@ export default function InquirySectionMobile() {
                             <h3 className="h5 text-rg">I’m interested in (select one or more)</h3>
 
                             <div className="inqury-form-mob-fields">
-                                <GlassEffect className="inquiry-mob-field">
-                                    <div>
-                                        <input type="checkbox" name="" id="" className="inquiry-form-input" />
+                                <div className="inquiry-mob-field">
+                                    <input type="checkbox" name="uiux" id="uiux" className="inquiry-form-input" />
 
-                                        <label htmlFor="" className="text-rg text-18">UI/UX Design</label>
-                                    </div>
-                                </GlassEffect>
+                                    <label htmlFor="uiux" className="text-rg text-18">UI/UX Design</label>
+                                </div>
 
-                                <GlassEffect className="inquiry-mob-field">
-                                    <div>
-                                        <input type="checkbox" name="" id="" className="inquiry-form-input" />
+                                <div className="inquiry-mob-field">
+                                    <input type="checkbox" name="webdevelopment" id="webdevelopment" className="inquiry-form-input" />
 
-                                        <label htmlFor="" className="text-rg text-18">Web & App Development</label>
-                                    </div>
-                                </GlassEffect>
+                                    <label htmlFor="webdevelopment" className="text-rg text-18">Web & App Development</label>
+                                </div>
 
-                                <GlassEffect className="inquiry-mob-field">
-                                    <div>
-                                        <input type="checkbox" name="" id="" className="inquiry-form-input" />
+                                <div className="inquiry-mob-field">
+                                    <input type="checkbox" name="brandidentity" id="brandidentity" className="inquiry-form-input" />
 
-                                        <label htmlFor="" className="text-rg text-18">Brand Identity Design</label>
-                                    </div>
-                                </GlassEffect>
+                                    <label htmlFor="brandidentity" className="text-rg text-18">Brand Identity Design</label>
+                                </div>
 
-                                <GlassEffect className="inquiry-mob-field">
-                                    <div>
-                                        <input type="checkbox" name="" id="" className="inquiry-form-input" />
+                                <div className="inquiry-mob-field">
+                                    <input type="checkbox" name="socialmedia" id="socialmedia" className="inquiry-form-input" />
 
-                                        <label htmlFor="" className="text-rg text-18">Social Media Management</label>
-                                    </div>
-                                </GlassEffect>
+                                    <label htmlFor="socialmedia" className="text-rg text-18">Social Media Management</label>
+                                </div>
                             </div>
                         </div>
                     </div>
