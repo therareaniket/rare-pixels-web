@@ -501,6 +501,9 @@
     .menu-social-icons, .menu-company-contact .contact-phone span { font-size: 18px; }
 
     .menu-link-icon, .mega-links-icon { font-size: 14px; }
+    .testimonial-video { border-radius: 8px; }
+    .minimize-btn-small { width: 14px; height: 14px; bottom: 6px; right: 6px; }
+
     
 }
 
@@ -519,7 +522,7 @@
 
     .mobile-client-initial{ gap: 14px; }
 
-    .testimonial-client-video{ width: 270px; height: 180px; }
+    .testimonial-client-video{ width: 100%; height: 180px; }
     .testi-clt-img-2{ width: 70px; height: 70px; left: 0; }
     .testi-clt-img-3{ width: 70px; height: 70px; right: 0; }
 
@@ -541,7 +544,6 @@
     h6, .h6 { font-size: 18px; }
 
     .testi-clt-img-2{ width: 70px; height: 70px; left: 0px; top: 90px; }
-    .testimonial-client-video{ width: 230px; height: 180px; }
     .testi-clt-img-3{ width: 70px; height: 70px; }
     .services-mobile-card{ height: 255px; }
     .hm-abt-card-mobile{ height: 185px; }
