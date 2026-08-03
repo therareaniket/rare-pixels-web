@@ -52,23 +52,6 @@ export default function Header() {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
-                menuRef.current &&
-                !menuRef.current.contains(event.target as Node)
-            ) {
-                setIsMenuOpen(false);
-            }
-        };
-
-        document.addEventListener("mousedown", handleClickOutside);
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
-
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
                 menuContainerRef.current &&
                 !menuContainerRef.current.contains(event.target as Node)
             ) {
@@ -83,26 +66,41 @@ export default function Header() {
         };
     }, []);
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isMenuOpen]);
+
     return (
         <>
             <header className={`site-header ${showHeader ? "header-visible" : "header-hidden"}`}>
-                <GlassEffect>
-                    <nav className="nav">
-                        <div className="container">
-                            <div className="navbar-wrapper">
-                                <div className="website-header-logo">
-                                    {theme === "light" ? <Image className="dark-mode-icon" src="/images/rp-logo-black.png" alt="dark-mode" width={174} height={28} loading="eager" /> : <Image className="light-mode-icon" src="/images/rp-logo-white.png" alt="dark-mode" width={174} height={28} loading="lazy" />}
+                {/* <GlassEffect> */}
+                <nav className="nav">
+                    <div className="container">
+                        <div className="navbar-wrapper">
+                            <div className="website-header-logo">
+                                {theme === "light" ? <Image className="dark-mode-icon" src="/images/rp-logo-black.png" alt="dark-mode" width={174} height={28} loading="eager" /> : <Image className="light-mode-icon" src="/images/rp-logo-white.png" alt="dark-mode" width={174} height={28} loading="lazy" />}
+                            </div>
+
+                            <div ref={menuContainerRef} className="nav-icon-wrapper">
+                                <div
+                                    className="nav-hamburger"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setIsMenuOpen((prev) => !prev);
+                                    }}
+                                >
+                                    <Image className="dark-mode-icon" src="/images/light-mode-hamburger.svg" alt="dark-mode" width={30} height={30} loading="eager" />
                                 </div>
 
-                                <div ref={menuContainerRef} className="nav-icon-wrapper">
-                                    {/* <button className="mode-switching-toggle-button toggle-button mode-theme-btn" onClick={toggleTheme}>
-                                        {theme === "light" ? <Image className="dark-mode-icon" src="/images/light-mode-icon.svg" alt="dark-mode" width={36} height={36} loading="eager" /> : <Image className="light-mode-icon" src="/images/light-mode-icon.svg" alt="dark-mode" width={36} height={36} loading="lazy" />}
-                                    </button> */}
-
-                                    <div className="nav-hamburger" onClick={() => setIsMenuOpen(prev => !prev)}>
-                                        {theme === "light" ? <Image className="dark-mode-icon" src="/images/light-mode-hamburger.svg" alt="dark-mode" width={30} height={30} loading="eager" /> : <Image className="light-mode-icon" src="/images/dark-mode-hamburger.svg" alt="dark-mode" width={30} height={30} loading="lazy" />}
-                                    </div>
-
+                                <div className="mega-menu-background-blurr">
                                     <div ref={menuRef} className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""}`} >
                                         <div className="header-pages-link-wrapper header-links-for-desktop">
                                             <ul className="header-menu-link-wrapper">
@@ -750,10 +748,11 @@ export default function Header() {
                                         </div>
                                     </div>
                                 </div>
-                            </div >
+                            </div>
                         </div >
-                    </nav >
-                </GlassEffect >
+                    </div >
+                </nav >
+                {/* </GlassEffect > */}
             </header >
         </>
     )

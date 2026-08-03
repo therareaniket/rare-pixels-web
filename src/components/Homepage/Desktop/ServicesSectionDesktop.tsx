@@ -34,7 +34,7 @@ export default function ServicesSectionDesktop() {
                                 <span className="h6 text-sb text-black">UI/UX Design</span>
 
                                 <div className="services-detail-text">
-                                    <p className="text-rg text-18 text-black">People don&apos;t abandon products. They abandon experiences that feel difficult to understand.</p>
+                                    <p className="text-rg text-18 text-black">People don&apos;t abandon products. They abandon experiences that feel difficult.</p>
 
                                     <p className="text-18 text-rg text-black">We design interfaces that simplify decisions, remove friction, and help users move from curiosity to confidence without second-guessing their next step.</p>
                                 </div>

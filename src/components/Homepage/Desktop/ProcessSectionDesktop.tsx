@@ -304,7 +304,7 @@ export default function ProcessSectionDesktop() {
                                         </div>
 
                                         <div className="process-pointer-text-wrapper">
-                                            <h3 className="text-sb h2">STRATEGISE</h3>
+                                            <h3 className="text-sb h2">STRATEGIZE</h3>
 
                                             <p className="text-rg text-18">
                                                 <span>Direction creates momentum.</span>

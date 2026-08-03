@@ -118,7 +118,7 @@ export default function ProcessSectionMobile() {
 
                                 <div className="process-card-mob-text">
                                     <div className="process-title-text">
-                                        <h3 className="h2 text-sb text-upper-case">Strategise</h3>
+                                        <h3 className="h2 text-sb text-upper-case">Strategize</h3>
                                         <div className="process-mobile-tick">
                                             <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>

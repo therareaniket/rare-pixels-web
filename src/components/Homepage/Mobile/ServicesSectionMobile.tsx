@@ -28,7 +28,7 @@ export default function ServicesSectionMobile() {
                                 <p className="text-18 text-sb text-black">UI/UX Design</p>
 
                                 <p className="text-16 services-detail-text">
-                                    <span className="text-rg text-black">People don&apos;t abandon products. They abandon experiences that feel difficult to understand.</span>
+                                    <span className="text-rg text-black">People don&apos;t abandon products. They abandon experiences that feel difficult.</span>
 
                                     <span className="text-rg text-black">We design interfaces that simplify decisions, remove friction, and help users move from curiosity to confidence without second-guessing their next step.</span>
                                 </p>

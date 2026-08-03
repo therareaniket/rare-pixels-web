@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
@@ -10,32 +10,73 @@ import 'swiper/css/pagination';
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 
+
+const videos = [
+    "/images/homepage/testimonialvideos/dummy-1.mp4",
+    "/images/homepage/testimonialvideos/dummy-2.mp4",
+    "/images/homepage/testimonialvideos/dummy-3.mp4",
+]
+
 export default function TestimonialSectionDesktop() {
+    const [selectVideo, setSelectVideo] = useState<string | null>(null);
+    const [activeVideoIndex, setActiveVideoIndex] = useState(0);
     const swiperRef = useRef<SwiperType | null>(null);
 
-    const handleFullscreen = (
-        e: React.MouseEvent<HTMLVideoElement>
-    ) => {
-        const video = e.currentTarget as HTMLVideoElement & {
-            webkitEnterFullscreen?: () => void;
-        };
-        if (video.webkitEnterFullscreen) {
-            video.webkitEnterFullscreen();
-        }
-        else if (video.requestFullscreen) {
-            video.requestFullscreen();
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
+    const mainVideoRef = useRef<HTMLVideoElement>(null);
+    const video2Ref = useRef<HTMLVideoElement>(null);
+    const video3Ref = useRef<HTMLVideoElement>(null);
+
+    const handleFullscreen = (src: string) => {
+        setSelectVideo(src);
+    };
+
+    useEffect(() => {
+        if (selectVideo) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
         }
 
-        video.play();
-    };
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [selectVideo]);
+
+    useEffect(() => {
+        const videoRefs = [
+            mainVideoRef,
+            video2Ref,
+            video3Ref,
+        ];
+
+        if (selectVideo) {
+            document.body.style.overflow = "hidden";
+
+            swiperRef.current?.autoplay?.stop();
+
+            videoRefs.forEach((ref) => {
+                ref.current?.pause();
+            });
+        } else {
+            document.body.style.overflow = "";
+
+            swiperRef.current?.autoplay?.start();
+
+            videoRefs.forEach((ref) => {
+                ref.current?.play().catch(() => { });
+            });
+        }
+    }, [selectVideo]);
 
     return (
         <>
-            <section className="section hm-testimonial-section" style={{ paddingTop: 0 }}>
+            <section className="section hm-testimonial-section">
                 <div className="container">
                     <div className="hm-testimonial-txt-wrapper">
                         <div className="hm-testimonial-left-text">
-                            <h2 className="text-sb">Proof Over Promises </h2>
+                            <h2 className="text-sb">Proof Over Promises </h2>
 
                             <p className="text-18 text-rg text-grey">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
                         </div>
@@ -43,16 +84,57 @@ export default function TestimonialSectionDesktop() {
 
                     <div className="testimonial-review-wrapper">
                         <div className="testimonial-review-video-wrapper">
-                            <div className="testimonialreview-main">
-                                <video className="testimonial-video site-radius-20" src="/images/homepage/testimonialvideos/dummy-1.mp4" width={480} height={480} autoPlay muted loop playsInline onClick={handleFullscreen}></video>
+                            <div className="testimonialreview-main testimonial-image">
+                                <video
+                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
+                                        }`}
+                                    // src="/images/homepage/testimonialvideos/dummy-1.mp4"
+                                    src={videos[activeVideoIndex]}
+                                    ref={mainVideoRef}
+                                    width={480}
+                                    height={480}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    // onClick={handleFullscreen}
+                                    onClick={() => handleFullscreen(videos[activeVideoIndex])}
+                                >
+                                </video>
+
+                                {/* <Image className="minimize-btn" src="/images/homepage/testimonialvideos/minimize.svg" alt="minimize" width={24} height={24}></Image> */}
+                                <Image className="minimize-btn" onMouseDown={() => handleFullscreen(videos[activeVideoIndex])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={30} height={30}></Image>
                             </div>
 
-                            <div className="testimonial-image-2">
-                                <video className="testimonial-video" src="/images/homepage/testimonialvideos/dummy-2.mp4" width={200} height={200} autoPlay muted loop playsInline onClick={handleFullscreen}></video>
+                            <div className="testimonial-image-2 testimonial-image">
+                                <video
+                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
+                                        }`}
+                                    ref={video2Ref}
+                                    src={videos[(activeVideoIndex + 1) % videos.length]}
+                                    width={200}
+                                    height={200}
+                                    // onClick={handleFullscreen}
+                                    onClick={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])}
+                                >
+                                </video>
+
+                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={24} height={24}></Image>
                             </div>
 
-                            <div className="testimonial-image-3">
-                                <video className="testimonial-video" src="/images/homepage/testimonialvideos/dummy-3.mp4" width={130} height={130} autoPlay muted loop playsInline onClick={handleFullscreen}></video>
+                            <div className="testimonial-image-3 testimonial-image">
+                                <video
+                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
+                                        }`}
+                                    ref={video3Ref}
+                                    src={videos[(activeVideoIndex + 2) % videos.length]}
+                                    width={130}
+                                    height={130}
+                                    onClick={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])}
+                                >
+                                </video>
+
+                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={24} height={24}></Image>
                             </div>
                         </div>
 
@@ -63,7 +145,15 @@ export default function TestimonialSectionDesktop() {
                                 slidesPerView={2}
                                 loop={true}
                                 speed={2200}
-                                autoplay={{ delay: 1500 }}
+                                autoplay={{ delay: 3000 }}
+                                onSlideChange={() => {
+                                    setIsTransitioning(true);
+
+                                    setTimeout(() => {
+                                        setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+                                        setIsTransitioning(false);
+                                    }, 500);
+                                }}
                                 onSwiper={(swiper) => {
                                     swiperRef.current = swiper;
                                 }}
@@ -206,6 +296,32 @@ export default function TestimonialSectionDesktop() {
                     </div>
                 </div>
             </section>
+
+            {selectVideo && (
+                <div
+                    className="video-overlay"
+                    onClick={() => setSelectVideo(null)}
+                >
+                    <video
+                        src={selectVideo}
+                        className="video-fullscreen"
+                        loop
+                        autoPlay
+                        controls
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                    </video>
+                    <button
+                        className="video-close-btn"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectVideo(null);
+                        }}
+                    >
+                        <span>✕</span>
+                    </button>
+                </div>
+            )}
         </>
     );
 }

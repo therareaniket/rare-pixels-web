@@ -1,7 +1,7 @@
 "use client"
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import HeroSectionMobile from "@/components/Homepage/Mobile/HeroSectionMobile";
+// import HeroSectionMobile from "@/components/Homepage/Mobile/HeroSectionMobile";
 import TestimonialSectionMobile from "@/components/Homepage/Mobile/TestimonialSectionMobile";
 import AboutSectionMobile from "@/components/Homepage/Mobile/AboutSectionMobile";
 import ServicesSectionMobile from "@/components/Homepage/Mobile/ServicesSectionMobile";
@@ -16,7 +16,7 @@ import BlogSectionMobile from "@/components/Homepage/Mobile/BlogSectionMobile";
 import TeamsSectionMobile from "@/components/Homepage/Mobile/TeamsSectionMobile";
 // import TeamsSectionDesktop from "@/components/Homepage/Desktop/TeamsSectionDesktop";
 
-const HeroSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/HeroSectionDesktop"), { ssr: false } );
+// const HeroSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/HeroSectionDesktop"), { ssr: false } );
 const TestimonialSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/TestimonialSectionDesktop"), { ssr: false } );
 const AboutSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/AboutSectionDesktop"), { ssr: false } );
 const ServicesSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ServicesSectionDesktop"), { ssr: false } );
@@ -52,7 +52,7 @@ export default function Home() {
 				{isSmallScreen ?
 					<>
 						{/* MOBILE COMPONENTS */}
-						<HeroSectionMobile />
+						{/* <HeroSectionMobile /> */}
 						<TestimonialSectionMobile />
 						<AboutSectionMobile />
 						<ServicesSectionMobile />
@@ -69,7 +69,7 @@ export default function Home() {
 					:
 					<>
 						{/* DESKTOP COMPONENTS */}
-						<HeroSectionDesktop />
+						{/* <HeroSectionDesktop /> */}
 						<TestimonialSectionDesktop />
 						<AboutSectionDesktop />
 						<ServicesSectionDesktop />

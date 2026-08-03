@@ -3,31 +3,73 @@
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+const videos = [
+    "/images/homepage/testimonialvideos/dummy-1.mp4",
+    "/images/homepage/testimonialvideos/dummy-2.mp4",
+    "/images/homepage/testimonialvideos/dummy-3.mp4",
+]
+
 export default function TestimonialSectionMobile() {
     const swiperRef = useRef<SwiperType | null>(null);
+    const [selectVideo, setSelectVideo] = useState<string | null>(null);
+    const [activeVideoIndex, setActiveVideoIndex] = useState(0);
 
-    const handleFullscreen = (
-        e: React.MouseEvent<HTMLVideoElement>
-    ) => {
-        const video = e.currentTarget as HTMLVideoElement & {
-            webkitEnterFullscreen?: () => void;
-        };
-        if (video.webkitEnterFullscreen) {
-            video.webkitEnterFullscreen();
-        }
-        else if (video.requestFullscreen) {
-            video.requestFullscreen();
-        }
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
-        video.play();
+    const mainVideoRef = useRef<HTMLVideoElement>(null);
+    const video2Ref = useRef<HTMLVideoElement>(null);
+    const video3Ref = useRef<HTMLVideoElement>(null);
+
+    const handleFullscreen = (src: string) => {
+        setSelectVideo(src);
     };
+
+    useEffect(() => {
+        if (selectVideo) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [selectVideo]);
+
+    useEffect(() => {
+        const videoRefs = [
+            mainVideoRef,
+            video2Ref,
+            video3Ref,
+        ];
+
+        if (selectVideo) {
+            document.body.style.overflow = "hidden";
+
+            swiperRef.current?.autoplay?.stop();
+
+            videoRefs.forEach((ref) => {
+                ref.current?.pause();
+            });
+        } else {
+            document.body.style.overflow = "";
+
+            swiperRef.current?.autoplay?.start();
+
+            videoRefs.forEach((ref) => {
+                ref.current?.play().catch(() => { });
+            });
+        }
+    }, [selectVideo]);
+
 
     return (
         <>
@@ -40,15 +82,56 @@ export default function TestimonialSectionMobile() {
 
                         <div className="testimonial-client-video-wrapper">
                             <div className="testimonial-client-video">
-                                <video className="testi-clt-img-1 site-radius-10" src="/images/homepage/testimonialvideos/dummy-1.mp4" width={236} height={236} autoPlay loop playsInline muted onClick={handleFullscreen}></video>
+                                <video
+                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
+                                        }`}
+                                    // src="/images/homepage/testimonialvideos/dummy-1.mp4"
+                                    src={videos[activeVideoIndex]}
+                                    ref={mainVideoRef}
+                                    width={480}
+                                    height={480}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    // onClick={handleFullscreen}
+                                    onClick={() => handleFullscreen(videos[activeVideoIndex])}
+                                >
+                                </video>
+
+                                {/* <Image className="minimize-btn" src="/images/homepage/testimonialvideos/minimize.svg" alt="minimize" width={24} height={24}></Image> */}
+                                <Image className="minimize-btn" onMouseDown={() => handleFullscreen(videos[activeVideoIndex])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={30} height={30}></Image>
                             </div>
 
                             <div className="testi-clt-img-2">
-                                <video className="testi-clt-img-1 site-radius-10" src="/images/homepage/testimonialvideos/dummy-2.mp4" width={100} height={100} autoPlay loop playsInline muted onClick={handleFullscreen}></video>
+                                <video
+                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
+                                        }`}
+                                    ref={video2Ref}
+                                    src={videos[(activeVideoIndex + 1) % videos.length]}
+                                    width={200}
+                                    height={200}
+                                    // onClick={handleFullscreen}
+                                    onClick={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])}
+                                >
+                                </video>
+
+                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={24} height={24}></Image>
                             </div>
 
                             <div className="testi-clt-img-3">
-                                <video className="testi-clt-img-1 site-radius-10" src="/images/homepage/testimonialvideos/dummy-3.mp4" width={100} height={100} autoPlay loop playsInline muted onClick={handleFullscreen}></video>
+                                <video
+                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
+                                        }`}
+                                    ref={video3Ref}
+                                    src={videos[(activeVideoIndex + 2) % videos.length]}
+                                    width={130}
+                                    height={130}
+                                    onClick={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])}
+                                >
+                                </video>
+
+                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={24} height={24}></Image>
                             </div>
                         </div>
 
@@ -68,6 +151,14 @@ export default function TestimonialSectionMobile() {
                             shortSwipes={true}
                             longSwipes={true}
                             longSwipesRatio={0.4}
+                            onSlideChange={() => {
+                                setIsTransitioning(true);
+
+                                setTimeout(() => {
+                                    setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+                                    setIsTransitioning(false);
+                                }, 500);
+                            }}
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
                             }}
@@ -209,6 +300,32 @@ export default function TestimonialSectionMobile() {
                     </div>
                 </div>
             </section>
+
+            {selectVideo && (
+                <div
+                    className="video-overlay"
+                    onClick={() => setSelectVideo(null)}
+                >
+                    <video
+                        src={selectVideo}
+                        className="video-fullscreen"
+                        loop
+                        autoPlay
+                        controls
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                    </video>
+                    <button
+                        className="video-close-btn"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectVideo(null);
+                        }}
+                    >
+                        <span>✕</span>
+                    </button>
+                </div>
+            )}
         </>
     );
 }
