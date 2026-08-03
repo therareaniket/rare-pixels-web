@@ -793,7 +793,7 @@
 	.hm-blog-text-wrapper{ width: 100%; }
 	.hm-blog-wrapper{ flex-direction: column; }
 	.hm-blog-card-right{ flex-direction: column-reverse; }
-	.blog-card-right-3, .hm-blog-card-left{ width: 100%; padding: 20px; border: 1px solid rgba(237, 1, 128, 0.5); border-radius: 20px; }
+	.blog-card-right-3, .hm-blog-card-left{ width: 100%; padding: 20px; border-radius: 20px; box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); }
 
 	.hm-blog-image, .blog-card-3-left{ height: 350px; }
 

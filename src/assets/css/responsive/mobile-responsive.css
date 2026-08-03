@@ -252,7 +252,7 @@
     .hm-blog-image-mob img { width: 100%; height: 100%; object-fit: cover; }
     .hm-blog-mobile-card-1 h3, .hm-blog-mobile-card-2 h3 { margin-bottom: 0; }
     .hm-blog-mob-author { display: flex; align-items: center; gap: 6px; margin-top: 14px; margin-bottom: 20px; }
-    .hm-blog-mobile-card-2 { margin: 20px 0; }
+    .hm-blog-mobile-card-2 { margin: 30px 0; }
 
     .teams-mobile-wrapper { margin: 0 auto; display: flex; align-items: center; justify-content: center; }
     .mobile-quote { margin-top: 290px; }
@@ -359,7 +359,7 @@
     .mobile-review-rating-wrapper img{ width: 12px; height: 12px; }
 
     .hm-abt-site-logo img{ width: 150px; }
-    .testimonial-client-video{ height: 210px; }
+    .testimonial-client-video{ width: 100%; height: 210px; }
 
     .hm-hero-desc-wrapper{ gap: 12px; }
     .hero-link-cta{ font-size: 14px; line-height: 22px; }
@@ -536,6 +536,8 @@
     .projects-text-mob{ height: 115px; }
 
     .faq-accordion{ width: 275px; }
+    
+    .projects-card-mobile { width: 320px; }
 }
 
 @media (max-width: 359px) {

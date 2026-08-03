@@ -5,4 +5,4 @@
 .section-yellow-background{ background-color: var(--bg-yellow); }
 .placeholder-text{ color: var(--placeholder-text); }
 
-.hm-blog-mobile-card-1, .hm-blog-mobile-card-2 { padding: 12px; border: 1px solid rgba(237, 1, 128, 0.5); border-radius: 20px; }
+.hm-blog-mobile-card-1, .hm-blog-mobile-card-2 { padding: 12px; border-radius: 20px; box-shadow: -1px 3px 6px 3px rgba(0, 0, 0, 0.1); }
