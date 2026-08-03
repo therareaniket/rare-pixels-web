@@ -4,9 +4,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+  html { @apply font-sans; }
+}
+
 :root {
     --primary: #ED0180;
-    --text-black: #000000;
+    /* --text-black: #000000; */
 
     --all-white: #ffffff;
     --all-black: #000000;
@@ -36,6 +42,9 @@
 
     --why-choose-desktop-box: inset 0 -47px 22px 18px rgba(255, 255, 255, 1);
     --why-choose-mobile-box: inset 0 -45px 15px -3px rgba(255, 255, 255, 1);
+
+
+
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
@@ -69,10 +78,10 @@
     --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* [data-theme="dark"] {
+[data-theme="dark"] {
 	--primary: #ED0180;
-	--background: #000000;
-	--text-black: #ffffff;
+	--background: #01030D;
+	/* --text-black: #ffffff; */
   --border-color: #ffffff;
 
   --text-grey: #C6C6C6;
@@ -93,7 +102,7 @@
   --inquiry-form-border: #3C3C3C;
 
   --placeholder-text: #3C3C3C;
-} */
+}
 
 /* ::selection { background-color: ; } */
 
@@ -152,7 +161,7 @@
   text-transform: none;
   line-height: 1;
 
-  /* Better Font Rendering =========== */
+  /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -250,7 +259,7 @@
 
 body {
     background: var(--background);
-    color: var(--text-black);
+    /* color: var(--text-black); */
     font-family: 'strichpunkt-rg';
 }
 
@@ -261,7 +270,7 @@ body {
 
 .container { max-width: calc(1600px + 36px); padding: 0 18px; margin: 0 auto; }
 .container-sm { max-width: calc(1440px + 36px); padding: 0 18px; margin: 0 auto; }  
-.section{ padding: 150px 0; }
+.section{ padding: 100px 0; }
 
 /* h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: 'strichpunkt-sb'; } */
 h1, .h1 { font-size: 64px; line-height: 70px; margin-bottom: 20px; }
@@ -359,16 +368,4 @@ h6, .h6 { font-size: 22px; line-height: 32px; margin-bottom: 16px; }
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-    }
-  body {
-    @apply bg-background text-foreground;
-    }
-  html {
-    @apply font-sans;
-    }
 }

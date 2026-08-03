@@ -15,8 +15,6 @@ interface Model3DProps { config: (typeof MODEL_CONFIG)[number], xOffset: number 
 const ENTRY_OFFSET_X = 6
 const ENTRY_SCALE    = 2
 
-
-
 const Model3D = ({ config, xOffset }: Model3DProps) => {
 	const groupRef = useRef<THREE.Group>(null)
 	const mouse = useRef<{ x: number; y: number } | null>(null)
@@ -110,55 +108,55 @@ const Model3D = ({ config, xOffset }: Model3DProps) => {
 
   	const idleClock = useRef(0)
 
-	useFrame(({ camera }) => {
-		if (!groupRef.current) return  // ← removed mouse.current === null check
+	// useFrame(({ camera }) => {
+	// 	if (!groupRef.current) return  // ← removed mouse.current === null check
 
-		const isIdle =
-			mouse.current === null ||     // ← null mouse = always idle (model just swapped)
-			(lastMouseMove.current !== null && Date.now() - lastMouseMove.current > 50)
+	// 	const isIdle =
+	// 		mouse.current === null ||     // ← null mouse = always idle (model just swapped)
+	// 		(lastMouseMove.current !== null && Date.now() - lastMouseMove.current > 50)
 
-		if (isIdle) {
-			idleClock.current += 0.03
-			const breathScale = 0.92 + Math.cos(idleClock.current) * 0.050;
+	// 	if (isIdle) {
+	// 		idleClock.current += 0.03
+	// 		const breathScale = 0.92 + Math.cos(idleClock.current) * 0.050;
 
-			groupRef.current.scale.lerp(new THREE.Vector3(breathScale, breathScale, breathScale), 0.05);
+	// 		groupRef.current.scale.lerp(new THREE.Vector3(breathScale, breathScale, breathScale), 0.05);
 
-			groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, position[0] + xOffset, 0.02)
-			groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, position[1], 0.02)
-			groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, position[2], 0.02)
+	// 		groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, position[0] + xOffset, 0.02)
+	// 		groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, position[1], 0.02)
+	// 		groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, position[2], 0.02)
 
-			groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, 0, 0.02)
-			groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, 0, 0.02)
-			groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, 0, 0.02)
-		} else {
-			idleClock.current = 0  // reset so breath always starts from 0 when idle resumes
+	// 		groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, 0, 0.02)
+	// 		groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, 0, 0.02)
+	// 		groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, 0, 0.02)
+	// 	} else {
+	// 		idleClock.current = 0  // reset so breath always starts from 0 when idle resumes
 
-			const { x: mouseX, y: mouseY } = mouse.current!
+	// 		const { x: mouseX, y: mouseY } = mouse.current!
 
-			const worldTarget = new THREE.Vector3(mouseX, mouseY, 0.5)
-			worldTarget.unproject(camera)
+	// 		const worldTarget = new THREE.Vector3(mouseX, mouseY, 0.5)
+	// 		worldTarget.unproject(camera)
 
-			const dir = worldTarget.sub(camera.position).normalize()
-			const distance = (position[2] - camera.position.z) / dir.z
-			const targetPos = camera.position.clone().add(dir.multiplyScalar(distance))
+	// 		const dir = worldTarget.sub(camera.position).normalize()
+	// 		const distance = (position[2] - camera.position.z) / dir.z
+	// 		const targetPos = camera.position.clone().add(dir.multiplyScalar(distance))
 
-			const leashRadius = 12
-			const offset = new THREE.Vector2(
-				targetPos.x - (position[0] + xOffset),
-				targetPos.y - position[1]
-			)
-			if (offset.length() > leashRadius) offset.setLength(leashRadius)
+	// 		const leashRadius = 12
+	// 		const offset = new THREE.Vector2(
+	// 			targetPos.x - (position[0] + xOffset),
+	// 			targetPos.y - position[1]
+	// 		)
+	// 		if (offset.length() > leashRadius) offset.setLength(leashRadius)
 
-			const followSpeed = 0.02
-			groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, position[0] + xOffset + offset.x, followSpeed)
-			groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, position[1] + offset.y, followSpeed)
-			groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, position[2], followSpeed)
+	// 		const followSpeed = 0.02
+	// 		groupRef.current.position.x = THREE.MathUtils.lerp(groupRef.current.position.x, position[0] + xOffset + offset.x, followSpeed)
+	// 		groupRef.current.position.y = THREE.MathUtils.lerp(groupRef.current.position.y, position[1] + offset.y, followSpeed)
+	// 		groupRef.current.position.z = THREE.MathUtils.lerp(groupRef.current.position.z, position[2], followSpeed)
 
-			groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, offset.x * 0.1, 0.05)
-			groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, offset.y * 0.1, 0.05)
-			groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, offset.y * 0.2, 0.05)
-		}
-	})
+	// 		groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, offset.x * 0.1, 0.05)
+	// 		groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, offset.y * 0.1, 0.05)
+	// 		groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, offset.y * 0.2, 0.05)
+	// 	}
+	// })
 
 	return <primitive ref={groupRef} object={scene} />
 }

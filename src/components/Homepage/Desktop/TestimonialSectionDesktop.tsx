@@ -76,7 +76,7 @@ export default function TestimonialSectionDesktop() {
                 <div className="container">
                     <div className="hm-testimonial-txt-wrapper">
                         <div className="hm-testimonial-left-text">
-                            <h2 className="text-sb">Proof Over Promises </h2>
+                            <h2 className="text-sb">Proof Over Promises</h2>
 
                             <p className="text-18 text-rg text-grey">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
                         </div>
@@ -139,8 +139,7 @@ export default function TestimonialSectionDesktop() {
                         </div>
 
                         <div className="testimonial-cards-wrapper">
-                            <Swiper
-                                modules={[Autoplay]}
+                            <Swiper modules={[Autoplay]}
                                 spaceBetween={30}
                                 slidesPerView={2}
                                 loop={true}
@@ -164,8 +163,7 @@ export default function TestimonialSectionDesktop() {
                                     1024: { slidesPerView: 1.5 },
                                     1200: { slidesPerView: 1.6, spaceBetween: 20 },
                                     1360: { slidesPerView: 2, spaceBetween: 30 }
-                                }}
-                            >
+                                }}>
                                 <SwiperSlide>
                                     <div className="tesctimonial-card testimonial-card-1">
                                         <div className="text-18 text-rg testimonial-client-text testimonial-text-1 site-radius-20">

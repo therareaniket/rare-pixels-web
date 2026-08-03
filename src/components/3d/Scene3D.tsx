@@ -43,7 +43,7 @@ const Scene3D = ({ activeIndex }: Scene3DProps) => {
 				<Model3D key={activeIndex} config={config} xOffset={xOffset} />
 			</Suspense>
 
-			<OrbitControls enableZoom={false} enablePan={false} />
+			{/* <OrbitControls enableZoom={false} enablePan={false} /> */}
 			{/* <Environment preset="studio" /> */}
 		</Canvas>
   )

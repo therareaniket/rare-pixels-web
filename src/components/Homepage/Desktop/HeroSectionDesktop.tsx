@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import dynamic from 'next/dynamic';
+import HeroPixelReveal from "@/components/HeroPixelReveal";
 
 const Scene3D = dynamic(() => import('@/components/3d/Scene3D'), {
     ssr: false,
@@ -20,7 +21,9 @@ const services = [
         width: 665,
         height: 530,
         alternate: "eye-emoji",
-        class: "home-eye"
+        class: "home-eye",
+        bgColor: "#F8E8FF",
+        textColor: "black",
     },
     {
         title: "Web & App Development",
@@ -29,7 +32,9 @@ const services = [
         width: 586,
         height: 482,
         alternate: "brain-emoji",
-        class: "home-brain"
+        class: "home-brain",
+        bgColor: "#030B28",
+        textColor: "white",
     },
     {
         title: "Brand Identity Design",
@@ -38,7 +43,9 @@ const services = [
         width: 450,
         height: 530,
         alternate: "heart-emoji",
-        class: "home-heart"
+        class: "home-heart",
+        bgColor: "#FFE8EA",
+        textColor: "black",
     },
     {
         title: "Social Media Management",
@@ -47,7 +54,9 @@ const services = [
         width: 624,
         height: 446,
         alternate: "handshake emoji",
-        class: "home-handshake"
+        class: "home-handshake",
+        bgColor: "#01030D",
+        textColor: "white",
     },
 ];
 
@@ -108,7 +117,25 @@ export default function HeroSectionDesktop() {
     return (
         <>
             <section id="hero-section" ref={scrollTrackRef} className="section hm-hero-main hm-hero-scroll-track">
-                <div className="hm-hero-sticky-inner">
+                <div className="hm-hero-sticky-inner" style={{ color: services[activeIndex].textColor }}>
+                    
+                    {/* <div className="bgColor-scheme-change">
+                        <span className="hero-bg-scheme hero-bg-scheme-1"></span>
+                        <span className="hero-bg-scheme hero-bg-scheme-2"></span>
+                        <span className="hero-bg-scheme hero-bg-scheme-3"></span>
+                        <span className="hero-bg-scheme hero-bg-scheme-4"></span>
+                    </div> */}
+                    
+                    {/* <div className="bgColor-scheme-change">
+                        <span className={`hero-bg-scheme hero-bg-scheme-1 ${activeIndex >= 0 ? "show" : ""}`}></span>
+                        <span className={`hero-bg-scheme hero-bg-scheme-2 ${activeIndex >= 1 ? "show" : ""}`}></span>
+                        <span className={`hero-bg-scheme hero-bg-scheme-3 ${activeIndex >= 2 ? "show" : ""}`}></span>
+                        <span className={`hero-bg-scheme hero-bg-scheme-4 ${activeIndex >= 3 ? "show" : ""}`}></span>
+                    </div> */}
+
+                    <div className="hero-bg-layer" style={{ backgroundColor: services[activeIndex].bgColor, }} />
+                    <HeroPixelReveal trigger={activeIndex} color={services[activeIndex].bgColor} />
+
                     <div className="container">
                         <div className="home-hero-wrapper-desktop">
                             <div className="hm-hero-row-1-wrapper">
@@ -117,7 +144,7 @@ export default function HeroSectionDesktop() {
                                         Building Brands People Choose First.
                                     </h1>
 
-                                    <div className="hm-hero-paragraph-wrapper text-grey">
+                                    <div className="hm-hero-paragraph-wrapper" style={{ color: services[activeIndex].textColor }}>
                                         <p className="text-18 text-rg">From original brand identities to custom-engineered digital products conceived from scratch, built to last.</p>
 
                                         <p className="text-18 text-sb">Creativity That Businesses Can Measure.</p>
@@ -137,43 +164,19 @@ export default function HeroSectionDesktop() {
                                     </div>
 
                                     <div className="hm-services-right">
-                                        {/* {services.map((service, index) => (
-                                            <div key={index} className={`hm-services-content-wrapper ${activeIndex === index ? "active" : ""}`}>
-                                                <GlassEffect className="dock site-radius-30">
-                                                    <div className="hm-services-title">
-                                                        <span className="text-sb h6">{service.title}</span>
-                                                    </div>
-                                                </GlassEffect>
-
-                                                <div className={`hm-services-subtitle ${activeIndex === index && showDescription ? "show" : ""
-                                                    }`}>
-                                                    <p className="text-18 text-rg text-grey">{service.description}</p>
-                                                </div>
-                                            </div>
-                                        ))} */}
-
                                         {services.map((service, index) => {
                                             if (isTablet && index !== activeIndex) return null;
 
                                             return (
-                                                <div
-                                                    key={index}
-                                                    className={`hm-services-content-wrapper ${
-                                                        activeIndex === index ? "active" : ""
-                                                    }`}
-                                                >
+                                                <div key={index} className={`hm-services-content-wrapper ${ activeIndex === index ? "active" : "" }`} >
                                                     <GlassEffect className="dock site-radius-30">
                                                         <div className="hm-services-title">
                                                             <span className="text-sb h6">{service.title}</span>
                                                         </div>
                                                     </GlassEffect>
 
-                                                    <div
-                                                        className={`hm-services-subtitle ${
-                                                            activeIndex === index && showDescription ? "show" : ""
-                                                        }`}
-                                                    >
-                                                        <p className="text-18 text-rg text-grey">
+                                                    <div className={`hm-services-subtitle ${ activeIndex === index && showDescription ? "show" : "" }`}>
+                                                        <p className="text-18 text-rg">
                                                             {service.description}
                                                         </p>
                                                     </div>
@@ -187,15 +190,20 @@ export default function HeroSectionDesktop() {
                             <div className="hm-hero-row-2-wrapper">
                                 <div className="hm-hero-stats-wrapper">
                                     <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">100+</h2>
+                                        <h2 className="text-sb text-primary">100+ <Image src="/images/homepage/hero/statistic1-graph.gif" alt="graph-gif" width={32} height={32}></Image> </h2>
+                                    
                                         <p className="text-18 text-md">Brands Transformed</p>
                                     </div>
+
                                     <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">6000+</h2>
+                                        <h2 className="text-sb text-primary">6000+ <Image src="/images/homepage/hero/statistic2-clock.gif" alt="graph-gif" width={32} height={32}></Image></h2>
+                                    
                                         <p className="text-18 text-md">Hours of Strategic Design</p>
                                     </div>
+                                    
                                     <div className="hm-hero-stats">
-                                        <h2 className="text-sb text-primary">50+</h2>
+                                        <h2 className="text-sb text-primary">50+ <Image src="/images/homepage/hero/statistic3-engineer.gif" alt="graph-gif" width={32} height={32}></Image></h2>
+                                    
                                         <p className="text-18 text-md">Digital Products Engineered </p>
                                     </div>
                                 </div>

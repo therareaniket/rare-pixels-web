@@ -30,7 +30,6 @@
 	.testimonial-review-wrapper{ margin-top: 40px; }
 	.testimonial-cards-wrapper{ width: 760px; }
 	.testimonial-image-2{ width: 160px; height: 160px; }
-	.testimonialreview-main img{ width: 100%;height: 100%; object-fit: contain; }
 	.testimonialreview-main{ padding: 14px; width: 440px; height: 440px; }
 	.testimonial-client-text{ font-size: 16px; line-height: 24px; }
 	.client-initital .h6{ font-size: 20px; line-height: 28px; }
@@ -216,16 +215,6 @@
 	.industries-text-wrapper{ width: 410px; height: 470px; }
 	.industries-text-wrapper p{ gap: 10px; }
 	.industries-image-wrapper{ width: 790px; }
-	.indus-box-50{ width: 40px; height: 40px; }
-	.indus-box-40{ width: 30px; height: 30px; }
-	.indus-box-30{ width: 20px; height: 20px; }
-	.indus-box-2{ top: 80px; }
-	.indus-box-3{ top: 40px; left: 40px; }
-	.indus-box-4{ top: 80px; left: 80px; }
-	.indus-box-5{ left: 110px; top: 60px; }
-	.indus-box-6{ top: 40px; }
-	.indus-box-7{ right: 40px; }
-	.indus-box-8{ top: 40px; right: 80px; }
 	.industries-card-wrapper{ margin-top: 40px; }
 	.dark-mode-hover-icon, .light-mode-hover-icon{ width: 28px; height: 28px; }
 	.nav-theme-change-icon{ width: 40px; height: 40px; font-size: 28px; line-height: 28px; }
@@ -546,16 +535,7 @@
 	.industries-image-wrapper{ width: 645px; }
 	.industries-text-wrapper{ width: 280px; height: 390px; }
 	.industries-text-wrapper > span{ font-size: 40px; line-height: 50px; }
-	.indus-box-50{ width: 35px; height: 35px; }
-	.indus-box-40{ width: 25px; height: 25px; }
-	.indus-box-30{ width: 15px; height: 15px; }
-	.indus-box-2{ top: 70px; }
-	.indus-box-3{ top: 35px; left: 35px; }
-	.indus-box-4{ top: 70px; left: 70px; }
-	.indus-box-5{ top: 55px; left: 95px; }
-	.indus-box-6{ top: 35px; }
-	.indus-box-7 { right: 35px; }
-	.indus-box-8{ top: 35px; right: 70px; }
+
 
 	.abt-section-wrapper {
 		-webkit-mask-image: linear-gradient(to top, #0000, #000 0% 100%, #0000), linear-gradient(to right, #0000, #000 0% 100%, #0000);

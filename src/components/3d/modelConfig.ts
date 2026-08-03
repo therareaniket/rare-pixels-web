@@ -2,7 +2,7 @@ export const MODEL_CONFIG = [
 	{
     	// Eye — UI/UX Design Services
     	modelPath: '/models/eye-draco.glb',
-    	camera: [2, -2, 20] as [number, number, number],
+    	camera: [2, -2, 22] as [number, number, number],
     	// position: [0.5, 0, 0] as [number, number, number],
 		position: {
 			desktop: [0.5, 0, 0] as [number, number, number],
@@ -29,7 +29,7 @@ export const MODEL_CONFIG = [
     	camera: [0, 0, 4] as [number, number, number],
     	// position: [0.5, -0.15, 0] as [number, number, number],
 		position: {
-			desktop: [0.15, -0.05, 0] as [number, number, number],
+			desktop: [-0.3, 0.35, 0] as [number, number, number],
 			tablet_1024: [0, -0.1, 1] as [number, number, number],
 			tablet_992: [0, -0.3, 1] as [number, number, number],
 		},
@@ -41,7 +41,7 @@ export const MODEL_CONFIG = [
     	camera: [0, 0, 7.4] as [number, number, number],
     	// position: [0.35, 0, 0] as [number, number, number],
     	position: {
-			desktop: [0.35, 0, 0]  as [number, number, number],
+			desktop: [-0.5, 0.8, 0]  as [number, number, number],
 			tablet_1024: [0.2, 0, -0.12]  as [number, number, number],
 			tablet_992: [0.2, -0.5, -2.5]  as [number, number, number],
 		},
