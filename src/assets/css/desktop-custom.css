@@ -470,3 +470,5 @@
 .header-links-for-tablet { display: none; }
 
 .testimonial-video { width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+
+.header-links-wrapper-for-mobile { display: none; }

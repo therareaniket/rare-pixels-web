@@ -135,8 +135,8 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:  url('../../public/fonts/icon/icomoon.ttf?r2h6sg') format('truetype'),
-        url('../../public/fonts/icon/icomoon.woff?r2h6sg') format('woff');
+    src:  url('../../public/fonts/icon/icomoon.ttf?9q2s0s') format('truetype'),
+        url('../../public/fonts/icon/icomoon.woff?9q2s0s') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -157,6 +157,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-service:before {
+  content: "\e91c";
+}
 .icon-automation:before {
   content: "\e90e";
 }

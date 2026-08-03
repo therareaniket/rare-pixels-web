@@ -288,10 +288,30 @@
     .menu-social-title, .contact-title { margin-bottom: 10px; }
     .brand-quote .h3 { margin-bottom: 14px; }
 
-    .menu-link { width: 100%; padding: 0 10px; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid #ECF2EC; }
+    .menu-link { display: flex; align-items: center; gap: 14px; width: 100%; padding: 10px; border-bottom: 1px solid #ECF2EC; }
     .menu-link:nth-last-child(1) { border-bottom: none; padding-bottom: 20px; }
 
     .menu-link-icon, .mega-links-icon { width: 40px; height: 40px; font-size: 20px; }
+
+    .header-links-wrapper-for-mobile { display: flex; flex-direction: column; width: 100%; }
+    .menu-accordion h3 { margin-bottom: 0; }
+    .menu-accordion button { padding: 0; width: 100%;  align-items: center; border-radius: 0; }
+    .menu-accordion .menu-link { padding: 0; margin: 0; border-bottom: 0; }
+
+    .menu-accordion { border-bottom: 1px solid #ECF2EC; padding: 10px;  }
+
+    .accordion-submenu { margin-top: 10px; border-bottom: none; background-color: #F5F8F5; padding: 10px; border-radius: 10px; align-items: center; }
+    .accordion-submenu-links { display: flex; flex-direction: column; }
+    .accordion-submenu-links ul li a { text-decoration: none; }
+    .accordion-submenu-links ul li a span { padding-right: 6px; }
+    .accordion-submenu-links ul li { padding: 10px 0 0 10px; }
+    /* .submenu-mobile-title ul li { list-style: circle; } */
+
+    .menu-accordion:has([data-open]) { padding: 10px; margin-top: 10px; background-color: #ECF2EC; border-radius: 10px; }
+    .menu-accordion:has([data-open]) .menu-link-icon { background-color: var(--primary); color: white; }
+    .menu-accordion:has([data-open]) .service-mobile-title { font-family: 'strichpunkt-sb'; }
+    
+    .accordion-menu-content { padding-bottom: 0; }
 }
 
 @media (max-width: 439px) {
