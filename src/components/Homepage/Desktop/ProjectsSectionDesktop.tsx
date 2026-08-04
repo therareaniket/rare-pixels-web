@@ -67,7 +67,7 @@ export default function ProjectsSectionDesktop() {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
-                        start: "top -80px",
+                        start: "top 0",
                         end: () => `+=${cards.length * 1000}`,
                         pin: true,
                         scrub: true,
@@ -107,7 +107,7 @@ export default function ProjectsSectionDesktop() {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
-                        start: "top -30px",
+                        start: "top 0",
                         end: () => `+=${cards.length * 800}`,
                         pin: true,
                         scrub: true,
@@ -144,9 +144,6 @@ export default function ProjectsSectionDesktop() {
                             <div className="hm-projects-card-wrapper">
                                 {/* <div ref={addToRefs} className="hm-projects-card-lg hm-projects-card-1 site-radius-20"> */}
                                 <div ref={addToRefs} className="hm-projects-card-lg site-radius-20">
-                                    <div className="hm-projects-desc site-radius-20 text-black">
-                                        <h3 className="text-sb text-black">DJK</h3>
-                                    </div>
                                     <div className="hm-projects-images-lg hm-projects-card-1 site-radius-20">
                                         <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/djk-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
@@ -154,10 +151,6 @@ export default function ProjectsSectionDesktop() {
 
                                 {/* <div ref={addToRefs} className="hm-projects-card-sm hm-projects-card-2 site-radius-20"> */}
                                 <div ref={addToRefs} className="hm-projects-card-sm site-radius-20">
-                                    <div className="hm-projects-desc hm-projects-card-2 site-radius-20">
-                                        <h3 className="text-sb">AUTOBOT</h3>
-                                        <p className="text-rg text-18">A modern logo designed for S.Art, blending abstract style with a touch of tradition.</p>
-                                    </div>
                                     <div className="hm-projects-images-sm hm-projects-card-2 site-radius-20">
                                         <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
@@ -165,10 +158,6 @@ export default function ProjectsSectionDesktop() {
 
                                 {/* <div ref={addToRefs} className="hm-projects-card-lg hm-projects-card-3 site-radius-20"> */}
                                 <div ref={addToRefs} className="hm-projects-card-lg site-radius-20">
-                                    <div className="hm-projects-desc site-radius-20 hm-projects-card-3 text-black">
-                                        <h3 className="text-sb text-black">CAMERIZ</h3>
-                                        <p className="text-rg text-18 text-black">Transform your business with our platform, providing tailored software solutions to meet your unique needs.</p>
-                                    </div>
                                     <div className="hm-projects-images-lg hm-projects-card-3 site-radius-20">
                                         <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/cameriz-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
@@ -176,10 +165,6 @@ export default function ProjectsSectionDesktop() {
 
                                 {/* <div ref={addToRefs} className="hm-projects-card-sm hm-projects-card-4 site-radius-20"> */}
                                 <div ref={addToRefs} className="hm-projects-card-sm site-radius-20">
-                                    <div className="hm-projects-desc hm-projects-card-4 site-radius-20">
-                                        <h3 className="text-sb">RA</h3>
-                                        <p className="text-rg text-18">RA is a purpose driven logistics and import-export company, setting new standards in trust and quality.</p>
-                                    </div>
                                     <div className="hm-projects-images-sm hm-projects-card-4 site-radius-20">
                                         <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/ra-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
@@ -187,12 +172,14 @@ export default function ProjectsSectionDesktop() {
 
                                 {/* <div ref={addToRefs} className="hm-projects-card-lg hm-projects-card-5 site-radius-20"> */}
                                 <div ref={addToRefs} className="hm-projects-card-lg site-radius-20">
-                                    <div className="hm-projects-desc site-radius-20 hm-projects-card-5">
-                                        <h3 className="text-sb">STEAMOVAP</h3>
-                                        <p className="text-rg text-18">Enhanced decision making, and improved performance tracking.</p>
-                                    </div>
                                     <div className="hm-projects-images-lg site-radius-20 hm-projects-card-5">
                                         <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/steamovap-project.mp4" width={523} height={423} autoPlay loop muted></video>
+                                    </div>
+                                </div>
+
+                                <div ref={addToRefs} className="hm-projects-card-sm site-radius-20">
+                                    <div className="hm-projects-images-sm hm-projects-card-6 site-radius-20">
+                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
                                     </div>
                                 </div>
                             </div>

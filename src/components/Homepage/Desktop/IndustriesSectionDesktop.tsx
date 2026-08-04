@@ -4,6 +4,7 @@ import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,9 +61,12 @@ const industries = [
 
 export default function IndustriesSectionDesktop() {
 
+    const sectionRef = useRef(null);
+    const trackRef = useRef(null);
+
     return (
         <>
-            <section className="industries-section-sticky section" >
+            <section ref={sectionRef} className="industries-section-sticky section" style={{ paddingBottom: 0 }}>
                 <div className="industirs-section-inner">
                     <div className="container">
                         <div className="industries-text-title">
@@ -73,27 +77,28 @@ export default function IndustriesSectionDesktop() {
                             </p>
                         </div>
 
-                        <div className="industries-card-wrapper">
-                            {industries.map((industry, index) => (
-                                <div className="industry-item" key={index}>
-                                    <div className="industries-image-wrapper">
-                                        <video className="industries-video prev-video" autoPlay muted loop playsInline src={industry.video} width={1000} height={600} />
-                                    </div>
+                        <div className="industries-scroll-container">
+                            <div ref={trackRef} className="industries-card-wrapper">
+                                {industries.map((industry, index) => (
+                                    <div className="industry-item" key={index}>
+                                        <div className="industries-image-wrapper">
+                                            <video className="industries-video prev-video" autoPlay muted loop playsInline src={industry.video} width={1000} height={600} />
+                                        </div>
 
-                                    <div className="industries-text-wrapper industry-content" >
-                                        <span className="text-sb industries-title-name">
-                                            {industry.title}
-                                        </span>
+                                        <div className="industries-text-wrapper industry-content" >
+                                            <span className="text-sb industries-title-name">
+                                                {industry.title}
+                                            </span>
 
-                                        <p className="text-18 text-grey industry-detailtext">
-                                            <span className="text-rg"> {industry.desc1} </span>
-                                            <span className="text-rg"> {industry.desc2} </span>
-                                        </p>
+                                            <p className="text-18 text-grey industry-detailtext">
+                                                <span className="text-rg"> {industry.desc1} </span>
+                                                <span className="text-rg"> {industry.desc2} </span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </section>

@@ -49,6 +49,7 @@ export default function ProcessSectionDesktop() {
 
                     const isActive = activeIndex >= 0 && i === activeIndex;
                     const isCompleted = activeIndex > 0 && i < activeIndex;
+                    const showTick = isActive || isCompleted;
 
                     pointer.classList.toggle("active", isActive);
 
@@ -64,8 +65,8 @@ export default function ProcessSectionDesktop() {
 
                     if (tick) {
                         gsap.set(tick, {
-                            opacity: isCompleted ? 1 : 0,
-                            display: isCompleted ? "flex" : "none"
+                            opacity: showTick ? 1 : 0,
+                            display: showTick ? "flex" : "none"
                         });
                     }
 
@@ -244,12 +245,6 @@ export default function ProcessSectionDesktop() {
                 <div className="process-tab-inner">
                     <div className="container-sm">
                         <div ref={containerRef} className="process-for-desktop">
-                            {/* <div ref={titleWrapperRef} className="process-title-text-wrapper text-black">
-                                <h2 className="text-sb">Work Process We Follow</h2>
-
-                                <p className="text-rg text-18">Every great outcome starts with understanding. We move from insight to execution through a process designed to reduce guesswork, improve collaboration, and build solutions that perform.</p>
-                            </div> */}
-
                             <div ref={titleWrapperRef} className="process-title-wrapper">
                                 <div ref={centerTitleRef} className="process-title-text-wrapper process-title-center">
                                     <h2 className="text-sb">Work Process We Follow</h2>

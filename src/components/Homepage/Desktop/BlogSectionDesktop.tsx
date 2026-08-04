@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function BlogSectionDesktop() {
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ paddingBottom: 0 }} >
                 <div className="container">
                     <div className="hm-blog-text-wrapper">
                         <h2 className="text-sb">Our Blog</h2>

@@ -45,30 +45,28 @@ export default function TestimonialSectionDesktop() {
     }, [selectVideo]);
 
     useEffect(() => {
-        const videoRefs = [
-            mainVideoRef,
-            video2Ref,
-            video3Ref,
-        ];
-
         if (selectVideo) {
             document.body.style.overflow = "hidden";
 
             swiperRef.current?.autoplay?.stop();
 
-            videoRefs.forEach((ref) => {
-                ref.current?.pause();
-            });
+            mainVideoRef.current?.pause();
+            video2Ref.current?.pause();
+            video3Ref.current?.pause();
         } else {
             document.body.style.overflow = "";
 
             swiperRef.current?.autoplay?.start();
 
-            videoRefs.forEach((ref) => {
-                ref.current?.play().catch(() => { });
-            });
+            mainVideoRef.current?.play().catch(() => { });
         }
     }, [selectVideo]);
+
+    useEffect(() => {
+        if (!selectVideo && mainVideoRef.current) {
+            mainVideoRef.current.play().catch(() => { });
+        }
+    }, [activeVideoIndex, selectVideo]);
 
     return (
         <>
@@ -115,11 +113,12 @@ export default function TestimonialSectionDesktop() {
                                     width={200}
                                     height={200}
                                     // onClick={handleFullscreen}
+                                    preload="metadata"
                                     onClick={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])}
                                 >
                                 </video>
 
-                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={24} height={24}></Image>
+                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])} src="/images/homepage/testimonialvideos/play-btn.svg" alt="minimize" width={24} height={24}></Image>
                             </div>
 
                             <div className="testimonial-image-3 testimonial-image">
@@ -130,11 +129,12 @@ export default function TestimonialSectionDesktop() {
                                     src={videos[(activeVideoIndex + 2) % videos.length]}
                                     width={130}
                                     height={130}
+                                    preload="metadata"
                                     onClick={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])}
                                 >
                                 </video>
 
-                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={24} height={24}></Image>
+                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])} src="/images/homepage/testimonialvideos/play-btn.svg" alt="minimize" width={24} height={24}></Image>
                             </div>
                         </div>
 
@@ -170,11 +170,9 @@ export default function TestimonialSectionDesktop() {
                                             <p>Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.</p>
 
                                             <div className="testimonial-stars">
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                {Array.from({ length: 5 }).map((_, index) => (
+                                                    <Image key={index} src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="client-review-wrapper">
@@ -195,11 +193,9 @@ export default function TestimonialSectionDesktop() {
                                         <div className="text-18 text-rg testimonial-client-text testimonial-text-2 site-radius-20">
                                             <p>Rarepixels enhanced our online presence with their outstanding website design and development services. From concept to launch, their team delivered a fully responsive, SEO-optimized site that boosted our traffic. Their creativity, technical expertise, and seamless collaboration made the process effortless.</p>
                                             <div className="testimonial-stars">
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                {Array.from({ length: 5 }).map((_, index) => (
+                                                    <Image key={index} src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="client-review-wrapper">
@@ -220,11 +216,9 @@ export default function TestimonialSectionDesktop() {
                                         <div className="text-18 text-rg testimonial-client-text testimonial-text-3 site-radius-20">
                                             <p>The RarePixels team is indeed working in the line of their brand. I came across many teams during my professional journey but the Team RarePixels are indeed rarest RARE! I have seen them growing as a team and it&apos;s really commendable the freedom and spirit with which they enjoy working and that reflects through their creativity, makes their work very special and unique by matching the present trend & technologies.</p>
                                             <div className="testimonial-stars">
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                {Array.from({ length: 5 }).map((_, index) => (
+                                                    <Image key={index} src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="client-review-wrapper">
@@ -245,11 +239,9 @@ export default function TestimonialSectionDesktop() {
                                         <div className="text-18 text-rg testimonial-client-text testimonial-text-4 site-radius-20">
                                             <p>Working with RarePixels team is awesome. They are a highly professional team experts in design, development and digital marketing. They analysed and integrated our needs and translated them into proposals and results that exceeded our expectations. I highly recommend this team.</p>
                                             <div className="testimonial-stars">
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                {Array.from({ length: 5 }).map((_, index) => (
+                                                    <Image key={index} src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="client-review-wrapper">
@@ -270,11 +262,9 @@ export default function TestimonialSectionDesktop() {
                                         <div className="text-18 text-rg testimonial-client-text testimonial-text-5 site-radius-20">
                                             <p>RarePixels has delivered their services with outstanding professionalism throughout. Their work is consistently creative, fresh, and always on time. They maintain clear and transparent communication. Every detail is handled with care and explained upfront. Truly a dependable and highly recommended team.</p>
                                             <div className="testimonial-stars">
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
-                                                <Image src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                {Array.from({ length: 5 }).map((_, index) => (
+                                                    <Image key={index} src="/images/homepage/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="client-review-wrapper">

@@ -5,15 +5,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from "next/image";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function ProcessSectionMobile() {
 
     const sectionRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
 
         const cards = gsap.utils.toArray<HTMLElement>(".process-card-mobile");
-
         const activeLine = document.querySelector(".process-vertical-line-active") as HTMLElement
 
         const setActive = (activeIndex: number) => {
@@ -57,7 +57,7 @@ export default function ProcessSectionMobile() {
         ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
-            end: "+=4000",
+            end: "bottom bottom",
             // pin: true,
             scrub: true,
 

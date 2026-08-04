@@ -2,209 +2,54 @@
 
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { gsap } from "gsap";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const industries = [
-    {
-        video: "/images/homepage/industries/technology-and-saas.mp4",
-        title: "Technology & SaaS",
-        desc1: "Complex products fail when users don't understand them.",
-        desc2: "We transform powerful SaaS platforms into intuitive experiences that drive adoption, retention, and growth.",
-    },
-
-    {
-        video: "/images/homepage/industries/finance.mp4",
-        title: "Finance & FinTech",
-        desc1: "Trust is the product before the product.",
-        desc2: "We create secure, credible, and intuitive financial experiences that help users transact with confidence.",
-    },
-
-    {
-        video: "/images/homepage/industries/healthcare.mp4",
-        title: "Healthcare & MedTech",
-        desc1: "Every second matters when people seek care.",
-        desc2: "We design healthcare experiences that make information accessible, decisions easier, and journeys less stressful.",
-    },
-
-    {
-        video: "/images/homepage/industries/e-commerce.mp4",
-        title: "E-commerce & Retail",
-        desc1: "Customers don't buy products. They buy experiences.",
-        desc2: "We build shopping journeys that reduce hesitation, increase conversions, and encourage repeat purchases.",
-    },
-
-    {
-        video: "/images/homepage/industries/real-estate.mp4",
-        title: "Real Estate & PropTech",
-        desc1: "People invest in confidence before they invest in property.",
-        desc2: "We help real estate brands create digital experiences that build trust long before a site visit.",
-    },
-
-    {
-        video: "/images/homepage/industries/education-industry.mp4",
-        title: "Education & EdTech",
-        desc1: "The best learning experiences never feel complicated.",
-        desc2: "We create intuitive platforms that keep students focused on learning, not figuring out how things work.",
-    },
-
-    {
-        video: "/images/homepage/industries/ai-industry.mp4",
-        title: "AI & Emerging Tech",
-        desc1: "Innovation means little if people can't understand it.",
-        desc2: "We humanize emerging technologies through experiences that make complex products easier to adopt and trust.",
-    },
-
-    {
-        video: "/images/homepage/industries/food-industry.mp4",
-        title: "Food & Lifestyle",
-        desc1: "People remember how brands make them feel.",
-        desc2: "We help food and lifestyle brands create memorable identities that drive loyalty beyond the first purchase.",
-    }
-];
-
 export default function IndustriesSectionMobile() {
 
-    const sectionRef = useRef(null);
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [displayIndex, setDisplayIndex] = useState(0);
-    const currentVideoRef = useRef<HTMLVideoElement | null>(null);
-    const nextVideoRef = useRef<HTMLVideoElement | null>(null);
-    const prevIndex = useRef(0);
-    const titleRef = useRef<HTMLElement | null>(null);
-    const detailTextRef = useRef<HTMLDivElement | null>(null);
+    const sectionRef = useRef<HTMLElement | null>(null);
+    const sliderRef = useRef<HTMLDivElement | null>(null);
 
-    useLayoutEffect(() => {
-        const timer = setTimeout(() => {
+    useEffect(() => {
+        const slider = sliderRef.current;
+        const section = sectionRef.current;
 
-            ScrollTrigger.create({
-                trigger: sectionRef.current,
-                start: "top -30px",
-                end: "bottom bottom",
-                // pin: true,
-                scrub: true,
-                // markers: true,
-                refreshPriority: 10,
+        if (!slider || !section) return;
 
-                onUpdate: (self) => {
-                    const index = Math.round(
-                        self.progress * (industries.length - 1)
-                    );
+        const totalScroll =
+            slider.scrollWidth - slider.parentElement!.clientWidth;
 
-                    setActiveIndex(index);
-                }
-            });
+        const tween = gsap.to(slider, {
+            x: -totalScroll,
+            ease: "none",
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: `+=${totalScroll}`,
+                scrub: 1,
+                pin: true,
+                invalidateOnRefresh: true,
+            },
+        });
 
-            ScrollTrigger.refresh();
-
-        }, 100);
+        ScrollTrigger.refresh();
 
         return () => {
-            clearTimeout(timer);
-            // industriesTrigger.kill();
+            tween.kill();
+            ScrollTrigger.getAll().forEach((st) => st.kill());
         };
-
     }, []);
-
-    useEffect(() => {
-        if (!titleRef.current) return;
-
-        gsap.set(titleRef.current,
-            {
-                opacity: 0,
-                x: -100,
-            })
-        gsap.to(titleRef.current, {
-            opacity: 1,
-            x: 0,
-            duration: 1.5,
-            ease: 'power3.out',
-        }
-        );
-    }, [displayIndex]);
-
-    useEffect(() => {
-        if (!detailTextRef.current) return;
-
-        gsap.fromTo(
-            detailTextRef.current,
-            {
-                opacity: 0,
-                y: 100,
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1.5,
-                ease: 'power3.out',
-            }
-        );
-    }, [displayIndex]);
-
-    useEffect(() => {
-        if (activeIndex === prevIndex.current) return;
-
-        const current = currentVideoRef.current;
-        const next = nextVideoRef.current;
-
-        if (!current || !next) return;
-
-        const nextSrc = industries[activeIndex].video;
-
-        next.src = nextSrc;
-        next.load();
-
-        next.onloadeddata = () => {
-
-            setDisplayIndex(activeIndex);
-
-            gsap.set(current, {
-                clipPath: "inset(0% 0% 0% 0%)"
-            });
-
-            const isHorizontal = activeIndex % 2 === 0;
-
-            gsap.to(current, {
-                clipPath: isHorizontal
-                    ? "inset(0% 50% 0% 50%)"
-                    : "inset(50% 0% 50% 0%)",
-                duration: 0.5,
-                ease: "power3.inOut",
-
-                onComplete: () => {
-                    setDisplayIndex(activeIndex);
-
-                    prevIndex.current = activeIndex;
-
-                    gsap.set(current, {
-                        opacity: 0
-                    });
-
-                    current.src = nextSrc;
-
-                    current.onloadeddata = () => {
-
-                        gsap.set(current, {
-                            clipPath: "inset(0% 0% 0% 0%)",
-                            opacity: 1
-                        });
-
-                        current.play();
-                    };
-                }
-            });
-        };
-    }, [activeIndex]);
 
     return (
         <>
-            <section ref={sectionRef} className="industry-section-sticky">
-                <div className="industry-section-inner">
-                    <div className="container">
-                        <div className="industries-text-wrapper-mobile">
+            <section ref={sectionRef}>
+                <div className="container">
+                    <div className="industries-mobile-wrapper">
+                        <div className="industries-mobile-text">
                             <h2 className="text-sb">Industries We Serve</h2>
 
                             <p className="text-16 text-rg">
@@ -213,46 +58,156 @@ export default function IndustriesSectionMobile() {
                             </p>
                         </div>
 
-                        <div className="industries-mobile-video-wrapper">
-                            <div className="industries-mobile-video">
-                                <video
-                                    ref={nextVideoRef}
-                                    className="industries-video next-video"
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                />
+                        <div className="industries-mobile-card-wrapper" ref={sliderRef}>
+                            <div className="industries-mobile-card">
+                                <div className="industries-mobile-video">
+                                    <video className="industries-mobile-vd" src="/images/homepage/industries/technology-and-saas.mp4" autoPlay playsInline muted loop width={424} height={428}></video>
 
-                                <video
-                                    ref={currentVideoRef}
-                                    className="industries-video prev-video"
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    src={industries[0].video}
-                                />
+                                    <Image className="industries-mobile-pixel-1" src="/images/homepage/industries/industries-pixel-mobile-1.svg" alt="pixel" width={75} height={75}></Image>
+                                    <Image className="industries-mobile-pixel-2" src="/images/homepage/industries/industries-pixel-mobile-2.svg" alt="pixel" width={65} height={50}></Image>
+                                    <Image className="industries-mobile-pixel-3" src="/images/homepage/industries/industries-pixel-mobile-3.svg" alt="pixel" width={25} height={25}></Image>
+                                </div>
 
-                                <div className="industry-mobile-pixels">
-                                    <div className="industry-mob-1 industry-pix-25"></div>
-                                    <div className="industry-mob-2 industry-pix-25"></div>
-                                    <div className="industry-mob-3 industry-pix-25"></div>
-                                    <div className="industry-mob-4 industry-pix-15"></div>
-                                    <div className="industry-mob-5 industry-pix-10"></div>
-                                    <div className="industry-mob-6 industry-pix-25"></div>
-                                    <div className="industry-mob-7 industry-pix-25"></div>
-                                    <div className="industry-mob-8 industry-pix-15"></div>
-                                    <div className="industry-mob-9 industry-pix-25"></div>
+                                <div className="industries-mobile-card-text">
+                                    <h3 className="text-sb">Technology & SaaS</h3>
+
+                                    <p className="text-rg text-16">
+                                        <span>Complex products fail when users don&apos;t understand them.</span>
+                                        <span>We transform powerful SaaS platforms into intuitive experiences that drive adoption, retention, and growth.</span>
+                                    </p>
                                 </div>
                             </div>
 
-                            <div className="industry-name" key={displayIndex}>
-                                <span ref={titleRef} className="text-sb industries-title-name"> {industries[displayIndex].title} </span>
+                            <div className="industries-mobile-card">
+                                <div className="industries-mobile-video">
+                                    <video className="industries-mobile-vd" src="/images/homepage/industries/finance.mp4" autoPlay playsInline muted loop width={424} height={428}></video>
 
-                                <div ref={detailTextRef} className="text-16 text-rg industry-detailtext">
-                                    <p className="text-16">{industries[displayIndex].desc1} </p>
-                                    <p className="text-16">{industries[displayIndex].desc2} </p>
+                                    <Image className="industries-mobile-pixel-1" src="/images/homepage/industries/industries-pixel-mobile-1.svg" alt="pixel" width={75} height={75}></Image>
+                                    <Image className="industries-mobile-pixel-2" src="/images/homepage/industries/industries-pixel-mobile-2.svg" alt="pixel" width={65} height={50}></Image>
+                                    <Image className="industries-mobile-pixel-3" src="/images/homepage/industries/industries-pixel-mobile-3.svg" alt="pixel" width={25} height={25}></Image>
+                                </div>
+
+                                <div className="industries-mobile-card-text">
+                                    <h3 className="text-sb">Finance & FinTech</h3>
+
+                                    <p className="text-rg text-16">
+                                        <span>Trust is the product before the product.</span>
+                                        <span>We create secure, credible, and intuitive financial experiences that help users transact with confidence.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="industries-mobile-card">
+                                <div className="industries-mobile-video">
+                                    <video className="industries-mobile-vd" src="/images/homepage/industries/healthcare.mp4" autoPlay playsInline muted loop width={424} height={428}></video>
+
+                                    <Image className="industries-mobile-pixel-1" src="/images/homepage/industries/industries-pixel-mobile-1.svg" alt="pixel" width={75} height={75}></Image>
+                                    <Image className="industries-mobile-pixel-2" src="/images/homepage/industries/industries-pixel-mobile-2.svg" alt="pixel" width={65} height={50}></Image>
+                                    <Image className="industries-mobile-pixel-3" src="/images/homepage/industries/industries-pixel-mobile-3.svg" alt="pixel" width={25} height={25}></Image>
+                                </div>
+
+                                <div className="industries-mobile-card-text">
+                                    <h3 className="text-sb">Healthcare & MedTech</h3>
+
+                                    <p className="text-rg text-16">
+                                        <span>Every second matters when people seek care.</span>
+                                        <span>We design healthcare experiences that make information accessible, decisions easier, and journeys less stressful.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="industries-mobile-card">
+                                <div className="industries-mobile-video">
+                                    <video className="industries-mobile-vd" src="/images/homepage/industries/e-commerce.mp4" autoPlay playsInline muted loop width={424} height={428}></video>
+
+                                    <Image className="industries-mobile-pixel-1" src="/images/homepage/industries/industries-pixel-mobile-1.svg" alt="pixel" width={75} height={75}></Image>
+                                    <Image className="industries-mobile-pixel-2" src="/images/homepage/industries/industries-pixel-mobile-2.svg" alt="pixel" width={65} height={50}></Image>
+                                    <Image className="industries-mobile-pixel-3" src="/images/homepage/industries/industries-pixel-mobile-3.svg" alt="pixel" width={25} height={25}></Image>
+                                </div>
+
+                                <div className="industries-mobile-card-text">
+                                    <h3 className="text-sb">E-commerce & Retail</h3>
+
+                                    <p className="text-rg text-16">
+                                        <span>Customers don&apos;t buy products. They buy experiences.</span>
+                                        <span>We build shopping journeys that reduce hesitation, increase conversions, and encourage repeat purchases.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="industries-mobile-card">
+                                <div className="industries-mobile-video">
+                                    <video className="industries-mobile-vd" src="/images/homepage/industries/real-estate.mp4" autoPlay playsInline muted loop width={424} height={428}></video>
+
+                                    <Image className="industries-mobile-pixel-1" src="/images/homepage/industries/industries-pixel-mobile-1.svg" alt="pixel" width={75} height={75}></Image>
+                                    <Image className="industries-mobile-pixel-2" src="/images/homepage/industries/industries-pixel-mobile-2.svg" alt="pixel" width={65} height={50}></Image>
+                                    <Image className="industries-mobile-pixel-3" src="/images/homepage/industries/industries-pixel-mobile-3.svg" alt="pixel" width={25} height={25}></Image>
+                                </div>
+
+                                <div className="industries-mobile-card-text">
+                                    <h3 className="text-sb">Real Estate & PropTech</h3>
+
+                                    <p className="text-rg text-16">
+                                        <span>People invest in confidence before they invest in property.</span>
+                                        <span>We help real estate brands create digital experiences that build trust long before a site visit.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="industries-mobile-card">
+                                <div className="industries-mobile-video">
+                                    <video className="industries-mobile-vd" src="/images/homepage/industries/education-industry.mp4" autoPlay playsInline muted loop width={424} height={428}></video>
+
+                                    <Image className="industries-mobile-pixel-1" src="/images/homepage/industries/industries-pixel-mobile-1.svg" alt="pixel" width={75} height={75}></Image>
+                                    <Image className="industries-mobile-pixel-2" src="/images/homepage/industries/industries-pixel-mobile-2.svg" alt="pixel" width={65} height={50}></Image>
+                                    <Image className="industries-mobile-pixel-3" src="/images/homepage/industries/industries-pixel-mobile-3.svg" alt="pixel" width={25} height={25}></Image>
+                                </div>
+
+                                <div className="industries-mobile-card-text">
+                                    <h3 className="text-sb">Education & EdTech</h3>
+
+                                    <p className="text-rg text-16">
+                                        <span>Complex products fail when users don&apos;t understand them.</span>
+                                        <span>We transform powerful SaaS platforms into intuitive experiences that drive adoption, retention, and growth.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="industries-mobile-card">
+                                <div className="industries-mobile-video">
+                                    <video className="industries-mobile-vd" src="/images/homepage/industries/ai-industry.mp4" autoPlay playsInline muted loop width={424} height={428}></video>
+
+                                    <Image className="industries-mobile-pixel-1" src="/images/homepage/industries/industries-pixel-mobile-1.svg" alt="pixel" width={75} height={75}></Image>
+                                    <Image className="industries-mobile-pixel-2" src="/images/homepage/industries/industries-pixel-mobile-2.svg" alt="pixel" width={65} height={50}></Image>
+                                    <Image className="industries-mobile-pixel-3" src="/images/homepage/industries/industries-pixel-mobile-3.svg" alt="pixel" width={25} height={25}></Image>
+                                </div>
+
+                                <div className="industries-mobile-card-text">
+                                    <h3 className="text-sb">AI & Emerging Tech</h3>
+
+                                    <p className="text-rg text-16">
+                                        <span>CInnovation means little if people can&apos;t understand it.</span>
+                                        <span>We humanize emerging technologies through experiences that make complex products easier to adopt and trust.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="industries-mobile-card">
+                                <div className="industries-mobile-video">
+                                    <video className="industries-mobile-vd" src="/images/homepage/industries/food-industry.mp4" autoPlay playsInline muted loop width={424} height={428}></video>
+
+                                    <Image className="industries-mobile-pixel-1" src="/images/homepage/industries/industries-pixel-mobile-1.svg" alt="pixel" width={75} height={75}></Image>
+                                    <Image className="industries-mobile-pixel-2" src="/images/homepage/industries/industries-pixel-mobile-2.svg" alt="pixel" width={65} height={50}></Image>
+                                    <Image className="industries-mobile-pixel-3" src="/images/homepage/industries/industries-pixel-mobile-3.svg" alt="pixel" width={25} height={25}></Image>
+                                </div>
+
+                                <div className="industries-mobile-card-text">
+                                    <h3 className="text-sb">Food & Lifestyle</h3>
+
+                                    <p className="text-rg text-16">
+                                        <span>People remember how brands make them feel.</span>
+                                        <span>We help food and lifestyle brands create memorable identities that drive loyalty beyond the first purchase.</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
