@@ -29,6 +29,8 @@ export default function BlogSectionMobile() {
                             <p className="text-rg text-16">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
                         </div>
 
+                        <div className="hm-blog-mob-hr"></div>
+
                         <div className="hm-blog-mobile-card-2">
                             <div className="hm-blog-image-mob">
                                 <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
@@ -41,6 +43,8 @@ export default function BlogSectionMobile() {
                             <p className="text-rg text-16">A visually attractive interface may convince users to explore your platform once. But whether they stay, engage, and return depends entirely on experience. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
 
                         </div>
+
+                        <div className="hm-blog-mob-hr"></div>
 
                         <div className="hm-blog-mobile-card-3 section-bg-blue site-radius-20">
                             <h3 className="text-sb text-white">Ideas to Insights</h3>

@@ -80,6 +80,12 @@ export default function InquirySectionDesktop() {
                                 <input type="checkbox" name="socialmedia" id="socialmedia" />
                                 <label htmlFor="socialmedia" className="text-rg h4">Social Media Management</label>
                             </div>
+
+                            
+                            <div className="inquiry-form-desktop-select-project">
+                                <input type="checkbox" name="aidrivendev" id="aidrivendev" />
+                                <label htmlFor="aidrivendev" className="text-rg h4">AI Driven Development</label>
+                            </div>
                         </div>
                     </div>
 

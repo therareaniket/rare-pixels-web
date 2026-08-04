@@ -357,18 +357,18 @@
 
 .hm-projects-card-lg, .hm-projects-card-sm { width: 650px; flex-shrink: 0; position: relative; }
 
-.hm-projects-images-lg{ height: 450px; padding: 3px; overflow: hidden; object-fit: contain; object-position: center; }
-.hm-projects-images-sm{ height: 550px; padding: 3px; overflow: hidden; object-fit: contain; }
+.hm-projects-images-lg{ height: 450px; overflow: hidden; object-fit: contain; object-position: center; background-color: white; }
+.hm-projects-images-sm{ height: 550px; overflow: hidden; object-fit: contain; background-color: white; }
 
 
 .project-respo-video { margin-top: 0; margin-bottom: 8px; }
 
-.hm-projects-card-1 { background-color: #F1D4CD; }
-.hm-projects-card-2 { background-color: #255770; color: white; margin-top: calc(20px * 1); }
-.hm-projects-card-3 { background-color: #F9AD0C; margin-top: calc(20px * 2);  }
-.hm-projects-card-4 { background-color: #4B0081; color: white; margin-top: calc(20px * 3); }
-.hm-projects-card-5 { background-color: #1D97F1; color: white; margin-top: calc(20px * 4);  }
-.hm-projects-card-6 { background-color: #255770; color: white; margin-top: calc(20px * 5);  }
+/* .hm-projects-card-1 { } */
+.hm-projects-card-2 { color: white; margin-top: calc(30px * 1); }
+.hm-projects-card-3 { margin-top: calc(30px * 2);  }
+.hm-projects-card-4 { color: white; margin-top: calc(30px * 3); }
+.hm-projects-card-5 { color: white; margin-top: calc(30px * 4);  }
+.hm-projects-card-6 { color: white; margin-top: calc(30px * 5);  }
 
 .projects-section-desktop { position: relative; overflow: hidden; }
 .hm-projects-card-wrapper { 
