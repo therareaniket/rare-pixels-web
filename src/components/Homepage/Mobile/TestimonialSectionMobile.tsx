@@ -3,7 +3,7 @@
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -18,11 +18,20 @@ const videos = [
 ]
 
 export default function TestimonialSectionMobile() {
-    const swiperRef = useRef<SwiperType | null>(null);
     const [selectVideo, setSelectVideo] = useState<string | null>(null);
     const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+    const swiperRef = useRef<SwiperType | null>(null);
 
     const [isTransitioning, setIsTransitioning] = useState(false);
+
+    const pixelBlocks = useMemo(() => Array.from({ length: 320 }), []);
+    const createPixelDelays = useCallback((count: number) =>
+        Array.from({ length: count }, () => `${(Math.random() * 0.35).toFixed(3)}s`)
+        , []);
+
+    const [pixelDelays, setPixelDelays] = useState(() =>
+        createPixelDelays(pixelBlocks.length)
+    );
 
     const mainVideoRef = useRef<HTMLVideoElement>(null);
     const video2Ref = useRef<HTMLVideoElement>(null);
@@ -68,7 +77,6 @@ export default function TestimonialSectionMobile() {
         }
     }, [activeVideoIndex, selectVideo]);
 
-
     return (
         <>
             <section className="section" style={{ paddingTop: '70px' }}>
@@ -81,8 +89,7 @@ export default function TestimonialSectionMobile() {
                         <div className="testimonial-client-video-wrapper">
                             <div className="testimonial-client-video">
                                 <video
-                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
-                                        }`}
+                                    className="testimonial-video site-radius-20"
                                     // src="/images/homepage/testimonialvideos/dummy-1.mp4"
                                     src={videos[activeVideoIndex]}
                                     ref={mainVideoRef}
@@ -97,39 +104,22 @@ export default function TestimonialSectionMobile() {
                                 >
                                 </video>
 
+                                {isTransitioning && (
+                                    <div className="pixel-overlay">
+                                        {pixelBlocks.map((_, index) => (
+                                            <div
+                                                key={index}
+                                                className="pixel-block"
+                                                style={{
+                                                    animationDelay: pixelDelays[index],
+                                                }}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
+
                                 {/* <Image className="minimize-btn" src="/images/homepage/testimonialvideos/minimize.svg" alt="minimize" width={24} height={24}></Image> */}
                                 <Image className="minimize-btn" onMouseDown={() => handleFullscreen(videos[activeVideoIndex])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={30} height={30}></Image>
-                            </div>
-
-                            <div className="testi-clt-img-2">
-                                <video
-                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
-                                        }`}
-                                    ref={video2Ref}
-                                    src={videos[(activeVideoIndex + 1) % videos.length]}
-                                    width={200}
-                                    height={200}
-                                    // onClick={handleFullscreen}
-                                    onClick={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])}
-                                >
-                                </video>
-
-                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])} src="/images/homepage/testimonialvideos/play-btn.svg" alt="minimize" width={24} height={24}></Image>
-                            </div>
-
-                            <div className="testi-clt-img-3">
-                                <video
-                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
-                                        }`}
-                                    ref={video3Ref}
-                                    src={videos[(activeVideoIndex + 2) % videos.length]}
-                                    width={130}
-                                    height={130}
-                                    onClick={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])}
-                                >
-                                </video>
-
-                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])} src="/images/homepage/testimonialvideos/play-btn.svg" alt="minimize" width={24} height={24}></Image>
                             </div>
                         </div>
 
@@ -149,14 +139,20 @@ export default function TestimonialSectionMobile() {
                             shortSwipes={true}
                             longSwipes={true}
                             longSwipesRatio={0.4}
+
                             onSlideChange={() => {
+                                setPixelDelays(createPixelDelays(pixelBlocks.length));
                                 setIsTransitioning(true);
 
-                                setTimeout(() => {
+                                requestAnimationFrame(() => {
                                     setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+                                });
+
+                                setTimeout(() => {
                                     setIsTransitioning(false);
-                                }, 500);
+                                }, 800);
                             }}
+
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
                             }}

@@ -28,7 +28,7 @@ export default function IndustriesSectionMobile() {
             ease: "none",
             scrollTrigger: {
                 trigger: section,
-                start: "top top",
+                start: "top 0",
                 end: `+=${totalScroll}`,
                 scrub: 1,
                 pin: true,
@@ -46,7 +46,7 @@ export default function IndustriesSectionMobile() {
 
     return (
         <>
-            <section ref={sectionRef}>
+            <section ref={sectionRef} className="section" style={{ paddingBottom: 0 }}>
                 <div className="container">
                     <div className="industries-mobile-wrapper">
                         <div className="industries-mobile-text">

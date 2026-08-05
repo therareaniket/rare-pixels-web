@@ -3,63 +3,8 @@
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import Image from "next/image";
-// import {
-//     PieChart,
-//     Pie,
-//     Cell,
-//     RadarChart,
-//     Radar,
-//     PolarGrid,
-//     PolarAngleAxis,
-//     ResponsiveContainer,
-// } from "recharts";
-// import { type ChartConfig } from "@/components/ui/chart"
 
 export const description = "A radar chart with dots"
-
-// const chartData = [
-//     { desktop: 200 },
-//     { desktop: 305 },
-//     { desktop: 237 },
-//     { desktop: 273 },
-//     { desktop: 209 },
-//     { desktop: 214 },
-// ]
-// const chartConfig = {
-//     desktop: {
-//         label: "Desktop",
-//         color: "var(--chart-1)",
-//     },
-// } satisfies ChartConfig
-
-// const data = [
-//     { name: "A", value: 10 },
-//     { name: "B", value: 8 },
-//     { name: "C", value: 12 },
-//     { name: "D", value: 9 },
-//     { name: "E", value: 11 },
-//     { name: "F", value: 10 },
-//     { name: "G", value: 35 },
-// ];
-
-// const COLORS = [
-//     "#D9D278",
-//     "#D9D278",
-//     "#D9D278",
-//     "#D9D278",
-//     "#D9D278",
-//     "#D9D278",
-//     "#D9D278",
-// ];
-
-// const projectDeliveredData = [
-//     { value: 1 },
-//     { value: 1 },
-//     { value: 1 },
-//     { value: 1 },
-//     { value: 1 },
-//     { value: 1 },
-// ];
 
 export default function StatsSectionDesktop() {
 
@@ -147,6 +92,7 @@ export default function StatsSectionDesktop() {
 
                         <div className="stats-card-row-2">
                             <div className="stats-card-5 stats-card">
+                                <h3 className="h2 text-sb text-white">Beyond The Numbers</h3>
                                 <p className="text-18 text-rg text-light-grey">
                                     <span>The greatest measure of our work is seeing brands grow with confidence, products perform with purpose, and clients choose to build with us again.
                                     </span>

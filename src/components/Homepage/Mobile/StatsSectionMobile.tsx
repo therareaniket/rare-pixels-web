@@ -58,6 +58,8 @@ export default function StatsSectionMobile() {
                         <div className="stats-mob-hr"></div>
 
                         <div className="stats-mob-card-5">
+                            <h3 className="h2 text-sb text-white">Beyond The Numbers</h3>
+
                             <p className="text-16 text-rg  text-light-grey">Every number represents our commitment to performance, precision, and delivering work that consistently meets expectations.</p>
 
                             <p className="text-16 text-rg  text-light-grey">Every number represents our commitment to performance, precision, and delivering work that consistently meets expectations.</p>

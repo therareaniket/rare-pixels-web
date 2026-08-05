@@ -187,7 +187,8 @@ export default function ProcessSectionDesktop() {
                 .to(pointerWrapperRef.current, {
                     marginLeft: "auto",
                     duration: 0.9,
-                    ease: "power2.inOut"
+                    ease: "power2.inOut",
+                    marginTop: "0"
                 }, 0)
 
                 .to(pointers, {
@@ -231,7 +232,7 @@ export default function ProcessSectionDesktop() {
                     tl.to(currentP, {
                         display: "flex", height: "auto", opacity: 1, paddingTop: "20px", duration: 0.6
                     }, stepStartTime + 0.1)
-                        .to(pointer, { opacity: 1, duration: 0.6 }, stepStartTime + 0.1)
+                        .to(pointer, { opacity: 1, duration: 0.5 }, stepStartTime + 0.1)
                 }
                 tl.to({}, { duration: 1 });
             });

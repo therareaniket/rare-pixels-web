@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useMemo } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
@@ -23,6 +23,15 @@ export default function TestimonialSectionDesktop() {
     const swiperRef = useRef<SwiperType | null>(null);
 
     const [isTransitioning, setIsTransitioning] = useState(false);
+
+    const pixelBlocks = useMemo(() => Array.from({ length: 320 }), []);
+    const createPixelDelays = useCallback((count: number) =>
+        Array.from({ length: count }, () => `${(Math.random() * 0.35).toFixed(1)}s`)
+        , []);
+
+    const [pixelDelays, setPixelDelays] = useState(() =>
+        createPixelDelays(pixelBlocks.length)
+    );
 
     const mainVideoRef = useRef<HTMLVideoElement>(null);
     const video2Ref = useRef<HTMLVideoElement>(null);
@@ -84,9 +93,7 @@ export default function TestimonialSectionDesktop() {
                         <div className="testimonial-review-video-wrapper">
                             <div className="testimonialreview-main testimonial-image">
                                 <video
-                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
-                                        }`}
-                                    // src="/images/homepage/testimonialvideos/dummy-1.mp4"
+                                    className="testimonial-video site-radius-20"
                                     src={videos[activeVideoIndex]}
                                     ref={mainVideoRef}
                                     width={480}
@@ -95,46 +102,25 @@ export default function TestimonialSectionDesktop() {
                                     muted
                                     loop
                                     playsInline
-                                    // onClick={handleFullscreen}
                                     onClick={() => handleFullscreen(videos[activeVideoIndex])}
                                 >
                                 </video>
 
-                                {/* <Image className="minimize-btn" src="/images/homepage/testimonialvideos/minimize.svg" alt="minimize" width={24} height={24}></Image> */}
+                                {isTransitioning && (
+                                    <div className="pixel-overlay">
+                                        {pixelBlocks.map((_, index) => (
+                                            <div
+                                                key={index}
+                                                className="pixel-block"
+                                                style={{
+                                                    animationDelay: pixelDelays[index],
+                                                }}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
+
                                 <Image className="minimize-btn" onMouseDown={() => handleFullscreen(videos[activeVideoIndex])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={30} height={30}></Image>
-                            </div>
-
-                            <div className="testimonial-image-2 testimonial-image">
-                                <video
-                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
-                                        }`}
-                                    ref={video2Ref}
-                                    src={videos[(activeVideoIndex + 1) % videos.length]}
-                                    width={200}
-                                    height={200}
-                                    // onClick={handleFullscreen}
-                                    preload="metadata"
-                                    onClick={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])}
-                                >
-                                </video>
-
-                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 1) % videos.length])} src="/images/homepage/testimonialvideos/play-btn.svg" alt="minimize" width={24} height={24}></Image>
-                            </div>
-
-                            <div className="testimonial-image-3 testimonial-image">
-                                <video
-                                    className={`testimonial-video site-radius-20 ${isTransitioning ? "video-fade" : ""
-                                        }`}
-                                    ref={video3Ref}
-                                    src={videos[(activeVideoIndex + 2) % videos.length]}
-                                    width={130}
-                                    height={130}
-                                    preload="metadata"
-                                    onClick={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])}
-                                >
-                                </video>
-
-                                <Image className="minimize-btn minimize-btn-small" onMouseDown={() => handleFullscreen(videos[(activeVideoIndex + 2) % videos.length])} src="/images/homepage/testimonialvideos/play-btn.svg" alt="minimize" width={24} height={24}></Image>
                             </div>
                         </div>
 
@@ -144,18 +130,25 @@ export default function TestimonialSectionDesktop() {
                                 slidesPerView={2}
                                 loop={true}
                                 speed={2200}
-                                autoplay={{ delay: 3000 }}
+                                autoplay={{ delay: 4000 }}
+
                                 onSlideChange={() => {
+                                    setPixelDelays(createPixelDelays(pixelBlocks.length));
                                     setIsTransitioning(true);
 
-                                    setTimeout(() => {
+                                    requestAnimationFrame(() => {
                                         setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+                                    });
+
+                                    setTimeout(() => {
                                         setIsTransitioning(false);
-                                    }, 500);
+                                    }, 800);
                                 }}
+
                                 onSwiper={(swiper) => {
                                     swiperRef.current = swiper;
                                 }}
+
                                 className="testimonial-swiper-wrapper"
                                 breakpoints={{
                                     0: { slidesPerView: 1.2, spaceBetween: 20 },
@@ -283,7 +276,7 @@ export default function TestimonialSectionDesktop() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {selectVideo && (
                 <div
@@ -309,7 +302,8 @@ export default function TestimonialSectionDesktop() {
                         <span>✕</span>
                     </button>
                 </div>
-            )}
+            )
+            }
         </>
     );
 }

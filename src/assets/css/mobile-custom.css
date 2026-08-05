@@ -4,3 +4,6 @@
 
 .section-yellow-background{ background-color: var(--bg-yellow); }
 .placeholder-text{ color: var(--placeholder-text); }
+
+.stats-mob-card-5 h3 { margin-bottom:15px; }
+.stats-mob-card-5 p { margin-bottom: 10px; }
