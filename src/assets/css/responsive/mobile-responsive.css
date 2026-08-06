@@ -267,7 +267,7 @@
 
     .projects-title-wrapper { text-align: center; } 
 
-    .projects-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+    .projects-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; overflow: hidden; }
 
     .project-card-mobile { width: 100%; height: 250px; border-radius: 10px; overflow: hidden; }
     .project-card-mobile-video { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
@@ -276,7 +276,7 @@
     .industries-section-mobile .container { height: 100%; }
 
     .industries-mobile-text { text-align: center; } 
-    .industries-mobile-card-wrapper { display: flex; flex-direction: row; gap: 20px; margin-top: 30px; width: max-content; flex: 1; min-height: 0; align-items: stretch; }
+    .industries-mobile-card-wrapper { display: flex; flex-direction: row; gap: 30px; margin-top: 30px; width: max-content; flex: 1; min-height: 0; align-items: stretch; }
     .industries-mobile-wrapper { height: 100%; display: flex; flex-direction: column; }
     .industries-mobile-text p{ display: flex; flex-direction: column; align-items: center; } 
     .industries-mobile-card { 
@@ -289,7 +289,7 @@
         position: relative;
         width: 100%;
         max-width: 440px;
-        border-radius: 0 0 100px 0;
+        border-radius: 0 0 50px 0;
         overflow: hidden;
         flex: 1;
         min-height: 0;

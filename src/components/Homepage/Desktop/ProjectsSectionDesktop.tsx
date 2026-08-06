@@ -95,6 +95,21 @@ export default function ProjectsSectionDesktop() {
                     peek = parseFloat(peekValue);
                 }
 
+                // const totalHeight =
+                //     cards.length * cards[0].offsetHeight -
+                //     (cards.length - 1) * peek;
+
+                // gsap.set(wrapper, {
+                //     height: totalHeight
+                // });
+
+                const finalHeight =
+                    cardHeight + (cards.length - 1) * peek;
+
+                gsap.set(wrapper, {
+                    height: finalHeight,
+                });
+
                 const step = cardHeight + gap - peek;
 
                 cards.forEach((card, index) => {
@@ -108,7 +123,7 @@ export default function ProjectsSectionDesktop() {
                     scrollTrigger: {
                         trigger: section,
                         start: "top 0",
-                        end: () => `+=${step * (cards.length - 1)}`,
+                        end: () => `+=${wrapper.scrollHeight}`,
                         pin: true,
                         scrub: true,
                         invalidateOnRefresh: true,
@@ -184,11 +199,11 @@ export default function ProjectsSectionDesktop() {
 
                                 <div ref={addToRefs} className="hm-projects-card-sm hm-projects-images-sm hm-projects-card-6 site-radius-20">
                                     <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
-                                
-                                
-                                <div className="hm-project-desc">
-                                    <h3 className="h1 text-sb">A.U.T.O.B.O.T</h3>
-                                </div>
+
+
+                                    <div className="hm-project-desc">
+                                        <h3 className="h1 text-sb">A.U.T.O.B.O.T</h3>
+                                    </div>
                                 </div>
 
                             </div>

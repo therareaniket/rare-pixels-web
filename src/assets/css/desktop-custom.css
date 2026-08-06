@@ -662,3 +662,7 @@
 
 .footer-address { width: 250px; }
 .footer-address-wrapper { width: 317px; margin-top: 20px; display: flex; align-items: flex-start; gap: 20px; }
+
+.scroll-top-btn{ background-color: red; }
+
+.back-top-pointer { cursor: pointer; }

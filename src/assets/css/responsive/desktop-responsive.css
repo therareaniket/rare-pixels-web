@@ -859,12 +859,12 @@
 
 	.minimize-btn-small { width: 20px; height: 20px; }
 
-	.hm-projects-card-wrapper { flex-direction: column; width: 100%; }
+	.hm-projects-card-wrapper { flex-direction: column; width: 100%; position: relative; }
 	.hm-projects-card-2, .hm-projects-card-3, .hm-projects-card-4, .hm-projects-card-5, .hm-projects-card-6 { margin-top: 0; } 
 	.hm-projects-images-lg, .hm-projects-images-sm { height: 450px; }
 	.hm-projects-card-lg, .hm-projects-card-sm { width: 100%; }
 
-	.hm-projects-horizontal-pin-viewport { overflow: hidden; height: 90vh; }
+	.hm-projects-horizontal-pin-viewport { overflow: hidden; }
 } 
 
 @media (max-width: 1023px) {
