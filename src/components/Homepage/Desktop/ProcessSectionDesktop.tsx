@@ -242,7 +242,7 @@ export default function ProcessSectionDesktop() {
 
     return (
         <>
-            <section ref={processSectionRef} className="section section-yellow-background process-section process-tab-sticky">
+            <section ref={processSectionRef} className="section process-section process-tab-sticky">
                 <div className="process-tab-inner">
                     <div className="container-sm">
                         <div ref={containerRef} className="process-for-desktop">

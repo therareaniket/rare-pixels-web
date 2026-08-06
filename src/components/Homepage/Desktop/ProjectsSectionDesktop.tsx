@@ -142,65 +142,55 @@ export default function ProjectsSectionDesktop() {
 
                         <div className="hm-projects-horizontal-pin-viewport">
                             <div className="hm-projects-card-wrapper">
-                                <div ref={addToRefs} className="hm-projects-card-lg site-radius-20">
-                                    <div className="hm-projects-images-lg hm-projects-card-1 site-radius-20">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/djk-project.mp4" width={523} height={423} autoPlay loop muted></video>
-                                    </div>
+                                <div ref={addToRefs} className="hm-projects-card-lg hm-projects-images-lg hm-projects-card-1 site-radius-20">
+                                    <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/djk-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
                                         <h3 className="h1 text-sb">DJK</h3>
                                     </div>
                                 </div>
 
-                                <div ref={addToRefs} className="hm-projects-card-sm site-radius-20">
-                                    <div className="hm-projects-images-sm hm-projects-card-2 site-radius-20">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
-                                    </div>
+                                <div ref={addToRefs} className="hm-projects-card-sm hm-projects-images-sm hm-projects-card-2 site-radius-20">
+                                    <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
                                         <h3 className="h1 text-sb">A.U.T.O.B.O.T</h3>
                                     </div>
                                 </div>
 
-                                <div ref={addToRefs} className="hm-projects-card-lg site-radius-20">
-                                    <div className="hm-projects-images-lg hm-projects-card-3 site-radius-20">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/cameriz-project.mp4" width={523} height={423} autoPlay loop muted></video>
-                                    </div>
+                                <div ref={addToRefs} className="hm-projects-card-lg hm-projects-images-lg hm-projects-card-3 site-radius-20">
+                                    <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/cameriz-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
                                         <h3 className="h1 text-sb">CAMERIZ</h3>
                                     </div>
                                 </div>
 
-                                <div ref={addToRefs} className="hm-projects-card-sm site-radius-20">
-                                    <div className="hm-projects-images-sm hm-projects-card-4 site-radius-20">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/ra-project.mp4" width={523} height={423} autoPlay loop muted></video>
-                                    </div>
+                                <div ref={addToRefs} className="hm-projects-card-sm hm-projects-images-sm hm-projects-card-4 site-radius-20">
+                                    <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/ra-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
                                         <h3 className="h1 text-sb">RA</h3>
                                     </div>
                                 </div>
 
-                                <div ref={addToRefs} className="hm-projects-card-lg site-radius-20">
-                                    <div className="hm-projects-images-lg site-radius-20 hm-projects-card-5">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/steamovap-project.mp4" width={523} height={423} autoPlay loop muted></video>
-                                    </div>
+                                <div ref={addToRefs} className="hm-projects-card-lg hm-projects-images-lg site-radius-20 hm-projects-card-5">
+                                    <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/steamovap-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
                                         <h3 className="h1 text-sb">STEAMOVAP</h3>
                                     </div>
                                 </div>
 
-                                <div ref={addToRefs} className="hm-projects-card-sm site-radius-20">
-                                    <div className="hm-projects-images-sm hm-projects-card-6 site-radius-20">
-                                        <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
-                                    </div>
-
-                                    <div className="hm-project-desc">
-                                        <h3 className="h1 text-sb">A.U.T.O.B.O.T</h3>
-                                    </div>
+                                <div ref={addToRefs} className="hm-projects-card-sm hm-projects-images-sm hm-projects-card-6 site-radius-20">
+                                    <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
+                                
+                                
+                                <div className="hm-project-desc">
+                                    <h3 className="h1 text-sb">A.U.T.O.B.O.T</h3>
                                 </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

@@ -59,32 +59,33 @@ export default function InquirySectionDesktop() {
                         <h3 className="text-rg">I&apos;m interested in (select one or more)</h3>
 
                         <div className="inquiry-checkbox-wrapper">
-                            <div className="inquiry-form-desktop-select-project">
-                                {/* <input type="checkbox" name="" id="" />
-                                <label htmlFor="" className="text-rg h4">UI/UX Design</label> */}
-                                <input type="checkbox" id="uiux" name="uiux" value="ui-ux" />
-                                <label htmlFor="uiux" className="text-rg h4">UI/UX Design</label>
+                            <div className="inquiry-box-col">
+                                <div className="inquiry-form-desktop-select-project">
+                                    <input type="checkbox" id="uiux" name="uiux" value="ui-ux" />
+                                    <label htmlFor="uiux" className="text-rg h4">UI/UX Design</label>
+                                </div>
+
+                                <div className="inquiry-form-desktop-select-project">
+                                    <input type="checkbox" name="webdevelopment" id="webdevelopment" />
+                                    <label htmlFor="webdevelopment" className="text-rg h4">Web & App Development</label>
+                                </div>
+
+                                <div className="inquiry-form-desktop-select-project">
+                                    <input type="checkbox" name="aidrivendev" id="aidrivendev" />
+                                    <label htmlFor="aidrivendev" className="text-rg h4">AI Driven Solutions</label>
+                                </div>
                             </div>
 
-                            <div className="inquiry-form-desktop-select-project">
-                                <input type="checkbox" name="webdevelopment" id="webdevelopment" />
-                                <label htmlFor="webdevelopment" className="text-rg h4">Web & App Development</label>
-                            </div>
+                            <div className="inquiry-box-col">
+                                <div className="inquiry-form-desktop-select-project">
+                                    <input type="checkbox" name="socialmedia" id="socialmedia" />
+                                    <label htmlFor="socialmedia" className="text-rg h4">Social Media Management</label>
+                                </div>
 
-                            <div className="inquiry-form-desktop-select-project">
-                                <input type="checkbox" name="brandidentity" id="brandidentity" />
-                                <label htmlFor="brandidentity" className="text-rg h4">Brand Identity Design</label>
-                            </div>
-
-                            <div className="inquiry-form-desktop-select-project">
-                                <input type="checkbox" name="socialmedia" id="socialmedia" />
-                                <label htmlFor="socialmedia" className="text-rg h4">Social Media Management</label>
-                            </div>
-
-                            
-                            <div className="inquiry-form-desktop-select-project">
-                                <input type="checkbox" name="aidrivendev" id="aidrivendev" />
-                                <label htmlFor="aidrivendev" className="text-rg h4">AI Driven Development</label>
+                                <div className="inquiry-form-desktop-select-project">
+                                    <input type="checkbox" name="brandidentity" id="brandidentity" />
+                                    <label htmlFor="brandidentity" className="text-rg h4">Brand Identity Design</label>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@ export default function WhyChooseUsSectionDesktop() {
 
     return (
         <>
-            <section className="section">
+            <section>
                 <div className="container">
                     <div className="why-choose-us-text-wrapper">
                         <h2 className="text-sb">Why Choose Us</h2>

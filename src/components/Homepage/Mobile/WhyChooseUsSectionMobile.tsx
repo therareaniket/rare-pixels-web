@@ -9,7 +9,7 @@ export default function WhyChooseUsSectionMobile() {
 
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ paddingTop: 0 }}>
                 <div className="container">
                     <h2 className="text-sb">Why Choose Us</h2>
 

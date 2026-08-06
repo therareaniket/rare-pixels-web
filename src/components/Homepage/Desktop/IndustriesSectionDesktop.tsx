@@ -5,7 +5,7 @@ import "@/assets/css/responsive/desktop-responsive.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,12 +70,46 @@ const industries = [
 
 export default function IndustriesSectionDesktop() {
 
-    const sectionRef = useRef(null);
-    const trackRef = useRef(null);
+    const sectionRef = useRef<HTMLElement | null>(null);
+    const trackRef = useRef<HTMLDivElement | null>(null);
+
+    useLayoutEffect(() => {
+        const section = sectionRef.current;
+        const track = trackRef.current;
+
+        if (!section || !track) return;
+
+        const container = section.querySelector<HTMLDivElement>(
+            ".industries-scroll-container"
+        );
+
+        if (!container) return;
+
+        const scrollDistance =
+            track.scrollWidth - container.offsetWidth;
+
+        const ctx = gsap.context(() => {
+            gsap.to(track, {
+                x: -scrollDistance,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: () => `+=${scrollDistance}`,
+                    pin: true,
+                    scrub: 1,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true,
+                },
+            });
+        }, section);
+
+        return () => ctx.revert();
+    }, []);
 
     return (
         <>
-            <section ref={sectionRef} className="industries-section-sticky section" style={{ paddingBottom: 0 }}>
+            <section ref={sectionRef} className="industries-section-sticky section">
                 <div className="industirs-section-inner">
                     <div className="container">
                         <div className="industries-text-title">

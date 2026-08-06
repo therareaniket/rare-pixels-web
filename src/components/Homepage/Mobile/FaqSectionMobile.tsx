@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function FaqSectionMobile() {
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ paddingTop: 0 }}>
                 <div className="container">
                     <div className="hm-faq-title">
                         <h2 className="text-sb">FAQs</h2>

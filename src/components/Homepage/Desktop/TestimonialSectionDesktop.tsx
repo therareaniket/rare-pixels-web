@@ -26,7 +26,7 @@ export default function TestimonialSectionDesktop() {
 
     const pixelBlocks = useMemo(() => Array.from({ length: 320 }), []);
     const createPixelDelays = useCallback((count: number) =>
-        Array.from({ length: count }, () => `${(Math.random() * 0.35).toFixed(1)}s`)
+        Array.from({ length: count }, () => `${(Math.random() * 0.1).toFixed(1)}s`)
         , []);
 
     const [pixelDelays, setPixelDelays] = useState(() =>
