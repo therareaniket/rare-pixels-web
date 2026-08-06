@@ -216,7 +216,7 @@
 	.industries-text-wrapper{ width: 410px; height: 470px; }
 	.industries-text-wrapper p{ gap: 10px; }
 	.industries-image-wrapper{ width: 790px; }
-	.industries-card-wrapper{ margin-top: 40px; }
+	/* .industries-card-wrapper{ margin-top: 40px; } */
 	.dark-mode-hover-icon, .light-mode-hover-icon{ width: 28px; height: 28px; }
 	.nav-theme-change-icon{ width: 40px; height: 40px; font-size: 28px; line-height: 28px; }
 	.navbar-hamburger-effect{ padding: 10px; width: 48px; height: 48px; }
@@ -318,6 +318,10 @@
 	.hm-projects-images-sm { height: 460px; }
 
 	.hm-projects-card-wrapper { --project-stack-peek: 138px; }
+
+	.industries-desktop-pixel-1 { width: 120px; }
+	.industries-desktop-pixel-2 { width: 90px; }
+	.industries-desktop-pixel-3 { width: 30px; }
 }
 
 @media (max-width: 1439px) {
@@ -705,10 +709,10 @@
 	.hm-abt-card-title .h6{ font-size: 22px; line-height: 30px; }
 
 	.industry-item { flex-direction: column; }
-	.industries-image-wrapper { width: 100%; height: 870px; }
+	.industries-image-wrapper { width: 100%; height: clamp(320px, 48vh, 720px); }
 	.industries-card-wrapper { width: 100%; flex-direction: column; gap: 20px; }
 
-	.industries-text-wrapper { width: 100%; height: max-content; gap: 20px; }
+	.industries-text-wrapper { width: 100%; min-width: 100%; height: max-content; gap: 20px; }
 
 	.rare-logo-wrapper{ width: 130px; }
 

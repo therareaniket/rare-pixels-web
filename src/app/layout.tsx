@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "@/components/Header";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/Footer";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -20,6 +21,8 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 					<Header />
 
 					{children}
+
+					<Footer />
 				</ThemeProvider>
 			</body>
     	</html>
