@@ -272,7 +272,7 @@
     .project-card-mobile { width: 100%; height: 250px; border-radius: 10px; overflow: hidden; }
     .project-card-mobile-video { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
 
-    .industries-section-mobile { height: 100vh; }
+    .industries-section-mobile { height: 100vh; overflow: hidden; }
     .industries-section-mobile .container { height: 100%; }
 
     .industries-mobile-text { text-align: center; } 
