@@ -67,7 +67,7 @@ export default function InquirySectionMobile() {
                                 <div className="inquiry-mob-field">
                                     <input type="checkbox" name="aidrivendev" id="aidrivendev" className="inquiry-form-input" />
 
-                                    <label htmlFor="aidrivendev" className="text-rg text-18">AI Driven Development</label>
+                                    <label htmlFor="aidrivendev" className="text-rg text-18">AI Driven Solution</label>
                                 </div>
                             </div>
                         </div>

@@ -54,7 +54,7 @@ export default function ProcessSectionMobile() {
             card.classList.add("active");
         });
 
-        ScrollTrigger.create({
+     const projectMobileTrigger = ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
             end: () => "+=" + (cards.length * 500),
@@ -73,9 +73,7 @@ export default function ProcessSectionMobile() {
             },
         });
 
-        return () => {
-            ScrollTrigger.getAll().forEach((st) => st.kill());
-        };
+        return () => projectMobileTrigger.kill();
     }, []);
 
     return (
