@@ -61,7 +61,6 @@ export default function ProcessSectionMobile() {
             invalidateOnRefresh: true,
             // pin: true,
             scrub: true,
-            markers: true,
 
             onUpdate: (self) => {
                 const activeIndex = Math.min(

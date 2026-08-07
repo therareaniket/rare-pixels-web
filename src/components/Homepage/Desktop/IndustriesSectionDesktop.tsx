@@ -109,7 +109,7 @@ export default function IndustriesSectionDesktop() {
 
     return (
         <>
-            <section ref={sectionRef} className="industries-section-sticky section">
+            <section ref={sectionRef} className="industries-section-sticky section industries-section">
                 <div className="industirs-section-inner">
                     <div className="container">
                         <div className="industries-text-title">

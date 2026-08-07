@@ -50,7 +50,6 @@ export default function ProjectSectionMobile() {
                     // anticipatePin: 1,
                     scrub: true,
                     invalidateOnRefresh: true,
-                    markers: true,
                 }
             });
 

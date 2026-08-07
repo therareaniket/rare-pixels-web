@@ -266,7 +266,7 @@
     }
 
     .project-section-sticky { position: relative; min-height: 500vh; }
-    .project-section-inner { position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; }
+    .project-section-desktop-inner { position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; }
     .projects-title-wrapper { text-align: center; } 
 
     .projects-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; overflow: hidden; }

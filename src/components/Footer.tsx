@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <>
-            <section className="section section-bg-blue">
+            <section className="section section-bg-blue footer">
                 <div className="container">
                     <div className="footer-quote-wrapper">
                         <div className="footer-quote-right">
@@ -27,35 +27,47 @@ export default function Footer() {
                         <div className="footer-social-wrapper">
                             <div className="footer-social-row-1 footer-social-row">
                                 <div className="social-icon text-light-grey">
-                                    <span className="icon-linkedin"></span>
-                                    <p className="text-upper-case text-18 text-rg">LinkedIn</p>
+                                    <Link href="" title="linkedin">
+                                        <span className="icon-linkedin"></span>
+                                        <p className="text-upper-case text-18 text-rg">LinkedIn</p>
+                                    </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <span className="icon-instagram"></span>
-                                    <p className="text-upper-case text-18 text-rg">Instagram</p>
+                                    <Link href="#" title="instagram">
+                                        <span className="icon-instagram"></span>
+                                        <p className="text-upper-case text-18 text-rg">Instagram</p>
+                                    </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <span className="icon-threads"></span>
-                                    <p className="text-upper-case text-18 text-rg">Threads</p>
+                                    <Link href="#" title="threads">
+                                        <span className="icon-threads"></span>
+                                        <p className="text-upper-case text-18 text-rg">Threads</p>
+                                    </Link>
                                 </div>
                             </div>
 
                             <div className="footer-social-row-2 footer-social-row">
                                 <div className="social-icon text-light-grey">
-                                    <span className="icon-facebook"></span>
-                                    <p className="text-upper-case text-18 text-rg">Facebook</p>
+                                    <Link href="#" title="facebook">
+                                        <span className="icon-facebook"></span>
+                                        <p className="text-upper-case text-18 text-rg">Facebook</p>
+                                    </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <span className="icon-twitter"></span>
-                                    <p className="text-upper-case text-18 text-rg">Twitter</p>
+                                    <Link href="#" title="twitter">
+                                        <span className="icon-twitter"></span>
+                                        <p className="text-upper-case text-18 text-rg">Twitter</p>
+                                    </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <span className="icon-youtube"></span>
-                                    <p className="text-upper-case text-18 text-rg">Youtube</p>
+                                    <Link href="#" title="youtube">
+                                        <span className="icon-youtube"></span>
+                                        <p className="text-upper-case text-18 text-rg">Youtube</p>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +119,7 @@ export default function Footer() {
                             <div className="footer-contact">
                                 <div className="footer-address-wrapper">
                                     <div className="footer-add-country">
-                                        <div className="footer-india">
+                                        <div className="footer-india active">
                                             <p className="text-16 text-sb text-light-grey"> India </p>
                                         </div>
 
@@ -119,22 +131,71 @@ export default function Footer() {
                                     <div className="footer-address">
                                         <div className="footer-address-india">
                                             <p className="text-16 text-rg text-light-grey">
-                                                The Prime
-                                                1109-10, Near Vakil Saheb Bridge, Ambli T Junction, Ahmedabad, Gujarat 380058.
+                                                The Prime <br />
+                                                1109-10, Near Vakil Saheb Bridge, <br />
+                                                Ambli T Junction, Ahmedabad, <br />
+                                                Gujarat 380058.
                                             </p>
                                         </div>
 
                                         <div className="footer-address-usa">
                                             <p className="text-16 text-rg text-light-grey">
-                                                The Prime
-                                                1109-10, Near Vakil Saheb Bridge, Ambli T Junction, Ahmedabad, Gujarat 380058.
+                                                2500 knights road <br />
+                                                Apt # 29 - 02 <br />
+                                                Bensalem PA 19020.
                                             </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="footer-company-contact">
+                                    <div className="footer-cnct">
+                                        <span className="text-rg text-16 text-light-grey">E.</span>
+
+                                        <div className="footer-mail">
+                                            <ul>
+                                                <li className="text-rg text-16 text-light-grey"><Link href="mailTo:connect@rarepixelsdesign.com">connect@rarepixelsdesign.com</Link></li>
+                                                <li className="text-rg text-16 text-light-grey"><Link href="mailTo:careers@rarepixelsdesign.com">careers@rarepixelsdesign.com</Link></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div className="footer-cnct">
+                                        <span className="text-rg text-16 text-light-grey">P.</span>
+
+                                        <div className="footer-mail">
+                                            <ul>
+                                                <li className="text-rg text-16 text-light-grey"><Link href="callTo:+91 8200925920">+91 8200925920</Link></li>
+                                                <li className="text-rg text-16 text-light-grey"><Link href="callTo:+1(347) 352-0172">+1(347) 352-0172</Link></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div className="rare-pixels-company-logo">
+                        <Image className="footer-site-logo" src="/images/homepage/rarepixels-footer-logo.svg" alt="website-logo" width={1600} height={260}></Image>
+                    </div>
+
+                    <div className="footer-copyright">
+                        <div className="footer-copyright-left">
+                            <p className="text-16 text-rg text-light-grey">© 2026 RarePixels Design all rights reserved.</p>
+                        </div>
+
+                        <div className="footer-copyright-right">
+                            <ul>
+                                <li className="text-rg text-16 text-light-grey"> <Link href="#" title="Terms of Use">Terms of Use</Link> </li>
+                                <li className="text-rg text-16 text-light-grey"> <Link href="#" title="Privacy Policy">Privacy Policy</Link> </li>
+                                <li className="text-rg text-16 text-light-grey"> <Link href="#" title="Site Map">Site Map</Link> </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <Image className="footer-pixel-1" src="/images/homepage/footer-pixel-1.svg" alt="footer-pixel-1" width={386} height={262}></Image>
+                    <Image className="footer-pixel-2" src="/images/homepage/footer-pixel-2.svg" alt="footer-pixel-2" width={166} height={124}></Image>
+                    <Image className="footer-pixel-3" src="/images/homepage/footer-pixel-3.svg" alt="footer-pixel-3" width={369} height={262}></Image>
                 </div>
             </section>
         </>

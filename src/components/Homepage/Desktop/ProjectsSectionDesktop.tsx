@@ -67,10 +67,11 @@ export default function ProjectsSectionDesktop() {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: section,
-                        start: "top 0",
+                        start: "top -50px",
                         end: () => `+=${step * (cards.length - 1)}`,
                         pin: true,
                         scrub: true,
+                        anticipatePin: 1,
                         invalidateOnRefresh: true,
                     },
                 });
@@ -146,7 +147,7 @@ export default function ProjectsSectionDesktop() {
     }, []);
 
     return (
-        <section ref={projectSectionRef} className="section projects-section-desktop projects-section-sticky">
+        <section ref={projectSectionRef} className="section projects-section-desktop projects-section-sticky-desktop">
             <div className="project-section-desktop-inner">
                 <div className="container">
                     <div className="hm-project-container">

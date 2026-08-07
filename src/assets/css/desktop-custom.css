@@ -3,7 +3,7 @@
 .text-grey{ color: var(--text-grey); }
 
 .text-dark-grey{ color: #8C8B8C; }
-.text-light-grey{ color: #c6c6c6; }
+.text-light-grey{ color: #C6C6C6; }
 
 .link-padding{ padding: 10px 20px; }
 .site-radius-10{ border-radius: 10px; }
@@ -24,6 +24,24 @@
 .placeholder-text{ color: var(--placeholder-text); }
 
 @keyframes eyeFade {  from{ opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+@keyframes pixelReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
 
 /* HEADER - NAVBAR */
 .site-header {
@@ -367,6 +385,9 @@
 .process-section-tablet-wrapper{ display: none; }
 
 /* projects section */
+/* .projects-section-sticky-desktop { position: relative; min-height: 5000vh; overflow: hidden; background-color: red; }
+.project-section-inner { position: sticky; top: 0; height: 100%; transition: 1s all ease-in; } */
+
 .hm-projects-text{ text-align: center; }
 
 .hm-projects-horizontal-pin-viewport { overflow: hidden; width: 100%; height: max-content; }
@@ -601,54 +622,30 @@
     transform: translate(-50%, -50%);
 }
 
-
 .testimonialreview-main { position: relative; overflow: hidden; }
 .pixel-overlay {
     position: absolute;
     inset: 0;
     z-index: 20;
     pointer-events: none;
-
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(16, 1fr);
-
     overflow: hidden;
 }
-.pixel-block {
-    width: 100%;
-    height: 100%;
-    background: rgba(237, 1, 128, 0.6);
-    animation: pixelReveal 0.8s ease forwards;
-    will-change: transform, opacity;
-}
-
-@keyframes pixelReveal {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-
-    40% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1);
-    }
-}
-
+.pixel-block { width: 100%; height: 100%; background: rgba(237, 1, 128, 0.6); animation: pixelReveal 0.8s ease forwards; will-change: transform, opacity; }
 
 /* footer */
+
+.footer-quote-right h2 { font-size: 80px; line-height: 90px; }
 
 .footer-quote-wrapper { display: flex; align-items: center; justify-content: space-between; }
 .footer-quote-right { width: 776px; }
 .footer-quote-right p { margin-bottom: 40px; }
 .footer-quote-title { margin-top: 6px; }
 
-.social-icon { display: flex; align-items: center; gap: 20px; }
+.social-icon a{ display: flex; align-items: center; gap: 20px; transition: all 0.6s ease; }
+.social-icon a:hover{ color: var(--primary); }
 .social-icon span { font-size: 26px; }
 
 .footer-social-wrapper { display: flex; align-items: flex-start; gap: 60px; }
@@ -656,13 +653,35 @@
 
 .footer-detail-wrapper { display: flex; align-items: flex-start; padding: 30px 0; margin: 30px 0; border-top: 1px solid #424242; border-bottom: 1px solid #424242; }
 
-.footer-links { display: flex; width: 672px; align-items: flex-start; justify-content: space-between; margin-top: 20px; }
-.footer-link-col ul li { margin-bottom: 10px; }
+.footer-links { display: flex; width: 672px; align-items: flex-start; justify-content: space-between; margin-top: 20px; margin-bottom: 10px; }
+.footer-link-col ul li { margin-bottom: 10px; transition: all 0.6s ease; }
+.footer-link-col ul li:hover { color: var(--primary); }
 .footer-link-col ul li:nth-last-child(1) { margin-bottom: 0px; }
 
 .footer-address { width: 250px; }
-.footer-address-wrapper { width: 317px; margin-top: 20px; display: flex; align-items: flex-start; gap: 20px; }
+.footer-address-wrapper { width: 317px; display: flex; align-items: flex-start; gap: 20px; }
 
 .scroll-top-btn{ background-color: red; }
 
 .back-top-pointer { cursor: pointer; }
+
+.footer-vr-line { width: 1px; height: 170px; background-color: #424242; margin: 0 113px; }
+
+.footer-address-usa { display: none; }
+.footer-company-detail { width: 100%; }
+.footer-contact { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px; }
+.footer-cnct { display: flex; gap: 6px; }
+
+.footer-india.active p{ color: var(--primary); }
+.footer-cnct:nth-child(1) { margin-bottom: 10px; }
+
+.footer-copyright { display: flex; align-items: center; justify-content: space-between; padding-top: 60px; }
+.footer-copyright-right ul { display: flex; align-items: center; gap: 30px; }
+
+.footer { position: relative; }
+.footer-pixel-1 { position: absolute; top: 0; left: 0; }
+.footer-pixel-2 { position: absolute; bottom: 0; left: 0; }
+.footer-pixel-3 { position: absolute; bottom: 0; right: 0; }
+
+.footer-add-country { display: flex; flex-direction: column; gap: 10px; }
+.footer-add-country div { cursor: pointer; transition: all 0.6s ease; }

@@ -66,6 +66,7 @@ export default function Home() {
 						<BlogSectionMobile />
 						<FaqSectionMobile />
 						<InquirySectionMobile />
+						<ScrollToTopButton />
 					</>
 					:
 					<>
