@@ -289,7 +289,7 @@
     max-height: 150px;
     overflow: hidden;
     /* margin-bottom: clamp(24px, 2.8vh, 40px); */
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 .industries-text-title > p{ display: flex; flex-direction: column; }
 

@@ -27,7 +27,6 @@ export default function ProcessSectionDesktop() {
 
     useGSAP(() => {
         mm.add("(min-width: 1200px", () => {
-            ;
             if (
                 !processSectionRef.current ||
                 !containerRef.current ||
@@ -242,7 +241,7 @@ export default function ProcessSectionDesktop() {
 
     return (
         <>
-            <section ref={processSectionRef} className="section process-section process-tab-sticky">
+            <section ref={processSectionRef} className="section process-section process-tab-sticky section-yellow-background">
                 <div className="process-tab-inner">
                     <div className="container-sm">
                         <div ref={containerRef} className="process-for-desktop">

@@ -309,7 +309,7 @@
     .industries-mobile-pixel-3 { position: absolute; bottom: 0; left: 0; }
 
     .header-mega-menu { padding-bottom: 30px; }
-
+    .back-top-pointer { width: 16px; height: 16px; }
 }
 
 @media (max-width: 439px) {

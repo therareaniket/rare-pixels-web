@@ -13,7 +13,7 @@ const industries = [
     {
         video: "/images/homepage/industries/technology-and-saas.mp4",
         title: "Technology & SaaS",
-        desc1: "The best software isn't the one with the most features. It's the one people understand instantly.",
+        desc1: "The best software makes sense at a glance and feels natural from the start.",
         desc2: "We design intuitive SaaS platforms that improve adoption, reduce friction, and keep users coming back.",
         desc3: "Complex products deserve experiences that feel simple.",
     },

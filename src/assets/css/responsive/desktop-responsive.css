@@ -7,7 +7,7 @@
 
 @media (max-width: 1799px) {
 	.container { max-width: calc(1360px + 36px); }   
-	.section   { padding: 120px 0px; }
+	.section   { padding: 100px 0px; }
 	.container-sm { max-width: calc(1224px + 36px);  }
 
 	h1, .h1{ font-size: 60px; line-height: 68px; }
@@ -155,6 +155,8 @@
 	.footer-links { width: 555px; }
 	.footer-vr-line { height: 180px; }
 	.footer-quote-right h2 { font-size: 78px; line-height: 88px; }
+
+	.process-title-text-wrapper { width: 620px; }
 }
 
 @media (max-width: 1599px) {
@@ -267,7 +269,7 @@
 	.faq-accordion{ width: 1050px; }
 	.faq-accordion-wrapper{ margin-top: 40px; }
 
-	.process-pointer-wrapper { gap: 20px; }
+	.process-pointer-wrapper { gap: 10px; }
 
 	.inquiry-form-contact-fields{ margin-top: 40px; }
 	.inquiry-form-project-field{ margin-top: 30px; padding-top: 30px; }
@@ -320,7 +322,12 @@
 
 	.mega-links ul { padding-left: 60px; }
 
-	.process-title-text-wrapper { width: 570px; }
+	.process-title-text-wrapper { width: 715px; padding-bottom: 0; }
+	.process-title-text-wrapper h2 { margin-bottom: 4px; }
+
+	.process-pointer .h2 { font-size: 36px; line-height: 42px; }
+	.process-pointer-svg { width: 42px; height: 42px; font-size: 18px; border-radius: 12px !important; }
+	.process-pointer { max-height: 42px; }
 
 	.hm-projects-images-lg { height: 360px; }
 	.hm-projects-images-sm { height: 460px; }
@@ -330,6 +337,9 @@
 	.industries-desktop-pixel-1 { width: 120px; }
 	.industries-desktop-pixel-2 { width: 90px; }
 	.industries-desktop-pixel-3 { width: 30px; }
+	.industries-card-wrapper { gap: 110px; }
+
+	.process-elements-wrapper { height: 480px; }
 }
 
 @media (max-width: 1439px) {
@@ -730,7 +740,7 @@
 		align-items: stretch;
 	}
 
-	.industries-text-wrapper { width: 100%; min-width: 0; max-width: 100%; height: max-content; gap: 20px; }
+	.industries-text-wrapper { width: 80%; min-width: 0; max-width: 100%; height: max-content; gap: 20px; }
 
 
 	.rare-logo-wrapper{ width: 130px; }
@@ -1066,6 +1076,8 @@
 	.header-mega-menu { width: 640px; height: max-content; overflow-y: scroll; padding-bottom: 30px; }
 
 	.menu-link-icon, .mega-links-icon { width: 44px; height: 44px; }
+
+	.industries-text-wrapper { width: 90%; }
 }
 
 @media (max-width: 767px) {
@@ -1152,6 +1164,7 @@
 	.industries-desktop-pixel-2 { width: 70px; }
 
 	.industry-item { gap: 30px; }
+	.industries-text-title { margin-bottom: 40px; }
 }
 
 @media (max-width: 639px) {
@@ -1265,7 +1278,7 @@
 	.process-text-wrapper{ width: 85%; }
 
 	.industries-image-wrapper{ height: 410px; }
-	.industries-text-wrapper > span{ font-size: 38px; height: 36px; }
+	.industries-text-wrapper > span{ font-size: 32px; height: 36px; }
 
 	.hm-faq-title{ width: 100%; }
 	.faq-accordion{ width: 350px; }
@@ -1342,4 +1355,8 @@
 	.inquiry-form-desktop-select-project input[type="checkbox"] { width: 24px; height: 24px; }
 	.inquiry-form-desktop-select-project { padding: 0 10px; }
 
+	.industries-text-title { margin-bottom: 30px; }
+	.industries-text-wrapper { width: 100%; }
+	.industries-text-wrapper p { gap: 6px; }
+	.industry-item { gap: 40px; }
 }

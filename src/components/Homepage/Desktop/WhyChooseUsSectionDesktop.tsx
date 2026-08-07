@@ -10,7 +10,7 @@ export default function WhyChooseUsSectionDesktop() {
 
     return (
         <>
-            <section>
+            <section className="section" style={{ paddingTop: 0 }}>
                 <div className="container">
                     <div className="why-choose-us-text-wrapper">
                         <h2 className="text-sb">Why Choose Us</h2>
