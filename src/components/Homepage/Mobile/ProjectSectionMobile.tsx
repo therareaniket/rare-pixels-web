@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -45,9 +45,11 @@ export default function ProjectSectionMobile() {
                     start: "top top",
                     end: () => `+=${step * (cards.length - 1)}`,
                     pin: true,
+                    pinSpacing: true,
+                    anticipatePin: 1,
                     scrub: true,
                     invalidateOnRefresh: true,
-                },
+                }
             });
 
             for (let activeIndex = 1; activeIndex < cards.length; activeIndex++) {

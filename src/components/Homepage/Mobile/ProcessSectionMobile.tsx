@@ -57,9 +57,11 @@ export default function ProcessSectionMobile() {
         ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
-            end: "bottom bottom",
+            end: () => "+=" + (cards.length * 500),
+            invalidateOnRefresh: true,
             // pin: true,
             scrub: true,
+            markers: true,
 
             onUpdate: (self) => {
                 const activeIndex = Math.min(
