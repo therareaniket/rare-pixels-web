@@ -99,6 +99,8 @@ export default function TestimonialSectionMobile() {
                                     muted
                                     loop
                                     playsInline
+                                    preload="true"
+                                    webkit-playsinline="true"
                                     // onClick={handleFullscreen}
                                     onClick={() => handleFullscreen(videos[activeVideoIndex])}
                                 >

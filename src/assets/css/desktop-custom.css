@@ -390,7 +390,7 @@
 
 .hm-projects-text{ text-align: center; }
 
-.hm-projects-horizontal-pin-viewport { overflow: hidden; width: 100%; height: max-content; }
+.hm-projects-horizontal-pin-viewport { width: 100%; height: max-content; }
 
 .hm-projects-card-lg, .hm-projects-card-sm { width: 650px; flex-shrink: 0; position: relative; cursor: pointer; }
 
@@ -405,12 +405,8 @@
     padding: 10px 0; 
     width: 90%; 
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blurr(10); 
-    /* background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9); */
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     opacity: 0;
     transition: opacity 1s ease-in-out;
     color: var(--primary);
@@ -433,11 +429,12 @@
 .hm-projects-card-wrapper { 
     --project-stack-peek: 190px;
     --project-stack-gap: 30px;
+    --card-diff: 80px;
     position: relative; 
     display: flex; 
     gap: var(--project-stack-gap); 
     width: max-content; 
-    margin-top: 60px; 
+    /* margin-top: 60px;  */
     align-items: flex-start; 
     will-change: transform; 
 }
@@ -685,3 +682,10 @@
 
 .footer-add-country { display: flex; flex-direction: column; gap: 10px; }
 .footer-add-country div { cursor: pointer; transition: all 0.6s ease; }
+
+
+.projects-section-desktop{ height: 100vh; }
+.project-section-desktop-inner, .container, .hm-project-container{ height: 100%; }
+.hm-project-container{ display: flex; flex-direction: column; }
+.hm-projects-horizontal-pin-viewport{ flex: 1; min-height: 0; }
+.hm-projects-card-wrapper{ height: 100%; margin-top: 60px; }

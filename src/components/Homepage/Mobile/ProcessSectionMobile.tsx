@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from "next/image";
+import "@/assets/css/mobile-custom.css";
+import "@/assets/css/responsive/mobile-responsive.css";
 
 gsap.registerPlugin(ScrollTrigger);
 

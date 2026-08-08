@@ -26,7 +26,7 @@ export default function ProcessSectionDesktop() {
     const mm = gsap.matchMedia();
 
     useGSAP(() => {
-        mm.add("(min-width: 1200px", () => {
+        mm.add("(min-width: 1200px)", () => {
             if (
                 !processSectionRef.current ||
                 !containerRef.current ||
@@ -236,6 +236,70 @@ export default function ProcessSectionDesktop() {
                 tl.to({}, { duration: 1 });
             });
         })
+
+        mm.add("(max-width: 1199px)", () => {
+            if (
+                !processSectionRef.current ||
+                !containerRef.current ||
+                !elementsRef.current ||
+                !pointerWrapperRef.current
+            ) return;
+
+            const pointers = gsap.utils.toArray<HTMLElement>(".process-pointer-tablet");
+            const elements = gsap.utils.toArray<HTMLElement>(".element-tab-wrapper");
+
+            const setActiveStepMobile = (activeIndex: number) => {
+                pointers.forEach((pointer, i) => {
+                    const desc = pointer.querySelector(".process-text-wrapper");
+                    const p = pointer.querySelector(".process-text-wrapper p");
+                    const tick = pointer.querySelector(".process-tick-tab");
+
+                    const isActive = i === activeIndex;
+
+                    pointer.classList.toggle("active", isActive);
+                    if (desc) desc.classList.toggle("active", isActive);
+
+                    gsap.to(pointer, { opacity: isActive ? 1 : 0.5, duration: 0.8, overwrite: true, ease: "power2.inOut" });
+
+                    if (tick) {
+                        gsap.set(tick, { opacity: isActive ? 1 : 0, display: isActive ? "flex" : "none" });
+                    }
+
+                    if (p) {
+                        gsap.to(p, { height: isActive ? "auto" : 0, opacity: isActive ? 1 : 0, duration: 0.8, overwrite: true });
+                    }
+                });
+
+                elements.forEach((el, i) => {
+                    const shouldShow = i === activeIndex;
+
+                    gsap.set(el, {
+                        display: shouldShow ? "flex" : "none"
+                    });
+                });
+            };
+
+            setActiveStepMobile(0);
+
+
+            ScrollTrigger.create({
+                trigger: processSectionRef.current,
+                start: "top top",
+                end: `+=${window.innerHeight * pointers.length}`,
+                pin: true,
+                scrub: true,
+                onUpdate: (self) => {
+                    const step = Math.min(
+                        pointers.length - 1,
+                        Math.floor(self.progress * pointers.length)
+                    );
+
+                    setActiveStepMobile(step);
+                }
+            });
+        })
+
+        return () => mm.revert();
 
     }, { scope: processSectionRef });
 

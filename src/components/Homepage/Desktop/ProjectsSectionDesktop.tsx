@@ -13,6 +13,8 @@ export default function ProjectsSectionDesktop() {
     const projectSectionRef = useRef<HTMLDivElement>(null);
     const cardsRef = useRef<HTMLDivElement[]>([]);
 
+
+
     const addToRefs = (el: HTMLDivElement | null) => {
         if (el && !cardsRef.current.includes(el)) {
             cardsRef.current.push(el);
@@ -46,6 +48,26 @@ export default function ProjectsSectionDesktop() {
 
             mm.add("(min-width: 1200px)", () => {
                 const cardWidth = cards[0].offsetWidth;
+                const maxOffset = Math.max(
+                    ...cards.map(card =>
+                        parseFloat(getComputedStyle(card).marginTop) || 0
+                    )
+                );
+
+                const wrapperHeight = wrapper.offsetHeight - maxOffset;
+
+                const cardDiff = parseFloat(
+                    getComputedStyle(wrapper)
+                        .getPropertyValue("--card-diff")
+                );
+
+                cards.forEach((card) => {
+                    if (card.classList.contains("hm-projects-card-sm")) {
+                        card.style.height = `${wrapperHeight}px`;
+                    } else {
+                        card.style.height = `${wrapperHeight - cardDiff}px`;
+                    }
+                });
 
                 let peek = 0;
 

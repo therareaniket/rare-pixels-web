@@ -274,42 +274,16 @@
     .project-card-mobile { width: 100%; height: 250px; border-radius: 10px; overflow: hidden; }
     .project-card-mobile-video { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
 
-    .industries-section-mobile { height: 100vh; overflow: hidden; }
-    .industries-section-mobile .container { height: 100%; }
 
-    .industries-mobile-text { text-align: center; } 
-    .industries-mobile-card-wrapper { display: flex; flex-direction: row; gap: 30px; margin-top: 30px; width: max-content; flex: 1; min-height: 0; align-items: stretch; }
-    .industries-mobile-wrapper { height: 100%; display: flex; flex-direction: column; }
-    .industries-mobile-text p{ display: flex; flex-direction: column; align-items: center; } 
-    .industries-mobile-card { 
-        display: flex; 
-        flex-direction: column; 
-        flex-shrink: 0; 
-        height: 100%;
-    }
-    .industries-mobile-video {
-        position: relative;
-        width: 100%;
-        max-width: 440px;
-        border-radius: 0 0 50px 0;
-        overflow: hidden;
-        flex: 1;
-        min-height: 0;
-        height: auto;
-    }
-
-    .industries-mobile-vd { width: 100%; height: 100%; object-fit: cover; } 
-
-    .industries-mobile-card-text { margin-top: 20px; width: 400px; }
-    .industries-mobile-card-text h3{ margin-bottom: 14px; }
-    .industries-mobile-card-text p { display: flex; flex-direction: column; gap: 10px; }
-
-    .industries-mobile-pixel-1 { position: absolute; top: 0; left: 0; }
-    .industries-mobile-pixel-2 { position: absolute; top: 0; right: 0; }
-    .industries-mobile-pixel-3 { position: absolute; bottom: 0; left: 0; }
 
     .header-mega-menu { padding-bottom: 30px; }
     .back-top-pointer { width: 16px; height: 16px; }
+
+    .industries-card-wrapper { gap: 30px; }
+    .industry-item { gap: 20px; }
+    .industries-image-wrapper { border-radius: 0 0 50px 0; }
+    .industries-text-wrapper p { width: 100%; }
+    .industries-text-wrapper { gap: 15px; }
 }
 
 @media (max-width: 439px) {
@@ -383,6 +357,7 @@
     .menu-link-icon, .mega-links-icon { width: 32px; height: 32px; font-size: 16px; border-radius: 10px; }
     .industries-mobile-video { max-width: 400px; } 
 
+    .industries-text-wrapper > span { font-size: 28px; line-height: 36px; }
 }
 
 @media (max-width: 400px) {

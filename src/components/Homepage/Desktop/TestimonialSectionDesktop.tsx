@@ -102,6 +102,8 @@ export default function TestimonialSectionDesktop() {
                                     muted
                                     loop
                                     playsInline
+                                    preload="auto"
+                                    webkit-playsinline="true"
                                     onClick={() => handleFullscreen(videos[activeVideoIndex])}
                                 >
                                 </video>
