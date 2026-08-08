@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import Image from "next/image";
@@ -245,6 +245,7 @@ export default function ProcessSectionDesktop() {
                 !pointerWrapperRef.current
             ) return;
 
+            let currentMobileStep = -1;
             const pointers = gsap.utils.toArray<HTMLElement>(".process-pointer-tablet");
             const elements = gsap.utils.toArray<HTMLElement>(".element-tab-wrapper");
 
@@ -254,28 +255,76 @@ export default function ProcessSectionDesktop() {
                     const p = pointer.querySelector(".process-text-wrapper p");
                     const tick = pointer.querySelector(".process-tick-tab");
 
-                    const isActive = i === activeIndex;
+                    const progressLine = document.querySelector(
+                        ".process-vertical-active-line-for-tab"
+                    );
 
-                    pointer.classList.toggle("active", isActive);
+                    gsap.to(progressLine, {
+                        height: `${((activeIndex + 1) / pointers.length) * 100}%`,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
+
+                    const isActive = i === activeIndex;
+                    const isCompleted = i < activeIndex;
+
+                    gsap.to(pointer, {
+                        maxHeight: isActive ? 500 : 48,
+                        duration: 0.6,
+                        ease: "power2.out"
+                    });
                     if (desc) desc.classList.toggle("active", isActive);
 
-                    gsap.to(pointer, { opacity: isActive ? 1 : 0.5, duration: 0.8, overwrite: true, ease: "power2.inOut" });
+                    gsap.to(pointer, {
+                        opacity: isActive || isCompleted ? 1 : 0.5,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
 
                     if (tick) {
-                        gsap.set(tick, { opacity: isActive ? 1 : 0, display: isActive ? "flex" : "none" });
+                        gsap.set(tick, {
+                            opacity: isActive || isCompleted ? 1 : 0,
+                            display: isActive || isCompleted ? "flex" : "none"
+                        });
                     }
 
-                    if (p) {
-                        gsap.to(p, { height: isActive ? "auto" : 0, opacity: isActive ? 1 : 0, duration: 0.8, overwrite: true });
-                    }
+                    gsap.killTweensOf(p);
+
+                    gsap.to(p, {
+                        opacity: isActive ? 1 : 0,
+                        y: isActive ? 0 : 10,
+                        duration: 0.4,
+                        ease: "power2.out"
+                    });
                 });
 
                 elements.forEach((el, i) => {
                     const shouldShow = i === activeIndex;
+                    if (shouldShow) {
+                        gsap.set(el, { display: "flex" });
 
-                    gsap.set(el, {
-                        display: shouldShow ? "flex" : "none"
-                    });
+                        gsap.fromTo(
+                            el,
+                            {
+                                opacity: 0,
+                                scale: 0.9,
+                                y: 20
+                            },
+                            {
+                                opacity: 1,
+                                scale: 1,
+                                y: 0,
+                                duration: 0.6,
+                                ease: "back.out(1.4)"
+                            }
+                        );
+                    } else {
+                        gsap.to(el, {
+                            opacity: 0,
+                            duration: 0.2,
+                            onComplete: () => gsap.set(el, { display: "none" })
+                        });
+                    }
                 });
             };
 
@@ -285,16 +334,27 @@ export default function ProcessSectionDesktop() {
             ScrollTrigger.create({
                 trigger: processSectionRef.current,
                 start: "top top",
-                end: `+=${window.innerHeight * pointers.length}`,
+                end: `+=${window.innerHeight * pointers.length * 1.5}`,
                 pin: true,
-                scrub: true,
+                scrub: 2,
+
+                snap: {
+                    snapTo: 1 / (pointers.length - 1),
+                    duration: 0.8,
+                    ease: "power2.inOut"
+                },
+
+
                 onUpdate: (self) => {
                     const step = Math.min(
                         pointers.length - 1,
                         Math.floor(self.progress * pointers.length)
                     );
 
-                    setActiveStepMobile(step);
+                    if (step !== currentMobileStep) {
+                        currentMobileStep = step;
+                        setActiveStepMobile(step);
+                    }
                 }
             });
         })
