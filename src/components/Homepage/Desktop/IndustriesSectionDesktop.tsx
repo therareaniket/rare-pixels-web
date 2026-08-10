@@ -120,7 +120,7 @@ export default function IndustriesSectionDesktop() {
 
         if (!container) return;
 
-        const cards = gsap.utils.toArray(".industry-item");
+        const cards = gsap.utils.toArray<HTMLDivElement>(".industry-item");
 
         const getScrollDistance = () =>
             track.scrollWidth - container.offsetWidth;
