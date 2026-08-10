@@ -94,7 +94,7 @@
     .hm-abt-card-text h3{ color: var(--primary); margin-bottom: 6px; }
     .hm-abt-card-text{ width: 100%; }
     .hm-abt-cards-wrapper{ display: flex; flex-direction: column; gap: 20px; }
-    .hm-abt-site-logo img{ margin: 40px auto; }
+    .hm-abt-site-logo img{ width: 140px; margin: 25px auto; }
     .hm-abt-title{ margin-bottom: 14px; }
 
     .abt-mobile-bg{ width: 100%; height: max-content; background-image: url(/images/homepage/abt-section-background-grid-mobile.png); background-repeat: repeat; }
@@ -141,7 +141,7 @@
     .why-choose-us-semi-circles{ 
         width: 100%; 
         height: 316px;  
-        margin: 30px 0; 
+        margin: 10px 0; 
         overflow: hidden; 
         position: relative; 
         display: flex; 
@@ -191,7 +191,7 @@
 
     .stats-mob-art-board { width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; margin: 20px 0; }
     .stats-mob-art-board img { width: 100%; height: 100%; }
-    .stats-mob-card-5 { padding-top: 30px; }
+    /* .stats-mob-card-5 { padding-top: 30px; } */
     .stats-mob-card-2 { background-color: rgba(247, 243, 211, 0.1); padding: 14px; }
     .stats-mob-card-3 { background-color: rgba(252, 212, 233, 0.1); padding: 14px; }
     .stats-mob-card-4 { background-color: rgba(245, 248, 245, 0.1); padding: 14px; }
@@ -274,8 +274,6 @@
     .project-card-mobile { width: 100%; height: 250px; border-radius: 10px; overflow: hidden; }
     .project-card-mobile-video { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
 
-
-
     .header-mega-menu { padding-bottom: 30px; }
     .back-top-pointer { width: 16px; height: 16px; }
 
@@ -284,6 +282,27 @@
     .industries-image-wrapper { border-radius: 0 0 50px 0; }
     .industries-text-wrapper p { width: 100%; }
     .industries-text-wrapper { gap: 15px; }
+
+    .footer-add-country { gap: 10px; }
+    .footer-quote-right { width: 100%; }
+    .footer-quote-right h2 { font-size: 50px; line-height: 58px; }
+    .footer-copyright { gap: 10px; padding-top: 20px; margin-top: 20px; border-top: 1px solid #161F44; }
+    .footer-vr-line { background-color: #161F44; }
+
+    .footer-detail-wrapper { padding: 20px 0; margin: 20px 0; border-top: 1px solid #161F44; border-bottom: 1px solid #161F44; }
+
+    .footer-quote-right .text-18, .footer-social-wrapper .text-18, .footer-links .text-18 { font-size: 16px; line-height: 24px; }
+    .social-icon span { font-size: 18px; }
+
+    .footer-links { gap: 30px; flex-wrap: wrap; justify-content: flex-start; } 
+    .footer-pixel-2 { width: 100px; }
+
+    .testimonialreview-main { width: 100%; }
+
+    .video-close-btn { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
+    .video-close-btn span{ font-size: 12px; }
+
+    .navbar-wrapper { padding: 25px 0; }
 }
 
 @media (max-width: 439px) {
@@ -303,7 +322,7 @@
     .testi-clt-img-3{ width: 70px; height: 70px; right: 0px; }
     .mobile-review-rating-wrapper img{ width: 12px; height: 12px; }
 
-    .hm-abt-site-logo img{ width: 150px; }
+    .hm-abt-site-logo img{ width: 120px; }
     .testimonial-client-video{ width: 100%; height: 210px; }
 
     .hm-hero-desc-wrapper{ gap: 12px; }
@@ -347,7 +366,7 @@
     .process-vertical-line{ left: 18px; }
     .process-vertical-line-active{ left: 18px; }
     
-    .stats-mob-art-board{ height: 120px; }
+    .stats-mob-art-board{ height: 110px; }
 
     .faq-accordion{ width: 320px; }
 
@@ -358,6 +377,10 @@
     .industries-mobile-video { max-width: 400px; } 
 
     .industries-text-wrapper > span { font-size: 28px; line-height: 36px; }
+
+    .footer-quote-right h2 { font-size: 48px; line-height: 56px; }
+    .footer-address-wrapper { height: 90px; }
+    .footer-quote-right p { margin-bottom: 20px; }
 }
 
 @media (max-width: 400px) {
@@ -449,6 +472,15 @@
 
     .industries-mobile-video { max-width: 339px; } 
     .industries-mobile-card-text { width: 339px; }
+
+    .footer-quote-right h2 { font-size: 44px; line-height: 52px; }
+    .footer-vr-line { margin: 20px 0; }
+
+    .footer-quote-wrapper { gap: 30px; }
+    .footer-social-row { gap: 14px; }    
+    .footer-pixel-1 { width: 170px; } 
+
+    .minimize-btn { width: 20px; height: 20px; bottom: 10px; right: 10px; }
 }
 
 @media (max-width: 374px) {
@@ -480,6 +512,10 @@
     
     .industries-mobile-video { max-width: 320px;  } 
     .industries-mobile-card-text { width: 320px; }
+
+    .footer-quote-right .text-18, .footer-social-wrapper .text-18, .footer-links .text-18 { font-size: 14px; line-height: 22px; }
+
+    .social-icon span { font-size: 16px; }
 }
 
 @media (max-width: 359px) {

@@ -127,65 +127,45 @@ export default function IndustriesSectionDesktop() {
 
         const ctx = gsap.context(() => {
 
-            if (window.innerWidth <= 1199) {
+            const snapPoints = cards.map((el) => {
+                return (
+                    el.offsetLeft -
+                    (container.offsetWidth - el.offsetWidth) / 2
+                );
+            });
 
-                const snapPoints = cards.map((card) => {
-                    const el = card;
-                    return (
-                        el.offsetLeft -
-                        (container.offsetWidth - el.offsetWidth) / 2
-                    );
-                });
+            gsap.to(track, {
+                x: () => -getScrollDistance(),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: () => `+=${getScrollDistance() + window.innerHeight}`,
+                    pin: true,
+                    scrub: 1,
+                    anticipatePin: 1,
 
-                gsap.to(track, {
-                    x: () => -getScrollDistance(),
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top top",
-                        end: () => `+=${getScrollDistance()}`,
-                        pin: true,
-                        scrub: 1,
+                    snap: {
+                        snapTo: (progress) => {
+                            const max = getScrollDistance();
+                            const currentX = progress * max;
 
-                        snap: {
-                            snapTo: (progress) => {
-                                const max = getScrollDistance();
-                                const currentX = progress * max;
+                            const closest = snapPoints.reduce((prev, curr) =>
+                                Math.abs(curr - currentX) <
+                                    Math.abs(prev - currentX)
+                                    ? curr
+                                    : prev
+                            );
 
-                                const closest =
-                                    snapPoints.reduce((prev, curr) =>
-                                        Math.abs(curr - currentX) <
-                                            Math.abs(prev - currentX)
-                                            ? curr
-                                            : prev
-                                    );
-
-                                return closest / max;
-                            },
-                            duration: 0.3,
-                            ease: "power1.inOut",
+                            return closest / max;
                         },
-
-                        invalidateOnRefresh: true,
+                        duration: 0.4,
+                        ease: "power2.out",
                     },
-                });
 
-            } else {
-
-                gsap.to(track, {
-                    x: () => -getScrollDistance(),
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top top",
-                        end: () => `+=${getScrollDistance()}`,
-                        pin: true,
-                        scrub: 1,
-                        invalidateOnRefresh: true,
-                    },
-                });
-
-            }
+                    invalidateOnRefresh: true,
+                },
+            });
         }, section);
 
         return () => ctx.revert();

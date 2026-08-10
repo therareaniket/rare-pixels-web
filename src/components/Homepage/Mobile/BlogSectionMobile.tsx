@@ -4,6 +4,11 @@ import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
 import Image from "next/image";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export default function BlogSectionMobile() {
     return (
@@ -17,32 +22,83 @@ export default function BlogSectionMobile() {
                     </div>
 
                     <div className="hm-blog-mobile-wrapper">
-                        <div className="hm-blog-mobile-card-1">
-                            <div className="hm-blog-image-mob">
-                                <Image src="/images/homepage/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
-                            </div>
+                        <Swiper
+                            modules={[Autoplay]}
+                            spaceBetween={20}
+                            slidesPerView={1.1}
+                            loop={true}
+                            speed={1000}
+                            autoplay={{ delay: 2500 }}
+                            allowTouchMove={true}
+                            grabCursor={true}
+                            simulateTouch={true}
+                            threshold={10}
+                            resistance={true}
+                            resistanceRatio={0.85}
+                            shortSwipes={true}
+                            longSwipes={true}
+                            longSwipesRatio={0.4}
+                        >
+                            <SwiperSlide>
+                                <div className="hm-blog-mobile-card-1">
+                                    <div className="hm-blog-image-mob">
+                                        <Image src="/images/homepage/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
+                                    </div>
 
-                            <h3 className="text-sb">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
+                                    <h3 className="text-sb">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
 
-                            <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
+                                    <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
 
-                            <p className="text-rg text-16">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
-                        </div>
+                                    <p className="text-rg text-16">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
+                                </div>
+                            </SwiperSlide>
+                            {/* <div className="hm-blog-mob-hr"></div> */}
 
-                        <div className="hm-blog-mob-hr"></div>
+                            <SwiperSlide>
+                                <div className="hm-blog-mobile-card-2">
+                                    <div className="hm-blog-image-mob">
+                                        <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
+                                    </div>
 
-                        <div className="hm-blog-mobile-card-2">
-                            <div className="hm-blog-image-mob">
-                                <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
-                            </div>
+                                    <h3 className="text-sb">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
 
-                            <h3 className="text-sb">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
+                                    <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
 
-                            <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
+                                    <p className="text-rg text-16">A visually attractive interface may convince users to explore your platform once. But whether they stay, engage, and return depends entirely on experience. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
 
-                            <p className="text-rg text-16">A visually attractive interface may convince users to explore your platform once. But whether they stay, engage, and return depends entirely on experience. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
+                                </div>
+                            </SwiperSlide>
 
-                        </div>
+                            <SwiperSlide>
+                                <div className="hm-blog-mobile-card-1">
+                                    <div className="hm-blog-image-mob">
+                                        <Image src="/images/homepage/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
+                                    </div>
+
+                                    <h3 className="text-sb">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
+
+                                    <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
+
+                                    <p className="text-rg text-16">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
+                                </div>
+                            </SwiperSlide>
+                            {/* <div className="hm-blog-mob-hr"></div> */}
+
+                            <SwiperSlide>
+                                <div className="hm-blog-mobile-card-2">
+                                    <div className="hm-blog-image-mob">
+                                        <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
+                                    </div>
+
+                                    <h3 className="text-sb">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
+
+                                    <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
+
+                                    <p className="text-rg text-16">A visually attractive interface may convince users to explore your platform once. But whether they stay, engage, and return depends entirely on experience. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
+
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
 
                         <div className="hm-blog-mob-hr"></div>
 

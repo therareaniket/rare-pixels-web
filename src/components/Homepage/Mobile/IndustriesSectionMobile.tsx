@@ -80,26 +80,56 @@ export default function IndustriesSectionDesktop() {
 
         if (!section || !track) return;
 
-        const container = section.querySelector<HTMLDivElement>(
-            ".industries-scroll-container"
-        );
+        const container =
+            section.querySelector<HTMLDivElement>(
+                ".industries-scroll-container"
+            );
 
         if (!container) return;
 
-        const scrollDistance =
+        const cards = gsap.utils.toArray<HTMLDivElement>(".industry-item");
+
+        const getScrollDistance = () =>
             track.scrollWidth - container.offsetWidth;
 
         const ctx = gsap.context(() => {
+
+            const snapPoints = cards.map((el) => {
+                return (
+                    el.offsetLeft -
+                    (container.offsetWidth - el.offsetWidth) / 2
+                );
+            });
+
             gsap.to(track, {
-                x: -scrollDistance,
+                x: () => -getScrollDistance(),
                 ease: "none",
                 scrollTrigger: {
                     trigger: section,
                     start: "top top",
-                    end: () => `+=${scrollDistance}`,
+                    end: () => `+=${getScrollDistance() + window.innerHeight}`,
                     pin: true,
                     scrub: 1,
                     anticipatePin: 1,
+
+                    snap: {
+                        snapTo: (progress) => {
+                            const max = getScrollDistance();
+                            const currentX = progress * max;
+
+                            const closest = snapPoints.reduce((prev, curr) =>
+                                Math.abs(curr - currentX) <
+                                    Math.abs(prev - currentX)
+                                    ? curr
+                                    : prev
+                            );
+
+                            return closest / max;
+                        },
+                        duration: 0.4,
+                        ease: "power2.out",
+                    },
+
                     invalidateOnRefresh: true,
                 },
             });

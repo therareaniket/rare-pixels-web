@@ -2,7 +2,6 @@
 import { useTheme } from "@/context/ThemeContext";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
-import GlassEffect from "./LiquideGlass";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
@@ -97,9 +96,15 @@ export default function Header() {
                                         setIsMenuOpen((prev) => !prev);
                                     }}
                                 >
-                                    <Image className="dark-mode-icon" src="/images/light-mode-hamburger.svg" alt="dark-mode" width={30} height={30} loading="eager" />
+                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/homepage/megamenu-close.svg" : "/images/light-mode-hamburger.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={30} height={30} loading="eager" />
                                 </div>
 
+                                {/* {isMenuOpen && (
+                                    <div
+                                        className="menu-backdrop"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    />
+                                )} */}
                                 <div className="mega-menu-background-blurr">
                                     <div ref={menuRef} className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""}`} >
                                         <div className="header-pages-link-wrapper header-links-for-desktop">

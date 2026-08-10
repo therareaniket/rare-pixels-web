@@ -168,7 +168,7 @@
 
 	h1, .h1 { font-size: 52px; line-height: 60px; }
 	h2, .h2 { font-size: 42px; line-height: 50px; }
-	h3, .h3 { font-size: 34px; line-height: 42px; }
+	h3, .h3 { font-size: 34px; line-height: 44px; }
 	h4, .h4 { font-size: 30px; line-height: 48px; }
 	h5, .h5 { font-size: 26px; line-height: 34px; }
 	h6, .h6 { font-size: 20px; line-height: 28px; }
@@ -355,6 +355,8 @@
 	.social-icon span { font-size: 22px; }
 
 	.footer-detail-wrapper { padding: 25px 0; margin: 25px 0; }
+
+	.navbar-wrapper { padding: 25px 0; }
 }
 
 @media (max-width: 1439px) {
@@ -495,7 +497,7 @@
 	.nav-hamburger img { width: 22px; height: 22px; }
 
 	.website-header-logo{ width: 140px; }
-	.navbar-wrapper{ padding: 10px 0; }
+	/* .navbar-wrapper{ padding: 10px 0; } */
 
 	.mega-links ul { gap: 5px; padding-left: 55px; }
 	.menu-link a { width: 230px; }
@@ -700,6 +702,8 @@
 	.footer-vr-line { height: 155px; }
 
 	.footer-quote-right .h6 { font-size: 18px; line-height: 26px; }
+
+	.navbar-wrapper { padding: 20px 0; }
 } 
 
 @media (max-width: 1199px) {
@@ -738,12 +742,12 @@
 
 	.hm-testimonial-txt-wrapper{ flex-direction: column; gap: 30px; }
 
-	.testimonial-review-video-wrapper{ width: 450px; }
 	.testimonial-review-wrapper{ flex-direction: column; align-items: center; }
 	.testimonial-cards-wrapper{ width: 100%; }
 	.client-initital span.h6{ font-size: 22px; line-height: 30px; }
 
-	.testimonialreview-main{ height: 350px; }
+	.testimonial-review-video-wrapper { width: 100%; }
+	.testimonialreview-main{ width: 80%; height: 350px; }
 	.testimonialreview-main img{ object-fit: cover; border-radius: 20px; object-position: top; }
 	.testimonial-image-2{ width: 140px; height: 140px; left: -60px; }
 	.testimonial-image-3{ width: 120px; height: 120px; right: -60px; }
@@ -877,12 +881,10 @@
 	.hm-blog-text-wrapper{ width: 100%; }
 	.hm-blog-wrapper{ flex-direction: column; gap: 0; }
 	.hm-blog-card-right{ flex-direction: column-reverse; }
-	.blog-card-right-3, .hm-blog-card-left{ width: 100%; padding: 20px; }
-	.blog-card-right-3 { border-top: 1px solid#C6C6C6; border-bottom: 1px solid #C6C6C6; }
-
+	.blog-card-right-3, .hm-blog-card-left{ width: 100%; padding: 0; }
 	.hm-blog-image, .blog-card-3-left{ height: 350px; }
 
-	.blog-card-right-2{ width: 100%; align-items: center; text-align: center; }
+	.blog-card-right-2{ width: 100%; align-items: center; text-align: center; margin-top: 30px; }
 
 	.teams-section-wrapper{ flex-direction: column; align-items: flex-start; gap: 50px; padding-left: 0;  }
 	.teams-section-title{ width: 400px; }
@@ -941,6 +943,16 @@
 	.footer-vr-line { height: 1px; width: 100%; margin: 40px 0; }
 	.footer-contact { justify-content: flex-start; gap: 50px; }
 
+	.hm-blog-card-right-desktop, .hm-blog-card-left-desktop { display: none; } 
+	.blog-card-right-3 { border: none; padding: 0; }
+
+	.hm-blog-wrapper-swiper { display: flex; }
+	.inquiry-form-contact-fields-desktop { display: none; }
+	.inquiry-form-contact-fields-tablet { display: flex; flex-direction: column; gap: 30px; margin-top: 30px; }
+	.inquiry-name-tab input{ outline: none; border-bottom: 1px solid var(--inquiry-form-border); width: max-content; margin-bottom: 0; padding: 0 10px; text-align: start; }
+	.inquiry-name-tab h3{ margin-bottom: 12px; }
+
+	.navbar-wrapper { padding: 30px 0; }
 } 
 
 @media (max-width: 1023px) {
@@ -1007,6 +1019,8 @@
 	.footer-link-col ul li { margin-bottom: 6px; }
 	.footer-quote-wrapper { gap: 30px; }
 	.footer-vr-line { margin: 30px 0; }
+
+	.inquiry-form-contact-fields-tablet { gap: 25px; }
 }
 
 @media (max-width: 991px) {
@@ -1092,7 +1106,6 @@
 	.testimonial-image-2{ width: 110px; height: 110px; }
 	.testimonial-image-3{ width: 100px; height: 100px; }
 
-	.testimonial-review-video-wrapper{ width: 385px; }
 	.hm-abt-card{ width: 100%; height: 160px; }
 	.hm-abt-pixel{ margin-top: 11px; }
 	/* .testimonialreview-main{ padding: 10px; } */
@@ -1148,6 +1161,11 @@
 
 	.footer-quote-right { width: 90%; }
 	.footer-quote-wrapper { gap: 40px; }
+
+	.inquiry-form-contact-fields-tablet { gap: 20px; }
+
+	.footer-copyright-right ul { gap: 22px; }
+	.inquiry-form-project-field { border-top: none; margin-top: 0; }
 }
 
 @media (max-width: 767px) {
@@ -1241,6 +1259,9 @@
 	.footer-pixel-3 { width: 175px; }
 
 	.footer-pixel-1 { width: 230px; }
+
+	.inquiry-form-link {margin-top: 25px; }
+	.navbar-wrapper { padding: 25px 0; }
 }
 
 @media (max-width: 639px) {
@@ -1267,7 +1288,8 @@
 	.nav-theme-change-icon{ width: 40px; height: 40px; font-size: 24px; }
 	.dark-mode-hover-icon, .light-mode-hover-icon{ width: 24px; height: 24px; }
 
-	.industries-text-wrapper p{ width: 90%; }
+	.industries-text-wrapper p{ width: 100%; gap: 5px; }
+	.industries-text-wrapper { gap: 15px; }
 
 	.why-choose-us-eclipse-1{ width: 60px; }
 	.why-choose-us-eclipse-2{ width: 120px; }
@@ -1301,6 +1323,14 @@
 
 	.footer-quote-right h2 { font-size: 52px; line-height: 60px; }
 	.footer-copyright { flex-direction: column; align-items: center; gap: 10px; }
+
+	.navbar-wrapper { padding: 22px 0; }
+
+	.website-header-logo { width: 130px; }
+	.hm-abt-logo-left { margin-top: 0; width: 140px; }
+
+	.hm-abt-card-wrapper { margin-top: 30px; gap: 20px; }
+	.hm-services-title-wrapper h2 { width: 65%; }
 }
 
 @media (max-width: 575px) {
@@ -1452,5 +1482,8 @@
 	.footer-links { justify-content: space-between; }
 
 	.footer-address-wrapper, .footer-address {width: 100%; }
-	.footer-contact { gap: 0; justify-content: space-between; }
+	.footer-contact { flex-direction: column; gap: 20px; }
+
+	.footer-address-wrapper { height: 100px; }
+	.footer-copyright { gap: 5px; }
 }

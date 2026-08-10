@@ -57,16 +57,6 @@ export default function StatsSectionMobile() {
 
                         <div className="stats-mob-hr"></div>
 
-                        <div className="stats-mob-card-5">
-                            <h3 className="h2 text-sb text-white">Beyond The Numbers</h3>
-
-                            <p className="text-16 text-rg  text-light-grey">Every number represents our commitment to performance, precision, and delivering work that consistently meets expectations.</p>
-
-                            <p className="text-16 text-rg  text-light-grey">Every number represents our commitment to performance, precision, and delivering work that consistently meets expectations.</p>
-                        </div>
-
-                        <div className="stats-mob-hr"></div>
-
                         <div className="stats-mob-card-6 site-radius-10">
                             <h3 className="h1 text-sb text-white">7</h3>
                             <p className="text-16 text-upper-case text-light-grey">Global Markets Served</p>
@@ -89,6 +79,16 @@ export default function StatsSectionMobile() {
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+
+                        <div className="stats-mob-hr"></div>
+
+                        <div className="stats-mob-card-5">
+                            <h3 className="h2 text-sb text-white">Beyond The Numbers</h3>
+
+                            <p className="text-16 text-rg  text-light-grey">The greatest measure of our work is seeing brands grow with confidence, products perform with purpose, and clients choose to build with us again.</p>
+
+                            <p className="text-16 text-rg  text-light-grey">Behind every percentage is a business that trusted us, a challenge we solved, and a partnership that continues to grow.</p>
                         </div>
                     </div>
                 </div>
