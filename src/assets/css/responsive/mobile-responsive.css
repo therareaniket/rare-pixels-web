@@ -481,6 +481,7 @@
     .footer-pixel-1 { width: 170px; } 
 
     .minimize-btn { width: 20px; height: 20px; bottom: 10px; right: 10px; }
+    .navbar-wrapper { padding: 15px 0; }
 }
 
 @media (max-width: 374px) {
