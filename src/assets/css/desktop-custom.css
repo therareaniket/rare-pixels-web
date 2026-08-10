@@ -389,7 +389,7 @@
 .project-section-inner { position: sticky; top: 0; height: 100%; transition: 1s all ease-in; } */
 
 .hm-projects-text{ text-align: center; }
-
+.projects-section-sticky-desktop { overflow: hidden; }
 .hm-projects-horizontal-pin-viewport { width: 100%; height: max-content; }
 
 .hm-projects-card-lg, .hm-projects-card-sm { width: 650px; flex-shrink: 0; position: relative; cursor: pointer; }
@@ -664,12 +664,11 @@
 
 .footer-vr-line { width: 1px; height: 170px; background-color: #424242; margin: 0 113px; }
 
-.footer-address-usa { display: none; }
 .footer-company-detail { width: 100%; }
 .footer-contact { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px; }
 .footer-cnct { display: flex; gap: 6px; }
 
-.footer-india.active p{ color: var(--primary); }
+.footer-add-country .active p { color: var(--primary); }
 .footer-cnct:nth-child(1) { margin-bottom: 10px; }
 
 .footer-copyright { display: flex; align-items: center; justify-content: space-between; padding-top: 60px; }

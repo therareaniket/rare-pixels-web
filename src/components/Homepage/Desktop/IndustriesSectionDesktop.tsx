@@ -73,35 +73,119 @@ export default function IndustriesSectionDesktop() {
     const sectionRef = useRef<HTMLElement | null>(null);
     const trackRef = useRef<HTMLDivElement | null>(null);
 
+    // useLayoutEffect(() => {
+    //     const section = sectionRef.current;
+    //     const track = trackRef.current;
+
+    //     if (!section || !track) return;
+
+    //     const container = section.querySelector<HTMLDivElement>(
+    //         ".industries-scroll-container"
+    //     );
+
+    //     if (!container) return;
+
+    //     const scrollDistance =
+    //         track.scrollWidth - container.offsetWidth;
+
+    //     const ctx = gsap.context(() => {
+    //         gsap.to(track, {
+    //             x: -scrollDistance,
+    //             ease: "none",
+    //             scrollTrigger: {
+    //                 trigger: section,
+    //                 start: "top top",
+    //                 end: () => `+=${scrollDistance}`,
+    //                 pin: true,
+    //                 scrub: 1,
+    //                 anticipatePin: 1,
+    //                 invalidateOnRefresh: true,
+    //             },
+    //         });
+    //     }, section);
+
+    //     return () => ctx.revert();
+    // }, []);
+
     useLayoutEffect(() => {
         const section = sectionRef.current;
         const track = trackRef.current;
 
         if (!section || !track) return;
 
-        const container = section.querySelector<HTMLDivElement>(
-            ".industries-scroll-container"
-        );
+        const container =
+            section.querySelector<HTMLDivElement>(
+                ".industries-scroll-container"
+            );
 
         if (!container) return;
 
-        const scrollDistance =
+        const cards = gsap.utils.toArray(".industry-item");
+
+        const getScrollDistance = () =>
             track.scrollWidth - container.offsetWidth;
 
         const ctx = gsap.context(() => {
-            gsap.to(track, {
-                x: -scrollDistance,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: () => `+=${scrollDistance}`,
-                    pin: true,
-                    scrub: 1,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                },
-            });
+
+            if (window.innerWidth <= 1199) {
+
+                const snapPoints = cards.map((card) => {
+                    const el = card;
+                    return (
+                        el.offsetLeft -
+                        (container.offsetWidth - el.offsetWidth) / 2
+                    );
+                });
+
+                gsap.to(track, {
+                    x: () => -getScrollDistance(),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top top",
+                        end: () => `+=${getScrollDistance()}`,
+                        pin: true,
+                        scrub: 1,
+
+                        snap: {
+                            snapTo: (progress) => {
+                                const max = getScrollDistance();
+                                const currentX = progress * max;
+
+                                const closest =
+                                    snapPoints.reduce((prev, curr) =>
+                                        Math.abs(curr - currentX) <
+                                            Math.abs(prev - currentX)
+                                            ? curr
+                                            : prev
+                                    );
+
+                                return closest / max;
+                            },
+                            duration: 0.3,
+                            ease: "power1.inOut",
+                        },
+
+                        invalidateOnRefresh: true,
+                    },
+                });
+
+            } else {
+
+                gsap.to(track, {
+                    x: () => -getScrollDistance(),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top top",
+                        end: () => `+=${getScrollDistance()}`,
+                        pin: true,
+                        scrub: 1,
+                        invalidateOnRefresh: true,
+                    },
+                });
+
+            }
         }, section);
 
         return () => ctx.revert();

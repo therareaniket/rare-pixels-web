@@ -4,8 +4,12 @@ import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Footer() {
+
+    const [activeCountry, setActiveCountry] = useState("india");
+
     return (
         <>
             <section className="section section-bg-blue footer">
@@ -119,32 +123,42 @@ export default function Footer() {
                             <div className="footer-contact">
                                 <div className="footer-address-wrapper">
                                     <div className="footer-add-country">
-                                        <div className="footer-india active">
-                                            <p className="text-16 text-sb text-light-grey"> India </p>
+                                        <div
+                                            className={`footer-india ${activeCountry === "india" ? "active" : ""}`}
+                                            onClick={() => setActiveCountry("india")}
+                                        >
+                                            <p className="text-16 text-sb text-light-grey">India</p>
                                         </div>
 
-                                        <div className="footer-usa">
-                                            <p className="text-16 text-sb text-light-grey"> USA </p>
+                                        <div
+                                            className={`footer-usa ${activeCountry === "usa" ? "active" : ""}`}
+                                            onClick={() => setActiveCountry("usa")}
+                                        >
+                                            <p className="text-16 text-sb text-light-grey">USA</p>
                                         </div>
                                     </div>
 
                                     <div className="footer-address">
-                                        <div className="footer-address-india">
-                                            <p className="text-16 text-rg text-light-grey">
-                                                The Prime <br />
-                                                1109-10, Near Vakil Saheb Bridge, <br />
-                                                Ambli T Junction, Ahmedabad, <br />
-                                                Gujarat 380058.
-                                            </p>
-                                        </div>
+                                        {activeCountry === "india" && (
+                                            <div className="footer-address-india">
+                                                <p className="text-16 text-rg text-light-grey">
+                                                    The Prime <br />
+                                                    1109-10, Near Vakil Saheb Bridge, <br />
+                                                    Ambli T Junction, Ahmedabad, <br />
+                                                    Gujarat 380058.
+                                                </p>
+                                            </div>
+                                        )}
 
-                                        <div className="footer-address-usa">
-                                            <p className="text-16 text-rg text-light-grey">
-                                                2500 knights road <br />
-                                                Apt # 29 - 02 <br />
-                                                Bensalem PA 19020.
-                                            </p>
-                                        </div>
+                                        {activeCountry === "usa" && (
+                                            <div className="footer-address-usa">
+                                                <p className="text-16 text-rg text-light-grey">
+                                                    2500 knights road <br />
+                                                    Apt # 29 - 02 <br />
+                                                    Bensalem PA 19020.
+                                                </p>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
