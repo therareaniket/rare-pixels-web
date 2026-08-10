@@ -142,8 +142,8 @@ export default function Footer() {
                                         {activeCountry === "india" && (
                                             <div className="footer-address-india">
                                                 <p className="text-16 text-rg text-light-grey">
-                                                    The Prime <br />
-                                                    1109-10, Near Vakil Saheb Bridge, <br />
+                                                    1109-10, The Prime,<br /> 
+                                                    Near Vakil Saheb Bridge, <br />
                                                     Ambli T Junction, Ahmedabad, <br />
                                                     Gujarat 380058.
                                                 </p>
