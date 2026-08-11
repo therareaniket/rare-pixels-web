@@ -208,15 +208,6 @@ export default function StatsSectionDesktop() {
                         </div>
 
                         <div className="stats-section-card-row">
-                            <div className="stats-tablet-card stats-tablet-text stats-tablet-card-5">
-                                <p className="text-18 text-rg text-light-grey">
-                                    <span>The greatest measure of our work is seeing brands grow with confidence, products perform with purpose, and clients choose to build with us again.
-                                    </span>
-                                    <span>Behind every percentage is a business that trusted us, a challenge we solved, and a partnership that continues to grow.
-                                    </span>
-                                </p>
-                            </div>
-
                             <div className="stats-tablet-card stats-tablet-card-6">
                                 <h3 className="h1 text-sb text-white">95%</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Projects Delivered With Precision</p>
@@ -244,6 +235,16 @@ export default function StatsSectionDesktop() {
                                     Creating impact across markets.
                                 </p>
                             </div>
+                        </div>
+
+                        <div className="stats-tablet-card stats-tablet-text stats-tablet-card-5">
+                            <h3 className="h2 text-sb text-white">Beyond The Numbers</h3>
+                            <p className="text-18 text-rg text-light-grey">
+                                <span>The greatest measure of our work is seeing brands grow with confidence, products perform with purpose, and clients choose to build with us again.
+                                </span>
+                                <span>Behind every percentage is a business that trusted us, a challenge we solved, and a partnership that continues to grow.
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </div>

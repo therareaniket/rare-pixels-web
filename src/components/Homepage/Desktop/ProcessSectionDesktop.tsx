@@ -133,6 +133,19 @@ export default function ProcessSectionDesktop() {
                 }
             });
 
+            gsap.to(pointers, {
+                x: 0,
+                stagger: 0.05,
+                ease: "none",
+                duration: 1,
+                scrollTrigger: {
+                    trigger: processSectionRef.current,
+                    start: "top top",
+                    end: "+=1000",
+                    scrub: true,
+                }
+            });
+
             gsap.set(pointers, { opacity: 0.5 });
 
             gsap.set(elements, {
@@ -188,13 +201,6 @@ export default function ProcessSectionDesktop() {
                     duration: 0.9,
                     ease: "power2.inOut",
                     marginTop: "0"
-                }, 0)
-
-                .to(pointers, {
-                    translateX: 0,
-                    stagger: 0.02,
-                    duration: 1,
-                    ease: "power2.inOut"
                 }, 0)
 
                 .to(elementsRef.current, {
@@ -329,7 +335,6 @@ export default function ProcessSectionDesktop() {
             };
 
             setActiveStepMobile(0);
-
 
             ScrollTrigger.create({
                 trigger: processSectionRef.current,

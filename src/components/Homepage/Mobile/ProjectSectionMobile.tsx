@@ -10,68 +10,24 @@ import "@/assets/css/responsive/mobile-responsive.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectSectionMobile() {
-
-    const projectMobileSectionRef = useRef<HTMLDivElement>(null);
-    const cardsRef = useRef<HTMLDivElement[]>([]);
-
-    const addToRefs = (el: HTMLDivElement | null) => {
-        if (el && !cardsRef.current.includes(el)) {
-            cardsRef.current.push(el);
-        }
-    };
+    const section = useRef<HTMLDivElement | null>(null);
 
     useLayoutEffect(() => {
-        const section = projectMobileSectionRef.current;
-        if (!section) return;
+        if (!section.current) return;
 
-        const ctx = gsap.context(() => {
-            const cards = cardsRef.current;
+        const trigger = ScrollTrigger.create({
+            trigger: section.current,
+            start: "top top",
+            end: "+=1000",
+            pin: true,
+            scrub: true,
+        });
 
-            if (!cards.length) return;
-
-            const peek = 60;
-            const gap = 0;
-
-            const cardHeight = cards[0].offsetHeight;
-            const step = cardHeight + gap - peek;
-
-            cards.forEach((card, index) => {
-                gsap.set(card, {
-                    position: "relative",
-                    zIndex: cards.length + index,
-                });
-            });
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: 'project-mobile-section',
-                    start: "top top",
-                    end: () => `+=${step * (cards.length - 1)}`,
-                    // pin: true,
-                    // pinSpacing: true,
-                    // anticipatePin: 1,
-                    scrub: true,
-                    invalidateOnRefresh: true,
-                }
-            });
-
-            for (let activeIndex = 1; activeIndex < cards.length; activeIndex++) {
-                tl.to(
-                    cards.slice(activeIndex),
-                    {
-                        y: `-=${step}px`,
-                        ease: "none",
-                        duration: 1,
-                    }
-                );
-            }
-        }, section);
-
-        return () => ctx.revert();
+        return () => trigger.kill();
     }, []);
 
     return (
-        <section ref={projectMobileSectionRef} className="section project-mobile-section project-section-sticky">
+        <section ref={section} className="section project-mobile-section project-section-sticky">
             <div className="project-section-inner">
                 <div className="container">
                     <div className="projects-title-wrapper">
@@ -85,23 +41,23 @@ export default function ProjectSectionMobile() {
                     </div>
 
                     <div className="projects-wrapper">
-                        <div ref={addToRefs} className="project-card-mobile project-card-mobile-1">
+                        <div className="project-card-mobile project-card-mobile-1">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/djk-project.mp4" width={523} height={423} autoPlay loop muted></video>
                         </div>
 
-                        <div ref={addToRefs} className="project-card-mobile project-card-mobile-2">
+                        <div className="project-card-mobile project-card-mobile-2">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
                         </div>
 
-                        <div ref={addToRefs} className="project-card-mobile project-card-mobile-3">
+                        <div className="project-card-mobile project-card-mobile-3">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/cameriz-project.mp4" width={523} height={423} autoPlay loop muted></video>
                         </div>
 
-                        <div ref={addToRefs} className="project-card-mobile project-card-mobile-4">
+                        <div className="project-card-mobile project-card-mobile-4">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/ra-project.mp4" width={523} height={423} autoPlay loop muted></video>
                         </div>
 
-                        <div ref={addToRefs} className="project-card-mobile project-card-mobile-5">
+                        <div className="project-card-mobile project-card-mobile-5">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/steamovap-project.mp4" width={523} height={423} autoPlay loop muted></video>
                         </div>
                     </div>

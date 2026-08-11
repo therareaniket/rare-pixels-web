@@ -13,8 +13,6 @@ export default function ProjectsSectionDesktop() {
     const projectSectionRef = useRef<HTMLDivElement>(null);
     const cardsRef = useRef<HTMLDivElement[]>([]);
 
-
-
     const addToRefs = (el: HTMLDivElement | null) => {
         if (el && !cardsRef.current.includes(el)) {
             cardsRef.current.push(el);
@@ -105,6 +103,45 @@ export default function ProjectsSectionDesktop() {
                         duration: 1,
                     });
                 }
+
+                cards.forEach((card) => {
+                    const overlay = card.querySelector(".project-card-glass-overlay");
+
+                    gsap.set(overlay, {
+                        opacity: 0
+                    });
+                });
+
+                for (let activeIndex = 1; activeIndex < cards.length; activeIndex++) {
+
+                    const previousCard = cards[activeIndex - 1];
+                    const previousOverlay = previousCard.querySelector(
+                        ".project-card-glass-overlay"
+                    );
+
+                    tl.to(previousOverlay, {
+                        opacity: 1,
+                        duration: 0.2
+                    }, activeIndex - 1);
+
+                    tl.to(cards.slice(activeIndex), {
+                        x: `-=${step}`,
+                        ease: "none",
+                        duration: 1
+                    }, activeIndex - 1);
+                }
+
+                // cards.forEach((card) => {
+                //     ScrollTrigger.create({
+                //         trigger: card,
+                //         start: "top center",
+                //         end: "bottom center",
+                //         onEnter: () => card.classList.add("active-card"),
+                //         onLeave: () => card.classList.remove("active-card"),
+                //         onEnterBack: () => card.classList.add("active-card"),
+                //         onLeaveBack: () => card.classList.remove("active-card"),
+                //     });
+                // });
             });
 
             mm.add("(max-width: 1199px)", () => {
@@ -153,12 +190,44 @@ export default function ProjectsSectionDesktop() {
                     },
                 });
 
+                // for (let activeIndex = 1; activeIndex < cards.length; activeIndex++) {
+                //     tl.to(cards.slice(activeIndex), {
+                //         y: `-=${step}`,
+                //         ease: "none",
+                //         duration: 1,
+                //     });
+                // }
+
+                cards.forEach((card) => {
+                    const overlay = card.querySelector(".hm-project-desc");
+
+                    gsap.set(overlay, {
+                        opacity: 0,
+                    });
+                });
+
                 for (let activeIndex = 1; activeIndex < cards.length; activeIndex++) {
-                    tl.to(cards.slice(activeIndex), {
-                        y: `-=${step}`,
+
+                    const previousCard = cards[activeIndex - 1];
+                    const previousOverlay = previousCard.querySelector(
+                        ".hm-project-desc"
+                    );
+
+                    tl.to(previousOverlay, {
+                        opacity: 1,
                         ease: "none",
                         duration: 1,
                     });
+
+                    tl.to(
+                        cards.slice(activeIndex),
+                        {
+                            y: `-=${step}`,
+                            ease: "none",
+                            duration: 1,
+                        },
+                        "<"
+                    );
                 }
             });
 
@@ -181,6 +250,8 @@ export default function ProjectsSectionDesktop() {
                         <div className="hm-projects-horizontal-pin-viewport">
                             <div className="hm-projects-card-wrapper">
                                 <div ref={addToRefs} className="hm-projects-card-lg hm-projects-images-lg hm-projects-card-1 site-radius-20">
+                                    <div className="project-card-glass-overlay"></div>
+
                                     <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/djk-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
@@ -189,6 +260,8 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div ref={addToRefs} className="hm-projects-card-sm hm-projects-images-sm hm-projects-card-2 site-radius-20">
+                                    <div className="project-card-glass-overlay"></div>
+
                                     <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
@@ -197,6 +270,8 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div ref={addToRefs} className="hm-projects-card-lg hm-projects-images-lg hm-projects-card-3 site-radius-20">
+                                    <div className="project-card-glass-overlay"></div>
+
                                     <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/cameriz-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
@@ -205,6 +280,8 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div ref={addToRefs} className="hm-projects-card-sm hm-projects-images-sm hm-projects-card-4 site-radius-20">
+                                    <div className="project-card-glass-overlay"></div>
+
                                     <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/ra-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
@@ -213,6 +290,8 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div ref={addToRefs} className="hm-projects-card-lg hm-projects-images-lg site-radius-20 hm-projects-card-5">
+                                    <div className="project-card-glass-overlay"></div>
+
                                     <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/steamovap-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
@@ -221,8 +300,9 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div ref={addToRefs} className="hm-projects-card-sm hm-projects-images-sm hm-projects-card-6 site-radius-20">
-                                    <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
+                                    <div className="project-card-glass-overlay"></div>
 
+                                    <video className="site-radius-20 desktop-projects-videos" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
                                     <div className="hm-project-desc">
                                         <h3 className="h1 text-sb">A.U.T.O.B.O.T</h3>

@@ -216,16 +216,6 @@ export default function BlogSectionDesktop() {
                         </div>
 
                         <div className="hm-blog-card-right">
-                            <div className="blog-card-right-2 section-bg-blue site-radius-20">
-                                <div className="blog-card-2-text">
-                                    <h3 className="text-sb text-white">Ideas to Insights</h3>
-
-                                    <p className="text-18 text-rg text-light-grey">Thoughtful perspectives on design, development, branding, and digital strategy. Practical ideas shaped by real projects, real challenges, and real business outcomes.</p>
-                                </div>
-
-                                <Link href="#" title="View All Categories" className="hm-blog-link text-20 text-md text-white site-radius-30">View All Categories <span className="icon-hero-cta-arrow cta-arrow"></span></Link>
-                            </div>
-
                             <div className="blog-card-right-3 hm-blog-card-right-desktop">
                                 <div className="blog-card-3-left site-radius-20">
                                     <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={350} height={426}></Image>
@@ -260,6 +250,16 @@ export default function BlogSectionDesktop() {
                                         <p className="text-18 text-rg">A visually attractive interface may convince users to explore your platform once. But whether they stay, engage, and return depends entirely on experience. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div className="blog-card-right-2 section-bg-blue site-radius-20">
+                                <div className="blog-card-2-text">
+                                    <h3 className="text-sb text-white">Ideas to Insights</h3>
+
+                                    <p className="text-18 text-rg text-light-grey">Thoughtful perspectives on design, development, branding, and digital strategy. Practical ideas shaped by real projects, real challenges, and real business outcomes.</p>
+                                </div>
+
+                                <Link href="#" title="View All Categories" className="hm-blog-link text-20 text-md text-white site-radius-30">View All Categories <span className="icon-hero-cta-arrow cta-arrow"></span></Link>
                             </div>
                         </div>
                     </div>

@@ -141,8 +141,8 @@ export default function IndustriesSectionDesktop() {
                     start: "top top",
                     end: () => `+=${getScrollDistance() + window.innerHeight}`,
                     pin: true,
-                    scrub: 1,
-                    anticipatePin:1,
+                    scrub: 0.2,
+                    anticipatePin: 1,
                     invalidateOnRefresh: true,
                     snap: {
                         snapTo: (progress) => {
@@ -152,14 +152,16 @@ export default function IndustriesSectionDesktop() {
                             const snapPoints = getSnapPoints();
 
                             const closest = snapPoints.reduce((prev, curr) =>
-                                Math.abs(curr - currentX) <
-                                    Math.abs(prev - currentX)
+                                Math.abs(curr - currentX) < Math.abs(prev - currentX)
                                     ? curr
                                     : prev
                             );
 
                             return closest / max;
                         },
+                        duration: 0.6,
+                        ease: "power3.out",
+                        delay: 0.05,
                     },
                 },
             });
@@ -169,48 +171,48 @@ export default function IndustriesSectionDesktop() {
     }, []);
 
     return (
-    <>
-        <section ref={sectionRef} className="industries-section-sticky section industries-section">
-            <div className="industirs-section-inner">
-                <div className="container">
-                    <div className="industries-text-title">
-                        <h2 className="text-sb">Industries We Serve</h2>
-                        <p className="text-rg text-18 text-grey">
-                            <span>Every industry is different.</span>
-                            <span>But the need to earn trust, create memorable experiences, and stay relevant isn&apos;t.</span>
-                        </p>
-                    </div>
+        <>
+            <section ref={sectionRef} className="industries-section-sticky section industries-section">
+                <div className="industirs-section-inner">
+                    <div className="container">
+                        <div className="industries-text-title">
+                            <h2 className="text-sb">Industries We Serve</h2>
+                            <p className="text-rg text-18 text-grey">
+                                <span>Every industry is different.</span>
+                                <span>But the need to earn trust, create memorable experiences, and stay relevant isn&apos;t.</span>
+                            </p>
+                        </div>
 
-                    <div className="industries-scroll-container">
-                        <div ref={trackRef} className="industries-card-wrapper">
-                            {industries.map((industry, index) => (
-                                <div className="industry-item" key={index}>
-                                    <div className="industries-image-wrapper">
-                                        <video className="industries-video prev-video" autoPlay playsInline muted loop preload="auto" webkit-playsinline="true" src={industry.video} width={1000} height={600} />
+                        <div className="industries-scroll-container">
+                            <div ref={trackRef} className="industries-card-wrapper">
+                                {industries.map((industry, index) => (
+                                    <div className="industry-item" key={index}>
+                                        <div className="industries-image-wrapper">
+                                            <video className="industries-video prev-video" autoPlay playsInline muted loop preload="auto" webkit-playsinline="true" src={industry.video} width={1000} height={600} />
 
-                                        <Image className="industries-desktop-pixel-1" src="images/homepage/industries/industries-pixel-desktop-1.svg" alt="desktop pixel" width={170} height={150}></Image>
-                                        <Image className="industries-desktop-pixel-2" src="images/homepage/industries/industries-pixel-desktop-2.svg" alt="desktop pixel" width={132} height={100}></Image>
-                                        <Image className="industries-desktop-pixel-3" src="images/homepage/industries/industries-pixel-desktop-3.svg" alt="desktop pixel" width={50} height={50}></Image>
+                                            <Image className="industries-desktop-pixel-1" src="images/homepage/industries/industries-pixel-desktop-1.svg" alt="desktop pixel" width={170} height={150}></Image>
+                                            <Image className="industries-desktop-pixel-2" src="images/homepage/industries/industries-pixel-desktop-2.svg" alt="desktop pixel" width={132} height={100}></Image>
+                                            <Image className="industries-desktop-pixel-3" src="images/homepage/industries/industries-pixel-desktop-3.svg" alt="desktop pixel" width={50} height={50}></Image>
+                                        </div>
+
+                                        <div className="industries-text-wrapper industry-content" >
+                                            <span className="text-sb industries-title-name">
+                                                {industry.title}
+                                            </span>
+
+                                            <p className="text-18 text-grey industry-detailtext">
+                                                <span className="text-sb">{industry.desc3}</span>
+                                                <span className="text-rg"> {industry.desc1} </span>
+                                                <span className="text-rg"> {industry.desc2} </span>
+                                            </p>
+                                        </div>
                                     </div>
-
-                                    <div className="industries-text-wrapper industry-content" >
-                                        <span className="text-sb industries-title-name">
-                                            {industry.title}
-                                        </span>
-
-                                        <p className="text-18 text-grey industry-detailtext">
-                                            <span className="text-sb">{industry.desc3}</span>
-                                            <span className="text-rg"> {industry.desc1} </span>
-                                            <span className="text-rg"> {industry.desc2} </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </>
-);
+            </section>
+        </>
+    );
 }
