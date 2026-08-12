@@ -13,12 +13,21 @@ export default function ProjectSectionMobile() {
     const section = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
-        const cards = gsap.utils.toArray<HTMLElement>(
-            ".project-card-mobile"
-        );
+        const cards = gsap.utils.toArray<HTMLElement>(".project-card-mobile");
+        const wrapper = section.current?.querySelector(".projects-wrapper") as HTMLElement;
 
-        gsap.set(cards, {
-            transformOrigin: "top center"
+        const cardHeight = 250;
+        const gap = 20;
+
+        cards.forEach((card, index) => {
+            gsap.set(card, {
+                top: index * (cardHeight + gap),
+                zIndex: cards.length + index
+            });
+        });
+
+        gsap.set(wrapper, {
+            height: "--wrapper-height",
         });
 
         const tl = gsap.timeline({
@@ -38,7 +47,7 @@ export default function ProjectSectionMobile() {
             tl.to(
                 cards.slice(index),
                 {
-                    y: `-=${125}`,
+                    top: `-=${200}`,
                     duration: 1,
                     ease: "none",
                 },
@@ -46,7 +55,7 @@ export default function ProjectSectionMobile() {
             );
         });
 
-        const step = 125;
+        const step = 200;
 
         cards.forEach((card, index) => {
             if (index === 0) return;
@@ -58,7 +67,7 @@ export default function ProjectSectionMobile() {
             tl.to(
                 cards.slice(index),
                 {
-                    y: `-=${step}`,
+                    top: `-=${step}`,
                     duration: 1,
                     ease: "none",
                 },
@@ -132,6 +141,22 @@ export default function ProjectSectionMobile() {
 
                             <div className="project-mobile-desc">
                                 <h3 className="text-sb h1">STEAMOVAP</h3>
+                            </div>
+                        </div>
+
+                        <div className="project-card-mobile project-card-mobile-4">
+                            <video className="project-card-mobile-video" src="/images/homepage/projects/ra-project.mp4" width={523} height={423} autoPlay loop muted></video>
+
+                            <div className="project-mobile-desc">
+                                <h3 className="text-sb h1">RA</h3>
+                            </div>
+                        </div>
+
+                        <div className="project-card-mobile project-card-mobile-2">
+                            <video className="project-card-mobile-video" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
+
+                            <div className="project-mobile-desc">
+                                <h3 className="text-sb h1">A.U.T.O.B.O.T</h3>
                             </div>
                         </div>
                     </div>

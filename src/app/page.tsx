@@ -80,7 +80,7 @@ export default function Home() {
 						<ProcessSectionDesktop />
 						<ProjectsSectionDesktop />
 						<StatsSectionDesktop/>
-						{/* <TeamsSectionDesktop/> */}
+						<TeamsSectionDesktop/>
 						<BlogSectionDesktop />
 						<FaqSectionDesktop />
 						<InquirySectionDesktop />

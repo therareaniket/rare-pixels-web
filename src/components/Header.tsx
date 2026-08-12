@@ -33,22 +33,27 @@ export default function Header() {
         };
     }, []);
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
-                menuContainerRef.current &&
-                !menuContainerRef.current.contains(event.target as Node)
-            ) {
-                setIsMenuOpen(false);
-            }
-        };
+useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+        const target = event.target as Node;
 
-        document.addEventListener("mousedown", handleClickOutside);
+        const clickedHamburger =
+            menuContainerRef.current?.contains(target);
 
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
+        const clickedMegaMenu =
+            menuRef.current?.contains(target);
+
+        if (!clickedHamburger && !clickedMegaMenu) {
+            setIsMenuOpen(false);
+        }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+    };
+}, []);
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -61,6 +66,7 @@ export default function Header() {
             document.body.style.overflow = "auto";
         };
     }, [isMenuOpen]);
+
 
     return (
         <>
