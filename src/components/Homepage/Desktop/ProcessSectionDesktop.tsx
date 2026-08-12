@@ -110,11 +110,12 @@ export default function ProcessSectionDesktop() {
                     pin: true,
                     scrub: 1.2,
                     invalidateOnRefresh: true,
+                    markers: true,
 
                     snap: {
                         snapTo: 1 / (pointers.length + 1),
                         duration: 0.6,
-                        ease: "power2.out"
+                        ease: "power2.out",
                     },
 
                     onUpdate: (self) => {
@@ -134,15 +135,16 @@ export default function ProcessSectionDesktop() {
             });
 
             gsap.to(pointers, {
-                x: 0,
+                x: 0,   
                 stagger: 0.05,
                 ease: "none",
                 duration: 1,
+                markers: true,
                 scrollTrigger: {
                     trigger: processSectionRef.current,
                     start: "top top",
                     end: "+=1000",
-                    scrub: true,
+                    scrub: 1.5,
                 }
             });
 

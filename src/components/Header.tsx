@@ -22,7 +22,7 @@ export default function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsSquished(window.scrollY > 500);
+            setIsSquished(window.scrollY > 1);
         };
 
         handleScroll();
@@ -69,7 +69,11 @@ export default function Header() {
                     <nav className="nav">
                         <div className={`navbar-wrapper ${isSquished ? "header-squished" : "header-expanded"}`}>
                             <div className="website-header-logo">
-                                {theme === "light" ? <Image className="dark-mode-icon" src="/images/rp-logo-black.png" alt="dark-mode" width={174} height={28} loading="eager" /> : <Image className="light-mode-icon" src="/images/rp-logo-white.png" alt="dark-mode" width={174} height={28} loading="lazy" />}
+                                <Image className="dark-mode-icon" src="/images/rp-logo-black.png" alt="dark-mode" width={174} height={28} loading="eager" />
+
+                                {/* <div className="website-logo">
+                                    <Image src="/images/website-logo-r.svg" alt="website-logo" width={19} height={25} loading="eager"></Image>
+                                </div> */}
                             </div>
 
                             <div ref={menuContainerRef} className="nav-icon-wrapper">

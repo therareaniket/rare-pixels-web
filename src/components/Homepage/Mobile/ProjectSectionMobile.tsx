@@ -10,20 +10,74 @@ import "@/assets/css/responsive/mobile-responsive.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectSectionMobile() {
-    const section = useRef<HTMLDivElement | null>(null);
+    const section = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
-        if (!section.current) return;
+        const cards = gsap.utils.toArray<HTMLElement>(
+            ".project-card-mobile"
+        );
 
-        const trigger = ScrollTrigger.create({
-            trigger: section.current,
-            start: "top top",
-            end: "+=1000",
-            pin: true,
-            scrub: true,
+        gsap.set(cards, {
+            transformOrigin: "top center"
         });
 
-        return () => trigger.kill();
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section.current,
+                start: "top top",
+                end: "+=2500",
+                pin: true,
+                scrub: 1,
+                // pinSpacing: false,
+            }
+        });
+
+        cards.forEach((card, index) => {
+            if (index === 0) return;
+
+            tl.to(
+                cards.slice(index),
+                {
+                    y: `-=${125}`,
+                    duration: 1,
+                    ease: "none",
+                },
+                index - 1
+            );
+        });
+
+        const step = 125;
+
+        cards.forEach((card, index) => {
+            if (index === 0) return;
+
+            const previousCard = cards[index - 1];
+            const previousOverlay =
+                previousCard.querySelector(".project-mobile-desc");
+
+            tl.to(
+                cards.slice(index),
+                {
+                    y: `-=${step}`,
+                    duration: 1,
+                    ease: "none",
+                },
+                index - 1
+            );
+
+            if (previousOverlay) {
+                tl.to(
+                    previousOverlay,
+                    {
+                        opacity: 1,
+                        duration: 0.3,
+                    },
+                    index - 1
+                );
+            }
+        });
+
+        return () => ScrollTrigger.getAll().forEach(st => st.kill());
     }, []);
 
     return (
@@ -43,22 +97,42 @@ export default function ProjectSectionMobile() {
                     <div className="projects-wrapper">
                         <div className="project-card-mobile project-card-mobile-1">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/djk-project.mp4" width={523} height={423} autoPlay loop muted></video>
+
+                            <div className="project-mobile-desc">
+                                <h3 className="text-sb h1">DJK</h3>
+                            </div>
                         </div>
 
                         <div className="project-card-mobile project-card-mobile-2">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
+
+                            <div className="project-mobile-desc">
+                                <h3 className="text-sb h1">A.U.T.O.B.O.T</h3>
+                            </div>
                         </div>
 
                         <div className="project-card-mobile project-card-mobile-3">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/cameriz-project.mp4" width={523} height={423} autoPlay loop muted></video>
+
+                            <div className="project-mobile-desc">
+                                <h3 className="text-sb h1">CAMERIZ</h3>
+                            </div>
                         </div>
 
                         <div className="project-card-mobile project-card-mobile-4">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/ra-project.mp4" width={523} height={423} autoPlay loop muted></video>
+
+                            <div className="project-mobile-desc">
+                                <h3 className="text-sb h1">RA</h3>
+                            </div>
                         </div>
 
                         <div className="project-card-mobile project-card-mobile-5">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/steamovap-project.mp4" width={523} height={423} autoPlay loop muted></video>
+
+                            <div className="project-mobile-desc">
+                                <h3 className="text-sb h1">STEAMOVAP</h3>
+                            </div>
                         </div>
                     </div>
                 </div>

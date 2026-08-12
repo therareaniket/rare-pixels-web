@@ -268,16 +268,18 @@
     .project-section-sticky { position: relative; }
     .project-section-desktop-inner { position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; }
     .projects-title-wrapper { text-align: center; } 
-    .project-card-mobile-1 { position: sticky; top: 0; z-index: 1; } 
+    /* .project-card-mobile-1 { position: sticky; top: 0; z-index: 1; } 
     .project-card-mobile-2 { position: sticky; top: 100px; z-index: 2; } 
     .project-card-mobile-3 { position: sticky; top: 200px; z-index: 3; } 
     .project-card-mobile-4 { position: sticky; top: 300px; z-index: 4; } 
-    .project-card-mobile-5 { position: sticky; top: 400px; z-index: 5; } 
+    .project-card-mobile-5 { position: sticky; top: 400px; z-index: 5; }  */
 
-    .projects-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+    .projects-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; overflow: hidden; }
 
-    .project-card-mobile { width: 100%; height: 250px; border-radius: 10px; overflow: hidden; }
+    .project-card-mobile { position: relative; width: 100%; height: 250px; border-radius: 10px; overflow: hidden; }
     .project-card-mobile-video { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+    .project-mobile-desc { width: 100%; height: 100%; background-color: rgba(237, 1, 128, 0.4); backdrop-filter: blur(30px); color: white; position: absolute; top: 0; left: 0; text-align: center; padding-top: 10px; opacity: 0; }
+
 
     .header-mega-menu { padding-bottom: 30px; }
     .back-top-pointer { width: 16px; height: 16px; }
@@ -308,8 +310,10 @@
     .video-close-btn span{ font-size: 12px; }
 
     .navbar-wrapper { padding: 20px 0; }
-    .header-squished { padding: 8px 10px; width: 250px; }
-    .header-squished .website-header-logo, .header-squished .nav-hamburger { scale: .8; }
+    .header-squished { padding: 8px 10px; width: 130px; }
+    .header-squished .website-header-logo, .header-squished .nav-hamburger { scale: 1; }
+    .website-logo { width: 14px; height: auto; }
+
 }
 
 @media (max-width: 439px) {
