@@ -123,7 +123,7 @@ export default function IndustriesSectionDesktop() {
                     start: "top top",
                     end: () => `+=${getScrollDistance() + window.innerHeight}`,
                     pin: true,
-                    scrub: 2,
+                    scrub: 1,
                     anticipatePin: 1,
                     invalidateOnRefresh: true,
 

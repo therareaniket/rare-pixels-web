@@ -100,7 +100,7 @@ export default function IndustriesSectionDesktop() {
                     container.offsetWidth / 2
                 ));
 
-            gsap.to(track, {
+            const horizontalTween = gsap.to(track, {
                 x: () => -getScrollDistance(),
                 ease: "none",
                 scrollTrigger: {
@@ -109,27 +109,40 @@ export default function IndustriesSectionDesktop() {
                     end: () => `+=${getScrollDistance() + window.innerHeight}`,
                     pin: true,
                     scrub: 1,
-                    anticipatePin:1,
+                    anticipatePin: 1,
                     invalidateOnRefresh: true,
+
+                    onUpdate: () => {
+                        gsap.to(section, {
+                            duration: 0.5,
+                            overwrite: true,
+                        });
+                    },
+
                     snap: {
-                        snapTo: (progress) => {
+                        snapTo: (progress: number) => {
+                            const points = getSnapPoints();
                             const max = getScrollDistance();
+
                             const currentX = progress * max;
 
-                            const snapPoints = getSnapPoints();
+                            let index = points.findIndex(point => point > currentX);
 
-                            const closest = snapPoints.reduce((prev, curr) =>
-                                Math.abs(curr - currentX) <
-                                    Math.abs(prev - currentX)
-                                    ? curr
-                                    : prev
-                            );
+                            if (index === -1) index = points.length - 1;
 
-                            return closest / max;
+                            const direction =
+                                horizontalTween.scrollTrigger?.direction ?? 1;
+
+                            return direction > 0
+                                ? points[index] / max
+                                : points[Math.max(0, index - 1)] / max;
                         },
+                        duration: 0.6,
+                        ease: "power3.out",
                     },
                 },
             });
+
         }, section);
 
         return () => ctx.revert();
