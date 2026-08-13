@@ -16,8 +16,8 @@ const industries = [
         desc1: "The best software makes sense at a glance and feels natural from the start.",
         desc2: "We design intuitive SaaS platforms that improve adoption, reduce friction, and keep users coming back.",
         desc3: "Complex products deserve experiences that feel simple.",
-        bgColor: "#ffffff",
-        textColor: "#111111"
+        // bgColor: "#ffffff",
+        // textColor: "#111111"
     },
     {
         video: "/images/homepage/industries/finance.mp4",
@@ -25,8 +25,8 @@ const industries = [
         desc1: "Financial decisions begin with credibility, long before transactions happen.",
         desc2: "We create secure, intuitive digital experiences that inspire confidence and simplify complex financial journeys.",
         desc3: "Trust isn't optional when every click involves confidence.",
-        bgColor: "#111111",
-        textColor: "#ffffff"
+        // bgColor: "#111111",
+        // textColor: "#ffffff"
     },
     {
         video: "/images/homepage/industries/healthcare.mp4",
@@ -34,8 +34,8 @@ const industries = [
         desc1: "Healthcare experiences should reduce uncertainty, not create it.",
         desc2: "We design patient-first platforms that make information accessible, interactions seamless, and care easier to navigate.",
         desc3: "When people need clarity most, every interaction matters.",
-        bgColor: "#ffffff",
-        textColor: "#111111"
+        // bgColor: "#ffffff",
+        // textColor: "#111111"
     },
     {
         video: "/images/homepage/industries/e-commerce.mp4",
@@ -43,8 +43,8 @@ const industries = [
         desc1: "Every unnecessary click is a missed opportunity.",
         desc2: "We build shopping experiences that remove friction, increase confidence, and turn visitors into loyal customers.",
         desc3: "The shortest path from browsing to buying wins.",
-        bgColor: "#111111",
-        textColor: "#ffffff"
+        // bgColor: "#111111",
+        // textColor: "#ffffff"
     },
     {
         video: "/images/homepage/industries/real-estate.mp4",
@@ -52,8 +52,8 @@ const industries = [
         desc1: "People invest in confidence before they invest in property.",
         desc2: "We craft digital experiences that showcase value, build trust, and encourage meaningful enquiries.",
         desc3: "Properties attract attention. Experiences create decisions.",
-        bgColor: "#ffffff",
-        textColor: "#111111"
+        // bgColor: "#ffffff",
+        // textColor: "#111111"
     },
     {
         video: "/images/homepage/industries/education-industry.mp4",
@@ -61,8 +61,8 @@ const industries = [
         desc1: "Great learning platforms feel effortless for every learner.",
         desc2: "We design engaging educational experiences that improve accessibility, participation, and long-term engagement.",
         desc3: "Learning works best when technology stays out of the way.",
-        bgColor: "#111111",
-        textColor: "#ffffff"
+        // bgColor: "#111111",
+        // textColor: "#ffffff"
     },
     {
         video: "/images/homepage/industries/ai-industry.mp4",
@@ -70,8 +70,8 @@ const industries = [
         desc1: "Innovation succeeds when people know how to use it.",
         desc2: "We simplify advanced technologies through intuitive interfaces that make innovation feel approachable.",
         desc3: "The future moves fast. Great experiences help people keep up.",
-        bgColor: "#ffffff",
-        textColor: "#111111"
+        // bgColor: "#ffffff",
+        // textColor: "#111111"
     },
     {
         video: "/images/homepage/industries/food-industry.mp4",
@@ -79,8 +79,8 @@ const industries = [
         desc1: "People remember experiences before they remember products.",
         desc2: "We create brands and digital experiences that spark curiosity, build loyalty, and keep customers coming back.",
         desc3: "Great brands satisfy long before the first purchase.",
-        bgColor: "#111111",
-        textColor: "#ffffff"
+        // bgColor: "#111111",
+        // textColor: "#ffffff"
     }
 ];
 
@@ -134,7 +134,7 @@ export default function IndustriesSectionDesktop() {
                         );
 
                         gsap.to(section, {
-                            backgroundColor: industries[activeIndex].bgColor,
+                            // backgroundColor: industries[activeIndex].bgColor,
                             duration: 0.5,
                             overwrite: true,
                         });

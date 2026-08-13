@@ -22,228 +22,176 @@ export default function ProcessSectionDesktop() {
     const centerTitleRef = useRef<HTMLDivElement | null>(null);
     const leftTitleRef = useRef<HTMLDivElement | null>(null);
 
-    let currentStep = -1;
     const mm = gsap.matchMedia();
 
     useGSAP(() => {
+
         mm.add("(min-width: 1200px)", () => {
             if (
                 !processSectionRef.current ||
                 !containerRef.current ||
-                !titleWrapperRef.current ||
-                !elementsRef.current ||
-                !pointerWrapperRef.current
+                !pointerWrapperRef.current ||
+                !leftTitleRef.current ||
+                !centerTitleRef.current
             ) return;
 
-            gsap.set(elementsRef.current, { display: "block", yPercent: -50, opacity: 0 });
-
             const pointers = gsap.utils.toArray<HTMLElement>(".process-pointer");
+            
+
+            gsap.set(leftTitleRef.current, {
+                opacity: 0,
+                x: 100,
+            });
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: processSectionRef.current,
+                    start: "top top",
+                    end: `+=${window.innerHeight * pointers.length * 1.5}`,
+                    pin: true,
+                    scrub: 1,
+                }
+            });
+
+            tl
+                .to(centerTitleRef.current, {
+                    opacity: 0,
+                    x: -50,
+                    duration: 1,
+                })
+                .to(
+                    leftTitleRef.current,
+                    {
+                        opacity: 1,
+                        x: 0,
+                        duration: 1,
+                    },
+                    "<"
+                );
+
+            const container = containerRef.current;
+
+            const containerRect = container.getBoundingClientRect();
+
+            const lastPointer = pointers[pointers.length - 1];
+            const lastRect = lastPointer.getBoundingClientRect();
+
+            const moveDistance =
+                containerRect.right - lastRect.right;
+
+            const positions = pointers.map(
+                p => p.getBoundingClientRect().left
+            );
+
+            const deliverPosition = positions[positions.length - 1];
+
+            for (let i = pointers.length - 2; i >= 0; i--) {
+
+                const distance =
+                    (deliverPosition - positions[i]) + moveDistance;
+
+                tl.to(pointers[i], {
+                    x: `+=${distance}`,
+                    duration: 1,
+                    ease: "none",
+                });
+            }
+
             const elements = gsap.utils.toArray<HTMLElement>(".process-element");
+            gsap.set(".process-pointer-text-wrapper p", {
+                opacity: 0,
+                height: 0,
+            });
 
-            const setActiveStep = (activeIndex: number) => {
+            const setActiveStepDesktop = (activeIndex: number) => {
+                
                 pointers.forEach((pointer, i) => {
-                    const desc = pointer.querySelector(".process-pointer-text-wrapper");
-                    const p = pointer.querySelector(".process-pointer-text-wrapper p");
-                    const tick = pointer.querySelector(".process-complete-tick");
 
-                    const isActive = activeIndex >= 0 && i === activeIndex;
-                    const isCompleted = activeIndex > 0 && i < activeIndex;
-                    const showTick = isActive || isCompleted;
+                    const desc = pointer.querySelector(
+                        ".process-pointer-text-wrapper p"
+                    );
+
+                    const tick = pointer.querySelector(
+                        ".process-complete-tick"
+                    );
+                    
+                    const isActive = i === activeIndex;
+                    const isCompleted = i < activeIndex;
 
                     pointer.classList.toggle("active", isActive);
 
-                    if (isActive) {
-                        desc?.classList.add("active");
-                    } else {
-                        desc?.classList.remove("active");
-                    }
-
-                    gsap.set(pointer, {
-                        opacity: isActive || isCompleted ? 1 : 0.5
+                    gsap.to(pointer, {
+                        opacity: isActive || isCompleted ? 1 : 0.5,
+                        duration: 0.3
                     });
+                    // gsap.set(".process-pointer-text-wrapper p", {
+                    //     opacity: 1,
+                    //     overflow: "hidden",
+                    //     // maxHeight: 0
+                    // });
 
                     if (tick) {
                         gsap.set(tick, {
-                            opacity: showTick ? 1 : 0,
-                            display: showTick ? "flex" : "none"
+                            display: isActive || isCompleted ? "flex" : "none",
+                            opacity: isActive || isCompleted ? 1 : 0
                         });
                     }
 
-                    if (p) {
-                        gsap.to(p, {
+                    if (desc) {
+                        gsap.set(desc, {
+                            display: "block"
+                        });
+
+                        gsap.to(desc, {
                             opacity: isActive ? 1 : 0,
-                            height: isActive ? "auto" : 0,
+                            maxHeight: isActive ? 500 : 0,
                             duration: 0.4,
-                            overwrite: true
+                            ease: "power2.out"
                         });
                     }
                 });
 
                 elements.forEach((el, i) => {
-                    const shouldShow =
-                        activeIndex >= 0 && i === activeIndex;
 
                     gsap.to(el, {
-                        autoAlpha: shouldShow ? 1 : 0,
+                        autoAlpha: i === activeIndex ? 1 : 0,
                         duration: 0.4,
-                        ease: "power2.out",
-                        overwrite: true,
                         onStart: () => {
-                            if (shouldShow) {
+                            if (i === activeIndex) {
                                 gsap.set(el, { display: "block" });
                             }
                         },
                         onComplete: () => {
-                            if (!shouldShow) {
+                            if (i !== activeIndex) {
                                 gsap.set(el, { display: "none" });
                             }
                         }
                     });
+
                 });
+
             };
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: processSectionRef.current,
-                    start: "top -30px",
-                    end: `+=${window.innerHeight * pointers.length * 2}`,
-                    pin: true,
-                    scrub: 1.2,
-                    invalidateOnRefresh: true,
-                    markers: true,
-
-                    snap: {
-                        snapTo: 1 / (pointers.length + 1),
-                        duration: 0.6,
-                        ease: "power2.out",
-                    },
-
-                    onUpdate: (self) => {
-                        const totalSteps = pointers.length + 1;
-
-                        const activeIndex = Math.min(
-                            pointers.length - 1,
-                            Math.floor(self.progress * totalSteps) - 1
-                        );
-
-                        if (activeIndex !== currentStep) {
-                            currentStep = activeIndex;
-                            setActiveStep(activeIndex);
-                        }
-                    }
-                }
+            gsap.set(pointers, {
+                opacity: 0.5,
             });
-
-            gsap.to(pointers, {
-                x: 0,   
-                stagger: 0.05,
-                ease: "none",
-                duration: 1,
-                markers: true,
-                scrollTrigger: {
-                    trigger: processSectionRef.current,
-                    start: "top top",
-                    end: "+=1000",
-                    scrub: 1.5,
-                }
-            });
-
-            gsap.set(pointers, { opacity: 0.5 });
 
             gsap.set(elements, {
                 autoAlpha: 0,
-                display: "none"
+                display: "none",
             });
 
-            const centerRect = centerTitleRef.current?.getBoundingClientRect();
-            const leftRect = leftTitleRef.current?.getBoundingClientRect();
+            for (let i = 0; i < pointers.length; i++) {
 
-            if (centerRect && leftRect) {
-                const offset = centerRect.left - leftRect.left;
+                tl.call(() => {
+                    setActiveStepDesktop(i);
+                });
 
-                gsap.set(leftTitleRef.current, {
-                    x: offset,
-                    opacity: 0
+                tl.to({}, {
+                    duration: 1
                 });
             }
-
-            pointers.forEach((pointer) => {
-                const p = pointer.querySelector(".process-pointer-text-wrapper p");
-
-                gsap.set(p, {
-                    height: 0,
-                    opacity: 0
-                });
-            });
-
-            tl.to(containerRef.current, {
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                justifyContent: "space-between",
-                width: "100%",
-                duration: 1
-            }, 0)
-
-            tl.to(centerTitleRef.current, {
-                opacity: 0,
-                duration: 0.3,
-                ease: "power2.out"
-            }, 0);
-
-            tl.to(leftTitleRef.current, {
-                opacity: 1,
-                x: 0,
-                duration: 1,
-                ease: "power2.inOut"
-            }, 0)
-
-                .to(pointerWrapperRef.current, {
-                    marginLeft: "auto",
-                    duration: 0.9,
-                    ease: "power2.inOut",
-                    marginTop: "0"
-                }, 0)
-
-                .to(elementsRef.current, {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 1.2,
-                    ease: "back.out(1.4)"
-                }, 0.2);
-
-            pointers.forEach((pointer, index) => {
-                const currentDesc = pointer.querySelector(".process-pointer-text-wrapper");
-                const currentP = pointer.querySelector(".process-pointer-text-wrapper p");
-                const currentElement = elements[index];
-                const prevElement = index > 0 ? elements[index - 1] : null;
-                if (!currentP || !currentDesc || !currentElement) return;
-
-                const stepStartTime = 1.0 + index * 1.0;
-                if (index > 0) {
-                    const prevPointer = pointers[index - 1];
-                    const prevDesc = prevPointer.querySelector(".process-pointer-text-wrapper");
-                    const prevP = prevPointer.querySelector(".process-pointer-text-wrapper p");
-
-                    if (prevP && prevDesc) {
-                        tl.to(prevP, { display: "none", height: 0, opacity: 0, duration: 0.4 }, stepStartTime)
-                            .to(prevPointer, { opacity: 1, duration: 1 }, stepStartTime)
-                    }
-
-                    if (prevElement) {
-                        tl.to(prevElement, { autoAlpha: 0, display: "none", duration: 0.2 }, stepStartTime)
-                            .to(currentElement, { autoAlpha: 1, display: "block", duration: 0.4 }, stepStartTime +
-                                0.1);
-                    }
-
-                    tl.to(currentP, {
-                        display: "flex", height: "auto", opacity: 1, paddingTop: "20px", duration: 0.6
-                    }, stepStartTime + 0.1)
-                        .to(pointer, { opacity: 1, duration: 0.5 }, stepStartTime + 0.1)
-                }
-                tl.to({}, { duration: 1 });
-            });
-        })
+        });
 
         mm.add("(max-width: 1199px)", () => {
             if (
@@ -404,8 +352,8 @@ export default function ProcessSectionDesktop() {
                                     <Image className="process-element" src="/images/homepage/deliver-elements.svg" alt="process-elements" width={341} height={338}></Image>
                                 </div>
 
-                                <div ref={pointerWrapperRef} className="process-pointer-wrapper active">
-                                    <div className="process-pointer-1 process-pointer active">
+                                <div ref={pointerWrapperRef} className="process-pointer-wrapper">
+                                    <div className="process-pointer-1 process-pointer">
                                         <div className="process-pointer-svg site-radius-20">
                                             <span className="icon-discover-process text-black"></span>
                                         </div>
