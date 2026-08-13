@@ -123,35 +123,34 @@ export default function IndustriesSectionDesktop() {
                     start: "top top",
                     end: () => `+=${getScrollDistance() + window.innerHeight}`,
                     pin: true,
-                    scrub: 0.2,
+                    scrub: 2,
                     anticipatePin: 1,
                     invalidateOnRefresh: true,
 
-                    onUpdate: (self) => {
-                        const activeIndex = Math.min(
-                            industries.length - 1,
-                            Math.round(self.progress * (industries.length - 1))
-                        );
-
+                    onUpdate: () => {
                         gsap.to(section, {
-                            // backgroundColor: industries[activeIndex].bgColor,
                             duration: 0.5,
                             overwrite: true,
                         });
                     },
 
                     snap: {
-                        snapTo: (progress) => {
+                        snapTo: (progress: number) => {
+                            const points = getSnapPoints();
                             const max = getScrollDistance();
+
                             const currentX = progress * max;
 
-                            const closest = getSnapPoints().reduce((prev, curr) =>
-                                Math.abs(curr - currentX) < Math.abs(prev - currentX)
-                                    ? curr
-                                    : prev
-                            );
+                            let index = points.findIndex(point => point > currentX);
 
-                            return closest / max;
+                            if (index === -1) index = points.length - 1;
+
+                            const direction =
+                                horizontalTween.scrollTrigger?.direction ?? 1;
+
+                            return direction > 0
+                                ? points[index] / max
+                                : points[Math.max(0, index - 1)] / max;
                         },
                         duration: 0.6,
                         ease: "power3.out",
@@ -159,99 +158,6 @@ export default function IndustriesSectionDesktop() {
                 },
             });
 
-            // const horizontalTween = gsap.to(track, {
-            //     x: () => -getScrollDistance(),
-            //     ease: "none",
-            //     scrollTrigger: {
-            //         trigger: section,
-            //         start: "top top",
-            //         end: () => `+=${getScrollDistance() + window.innerHeight}`,
-            //         pin: true,
-            //         scrub: 0.2,
-            //         anticipatePin: 1,
-            //         invalidateOnRefresh: true,
-            //         snap: {
-            //             snapTo: (progress) => {
-            //                 const max = getScrollDistance();
-            //                 const currentX = progress * max;
-
-            //                 const snapPoints = getSnapPoints();
-
-            //                 const closest = snapPoints.reduce((prev, curr) =>
-            //                     Math.abs(curr - currentX) < Math.abs(prev - currentX)
-            //                         ? curr
-            //                         : prev
-            //                 );
-
-            //                 return closest / max;
-            //             },
-            //             duration: 0.6,
-            //             ease: "power3.out",
-            //         },
-            //     },
-            // });
-
-            // cards.forEach((card, index) => {
-            //     ScrollTrigger.create({
-            //         trigger: card,
-            //         containerAnimation: horizontalTween,
-            //         start: "center center",
-
-            //         onToggle: ({ isActive }) => {
-            //             if (isActive) {
-            //                 gsap.to(section, {
-            //                     backgroundColor: industries[index].bgColor,
-            //                     duration: 0.8,
-            //                     ease: "power2.out"
-            //                 });
-            //             }
-            //         }
-            //     });
-            // });
-
-            // gsap.to(track, {
-            //     x: () => -getScrollDistance(),
-            //     ease: "none",
-            //     scrollTrigger: {
-            //         trigger: section,
-            //         start: "top top",
-            //         end: () => `+=${getScrollDistance() + window.innerHeight}`,
-            //         pin: true,
-            //         scrub: 0.2,
-
-            //         onUpdate: (self) => {
-            //             const activeIndex = Math.min(
-            //                 industries.length - 1,
-            //                 Math.round(self.progress * (industries.length - 1))
-            //             );
-
-            //             gsap.to(section, {
-            //                 backgroundColor: industries[activeIndex].bgColor,
-            //                 duration: 0.5,
-            //                 overwrite: true,
-            //             });
-
-            //             console.log(activeIndex);
-            //         },
-
-            //         snap: {
-            //             snapTo: (progress) => {
-            //                 const max = getScrollDistance();
-            //                 const currentX = progress * max;
-
-            //                 const closest = getSnapPoints().reduce((prev, curr) =>
-            //                     Math.abs(curr - currentX) < Math.abs(prev - currentX)
-            //                         ? curr
-            //                         : prev
-            //                 );
-
-            //                 return closest / max;
-            //             },
-            //             duration: 0.6,
-            //             ease: "power3.out",
-            //         },
-            //     },
-            // });
         }, section);
 
         return () => ctx.revert();
