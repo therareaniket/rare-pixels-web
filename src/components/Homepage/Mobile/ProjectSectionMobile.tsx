@@ -36,7 +36,7 @@ export default function ProjectSectionMobile() {
                 start: "top top",
                 end: "+=2500",
                 pin: true,
-                scrub: 1,
+                scrub: 2,
                 // pinSpacing: false,
             }
         });

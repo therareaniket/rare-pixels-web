@@ -12,65 +12,196 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ProjectsSectionDesktop() {
 
     const sectionRef = useRef(null);
-    const wrapperRef = useRef(null);
+    const wrapperRef = useRef<HTMLDivElement | null>(null);
+
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
             const cards = gsap.utils.toArray<HTMLElement>(".project-card");
+            const extraScrollAfterLastCard = 1;
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top top",
-                    end: `+=${cards.length * 1000}`,
-                    scrub: 1,
-                    pin: true,
-                    anticipatePin: 1,
-                }
-            });
+            const mm = gsap.matchMedia();
 
-            cards.forEach((_, index) => {
-                if (index === 0) return;
+            mm.add("(min-width: 1200px)", () => {
+                const wrapper = wrapperRef.current;
+                if (!wrapper) return;
 
-                const overlay = cards[index - 1].querySelector('.project-cards-overlay');
+                const shift =
+                    parseFloat(
+                        getComputedStyle(wrapper).getPropertyValue("--card-shift")
+                    ) || 800;
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top top",
+                        end: `+=${(cards.length + extraScrollAfterLastCard) * 1000}`,
+                        scrub: 2,
+                        pin: true,
+                        anticipatePin: 1,
+                    }
+                });
+
+                cards.forEach((_, index) => {
+                    if (index === 0) return;
+
+                    const overlay =
+                        cards[index - 1].querySelector(".project-cards-overlay");
+
+                    tl.to(
+                        cards.slice(index),
+                        {
+                            x: index * -shift,
+                            duration: 1,
+                            ease: "none"
+                        }
+                    )
+                        .to(
+                            cards[index - 1],
+                            {
+                                scale: 0.95,
+                                duration: 0.3,
+                                onStart: () => {
+                                    const video = cards[index - 1].querySelector("video");
+                                    video?.pause();
+                                },
+                                onReverseComplete: () => {
+                                    const video = cards[index - 1].querySelector("video");
+                                    video?.play();
+                                }
+                            },
+                            "<"
+                        )
+                        .to(
+                            overlay,
+                            {
+                                opacity: 1,
+                                duration: 0.3
+                            },
+                            "<"
+                        );
+                });
 
                 tl.to(
-                    cards.slice(index),
+                    cards[cards.length - 1],
                     {
-                        x: index * -800,
+                        scale: 0.95,
                         duration: 1,
-                        ease: "none"
+                        ease: "power2.out"
                     }
-                )
-                    .to(
-                        cards[index - 1],
-                        {
-                            scale: 0.95,
-                            duration: 0.3,
-                            onStart: () => {
-                                const video = cards[index - 1].querySelector('video');
-                                video?.pause();
-                            },
-                            onReverseComplete: () => {
-                                const video = cards[index - 1].querySelector('video');
-                                video?.play();
-                            }
-                        },
-                        "<"
-                    )
-                    .to(
-                        overlay,
-                        {
-                            opacity: 1,
-                            duration: 0.3
-                        },
-                        "<"
-                    )
+                );
+
+                tl.fromTo(
+                    ".project-last-card-overlay",
+                    {
+                        opacity: 0,
+                    },
+                    {
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power2.out"
+                    }
+                );
             });
+
+            mm.add("(max-width: 1199px)", () => {
+                const wrapper = wrapperRef.current;
+                if (!wrapper) return;
+
+                const cardHeight = parseFloat(
+                    getComputedStyle(cards[0]).height
+                );
+                const stackVisiblePart = 120;
+
+                const stackHeight =
+                    cardHeight +
+                    (cards.length - 1) * stackVisiblePart;
+
+                wrapper.style.height = `${stackHeight}px`;
+
+                const shift =
+                    parseFloat(
+                        getComputedStyle(wrapper).getPropertyValue("--card-shift-y")
+                    ) || 450;
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top top",
+                        end: `+=${cards.length * 1000}`,
+                        scrub: 1,
+                        pin: true,
+                        anticipatePin: 1,
+                    }
+                });
+
+                cards.forEach((_, index) => {
+                    if (index === 0) return;
+
+                    const overlay =
+                        cards[index - 1].querySelector(".project-cards-overlay");
+
+                    tl.to(
+                        cards.slice(index),
+                        {
+                            y: index * -shift,
+                            duration: 1,
+                            ease: "none"
+                        }
+                    )
+                        .to(
+                            cards[index - 1],
+                            {
+                                scale: 1,
+                                duration: 0.3,
+                                onStart: () => {
+                                    const video = cards[index - 1].querySelector("video");
+                                    video?.pause();
+                                },
+                                onReverseComplete: () => {
+                                    const video = cards[index - 1].querySelector("video");
+                                    video?.play();
+                                }
+                            },
+                            "<"
+                        )
+                        .to(
+                            overlay,
+                            {
+                                opacity: 1,
+                                duration: 0.3
+                            },
+                            "<"
+                        );
+                });
+
+                tl.to(
+                    cards[cards.length - 1],
+                    {
+                        scale: 1,
+                        duration: 1,
+                        ease: "power2.out"
+                    }
+                );
+
+                tl.fromTo(
+                    ".project-last-card-overlay",
+                    {
+                        opacity: 0
+                    },
+                    {
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power2.out"
+                    }
+                );
+            });
+
+            return () => mm.revert();
+
         }, sectionRef);
 
         return () => ctx.revert();
-
     }, []);
 
     return (
@@ -144,7 +275,11 @@ export default function ProjectsSectionDesktop() {
                         </div>
 
                         <div className="project-card project-card-7">
-                            <div className="project-cards-overlay">
+                            {/* <div className="project-cards-overlay">
+                                <h2 className="h2 text-sb">CAMERIZ</h2>
+                            </div> */}
+
+                            <div className="project-last-card-overlay">
                                 <h2 className="h2 text-sb">CAMERIZ</h2>
                             </div>
 

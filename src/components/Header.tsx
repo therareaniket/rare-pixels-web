@@ -107,7 +107,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Home</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Explore ideas built for impact</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -119,7 +119,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">About</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">The thinking behind RarePixels</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -131,7 +131,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Industries</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Experience across evolving industries</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -143,7 +143,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Projects</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Ideas transformed into digital experiences</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -157,7 +157,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Process</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">How we turn vision into reality</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -169,7 +169,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Life at RPD</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">People, culture and creative thinking</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -181,7 +181,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Articles</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Perspectives on design and digital</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -193,7 +193,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Contact</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Let’s create something meaningful</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -209,7 +209,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Home</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Explore ideas built for impact</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -221,7 +221,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">About</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">The thinking behind RarePixels</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -233,7 +233,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Industries</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Experience across evolving industries</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -245,7 +245,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Projects</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Ideas transformed into digital experiences</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -257,7 +257,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Process</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">How we turn vision into reality</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -269,7 +269,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Life at RPD</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">People, culture and creative thinking</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -281,7 +281,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Articles</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Perspectives on design and digital</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -293,7 +293,7 @@ useEffect(() => {
                                             </div>
                                             <div className="">
                                                 <p className="text-18 text-sb">Contact</p>
-                                                <p className="text-16 text-rg text-dark-grey">Lorem ipsum dolor sit amet</p>
+                                                <p className="text-16 text-rg text-dark-grey">Let’s create something meaningful</p>
                                             </div>
                                         </Link>
                                     </li>
@@ -667,23 +667,6 @@ useEffect(() => {
                                     </Link>
                                 </div>
 
-                                {/* <div className="menu-company-add">
-                                                <div className="head-add-country">
-                                                    <span className="text-16 text-md country-india">India</span>
-                                                    <span className="text-16 text-md country-usa">USA</span>
-                                                </div>
-
-                                                <div className="head-add">
-                                                    <span className="text-18 text-rg country-india-address">
-                                                        1109-10, Rashmi The Prime, Near Vakil Saheb Bridge, Ambli T Junction, Ahmedabad, Gujarat 380058.
-                                                    </span>
-
-                                                    <span className="text-18 text-rg country-usa-address">
-                                                        2500 knights road Apt # 29 - 02 Bensalem PA 19020.
-                                                    </span>
-                                                </div>
-                                            </div> */}
-
                                 <div className="header-contact-detail">
                                     <div className="menu-company-contact">
                                         <div className="contact-title">
@@ -715,27 +698,27 @@ useEffect(() => {
                                         </div>
 
                                         <div className="menu-social-icons">
-                                            <Link href="#">
+                                            <Link href="#" title="likedin">
                                                 <span className="icon-linkedin"></span>
                                             </Link>
 
-                                            <Link href="#">
+                                            <Link href="#" title="instagram">
                                                 <span className="icon-instagram"></span>
                                             </Link>
 
-                                            <Link href="#">
+                                            <Link href="#" title="threads">
                                                 <span className="icon-threads"></span>
                                             </Link>
 
-                                            <Link href="#">
+                                            <Link href="#" title="facebook">
                                                 <span className="icon-facebook"></span>
                                             </Link>
 
-                                            <Link href="#">
+                                            <Link href="#" title="twitter">
                                                 <span className="icon-twitter"></span>
                                             </Link>
 
-                                            <Link href="#">
+                                            <Link href="#" title="youtube">
                                                 <span className="icon-youtube"></span>
                                             </Link>
                                         </div>
@@ -744,9 +727,7 @@ useEffect(() => {
                             </div>
                         </div>
                     </div>
-
                 </div >
-                {/* </GlassEffect > */}
             </header >
         </>
     )

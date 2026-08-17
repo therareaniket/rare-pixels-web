@@ -1,1 +1,223 @@
 'use client';
+
+import "@/assets/css/desktop-custom.css";
+import "@/assets/css/responsive/desktop-responsive.css";
+import Image from "next/image";
+import { useRef, useLayoutEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function ProjectsSectionDesktop() {
+    const sectionRef = useRef(null);
+    const titleRef = useRef(null);
+    const pointersRef = useRef<HTMLDivElement[]>([]);
+    const imagesRef = useRef<HTMLImageElement[]>([]);
+
+    const addImageRef = (el: HTMLImageElement | null) => {
+        if (el && !imagesRef.current.includes(el)) {
+            imagesRef.current.push(el);
+        }
+    };
+
+    const addPointerRef = (el: HTMLDivElement | null) => {
+        if (el && !pointersRef.current.includes(el)) {
+            pointersRef.current.push(el);
+        }
+    };
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            const container = document.querySelector(".container-sm") as HTMLElement;
+            const title = titleRef.current as unknown as HTMLDivElement;
+
+            const moveX =
+                (container.offsetWidth - title.offsetWidth) / 2;
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top top",
+                    end: "+=4000",
+                    scrub: 2,
+                    markers: true,
+                },
+            });
+
+            tl.to(title, {
+                x: -moveX,
+                ease: "none",
+                duration: 1,
+            });
+
+            tl.to(
+                pointersRef.current,
+                {
+                    marginLeft: 'auto',
+                    ease: "none",
+                    stagger: 0.05,
+                    duration: 3,
+                },
+                ">"
+            );
+
+            const setActive = (index: number) => {
+                pointersRef.current.forEach((item, i) => {
+                    item.classList.toggle("active", i === index);
+                });
+
+                imagesRef.current.forEach((item, i) => {
+                    item.classList.toggle("active", i === index);
+                });
+            };
+
+            const clearActive = () => {
+                pointersRef.current.forEach((item) =>
+                    item.classList.remove("active")
+                );
+
+                imagesRef.current.forEach((item) =>
+                    item.classList.remove("active")
+                );
+            };
+
+            for (let i = 0; i < pointersRef.current.length; i++) {
+                tl.to({}, {
+                    duration: 1,
+                    onStart: () => setActive(i),
+
+                    onReverseComplete: () => {
+                        if (i > 0) {
+                            setActive(i - 1);
+                        } else {
+                            clearActive();
+                        }
+                    }
+                });
+            }
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
+
+    return (
+        <>
+            <section ref={sectionRef} className="section section-yellow-background process-section-sticky" style={{ paddingBottom: 0 }}>
+                <div className="process-section-inner">
+                    <div className="container-sm">
+                        <div ref={titleRef} className="process-section-title active">
+                            <h2 className="text-sb">Work Process We Follow</h2>
+
+                            <p className="text-18 text-rg">Every great outcome starts with understanding. We move from insight to execution through a   process designed to reduce guesswork, improve collaboration, and build solutions that perform.</p>
+                        </div>
+
+                        <div className="process-elements-pointer">
+                            <div className="process-element">
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/discover-elements.svg" alt="discover-element" width={350} height={350}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/strategies-elements.svg" alt="discover-element" width={332} height={344}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/create-elements.svg" alt="discover-element" width={292} height={350}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/engineer-elements.svg" alt="discover-element" width={317} height={350}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/refine-elements.svg" alt="discover-element" width={347} height={348}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/deliver-elements.svg" alt="discover-element" width={341} height={350}></Image>
+                            </div>
+
+                            <div className="process-pointer-wrapper">
+                                <div ref={addPointerRef} className="process-pointer">
+                                    <div className="process-pointer-icon">
+                                        <span className="icon-discover-process"></span>
+                                    </div>
+
+                                    <div className="process-pointer-text">
+                                        <h3 className="h2 text-sb text-upper-case">Discover</h3>
+
+                                        <p className="text-18 text-rg">
+                                            <span>Every meaningful solution begins with understanding.</span>
+                                            <span>We take time to understand your business, your users, and the challenges standing in the way of growth. The better the questions, the better the outcome.</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div ref={addPointerRef} className="process-pointer">
+                                    <div className="process-pointer-icon">
+                                        <span className="icon-strategy-process"></span>
+                                    </div>
+
+                                    <div className="process-pointer-text">
+                                        <h3 className="h2 text-sb text-upper-case">Strategise</h3>
+
+                                        <p className="text-18 text-rg">
+                                            <span>Direction creates momentum.</span>
+                                            <span>Ideas become impactful when backed by clarity. We bring together research, insights, and business goals to build a roadmap that gives every decision a purpose.</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div ref={addPointerRef} className="process-pointer">
+                                    <div className="process-pointer-icon">
+                                        <span className="icon-create-process"></span>
+                                    </div>
+
+                                    <div className="process-pointer-text">
+                                        <h3 className="h2 text-sb text-upper-case">Create</h3>
+
+                                        <p className="text-18 text-rg">
+                                            <span>Creativity with intention.</span>
+                                            <span>We design experiences, identities, and interactions that feel intuitive, leave an impression, and make your brand impossible to overlook.</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div ref={addPointerRef} className="process-pointer">
+                                    <div className="process-pointer-icon">
+                                        <span className="icon-engineer-process"></span>
+                                    </div>
+
+                                    <div className="process-pointer-text">
+                                        <h3 className="h2 text-sb text-upper-case">Engineer</h3>
+
+                                        <p className="text-18 text-rg">
+                                            <span>Built for the real world.</span>
+                                            <span>From websites to digital products, we develop solutions that are scalable, reliable, and engineered to perform long after launch.</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div ref={addPointerRef} className="process-pointer">
+                                    <div className="process-pointer-icon">
+                                        <span className="icon-refine-process"></span>
+                                    </div>
+
+                                    <div className="process-pointer-text">
+                                        <h3 className="h2 text-sb text-upper-case">Refine</h3>
+
+                                        <p className="text-18 text-rg">
+                                            <span>The details shape the experience.</span>
+                                            <span>We test, improve, and fine-tune every interaction because the smallest refinements often make the biggest difference.</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div ref={addPointerRef} className="process-pointer">
+                                    <div className="process-pointer-icon">
+                                        <span className="icon-deliver-svg"></span>
+                                    </div>
+
+                                    <div className="process-pointer-text">
+                                        <h3 className="h2 text-sb text-upper-case">deliver</h3>
+
+                                        <p className="text-18 text-rg">
+                                            <span>Launch is where the journey expands.</span>
+                                            <span>We deliver solutions with precision and stay invested in their growth, ensuring they continue to create value as your business evolves.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+}

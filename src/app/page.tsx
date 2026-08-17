@@ -23,7 +23,7 @@ const AboutSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop
 const ServicesSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ServicesSectionDesktop"), { ssr: false } );
 const IndustriesSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/IndustriesSectionDesktop"), { ssr: false } );
 const WhyChooseUsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/WhyChooseUsSectionDesktop"), { ssr: false } );
-// const ProcessSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProcessSectionDesktop"), { ssr: false } );
+const ProcessSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProcessSectionDesktop"), { ssr: false } );
 const ProjectsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProjectsSectionDesktop"), { ssr: false } );
 const StatsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/StatsSectionDesktop"), { ssr: false } );
 const BlogSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/BlogSectionDesktop"), { ssr: false } );
@@ -77,7 +77,7 @@ export default function Home() {
 						<ServicesSectionDesktop />
 						<IndustriesSectionDesktop />
 						<WhyChooseUsSectionDesktop />
-						{/* <ProcessSectionDesktop /> */}
+						<ProcessSectionDesktop />
 						<ProjectsSectionDesktop />
 						<StatsSectionDesktop/>
 						{/* <TeamsSectionDesktop/> */}
