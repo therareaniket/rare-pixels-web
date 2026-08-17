@@ -638,7 +638,7 @@
 .process-section-inner { position: sticky; top: 100px; height: 100vh; overflow: hidden; }
 
 .process-section-title { width: 697px; margin: 0 auto; text-align: left; }
-.process-pointer-wrapper { display: flex; flex-direction: column; gap: 30px; margin-top: 60px; height: 600px; }
+.process-pointer-wrapper { display: flex; flex-direction: column; gap: 30px; margin-top: 30px; height: 600px; }
 
 .process-pointer { display: flex; align-items: flex-start; gap: 20px; width: max-content; max-height: 54px; height: max-content; overflow: hidden; transition: max-height .5s ease; }
 .process-pointer-icon { width: 52px; height: 52px; border-radius: 20px; background-color: #E8DB7D; display: flex; align-items: center; justify-content: center; font-size: 24px; }
