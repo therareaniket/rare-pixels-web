@@ -127,21 +127,21 @@ export default function Footer() {
                                             className={`footer-india ${activeCountry === "india" ? "active" : ""}`}
                                             onClick={() => setActiveCountry("india")}
                                         >
-                                            <p className="text-16 text-sb text-light-grey">India</p>
+                                            <p className="text-18 text-sb text-light-grey">India</p>
                                         </div>
 
                                         <div
                                             className={`footer-usa ${activeCountry === "usa" ? "active" : ""}`}
                                             onClick={() => setActiveCountry("usa")}
                                         >
-                                            <p className="text-16 text-sb text-light-grey">USA</p>
+                                            <p className="text-18 text-sb text-light-grey">USA</p>
                                         </div>
                                     </div>
 
                                     <div className="footer-address">
                                         {activeCountry === "india" && (
                                             <div className="footer-address-india">
-                                                <p className="text-16 text-rg text-light-grey">
+                                                <p className="text-18 text-rg text-light-grey">
                                                     1109-10, The Prime,<br /> 
                                                     Near Vakil Saheb Bridge, <br />
                                                     Ambli T Junction, Ahmedabad, <br />
@@ -152,7 +152,7 @@ export default function Footer() {
 
                                         {activeCountry === "usa" && (
                                             <div className="footer-address-usa">
-                                                <p className="text-16 text-rg text-light-grey">
+                                                <p className="text-18 text-rg text-light-grey">
                                                     2500 knights road <br />
                                                     Apt # 29 - 02 <br />
                                                     Bensalem PA 19020.
@@ -164,23 +164,23 @@ export default function Footer() {
 
                                 <div className="footer-company-contact">
                                     <div className="footer-cnct">
-                                        <span className="text-rg text-16 text-light-grey">E.</span>
+                                        <span className="text-rg text-18 text-light-grey">E.</span>
 
                                         <div className="footer-mail">
                                             <ul>
-                                                <li className="text-rg text-16 text-light-grey"><Link href="mailTo:connect@rarepixelsdesign.com">connect@rarepixelsdesign.com</Link></li>
-                                                <li className="text-rg text-16 text-light-grey"><Link href="mailTo:careers@rarepixelsdesign.com">careers@rarepixelsdesign.com</Link></li>
+                                                <li className="text-rg text-18 text-light-grey"><Link href="mailTo:connect@rarepixelsdesign.com">connect@rarepixelsdesign.com</Link></li>
+                                                <li className="text-rg text-18 text-light-grey"><Link href="mailTo:careers@rarepixelsdesign.com">careers@rarepixelsdesign.com</Link></li>
                                             </ul>
                                         </div>
                                     </div>
 
                                     <div className="footer-cnct">
-                                        <span className="text-rg text-16 text-light-grey">P.</span>
+                                        <span className="text-rg text-18 text-light-grey">P.</span>
 
                                         <div className="footer-mail">
                                             <ul>
-                                                <li className="text-rg text-16 text-light-grey"><Link href="callTo:+91 8200925920">+91 8200925920</Link></li>
-                                                <li className="text-rg text-16 text-light-grey"><Link href="callTo:+1(347) 352-0172">+1(347) 352-0172</Link></li>
+                                                <li className="text-rg text-18 text-light-grey"><Link href="callTo:+91 8200925920">+91 8200925920</Link></li>
+                                                <li className="text-rg text-18 text-light-grey"><Link href="callTo:+1(347) 352-0172">+1(347) 352-0172</Link></li>
                                             </ul>
                                         </div>
                                     </div>

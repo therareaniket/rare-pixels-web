@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 export default function BlogSectionMobile() {
     return (
         <>
-            <section className="section">
+            <section className="section blog-section">
                 <div className="container">
                     <div className="hm-mob-blog-title">
                         <h2 className="text-sb">Our Blog</h2>
@@ -25,7 +25,7 @@ export default function BlogSectionMobile() {
                         <Swiper
                             modules={[Autoplay]}
                             spaceBetween={20}
-                            slidesPerView={1.1}
+                            slidesPerView={1.2}
                             loop={true}
                             speed={1000}
                             autoplay={{ delay: 2500 }}

@@ -6,7 +6,9 @@ import Image from "next/image";
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Flip } from "gsap/Flip";
 
+gsap.registerPlugin(Flip);
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectsSectionDesktop() {
@@ -14,6 +16,15 @@ export default function ProjectsSectionDesktop() {
     const titleRef = useRef(null);
     const pointersRef = useRef<HTMLDivElement[]>([]);
     const imagesRef = useRef<HTMLImageElement[]>([]);
+    const completedLineRef = useRef<HTMLDivElement>(null);
+
+    const tabletPointersRef = useRef<HTMLDivElement[]>([]);
+
+    const addTabletPointerRef = (el: HTMLDivElement | null) => {
+        if (el && !tabletPointersRef.current.includes(el)) {
+            tabletPointersRef.current.push(el);
+        }
+    };
 
     const addImageRef = (el: HTMLImageElement | null) => {
         if (el && !imagesRef.current.includes(el)) {
@@ -28,12 +39,150 @@ export default function ProjectsSectionDesktop() {
     };
 
     useLayoutEffect(() => {
-        const ctx = gsap.context(() => {
-            const container = document.querySelector(".container-sm") as HTMLElement;
-            const title = titleRef.current as unknown as HTMLDivElement;
+        const mm = gsap.matchMedia();
 
-            const moveX =
-                (container.offsetWidth - title.offsetWidth) / 2;
+        // Desktop Animation
+        mm.add("(min-width: 1200px)", () => {
+            const ctx = gsap.context(() => {
+                const container = document.querySelector(".container-sm") as HTMLElement;
+                const title = titleRef.current as unknown as HTMLDivElement;
+
+                const moveX =
+                    (container.offsetWidth - title.offsetWidth) / 2;
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top top",
+                        end: "+=6000",
+                        scrub: 2,
+                        pin: true,
+                        anticipatePin: 1,
+                        markers: true,
+                    },
+                });
+
+                tl.to(title, {
+                    x: -moveX,
+                    ease: "none",
+                    duration: 1,
+                });
+
+                tl.to(
+                    pointersRef.current,
+                    {
+                        marginLeft: 'auto',
+                        ease: "none",
+                        stagger: 0.05,
+                        duration: 3,
+                    },
+                    ">"
+                );
+
+
+                const setActive = (index: number) => {
+                    const state = Flip.getState(pointersRef.current);
+
+                    pointersRef.current.forEach((item, i) => {
+                        const isActive = i === index;
+
+                        item.classList.toggle("active", isActive);
+                        item.classList.toggle("completed", i <= index);
+                    });
+
+                    Flip.from(state, {
+                        duration: 0.7,
+                        ease: "power2.inOut",
+                        absolute: false,
+                        nested: true,
+                    });
+
+                    pointersRef.current.forEach((item, i) => {
+                        const isActive = i === index;
+
+                        const text = item.querySelector(".process-pointer-text p");
+                        const heading = item.querySelector(".tick-mark-wrapper");
+
+                        if (isActive) {
+                            gsap.killTweensOf([heading, text]);
+
+                            gsap.to([heading, text], {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.4,
+                                ease: "power2.out",
+                                stagger: 0.1,
+                                overwrite: true,
+                            });
+                        }
+                    });
+
+                    imagesRef.current.forEach((item, i) => {
+                        item.classList.toggle("active", i === index);
+                    });
+                };
+
+                const clearActive = () => {
+                    pointersRef.current.forEach((item) => {
+                        item.classList.remove("active");
+                        item.classList.remove("completed");
+                    });
+
+                    imagesRef.current.forEach((item) => {
+                        item.classList.remove("active");
+                    });
+                };
+
+                for (let i = 0; i < pointersRef.current.length; i++) {
+                    tl.to({}, {
+                        duration: 2,
+                        onStart: () => setActive(i),
+
+                        onReverseComplete: () => {
+                            if (i > 0) {
+                                setActive(i - 1);
+                            } else {
+                                clearActive();
+                            }
+                        }
+                    });
+                }
+            }, sectionRef);
+
+            return () => ctx.revert();
+        });
+
+        // Tablet Animation
+        mm.add("(max-width: 1199px)", () => {
+            const cards = tabletPointersRef.current;
+
+            const sectionInner = document.querySelector(
+                ".process-section-inner"
+            ) as HTMLElement;
+
+
+            cards.forEach((card) => {
+                card.classList.add("active");
+                card.classList.remove("closed");
+            });
+
+            const setClosed = (index: number) => {
+                cards.forEach((card, i) => {
+                    card.classList.toggle("closed", i < index);
+                });
+
+                const activeIcon = cards[index]?.querySelector(
+                    ".process-tablet-icon"
+                ) as HTMLElement;
+
+                if (activeIcon && completedLineRef.current) {
+                    gsap.to(completedLineRef.current, {
+                        height: activeIcon.offsetTop + activeIcon.offsetHeight / 2,
+                        duration: 0.5,
+                        ease: "power2.out",
+                    });
+                }
+            };
 
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -41,70 +190,41 @@ export default function ProjectsSectionDesktop() {
                     start: "top top",
                     end: "+=6000",
                     scrub: 2,
-                    pin: true,
-                    anticipatePin: 1,
+                    // pin: true,
+                    // anticipatePin: 1,
                     markers: true,
-                },
+                }
             });
 
-            tl.to(title, {
-                x: -moveX,
-                ease: "none",
-                duration: 1,
-            });
-
-            tl.to(
-                pointersRef.current,
-                {
-                    marginLeft: 'auto',
-                    ease: "none",
-                    stagger: 0.05,
-                    duration: 3,
-                },
-                ">"
-            );
-
-            const setActive = (index: number) => {
-                pointersRef.current.forEach((item, i) => {
-                    item.classList.toggle("active", i === index);
-                    item.classList.toggle("completed", i <= index);
-                });
-
-                imagesRef.current.forEach((item, i) => {
-                    item.classList.toggle("active", i === index);
-                });
-            };
-
-            const clearActive = () => {
-                pointersRef.current.forEach((item) => {
-                    item.classList.remove("active");
-                    item.classList.remove("completed");
-                });
-
-                imagesRef.current.forEach((item) => {
-                    item.classList.remove("active");
-                });
-            };
-
-            for (let i = 0; i < pointersRef.current.length; i++) {
+            cards.forEach((_, index) => {
                 tl.to({}, {
-                    duration: 2,
-                    onStart: () => setActive(i),
+                    duration: 3,
+
+                    onStart: () => {
+                        setClosed(index);
+                    },
 
                     onReverseComplete: () => {
-                        if (i > 0) {
-                            setActive(i - 1);
+                        if (index > 0) {
+                            setClosed(index - 1);
                         } else {
-                            clearActive();
+                            cards.forEach((card) => {
+                                card.classList.remove("closed");
+                                card.classList.add("active");
+                            });
                         }
                     }
                 });
-            }
-        }, sectionRef);
+            });
 
-        return () => ctx.revert();
+            return () => {
+                tl.scrollTrigger?.kill();
+                tl.kill();
+            };
+        });
+
+        return () => mm.revert();
     }, []);
-
 
     return (
         <>
@@ -246,18 +366,18 @@ export default function ProjectsSectionDesktop() {
 
                         <div className="process-section-tablet">
                             <div className="process-tablet-line"></div>
-                            <div className="process-tablet-line-completed"></div>
+                            <div ref={completedLineRef} className="process-tablet-line-completed"></div>
 
-                            <div className="process-pointer-tablet active">
+                            <div ref={addTabletPointerRef} className="process-pointer-tablet active">
                                 <div className="process-tablet-icon">
                                     <span className="icon-discover-process"></span>
                                 </div>
 
                                 <div className="process-text-wrapper-tablet">
-                                    {/* <div className="tick-mark-wrapper"> */}
-                                    <h3 className="h2 text-sb text-upper-case">Discover</h3>
-                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
-                                    {/* </div> */}
+                                    <div className="tick-mark-wrapper">
+                                        <h3 className="h2 text-sb text-upper-case">Discover</h3>
+                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                    </div>
 
                                     <p className="text-18 text-rg">
                                         <span>Every meaningful solution begins with understanding.</span>
@@ -270,16 +390,16 @@ export default function ProjectsSectionDesktop() {
                                 </div>
                             </div>
 
-                            <div className="process-pointer-tablet">
+                            <div ref={addTabletPointerRef} className="process-pointer-tablet">
                                 <div className="process-tablet-icon">
                                     <span className="icon-strategy-process"></span>
                                 </div>
 
                                 <div className="process-text-wrapper-tablet">
-                                    {/* <div className="tick-mark-wrapper"> */}
-                                    <h3 className="h2 text-sb text-upper-case">Strategise</h3>
-                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
-                                    {/* </div> */}
+                                    <div className="tick-mark-wrapper">
+                                        <h3 className="h2 text-sb text-upper-case">Strategise</h3>
+                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                    </div>
                                     <p className="text-18 text-rg">
                                         <span>Direction creates momentum.</span>
                                         <span>Ideas become impactful when backed by clarity. We bring together research, insights, and business goals to build a roadmap that gives every decision a purpose.</span>
@@ -291,16 +411,16 @@ export default function ProjectsSectionDesktop() {
                                 </div>
                             </div>
 
-                            <div className="process-pointer-tablet">
+                            <div ref={addTabletPointerRef} className="process-pointer-tablet">
                                 <div className="process-tablet-icon">
                                     <span className="icon-create-process"></span>
                                 </div>
 
                                 <div className="process-text-wrapper-tablet">
-                                    {/* <div className="tick-mark-wrapper"> */}
-                                    <h3 className="h2 text-sb text-upper-case">Create</h3>
-                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
-                                    {/* </div> */}
+                                    <div className="tick-mark-wrapper">
+                                        <h3 className="h2 text-sb text-upper-case">Create</h3>
+                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                    </div>
 
                                     <p className="text-18 text-rg">
                                         <span>Creativity with intention.</span>
@@ -314,16 +434,16 @@ export default function ProjectsSectionDesktop() {
                                 </div>
                             </div>
 
-                            <div className="process-pointer-tablet">
+                            <div ref={addTabletPointerRef} className="process-pointer-tablet">
                                 <div className="process-tablet-icon">
                                     <span className="icon-engineer-process"></span>
                                 </div>
 
                                 <div className="process-text-wrapper-tablet">
-                                    {/* <div className="tick-mark-wrapper"> */}
-                                    <h3 className="h2 text-sb text-upper-case">Enginee</h3>
-                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
-                                    {/* </div> */}
+                                    <div className="tick-mark-wrapper">
+                                        <h3 className="h2 text-sb text-upper-case">Enginee</h3>
+                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                    </div>
 
                                     <p className="text-18 text-rg">
                                         <span>Built for the real world.</span>
@@ -337,16 +457,16 @@ export default function ProjectsSectionDesktop() {
                                 </div>
                             </div>
 
-                            <div className="process-pointer-tablet">
+                            <div ref={addTabletPointerRef} className="process-pointer-tablet">
                                 <div className="process-tablet-icon">
                                     <span className="icon-refine-process"></span>
                                 </div>
 
                                 <div className="process-text-wrapper-tablet">
-                                    {/* <div className="tick-mark-wrapper"> */}
-                                    <h3 className="h2 text-sb text-upper-case">Refine</h3>
-                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
-                                    {/* </div> */}
+                                    <div className="tick-mark-wrapper">
+                                        <h3 className="h2 text-sb text-upper-case">Refine</h3>
+                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                    </div>
 
                                     <p className="text-18 text-rg">
                                         <span>The details shape the experience.</span>
@@ -356,20 +476,19 @@ export default function ProjectsSectionDesktop() {
 
                                 <div className="process-element-tablet">
                                     <Image className="process-element-image-tablet" src="/images/homepage/refine-elements.svg" alt="discover-element" width={347} height={348}></Image>
-
                                 </div>
                             </div>
 
-                            <div className="process-pointer-tablet">
+                            <div ref={addTabletPointerRef} className="process-pointer-tablet">
                                 <div className="process-tablet-icon">
                                     <span className="icon-deliver-svg"></span>
                                 </div>
 
                                 <div className="process-text-wrapper-tablet">
-                                    {/* <div className="tick-mark-wrapper"> */}
-                                    <h3 className="h2 text-sb text-upper-case">deliver</h3>
-                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
-                                    {/* </div> */}
+                                    <div className="tick-mark-wrapper">
+                                        <h3 className="h2 text-sb text-upper-case">deliver</h3>
+                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                    </div>
 
                                     <p className="text-18 text-rg">
                                         <span>Launch is where the journey expands.</span>
