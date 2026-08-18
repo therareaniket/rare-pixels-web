@@ -39,8 +39,10 @@ export default function ProjectsSectionDesktop() {
                 scrollTrigger: {
                     trigger: sectionRef.current,
                     start: "top top",
-                    end: "+=4000",
+                    end: "+=6000",
                     scrub: 2,
+                    pin: true,
+                    anticipatePin: 1,
                     markers: true,
                 },
             });
@@ -65,6 +67,7 @@ export default function ProjectsSectionDesktop() {
             const setActive = (index: number) => {
                 pointersRef.current.forEach((item, i) => {
                     item.classList.toggle("active", i === index);
+                    item.classList.toggle("completed", i <= index);
                 });
 
                 imagesRef.current.forEach((item, i) => {
@@ -73,18 +76,19 @@ export default function ProjectsSectionDesktop() {
             };
 
             const clearActive = () => {
-                pointersRef.current.forEach((item) =>
-                    item.classList.remove("active")
-                );
+                pointersRef.current.forEach((item) => {
+                    item.classList.remove("active");
+                    item.classList.remove("completed");
+                });
 
-                imagesRef.current.forEach((item) =>
-                    item.classList.remove("active")
-                );
+                imagesRef.current.forEach((item) => {
+                    item.classList.remove("active");
+                });
             };
 
             for (let i = 0; i < pointersRef.current.length; i++) {
                 tl.to({}, {
-                    duration: 1,
+                    duration: 2,
                     onStart: () => setActive(i),
 
                     onReverseComplete: () => {
@@ -104,7 +108,7 @@ export default function ProjectsSectionDesktop() {
 
     return (
         <>
-            <section ref={sectionRef} className="section section-yellow-background process-section-sticky" style={{ paddingBottom: 0 }}>
+            <section ref={sectionRef} className="section section-yellow-background process-section-sticky">
                 <div className="process-section-inner">
                     <div className="container-sm">
                         <div ref={titleRef} className="process-section-title active">
@@ -113,7 +117,7 @@ export default function ProjectsSectionDesktop() {
                             <p className="text-18 text-rg">Every great outcome starts with understanding. We move from insight to execution through a   process designed to reduce guesswork, improve collaboration, and build solutions that perform.</p>
                         </div>
 
-                        <div className="process-elements-pointer">
+                        <div className="process-elements-pointer process-section-desktop">
                             <div className="process-element">
                                 <Image ref={addImageRef} className="process-element-image" src="/images/homepage/discover-elements.svg" alt="discover-element" width={350} height={350}></Image>
                                 <Image ref={addImageRef} className="process-element-image" src="/images/homepage/strategies-elements.svg" alt="discover-element" width={332} height={344}></Image>
@@ -130,13 +134,17 @@ export default function ProjectsSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-text">
-                                        <h3 className="h2 text-sb text-upper-case">Discover</h3>
+                                        <div className="tick-mark-wrapper">
+                                            <h3 className="h2 text-sb text-upper-case">Discover</h3>
+                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        </div>
 
                                         <p className="text-18 text-rg">
                                             <span>Every meaningful solution begins with understanding.</span>
                                             <span>We take time to understand your business, your users, and the challenges standing in the way of growth. The better the questions, the better the outcome.</span>
                                         </p>
                                     </div>
+
                                 </div>
 
                                 <div ref={addPointerRef} className="process-pointer">
@@ -145,7 +153,11 @@ export default function ProjectsSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-text">
-                                        <h3 className="h2 text-sb text-upper-case">Strategise</h3>
+                                        <div className="tick-mark-wrapper">
+
+                                            <h3 className="h2 text-sb text-upper-case">Strategise</h3>
+                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        </div>
 
                                         <p className="text-18 text-rg">
                                             <span>Direction creates momentum.</span>
@@ -160,7 +172,11 @@ export default function ProjectsSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-text">
-                                        <h3 className="h2 text-sb text-upper-case">Create</h3>
+                                        <div className="tick-mark-wrapper">
+                                            <h3 className="h2 text-sb text-upper-case">Create</h3>
+
+                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        </div>
 
                                         <p className="text-18 text-rg">
                                             <span>Creativity with intention.</span>
@@ -175,7 +191,11 @@ export default function ProjectsSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-text">
-                                        <h3 className="h2 text-sb text-upper-case">Engineer</h3>
+                                        <div className="tick-mark-wrapper">
+
+                                            <h3 className="h2 text-sb text-upper-case">Engineer</h3>
+                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        </div>
 
                                         <p className="text-18 text-rg">
                                             <span>Built for the real world.</span>
@@ -190,7 +210,11 @@ export default function ProjectsSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-text">
-                                        <h3 className="h2 text-sb text-upper-case">Refine</h3>
+                                        <div className="tick-mark-wrapper">
+
+                                            <h3 className="h2 text-sb text-upper-case">Refine</h3>
+                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        </div>
 
                                         <p className="text-18 text-rg">
                                             <span>The details shape the experience.</span>
@@ -205,13 +229,156 @@ export default function ProjectsSectionDesktop() {
                                     </div>
 
                                     <div className="process-pointer-text">
-                                        <h3 className="h2 text-sb text-upper-case">deliver</h3>
+                                        <div className="tick-mark-wrapper">
+
+                                            <h3 className="h2 text-sb text-upper-case">deliver</h3>
+                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        </div>
 
                                         <p className="text-18 text-rg">
                                             <span>Launch is where the journey expands.</span>
                                             <span>We deliver solutions with precision and stay invested in their growth, ensuring they continue to create value as your business evolves.</span>
                                         </p>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="process-section-tablet">
+                            <div className="process-tablet-line"></div>
+                            <div className="process-tablet-line-completed"></div>
+
+                            <div className="process-pointer-tablet active">
+                                <div className="process-tablet-icon">
+                                    <span className="icon-discover-process"></span>
+                                </div>
+
+                                <div className="process-text-wrapper-tablet">
+                                    {/* <div className="tick-mark-wrapper"> */}
+                                    <h3 className="h2 text-sb text-upper-case">Discover</h3>
+                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
+                                    {/* </div> */}
+
+                                    <p className="text-18 text-rg">
+                                        <span>Every meaningful solution begins with understanding.</span>
+                                        <span>We take time to understand your business, your users, and the challenges standing in the way of growth. The better the questions, the better the outcome.</span>
+                                    </p>
+                                </div>
+
+                                <div className="process-element-tablet">
+                                    <Image className="process-element-image-tablet" src="/images/homepage/discover-elements.svg" alt="discover-element" width={350} height={350}></Image>
+                                </div>
+                            </div>
+
+                            <div className="process-pointer-tablet">
+                                <div className="process-tablet-icon">
+                                    <span className="icon-strategy-process"></span>
+                                </div>
+
+                                <div className="process-text-wrapper-tablet">
+                                    {/* <div className="tick-mark-wrapper"> */}
+                                    <h3 className="h2 text-sb text-upper-case">Strategise</h3>
+                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
+                                    {/* </div> */}
+                                    <p className="text-18 text-rg">
+                                        <span>Direction creates momentum.</span>
+                                        <span>Ideas become impactful when backed by clarity. We bring together research, insights, and business goals to build a roadmap that gives every decision a purpose.</span>
+                                    </p>
+                                </div>
+
+                                <div className="process-element-tablet">
+                                    <Image className="process-element-image-tablet" src="/images/homepage/strategies-elements.svg" alt="discover-element" width={332} height={344}></Image>
+                                </div>
+                            </div>
+
+                            <div className="process-pointer-tablet">
+                                <div className="process-tablet-icon">
+                                    <span className="icon-create-process"></span>
+                                </div>
+
+                                <div className="process-text-wrapper-tablet">
+                                    {/* <div className="tick-mark-wrapper"> */}
+                                    <h3 className="h2 text-sb text-upper-case">Create</h3>
+                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
+                                    {/* </div> */}
+
+                                    <p className="text-18 text-rg">
+                                        <span>Creativity with intention.</span>
+                                        <span>We design experiences, identities, and interactions that feel intuitive, leave an impression, and make your brand impossible to overlook.</span>
+                                    </p>
+                                </div>
+
+                                <div className="process-element-tablet">
+                                    <Image className="process-element-image-tablet" src="/images/homepage/create-elements.svg" alt="discover-element" width={292} height={350}></Image>
+
+                                </div>
+                            </div>
+
+                            <div className="process-pointer-tablet">
+                                <div className="process-tablet-icon">
+                                    <span className="icon-engineer-process"></span>
+                                </div>
+
+                                <div className="process-text-wrapper-tablet">
+                                    {/* <div className="tick-mark-wrapper"> */}
+                                    <h3 className="h2 text-sb text-upper-case">Enginee</h3>
+                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
+                                    {/* </div> */}
+
+                                    <p className="text-18 text-rg">
+                                        <span>Built for the real world.</span>
+                                        <span>From websites to digital products, we develop solutions that are scalable, reliable, and engineered to perform long after launch.</span>
+                                    </p>
+                                </div>
+
+                                <div className="process-element-tablet">
+                                    <Image className="process-element-image-tablet" src="/images/homepage/engineer-elements.svg" alt="discover-element" width={317} height={350}></Image>
+
+                                </div>
+                            </div>
+
+                            <div className="process-pointer-tablet">
+                                <div className="process-tablet-icon">
+                                    <span className="icon-refine-process"></span>
+                                </div>
+
+                                <div className="process-text-wrapper-tablet">
+                                    {/* <div className="tick-mark-wrapper"> */}
+                                    <h3 className="h2 text-sb text-upper-case">Refine</h3>
+                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
+                                    {/* </div> */}
+
+                                    <p className="text-18 text-rg">
+                                        <span>The details shape the experience.</span>
+                                        <span>We test, improve, and fine-tune every interaction because the smallest refinements often make the biggest difference.</span>
+                                    </p>
+                                </div>
+
+                                <div className="process-element-tablet">
+                                    <Image className="process-element-image-tablet" src="/images/homepage/refine-elements.svg" alt="discover-element" width={347} height={348}></Image>
+
+                                </div>
+                            </div>
+
+                            <div className="process-pointer-tablet">
+                                <div className="process-tablet-icon">
+                                    <span className="icon-deliver-svg"></span>
+                                </div>
+
+                                <div className="process-text-wrapper-tablet">
+                                    {/* <div className="tick-mark-wrapper"> */}
+                                    <h3 className="h2 text-sb text-upper-case">deliver</h3>
+                                    {/* <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image> */}
+                                    {/* </div> */}
+
+                                    <p className="text-18 text-rg">
+                                        <span>Launch is where the journey expands.</span>
+                                        <span>We deliver solutions with precision and stay invested in their growth, ensuring they continue to create value as your business evolves.</span>
+                                    </p>
+                                </div>
+
+                                <div className="process-element-tablet">
+                                    <Image className="process-element-image-tablet" src="/images/homepage/deliver-elements.svg" alt="discover-element" width={341} height={350}></Image>
                                 </div>
                             </div>
                         </div>
