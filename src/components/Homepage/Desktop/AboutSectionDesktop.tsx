@@ -1,6 +1,6 @@
 'use client';
 
-import GlassEffect from "@/components/LiquideGlass";
+import GlassEffect from "@/components/global/LiquideGlass";
 import Image from "next/image";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";

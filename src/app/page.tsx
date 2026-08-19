@@ -14,7 +14,7 @@ import StatsSectionMobile from "@/components/Homepage/Mobile/StatsSectionMobile"
 import FaqSectionMobile from "@/components/Homepage/Mobile/FaqSectionMobile";
 import InquirySectionMobile from "@/components/Homepage/Mobile/InquirySectionMobile";
 import BlogSectionMobile from "@/components/Homepage/Mobile/BlogSectionMobile";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 
 
 const TestimonialSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/TestimonialSectionDesktop"), { ssr: false } );
