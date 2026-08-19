@@ -526,8 +526,9 @@
 
 	.process-element { margin-left: 20px; }
 	.process-pointer-text { width: 500px; }
-	.process-pointer-wrapper { height: 390px; }
+	.process-pointer-wrapper { height: 460px; }
 	.process-element-image { object-fit: contain; }
+	.project-card h2 { top: 50%; left: 10px; }
 }
 
 @media (max-width: 1359px) {
@@ -683,7 +684,7 @@
 
 	.process-pointer-text p { padding-top: 10px; }
 	.process-pointer-text { width: 460px; }
-	.process-pointer-wrapper { height: 400px; }
+	.process-pointer-wrapper { height: 455px; }
 
 	.process-element { width: 220px; height: 220px; }
 	.process-element img{ width: 100%; height: 100%; object-fit: contain; }

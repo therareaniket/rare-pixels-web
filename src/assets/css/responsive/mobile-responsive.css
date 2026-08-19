@@ -322,7 +322,6 @@
     .testimonial-section .container{ padding: 0 0 0 18px; }
     .hm-testimonial-mob-text { width: calc(100% - 18px); }
 
-    .expand-faq { margin-top: 30px; }
     .faq-mobile .container-sm { padding: 0; }
     .project-mobile-last-card-overlay {
         position: absolute;
@@ -347,6 +346,8 @@
   		-webkit-box-orient: vertical;
   		overflow: hidden;
 	}
+    .faq-btn-mobile-wrapper { display: flex; align-items: center; justify-content: flex-end; width: 100%; margin-top: 30px; }
+    .website-btn { padding: 6px 12px; }
 }
 
 @media (max-width: 439px) {
@@ -536,7 +537,6 @@
     .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
 
     .faq-accordion { width: 290px; }
-    .expand-faq { margin-top: 20px; }
 }
 
 @media (max-width: 374px) {

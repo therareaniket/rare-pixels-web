@@ -259,7 +259,7 @@ export default function BlogSectionDesktop() {
                                     <p className="text-18 text-rg text-light-grey">Thoughtful perspectives on design, development, branding, and digital strategy. Practical ideas shaped by real projects, real challenges, and real business outcomes.</p>
                                 </div>
 
-                                <Link href="#" title="View All Categories" className="hm-blog-link text-20 text-md text-white site-radius-30">View All Categories <span className="icon-hero-cta-arrow cta-arrow"></span></Link>
+                                <Link href="#" title="View All Categories" className="website-btn text-20 text-md text-white site-radius-30">View All Categories <span className="icon-hero-cta-arrow cta-arrow"></span></Link>
                             </div>
                         </div>
                     </div>

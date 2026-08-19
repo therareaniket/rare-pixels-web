@@ -73,7 +73,7 @@ export default function InquirySectionMobile() {
                         </div>
                     </div>
 
-                    <Link href="#" title="Make it RARE" className="hero-link-cta inquiry-mob-cta-link text-md">
+                    <Link href="#" title="Make it RARE" className="website-btn inquiry-mob-cta-link text-md">
                         Start Your Project <span className="icon-hero-cta-arrow cta-arrow"></span>
                     </Link>
                 </div>

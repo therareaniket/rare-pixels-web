@@ -58,7 +58,6 @@ export default function ProjectsSectionDesktop() {
                         scrub: 2,
                         pin: true,
                         anticipatePin: 1,
-                        markers: true,
                     },
                 });
 
@@ -192,7 +191,6 @@ export default function ProjectsSectionDesktop() {
                     scrub: 2,
                     // pin: true,
                     // anticipatePin: 1,
-                    markers: true,
                 }
             });
 

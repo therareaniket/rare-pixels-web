@@ -341,7 +341,7 @@ h1 { text-transform: uppercase; }
 
 .speedometer-line { stroke: red; stroke-width: 4; stroke-linecap: round; transition: transform 0.5s ease; }
 .faq-btn-wrapper{ display: flex; flex-direction: column; align-items: flex-end; }
-.faq-btn{ margin-top: 30px; }
+
 
 .inquiry-form-text-wrapper{ width: 775px; }
 .inquiry-form-contact-fields{ margin-top: 60px; }
@@ -562,7 +562,7 @@ h1 { text-transform: uppercase; }
 .project-section-video { width: 100%; height: 100%; }
 .project-video-desktop { width: 100%; height: 100%; object-fit: cover; }
 
-.project-last-card-overlay h2 { writing-mode: sideways-lr;  width: max-content; height: 100%; background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(12px); padding: 0 25px; text-align: center; left: 0 !important; }
+.project-last-card-overlay h2 { writing-mode: sideways-lr;  width: max-content; height: 100%; background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(20px); padding: 0 25px; text-align: center; left: 0 !important; }
 
 /* process section */
 
@@ -601,4 +601,7 @@ h1 { text-transform: uppercase; }
 .process-element-image.active { opacity: 1; visibility: visible; }
 .process-section-tablet { display: none; }
 
-.expand-faq { margin: 0 auto; margin-top: 60px; cursor: pointer; }
+.faq-btn-wrapper-arrow { position: relative; display: flex; align-items: center; width: 100%; justify-content: flex-end; margin-top: 30px; }
+.expand-faq { position: absolute; left: 50%; transform: translateX(-50%); cursor: pointer; }
+
+.website-btn { display: flex; align-items: center; gap: 6px; padding: 6px 20px; width: max-content; background-color: var(--primary); color: white; border-radius: 30px; }

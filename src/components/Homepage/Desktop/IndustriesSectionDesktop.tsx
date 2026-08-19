@@ -123,7 +123,7 @@ export default function IndustriesSectionDesktop() {
                     start: "top top",
                     end: () => `+=${getScrollDistance() + window.innerHeight}`,
                     pin: true,
-                    scrub: 1,
+                    scrub: 0.3,
                     anticipatePin: 1,
                     invalidateOnRefresh: true,
 
@@ -152,8 +152,9 @@ export default function IndustriesSectionDesktop() {
                                 ? points[index] / max
                                 : points[Math.max(0, index - 1)] / max;
                         },
-                        duration: 0.6,
-                        ease: "power3.out",
+                        delay: 0,
+                        duration: 0.3,
+                        ease: "power1.out",
                     },
                 },
             });
