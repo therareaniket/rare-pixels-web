@@ -1,13 +1,11 @@
 'use client';
 
-import { useTheme } from "@/context/ThemeContext";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function TeamsSectionDesktop() {
-    const { theme, toggleTheme } = useTheme();
 
     return (
         <>
@@ -63,19 +61,19 @@ export default function TeamsSectionDesktop() {
                         </div>
 
                         <div className="teams-pixels-top-left teams-pixels">
-                            {theme === "light" ? <Image src="/images/homepage/teams-left-top-svg.svg" alt="" width={152} height={232}></Image> : <Image src="/images/homepage/teams-left-top-dark-svg.svg" alt="" width={152} height={232}></Image>}
+                            <Image src="/images/homepage/teams-left-top-svg.svg" alt="" width={152} height={232}></Image>
                         </div>
 
                         <div className="teams-pixels-bottom-left teams-pixels">
-                            {theme === "light" ? <Image src="/images/homepage/teams-left-bottom-svg.svg" alt="" width={186} height={205}></Image> : <Image src="/images/homepage/teams-left-bottom-dark-svg.svg" alt="" width={186} height={205}></Image>}
+                            <Image src="/images/homepage/teams-left-bottom-svg.svg" alt="" width={186} height={205}></Image>
                         </div>
 
                         <div className="teams-pixels-top-right teams-pixels">
-                            {theme === "light" ? <Image src="/images/homepage/teams-right-top-svg.svg" alt="" width={186} height={205}></Image> : <Image src="/images/homepage/teams-right-top-dark-svg.svg" alt="" width={186} height={205}></Image>}
+                            <Image src="/images/homepage/teams-right-top-svg.svg" alt="" width={186} height={205}></Image>
                         </div>
 
                         <div className="teams-pixels-bottom-right teams-pixels">
-                            {theme === "light" ? <Image src="/images/homepage/teams-right-bottom-svg.svg" alt="" width={309} height={296}></Image> : <Image src="/images/homepage/teams-right-bottom-dark-svg.svg" alt="" width={309} height={296}></Image>}
+                            <Image src="/images/homepage/teams-right-bottom-svg.svg" alt="" width={309} height={296}></Image>
                         </div>
                     </div>
                 </div>

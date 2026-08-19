@@ -17,17 +17,17 @@ import BlogSectionMobile from "@/components/Homepage/Mobile/BlogSectionMobile";
 import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 
 
-const TestimonialSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/TestimonialSectionDesktop"), { ssr: false } );
-const AboutSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/AboutSectionDesktop"), { ssr: false } );
-const ServicesSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ServicesSectionDesktop"), { ssr: false } );
-const IndustriesSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/IndustriesSectionDesktop"), { ssr: false } );
-const WhyChooseUsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/WhyChooseUsSectionDesktop"), { ssr: false } );
-const ProcessSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProcessSectionDesktop"), { ssr: false } );
-const ProjectsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ProjectsSectionDesktop"), { ssr: false } );
-const StatsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/StatsSectionDesktop"), { ssr: false } );
-const BlogSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/BlogSectionDesktop"), { ssr: false } );
-const FaqSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/FaqSectionDesktop"), { ssr: false } );
-const InquirySectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/InquirySectionDesktop"), { ssr: false } );
+import TestimonialSectionDesktop from "@/components/Homepage/Desktop/TestimonialSectionDesktop";
+import AboutSectionDesktop from "@/components/Homepage/Desktop/AboutSectionDesktop";
+import ServicesSectionDesktop from "@/components/Homepage/Desktop/ServicesSectionDesktop";
+import IndustriesSectionDesktop from "@/components/Homepage/Desktop/IndustriesSectionDesktop";
+import WhyChooseUsSectionDesktop from "@/components/Homepage/Desktop/WhyChooseUsSectionDesktop";
+import ProcessSectionDesktop from "@/components/Homepage/Desktop/ProcessSectionDesktop";
+import ProjectsSectionDesktop from "@/components/Homepage/Desktop/ProjectsSectionDesktop";
+import StatsSectionDesktop from "@/components/Homepage/Desktop/StatsSectionDesktop";
+import BlogSectionDesktop from "@/components/Homepage/Desktop/BlogSectionDesktop";
+import FaqSectionDesktop from "@/components/Homepage/Desktop/FaqSectionDesktop";
+import InquirySectionDesktop from "@/components/Homepage/Desktop/InquirySectionDesktop";
 
 
 export default function Home() {
@@ -48,39 +48,37 @@ export default function Home() {
 			<main>
 				<ReactLenis root />
 
-				{isSmallScreen ?
-					<>
-						{/* MOBILE COMPONENTS */}
-						<TestimonialSectionMobile />
-						<AboutSectionMobile />
-						<ServicesSectionMobile />
-						<IndustriesSectionMobile />
-						<WhyChooseUsSectionMobile />
-						<ProcessSectionMobile />
-						<ProjectSectionMobile />
-						<StatsSectionMobile />
-						<BlogSectionMobile />
-						<FaqSectionMobile />
-						<InquirySectionMobile />
-						<ScrollToTopButton />
-					</>
-					:
-					<>
-						{/* DESKTOP COMPONENTS */}
-						<TestimonialSectionDesktop />
-						<AboutSectionDesktop />
-						<ServicesSectionDesktop />
-						<IndustriesSectionDesktop />
-						<WhyChooseUsSectionDesktop />
-						<ProcessSectionDesktop />
-						<ProjectsSectionDesktop />
-						<StatsSectionDesktop/>
-						<BlogSectionDesktop />
-						<FaqSectionDesktop />
-						<InquirySectionDesktop />
-						<ScrollToTopButton />
-					</>
-				}
+				{/* DESKTOP */}
+				<div className="hidden min-[480px]:block">
+					<TestimonialSectionDesktop />
+					<AboutSectionDesktop />
+					<ServicesSectionDesktop />
+					<IndustriesSectionDesktop />
+					<WhyChooseUsSectionDesktop />
+					<ProcessSectionDesktop />
+					<ProjectsSectionDesktop />
+					<StatsSectionDesktop/>
+					<BlogSectionDesktop />
+					<FaqSectionDesktop />
+					<InquirySectionDesktop />
+					<ScrollToTopButton />
+				</div>
+
+				{/* MOBILE */}
+				<div className="block min-[480px]:hidden">
+					<TestimonialSectionMobile />
+					<AboutSectionMobile />
+					<ServicesSectionMobile />
+					<IndustriesSectionMobile />
+					<WhyChooseUsSectionMobile />
+					<ProcessSectionMobile />
+					<ProjectSectionMobile />
+					<StatsSectionMobile />
+					<BlogSectionMobile />
+					<FaqSectionMobile />
+					<InquirySectionMobile />
+					<ScrollToTopButton />
+				</div>
 			</main>
 		</>
 	);

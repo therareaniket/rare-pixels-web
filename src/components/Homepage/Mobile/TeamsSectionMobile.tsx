@@ -1,6 +1,5 @@
 'use client';
 
-import { useTheme } from "@/context/ThemeContext";
 import Image from "next/image";
 import Link from "next/link";
 import "@/assets/css/mobile-custom.css";
@@ -8,7 +7,6 @@ import "@/assets/css/responsive/mobile-responsive.css";
 
 export default function TeamsSectionMobile() {
 
-    const { theme, toggleTheme } = useTheme();
     return (
         <>
             <section className="section">
@@ -21,11 +19,11 @@ export default function TeamsSectionMobile() {
                         </Link>
 
                         <div className="teams-mob-pixesl-top-left">
-                            {theme === "light" ? <Image src="/images/homepage/teams-left-top-svg.svg" alt="" width={74} height={130}></Image> : <Image src="/images/homepage/teams-left-top-dark-svg.svg" alt="" width={152} height={232}></Image>}
+                            <Image src="/images/homepage/teams-left-top-svg.svg" alt="" width={74} height={130}></Image>
                         </div>  
 
                         <div className="teams-mob-pixesl-top-right">                            
-                            {theme === "light" ? <Image src="/images/homepage/teams-right-top-svg.svg" alt="" width={90} height={100}></Image> : <Image src="/images/homepage/teams-right-top-dark-svg.svg" alt="" width={186} height={205}></Image>}
+                            <Image src="/images/homepage/teams-right-top-svg.svg" alt="" width={90} height={100}></Image>
                         </div>
 
                     </div>
@@ -49,11 +47,11 @@ export default function TeamsSectionMobile() {
                         </div>
 
                         <div className="teams-mob-pixesl-bottom-left">
-                            {theme === "light" ? <Image src="/images/homepage/teams-left-bottom-svg.svg" alt="teams pixel" width={90} height={100}></Image> : <Image src="/images/homepage/teams-left-bottom-dark-svg.svg" alt="teams pixel" width={90} height={100}></Image>}
+                           <Image src="/images/homepage/teams-left-bottom-svg.svg" alt="teams pixel" width={90} height={100}></Image>
                         </div>
 
                         <div className="teams-mob-pixesl-bottom-right">
-                            {theme === "light" ? <Image src="/images/homepage/teams-right-bottom-svg.svg" alt="teams pixel" width={169} height={148}></Image> : <Image src="/images/homepage/teams-right-bottom-dark-svg.svg" alt="teams pixel" width={169} height={148}></Image>}
+                            <Image src="/images/homepage/teams-right-bottom-svg.svg" alt="teams pixel" width={169} height={148}></Image>
                         </div>
                     </div>
                 </div>

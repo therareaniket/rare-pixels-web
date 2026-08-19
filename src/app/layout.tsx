@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
 
@@ -15,13 +14,11 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   	return (
 		<html lang="en">
       		<body className="min-h-full flex flex-col">
-				<ThemeProvider>
-					<Header />
+				<Header />
 
-					{children}
+				{children}
 
-					<Footer />
-				</ThemeProvider>
+				<Footer />
 			</body>
     	</html>
   	);

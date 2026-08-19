@@ -1351,6 +1351,8 @@
 
 	.hm-abt-card-wrapper { margin-top: 30px; gap: 20px; }
 	.hm-services-title-wrapper h2 { width: 65%; }
+
+	.project-section-tablet-sticky { height: 800vh; }
 }
 
 @media (max-width: 575px) {
@@ -1407,7 +1409,6 @@
 	.industries-text-wrapper > span{ font-size: 32px; height: 36px; }
 
 	.hm-faq-title{ width: 100%; }
-	.faq-accordion{ width: 350px; }
 
 	.inquiry-form-contact-fields-tablet{ gap: 20px; }
 
@@ -1493,10 +1494,9 @@
 	.industries-image-wrapper { border-radius: 0 0 50px 0; }
 	.footer-links { justify-content: space-between; }
 
+	.footer-address-wrapper { height: max-content; }
 	.footer-address-wrapper, .footer-address {width: 100%; }
-	.footer-contact { flex-direction: column; gap: 20px; }
 
-	.footer-address-wrapper { height: 100px; }
 	.footer-copyright { gap: 5px; }
 
 	.process-element-tablet { display: none; }
@@ -1505,5 +1505,5 @@
 	.process-section-sticky { height: calc(100vh * 9 ); }
 	.project-section-tablet-sticky { height: calc( 100vh * 10 ); }
 
-	.project-card { border-radius: 12px; }
+	.project-card { height: 260px; border-radius: 12px; }
 }

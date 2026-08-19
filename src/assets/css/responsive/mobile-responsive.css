@@ -4,8 +4,8 @@
  * Generated: 2026-06-09T09:54:31.727Z
  * Responsive Design System — RarePixels
  */
-.site-radius-10{ border-radius: 10px; }
-.bg-yellowish{ background-color: #FBF9E9; }
+.site-radius-10 { border-radius: 10px; }
+.bg-yellowish { background-color: #FBF9E9; }
 
 @media (max-width: 479px) {
     .container { width: 100%; max-width: 100%; padding: 0 18px; }  
@@ -279,7 +279,7 @@
     .footer-quote-right .text-18, .footer-social-wrapper .text-18, .footer-links .text-18 { font-size: 16px; line-height: 24px; }
     .social-icon span { font-size: 18px; }
 
-    .footer-links { gap: 30px; flex-wrap: wrap; justify-content: flex-start; } 
+    .footer-links { gap: 30px; flex-wrap: wrap; justify-content: space-between; } 
     .footer-pixel-2 { width: 100px; }
 
     .testimonialreview-main { width: 100%; }
@@ -310,7 +310,6 @@
     .process-title-text { display: flex; align-items: center; gap: 10px; }
 
     .footer-add-country { flex-direction: row; gap: 30px; }
-    .footer-address-wrapper { flex-direction: column; height: 135px; gap: 15px; }
 
     .rare-pixels-company-logo { width: 90%; margin: 0 auto; }
 
@@ -357,6 +356,9 @@
     .faq-btn-wrapper-arrow { flex-direction: row-reverse; justify-content: space-between; }
     .expand-faq { position: static; transform: translateX(0); } 
     .expand-faq span { text-decoration: underline; }
+
+
+    .footer-contact { flex-direction: column; gap: 20px; }
 }
 
 @media (max-width: 439px) {
@@ -427,8 +429,9 @@
     .industries-text-wrapper > span { font-size: 28px; line-height: 36px; }
 
     .footer-quote-right h2 { font-size: 48px; line-height: 56px; }
-    /* .footer-address-wrapper { height: 90px; } */
+    .footer-links { justify-content: start; gap: 20px; }
     .footer-quote-right p { margin-bottom: 20px; }
+    /* .footer-link-col:last-child { padding-top: 20px; width: 100%; border-top: 1px dashed #161F44; } */
 
     /* process */
 
@@ -438,6 +441,8 @@
     .process-card-mob-text p{ padding-top: 10px; }
     .process-vertical-line{ left: 18px; }
     .process-vertical-line-active{ left: 18px; }
+
+
 }
 
 @media (max-width: 400px) {

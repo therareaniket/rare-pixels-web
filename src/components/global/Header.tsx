@@ -1,5 +1,4 @@
 "use client";
-import { useTheme } from "@/context/ThemeContext";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import Image from "next/image";
