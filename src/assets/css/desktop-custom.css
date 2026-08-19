@@ -668,3 +668,5 @@
 .process-element-image { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .6s ease .15s, visibility 0s linear .15s; }
 .process-element-image.active { opacity: 1; visibility: visible; }
 .process-section-tablet { display: none; }
+
+.expand-faq { margin: 0 auto; margin-top: 60px; cursor: pointer; }

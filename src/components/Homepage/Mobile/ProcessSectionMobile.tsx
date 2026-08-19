@@ -30,7 +30,7 @@ export default function ProcessSectionMobile() {
                 gsap.to(content, {
                     opacity: 1,
                     y: isOpen ? 0 : 20,
-                    duration: 0.4,
+                    duration: 1,
                     overwrite: true,
                 });
 
@@ -46,7 +46,7 @@ export default function ProcessSectionMobile() {
 
             gsap.to(activeLine, {
                 height: `${progress * 90}%`,
-                duration: 1,
+                duration: 2,
                 overwrite: true,
             });
         };

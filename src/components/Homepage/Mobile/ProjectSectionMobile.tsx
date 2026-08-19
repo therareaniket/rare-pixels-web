@@ -26,6 +26,17 @@ export default function ProjectSectionMobile() {
             });
         });
 
+                    const lastOverlay = wrapper?.querySelector(
+                ".project-mobile-last-card-overlay"
+            ) as HTMLElement;
+
+            if (lastOverlay) {
+                gsap.set(lastOverlay, {
+                    opacity: 0,
+                    visibility: "hidden",
+                });
+            }
+
         gsap.set(wrapper, {
             height: "--wrapper-height",
         });
@@ -82,6 +93,19 @@ export default function ProjectSectionMobile() {
                         duration: 0.3,
                     },
                     index - 1
+                );
+            }
+
+            if (lastOverlay) {
+                tl.to(
+                    lastOverlay,
+                    {
+                        opacity: 1,
+                        visibility: "visible",
+                        duration: 2,
+                        ease: "power1.out",
+                    },
+                    cards.length - 2
                 );
             }
         });
@@ -155,7 +179,7 @@ export default function ProjectSectionMobile() {
                         <div className="project-card-mobile project-card-mobile-2">
                             <video className="project-card-mobile-video" src="/images/homepage/projects/autobot-project.mp4" width={523} height={423} autoPlay loop muted></video>
 
-                            <div className="project-mobile-desc">
+                            <div className="project-mobile-last-card-overlay">
                                 <h3 className="text-sb h1">A.U.T.O.B.O.T</h3>
                             </div>
                         </div>
