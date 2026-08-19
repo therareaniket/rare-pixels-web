@@ -10,7 +10,7 @@
 @media (max-width: 479px) {
     .container { width: 100%; max-width: 100%; padding: 0 18px; }  
     .section { padding: 50px 0px; } 
-
+    
     h1, .h1 { font-size: 34px; line-height: 40px; margin-bottom: 14px; }
     h2, .h2 { font-size: 32px; line-height: 38px; }
     h3, .h3 { font-size: 28px; line-height: 34px; }
@@ -20,6 +20,7 @@
     .text-18 { font-size: 18px; line-height: 26px; }
     .text-16{ font-size: 16px; line-height: 22px; }
     .text-14 { font-size: 14px; line-height: 20px; }
+    .text-12 { font-size: 12px; line-height: 20px; }
     p { font-size: 14px; line-height: 18px; }
 
     .hero-content { display: flex; flex-direction: column; gap: 20px; }
@@ -181,7 +182,7 @@
     .stats-mob-card-6 { background-color: rgba(213, 216, 226, 0.1); padding: 14px;}
     .stats-mob-card-7 { background-color: rgba(253, 252, 251, 0.1); padding: 14px;}
 
-    .faq-accordion { width: 390px; }
+    .faq-accordion { width: 360px; }
     .accordion-item-wrapper { gap: 6px; }
 
     .inquiry-form-mob-wrapper { display: flex; flex-direction: column; gap: 22px; margin-top: 30px; }
@@ -348,6 +349,14 @@
 	}
     .faq-btn-mobile-wrapper { display: flex; align-items: center; justify-content: flex-end; width: 100%; margin-top: 30px; }
     .website-btn { padding: 6px 12px; }
+    .expand-faq img{ width: 20px; }
+
+    .faq-expand-wrapper { max-height: 800px; }
+
+    .faq-accordion-title { align-items: center; }
+    .faq-btn-wrapper-arrow { flex-direction: row-reverse; justify-content: space-between; }
+    .expand-faq { position: static; transform: translateX(0); } 
+    .expand-faq span { text-decoration: underline; }
 }
 
 @media (max-width: 439px) {
@@ -536,7 +545,7 @@
     .footer-add-country { gap: 20px; }
     .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
 
-    .faq-accordion { width: 290px; }
+    .faq-accordion { width: 255px; }
 }
 
 @media (max-width: 374px) {

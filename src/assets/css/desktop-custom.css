@@ -490,7 +490,7 @@ h1 { text-transform: uppercase; }
 .footer-quote-right h2 { font-size: 80px; line-height: 90px; }
 
 .footer-quote-wrapper { display: flex; align-items: center; justify-content: space-between; }
-.footer-quote-right { width: 776px; }
+.footer-quote-right { width: 776px; position: relative; z-index: 3; }
 .footer-quote-right p { margin-bottom: 40px; }
 .footer-quote-title { margin-top: 6px; }
 
@@ -511,8 +511,6 @@ h1 { text-transform: uppercase; }
 .footer-address { width: 250px; }
 .footer-address-wrapper { width: 317px; display: flex; align-items: flex-start; gap: 20px; }
 
-.scroll-top-btn{ background-color: red; }
-
 .back-top-pointer { cursor: pointer; }
 
 .footer-vr-line { width: 1px; height: 170px; background-color: #424242; margin: 0 113px; }
@@ -524,7 +522,7 @@ h1 { text-transform: uppercase; }
 .footer-add-country .active p { color: var(--primary); }
 .footer-cnct:nth-child(1) { margin-bottom: 10px; }
 
-.footer-copyright { display: flex; align-items: center; justify-content: space-between; padding-top: 60px; }
+.footer-copyright { position: relative; display: flex; align-items: center; justify-content: space-between; padding-top: 60px; z-index: 3; }
 .footer-copyright-right ul { display: flex; align-items: center; gap: 30px; }
 
 .footer { position: relative; }
@@ -562,7 +560,7 @@ h1 { text-transform: uppercase; }
 .project-section-video { width: 100%; height: 100%; }
 .project-video-desktop { width: 100%; height: 100%; object-fit: cover; }
 
-.project-last-card-overlay h2 { writing-mode: sideways-lr;  width: max-content; height: 100%; background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(20px); padding: 0 25px; text-align: center; left: 0 !important; }
+.project-last-card-overlay h2 { writing-mode: sideways-lr;  width: max-content; height: 100%; background-color: rgba(0, 0, 0, 1); padding: 0 25px; text-align: center; left: 0 !important; }
 
 /* process section */
 
@@ -605,3 +603,6 @@ h1 { text-transform: uppercase; }
 .expand-faq { position: absolute; left: 50%; transform: translateX(-50%); cursor: pointer; }
 
 .website-btn { display: flex; align-items: center; gap: 6px; padding: 6px 20px; width: max-content; background-color: var(--primary); color: white; border-radius: 30px; }
+
+.faq-expand-wrapper { max-height: 650px;  overflow: hidden; transition: max-height 1s ease-in-out; }
+.faq-expand-wrapper.expanded { max-height: 2000px; }

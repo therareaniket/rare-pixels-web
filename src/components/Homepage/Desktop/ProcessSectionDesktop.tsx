@@ -168,6 +168,7 @@ export default function ProjectsSectionDesktop() {
             const setClosed = (index: number) => {
                 cards.forEach((card, i) => {
                     card.classList.toggle("closed", i < index);
+                    card.classList.toggle("active", i >= index);
                 });
 
                 const activeIcon = cards[index]?.querySelector(
@@ -439,7 +440,7 @@ export default function ProjectsSectionDesktop() {
 
                                 <div className="process-text-wrapper-tablet">
                                     <div className="tick-mark-wrapper">
-                                        <h3 className="h2 text-sb text-upper-case">Enginee</h3>
+                                        <h3 className="h2 text-sb text-upper-case">Engineer</h3>
                                         <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
                                     </div>
 

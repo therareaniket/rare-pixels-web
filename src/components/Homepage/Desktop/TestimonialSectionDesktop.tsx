@@ -9,8 +9,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
-import AnimatedCopy from "@/components/AnimatedCopy";
-
 
 const videos = [
     "/images/homepage/testimonialvideos/dummy-1.mp4",
@@ -78,16 +76,30 @@ export default function TestimonialSectionDesktop() {
         }
     }, [activeVideoIndex, selectVideo]);
 
+useEffect(() => {
+    if (selectVideo) return;
+
+    const interval = setInterval(() => {
+        setPixelDelays(createPixelDelays(pixelBlocks.length));
+        setIsTransitioning(true);
+
+        setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+
+        setTimeout(() => {
+            setIsTransitioning(false);
+        }, 800);
+    }, 6000);
+
+    return () => clearInterval(interval);
+}, [selectVideo, createPixelDelays, pixelBlocks.length]);
+
     return (
         <>
-            <section className="section hm-testimonial-section">
+            <section id="first-section" className="section hm-testimonial-section">
                 <div className="container">
                     <div className="hm-testimonial-txt-wrapper">
                         <div className="hm-testimonial-left-text">
-                            <AnimatedCopy>
-                                <h2 className="text-sb">Proof Over Promises</h2>
-                            </AnimatedCopy>
-
+                            <h2 className="text-sb">Proof Over Promises</h2>
                             <p className="text-18 text-rg text-grey">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
                         </div>
                     </div>
@@ -137,18 +149,18 @@ export default function TestimonialSectionDesktop() {
                                 speed={2200}
                                 autoplay={{ delay: 4000 }}
 
-                                onSlideChange={() => {
-                                    setPixelDelays(createPixelDelays(pixelBlocks.length));
-                                    setIsTransitioning(true);
+                                // onSlideChange={() => {
+                                //     setPixelDelays(createPixelDelays(pixelBlocks.length));
+                                //     setIsTransitioning(true);
 
-                                    requestAnimationFrame(() => {
-                                        setActiveVideoIndex((prev) => (prev + 1) % videos.length);
-                                    });
+                                //     requestAnimationFrame(() => {
+                                //         setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+                                //     });
 
-                                    setTimeout(() => {
-                                        setIsTransitioning(false);
-                                    }, 800);
-                                }}
+                                //     setTimeout(() => {
+                                //         setIsTransitioning(false);
+                                //     }, 800);
+                                // }}
 
                                 onSwiper={(swiper) => {
                                     swiperRef.current = swiper;

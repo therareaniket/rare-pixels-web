@@ -79,7 +79,7 @@ export default function TestimonialSectionMobile() {
 
     return (
         <>
-            <section className="section testimonial-section" style={{ paddingTop: '90px' }}>
+            <section id="first-section" className="section testimonial-section" style={{ paddingTop: '90px' }}>
                 <div className="container">
                     <div className="hm-testimonial-wrapper">
                         <div className="hm-testimonial-mob-text">

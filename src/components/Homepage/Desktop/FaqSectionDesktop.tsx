@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import gsap from "gsap";
+import { useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -55,8 +56,45 @@ const faqs = [
 
 export default function FaqSectionDesktop() {
     const [expanded, setExpanded] = useState(false);
+    const [showAll, setShowAll] = useState(false);
 
-    const visibleFaqs = expanded ? faqs : faqs.slice(0, 5);
+    const handleToggle = () => {
+        if (!expanded) {
+            setShowAll(true);
+
+            setTimeout(() => {
+                gsap.fromTo(
+                    ".extra-faq",
+                    {
+                        opacity: 0,
+                        y: -30,
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
+                        stagger: 0.08,
+                        ease: "power3.out",
+                    }
+                );
+            }, 50);
+
+            setExpanded(true);
+        }
+        else {
+            gsap.to(".extra-faq", {
+                opacity: 0,
+                y: -30,
+                duration: 0.4,
+                stagger: 0.05,
+                ease: "power3.in",
+                onComplete: () => {
+                    setShowAll(false);
+                    setExpanded(false);
+                },
+            });
+        }
+    };
 
     return (
         <section className="section">
@@ -70,12 +108,12 @@ export default function FaqSectionDesktop() {
                 </div>
 
                 <div className="container-sm">
-                    <div className="faq-btn-wrapper">
+                    <div className={`faq-expand-wrapper ${expanded ? "expanded" : ""}`}>
                         <Accordion
                             defaultValue={["faq-1"]}
                             className="faq-accordion-wrapper"
                         >
-                            {visibleFaqs.map((faq, index) => (
+                            {faqs.slice(0, 5).map((faq, index) =>
                                 <div className="accordion-item-wrapper" key={index}>
                                     <span className="accordion-number h6 text-sb">
                                         {index + 1}
@@ -98,14 +136,44 @@ export default function FaqSectionDesktop() {
                                         </AccordionContent>
                                     </AccordionItem>
                                 </div>
-                            ))}
+                            )}
+
+                            {showAll &&
+                                faqs.slice(5).map((faq, index) => (
+                                    <div
+                                        className="accordion-item-wrapper extra-faq"
+                                        key={index + 5}
+                                    >
+                                        <span className="accordion-number h6 text-sb">
+                                            {index + 6}
+                                        </span>
+
+                                        <AccordionItem
+                                            value={`faq-${index + 6}`}
+                                            className="faq-accordion"
+                                        >
+                                            <AccordionTrigger className="faq-accordion-title">
+                                                <h3 className="h6 text-sb text-black">
+                                                    {faq.question}
+                                                </h3>
+                                            </AccordionTrigger>
+
+                                            <AccordionContent className="faq-content">
+                                                <p className="text-18 text-rg text-black">
+                                                    {faq.answer}
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </div>
+                                ))
+                            }
                         </Accordion>
 
                         <div className="faq-btn-wrapper-arrow">
                             <button
                                 type="button"
                                 className="expand-faq"
-                                onClick={() => setExpanded(!expanded)}
+                                onClick={handleToggle}
                             >
                                 <Image
                                     src="/images/faq-down-arrow.svg"

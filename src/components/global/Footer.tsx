@@ -22,7 +22,7 @@ export default function Footer() {
 
                             <p className="text-18 text-rg text-light-grey">Whether you&apos;re launching a new brand, designing a digital product, or scaling an existing business, we&apos;d love to hear your vision. Tell us about your project, and we&apos;ll help transform ideas into impactful digital experiences.</p>
 
-                            <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link">
+                            <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn">
                                 <span className="text-20 text-md text-white">Start Your Project </span>
                                 <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                             </Link>
@@ -142,7 +142,7 @@ export default function Footer() {
                                         {activeCountry === "india" && (
                                             <div className="footer-address-india">
                                                 <p className="text-18 text-rg text-light-grey">
-                                                    1109-10, The Prime,<br /> 
+                                                    1109-10, The Prime,<br />
                                                     Near Vakil Saheb Bridge, <br />
                                                     Ambli T Junction, Ahmedabad, <br />
                                                     Gujarat 380058.

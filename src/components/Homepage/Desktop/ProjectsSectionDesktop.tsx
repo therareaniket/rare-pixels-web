@@ -86,7 +86,7 @@ export default function ProjectsSectionDesktop() {
                     cards[cards.length - 1],
                     {
                         scale: 0.95,
-                        duration: 1,
+                        duration: 0.3,
                         ease: "power2.out"
                     }
                 );
@@ -98,12 +98,10 @@ export default function ProjectsSectionDesktop() {
                     },
                     {
                         opacity: 1,
-                        duration: 1,
-                        ease: "power2.out"
+                        duration: 0.1,
+                        ease: "power1.out"
                     }
                 );
-
-                
             });
 
             mm.add("(max-width: 1199px)", () => {
@@ -203,9 +201,7 @@ export default function ProjectsSectionDesktop() {
                     }
                 );
             });
-
             return () => mm.revert();
-
         }, sectionRef);
 
         return () => ctx.revert();
