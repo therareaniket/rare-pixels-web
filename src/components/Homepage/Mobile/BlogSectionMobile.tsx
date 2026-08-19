@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 export default function BlogSectionMobile() {
     return (
         <>
-            <section className="section blog-section">
+            <section className="section blog-section" style={{ paddingBottom: 0 }}>
                 <div className="container">
                     <div className="hm-mob-blog-title">
                         <h2 className="text-sb">Our Blog</h2>
@@ -45,7 +45,7 @@ export default function BlogSectionMobile() {
                                         <Image src="/images/homepage/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
                                     </div>
 
-                                    <h3 className="text-sb">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
+                                    <h3 className="text-sb blog-mobile-title">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
 
                                     <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
 
@@ -60,7 +60,7 @@ export default function BlogSectionMobile() {
                                         <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
                                     </div>
 
-                                    <h3 className="text-sb">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
+                                    <h3 className="text-sb blog-mobile-title">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
 
                                     <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
 
@@ -75,7 +75,7 @@ export default function BlogSectionMobile() {
                                         <Image src="/images/homepage/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
                                     </div>
 
-                                    <h3 className="text-sb">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
+                                    <h3 className="text-sb blog-mobile-title">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
 
                                     <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
 
@@ -90,7 +90,7 @@ export default function BlogSectionMobile() {
                                         <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
                                     </div>
 
-                                    <h3 className="text-sb">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
+                                    <h3 className="text-sb blog-mobile-title">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
 
                                     <p className="text-14 text-rg text-dark-grey hm-blog-mob-author"><span>By Bina Yogesh</span> | <span>May 29, 2026</span> | <span>7 mins read</span></p>
 

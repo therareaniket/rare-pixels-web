@@ -221,7 +221,7 @@ const faqs = [
 export default function FaqSectionMobile() {
   const [expanded, setExpanded] = useState(false);
 
-  const visibleFaqs = expanded ? faqs : faqs.slice(0, 5);
+  const visibleFaqs = expanded ? faqs : faqs.slice(0, 3);
 
   return (
     <section className="section faq-mobile">

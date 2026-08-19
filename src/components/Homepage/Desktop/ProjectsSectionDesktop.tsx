@@ -13,7 +13,7 @@ export default function ProjectsSectionDesktop() {
 
     const sectionRef = useRef(null);
     const wrapperRef = useRef<HTMLDivElement | null>(null);
-
+    const titleRef = useRef<HTMLDivElement | null>(null);
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -102,6 +102,8 @@ export default function ProjectsSectionDesktop() {
                         ease: "power2.out"
                     }
                 );
+
+                
             });
 
             mm.add("(max-width: 1199px)", () => {
