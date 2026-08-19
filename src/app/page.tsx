@@ -1,7 +1,8 @@
 "use client"
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-// import HeroSectionMobile from "@/components/Homepage/Mobile/HeroSectionMobile";
+import { ReactLenis } from 'lenis/react';
+
 import TestimonialSectionMobile from "@/components/Homepage/Mobile/TestimonialSectionMobile";
 import AboutSectionMobile from "@/components/Homepage/Mobile/AboutSectionMobile";
 import ServicesSectionMobile from "@/components/Homepage/Mobile/ServicesSectionMobile";
@@ -13,11 +14,9 @@ import StatsSectionMobile from "@/components/Homepage/Mobile/StatsSectionMobile"
 import FaqSectionMobile from "@/components/Homepage/Mobile/FaqSectionMobile";
 import InquirySectionMobile from "@/components/Homepage/Mobile/InquirySectionMobile";
 import BlogSectionMobile from "@/components/Homepage/Mobile/BlogSectionMobile";
-import TeamsSectionMobile from "@/components/Homepage/Mobile/TeamsSectionMobile";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-// import TeamsSectionDesktop from "@/components/Homepage/Desktop/TeamsSectionDesktop";
 
-// const HeroSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/HeroSectionDesktop"), { ssr: false } );
+
 const TestimonialSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/TestimonialSectionDesktop"), { ssr: false } );
 const AboutSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/AboutSectionDesktop"), { ssr: false } );
 const ServicesSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/ServicesSectionDesktop"), { ssr: false } );
@@ -29,7 +28,6 @@ const StatsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop
 const BlogSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/BlogSectionDesktop"), { ssr: false } );
 const FaqSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/FaqSectionDesktop"), { ssr: false } );
 const InquirySectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/InquirySectionDesktop"), { ssr: false } );
-// const TeamsSectionDesktop = dynamic( () => import("@/components/Homepage/Desktop/TeamsSectionDesktop"), { ssr: false } );
 
 
 export default function Home() {
@@ -43,17 +41,16 @@ export default function Home() {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
-	if (isSmallScreen === null) {
-		return null;
-	}
+	if (isSmallScreen === null) { return null; }
 
 	return (
 		<>
 			<main>
+				<ReactLenis root />
+
 				{isSmallScreen ?
 					<>
 						{/* MOBILE COMPONENTS */}
-						{/* <HeroSectionMobile /> */}
 						<TestimonialSectionMobile />
 						<AboutSectionMobile />
 						<ServicesSectionMobile />
@@ -62,7 +59,6 @@ export default function Home() {
 						<ProcessSectionMobile />
 						<ProjectSectionMobile />
 						<StatsSectionMobile />
-						{/* <TeamsSectionMobile /> */}
 						<BlogSectionMobile />
 						<FaqSectionMobile />
 						<InquirySectionMobile />
@@ -71,7 +67,6 @@ export default function Home() {
 					:
 					<>
 						{/* DESKTOP COMPONENTS */}
-						{/* <HeroSectionDesktop /> */}
 						<TestimonialSectionDesktop />
 						<AboutSectionDesktop />
 						<ServicesSectionDesktop />
@@ -80,7 +75,6 @@ export default function Home() {
 						<ProcessSectionDesktop />
 						<ProjectsSectionDesktop />
 						<StatsSectionDesktop/>
-						{/* <TeamsSectionDesktop/> */}
 						<BlogSectionDesktop />
 						<FaqSectionDesktop />
 						<InquirySectionDesktop />

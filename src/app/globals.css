@@ -288,7 +288,7 @@ h6, .h6 { font-size: 22px; line-height: 32px; margin-bottom: 16px; }
 
 .liquidGlass-wrapper { position: relative; display: flex; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2); }
 .liquidGlass-effect { position: absolute; z-index: 0; inset: 0; backdrop-filter: blur(3px); filter: url(#glass-distortion); overflow: hidden; }
-.liquidGlass-shine { position: absolute; inset: 0; z-index: 2; overflow: hidden; box-shadow: var(--glass-box-shadow); border-radius: 20px; }
+.liquidGlass-shine { position: absolute; inset: 0; z-index: 2; overflow: hidden; border-radius: 20px; }
 .liquidGlass-text { z-index: 3; }
 
 /* LIQUID GLASS STYLES END */

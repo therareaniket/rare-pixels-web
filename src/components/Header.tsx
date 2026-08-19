@@ -5,66 +5,55 @@ import "@/assets/css/responsive/desktop-responsive.css";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
 
 export default function Header() {
-
-    const { theme, toggleTheme } = useTheme();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSquished, setIsSquished] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const menuContainerRef = useRef<HTMLDivElement>(null);
 
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const threshold = window.innerHeight * 8; // 800vh
+    //         setIsSquished(window.scrollY > threshold);
+    //     };
+
+    //     handleScroll();
+    //     window.addEventListener("scroll", handleScroll);
+
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
+
     useEffect(() => {
-        const handleScroll = () => {
-            setIsSquished(window.scrollY > 1);
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as Node;
+
+            const clickedHamburger =
+                menuContainerRef.current?.contains(target);
+
+            const clickedMegaMenu =
+                menuRef.current?.contains(target);
+
+            if (!clickedHamburger && !clickedMegaMenu) {
+                setIsMenuOpen(false);
+            }
         };
 
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
+        document.addEventListener("mousedown", handleClickOutside);
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
 
-useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-        const target = event.target as Node;
-
-        const clickedHamburger =
-            menuContainerRef.current?.contains(target);
-
-        const clickedMegaMenu =
-            menuRef.current?.contains(target);
-
-        if (!clickedHamburger && !clickedMegaMenu) {
-            setIsMenuOpen(false);
-        }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-    };
-}, []);
-
     useEffect(() => {
-        if (isMenuOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
-        }
+        if (isMenuOpen) { document.body.style.overflow = "hidden"; } 
+        else { document.body.style.overflow = "auto"; }
 
-        return () => {
-            document.body.style.overflow = "auto";
-        };
+        return () => { document.body.style.overflow = "auto"; };
     }, [isMenuOpen]);
 
 
@@ -73,9 +62,10 @@ useEffect(() => {
             <header className="site-header" >
                 <div className="container">
                     <nav className="nav">
-                        <div className={`navbar-wrapper ${isSquished ? "header-squished" : "header-expanded"}`}>
+                        {/* <div className={`navbar-wrapper ${isSquished ? "header-squished" : "header-expanded"}`}> */}
+                        <div className="navbar-wrapper header-squished">
                             <div className="website-header-logo">
-                                <Image className="dark-mode-icon" src="/images/rp-logo-black.png" alt="dark-mode" width={174} height={28} loading="eager" />
+                                <Image className="dark-mode-icon" src="/images/rp-logo-white.png" alt="dark-mode" width={174} height={28} loading="eager" />
 
                                 {/* <div className="website-logo">
                                     <Image src="/images/website-logo-r.svg" alt="website-logo" width={19} height={25} loading="eager"></Image>
@@ -83,14 +73,8 @@ useEffect(() => {
                             </div>
 
                             <div ref={menuContainerRef} className="nav-icon-wrapper">
-                                <div
-                                    className="nav-hamburger"
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        setIsMenuOpen((prev) => !prev);
-                                    }}
-                                >
-                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/homepage/megamenu-close.svg" : "/images/light-mode-hamburger.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={30} height={30} loading="eager" />
+                                <div className="nav-hamburger" onClick={(e) => { e.stopPropagation(); setIsMenuOpen((prev) => !prev); }}>
+                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/white-close.svg" : "/images/dark-mode-hamburger.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={30} height={30} loading="eager" />
                                 </div>
                             </div>
                         </div>

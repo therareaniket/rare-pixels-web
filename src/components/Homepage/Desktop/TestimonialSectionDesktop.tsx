@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import AnimatedCopy from "@/components/AnimatedCopy";
 
 
 const videos = [
@@ -83,7 +84,9 @@ export default function TestimonialSectionDesktop() {
                 <div className="container">
                     <div className="hm-testimonial-txt-wrapper">
                         <div className="hm-testimonial-left-text">
-                            <h2 className="text-sb">Proof Over Promises</h2>
+                            <AnimatedCopy>
+                                <h2 className="text-sb">Proof Over Promises</h2>
+                            </AnimatedCopy>
 
                             <p className="text-18 text-rg text-grey">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
                         </div>

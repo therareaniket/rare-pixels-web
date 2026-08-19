@@ -11,6 +11,7 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 export const metadata: Metadata = {
   title: "RarePixels Design | UI UX Design & Development Company",
   description: "RarePixels is a top UI/UX design services company and one of the leading branding agencies in India, delivering visually stunning and user-centric digital experiences. Reshaping the perception through Creative Innovation, Unique Ideation, Design Thinking",
+  robots: "noindex, nofollow",
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
@@ -22,7 +23,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 
 					{children}
 
-					<Footer />
+					{/* <Footer /> */}
 				</ThemeProvider>
 			</body>
     	</html>
