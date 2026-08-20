@@ -42,6 +42,8 @@ export default function ProjectsSectionDesktop() {
                     }
                 });
 
+                tl.to({}, { duration: 2 });
+
                 cards.forEach((_, index) => {
                     if (index === 0) return;
 
@@ -52,7 +54,7 @@ export default function ProjectsSectionDesktop() {
                         cards.slice(index),
                         {
                             x: index * -shift,
-                            duration: 1,
+                            duration: 2,
                             ease: "none"
                         }
                     )

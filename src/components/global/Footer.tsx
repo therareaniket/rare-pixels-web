@@ -177,7 +177,7 @@ export default function Footer() {
                                             className={`footer-india ${activeCountry === "india" ? "active" : ""}`}
                                             onClick={() => setActiveCountry("india")}
                                         >
-                                            <p className="text-18 text-sb text-light-grey">India</p>
+                                            <p className="text-18 text-sb text-light-grey">IND   </p>
                                         </div>
 
                                         <div

@@ -78,7 +78,6 @@ export default function ProjectsSectionDesktop() {
                     ">"
                 );
 
-
                 const setActive = (index: number) => {
                     const state = Flip.getState(pointersRef.current);
 

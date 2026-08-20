@@ -135,7 +135,7 @@ body.menu-open {
 .mega-menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(253, 253, 253, 0.6);
+  background: rgba(253, 253, 253, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   opacity: 0;
@@ -327,7 +327,7 @@ body.menu-open {
 .why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; overflow: hidden; }
 .why-choose-us-tablet{ display: none; }
 
-.why-choose-us-image-wrapper {  position: relative; box-shadow: var(--why-choose-desktop-box); }
+.why-choose-us-image-wrapper {  position: relative; box-shadow: inset 0 -47px 22px 18px rgba(255, 255, 255, 1); background-color: red; }
 
 
 /* stats section */
@@ -645,7 +645,7 @@ body.menu-open {
     opacity: 1;
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
-    animation: drawLeft 3s ease forwards;
+    animation: drawLeft 10s ease forwards;
 }
 
 @keyframes drawLeft {
@@ -658,7 +658,7 @@ body.menu-open {
     opacity: 1;
     stroke-dasharray: 5000;
     stroke-dashoffset: -5000;
-    animation: drawRight 3s ease forwards;
+    animation: drawRight 10s ease forwards;
 }
 
 @keyframes drawRight {
@@ -668,33 +668,49 @@ body.menu-open {
 }
 
 .why-choose-us-eclipse-1.animate-left circle {
-    animation-delay: 0s;
+    animation-delay: 1s;
 }
 
 .why-choose-us-eclipse-2.animate-right circle {
-    animation-delay: .15s;
+    animation-delay: 2s;
 }
 
 .why-choose-us-eclipse-3.animate-left circle {
-    animation-delay: .3s;
+    animation-delay: 3s;
 }
 
 .why-choose-us-eclipse-4.animate-right circle {
-    animation-delay: .45s;
+    animation-delay: 4s;
 }
 
 .why-choose-us-eclipse-5.animate-left circle {
-    animation-delay: .6s;
+    animation-delay: 5s;
 }
 
 .why-choose-us-eclipse-6.animate-right circle {
-    animation-delay: .75s;
+    animation-delay: 6s;
 }
 
 .why-choose-us-eclipse-7.animate-left circle {
-    animation-delay: .9s;
+    animation-delay: 7s;
 }
 
 .why-choose-us-eclipse-8.animate-right circle {
-    animation-delay: 1.05s;
+    animation-delay: 8s;
+}
+
+.why-choose-us-desktop { overflow: hidden; }
+
+.why-choose-us-hand-image { opacity: 0; }
+.hand-scale-up { animation: handScaleUp 2s ease-out forwards; animation-delay: 1s; }
+
+@keyframes handScaleUp {
+    from {
+        opacity: 0;
+        scale: 2.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
