@@ -107,7 +107,7 @@ h1 { text-transform: uppercase; }
 
 body.menu-open {
     position: fixed;
-    top: var(--menu-scroll-top);
+    /* top: var(--menu-scroll-top); */
     left: 0;
     width: 100%;
   overflow: hidden !important;
@@ -132,7 +132,26 @@ body.menu-open {
 
 .client-initital span, .testimonial-client-text{ color: black; }
 
+.mega-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(253, 253, 253, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 998;
+}
 
+.mega-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-mega-menu {
+  z-index: 999;
+}
 
 /* testimonial section */
 .hm-testimonial-section{ position: relative; }
@@ -621,3 +640,61 @@ body.menu-open {
 .faq-expand-wrapper.expanded { max-height: 2000px; }
 
 .footer-copyright { color: #424242; opacity: 50%; }
+
+.animate-left circle {
+    opacity: 1;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation: drawLeft 3s ease forwards;
+}
+
+@keyframes drawLeft {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.animate-right circle {
+    opacity: 1;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: -5000;
+    animation: drawRight 3s ease forwards;
+}
+
+@keyframes drawRight {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.why-choose-us-eclipse-1.animate-left circle {
+    animation-delay: 0s;
+}
+
+.why-choose-us-eclipse-2.animate-right circle {
+    animation-delay: .15s;
+}
+
+.why-choose-us-eclipse-3.animate-left circle {
+    animation-delay: .3s;
+}
+
+.why-choose-us-eclipse-4.animate-right circle {
+    animation-delay: .45s;
+}
+
+.why-choose-us-eclipse-5.animate-left circle {
+    animation-delay: .6s;
+}
+
+.why-choose-us-eclipse-6.animate-right circle {
+    animation-delay: .75s;
+}
+
+.why-choose-us-eclipse-7.animate-left circle {
+    animation-delay: .9s;
+}
+
+.why-choose-us-eclipse-8.animate-right circle {
+    animation-delay: 1.05s;
+}
