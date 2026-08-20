@@ -2,6 +2,8 @@
 
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import "@/assets/css/mobile-custom.css";
+import "@/assets/css/responsive/mobile-responsive.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -244,15 +246,15 @@ export default function Footer() {
                     </div>
 
                     <div className="footer-copyright">
-                        <div className="footer-copyright-left">
-                            <p className="text-16 text-rg text-light-grey">© 2026 RarePixels Design all rights reserved.</p>
+                        <div className="footer-copyright-left footer-copyright-color">
+                            <p className="text-16 text-rg">© 2026 RarePixels Design all rights reserved.</p>
                         </div>
 
-                        <div className="footer-copyright-right">
+                        <div className="footer-copyright-right footer-copyright-color">
                             <ul>
-                                <li className="text-rg text-16 text-light-grey"> <Link href="#" title="Terms of Use">Terms of Use</Link> </li>
-                                <li className="text-rg text-16 text-light-grey"> <Link href="#" title="Privacy Policy">Privacy Policy</Link> </li>
-                                <li className="text-rg text-16 text-light-grey"> <Link href="#" title="Site Map">Site Map</Link> </li>
+                                <li className="text-rg text-16"> <Link href="#" title="Terms of Use">Terms of Use</Link> </li>
+                                <li className="text-rg text-16"> <Link href="#" title="Privacy Policy">Privacy Policy</Link> </li>
+                                <li className="text-rg text-16"> <Link href="#" title="Site Map">Site Map</Link> </li>
                             </ul>
                         </div>
                     </div>

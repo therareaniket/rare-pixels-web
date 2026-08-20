@@ -106,7 +106,7 @@
     .services-mobile-card{ width: 100%; height: max-content; position: relative; }
     .services-mobile-text-wrapper{ padding: 20px; width: 100%; height: 100%; position: relative; top: 0; left: 0;  }
     .services-mobile-text-wrapper h3{ margin-bottom: 10px; }
-    .services-detail-text{ display: flex; flex-direction: column; gap: 10px; margin-top: 30px; }
+    .services-detail-text{ display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
     .services-art-board{ position: absolute; width: 180px; height: 180px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
     .services-art-board img{ width: 100%; height: 100%; object-fit: contain; }
     .bg-purple-shade{ background-color: #D5D8E2; }
@@ -146,8 +146,10 @@
         display: flex; 
         align-items: center; 
         justify-content: center; 
+        z-index: 3;
         padding-top: 110px; 
-        box-shadow: var(--why-choose-mobile-box);
+        box-shadow: inset 0 -50px 36px -8px rgb(0, 0, 0);
+        /* background-color: red; */
     }
     .why-semicircle-1{ width: 71px; height: 71px;  }
     .why-semicircle-2{ width: 115px; height: 115px; }
@@ -159,7 +161,7 @@
     .why-semicircle-8{ width: 379px; height: 379px; }
     .why-semicircle-9{ width: 424px; height: 424px; }
 
-    .why-semicircle{ position: absolute; left: 50%; transform: translateX(-50%); opacity: 100%; z-index: -2; }
+    .why-semicircle{ position: absolute; left: 50%; transform: translateX(-50%); opacity: 100%; z-index: -1; }
     .why-choose-us-hand-image{ position: absolute; bottom: -5px; z-index: -1; }
     .why-choose-us-hand-image img{ width: 200px; }
 
@@ -277,7 +279,7 @@
     .footer-quote-right .text-18, .footer-social-wrapper .text-18, .footer-links .text-18, .footer-social-row .text-18 { font-size: 16px; line-height: 24px; }
     .social-icon span { font-size: 18px; }
 
-    .footer-links { gap: 30px; flex-wrap: wrap; justify-content: space-between; } 
+    .footer-links { gap: 30px; flex-wrap: wrap; justify-content: flex-start; } 
     .footer-pixel-2 { width: 100px; }
 
     .testimonialreview-main { width: 100%; }
@@ -361,7 +363,10 @@
     .header-website-detail { gap: 0; }
     .footer-address-wrapper { gap: 15px; }
 
-    .footer-social-icon-tablet { gap: 20px; }
+    .footer-social-icon-tablet { display: none; gap: 20px; }
+    .footer-social-icon-desktop { display: flex; flex-direction: row; }
+
+    .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
 }
 
 @media (max-width: 439px) {
@@ -542,6 +547,7 @@
     .hm-abt-site-logo img{ margin: 30px auto; }
     .footer-add-country { gap: 20px; }
     .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
+
 }
 
 @media (max-width: 374px) {

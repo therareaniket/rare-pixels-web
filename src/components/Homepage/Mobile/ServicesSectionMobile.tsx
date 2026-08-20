@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function ServicesSectionMobile() {
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ paddingBottom: 0 }}>
                 <div className="container">
                     <div className="services-mobile-title">
                         <h2 className="text-sb">What Businesses Need. Not Just What We Do.</h2>

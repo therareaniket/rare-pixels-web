@@ -47,8 +47,16 @@ export default function ProjectsSectionDesktop() {
                 const container = document.querySelector(".container-sm") as HTMLElement;
                 const title = titleRef.current as unknown as HTMLDivElement;
 
+                const containerStyles = getComputedStyle(container);
+
+                const paddingLeft = parseFloat(containerStyles.paddingLeft);
+                const paddingRight = parseFloat(containerStyles.paddingRight);
+
+                const contentWidth =
+                    container.offsetWidth - paddingLeft - paddingRight;
+
                 const moveX =
-                    (container.offsetWidth - title.offsetWidth) / 2;
+                    (contentWidth - title.offsetWidth) / 2;
 
                 const tl = gsap.timeline({
                     scrollTrigger: {

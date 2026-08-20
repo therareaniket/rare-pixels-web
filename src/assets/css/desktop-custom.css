@@ -639,7 +639,7 @@ body.menu-open {
 .faq-expand-wrapper { max-height: 650px;  overflow: hidden; transition: max-height 1s ease-in-out; }
 .faq-expand-wrapper.expanded { max-height: 2000px; }
 
-.footer-copyright { color: #424242; opacity: 50%; }
+.footer-copyright-color { color: rgba(198, 198, 198, 50%); }
 
 /* .animate-left circle {
     opacity: 1;

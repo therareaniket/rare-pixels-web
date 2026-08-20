@@ -42,7 +42,7 @@ export default function ProjectsSectionDesktop() {
                     }
                 });
 
-                tl.to({}, { duration: 2 });
+                tl.to({}, { duration: 1 });
 
                 cards.forEach((_, index) => {
                     if (index === 0) return;
