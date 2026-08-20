@@ -35,7 +35,7 @@ export default function Header() {
     }, []);
 
     useEffect(() => {
-        if (isMenuOpen) { document.body.style.overflow = "hidden"; } 
+        if (isMenuOpen) { document.body.style.overflow = "hidden"; }
         else { document.body.style.overflow = "auto"; }
 
         return () => { document.body.style.overflow = "auto"; };
@@ -631,8 +631,9 @@ export default function Header() {
                                 <div className="brand-quote">
                                     <span className="h3 text-sb">Elevate Your Brand</span>
 
-                                    <Link href="#" title="Make it RARE" className="hero-link-cta text-md text-20">
-                                        Start Your Project <span className="icon-hero-cta-arrow cta-arrow"></span>
+                                    <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link header-btn website-btn">
+                                        <span className="text-20 text-md text-white">Start Your Project </span>
+                                        <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                     </Link>
                                 </div>
 

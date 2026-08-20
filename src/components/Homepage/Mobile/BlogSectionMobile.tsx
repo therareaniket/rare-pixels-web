@@ -107,7 +107,10 @@ export default function BlogSectionMobile() {
 
                             <p className="text-rg text-light-grey">Thoughtful perspectives on design, development, branding, and digital strategy. Practical ideas shaped by real projects, real challenges, and real business outcomes.</p>
 
-                            <Link href="#" title="View All Categories" className="hm-mob-blog-link text-16 text-md text-white site-radius-10">View All Categories <span className="icon-hero-cta-arrow cta-arrow"></span></Link>
+                            <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn blog-mobile-btn">
+                                <span className="text-20 text-md text-white">View All Categories </span>
+                                <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
+                            </Link>
                         </div>
                     </div>
                 </div>

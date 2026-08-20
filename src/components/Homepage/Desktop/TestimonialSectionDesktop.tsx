@@ -76,22 +76,22 @@ export default function TestimonialSectionDesktop() {
         }
     }, [activeVideoIndex, selectVideo]);
 
-useEffect(() => {
-    if (selectVideo) return;
+    useEffect(() => {
+        if (selectVideo) return;
 
-    const interval = setInterval(() => {
-        setPixelDelays(createPixelDelays(pixelBlocks.length));
-        setIsTransitioning(true);
+        const interval = setInterval(() => {
+            setPixelDelays(createPixelDelays(pixelBlocks.length));
+            setIsTransitioning(true);
 
-        setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+            setActiveVideoIndex((prev) => (prev + 1) % videos.length);
 
-        setTimeout(() => {
-            setIsTransitioning(false);
-        }, 800);
-    }, 6000);
+            setTimeout(() => {
+                setIsTransitioning(false);
+            }, 800);
+        }, 6000);
 
-    return () => clearInterval(interval);
-}, [selectVideo, createPixelDelays, pixelBlocks.length]);
+        return () => clearInterval(interval);
+    }, [selectVideo, createPixelDelays, pixelBlocks.length]);
 
     return (
         <>

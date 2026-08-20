@@ -103,6 +103,7 @@ h1 { text-transform: uppercase; }
 .menu-company-contact { width: 287px; }
 .menu-social-icon { width: 287px; }
 .header-website-detail { display: flex; align-items: flex-start; justify-content: space-between; padding: 0 14px; }
+.header-btn { margin-top: 0; }
 
 .menu-social-title, .contact-title, .head-add-country { margin-bottom: 14px; }
 .head-add-country { display: flex; gap: 20px; }
@@ -290,11 +291,11 @@ h1 { text-transform: uppercase; }
 .why-choose-us-text-wrapper{ width: 780px; }
 .why-choose-us-card{ width: 370px; }
 .why-choose-us-pointer-wrapper{ margin-top: 60px; display: flex; align-items: center; justify-content: space-between; position: relative; }
-.why-choose-us-pointer-cards{ display: flex; flex-direction: column; gap: 120px; }
+.why-choose-us-pointer-cards{ display: flex; flex-direction: column; gap: 120px; position: relative; z-index: 10; }
 .why-choose-us-eclipse{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; }
 .why-choose-us-eclipse{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; }
-.why-choose-us-content-wrapper{ position: relative; }
-.why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; overflow: hidden; }
+.why-choose-us-content-wrapper{ position: relative; z-index: 10; }
+/* .why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; overflow: hidden; } */
 .why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; overflow: hidden; }
 .why-choose-us-tablet{ display: none; }
 
@@ -539,6 +540,7 @@ h1 { text-transform: uppercase; }
 .menu-icon-open { padding: 5px; }
 
 .hm-blog-wrapper-swiper { display: none; }
+.footer-social-icon-tablet { display: none; }
 
 /* project section */
 
@@ -608,3 +610,5 @@ h1 { text-transform: uppercase; }
 
 .faq-expand-wrapper { max-height: 650px;  overflow: hidden; transition: max-height 1s ease-in-out; }
 .faq-expand-wrapper.expanded { max-height: 2000px; }
+
+.footer-copyright { color: #424242; opacity: 50%; }

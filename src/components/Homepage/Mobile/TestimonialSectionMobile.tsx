@@ -26,7 +26,7 @@ export default function TestimonialSectionMobile() {
 
     const pixelBlocks = useMemo(() => Array.from({ length: 320 }), []);
     const createPixelDelays = useCallback((count: number) =>
-        Array.from({ length: count }, () => `${(Math.random() * 0.35).toFixed(3)}s`)
+        Array.from({ length: count }, () => `${(Math.random() * 0.8).toFixed(3)}s`)
         , []);
 
     const [pixelDelays, setPixelDelays] = useState(() =>
@@ -76,6 +76,23 @@ export default function TestimonialSectionMobile() {
             mainVideoRef.current.play().catch(() => { });
         }
     }, [activeVideoIndex, selectVideo]);
+
+    useEffect(() => {
+        if (selectVideo) return;
+
+        const interval = setInterval(() => {
+            setPixelDelays(createPixelDelays(pixelBlocks.length));
+            setIsTransitioning(true);
+
+            setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+
+            setTimeout(() => {
+                setIsTransitioning(false);
+            }, 800);
+        }, 6000);
+
+        return () => clearInterval(interval);
+    }, [selectVideo, createPixelDelays, pixelBlocks.length]);
 
     return (
         <>
@@ -132,8 +149,8 @@ export default function TestimonialSectionMobile() {
                             spaceBetween={20}
                             slidesPerView={1.2}
                             loop={true}
-                            speed={1000}
-                            autoplay={{ delay: 2500 }}
+                            speed={2200}
+                            autoplay={{ delay: 4000 }}
                             allowTouchMove={true}
                             grabCursor={true}
                             simulateTouch={true}
@@ -144,18 +161,18 @@ export default function TestimonialSectionMobile() {
                             longSwipes={true}
                             longSwipesRatio={0.4}
 
-                            onSlideChange={() => {
-                                setPixelDelays(createPixelDelays(pixelBlocks.length));
-                                setIsTransitioning(true);
+                            // onSlideChange={() => {
+                            //     setPixelDelays(createPixelDelays(pixelBlocks.length));
+                            //     setIsTransitioning(true);
 
-                                requestAnimationFrame(() => {
-                                    setActiveVideoIndex((prev) => (prev + 1) % videos.length);
-                                });
+                            //     requestAnimationFrame(() => {
+                            //         setActiveVideoIndex((prev) => (prev + 1) % videos.length);
+                            //     });
 
-                                setTimeout(() => {
-                                    setIsTransitioning(false);
-                                }, 800);
-                            }}
+                            //     setTimeout(() => {
+                            //         setIsTransitioning(false);
+                            //     }, 800);
+                            // }}
 
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;

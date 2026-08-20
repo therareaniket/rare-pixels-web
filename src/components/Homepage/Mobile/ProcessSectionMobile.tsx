@@ -23,6 +23,8 @@ export default function ProcessSectionMobile() {
 
                 const isLastCard = i === cards.length - 1;
                 const isOpen = isLastCard ? true : i >= activeIndex;
+                const isCompleted = i < activeIndex;
+                const isLastCompleted = activeIndex >= cards.length;
 
                 card.classList.toggle("active", isOpen);
                 card.classList.toggle("completed", !isOpen);
@@ -35,11 +37,16 @@ export default function ProcessSectionMobile() {
                 });
 
                 gsap.to(tick, {
-                    opacity: isLastCard ? 1 : isOpen ? 0 : 1,
-                    scale: isLastCard ? 1 : isOpen ? 0.5 : 1,
+                    opacity: isLastCard
+                        ? (isLastCompleted ? 1 : 0)
+                        : (isCompleted ? 1 : 0),
+                    scale: isLastCard
+                        ? (isLastCompleted ? 1 : 0.5)
+                        : (isCompleted ? 1 : 0.5),
                     duration: 0.3,
                     overwrite: true,
                 });
+
             });
 
             const progress = activeIndex / cards.length;

@@ -28,7 +28,7 @@ export default function Footer() {
                             </Link>
                         </div>
 
-                        <div className="footer-social-wrapper">
+                        <div className="footer-social-wrapper footer-social-icon-desktop">
                             <div className="footer-social-row-1 footer-social-row">
                                 <div className="social-icon text-light-grey">
                                     <Link href="" title="linkedin">
@@ -64,6 +64,56 @@ export default function Footer() {
                                     <Link href="#" title="twitter">
                                         <span className="icon-twitter"></span>
                                         <p className="text-upper-case text-18 text-rg">Twitter</p>
+                                    </Link>
+                                </div>
+
+                                <div className="social-icon text-light-grey">
+                                    <Link href="#" title="youtube">
+                                        <span className="icon-youtube"></span>
+                                        <p className="text-upper-case text-18 text-rg">Youtube</p>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="footer-social-icon-tablet">
+                            <div className="footer-social-row-1 footer-social-row">
+                                <div className="social-icon text-light-grey">
+                                    <Link href="" title="linkedin">
+                                        <span className="icon-linkedin"></span>
+                                        <p className="text-upper-case text-18 text-rg">LinkedIn</p>
+                                    </Link>
+                                </div>
+
+                                <div className="social-icon text-light-grey">
+                                    <Link href="#" title="twitter">
+                                        <span className="icon-twitter"></span>
+                                        <p className="text-upper-case text-18 text-rg">Twitter</p>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="footer-social-row-2 footer-social-row">
+                                <div className="social-icon text-light-grey">
+                                    <Link href="#" title="facebook">
+                                        <span className="icon-facebook"></span>
+                                        <p className="text-upper-case text-18 text-rg">Facebook</p>
+                                    </Link>
+                                </div>
+
+                                <div className="social-icon text-light-grey">
+                                    <Link href="#" title="threads">
+                                        <span className="icon-threads"></span>
+                                        <p className="text-upper-case text-18 text-rg">Threads</p>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="footer-social-row-2 footer-social-row">
+                                <div className="social-icon text-light-grey">
+                                    <Link href="#" title="instagram">
+                                        <span className="icon-instagram"></span>
+                                        <p className="text-upper-case text-18 text-rg">Instagram</p>
                                     </Link>
                                 </div>
 

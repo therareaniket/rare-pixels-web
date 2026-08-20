@@ -3,6 +3,7 @@
 import Link from "next/link";
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
+import Image from "next/image";
 
 export default function InquirySectionMobile() {
     return (
@@ -73,8 +74,9 @@ export default function InquirySectionMobile() {
                         </div>
                     </div>
 
-                    <Link href="#" title="Make it RARE" className="website-btn inquiry-mob-cta-link text-md text-16">
-                        Start Your Project <span className="icon-hero-cta-arrow cta-arrow"></span>
+                    <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn">
+                        <span className="text-20 text-md text-white">Start Your Project </span>
+                        <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                     </Link>
                 </div>
             </section>

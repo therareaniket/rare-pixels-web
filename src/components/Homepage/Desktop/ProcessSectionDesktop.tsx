@@ -167,17 +167,34 @@ export default function ProjectsSectionDesktop() {
 
             const setClosed = (index: number) => {
                 cards.forEach((card, i) => {
-                    card.classList.toggle("closed", i < index);
-                    card.classList.toggle("active", i >= index);
+                    const isLastCard = i === cards.length - 1;
+
+                    card.classList.toggle(
+                        "closed",
+                        isLastCard ? false : i < index
+                    );
+
+                    card.classList.toggle(
+                        "active",
+                        isLastCard ? true : i >= index
+                    );
+
+                    card.classList.toggle(
+                        "completed",
+                        isLastCard
+                            ? index >= cards.length
+                            : i < index
+                    );
                 });
 
-                const activeIcon = cards[index]?.querySelector(
-                    ".process-tablet-icon"
-                ) as HTMLElement;
+                const activeIcon = cards[Math.min(index, cards.length - 1)]
+                    ?.querySelector(".process-tablet-icon") as HTMLElement;
 
                 if (activeIcon && completedLineRef.current) {
                     gsap.to(completedLineRef.current, {
-                        height: activeIcon.offsetTop + activeIcon.offsetHeight / 2,
+                        height:
+                            activeIcon.offsetTop +
+                            activeIcon.offsetHeight / 2,
                         duration: 0.5,
                         ease: "power2.out",
                     });
@@ -215,6 +232,13 @@ export default function ProjectsSectionDesktop() {
                     }
                 });
             });
+
+            tl.to({}, {
+                duration: 3,
+                onStart: () => {
+                    setClosed(cards.length);
+                },
+            })
 
             return () => {
                 tl.scrollTrigger?.kill();

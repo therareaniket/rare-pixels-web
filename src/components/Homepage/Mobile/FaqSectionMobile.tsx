@@ -106,8 +106,6 @@ export default function FaqSectionMobile() {
             what we offer, and how we can support your next project.
           </p>
         </div>
-
-        <div className="container-sm">
           <div className={`faq-expand-wrapper ${expanded ? "expanded" : ""}`}>
             <Accordion
               defaultValue={["faq-1"]}
@@ -175,21 +173,18 @@ export default function FaqSectionMobile() {
                 className="expand-faq"
                 onClick={handleToggle}
               >
-                {/* <Image
+                <Image
                   src="/images/faq-down-arrow.svg"
                   alt="faq"
                   width={30}
                   height={52}
                   className={expanded ? 'rotate-180 transition-all' : 'transition-all'}
-                /> */}
+                />
 
-                <span className="text-12 text-primary text-rg">EXPAND</span>
+                {/* <span className="text-12 text-primary text-rg">EXPAND</span> */}
               </button>
-
-              <Link href="#" title="Ask Your Queries" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-btn website-btn" >
-                <span className="text-16 text-md text-white">
-                  Ask Your Queries
-                </span>
+              <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-mobile-btn website-btn">
+                <span className="text-20 text-md text-white">Ask Your Queries </span>
                 <Image
                   src="/images/homepage/faq-mic.svg"
                   alt="arrow-for-navigation"
@@ -199,7 +194,7 @@ export default function FaqSectionMobile() {
               </Link>
             </div>
           </div>
-        </div>
+
       </div>
     </section>
   );
