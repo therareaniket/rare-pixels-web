@@ -641,7 +641,7 @@ body.menu-open {
 
 .footer-copyright { color: #424242; opacity: 50%; }
 
-.animate-left circle {
+/* .animate-left circle {
     opacity: 1;
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
@@ -713,4 +713,4 @@ body.menu-open {
         opacity: 1;
         scale: 1;
     }
-}
+} */
