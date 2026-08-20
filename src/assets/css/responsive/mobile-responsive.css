@@ -364,7 +364,7 @@
     .footer-address-wrapper { gap: 15px; }
 
     .footer-social-icon-tablet { display: none; gap: 20px; }
-    .footer-social-icon-desktop { display: flex; flex-direction: row; }
+    .footer-social-icon-desktop { display: flex; flex-direction: row; gap: 40px; }
 
     .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
 }
