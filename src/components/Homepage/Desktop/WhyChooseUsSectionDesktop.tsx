@@ -76,7 +76,7 @@ export default function WhyChooseUsSectionDesktop() {
                             </div>
 
                             <div className="why-choose-us-image-wrapper">
-                                <div className="why-choose-us-images">
+                                {/* <div className="why-choose-us-images">
                                     <div className={`why-choose-us-eclipse-1 why-choose-us-eclipse ${isVisible ? "animate-left" : ""}`}>
                                         <svg width="354" height="212" viewBox="0 0 354 212" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="177" cy="177" r="176" stroke="url(#paint0_linear_2609_3174)" stroke-width="2" />
@@ -172,7 +172,7 @@ export default function WhyChooseUsSectionDesktop() {
                                             </defs>
                                         </svg>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className={`why-choose-us-hand-image ${isVisible ? "hand-scale-up" : ""}`}>
                                     <Image src="/images/homepage/why-choose-us/why-choose-us-hand.png" alt="why-choose-us-hand-image" width={412} height={684}></Image>
