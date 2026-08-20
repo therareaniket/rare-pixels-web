@@ -11,6 +11,20 @@ export default function Header() {
     const [isSquished, setIsSquished] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const menuContainerRef = useRef<HTMLDivElement>(null);
+    const menuScrollPositionRef = useRef(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSquished(window.scrollY > 1);
+        };
+
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -35,12 +49,21 @@ export default function Header() {
     }, []);
 
     useEffect(() => {
-        if (isMenuOpen) { document.body.style.overflow = "hidden"; }
-        else { document.body.style.overflow = "auto"; }
+        const scrollY = window.scrollY;
 
-        return () => { document.body.style.overflow = "auto"; };
+        if (isMenuOpen) {
+            document.body.style.setProperty("--menu-scroll-top", `-${scrollY}px`);
+            document.body.classList.add("menu-open");
+        } else {
+            document.body.classList.remove("menu-open");
+            window.scrollTo(0, scrollY);
+        }
+
+        return () => {
+            document.body.classList.remove("menu-open");
+            document.body.style.removeProperty("--menu-scroll-top");
+        };
     }, [isMenuOpen]);
-
 
     return (
         <>
@@ -66,7 +89,7 @@ export default function Header() {
                     </nav >
 
                     <div className="mega-menu-background-blurr">
-                        <div ref={menuRef} className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""}`} >
+                        <div ref={menuRef} data-lenis-prevent className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""}`} >
                             <div className="header-pages-link-wrapper header-links-for-desktop">
                                 <ul className="header-menu-link-wrapper">
                                     <li className="menu-link">

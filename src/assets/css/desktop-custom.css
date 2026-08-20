@@ -105,6 +105,15 @@ h1 { text-transform: uppercase; }
 .header-website-detail { display: flex; align-items: flex-start; justify-content: space-between; padding: 0 14px; }
 .header-btn { margin-top: 0; }
 
+body.menu-open {
+    position: fixed;
+    top: var(--menu-scroll-top);
+    left: 0;
+    width: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+
 .menu-social-title, .contact-title, .head-add-country { margin-bottom: 14px; }
 .head-add-country { display: flex; gap: 20px; }
 .head-add-country span:nth-child(1){ color: var(--primary); }
