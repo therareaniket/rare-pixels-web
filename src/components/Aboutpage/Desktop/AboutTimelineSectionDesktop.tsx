@@ -2,6 +2,7 @@
 
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import Image from "next/image";
 
 export default function AboutTimelineSectionDesktop() {
     return (
@@ -19,24 +20,89 @@ export default function AboutTimelineSectionDesktop() {
                         </div>
                     </div>
 
+                    <div className="time-line-hr-wrapper">
+                        <div className="timeline-hr"></div>
+
+                        <div className="timeline-dot tablet-dot-1"></div>
+                        <div className="timeline-dot tablet-dot-2"></div>
+                        <div className="timeline-dot tablet-dot-3"></div>
+                    </div>
+
                     <div className="abt-timeline-desktop-wrapper">
                         <div className="abt-timeline-desktop-date">
-                            <span className="abt-timeline-titledate">2024</span>
-                            {/* <span className="abt-timeline-titledate">2025</span> */}
-                            {/* <span className="abt-timeline-titledate">2026</span> */}
+                            <span className="abt-timeline-titledate text-sb">2024</span>
+                            {/* <span className="abt-timeline-titledate text-sb">2025</span> */}
+                            {/* <span className="abt-timeline-titledate text-sb">2026</span> */}
                         </div>
 
                         <div className="abt-timeline-content-wrapper">
                             <div className="abt-timeline-content-left">
-
+                                <Image src="/images/aboutpage/about-timeline/timeline-2026.svg" alt="timeline-2026" width={291} height={278}></Image>
+                                {/* <Image src="/images/aboutpage/about-timeline/timeline-2025.svg" alt="timeline-2025" width={291} height={278}></Image> */}
+                                {/* <Image src="/images/aboutpage/about-timeline/timeline-2025.svg" alt="timeline-2025" width={291} height={278}></Image> */}
                             </div>
 
                             <div className="abt-timeline-content-right">
-                                <span className="h3 text-sb text-white">2026</span>
+                                {/* <div className="time-line-2024">
+                                    <span className="h3 text-sb text-white">2024</span>
 
-                                <h6 className="text-sb text-upper-case text-white">Shaping What&apos;s Next</h6>
+                                    <h6 className="text-sb text-upper-case text-white">The Launch of RarePixels</h6>
 
-                                <p className="text-18 text-rg text-white">Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.</p>
+                                    <p className="text-18 text-rg text-white">From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.</p>
+                                </div> */}
+
+                                {/* <div className="time-line-2025">
+                                    <span className="h3 text-sb text-white">2025</span>
+
+                                    <h6 className="text-sb text-upper-case text-white">Purposeful Growth</h6>
+
+                                    <p className="text-18 text-rg text-white">Every project brought new challenges, fresh perspectives, and valuable opportunities to grow. As RarePixels expanded its reach, we continued refining our approach and strengthening our expertise across multiple disciplines. The trust placed in us by growing brands allowed us to take on more ambitious projects, and create experiences that combined creativity, strategy, and technology.</p>
+                                </div> */}
+
+                                <div className="time-line-2026">
+                                    <span className="h3 text-sb text-white">2026</span>
+
+                                    <h6 className="text-sb text-upper-case text-white">Shaping What&apos;s Next</h6>
+
+                                    <p className="text-18 text-rg text-white">Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="abt-timeline-tablet">
+                        <div className="timeline-tablet-dates">
+                            <span className="h5 text-sb active">2024</span>
+                            <span className="h5 text-sb">2025</span>
+                            <span className="h5 text-sb">2026</span>
+                        </div>
+
+                        <div className="timeline-content-wrapper-tablet">
+                            <div className="timeline-tablet-image-wrapper">
+                                <Image src="/images/aboutpage/about-timeline/timeline-2024.svg" alt="timeline-2025" width={291} height={278}></Image>
+                                {/* <Image src="/images/aboutpage/about-timeline/timeline-2025.svg" alt="timeline-2025" width={291} height={278}></Image> */}
+                                {/* <Image src="/images/aboutpage/about-timeline/timeline-2026.svg" alt="timeline-2026" width={291} height={278}></Image> */}
+                            </div>
+
+                            <div className="timeline-text-wrapper-desktop">
+                                <div className="time-line-2024">
+                                    <h6 className="text-sb text-upper-case text-white">The Launch of RarePixels</h6>
+
+                                    <p className="text-18 text-rg text-white">From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.</p>
+                                </div>
+
+                                {/* <div className="time-line-2025">
+                                    <h6 className="text-sb text-upper-case text-white">Purposeful Growth</h6>
+
+                                    <p className="text-18 text-rg text-white">Every project brought new challenges, fresh perspectives, and valuable opportunities to grow. As RarePixels expanded its reach, we continued refining our approach and strengthening our expertise across multiple disciplines. The trust placed in us by growing brands allowed us to take on more ambitious projects, and create experiences that combined creativity, strategy, and technology.</p>
+                                </div> */}
+
+                                {/* <div className="time-line-2026">
+                                    <h6 className="text-sb text-upper-case text-white">Shaping What&apos;s Next</h6>
+
+                                    <p className="text-18 text-rg text-white">Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.</p>
+                                </div> */}
                             </div>
                         </div>
                     </div>

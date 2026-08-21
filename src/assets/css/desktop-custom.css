@@ -725,3 +725,17 @@ body.menu-open {
 .abt-timeline-title-left h3{ margin-bottom: 0; margin-top: 40px; }
 .abt-timeline-title-right { width: 481px; }
 .abt-timeline-content-right { width: 500px; }
+
+.timeline-hr { width: 100%; height: 1px; background-color: #C6C6C6; margin-top: 60px; margin-bottom: 40px; }
+
+.abt-timeline-titledate { font-size: 80px; line-height: 90px; color: rgba(198, 198, 198, 0.5); padding-top: 20px; }
+.abt-timeline-content-right h6 { margin-bottom: 14px; margin-top: 30px; }
+
+.abt-timeline-content-wrapper { display: flex; align-items: flex-start; gap: 120px; width: max-content; }
+
+.abt-timeline-desktop-wrapper { display: flex; align-items: flex-start; justify-content: space-between; }
+
+.time-line-hr-wrapper { position: relative; }
+
+.timeline-dot { width: 12px; height: 12px; border-radius: 50%; background-color: var(--primary); position: absolute; top: -5px; right: 450px; }
+.abt-timeline-tablet { display: none; }
