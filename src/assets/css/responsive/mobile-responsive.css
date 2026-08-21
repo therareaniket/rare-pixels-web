@@ -397,7 +397,7 @@
     .time-line-hr { width: 100%; height: 1px; background-color: rgba(198, 198, 198, 0.5); margin-top: 30px; margin-bottom: 10px; }
     .timeline-date-wrapper { display: flex; align-items: flex-start; justify-content: space-between; }
     .timeline-date-wrapper span{ color: #C6C6C6; opacity: 50%; }
-    .timeline-date-wrapper span.active{ color: var(--primary); opacity: 100%; }
+    .timeline-date-wrapper span.active{ color: white; opacity: 100%; }
 
     .timeline-hr-mobile { position: relative; }
     .timeline-dot-1 { position: absolute; top: -5px; left: 25px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--primary); }
@@ -408,6 +408,13 @@
     .timeline-image-mobile-wrapper { width: 250px; height: 250px; }
     .timeline-image-mobile-wrapper img{ width: 100%; height: 100%; object-fit: contain; }
     .timeline-content-wrapper { display: flex; flex-direction: column; align-items: center; margin-top: 25px; }
+
+    .abt-mis-vis-title-mobile { position: relative; margin-top: 30px; }
+    .abt-mis-vis-quote { position: absolute; top: -30px; }
+    .abt-mis-vis-mobile-video { width: 250px; height: 250px; margin: 30px auto; }
+    .abt-mis-vis-mobile-video img{ width: 100%; height: 100%; object-fit: contain; }
+
+    .abt-vis-mobile { margin-top: 20px; margin-bottom: 14px; }
 }
 
 @media (max-width: 439px) {
@@ -597,6 +604,8 @@
 
     .timeline-dot-1 { left: 20px; }
     .timeline-dot-3 { right: 20px; }
+
+    .abt-mis-vis-mobile-video { width: 200px; height: 200px; margin: 25px auto; }
 }
 
 @media (max-width: 374px) {

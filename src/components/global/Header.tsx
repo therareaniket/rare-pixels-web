@@ -97,7 +97,7 @@ export default function Header() {
                         <div className="header-pages-link-wrapper header-links-for-desktop">
                             <ul className="header-menu-link-wrapper">
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="/">
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
@@ -199,7 +199,7 @@ export default function Header() {
                         <div className="header-pages-link-wrapper header-links-for-tablet">
                             <ul className="header-menu-link-wrapper">
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="/">
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
@@ -465,7 +465,7 @@ export default function Header() {
                         <div className="header-links-wrapper-for-mobile">
                             <ul>
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="/">
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
@@ -476,7 +476,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="About">
+                                    <Link href="/About">
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>

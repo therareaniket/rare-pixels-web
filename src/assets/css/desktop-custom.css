@@ -739,3 +739,15 @@ body.menu-open {
 
 .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background-color: var(--primary); position: absolute; top: -5px; right: 450px; }
 .abt-timeline-tablet { display: none; }
+
+.abt-mis-vis-title-desktop h2 { font-size: 80px; line-height: 90px; margin-bottom: 40px; }
+
+.abt-mis-vis-title-desktop-left { width: 945px; padding-top: 85px; padding-left: 44px; position: relative; }
+.abt-mis-vis-quote-desktop { position: absolute; top: 0; left: 0; }
+
+.abt-mis-vis-title-desktop { display: flex; align-items: flex-end; justify-content: space-between; }
+.abt-mis-vis-title-desktop-right { margin-right: 72px; }
+
+.abt-mis-vis-content-desktop { width: 1200px; margin: 0 auto; margin-top: 60px; display: flex; align-items: center; justify-content: space-between; }
+.abt-mis-vis-content-left { width: 507px; }
+.abt-mis-desktop { margin: 30px 0; }

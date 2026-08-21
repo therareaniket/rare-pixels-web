@@ -138,7 +138,7 @@ export default function Footer() {
                             <div className="footer-links">
                                 <div className="footer-link-col">
                                     <ul>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="home">Home</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"> <Link href="/" title="home">Home</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="/About" title="about">About</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="#" title="industries">Industries</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="#" title="projects">Projects</Link> </li>
