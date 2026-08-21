@@ -9,7 +9,7 @@ export default function AboutSectionDesktop() {
 
     return (
         <>
-            <section className="section section-bg-blue ">
+            <section className="section section-bg-blue">
                 <div className="container">
                     <div className="abt-section-wrapper">
                         <div className="hm-about-main">

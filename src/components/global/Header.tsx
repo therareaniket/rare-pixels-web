@@ -109,7 +109,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="/About">
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>
@@ -211,7 +211,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="/About">
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>
@@ -476,7 +476,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="About">
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>

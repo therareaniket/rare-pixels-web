@@ -143,6 +143,15 @@
 }
 
 @font-face {
+    font-family: 'strichpunkt-exbd';
+    src: url('../../public/fonts/StrichpunktSans-ExtraBold.woff2') format('woff2'),
+    url('../../public/fonts/StrichpunktSans-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'icomoon';
     src:  url('../../public/fonts/icon/icomoon.ttf?9q2s0s') format('truetype'),
         url('../../public/fonts/icon/icomoon.woff?9q2s0s') format('woff');
@@ -267,6 +276,7 @@ body {
 .text-md { font-family: 'strichpunkt-md'; }
 .text-sb { font-family: 'strichpunkt-sb'; }
 .text-bd { font-family: 'strichpunkt-bd'; }
+.text-extra-bold { font-family: 'strichpunkt-exbd'; }
 
 .container { max-width: calc(1600px + 36px); padding: 0 18px; margin: 0 auto; }
 .container-sm { max-width: calc(1440px + 36px); padding: 0 18px; margin: 0 auto; }  
