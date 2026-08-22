@@ -8,8 +8,8 @@ const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 
 const PROJECT_DATA = [
     { id: "proj-1", title: "DJK", videoSrc: `${CDN_URL}/images/homepage/projects/djk-project.mp4` },
-    { id: "proj-2", title: "Cameriz", videoSrc: `${CDN_URL}/images/homepage/projects/cameriz-project.mp4` },
-    { id: "proj-3", title: "A.U.T.O.B.O.T", videoSrc: `${CDN_URL}/images/homepage/projects/autobot-project.mp4` },
+    { id: "proj-2", title: "A.U.T.O.B.O.T", videoSrc: `${CDN_URL}/images/homepage/projects/autobot-project.mp4` },
+    { id: "proj-3", title: "Cameriz", videoSrc: `${CDN_URL}/images/homepage/projects/cameriz-project.mp4` },
     { id: "proj-4", title: "RA", videoSrc: `${CDN_URL}/images/homepage/projects/ra-project.mp4` },
     { id: "proj-5", title: "steamOvap", videoSrc: `${CDN_URL}/images/homepage/projects/steamovap-project.mp4` },
     { id: "proj-6", title: "DJK", videoSrc: `${CDN_URL}/images/homepage/projects/djk-project.mp4` },
@@ -37,7 +37,11 @@ export default function ProjectsSectionDesktop() {
                         ))}
                     </div>
 
-                    <h3 className="h4 active-project-title text-md">{PROJECT_DATA[activeIndex].title}</h3>
+                    <div className="project-title-wrapper">
+                        <h3 className="h4 active-project-title text-md">{PROJECT_DATA[activeIndex].title}</h3>
+
+                        <span>Click on card to slide →</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -74,7 +78,7 @@ function ProjectCard({ project, index, isActive, onNext, onSetActive }: ProjectC
             {isHovering && (
                 <div className="custom-cursor-box" style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px` }}>
                     <span className="text-sb">
-                        {isActive ? "Check out Next Project" : "Checkout This Project"}
+                        {isActive ? "Next" : "View"}
                     </span>
                 </div>
             )}

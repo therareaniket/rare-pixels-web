@@ -8,6 +8,13 @@
 .bg-yellowish { background-color: #FBF9E9; }
 
 @media (max-width: 479px) {
+    :root { --project-card-width: 404px; --project-card-gap: 20px; }
+	.projects-lists { margin-top: 40px; }
+	.project-video { height: 280px; }
+    .project-list.active { box-shadow: none; }
+    .project-title-wrapper span { padding-top: 10px; }
+
+
     .container { width: 100%; max-width: 100%; padding: 0 18px; }  
     .section { padding: 50px 0px; } 
     
@@ -140,7 +147,7 @@
     .why-choose-us-semi-circles{ 
         width: 100%; 
         height: 316px;  
-        margin: 10px 0; 
+        margin: 30px 0; 
         overflow: hidden; 
         position: relative; 
         display: flex; 
@@ -167,7 +174,7 @@
 
     .why-pointers-mob h3{ margin-bottom: 14px; }
     .why-choose-mob-pointer-wrapper{ display: flex; flex-direction: column; gap: 20px; }
-    .why-pointers-mob{ padding-bottom: 20px; border-bottom: 1px solid var(--border-bottom); }
+    .why-pointers-mob{ padding-bottom: 20px; border-bottom: 1px solid #313131; }
     .why-pointers-mob:nth-last-child(1){ border: none; padding-bottom: 0; }
 
     .section-bg-blue { background-color: var(--section-bg); }
@@ -485,13 +492,19 @@
 }
 
 @media (max-width: 439px) {
+    :root { --project-card-width: 100%; --project-card-gap: 20px; }
+    .project-title-wrapper span { font-size: 12px;  }
+    .project-video { height: 220px; }
+    .projects-lists { width: 100%; }
+    .project-list { flex-shrink: 0; }
+    
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
     h1, .h1 { font-size: 30px; line-height: 38px; }
     h2, .h2 { font-size: 28px; line-height: 36px; }
     h3, .h3 { font-size: 26px; line-height: 34px; }
     h4, .h4 { font-size: 26px; line-height: 34px; }
     body { font-size: 24px; }
-
+    
     .service-item p { width: 82%; }
     
     .hm-testi-stats-wrapper{ gap: 37px; }
@@ -572,7 +585,8 @@
 }
 
 @media (max-width: 400px) {
-    .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
+    .container { width: 100%; max-width: 100%; }  
+    .section   { padding: 40px 0px; }
     h1, .h1 { font-size: 28px; line-height: 34px; }
     h2, .h2 { font-size: 26px; line-height: 32px; }
     h3, .h3 { font-size: 24px; line-height: 32px; }
@@ -698,6 +712,12 @@
 
     .abt-our-values-pointer-right { width: calc( 100% - 46px ); }
     .our-values-image { width: 100%; }
+
+    .custom-cursor-box {
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 16px;
+    }
 
     .why-rare-mobile-tree { width: 300px; }
     .why-rare-pointers span { margin-top: 7px; }

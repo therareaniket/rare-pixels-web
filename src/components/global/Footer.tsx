@@ -145,7 +145,7 @@ export default function Footer() {
                                 <div className="footer-link-col">
                                     <ul>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="/" title="home" style={linkStyle('/')}>Home</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="/About" title="about">About</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"> <Link href="/About" title="about" style={linkStyle('/About')}>About</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="#" title="industries">Industries</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="#" title="projects">Projects</Link> </li>
                                     </ul>

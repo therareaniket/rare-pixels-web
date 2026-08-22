@@ -72,7 +72,7 @@ export default function Home() {
 					<IndustriesSectionMobile />
 					<WhyChooseUsSectionMobile />
 					{/* <ProcessSectionMobile /> */}
-					{/* <ProjectSectionMobile /> */}
+					<ProjectsSectionDesktop />
 					<StatsSectionMobile />
 					<BlogSectionMobile />
 					<FaqSectionMobile />

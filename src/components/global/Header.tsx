@@ -6,6 +6,9 @@ import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
+
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSquished, setIsSquished] = useState(false);
@@ -76,13 +79,9 @@ export default function Header() {
                     <nav className="nav">
                         {/* <div className={`navbar-wrapper ${isSquished ? "header-squished" : "header-expanded"}`}> */}
                         <div className="navbar-wrapper header-squished">
-                            <div className="website-header-logo">
-                                <Image className="dark-mode-icon" src="/images/global/rp-logo-black.png" alt="dark-mode" width={174} height={28} loading="eager" />
-
-                                {/* <div className="website-logo">
-                                    <Image src="/images/website-logo-r.svg" alt="website-logo" width={19} height={25} loading="eager"></Image>
-                                </div> */}
-                            </div>
+                            <Link href="/" title="Get back to Home" className="website-header-logo">
+                                <Image className="dark-mode-icon" src={`${CDN_URL}/images/global/rp-logo-black.png`} alt="dark-mode" width={174} height={28} loading="eager" />
+                            </Link>
 
                             <div ref={menuContainerRef} className="nav-icon-wrapper">
                                 <div className="nav-hamburger" onClick={(e) => { e.stopPropagation(); setIsMenuOpen((prev) => !prev); }}>
