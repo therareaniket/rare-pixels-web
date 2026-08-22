@@ -1,6 +1,8 @@
 'use client';
 
 import Image from "next/image";
+import "@/assets/css/desktop-custom.css";
+import "@/assets/css/responsive/desktop-responsive.css";
 
 export default function AboutMissionVisionDesktop() {
     return (

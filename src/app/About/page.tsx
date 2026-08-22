@@ -1,12 +1,15 @@
 "use client";
 
+import AboutFaqSectionDesktop from "@/components/Aboutpage/Desktop/AboutFaqSectionDesktop";
 import AboutHeroSectionDesktop from "@/components/Aboutpage/Desktop/AboutHeroSectionDesktop";
 import AboutMissionVisionDesktop from "@/components/Aboutpage/Desktop/AboutMissionVisionDesktop";
 import AboutOurValuesSectionDesktop from "@/components/Aboutpage/Desktop/AboutOurValuesSectionDesktop";
+import AboutRpdSectionDesktop from "@/components/Aboutpage/Desktop/AboutRpdSectionDesktop";
 
 import AboutTeamsSectionDesktop from "@/components/Aboutpage/Desktop/AboutTeamsSectionDesktop";
 import AboutTimelineSectionDesktop from "@/components/Aboutpage/Desktop/AboutTimelineSectionDesktop";
 import WhyRarePixelsDesktop from "@/components/Aboutpage/Desktop/WhyRarePixelsDesktop";
+import AboutFaqSectionMobile from "@/components/Aboutpage/Mobile/AboutFaqSectionMobile";
 import AboutHeroSectionMobile from "@/components/Aboutpage/Mobile/AboutHeroSectionMobile";
 import AboutMissionVisionMobile from "@/components/Aboutpage/Mobile/AboutMissionVisionMobile";
 import AboutOurValuesSectionMobile from "@/components/Aboutpage/Mobile/AboutOurValuesSectionMobile";
@@ -41,9 +44,11 @@ export default function About() {
                     <AboutHeroSectionDesktop/>
 					<AboutTimelineSectionDesktop />
 					<AboutMissionVisionDesktop />
+					<AboutRpdSectionDesktop />
 					<AboutOurValuesSectionDesktop />
 					<AboutTeamsSectionDesktop />
 					<WhyRarePixelsDesktop />
+					<AboutFaqSectionDesktop />
 				</div>
 
 				{/* MOBILE */}
@@ -54,6 +59,7 @@ export default function About() {
 					<AboutOurValuesSectionMobile />
 					<AboutTeamsSectionMobile />
 					<WhyRarePixelsMobile />
+					<AboutFaqSectionMobile />
 				</div>
 			</main>
 		</>

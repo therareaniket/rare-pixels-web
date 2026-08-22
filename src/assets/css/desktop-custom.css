@@ -771,7 +771,7 @@ body.menu-open {
 
 
 .why-rare-title-desktop { width: 575px; }
-.why-rare-pointers { width: 396px; padding: 20px; display: flex; align-items: flex-start; justify-content: space-between; position: absolute; }
+.why-rare-pointers { width: 396px; padding: 20px; display: flex; align-items: flex-start; justify-content: space-between; }
 
 .why-rare-pointers span { width: 8px; height: 8px; margin-top: 12px; border-radius: 1px; }
 
@@ -788,5 +788,35 @@ body.menu-open {
 
 .why-rare-desc { width: calc( 100% - 18px ); } 
 
-.why-rare-desktop-content { display: flex; align-items: center; justify-content: center; margin-top: 60px; position: relative; }
-.why-rare-pointers-1 { top: 0; z-index: 3; }
+.why-rare-desktop-content { display: flex; align-items: center; justify-content: center; margin-top: 60px; padding-top: 135px; position: relative; }
+.why-rare-point { 
+    position: absolute; 
+    /* background: rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(2.6px);
+    border: 1px solid rgba(255, 255, 255, 0.1); */
+}
+.why-rare-point-1 { top: 20px; left: 254px; }
+.why-rare-point-2 { top: 0; right: 239px; }
+.why-rare-point-3 { bottom: 70px; left: 141px;  }
+.why-rare-point-4 { bottom:114px; right: 140px; }
+
+.about-rpd-desktop-content-wrapper { display: flex; align-items: flex-start; justify-content: space-between; padding-top: 192px; }
+.abt-rpd-card { display: flex; flex-direction: column; width: 403px; }
+
+.abt-rpd-card-2 { flex-direction: column-reverse; }
+.abt-card-text { height: 162px; }
+.abt-card-text h2 { margin: 20px 0; }
+.abt-rpd-card-2 { transform: translateY(-180px); }
+.abt-rpd-card-2 .abt-card-text h2 { margin-top: 0; margin-bottom: 20px; }
+.abt-rpd-card-2 .abt-card-text { margin-bottom: 20px; }
+
+.abt-rpd-section-desktop { position: relative; overflow: hidden; }
+
+.rpd-pixel-left { position: absolute; top: 0; left: 0; }
+.rpd-pixel-right { position: absolute; bottom: 0; right: 0; z-index: 2; }
+
+.abt-rpd-strip { color: #8C8B8C; position: absolute; width: 100%; left: 0; bottom: -20px; }
+.abt-rpd-strip p { width: max-content;  }

@@ -478,6 +478,10 @@
     .abt-our-values-pointer-left { width: 40px; height: 40px; }
     .our-values-image { width: 320px; }
     .abt-our-values-pointer-right { width: calc( 100% - 55px ); }
+
+    .why-rare-mobile-tree { width: 340px; margin: 30px auto; }
+    .why-rare-pointers span { width: 6px; height: 6px; margin-top: 10px; }
+    .why-rare-desc .text-18 { margin-bottom: 6px; }
 }
 
 @media (max-width: 439px) {
@@ -694,6 +698,10 @@
 
     .abt-our-values-pointer-right { width: calc( 100% - 46px ); }
     .our-values-image { width: 100%; }
+
+    .why-rare-mobile-tree { width: 300px; }
+    .why-rare-pointers span { margin-top: 7px; }
+    .why-rare-pointers { padding: 14px; }
 }
 
 @media (max-width: 374px) {
@@ -736,6 +744,8 @@
     .abt-our-values-pointer-right h3 { line-height: 20px; }
 
     .abt-our-values-hr { margin: 12px 0; }
+
+    .why-rare-mobile-tree { width: 290px; margin: 20px auto; }
 }
 
 @media (max-width: 359px) {
