@@ -181,6 +181,16 @@
 
 	.abt-mis-vis-content-right { width: 500px; height: 500px; }
 	.abt-mis-vis-content-right img{ width: 100%; height: 100%; object-fit: contain; }
+
+	.abt-our-values-right p { width: 725px; }
+	.our-values-image { width: 650px; }
+	.abt-our-values-pointer-left { width: 48px; height: 48px; }
+	.abt-our-values-pointer { width: 535px; }
+
+	.abt-our-values-hr { margin: 25px 0; }
+
+	.abt-our-values-pointer-right { width: calc( 100% - 68px ); }
+	.abt-our-values-pointer-left span img { width: 22px; height: 22px; }
 }
 
 @media (max-width: 1599px) {
@@ -410,6 +420,14 @@
 	.abt-mis-vis-content-left { width: 470px; }
 
 	.abt-mis-vis-content-desktop { width: 1050px; margin-top: 40px; }
+
+	.our-values-image { width: 570px; }
+	.abt-our-values-right p { width: 660px; margin-bottom: 40px; }
+	.abt-our-values-pointer-left { width: 44px; height: 44px; }
+	.abt-our-values-pointer { width: 470px; }
+	.abt-our-values-pointer-right { width: calc( 100% - 64px ); }
+	.abt-our-values-hr { margin: 20px 0; }
+	.abt-our-values-pointer-right h3 { line-height: 34px; margin-bottom: 10px; }
 }
 
 @media (max-width: 1439px) {
@@ -607,6 +625,15 @@
 
 	.abt-mis-vis-content-right { width: 400px; height: 400px; }
 	.abt-mis-desktop { margin-bottom: 25px; }
+
+	.our-values-image { width: 550px; }
+	.abt-our-values-right p { width: 550px; }
+	.our-values-image { width: 440px; }
+	.abt-our-values-pointer { width: 430px; }
+	.abt-our-values-pointer-left { width: 40px; height: 40px; }
+	.abt-our-values-pointer-left span img { width: 20px; height: 20px; }
+	.abt-our-values-pointer-right { width: calc( 100% - 60px ); }
+	.abt-our-values-hr { margin: 15px 0; }
 }
 
 @media (max-width: 1359px) {
@@ -788,6 +815,15 @@
 	.abt-mis-vis-content-left { width: 430px; }
 	.abt-mis-vis-content-right { width: 350px; height: 350px; }
 	.abt-mis-vis-quote-desktop { width: 195px; }
+
+	.abt-mis-vis-title-desktop-right { width: 150px; }
+
+	.abt-our-values-right p { width: 533px; }
+	.our-values-image { width: 420px; }
+	.abt-our-values-pointer { width: 375px; }
+	.abt-our-values-pointer-left { width: 36px; height: 36px; }
+	.abt-our-values-pointer-right { width: calc( 100% - 46px ); }
+	.abt-our-values-pointer-right h3 { line-height: 28px; }
 } 
 
 @media (max-width: 1199px) {
@@ -1100,6 +1136,20 @@
 	.abt-mis-vis-content-right { width: 400px; height: 400px; }
 	.abt-mis-vis-title-desktop-left { padding-left: 40px; }
 	.abt-mis-vis-quote-desktop {  width: 290px;}
+
+	.abt-our-values-desktop { flex-direction: column; align-items: flex-start; }
+	.abt-our-values-right p { width: 100%; margin: 0; }
+	.abt-our-values-pointer { width: 100%; }
+	.abt-our-values-left { margin: 0 auto; }
+	.our-values-image { margin: 40px auto; }
+
+	.abt-our-values-pointer-left { width: 52px; height: 52px; }
+	.abt-our-values-pointer-left span img { width: 24px; height: 24px; }
+
+	.abt-our-values-pointer-right { width: calc( 100% - 72px ); }
+	.abt-our-values-hr { margin: 30px 0; }
+
+	.abt-our-values-pointer-right h3 { line-height: 40px; }
 } 
 
 @media (max-width: 1023px) {
@@ -1254,6 +1304,13 @@
 	.abt-mis-vis-title-desktop h2 { font-size: 62px; line-height: 66px; }
 	.abt-mis-vis-content-right { width: 380px; height: 380px; }
 	.abt-mis-desktop { margin: 20px 0; }
+
+	.abt-our-values-pointer-left { width: 50px; height: 50px; }
+	.abt-our-values-pointer-right { width: calc( 100% - 70px ); }
+	.abt-our-values-hr { margin: 20px 0; }
+	.abt-our-values-pointer-right h3 { line-height: 36px; }
+
+	.our-values-image { margin: 30px auto; }
 }
 
 @media (max-width: 839px) {
@@ -1368,6 +1425,10 @@
 	.abt-mis-vis-title-desktop h2 { font-size: 58px; line-height: 66px; }
 	.abt-mis-vis-title-desktop-left { padding-left: 30px; padding-top: 30px; }
 	.abt-mis-vis-quote-desktop { width: 220px; }
+
+	.abt-our-values-pointer-left { width: 46px; height: 46px; }
+
+	.abt-our-values-pointer-right { width: calc( 100% - 66px ); }
 }
 
 @media (max-width: 767px) {
@@ -1485,6 +1546,15 @@
 
 	.abt-timeline-tablet { display: block; }
 	.timeline-content-wrapper-tablet { width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 30px; }
+
+	.abt-mis-vis-title-desktop h2 { font-size: 56px; line-height: 64px; margin-bottom: 10px; }
+	.abt-mis-vis-content-desktop { gap: 30px; }
+	.abt-mis-vis-quote-desktop { width: 180px; }
+	.abt-mis-vis-title-desktop-left .h3 { font-size: 24px; line-height: 32px; } 
+	.abt-mis-vis-content-right { width: 350px; height: 350px; }
+
+	.abt-our-values-pointer-right h3 { line-height: 34px; }
+	.our-values-image { width: 360px; }
 }
 
 @media (max-width: 639px) {
@@ -1566,6 +1636,15 @@
 	/* about page */
 	.about-hero-mask-title { height: 120px; }
 
+	.abt-mis-vis-title-desktop h2 { font-size: 50px; line-height: 68px; }
+	.abt-mis-vis-title-desktop-left .h3 { font-size: 22px; line-height: 30px; }
+	.abt-mis-vis-quote-desktop { width: 195px; }
+
+	.abt-our-values-pointer-left { width: 44px; height: 44px; }
+	.abt-our-values-pointer-right { width: calc( 100% - 64px ); }
+	.abt-our-values-hr { margin: 15px 0; }
+	.abt-our-values-pointer-right h3 { line-height: 30px; }
+	.abt-our-values-pointer-left span img { width: 20px; height: 20px; }
 }
 
 @media (max-width: 575px) {
@@ -1733,4 +1812,11 @@
 
 	.footer-quote-right h2 { font-size: 48px; line-height: 54px; }
 	.about-hero-mask-title { width: 100%; height: 100px; margin-top: 60px; }
+
+	.abt-mis-vis-title-desktop h2 { font-size: 40px; line-height: 54px; }
+	.abt-mis-vis-title-desktop-left .h3 { font-size: 20px; line-height: 26px; }
+	.abt-mis-vis-quote-desktop { width: 180px; }
+
+	.abt-our-values-pointer-left { width: 42px; height: 42px; }
+	.abt-our-values-pointer-right { width: calc( 100% - 62px ); }
 }

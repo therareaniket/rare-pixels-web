@@ -2,11 +2,20 @@
 
 import AboutHeroSectionDesktop from "@/components/Aboutpage/Desktop/AboutHeroSectionDesktop";
 import AboutMissionVisionDesktop from "@/components/Aboutpage/Desktop/AboutMissionVisionDesktop";
+import AboutOurValuesSectionDesktop from "@/components/Aboutpage/Desktop/AboutOurValuesSectionDesktop";
+
+import AboutTeamsSectionDesktop from "@/components/Aboutpage/Desktop/AboutTeamsSectionDesktop";
 import AboutTimelineSectionDesktop from "@/components/Aboutpage/Desktop/AboutTimelineSectionDesktop";
+import WhyRarePixelsDesktop from "@/components/Aboutpage/Desktop/WhyRarePixelsDesktop";
 import AboutHeroSectionMobile from "@/components/Aboutpage/Mobile/AboutHeroSectionMobile";
 import AboutMissionVisionMobile from "@/components/Aboutpage/Mobile/AboutMissionVisionMobile";
+import AboutOurValuesSectionMobile from "@/components/Aboutpage/Mobile/AboutOurValuesSectionMobile";
+import AboutTeamsSectionMobile from "@/components/Aboutpage/Mobile/AboutTeamsSectionMobile";
 import AboutTimelineSectionMobile from "@/components/Aboutpage/Mobile/AboutTimelineSectionMobile";
-// import ReactLenis from "lenis/react";
+import WhyRarePixelsMobile from "@/components/Aboutpage/Mobile/WhyRarePixelsMobile";
+import WhyChooseUsSectionDesktop from "@/components/Homepage/Desktop/WhyChooseUsSectionDesktop";
+import WhyChooseUsSectionMobile from "@/components/Homepage/Mobile/WhyChooseUsSectionMobile";
+import ReactLenis from "lenis/react";
 import { useEffect, useState } from "react";
 
 export default function About() {
@@ -25,13 +34,16 @@ export default function About() {
 	return (
 		<>
 			<main>
-				{/* <ReactLenis root /> */}
+				<ReactLenis root />
 
 				{/* DESKTOP */}
 				<div className="hidden min-[480px]:block">
                     <AboutHeroSectionDesktop/>
 					<AboutTimelineSectionDesktop />
 					<AboutMissionVisionDesktop />
+					<AboutOurValuesSectionDesktop />
+					<AboutTeamsSectionDesktop />
+					<WhyRarePixelsDesktop />
 				</div>
 
 				{/* MOBILE */}
@@ -39,6 +51,9 @@ export default function About() {
                     <AboutHeroSectionMobile />
 					<AboutTimelineSectionMobile />
 					<AboutMissionVisionMobile />
+					<AboutOurValuesSectionMobile />
+					<AboutTeamsSectionMobile />
+					<WhyRarePixelsMobile />
 				</div>
 			</main>
 		</>

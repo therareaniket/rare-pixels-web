@@ -42,7 +42,7 @@ export default function BlogSectionMobile() {
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-1">
                                     <div className="hm-blog-image-mob">
-                                        <Image src="/images/homepage/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
+                                        <Image src="/images/homepage/blog/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
                                     </div>
 
                                     <h3 className="text-sb blog-mobile-title">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
@@ -57,7 +57,7 @@ export default function BlogSectionMobile() {
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-2">
                                     <div className="hm-blog-image-mob">
-                                        <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
+                                        <Image src="/images/homepage/blog/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
                                     </div>
 
                                     <h3 className="text-sb blog-mobile-title">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
@@ -72,7 +72,7 @@ export default function BlogSectionMobile() {
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-1">
                                     <div className="hm-blog-image-mob">
-                                        <Image src="/images/homepage/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
+                                        <Image src="/images/homepage/blog/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
                                     </div>
 
                                     <h3 className="text-sb blog-mobile-title">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
@@ -87,7 +87,7 @@ export default function BlogSectionMobile() {
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-2">
                                     <div className="hm-blog-image-mob">
-                                        <Image src="/images/homepage/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
+                                        <Image src="/images/homepage/blog/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
                                     </div>
 
                                     <h3 className="text-sb blog-mobile-title">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
@@ -109,7 +109,7 @@ export default function BlogSectionMobile() {
 
                             <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn blog-mobile-btn">
                                 <span className="text-20 text-md text-white">View All Categories </span>
-                                <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
+                                <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                             </Link>
                         </div>
                     </div>

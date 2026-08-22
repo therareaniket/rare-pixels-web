@@ -24,7 +24,7 @@ export default function AboutSectionDesktop() {
 
                             <div className="hm-abt-card-wrapper">
                                 <div className="hm-abt-logo-left">
-                                    <Image src="/images/homepage/rare-logo-white.png" alt="rare-logo" width={276} height={350}></Image>
+                                    <Image src="/images/homepage/about/rare-logo-white.png" alt="rare-logo" width={276} height={350}></Image>
                                 </div>
 
                                 <div className="hm-abt-pointers-right">

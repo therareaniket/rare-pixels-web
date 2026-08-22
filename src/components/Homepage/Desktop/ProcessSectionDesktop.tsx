@@ -269,12 +269,12 @@ export default function ProjectsSectionDesktop() {
 
                         <div className="process-elements-pointer process-section-desktop">
                             <div className="process-element">
-                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/discover-elements.svg" alt="discover-element" width={350} height={350}></Image>
-                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/strategies-elements.svg" alt="discover-element" width={332} height={344}></Image>
-                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/create-elements.svg" alt="discover-element" width={292} height={350}></Image>
-                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/engineer-elements.svg" alt="discover-element" width={317} height={350}></Image>
-                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/refine-elements.svg" alt="discover-element" width={347} height={348}></Image>
-                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/deliver-elements.svg" alt="discover-element" width={341} height={350}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/process/discover-elements.svg" alt="discover-element" width={350} height={350}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/process/strategies-elements.svg" alt="discover-element" width={332} height={344}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/process/create-elements.svg" alt="discover-element" width={292} height={350}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/process/engineer-elements.svg" alt="discover-element" width={317} height={350}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/process/refine-elements.svg" alt="discover-element" width={347} height={348}></Image>
+                                <Image ref={addImageRef} className="process-element-image" src="/images/homepage/process/deliver-elements.svg" alt="discover-element" width={341} height={350}></Image>
                             </div>
 
                             <div className="process-pointer-wrapper">
@@ -286,7 +286,7 @@ export default function ProjectsSectionDesktop() {
                                     <div className="process-pointer-text">
                                         <div className="tick-mark-wrapper">
                                             <h3 className="h2 text-sb text-upper-case">Discover</h3>
-                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                            <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                         </div>
 
                                         <p className="text-18 text-rg">
@@ -306,7 +306,7 @@ export default function ProjectsSectionDesktop() {
                                         <div className="tick-mark-wrapper">
 
                                             <h3 className="h2 text-sb text-upper-case">Strategise</h3>
-                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                            <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                         </div>
 
                                         <p className="text-18 text-rg">
@@ -325,7 +325,7 @@ export default function ProjectsSectionDesktop() {
                                         <div className="tick-mark-wrapper">
                                             <h3 className="h2 text-sb text-upper-case">Create</h3>
 
-                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                            <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                         </div>
 
                                         <p className="text-18 text-rg">
@@ -344,7 +344,7 @@ export default function ProjectsSectionDesktop() {
                                         <div className="tick-mark-wrapper">
 
                                             <h3 className="h2 text-sb text-upper-case">Engineer</h3>
-                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                            <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                         </div>
 
                                         <p className="text-18 text-rg">
@@ -363,7 +363,7 @@ export default function ProjectsSectionDesktop() {
                                         <div className="tick-mark-wrapper">
 
                                             <h3 className="h2 text-sb text-upper-case">Refine</h3>
-                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                            <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                         </div>
 
                                         <p className="text-18 text-rg">
@@ -382,7 +382,7 @@ export default function ProjectsSectionDesktop() {
                                         <div className="tick-mark-wrapper">
 
                                             <h3 className="h2 text-sb text-upper-case">deliver</h3>
-                                            <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                            <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                         </div>
 
                                         <p className="text-18 text-rg">
@@ -406,7 +406,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="process-text-wrapper-tablet">
                                     <div className="tick-mark-wrapper">
                                         <h3 className="h2 text-sb text-upper-case">Discover</h3>
-                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                     </div>
 
                                     <p className="text-18 text-rg">
@@ -416,7 +416,7 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div className="process-element-tablet">
-                                    <Image className="process-element-image-tablet" src="/images/homepage/discover-elements.svg" alt="discover-element" width={350} height={350}></Image>
+                                    <Image className="process-element-image-tablet" src="/images/homepage/process/discover-elements.svg" alt="discover-element" width={350} height={350}></Image>
                                 </div>
                             </div>
 
@@ -428,7 +428,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="process-text-wrapper-tablet">
                                     <div className="tick-mark-wrapper">
                                         <h3 className="h2 text-sb text-upper-case">Strategise</h3>
-                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                     </div>
                                     <p className="text-18 text-rg">
                                         <span>Direction creates momentum.</span>
@@ -437,7 +437,7 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div className="process-element-tablet">
-                                    <Image className="process-element-image-tablet" src="/images/homepage/strategies-elements.svg" alt="discover-element" width={332} height={344}></Image>
+                                    <Image className="process-element-image-tablet" src="/images/homepage/process/strategies-elements.svg" alt="discover-element" width={332} height={344}></Image>
                                 </div>
                             </div>
 
@@ -449,7 +449,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="process-text-wrapper-tablet">
                                     <div className="tick-mark-wrapper">
                                         <h3 className="h2 text-sb text-upper-case">Create</h3>
-                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                     </div>
 
                                     <p className="text-18 text-rg">
@@ -459,7 +459,7 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div className="process-element-tablet">
-                                    <Image className="process-element-image-tablet" src="/images/homepage/create-elements.svg" alt="discover-element" width={292} height={350}></Image>
+                                    <Image className="process-element-image-tablet" src="/images/homepage/process/create-elements.svg" alt="discover-element" width={292} height={350}></Image>
 
                                 </div>
                             </div>
@@ -472,7 +472,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="process-text-wrapper-tablet">
                                     <div className="tick-mark-wrapper">
                                         <h3 className="h2 text-sb text-upper-case">Engineer</h3>
-                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                     </div>
 
                                     <p className="text-18 text-rg">
@@ -482,7 +482,7 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div className="process-element-tablet">
-                                    <Image className="process-element-image-tablet" src="/images/homepage/engineer-elements.svg" alt="discover-element" width={317} height={350}></Image>
+                                    <Image className="process-element-image-tablet" src="/images/homepage/process/engineer-elements.svg" alt="discover-element" width={317} height={350}></Image>
 
                                 </div>
                             </div>
@@ -495,7 +495,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="process-text-wrapper-tablet">
                                     <div className="tick-mark-wrapper">
                                         <h3 className="h2 text-sb text-upper-case">Refine</h3>
-                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                     </div>
 
                                     <p className="text-18 text-rg">
@@ -505,7 +505,7 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div className="process-element-tablet">
-                                    <Image className="process-element-image-tablet" src="/images/homepage/refine-elements.svg" alt="discover-element" width={347} height={348}></Image>
+                                    <Image className="process-element-image-tablet" src="/images/homepage/process/refine-elements.svg" alt="discover-element" width={347} height={348}></Image>
                                 </div>
                             </div>
 
@@ -517,7 +517,7 @@ export default function ProjectsSectionDesktop() {
                                 <div className="process-text-wrapper-tablet">
                                     <div className="tick-mark-wrapper">
                                         <h3 className="h2 text-sb text-upper-case">deliver</h3>
-                                        <Image className="process-completed" src="/images/tick-icon.svg" alt="tick" width={27} height={20}></Image>
+                                        <Image className="process-completed" src="/images/homepage/process/process-completed-tick.svg" alt="tick" width={27} height={20}></Image>
                                     </div>
 
                                     <p className="text-18 text-rg">
@@ -527,7 +527,7 @@ export default function ProjectsSectionDesktop() {
                                 </div>
 
                                 <div className="process-element-tablet">
-                                    <Image className="process-element-image-tablet" src="/images/homepage/deliver-elements.svg" alt="discover-element" width={341} height={350}></Image>
+                                    <Image className="process-element-image-tablet" src="/images/homepage/process/deliver-elements.svg" alt="discover-element" width={341} height={350}></Image>
                                 </div>
                             </div>
                         </div>

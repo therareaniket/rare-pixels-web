@@ -19,7 +19,7 @@ export default function ServicesSectionMobile() {
                     <div className="services-mobile-card-wrapper">
                         <div className="services-mobile-card services-ui-ux site-radius-10 bg-purple-shade">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-ui-ux.svg" alt="services ui-ux" width={270} height={178}></Image>
+                                <Image src="/images/homepage/services/services-ui-ux.svg" alt="services ui-ux" width={270} height={178}></Image>
                             </div>
 
                             <div className="services-mobile-text-wrapper site-radius-10">
@@ -37,7 +37,7 @@ export default function ServicesSectionMobile() {
 
                         <div className="services-mobile-card services-development site-radius-10 bg-light-yellow">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-development.svg" alt="services development" width={219} height={229}></Image>
+                                <Image src="/images/homepage/services/services-development.svg" alt="services development" width={219} height={229}></Image>
                             </div>
 
                             <div className="services-mobile-text-wrapper site-radius-10">
@@ -55,7 +55,7 @@ export default function ServicesSectionMobile() {
 
                         <div className="services-mobile-card servicesbrand-identity site-radius-10 bg-light-pink">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-brand-identity.svg" alt="services brand-identity" width={219} height={229}></Image>
+                                <Image src="/images/homepage/services/services-brand-identity.svg" alt="services brand-identity" width={219} height={229}></Image>
                             </div>
 
                             <div className="services-mobile-text-wrapper site-radius-10">
@@ -73,7 +73,7 @@ export default function ServicesSectionMobile() {
 
                         <div className="services-mobile-card services-social-media site-radius-10 bg-light-green">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services-social-media.svg" alt="services development" width={267} height={268}></Image>
+                                <Image src="/images/homepage/services/services-social-media.svg" alt="services development" width={267} height={268}></Image>
 
                             </div>
 

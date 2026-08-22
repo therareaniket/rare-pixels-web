@@ -44,7 +44,7 @@ export default function ScrollToTopButton() {
           ? "translate-y-0 opacity-100"
           : "translate-y-16 opacity-0 pointer-events-none"
         }}`}>
-      <Image className="back-top-pointer" src="/images/homepage/back-to-top.svg" alt="top-btn" width={24} height={24}></Image>
+      <Image className="back-top-pointer" src="/images/global/back-to-top.svg" alt="top-btn" width={24} height={24}></Image>
     </button>
   );
 }

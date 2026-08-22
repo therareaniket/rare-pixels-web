@@ -86,7 +86,7 @@ export default function Header() {
 
                             <div ref={menuContainerRef} className="nav-icon-wrapper">
                                 <div className="nav-hamburger" onClick={(e) => { e.stopPropagation(); setIsMenuOpen((prev) => !prev); }}>
-                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/white-close.svg" : "/images/dark-mode-hamburger.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={30} height={30} loading="eager" />
+                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/global/white-close.svg" : "/images/global/dark-mode-hamburger.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={30} height={30} loading="eager" />
                                 </div>
                             </div>
                         </div>
@@ -660,7 +660,7 @@ export default function Header() {
 
                                 <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link header-btn website-btn">
                                     <span className="text-20 text-md text-white">Start Your Project </span>
-                                    <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
+                                    <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                 </Link>
                             </div>
 

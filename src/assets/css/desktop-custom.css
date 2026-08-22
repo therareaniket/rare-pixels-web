@@ -203,7 +203,7 @@ body.menu-open {
 
 /* About Section */
 
-.hm-about-main{ width: 100%; height: max-content; background-image: url(/images/homepage/abt-section-background-grid-desktop.png); background-repeat: repeat; }
+.hm-about-main{ width: 100%; height: max-content; background-image: url(/images/homepage/about/abt-section-background-grid-desktop.png); background-repeat: repeat; }
 .hm-about-main{ padding: 40px; }
 .hm-abt-text-wrapper p{ display: flex; flex-direction: column; gap: 18px; }
 
@@ -751,3 +751,37 @@ body.menu-open {
 .abt-mis-vis-content-desktop { width: 1200px; margin: 0 auto; margin-top: 60px; display: flex; align-items: center; justify-content: space-between; }
 .abt-mis-vis-content-left { width: 507px; }
 .abt-mis-desktop { margin: 30px 0; }
+
+.abt-our-values-right p { width: 818px; margin-top: 20px; margin-bottom: 60px; }
+
+.abt-our-values-pointer { display: flex; align-items: flex-start; justify-content: space-between; width: 580px; }
+
+.abt-our-values-pointer-left { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 10px; background-color: var(--primary); }
+.abt-our-values-pointer-right { width: calc( 100% - 72px ); }
+.abt-our-values-pointer-right h3 { margin-bottom: 6px; }
+
+.abt-our-values-hr { width: 100%; height: 1px; background-color: #C6C6C6; margin: 30px 0; }
+
+.abt-our-values-desktop { display: flex; align-items: flex-end; justify-content: space-between; }
+
+
+.why-rare-title-desktop { width: 575px; }
+.why-rare-pointers { width: 396px; padding: 20px; display: flex; align-items: flex-start; justify-content: space-between; position: absolute; }
+
+.why-rare-pointers span { width: 8px; height: 8px; margin-top: 12px; border-radius: 1px; }
+
+.why-rare-pointers-1 span { background-color: #E8DB7D; }
+.why-rare-pointers-2 span { background-color: #CDC9C4; }
+.why-rare-pointers-3 span { background-color: #ED0180; }
+.why-rare-pointers-4 span { background-color: #C6D9C6; }
+
+
+.why-rare-desc-1 h3 { color: #E8DB7D; }
+.why-rare-desc-2 h3 { color: #CDC9C4; }
+.why-rare-desc-3 h3 { color: #ED0180; }
+.why-rare-desc-4 h3 { color: #C6D9C6; }
+
+.why-rare-desc { width: calc( 100% - 18px ); } 
+
+.why-rare-desktop-content { display: flex; align-items: center; justify-content: center; margin-top: 60px; position: relative; }
+.why-rare-pointers-1 { top: 0; z-index: 3; }

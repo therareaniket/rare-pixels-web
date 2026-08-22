@@ -26,7 +26,7 @@ export default function Footer() {
 
                             <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn">
                                 <span className="text-20 text-md text-white">Start Your Project </span>
-                                <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
+                                <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                             </Link>
                         </div>
 
@@ -242,7 +242,7 @@ export default function Footer() {
                     </div>
 
                     <div className="rare-pixels-company-logo">
-                        <Image className="footer-site-logo" src="/images/homepage/rarepixels-footer-logo.svg" alt="website-logo" width={1600} height={260}></Image>
+                        <Image className="footer-site-logo" src="/images/global/rarepixels-footer-logo.svg" alt="website-logo" width={1600} height={260}></Image>
                     </div>
 
                     <div className="footer-copyright">
@@ -259,9 +259,9 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <Image className="footer-pixel-1" src="/images/homepage/footer-pixel-1.svg" alt="footer-pixel-1" width={386} height={262}></Image>
-                    <Image className="footer-pixel-2" src="/images/homepage/footer-pixel-2.svg" alt="footer-pixel-2" width={166} height={124}></Image>
-                    <Image className="footer-pixel-3" src="/images/homepage/footer-pixel-3.svg" alt="footer-pixel-3" width={369} height={262}></Image>
+                    <Image className="footer-pixel-1" src="/images/global/footer-pixel-1.svg" alt="footer-pixel-1" width={386} height={262}></Image>
+                    <Image className="footer-pixel-2" src="/images/global/footer-pixel-2.svg" alt="footer-pixel-2" width={166} height={124}></Image>
+                    <Image className="footer-pixel-3" src="/images/global/footer-pixel-3.svg" alt="footer-pixel-3" width={369} height={262}></Image>
                 </div>
             </section>
         </>

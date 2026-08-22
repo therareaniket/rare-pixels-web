@@ -108,7 +108,7 @@ export default function ProcessSectionMobile() {
                                     <div className="process-title-text">
                                         <h3 className="h2 text-sb text-upper-case">Discover</h3>
                                         <div className="process-mobile-tick">
-                                            <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
+                                            <Image src="/images/homepage/process/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
@@ -128,7 +128,7 @@ export default function ProcessSectionMobile() {
                                     <div className="process-title-text">
                                         <h3 className="h2 text-sb text-upper-case">Strategize</h3>
                                         <div className="process-mobile-tick">
-                                            <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
+                                            <Image src="/images/homepage/process/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
@@ -148,7 +148,7 @@ export default function ProcessSectionMobile() {
                                     <div className="process-title-text">
                                         <h3 className="h2 text-sb text-upper-case">Create</h3>
                                         <div className="process-mobile-tick">
-                                            <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
+                                            <Image src="/images/homepage/process/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
@@ -168,7 +168,7 @@ export default function ProcessSectionMobile() {
                                     <div className="process-title-text">
                                         <h3 className="h2 text-sb text-upper-case">Engineer</h3>
                                         <div className="process-mobile-tick">
-                                            <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
+                                            <Image src="/images/homepage/process/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
@@ -189,7 +189,7 @@ export default function ProcessSectionMobile() {
                                         <h3 className="h2 text-sb text-upper-case">Refine</h3>
 
                                         <div className="process-mobile-tick">
-                                            <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
+                                            <Image src="/images/homepage/process/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 
@@ -210,7 +210,7 @@ export default function ProcessSectionMobile() {
                                         <h3 className="h2 text-sb text-upper-case">Deliver</h3>
 
                                         <div className="process-mobile-tick">
-                                            <Image src="/images/homepage/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
+                                            <Image src="/images/homepage/process/process-completed-tick.svg" alt="process-tick" width={16} height={12}></Image>
                                         </div>
                                     </div>
 

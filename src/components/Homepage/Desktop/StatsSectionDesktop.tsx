@@ -44,7 +44,7 @@ export default function StatsSectionDesktop() {
                                         </PieChart>
                                     </ResponsiveContainer> */}
 
-                                    <Image src="images/homepage/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src="images/homepage/stats/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Every solution is purpose-built.
@@ -69,7 +69,7 @@ export default function StatsSectionDesktop() {
                                     {/* </RadarChart> */}
                                     {/* </ResponsiveContainer> */}
 
-                                    <Image src="images/homepage/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={215} height={200}></Image>
+                                    <Image src="images/homepage/stats/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={215} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">From startups to enterprises.
@@ -82,7 +82,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Client Trust Retained</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/client-trust-retained.svg" alt="specialized-solution-crafted" width={271} height={172}></Image>
+                                    <Image src="images/homepage/stats/client-trust-retained.svg" alt="specialized-solution-crafted" width={271} height={172}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Relationships built on results.
@@ -103,7 +103,7 @@ export default function StatsSectionDesktop() {
 
                             <div className="stats-card-6 stats-card">
                                 <div className="stats-global-element">
-                                    <Image src="images/homepage/global-market-served.svg" alt="specialized-solution-crafted" width={754} height={320}></Image>
+                                    <Image src="images/homepage/stats/global-market-served.svg" alt="specialized-solution-crafted" width={754} height={320}></Image>
                                 </div>
 
                                 <div className="stats-global-text-wrapper">
@@ -145,7 +145,7 @@ export default function StatsSectionDesktop() {
                                         </PieChart>
                                     </ResponsiveContainer> */}
 
-                                    <Image src="images/homepage/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src="images/homepage/stats/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Precision in every milestone.
@@ -170,7 +170,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Specialised Solutions Crafted</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src="images/homepage/stats/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Every solution is purpose-built.
@@ -185,7 +185,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Industries Transformed Globally</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src="images/homepage/stats/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">From startups to enterprises.
@@ -198,7 +198,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Client Trust Retained</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/client-trust-retained.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src="images/homepage/stats/client-trust-retained.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Relationships built on results.
@@ -223,7 +223,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Projects Delivered With Precision</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src="images/homepage/stats/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Precision in every milestone.
@@ -238,7 +238,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Global Markets Served</p>
 
                                 <div className="stats-element-art-board element-map-wrapper">
-                                    <Image src="images/homepage/global-market-served.svg" alt="specialized-solution-crafted" width={754} height={320}></Image>
+                                    <Image src="images/homepage/stats/global-market-served.svg" alt="specialized-solution-crafted" width={754} height={320}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Ideas built without borders.

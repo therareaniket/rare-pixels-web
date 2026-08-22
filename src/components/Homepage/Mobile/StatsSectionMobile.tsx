@@ -23,7 +23,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case text-light-grey">Specialised Solutions Crafted</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={150} height={150}></Image>
+                                <Image src="images/homepage/stats/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={150} height={150}></Image>
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -36,7 +36,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case  text-light-grey">Industries Transformed Globally</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={160} height={150}></Image>
+                                <Image src="images/homepage/stats/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={160} height={150}></Image>
                             </div>
 
                             <p className="text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -49,7 +49,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case text-light-grey">Client Trust Retained</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/client-trust-retained.svg" alt="specialized-solution-crafted" width={236} height={150}></Image>
+                                <Image src="images/homepage/stats/client-trust-retained.svg" alt="specialized-solution-crafted" width={236} height={150}></Image>
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -62,7 +62,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case text-light-grey">Global Markets Served</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/global-market-served.svg" alt="specialized-solution-crafted" width={396} height={150}></Image>
+                                <Image src="images/homepage/stats/global-market-served.svg" alt="specialized-solution-crafted" width={396} height={150}></Image>
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -75,7 +75,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case  text-light-grey">Projects Delivered With Precision</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={150} height={150}></Image>
+                                <Image src="images/homepage/stats/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={150} height={150}></Image>
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>

@@ -176,7 +176,7 @@ export default function FaqSectionDesktop() {
                                 onClick={handleToggle}
                             >
                                 <Image
-                                    src="/images/faq-down-arrow.svg"
+                                    src="/images/global/faq-down-arrow.svg"
                                     alt="faq"
                                     width={30}
                                     height={52}
@@ -189,7 +189,7 @@ export default function FaqSectionDesktop() {
                                     Ask Your Queries
                                 </span>
                                 <Image
-                                    src="/images/homepage/faq-mic.svg"
+                                    src="/images/global/faq-mic.svg"
                                     alt="arrow-for-navigation"
                                     width={24}
                                     height={24}

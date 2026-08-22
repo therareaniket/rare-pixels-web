@@ -92,7 +92,7 @@ export default function InquirySectionDesktop() {
 
                     <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn">
                         <span className="text-20 text-md text-white">Start Your Project </span>
-                        <Image src="/images/homepage/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
+                        <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                     </Link>
                 </div>
             </section>

@@ -174,7 +174,7 @@ export default function FaqSectionMobile() {
                 onClick={handleToggle}
               >
                 <Image
-                  src="/images/faq-down-arrow.svg"
+                  src="/images/global/faq-down-arrow.svg"
                   alt="faq"
                   width={30}
                   height={52}
@@ -186,7 +186,7 @@ export default function FaqSectionMobile() {
               <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-mobile-btn website-btn">
                 <span className="text-20 text-md text-white">Ask Your Queries </span>
                 <Image
-                  src="/images/homepage/faq-mic.svg"
+                  src="/images/global/faq-mic.svg"
                   alt="arrow-for-navigation"
                   width={24}
                   height={24}

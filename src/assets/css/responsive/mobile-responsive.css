@@ -97,7 +97,7 @@
     .hm-abt-site-logo img{ width: 140px; margin: 25px auto; }
     .hm-abt-title{ margin-bottom: 14px; }
 
-    .abt-mobile-bg{ width: 100%; height: max-content; background-image: url(/images/homepage/abt-section-background-grid-mobile.png); background-repeat: repeat; }
+    .abt-mobile-bg{ width: 100%; height: max-content; background-image: url(/images/homepage/about/abt-section-background-grid-mobile.png); background-repeat: repeat; }
 
     .services-mobile-title{ text-align: center; }
     .services-mobile-title h2{ margin-bottom: 14px; }
@@ -415,6 +415,11 @@
     .abt-mis-vis-mobile-video img{ width: 100%; height: 100%; object-fit: contain; }
 
     .abt-vis-mobile { margin-top: 20px; margin-bottom: 14px; }
+    .abt-our-values-pointer-mobile { display: flex; align-items: flex-start; justify-content: space-between; } 
+
+    .abt-our-values-pointer-left { width: 40px; height: 40px; }
+    .our-values-image { width: 320px; }
+    .abt-our-values-pointer-right { width: calc( 100% - 55px ); }
 }
 
 @media (max-width: 439px) {
@@ -423,8 +428,6 @@
     h2, .h2 { font-size: 28px; line-height: 36px; }
     h3, .h3 { font-size: 26px; line-height: 34px; }
     h4, .h4 { font-size: 26px; line-height: 34px; }
-    h5, .h5 { font-size: 24px; line-height: 32px; }
-    h6, .h6 { font-size: 22px; }
     body { font-size: 24px; }
 
     .service-item p { width: 82%; }
@@ -494,6 +497,11 @@
 
     .abt-timeline-mobile-title h3 { margin-top: 20px; margin-bottom: 10px; }
     .timeline-image-mobile-wrapper { width: 200px; height: 200px; }
+
+    .abt-our-values-pointer-left { width: 38px; height: 38px; }
+    .abt-our-values-pointer-right { width: calc( 100% - 50px ); }
+
+    .our-values-image { width: 320px; }
 }
 
 @media (max-width: 400px) {
@@ -606,6 +614,13 @@
     .timeline-dot-3 { right: 20px; }
 
     .abt-mis-vis-mobile-video { width: 200px; height: 200px; margin: 25px auto; }
+
+    .abt-our-values-pointer-left { width: 34px; height: 34px; }
+    .abt-our-values-pointer-left span img { width: 18px; height: 18px; }
+    .abt-our-values-pointer-right h3 { line-height: 26px; }
+
+    .abt-our-values-pointer-right { width: calc( 100% - 46px ); }
+    .our-values-image { width: 100%; }
 }
 
 @media (max-width: 374px) {
@@ -639,6 +654,15 @@
 
     .process-card-mob-text{ width: 275px; }
     .process-section-sticky { height: calc( 100vh * 5 ); }
+
+    .abt-our-values-pointer-left { width: 30px; height: 30px; }
+    .abt-our-values-pointer-left span img { width: 16px; height: 16px; }
+
+    .abt-our-values-pointer-right { width: calc( 100% - 42px ); }
+
+    .abt-our-values-pointer-right h3 { line-height: 20px; }
+
+    .abt-our-values-hr { margin: 12px 0; }
 }
 
 @media (max-width: 359px) {
