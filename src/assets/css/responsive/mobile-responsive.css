@@ -97,7 +97,7 @@
     .hm-abt-site-logo img{ width: 140px; margin: 25px auto; }
     .hm-abt-title{ margin-bottom: 14px; }
 
-    .abt-mobile-bg{ width: 100%; height: max-content; background-image: url(/images/homepage/about/abt-section-background-grid-mobile.png); background-repeat: repeat; }
+    .abt-mobile-bg{ width: 100%; height: max-content; background-image: url(https://pub-ab3a45b6cf574e698e4911642d8b38de.r2.dev/images/homepage/about/abt-section-background-grid-mobile.png); background-repeat: repeat; }
 
     .services-mobile-title{ text-align: center; }
     .services-mobile-title h2{ margin-bottom: 14px; }
@@ -268,7 +268,6 @@
     .industries-text-wrapper p { width: 100%; }
     .industries-text-wrapper { gap: 15px; }
 
-    .footer-add-country { gap: 10px; }
     .footer-quote-right { width: 100%; }
     .footer-quote-right h2 { font-size: 50px; line-height: 58px; }
     .footer-copyright { gap: 10px; padding-top: 20px; margin-top: 20px; border-top: 1px solid #161F44; }
@@ -277,7 +276,7 @@
     .footer-detail-wrapper { padding: 20px 0; margin: 20px 0; border-top: 1px solid #161F44; border-bottom: 1px solid #161F44; }
 
     .footer-quote-right .text-18, .footer-social-wrapper .text-18, .footer-links .text-18, .footer-social-row .text-18 { font-size: 16px; line-height: 24px; }
-    .social-icon span { font-size: 18px; }
+    /* .social-icon span { font-size: 18px; } */
 
     .footer-links { gap: 30px; flex-wrap: wrap; justify-content: flex-start; } 
     .footer-pixel-2 { width: 100px; }
@@ -308,8 +307,6 @@
 
     .process-mobile-tick { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(0.5); transition: all .3s ease; }
     .process-title-text { display: flex; align-items: center; gap: 10px; }
-
-    .footer-add-country { flex-direction: row; gap: 30px; }
 
     .rare-pixels-company-logo { width: 90%; margin: 0 auto; }
 
@@ -351,7 +348,7 @@
     .faq-expand-wrapper { max-height: 800px; }
 
     .faq-accordion-title { align-items: center; }
-    .faq-btn-wrapper-arrow { flex-direction: row-reverse; justify-content: space-between; }
+    .faq-btn-wrapper-arrow { flex-direction: row-reverse; justify-content: flex-start; }
     .expand-faq { position: static; transform: translateX(0); } 
     .expand-faq span { text-decoration: underline; }
     .social-icon a { gap: 8px; }
@@ -361,12 +358,73 @@
     .faq-mobile-btn { margin-top: 0; }
 
     .header-website-detail { gap: 0; }
-    .footer-address-wrapper { gap: 15px; }
+    
+    .footer-add-country { flex-direction: row; gap: 10px; }
+    .footer-address-wrapper { flex-direction: column; gap: 16px; }
 
     .footer-social-icon-tablet { display: none; gap: 20px; }
-    .footer-social-icon-desktop { display: flex; flex-direction: row; gap: 40px; }
+    .footer-social-icon-desktop { display: flex; flex-direction: row; gap: 0px; }
 
     .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
+    .footer-social-row, .footer-social-wrapper, .footer-link-col { width: max-content; }
+
+    .footer-social-wrapper{ gap: 30px; }
+    .footer-social-row { flex-direction: row; gap: 30px; width: 100%; }
+    .social-icon span { font-size: 30px; }
+    .social-icon p { display: none; }
+
+    .footer-link-col:nth-child(1), .footer-link-col:nth-child(2) {  width: 180px; }
+    .footer-link-col:nth-child(3) { padding-top: 10px; }
+
+    .faq-toggle { font-size: 14px; line-height: 22px; }
+
+    /* about page */
+    .about-hero-section-mobile .container { display: flex; flex-direction: column-reverse; }
+    .about-mobile-title-wrapper p { display: flex; flex-direction: column; gap: 16px; }
+    .about-hero-mask-title {
+        position: relative;
+        height: 138px;
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .about-text-mask {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .masked-video {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .abt-timeline-mobile-title h3 { margin-top: 30px; margin-bottom: 14px; }
+    .time-line-hr { width: 100%; height: 1px; background-color: rgba(198, 198, 198, 0.5); margin-top: 30px; margin-bottom: 10px; }
+    .timeline-date-wrapper { display: flex; align-items: flex-start; justify-content: space-between; }
+    .timeline-date-wrapper span{ color: #C6C6C6; opacity: 50%; }
+    .timeline-date-wrapper span.active{ color: white; opacity: 100%; }
+
+    .timeline-hr-mobile { position: relative; }
+    .timeline-dot-1 { position: absolute; top: -5px; left: 25px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--primary); }
+    .timeline-dot-2 { position: absolute; top: -5px; left: 50%; transform: translateX(-50%); width: 10px; height: 10px; border-radius: 50%; background-color: #C6C6C6; opacity: 50%; }
+    .timeline-dot-3 { position: absolute; top: -5px; right: 25px; width: 10px; height: 10px; border-radius: 50%; background-color: #C6C6C6; opacity: 50%; }
+
+    .timeline-mobile-content h3 { margin-bottom: 14px; margin-top: 25px; }
+    .timeline-image-mobile-wrapper { width: 250px; height: 250px; }
+    .timeline-image-mobile-wrapper img{ width: 100%; height: 100%; object-fit: contain; }
+    .timeline-content-wrapper { display: flex; flex-direction: column; align-items: center; margin-top: 25px; }
+
+    .abt-mis-vis-title-mobile { position: relative; margin-top: 30px; }
+    .abt-mis-vis-quote { position: absolute; top: -30px; }
+    .abt-mis-vis-mobile-video { width: 250px; height: 250px; margin: 30px auto; }
+    .abt-mis-vis-mobile-video img{ width: 100%; height: 100%; object-fit: contain; }
+
+    .abt-vis-mobile { margin-top: 20px; margin-bottom: 14px; }
 
     /* about page */
     .about-hero-section-mobile .container { display: flex; flex-direction: column-reverse; }
@@ -494,6 +552,11 @@
     .process-card-mob-text p{ padding-top: 10px; }
     .process-vertical-line{ left: 18px; }
     .process-vertical-line-active{ left: 18px; }
+    
+    .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 170px; }
+
+    .abt-timeline-mobile-title h3 { margin-top: 20px; margin-bottom: 10px; }
+    .timeline-image-mobile-wrapper { width: 200px; height: 200px; }
 
     .abt-timeline-mobile-title h3 { margin-top: 20px; margin-bottom: 10px; }
     .timeline-image-mobile-wrapper { width: 200px; height: 200px; }
@@ -606,7 +669,17 @@
     .hm-abt-site-logo img{ margin: 30px auto; }
     .footer-add-country { gap: 20px; }
     .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
+    .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 150px; }
+    .footer-social-wrapper { gap: 14px; }
+    .social-icon span { font-size: 25px; }
 
+    .about-hero-mask-title { height: 135px; }
+    .timeline-image-mobile-wrapper { width: 180px; height: 180px; }
+
+    .timeline-dot-1 { left: 20px; }
+    .timeline-dot-3 { right: 20px; }
+
+    .abt-mis-vis-mobile-video { width: 200px; height: 200px; margin: 25px auto; }
     .about-hero-mask-title { height: 135px; }
     .timeline-image-mobile-wrapper { width: 180px; height: 180px; }
 
@@ -650,7 +723,7 @@
 
     .footer-quote-right .text-18, .footer-social-wrapper .text-18, .footer-links .text-18, .footer-social-row .text-18, .footer-contact .text-18{ font-size: 14px; line-height: 22px; }
     .footer-copyright .text-16 { font-size: 12px; line-height: 20px; }
-    .social-icon span { font-size: 16px; }
+    .social-icon span { font-size: 22px; }
 
     .process-card-mob-text{ width: 275px; }
     .process-section-sticky { height: calc( 100vh * 5 ); }
@@ -674,8 +747,14 @@
     .testi-clt-img-3{ width: 70px; height: 70px; }
 
     .teams-mob-pixesl-bottom-right{ width: 150px; bottom: 263px; }
-
     .process-card-mob-text{ width: 260px; }
+    
+    .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 140px; }
+
+    /* .about-hero-section-mobile .container { margin-top: 85px; } */
+
+    .timeline-content-wrapper { margin-top: 20px; }
+    .timeline-mobile-content h3 { margin-top: 20px; }
     /* .about-hero-section-mobile .container { margin-top: 85px; } */
 
     .timeline-content-wrapper { margin-top: 20px; }

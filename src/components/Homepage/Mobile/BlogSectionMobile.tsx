@@ -10,6 +10,9 @@ import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
+
 export default function BlogSectionMobile() {
     return (
         <>
@@ -42,7 +45,7 @@ export default function BlogSectionMobile() {
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-1">
                                     <div className="hm-blog-image-mob">
-                                        <Image src="/images/homepage/blog/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
+                                        <Image src={`${CDN_URL}/images/homepage/blog/blog-image-1.png`} alt="blog-image" width={424} height={250}></Image>
                                     </div>
 
                                     <h3 className="text-sb blog-mobile-title">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
@@ -57,7 +60,7 @@ export default function BlogSectionMobile() {
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-2">
                                     <div className="hm-blog-image-mob">
-                                        <Image src="/images/homepage/blog/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
+                                        <Image src={`${CDN_URL}/images/homepage/blog/blog-image-2.png`} alt="blog-image" width={444} height={250}></Image>
                                     </div>
 
                                     <h3 className="text-sb blog-mobile-title">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>
@@ -72,7 +75,7 @@ export default function BlogSectionMobile() {
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-1">
                                     <div className="hm-blog-image-mob">
-                                        <Image src="/images/homepage/blog/blog-image-1.png" alt="blog-image" width={424} height={250}></Image>
+                                        <Image  src={`${CDN_URL}/images/homepage/blog/blog-image-1.png`} alt="blog-image" width={424} height={250}></Image>
                                     </div>
 
                                     <h3 className="text-sb blog-mobile-title">RarePixels Turns 2. The Big Game Is Still Loading.</h3>
@@ -87,7 +90,7 @@ export default function BlogSectionMobile() {
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-2">
                                     <div className="hm-blog-image-mob">
-                                        <Image src="/images/homepage/blog/blog-image-2.png" alt="blog-image" width={444} height={250}></Image>
+                                        <Image src={`${CDN_URL}/images/homepage/blog/blog-image-2.png`} alt="blog-image" width={444} height={250}></Image>
                                     </div>
 
                                     <h3 className="text-sb blog-mobile-title">Why Serious Businesses Invest in UX Masters, Not Just Creative Designers.</h3>

@@ -5,6 +5,8 @@ import "@/assets/css/responsive/desktop-responsive.css";
 import GlassEffect from "@/components/global/LiquideGlass";
 import Image from "next/image";
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
 export default function ServicesSectionDesktop() {
     return (
         <>
@@ -26,7 +28,7 @@ export default function ServicesSectionDesktop() {
                     <div className="services-card-wrapper">
                         <div className="services-card services-ui-ux site-radius-20 bg-purple-shade">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services/services-ui-ux.svg" alt="services ui-ux" width={385} height={285}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/services/services-ui-ux.svg`} alt="services ui-ux" width={385} height={285}></Image>
                             </div>
                             <div className="site-radius-20 services-text">
                                 <h3 className="text-sb text-black">CLARITY</h3>
@@ -43,7 +45,7 @@ export default function ServicesSectionDesktop() {
 
                         <div className="services-card services-development site-radius-20 bg-light-yellow">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services/services-development.svg" alt="services development" width={300} height={314}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/services/services-development.svg`} alt="services development" width={300} height={314}></Image>
                             </div>
                             <div className="site-radius-20 services-text">
                                 <h3 className="text-sb text-black">MOMENTUM</h3>
@@ -60,7 +62,7 @@ export default function ServicesSectionDesktop() {
 
                         <div className="services-card services-brand-identity site-radius-20 bg-light-pink">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services/services-brand-identity.svg" alt="services brand-identity" width={300} height={300}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/services/services-brand-identity.svg`} alt="services brand-identity" width={300} height={314}></Image>
                             </div>
                             <div className="site-radius-20 services-text">
                                 <h3 className="text-sb text-black">PERCEPTION</h3>
@@ -77,7 +79,7 @@ export default function ServicesSectionDesktop() {
 
                         <div className="services-card services-social-media site-radius-20 bg-light-green">
                             <div className="services-art-board">
-                                <Image src="/images/homepage/services/services-social-media.svg" alt="services development" width={346} height={346}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/services/services-social-media.svg`} alt="services social-media" width={300} height={314}></Image>
                             </div>
                             <div className="site-radius-20 services-text">
                                 <h3 className="text-sb text-black">RELEVANCE</h3>

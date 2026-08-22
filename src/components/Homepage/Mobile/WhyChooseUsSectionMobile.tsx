@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 
 export default function WhyChooseUsSectionMobile() {
 
@@ -14,44 +14,8 @@ export default function WhyChooseUsSectionMobile() {
                     <p className="text-rg text-16 text-white">We bring together strategy, design, technology, and creativity to build experiences that are easy to use, hard to ignore, and built to perform.</p>
 
                     <div className="why-choose-us-semi-circles">
-                        <div className="why-semicircle-1 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-1.svg" alt="eclipse" width={71} height={71}></Image>
-                        </div>
-                        
-                        <div className="why-semicircle-2 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-2.svg" alt="eclipse" width={115} height={115}></Image>
-                        </div>
-
-                        <div className="why-semicircle-3 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-3.svg" alt="eclipse" width={159} height={159}></Image>
-                        </div>
-
-                        <div className="why-semicircle-4 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-4.svg" alt="eclipse" width={203} height={203}></Image>
-                        </div>
-
-                        <div className="why-semicircle-5 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-5.svg" alt="eclipse" width={248} height={245}></Image>
-                        </div>
-
-                        <div className="why-semicircle-6 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-6.svg" alt="eclipse" width={292} height={292}></Image>
-                        </div>
-
-                        <div className="why-semicircle-7 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-7.svg" alt="eclipse" width={334} height={334}></Image>
-                        </div>
-
-                        <div className="why-semicircle-8 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-8.svg" alt="eclipse" width={379} height={379}></Image>
-                        </div>
-
-                        <div className="why-semicircle-9 why-semicircle">
-                            <Image src="/images/homepage/why-choose-us/semicircle-mob-svg-dark-9.svg" alt="eclipse" width={424} height={424}></Image>
-                        </div>
-
                         <div className="why-choose-us-hand-image">
-                            <Image src="/images/homepage/why-choose-us/why-choose-us-hand.png" alt="why-choose-us-hand" width={190} height={316}></Image>
+                            <Image src={`${CDN_URL}/images/homepage/why-choose-us/why-choose-us-hand.png`} alt="why-choose-us-hand" width={190} height={316}></Image>
                         </div>
                     </div>
 

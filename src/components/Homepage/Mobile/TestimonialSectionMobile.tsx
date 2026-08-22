@@ -11,10 +11,12 @@ import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
 const videos = [
-    "/images/homepage/testimonialvideos/dummy-1.mp4",
-    "/images/homepage/testimonialvideos/dummy-2.mp4",
-    "/images/homepage/testimonialvideos/dummy-3.mp4",
+    `${CDN_URL}/images/homepage/testimonialvideos/dummy-1.mp4`,
+    `${CDN_URL}/images/homepage/testimonialvideos/dummy-2.mp4`,
+    `${CDN_URL}/images/homepage/testimonialvideos/dummy-3.mp4`,
 ]
 
 export default function TestimonialSectionMobile() {
@@ -139,8 +141,7 @@ export default function TestimonialSectionMobile() {
                                     </div>
                                 )}
 
-                                {/* <Image className="minimize-btn" src="/images/homepage/testimonialvideos/minimize.svg" alt="minimize" width={24} height={24}></Image> */}
-                                <Image className="minimize-btn" onMouseDown={() => handleFullscreen(videos[activeVideoIndex])} src="/images/homepage/testimonialvideos/minimize-svg.svg" alt="minimize" width={30} height={30}></Image>
+                                <Image className="minimize-btn" onMouseDown={() => handleFullscreen(videos[activeVideoIndex])} src={`${CDN_URL}/images/homepage/testimonialvideos/minimize-svg.svg`} alt="minimize" width={30} height={30}></Image>
                             </div>
                         </div>
 
@@ -161,19 +162,6 @@ export default function TestimonialSectionMobile() {
                             longSwipes={true}
                             longSwipesRatio={0.4}
 
-                            // onSlideChange={() => {
-                            //     setPixelDelays(createPixelDelays(pixelBlocks.length));
-                            //     setIsTransitioning(true);
-
-                            //     requestAnimationFrame(() => {
-                            //         setActiveVideoIndex((prev) => (prev + 1) % videos.length);
-                            //     });
-
-                            //     setTimeout(() => {
-                            //         setIsTransitioning(false);
-                            //     }, 800);
-                            // }}
-
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
                             }}
@@ -188,7 +176,7 @@ export default function TestimonialSectionMobile() {
                                         <p className="text-16 text-rg">Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.</p>
                                         <div className="testimonial-stars">
                                             {Array.from({ length: 5 }).map((_, index) => (
-                                                <Image key={index} src="/images/homepage/testimonialvideos/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                <Image key={index} src={`${CDN_URL}/images/homepage/testimonialvideos/testimonial-star.svg`} alt="testimonial-review-star" width={24} height={24}></Image>
                                             ))}
                                         </div>
                                     </div>
@@ -212,7 +200,7 @@ export default function TestimonialSectionMobile() {
                                         <p className="text-16 text-rg">Rarepixels enhanced our online presence with their outstanding website design and development services. From concept to launch, their team delivered a fully responsive, SEO-optimized site that boosted our traffic. Their creativity, technical expertise, and seamless collaboration made the process effortless.</p>
                                         <div className="testimonial-stars">
                                             {Array.from({ length: 5 }).map((_, index) => (
-                                                <Image key={index} src="/images/homepage/testimonialvideos/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                <Image key={index} src={`${CDN_URL}/images/homepage/testimonialvideos/testimonial-star.svg`} alt="testimonial-review-star" width={24} height={24}></Image>
                                             ))}
                                         </div>
                                     </div>
@@ -236,7 +224,7 @@ export default function TestimonialSectionMobile() {
                                         <p className="text-16 text-rg">The RarePixels team is indeed working in the line of their brand. I came across many teams during my professional journey but the Team RarePixels are indeed rarest RARE! I have seen them growing as a team and it&apos;s really commendable the freedom and spirit with which they enjoy working and that reflects through their creativity, makes their work very special and unique by matching the present trend & technologies.</p>
                                         <div className="testimonial-stars">
                                             {Array.from({ length: 5 }).map((_, index) => (
-                                                <Image key={index} src="/images/homepage/testimonialvideos/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                <Image key={index} src={`${CDN_URL}/images/homepage/testimonialvideos/testimonial-star.svg`} alt="testimonial-review-star" width={24} height={24}></Image>
                                             ))}
                                         </div>
                                     </div>
@@ -260,7 +248,7 @@ export default function TestimonialSectionMobile() {
                                         <p className="text-16 text-rg">Working with RarePixels team is awesome. They are a highly professional team experts in design, development and digital marketing. They analysed and integrated our needs and translated them into proposals and results that exceeded our expectations. I highly recommend this team.</p>
                                         <div className="testimonial-stars">
                                             {Array.from({ length: 5 }).map((_, index) => (
-                                                <Image key={index} src="/images/homepage/testimonialvideos/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                <Image key={index} src={`${CDN_URL}/images/homepage/testimonialvideos/testimonial-star.svg`} alt="testimonial-review-star" width={24} height={24}></Image>
                                             ))}
                                         </div>
                                     </div>
@@ -284,7 +272,7 @@ export default function TestimonialSectionMobile() {
                                         <p className="text-16 text-rg">RarePixels has delivered their services with outstanding professionalism throughout. Their work is consistently creative, fresh, and always on time. They maintain clear and transparent communication. Every detail is handled with care and explained upfront. Truly a dependable and highly recommended team.</p>
                                         <div className="testimonial-stars">
                                             {Array.from({ length: 5 }).map((_, index) => (
-                                                <Image key={index} src="/images/homepage/testimonialvideos/testimonial-star.svg" alt="testimonial-review-star" width={24} height={24}></Image>
+                                                <Image key={index} src={`${CDN_URL}/images/homepage/testimonialvideos/testimonial-star.svg`} alt="testimonial-review-star" width={24} height={24}></Image>
                                             ))}
                                         </div>
                                     </div>

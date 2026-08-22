@@ -7,10 +7,16 @@ import "@/assets/css/responsive/mobile-responsive.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
 
     const [activeCountry, setActiveCountry] = useState("india");
+    const pathname = usePathname();
+    const isActive = (href: string) => pathname === href;
+    const linkStyle = (href: string) => ({
+        color: isActive(href) ? '#ED0180' : undefined,
+    });
 
     return (
         <>
@@ -138,7 +144,7 @@ export default function Footer() {
                             <div className="footer-links">
                                 <div className="footer-link-col">
                                     <ul>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="/" title="home">Home</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"> <Link href="/" title="home" style={linkStyle('/')}>Home</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="/About" title="about">About</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="#" title="industries">Industries</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"> <Link href="#" title="projects">Projects</Link> </li>

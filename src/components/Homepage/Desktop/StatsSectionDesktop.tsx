@@ -4,6 +4,8 @@ import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import Image from "next/image";
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
 export const description = "A radar chart with dots"
 
 export default function StatsSectionDesktop() {
@@ -27,24 +29,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Specialised Solutions Crafted</p>
 
                                 <div className="stats-element-art-board">
-                                    {/* <ResponsiveContainer className="stats-elements" width="100%" height="100%">
-                                        <PieChart>
-                                            <Pie
-                                                data={data}
-                                                dataKey="value"
-                                                innerRadius={50}
-                                                outerRadius={80}
-                                                paddingAngle={3}
-                                                stroke="none"
-                                            >
-                                                {data.map((entry, index) => (
-                                                    <Cell key={index} fill={COLORS[index]} />
-                                                ))}
-                                            </Pie>
-                                        </PieChart>
-                                    </ResponsiveContainer> */}
-
-                                    <Image src="images/homepage/stats/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/specialized-solution-crafted.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Every solution is purpose-built.
@@ -57,19 +42,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Industries Transformed Globally</p>
 
                                 <div className="stats-element-art-board">
-                                    {/* <ResponsiveContainer className="stats-elements" width="100%" height="100%"> */}
-                                    {/* <RadarChart data={chartData}> */}
-                                    {/* <PolarGrid /> */}
-                                    {/* <PolarAngleAxis dataKey="month" /> */}
-                                    {/* <Radar/> */}
-                                    {/* dataKey="desktop" */}
-                                    {/* fill="#ED0180" */}
-                                    {/* fillOpacity={1} */}
-                                    {/* /> */}
-                                    {/* </RadarChart> */}
-                                    {/* </ResponsiveContainer> */}
-
-                                    <Image src="images/homepage/stats/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={215} height={200}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/industries-transformed-globally.svg`} alt="specialized-solution-crafted" width={215} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">From startups to enterprises.
@@ -82,7 +55,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Client Trust Retained</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/stats/client-trust-retained.svg" alt="specialized-solution-crafted" width={271} height={172}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/client-trust-retained.svg`} alt="specialized-solution-crafted" width={271} height={172}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Relationships built on results.
@@ -103,7 +76,7 @@ export default function StatsSectionDesktop() {
 
                             <div className="stats-card-6 stats-card">
                                 <div className="stats-global-element">
-                                    <Image src="images/homepage/stats/global-market-served.svg" alt="specialized-solution-crafted" width={754} height={320}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/global-market-served.svg`} alt="specialized-solution-crafted" width={754} height={320}></Image>
                                 </div>
 
                                 <div className="stats-global-text-wrapper">
@@ -125,27 +98,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-white text-light-grey text-18 text-sb stats-specification">Projects Delivered With Precision</p>
 
                                 <div className="stats-element-art-board">
-                                    {/* <ResponsiveContainer className="stats-elements" width="100%" height="100%">
-                                        <PieChart>
-                                            <Pie
-                                                data={projectDeliveredData}
-                                                dataKey="value"
-                                                innerRadius={55}
-                                                outerRadius={85}
-                                                paddingAngle={5}
-                                                stroke="none"
-                                            >
-                                                {data.map((_, index) => (
-                                                    <Cell
-                                                        key={index}
-                                                        fill={index === 2 ? "#8E8EA0" : "#D8D8D2"}
-                                                    />
-                                                ))}
-                                            </Pie>
-                                        </PieChart>
-                                    </ResponsiveContainer> */}
-
-                                    <Image src="images/homepage/stats/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/project-delivered-with-precision.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Precision in every milestone.
@@ -170,7 +123,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Specialised Solutions Crafted</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/stats/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/specialized-solution-crafted.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Every solution is purpose-built.
@@ -185,7 +138,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Industries Transformed Globally</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/stats/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/industries-transformed-globally.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">From startups to enterprises.
@@ -198,7 +151,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Client Trust Retained</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/stats/client-trust-retained.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/client-trust-retained.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Relationships built on results.
@@ -223,7 +176,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Projects Delivered With Precision</p>
 
                                 <div className="stats-element-art-board">
-                                    <Image src="images/homepage/stats/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/project-delivered-with-precision.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Precision in every milestone.
@@ -238,7 +191,7 @@ export default function StatsSectionDesktop() {
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Global Markets Served</p>
 
                                 <div className="stats-element-art-board element-map-wrapper">
-                                    <Image src="images/homepage/stats/global-market-served.svg" alt="specialized-solution-crafted" width={754} height={320}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/stats/global-market-served.svg`} alt="specialized-solution-crafted" width={754} height={320}></Image>
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Ideas built without borders.

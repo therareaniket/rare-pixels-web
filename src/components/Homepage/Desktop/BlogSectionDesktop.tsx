@@ -10,6 +10,8 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
 export default function BlogSectionDesktop() {
     return (
         <>
@@ -24,7 +26,7 @@ export default function BlogSectionDesktop() {
                     <div className="hm-blog-wrapper">
                         <div className="hm-blog-card-left hm-blog-card-left-desktop">
                             <div className="hm-blog-image site-radius-20">
-                                <Image src="/images/homepage/blog/blog-image-1.png" alt="blog-image" width={785} height={442}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/blog/blog-image-1.png`} alt="blog-image" width={785} height={442}></Image>
 
                                 <div className="blog-category-tag">
                                     <p className="text-16 text-sb text-white">Life at RPD</p>
@@ -68,7 +70,7 @@ export default function BlogSectionDesktop() {
                                 <SwiperSlide>
                                     <div className="hm-blog-card-left">
                                         <div className="hm-blog-image site-radius-20">
-                                            <Image src="/images/homepage/blog/blog-image-1.png" alt="blog-image" width={785} height={442}></Image>
+                                            <Image src={`${CDN_URL}/images/homepage/blog/blog-image-1.png`} alt="blog-image" width={785} height={442}></Image>
 
                                             <div className="blog-category-tag">
                                                 <p className="text-16 text-sb text-white">Life at RPD</p>
@@ -104,7 +106,7 @@ export default function BlogSectionDesktop() {
                                 <SwiperSlide>
                                     <div className="blog-card-right-3">
                                         <div className="blog-card-3-left site-radius-20">
-                                            <Image src="/images/homepage/blog/blog-image-2.png" alt="blog-image" width={350} height={426}></Image>
+                                            <Image src={`${CDN_URL}/images/homepage/blog/blog-image-2.png`} alt="blog-image" width={350} height={426}></Image>
 
                                             <div className="blog-category-tag">
                                                 <p className="text-16 text-sb text-white">UI/UX Design</p>
@@ -142,7 +144,7 @@ export default function BlogSectionDesktop() {
                                 <SwiperSlide>
                                     <div className="hm-blog-card-left">
                                         <div className="hm-blog-image site-radius-20">
-                                            <Image src="/images/homepage/blog/blog-image-1.png" alt="blog-image" width={785} height={442}></Image>
+                                            <Image src={`${CDN_URL}/images/homepage/blog/blog-image-1.png`} alt="blog-image" width={785} height={442}></Image>
 
                                             <div className="blog-category-tag">
                                                 <p className="text-16 text-sb text-white">Life at RPD</p>
@@ -178,7 +180,7 @@ export default function BlogSectionDesktop() {
                                 <SwiperSlide>
                                     <div className="blog-card-right-3">
                                         <div className="blog-card-3-left site-radius-20">
-                                            <Image src="/images/homepage/blog/blog-image-2.png" alt="blog-image" width={350} height={426}></Image>
+                                            <Image src={`${CDN_URL}/images/homepage/blog/blog-image-2.png`} alt="blog-image" width={350} height={426}></Image>
 
                                             <div className="blog-category-tag">
                                                 <p className="text-16 text-sb text-white">UI/UX Design</p>
@@ -218,7 +220,7 @@ export default function BlogSectionDesktop() {
                         <div className="hm-blog-card-right">
                             <div className="blog-card-right-3 hm-blog-card-right-desktop">
                                 <div className="blog-card-3-left site-radius-20">
-                                    <Image src="/images/homepage/blog/blog-image-2.png" alt="blog-image" width={350} height={426}></Image>
+                                    <Image  src={`${CDN_URL}/images/homepage/blog/blog-image-2.png`} alt="blog-image" width={350} height={426}></Image>
 
                                     <div className="blog-category-tag">
                                         <p className="text-16 text-sb text-white">UI/UX Design</p>

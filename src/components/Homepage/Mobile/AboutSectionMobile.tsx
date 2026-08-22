@@ -1,5 +1,7 @@
 'use client';
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
 import GlassEffect from "@/components/global/LiquideGlass";
 import Image from "next/image";
 import "@/assets/css/mobile-custom.css";
@@ -21,7 +23,7 @@ export default function AboutSectionMobile() {
                             </p>
 
                             <div className="hm-abt-site-logo">
-                                <Image src="/images/homepage/rare-logo-white.png" alt="rare-logo" width={197} height={250}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" width={197} height={250}></Image>
                             </div>
 
                             <div className="hm-abt-cards-wrapper">

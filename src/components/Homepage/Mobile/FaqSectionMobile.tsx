@@ -168,29 +168,16 @@ export default function FaqSectionMobile() {
             </Accordion>
 
             <div className="faq-btn-wrapper-arrow">
-              <button
-                type="button"
-                className="expand-faq"
-                onClick={handleToggle}
-              >
-                <Image
-                  src="/images/global/faq-down-arrow.svg"
-                  alt="faq"
-                  width={30}
-                  height={52}
-                  className={expanded ? 'rotate-180 transition-all' : 'transition-all'}
-                />
+              <button type="button" className="expand-faq" onClick={handleToggle} >
 
-                {/* <span className="text-12 text-primary text-rg">EXPAND</span> */}
+                <span className="faq-toggle">
+                  {expanded ? "Less FAQs" : "More FAQs"}
+                </span>
               </button>
               <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-mobile-btn website-btn">
                 <span className="text-20 text-md text-white">Ask Your Queries </span>
-                <Image
-                  src="/images/global/faq-mic.svg"
-                  alt="arrow-for-navigation"
-                  width={24}
-                  height={24}
-                />
+                
+                <Image src="/images/global/faq-mic.svg" alt="arrow-for-navigation" width={24} height={24} />
               </Link>
             </div>
           </div>

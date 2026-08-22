@@ -77,7 +77,7 @@ export default function Header() {
                         {/* <div className={`navbar-wrapper ${isSquished ? "header-squished" : "header-expanded"}`}> */}
                         <div className="navbar-wrapper header-squished">
                             <div className="website-header-logo">
-                                <Image className="dark-mode-icon" src="/images/rp-logo-white.png" alt="dark-mode" width={174} height={28} loading="eager" />
+                                <Image className="dark-mode-icon" src="/images/global/rp-logo-black.png" alt="dark-mode" width={174} height={28} loading="eager" />
 
                                 {/* <div className="website-logo">
                                     <Image src="/images/website-logo-r.svg" alt="website-logo" width={19} height={25} loading="eager"></Image>
@@ -86,7 +86,7 @@ export default function Header() {
 
                             <div ref={menuContainerRef} className="nav-icon-wrapper">
                                 <div className="nav-hamburger" onClick={(e) => { e.stopPropagation(); setIsMenuOpen((prev) => !prev); }}>
-                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/global/white-close.svg" : "/images/global/dark-mode-hamburger.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={30} height={30} loading="eager" />
+                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/global/close-menu.svg" : "/images/global/hamburger-menu.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={isMenuOpen ? 30 : 25} height={isMenuOpen ? 30 : 25} loading="eager" />
                                 </div>
                             </div>
                         </div>

@@ -55,7 +55,7 @@ export default function Home() {
 					<ServicesSectionDesktop />
 					<IndustriesSectionDesktop />
 					<WhyChooseUsSectionDesktop />
-					<ProcessSectionDesktop />
+					{/* <ProcessSectionDesktop /> */}
 					<ProjectsSectionDesktop />
 					<StatsSectionDesktop/>
 					<BlogSectionDesktop />
@@ -71,8 +71,8 @@ export default function Home() {
 					<ServicesSectionMobile />
 					<IndustriesSectionMobile />
 					<WhyChooseUsSectionMobile />
-					<ProcessSectionMobile />
-					<ProjectSectionMobile />
+					{/* <ProcessSectionMobile /> */}
+					{/* <ProjectSectionMobile /> */}
 					<StatsSectionMobile />
 					<BlogSectionMobile />
 					<FaqSectionMobile />

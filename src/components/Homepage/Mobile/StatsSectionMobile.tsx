@@ -4,6 +4,8 @@ import Image from "next/image";
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
 export default function StatsSectionMobile() {
     return (
         <>
@@ -23,7 +25,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case text-light-grey">Specialised Solutions Crafted</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/stats/specialized-solution-crafted.svg" alt="specialized-solution-crafted" width={150} height={150}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/stats/specialized-solution-crafted.svg`} alt="specialized-solution-crafted" width={150} height={150}></Image>
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -36,7 +38,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case  text-light-grey">Industries Transformed Globally</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/stats/industries-transformed-globally.svg" alt="specialized-solution-crafted" width={160} height={150}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/stats/industries-transformed-globally.svg`} alt="specialized-solution-crafted" width={160} height={150}></Image>
                             </div>
 
                             <p className="text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -49,7 +51,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case text-light-grey">Client Trust Retained</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/stats/client-trust-retained.svg" alt="specialized-solution-crafted" width={236} height={150}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/stats/client-trust-retained.svg`} alt="specialized-solution-crafted" width={236} height={150}></Image>
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -62,7 +64,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case text-light-grey">Global Markets Served</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/stats/global-market-served.svg" alt="specialized-solution-crafted" width={396} height={150}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/stats/global-market-served.svg`} alt="specialized-solution-crafted" width={396} height={150}></Image>
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -75,7 +77,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case  text-light-grey">Projects Delivered With Precision</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src="images/homepage/stats/project-delivered-with-precision.svg" alt="specialized-solution-crafted" width={150} height={150}></Image>
+                                <Image src={`${CDN_URL}/images/homepage/stats/project-delivered-with-precision.svg`} alt="specialized-solution-crafted" width={150} height={150}></Image>
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>

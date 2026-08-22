@@ -1,12 +1,14 @@
 'use client';
 
+const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
+
 import GlassEffect from "@/components/global/LiquideGlass";
 import Image from "next/image";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 
 export default function AboutSectionDesktop() {
-
+    
     return (
         <>
             <section className="section section-bg-blue">
@@ -24,7 +26,7 @@ export default function AboutSectionDesktop() {
 
                             <div className="hm-abt-card-wrapper">
                                 <div className="hm-abt-logo-left">
-                                    <Image src="/images/homepage/about/rare-logo-white.png" alt="rare-logo" width={276} height={350}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" width={276} height={350}></Image>
                                 </div>
 
                                 <div className="hm-abt-pointers-right">
