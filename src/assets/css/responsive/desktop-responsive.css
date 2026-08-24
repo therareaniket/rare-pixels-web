@@ -469,7 +469,7 @@
 	.rpd-pixel-right, .rpd-pixel-left { width: 120px; }
 	.abt-rpd-card-2 { transform: translateY(-173px); }
 	.abt-rpd-card-2 .abt-card-text { height: max-content; }
-	.abt-rpd-strip p { font-size: 30px; line-height: 38px; bottom: -22px; }
+	.abt-rpd-strip { font-size: 30px; line-height: 38px; bottom: -22px; }
 
 	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 402px; height: 392px; }
 	.rpd-card-2 { width: 402px; height: 348px; }

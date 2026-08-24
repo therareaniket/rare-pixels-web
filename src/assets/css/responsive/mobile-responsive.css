@@ -491,10 +491,10 @@
     .why-rare-pointers span { width: 6px; height: 6px; margin-top: 10px; }
     .why-rare-desc .text-18 { margin-bottom: 6px; }
 
-    .rpd-mobile-section { position: relative; }
+    .rpd-mobile-section { position: relative; overflow: hidden; }
     .rpd-mobile-card-wrapper { padding: 60px 0; display: flex; flex-direction: column; gap: 30px; } 
     .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; }
-    .rpd-pixel-right-mob { position: absolute; bottom: 0; right: 0; }
+    .rpd-pixel-right-mob { position: absolute; bottom: 0; right: 0; z-index: 2; }
 
     .rpd-mobile-card .h5 { margin-top: 20px; margin-bottom: 14px; }
 
@@ -508,6 +508,8 @@
     .rpd-mobile-card-3 { height: 300px; }
     .rpd-mobile-card-4 { height: 450px; }
     .rpd-mobile-card-5 { height: 250px; }
+
+	.abt-rpd-strip { bottom: 0; }
 }
 
 @media (max-width: 439px) {
@@ -817,8 +819,6 @@
 
 @media (max-width: 359px) {
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
-    h4, .h4 { font-size: 24px; }
-    h6, .h6 { font-size: 18px; }
 
     .testi-clt-img-2{ width: 70px; height: 70px; left: 0px; top: 90px; }
     .testi-clt-img-3{ width: 70px; height: 70px; }
