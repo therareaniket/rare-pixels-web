@@ -22,7 +22,7 @@ export default function AboutOurValuesSectionDesktop() {
                             <div className="abt-our-values-pointer">
                                 <div className="abt-our-values-pointer-left">
                                     <span>
-                                        <Image src="/images/aboutpage/abt-our-values/creative.svg" alt="our-values" width={24} height={24}></Image>
+                                        <Image src="/images/aboutpage/abt-our-values/creative-1.svg" alt="our-values" width={24} height={24}></Image>
                                     </span>
                                 </div>
                                 <div className="abt-our-values-pointer-right">
@@ -37,7 +37,7 @@ export default function AboutOurValuesSectionDesktop() {
                             <div className="abt-our-values-pointer">
                                 <div className="abt-our-values-pointer-left">
                                     <span>
-                                        <Image src="/images/aboutpage/abt-our-values/strategic.svg" alt="our-values" width={24} height={24}></Image>
+                                        <Image src="/images/aboutpage/abt-our-values/strategic-1.svg" alt="our-values" width={24} height={24}></Image>
                                     </span>
                                 </div>
                                 <div className="abt-our-values-pointer-right">
@@ -52,7 +52,7 @@ export default function AboutOurValuesSectionDesktop() {
                             <div className="abt-our-values-pointer">
                                 <div className="abt-our-values-pointer-left">
                                     <span>
-                                        <Image src="/images/aboutpage/abt-our-values/communications.svg" alt="our-values" width={24} height={24}></Image>
+                                        <Image src="/images/aboutpage/abt-our-values/communications-1.svg" alt="our-values" width={24} height={24}></Image>
                                     </span>
                                 </div>
                                 <div className="abt-our-values-pointer-right">
@@ -67,7 +67,7 @@ export default function AboutOurValuesSectionDesktop() {
                             <div className="abt-our-values-pointer">
                                 <div className="abt-our-values-pointer-left">
                                     <span>
-                                        <Image src="/images/aboutpage/abt-our-values/ownership.svg" alt="our-values" width={24} height={24}></Image>
+                                        <Image src="/images/aboutpage/abt-our-values/ownership-1.svg" alt="our-values" width={24} height={24}></Image>
                                     </span>
                                 </div>
                                 <div className="abt-our-values-pointer-right">

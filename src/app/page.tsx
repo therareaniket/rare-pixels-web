@@ -9,7 +9,6 @@ import ServicesSectionMobile from "@/components/Homepage/Mobile/ServicesSectionM
 import IndustriesSectionMobile from "@/components/Homepage/Mobile/IndustriesSectionMobile";
 import WhyChooseUsSectionMobile from "@/components/Homepage/Mobile/WhyChooseUsSectionMobile";
 import ProcessSectionMobile from "@/components/Homepage/Mobile/ProcessSectionMobile";
-import ProjectSectionMobile from "@/components/Homepage/Mobile/ProjectSectionMobile";
 import StatsSectionMobile from "@/components/Homepage/Mobile/StatsSectionMobile";
 import FaqSectionMobile from "@/components/Homepage/Mobile/FaqSectionMobile";
 import InquirySectionMobile from "@/components/Homepage/Mobile/InquirySectionMobile";

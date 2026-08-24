@@ -39,21 +39,21 @@ export default function Footer() {
                         <div className="footer-social-wrapper footer-social-icon-desktop">
                             <div className="footer-social-row-1 footer-social-row">
                                 <div className="social-icon text-light-grey">
-                                    <Link href="" title="linkedin">
+                                    <Link href="https://www.linkedin.com/company/rarepixelsdesign/" title="linkedin" target="_blank">
                                         <span className="icon-linkedin"></span>
                                         <p className="text-upper-case text-18 text-rg">LinkedIn</p>
                                     </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="instagram">
+                                    <Link href="https://www.instagram.com/rarepixelsdesign/" title="instagram" target="_blank">
                                         <span className="icon-instagram"></span>
                                         <p className="text-upper-case text-18 text-rg">Instagram</p>
                                     </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="threads">
+                                    <Link href="https://www.threads.com/@rarepixelsdesign" title="threads" target="_blank">
                                         <span className="icon-threads"></span>
                                         <p className="text-upper-case text-18 text-rg">Threads</p>
                                     </Link>
@@ -62,21 +62,21 @@ export default function Footer() {
 
                             <div className="footer-social-row-2 footer-social-row">
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="facebook">
+                                    <Link href="https://www.facebook.com/RarePixelsDesign" title="facebook" target="_blank">
                                         <span className="icon-facebook"></span>
                                         <p className="text-upper-case text-18 text-rg">Facebook</p>
                                     </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="twitter">
+                                    <Link href="https://x.com/Rare_Pixels" title="X" target="_blank">
                                         <span className="icon-twitter"></span>
                                         <p className="text-upper-case text-18 text-rg">Twitter</p>
                                     </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="youtube">
+                                    <Link href="https://www.youtube.com/@RarePixelsDesign" title="youtube" target="_blank">
                                         <span className="icon-youtube"></span>
                                         <p className="text-upper-case text-18 text-rg">Youtube</p>
                                     </Link>
@@ -87,14 +87,14 @@ export default function Footer() {
                         <div className="footer-social-icon-tablet">
                             <div className="footer-social-row-1 footer-social-row">
                                 <div className="social-icon text-light-grey">
-                                    <Link href="" title="linkedin">
+                                    <Link href="https://www.linkedin.com/company/rarepixelsdesign/" title="linkedin" target="_blank">
                                         <span className="icon-linkedin"></span>
                                         <p className="text-upper-case text-18 text-rg">LinkedIn</p>
                                     </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="twitter">
+                                    <Link href="https://x.com/Rare_Pixels" title="X" target="_blank">
                                         <span className="icon-twitter"></span>
                                         <p className="text-upper-case text-18 text-rg">Twitter</p>
                                     </Link>
@@ -103,14 +103,14 @@ export default function Footer() {
 
                             <div className="footer-social-row-2 footer-social-row">
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="facebook">
+                                    <Link href="https://www.facebook.com/RarePixelsDesign" title="facebook" target="_blank">
                                         <span className="icon-facebook"></span>
                                         <p className="text-upper-case text-18 text-rg">Facebook</p>
                                     </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="threads">
+                                    <Link href="https://www.threads.com/@rarepixelsdesign" title="threads" target="_blank">
                                         <span className="icon-threads"></span>
                                         <p className="text-upper-case text-18 text-rg">Threads</p>
                                     </Link>
@@ -119,14 +119,14 @@ export default function Footer() {
 
                             <div className="footer-social-row-2 footer-social-row">
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="instagram">
+                                    <Link href="https://www.instagram.com/rarepixelsdesign/" title="instagram" target="_blank">
                                         <span className="icon-instagram"></span>
                                         <p className="text-upper-case text-18 text-rg">Instagram</p>
                                     </Link>
                                 </div>
 
                                 <div className="social-icon text-light-grey">
-                                    <Link href="#" title="youtube">
+                                    <Link href="https://www.youtube.com/@RarePixelsDesign" title="youtube" target="_blank">
                                         <span className="icon-youtube"></span>
                                         <p className="text-upper-case text-18 text-rg">Youtube</p>
                                     </Link>
@@ -138,34 +138,44 @@ export default function Footer() {
                     <div className="footer-detail-wrapper">
                         <div className="footer-links-wrapper">
                             <div className="footer-title">
-                                <p className="text-18 text-md text-white">Quick Links & Services</p>
+                                <p className="text-18 text-md text-white quick-link-services-title">Quick Links & Services</p>
+                                <p className="text-18 text-md text-white quick-link-only-title">Quick Links</p>
                             </div>
 
                             <div className="footer-links">
                                 <div className="footer-link-col">
                                     <ul>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="/" title="home" style={linkStyle('/')}>Home</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="/About" title="about" style={linkStyle('/About')}>About</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="industries">Industries</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="projects">Projects</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey not-for-mobile"><Link href="/" title="home" style={linkStyle('/')}>Home</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey not-for-mobile"><Link href="/About" title="about" style={linkStyle('/About')}>About</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey not-for-mobile"><Link href="#" title="industries">Industries</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey not-for-mobile"><Link href="#" title="projects">Projects</Link> </li>
                                     </ul>
                                 </div>
 
                                 <div className="footer-link-col">
                                     <ul>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="process">Process</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="life at rpd">Life at RPD</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="articles">Articles</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="contact">Contact</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey only-for-mobile-three-column"><Link href="/" title="home" style={linkStyle('/')}>Home</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey only-for-mobile-three-column"><Link href="/About" title="about" style={linkStyle('/About')}>About</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey only-for-mobile-three-column"><Link href="#" title="industries">Industries</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey only-for-mobile-three-column"><Link href="#" title="projects">Projects</Link> </li>
+
+                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="process">Process</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="life at rpd">Life at RPD</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="articles">Articles</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="contact">Contact</Link> </li>
                                     </ul>
                                 </div>
 
                                 <div className="footer-link-col">
+                                    <div className="footer-title">
+                                        <p className="text-18 text-md text-white services-only-title">Services</p>
+                                    </div>
+
                                     <ul>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="ui/ux">UI/UX Design</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="web dev">Web & App Development</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="brand identity">Brand Identity Design</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"> <Link href="#" title="social media">Social Media Management</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="ui/ux">UI/UX Design</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="web dev">Web & App Development</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="brand identity">Brand Identity Design</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="social media">Social Media Management</Link> </li>
                                     </ul>
                                 </div>
                             </div>
@@ -222,23 +232,23 @@ export default function Footer() {
 
                                 <div className="footer-company-contact">
                                     <div className="footer-cnct">
-                                        <span className="text-rg text-18 text-light-grey">E.</span>
+                                        <span className="text-bd text-18 text-light-grey">E.</span>
 
                                         <div className="footer-mail">
                                             <ul>
                                                 <li className="text-rg text-18 text-light-grey"><Link href="mailTo:connect@rarepixelsdesign.com">connect@rarepixelsdesign.com</Link></li>
-                                                <li className="text-rg text-18 text-light-grey"><Link href="mailTo:careers@rarepixelsdesign.com">careers@rarepixelsdesign.com</Link></li>
                                             </ul>
                                         </div>
                                     </div>
 
                                     <div className="footer-cnct">
-                                        <span className="text-rg text-18 text-light-grey">P.</span>
+                                        <span className="text-bd text-18 text-light-grey">P.</span>
 
                                         <div className="footer-mail">
                                             <ul>
-                                                <li className="text-rg text-18 text-light-grey"><Link href="callTo:+91 8200925920">+91 8200925920</Link></li>
-                                                <li className="text-rg text-18 text-light-grey"><Link href="callTo:+1(347) 352-0172">+1(347) 352-0172</Link></li>
+                                                <li className="text-rg text-18 text-light-grey">{activeCountry === "india" ? <Link href="callTo:+91 8200925920">+91 8200925920</Link> : <Link href="callTo:+1(347) 352-0172">+1(347) 352-0172</Link>}</li>
+                                                {/* <li className="text-rg text-18 text-light-grey"></li>
+                                                <li className="text-rg text-18 text-light-grey"></li> */}
                                             </ul>
                                         </div>
                                     </div>

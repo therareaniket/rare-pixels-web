@@ -11,23 +11,25 @@ const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 
 
 export default function Header() {
+    const [isVisible, setIsVisible] = useState(true);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isSquished, setIsSquished] = useState(false);
+    const lastScrollY = useRef(0);
     const menuRef = useRef<HTMLDivElement>(null);
     const menuContainerRef = useRef<HTMLDivElement>(null);
-    const menuScrollPositionRef = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsSquished(window.scrollY > 1);
+            const currentScrollY = window.scrollY;
+            const viewportHeight = window.innerHeight;
+
+            if (currentScrollY > viewportHeight && currentScrollY > lastScrollY.current) { setIsVisible(false); } 
+            else { setIsVisible(true);}
+
+            lastScrollY.current = currentScrollY;
         };
 
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     useEffect(() => {
@@ -81,7 +83,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="site-header" >
+            <header className={`site-header ${!isVisible ? "header-hidden" : ""}`}>
                 <div className="container">
                     <nav className="nav">
                         {/* <div className={`navbar-wrapper ${isSquished ? "header-squished" : "header-expanded"}`}> */}
@@ -92,7 +94,7 @@ export default function Header() {
 
                             <div ref={menuContainerRef} className="nav-icon-wrapper">
                                 <div className="nav-hamburger" onClick={(e) => { e.stopPropagation(); setIsMenuOpen((prev) => !prev); }}>
-                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/global/close-menu.svg" : "/images/global/hamburger-menu.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={isMenuOpen ? 30 : 25} height={isMenuOpen ? 30 : 25} loading="eager" />
+                                    <Image className={`menu-icon ${isMenuOpen ? "menu-icon-open" : ""}`} src={isMenuOpen ? "/images/global/close-menu.svg" : "/images/global/hamburger-menu.svg"} alt={isMenuOpen ? "close menu" : "open menu"} width={25} height={25} loading="eager" />
                                 </div>
                             </div>
                         </div>
@@ -714,27 +716,27 @@ export default function Header() {
                                     </div>
 
                                     <div className="menu-social-icons">
-                                        <Link href="#" title="likedin">
+                                        <Link href="https://www.linkedin.com/company/rarepixelsdesign/" title="likedin" target="_blank">
                                             <span className="icon-linkedin"></span>
                                         </Link>
 
-                                        <Link href="#" title="instagram">
+                                        <Link href="https://www.instagram.com/rarepixelsdesign/" title="instagram" target="_blank">
                                             <span className="icon-instagram"></span>
                                         </Link>
 
-                                        <Link href="#" title="threads">
+                                        <Link href="https://www.threads.com/@rarepixelsdesign" title="threads" target="_blank">
                                             <span className="icon-threads"></span>
                                         </Link>
 
-                                        <Link href="#" title="facebook">
+                                        <Link href="https://www.facebook.com/RarePixelsDesign" title="facebook" target="_blank">
                                             <span className="icon-facebook"></span>
                                         </Link>
 
-                                        <Link href="#" title="twitter">
+                                        <Link href="https://x.com/Rare_Pixels" title="X" target="_blank">
                                             <span className="icon-twitter"></span>
                                         </Link>
 
-                                        <Link href="#" title="youtube">
+                                        <Link href="https://www.youtube.com/@RarePixelsDesign" title="youtube" target="_blank">
                                             <span className="icon-youtube"></span>
                                         </Link>
                                     </div>

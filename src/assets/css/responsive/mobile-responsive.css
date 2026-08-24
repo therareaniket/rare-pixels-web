@@ -4,6 +4,7 @@
  * Generated: 2026-06-09T09:54:31.727Z
  * Responsive Design System — RarePixels
  */
+
 .site-radius-10 { border-radius: 10px; }
 .bg-yellowish { background-color: #FBF9E9; }
 
@@ -286,7 +287,7 @@
     .footer-quote-right .text-18, .footer-social-wrapper .text-18, .footer-links .text-18, .footer-social-row .text-18 { font-size: 16px; line-height: 24px; }
     /* .social-icon span { font-size: 18px; } */
 
-    .footer-links { gap: 30px; flex-wrap: wrap; justify-content: flex-start; } 
+    .footer-links { gap: 10px; flex-wrap: wrap; justify-content: flex-start; } 
     .footer-pixel-2 { width: 100px; }
 
     .testimonialreview-main { width: 100%; }
@@ -362,13 +363,14 @@
     .social-icon a { gap: 8px; }
 
 
-    .footer-contact { flex-direction: column; gap: 20px; }
+    .footer-contact { flex-direction: column; gap: 14px; }
     .faq-mobile-btn { margin-top: 0; }
 
     .header-website-detail { gap: 0; }
     
     .footer-add-country { flex-direction: row; gap: 10px; }
-    .footer-address-wrapper { flex-direction: column; gap: 16px; }
+    .footer-address-wrapper { flex-direction: column; gap: 10px; }
+    .footer-cnct:first-child { margin-bottom: 6px; }
 
     .footer-social-icon-tablet { display: none; gap: 20px; }
     .footer-social-icon-desktop { display: flex; flex-direction: row; gap: 0px; }
@@ -380,9 +382,6 @@
     .footer-social-row { flex-direction: row; gap: 30px; width: 100%; }
     .social-icon span { font-size: 30px; }
     .social-icon p { display: none; }
-
-    .footer-link-col:nth-child(1), .footer-link-col:nth-child(2) {  width: 180px; }
-    .footer-link-col:nth-child(3) { padding-top: 10px; }
 
     .faq-toggle { font-size: 14px; line-height: 22px; }
 
@@ -489,6 +488,20 @@
     .why-rare-pointers span { width: 6px; height: 6px; margin-top: 10px; }
     .why-rare-desc .text-18 { margin-bottom: 6px; }
 
+    .footer-links { flex-direction: column; }
+    .footer-link-col { width: 100% !important; }
+    .footer-link-col:not(:last-child) ul {  display: flex; justify-content: space-between; width: 100%; }
+    .footer-link-col:not(:last-child) ul li { width: 100px; margin-bottom: 0; }
+    .quick-link-services-title { display: none; }
+    .footer-links { margin-top: 10px; }
+    .quick-link-only-title, .services-only-title { display: block; }
+    .footer-link-col .services-only-title { font-size: 18px; }
+
+    .footer-link-col:nth-child(1), .footer-link-col:nth-child(2) {  width: 180px; }
+    .footer-link-col:nth-child(3) { padding-top: 16px;  }
+    .footer-link-col:nth-child(3) ul { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .footer-link-col:nth-child(3) ul li { width: 196px; margin-bottom: 0;  }
+
     .rpd-mobile-section { position: relative; }
     .rpd-mobile-card-wrapper { padding: 60px 0; display: flex; flex-direction: column; gap: 30px; } 
     .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; }
@@ -579,7 +592,7 @@
     .industries-text-wrapper > span { font-size: 28px; line-height: 36px; }
 
     .footer-quote-right h2 { font-size: 48px; line-height: 56px; }
-    .footer-links { justify-content: start; gap: 20px; }
+    .footer-links { justify-content: start; }
     .footer-quote-right p { margin-bottom: 20px; }
 
     /* process */
@@ -591,7 +604,7 @@
     .process-vertical-line{ left: 18px; }
     .process-vertical-line-active{ left: 18px; }
     
-    .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 170px; }
+    /* .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 170px; } */
 
     .abt-timeline-mobile-title h3 { margin-top: 20px; margin-bottom: 10px; }
     .timeline-image-mobile-wrapper { width: 200px; height: 200px; }
@@ -607,6 +620,11 @@
     .rpd-mobile-card-3 { height: 258px; }
     .rpd-mobile-card-4 { height: 387px; }
     .rpd-mobile-card-5 { height: 215px; }
+
+    .footer-link-col:nth-child(1), .footer-link-col:nth-child(2) {  width: 180px; }
+    .footer-link-col:nth-child(3) { padding-top: 16px;  }
+    .footer-link-col:nth-child(3) ul { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .footer-link-col:nth-child(3) ul li { width: 194; margin-bottom: 0;  }
 }
 
 @media (max-width: 400px) {
@@ -712,7 +730,7 @@
     .hm-abt-site-logo img{ margin: 30px auto; }
     .footer-add-country { gap: 20px; }
     .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
-    .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 150px; }
+    /* .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 150px; } */
     .footer-social-wrapper { gap: 14px; }
     .social-icon span { font-size: 25px; }
 
@@ -744,6 +762,12 @@
     .why-rare-mobile-tree { width: 300px; }
     .why-rare-pointers span { margin-top: 7px; }
     .why-rare-pointers { padding: 14px; }
+
+    .footer-link-col:first-child { display: none; }
+    .footer-link-col:not(:last-child) ul { flex-wrap: wrap; justify-content: start; gap: 10px; }
+    .footer-link-col:not(:last-child) ul li { width: calc(33% - 10px); }
+    .only-for-mobile-three-column { display: block; }
+    .footer-link-col .services-only-title, .quick-link-only-title, .footer-title p { font-size: 18px; }
 
     .rare-logo-mob { width: 120px; }
     .pixels-logo-mob { width: 125px; } 
@@ -796,7 +820,6 @@
     .abt-our-values-pointer-right h3 { line-height: 20px; }
 
     .abt-our-values-hr { margin: 12px 0; }
-
     .why-rare-mobile-tree { width: 290px; }
 
     .pixels-logo-mob { width: 110px; }
@@ -808,6 +831,7 @@
     .rpd-mobile-card-3 { height: 229px; }
     .rpd-mobile-card-4 { height: 344px; }
     .rpd-mobile-card-5 { height: 200px; }
+    .footer-link-col .services-only-title, .quick-link-only-title, .footer-title p { font-size: 16px; }
 }
 
 @media (max-width: 359px) {
@@ -819,8 +843,7 @@
     .teams-mob-pixesl-bottom-right{ width: 150px; bottom: 263px; }
     .process-card-mob-text{ width: 260px; }
     
-    .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 140px; }
-
+    /* .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 140px; } */
     /* .about-hero-section-mobile .container { margin-top: 85px; } */
 
     .timeline-content-wrapper { margin-top: 20px; }

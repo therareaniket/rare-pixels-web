@@ -131,7 +131,7 @@
 
 	.menu-link a { width: 300px; }
 	.header-links-wrapper  { gap: 0; padding: 0; padding-bottom: 15px; }
-	.header-mega-menu { top: 80px; width: max-content; padding: 40px; }
+	.header-mega-menu { top: 100px; width: max-content; padding: 40px; }
 	.header-pages-link-wrapper ul { padding: 0; gap: 50px; }
 	.menu-link-icon, .mega-links-icon { width: 48px; height: 48px; font-size: 20px; border-radius: 14px; }
 	.menu-social-icons { font-size: 20px; }
@@ -364,10 +364,10 @@
 
 	.website-header-logo { width: 145px; }
 	.mode-theme-btn { padding: 8px; }
-	.nav-hamburger img { width: 24px; height: 24px; }
+	.nav-hamburger img { width: 22px; height: 22px; }
 
 	.header-mega-links-wrapper { width: 315px; }
-	.header-mega-menu { padding: 20px; top: 65px; }
+	.header-mega-menu { padding: 20px; top: 90px; }
 	.menu-link a { width: 265px; }
 	.menu-link-icon, .mega-links-icon { width: 40px; height: 40px; border-radius: 12px; }
 	.header-links-wrapper { margin-bottom: 15px; }
@@ -509,6 +509,8 @@
 	.text-18 { font-size: 14px; line-height: 20px; }
 	.text-16 { font-size: 12px; line-height: 24px; }
 
+	.site-header { top: 16px; }
+
 	.hm-hero-stats-wrapper{ gap: 50px; }
 	.hm-services-content-wrapper .h6{ font-size: 16px; line-height: 22px; }
 	.hm-services-content-wrapper{ margin-bottom: 20px; width: 350px; padding-left: 12px;  }
@@ -629,7 +631,7 @@
 	.header-mega-links-wrapper { width: 280px; }
 
 	.menu-link-icon, .mega-links-icon { width: 40px; height: 40px; font-size: 18px; }
-	.header-mega-menu { padding: 20px; top: 65px; }
+	.header-mega-menu { top: 80px; }
 	.menu-company-contact, .menu-social-icon { width: 230px; }
 	.header-contact-detail { gap: 30px; }
 	.menu-social-icons, .menu-company-contact .contact-phone span  { font-size: 14px; }
@@ -851,8 +853,7 @@
         overflow: hidden;
 		margin-bottom: 12px;
     }
-	/* .header-mega-menu { width: 960px; }
-	.header-pages-link-wrapper ul { flex-wrap: wrap; } */
+	.header-mega-menu { height: calc(100vh - 100px); overflow-y:  scroll; }
 
 	.header-mega-links-wrapper { width: 270px; }
 	.header-pages-link-wrapper ul { gap: 40px; }
@@ -1178,7 +1179,7 @@
 
 	.video-fullscreen { width: calc(100vw - 50px); height: max-content; border-radius: 10px; }
 
-    .header-mega-menu { max-height: calc(100vh - 80px); overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+    .header-mega-menu { height: calc(100vh - 80px); max-height: max-content; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
 
 	.minimize-btn-small { width: 20px; height: 20px; }
 
@@ -1203,7 +1204,10 @@
 	.header-squished .website-header-logo, .header-squished .nav-hamburger { scale: 1; }
 
 	.navbar-wrapper { padding: 25px 0; }
-	.header-squished { padding: 15px 10px; }
+	.header-squished { padding: 15px; }
+	.contact-title p, .menu-social-title p { font-size: 18px; line-height: 26px; }
+	.contact-phone a { font-size: 14px; line-height: 22px; }
+	.menu-social-icons span { font-size: 20px; }
 
 	.hm-testimonial-section { padding-top: 100px !important; } 
 
@@ -1436,6 +1440,7 @@
 
 	.mobile-menu{ width: 390px; }
 	.menu-for-responsive.active{ right: 70px; }
+	.header-mega-menu { height: calc(-80px + 100vh); }
 
 	.hm-abt-card-title .h6{ font-size: 20px; line-height: 26px; width: 80%; }
 	.hm-abt-card{ height: 280px; }
@@ -1574,7 +1579,7 @@
 	.stats-tablet-card .h1, .stats-tablet-card-map .h1, .stats-tablet-card h2 { margin-bottom: 10px; }
 	.stats-tablet-card, .stats-tablet-card-map { padding: 20px; }
 
-	.header-mega-menu { width: 640px; height: max-content; overflow-y: scroll; padding-bottom: 30px; }
+	.header-mega-menu { width: 640px; padding-bottom: 30px; }
 
 	.menu-link-icon, .mega-links-icon { width: 44px; height: 44px; }
 
@@ -1666,6 +1671,15 @@
 	.hm-hero-paragraph-wrapper{ width: 90%; }
 	.stats-specification{ height: 40px; }
 
+	.header-squished { padding: 10px 15px; }
+	.menu-link a div + div { width: 200px; }
+	.header-contact-detail { width: 100%; }
+	.menu-company-contact, .menu-social-icon { width: calc(50% - 15px);  }
+	.menu-link a .text-16 { line-height: 16px; }
+	/* .brand-quote .h3 { margin-bottom: 0; }
+	.brand-quote { flex-direction: row; align-items: center; gap: 30px; } */
+	.website-btn { padding: 7px 20px; }
+
 	/* testimonial section */
 	.testimonial-stats-wrapper{ width: 100%; gap: 20px; justify-content: space-between; }
 	.client-initital span{ width: 50px; height: 50px; }
@@ -1676,7 +1690,6 @@
 
 	/* About Section */
 	.hm-abt-card{ height: max-content; }
-
 	.hm-hero-main{ padding-top: 50px !important; }
 
 	.services-text .h6{ font-size: 18px; line-height: 24px; }
@@ -1709,15 +1722,15 @@
 	.stats-element-art-board { margin: 10px 0; }
 	.stats-tablet-card .h1, .stats-tablet-card-map .h1, .stats-tablet-card h2 { margin-bottom: 6px; }
 
-	.header-mega-menu { width: 550px; }
+	.header-mega-menu { width: calc(100% - 36px); height: calc(100vh - 100px); top: 70px; }
 	.header-links-wrapper { gap: 10px; }
 	.header-mega-links-wrapper { width: calc( 50% - 5px ); }
-	.menu-company-contact, .menu-social-icon { width: max-content; }
 
 	.menu-link-icon, .mega-links-icon { width: 42px; height: 42px; font-size: 18px; }
 	.header-pages-link-wrapper ul { gap: 10px; }
 	.menu-link { width: calc( 50% - 5px ); }
 	.mega-links ul { padding-left: 57px; }
+	.header-squished { width: 280px; }
 
 	.industries-desktop-pixel-1 { width: 90px; }
 	.industries-desktop-pixel-2 { width: 70px; }
@@ -1802,6 +1815,7 @@
 	.hm-hero-stats-wrapper { width: 100%; justify-content: space-between; }
 	.hm-services-paragraph{ width: 100%; }
 	.hm-hero-stats{ width: 135px; }
+	.menu-link a div + div { width: 180px; }
 
 	/* About Section */
 	/* .hm-abt-card{ height: 180px; } */
@@ -1911,6 +1925,7 @@
 	.hm-hero-stats{ width: 110px; }
 	.link-padding{ padding: 6px 12px; }
 	.hm-hero-paragraph-wrapper{ width: 100%; }
+	.menu-company-contact, .menu-social-icon { width: 100%; }
 
 	.testimonialreview-main{ height: 250px; }
 	.testimonial-image-2{ width: 80px; height: 80px; left: 0; }
