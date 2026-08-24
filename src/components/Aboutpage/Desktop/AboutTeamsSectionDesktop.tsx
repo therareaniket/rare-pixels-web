@@ -13,14 +13,14 @@ export default function AboutTeamsSectionDesktop() {
                 <div className="container-sm">
                     <div className="teams-section-wrapper">
                         <div className="teams-section-left">
-                            <h2 className="text-sb teams-section-title">
+                            <h2 className="text-sb teams-section-title text-80">
                                 People Behind The Pixels
                             </h2>
 
-                            <Link href="#" title="make it rare" className="site-radius-30 btn-bg-primary hm-teams-link">
-                                <span className="text-20 text-md text-white">Life at RPD</span>
-                                <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
-                            </Link>
+                    <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn">
+                        <span className="text-20 text-md text-white">Life At RPD </span>
+                        <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
+                    </Link>
                         </div>
 
                         <div className="teams-section-right">

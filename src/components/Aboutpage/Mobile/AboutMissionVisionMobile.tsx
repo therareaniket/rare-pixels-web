@@ -10,7 +10,7 @@ export default function AboutMissionVisionMobile() {
             <section className="section">
                 <div className="container">
                     <div className="abt-mis-vis-title-mobile">
-                        <h2 className="text-sb">RarePixels The Brand</h2>
+                        <h2 className="text-sb text-30">RarePixels The Brand</h2>
 
                         <p className="h6 text-sb">Vision gives direction, purpose creates momentum, and execution turns ideas into impact.</p>
 

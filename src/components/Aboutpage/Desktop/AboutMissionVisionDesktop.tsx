@@ -11,7 +11,7 @@ export default function AboutMissionVisionDesktop() {
                 <div className="container">
                     <div className="abt-mis-vis-title-desktop">
                         <div className="abt-mis-vis-title-desktop-left">
-                            <h2 className="text-sb">RarePixels The Brand</h2>
+                            <h2 className="text-sb text-80">RarePixels The Brand</h2>
 
                             <p className="h3 text-sb">Vision gives direction, purpose creates momentum, and execution turns ideas into impact.</p>
 

@@ -20,6 +20,9 @@ import WhyChooseUsSectionDesktop from "@/components/Homepage/Desktop/WhyChooseUs
 import WhyChooseUsSectionMobile from "@/components/Homepage/Mobile/WhyChooseUsSectionMobile";
 import ReactLenis from "lenis/react";
 import { useEffect, useState } from "react";
+import AboutRpdSectionMobile from "../../components/Aboutpage/Mobile/AboutRpdSectionMobile";
+import AboutLifeAtRpdSectionDesktop from "@/components/Aboutpage/Desktop/AboutLifeAtRpdSectionDesktop";
+import AboutLifeAtRpdSectionMobile from "@/components/Aboutpage/Mobile/AboutLifeAtRpdSectionMobile";
 
 export default function About() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
@@ -48,6 +51,7 @@ export default function About() {
 					<AboutOurValuesSectionDesktop />
 					<AboutTeamsSectionDesktop />
 					<WhyRarePixelsDesktop />
+					<AboutLifeAtRpdSectionDesktop />
 					<AboutFaqSectionDesktop />
 				</div>
 
@@ -56,9 +60,11 @@ export default function About() {
                     <AboutHeroSectionMobile />
 					<AboutTimelineSectionMobile />
 					<AboutMissionVisionMobile />
+					<AboutRpdSectionMobile />
 					<AboutOurValuesSectionMobile />
 					<AboutTeamsSectionMobile />
 					<WhyRarePixelsMobile />
+					<AboutLifeAtRpdSectionMobile />
 					<AboutFaqSectionMobile />
 				</div>
 			</main>

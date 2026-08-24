@@ -24,6 +24,7 @@
     h4, .h4 { font-size: 26px; line-height: 32px; }
     h5, .h5 { font-size: 22px; line-height: 28px; margin-bottom: 0; }
     h6, .h6 { font-size: 16px; line-height: 22px; }
+    .text-30 { font-size: 30px; line-height: 36px; margin-bottom: 14px; }
     .text-18 { font-size: 18px; line-height: 26px; }
     .text-16{ font-size: 16px; line-height: 22px; }
     .text-14 { font-size: 14px; line-height: 20px; }
@@ -224,7 +225,7 @@
 
     .teams-mobile-wrapper { position: relative; }
     .teams-mobile-author { position: absolute; top: 0; z-index: 2; }
-    .teams-mobile-title h2 { width: 201px; font-size: 30px; line-height: 36px; }
+    .teams-mobile-title h2 { width: 201px; }
 
     .teams-mob-pixesl-bottom-left { position: absolute; top: 100px; left: 0; }
     .teams-mob-pixesl-bottom-right { position: absolute; bottom: 299px; right: 0; z-index: 2; }
@@ -489,6 +490,24 @@
     .why-rare-mobile-tree { width: 340px; margin: 30px auto; }
     .why-rare-pointers span { width: 6px; height: 6px; margin-top: 10px; }
     .why-rare-desc .text-18 { margin-bottom: 6px; }
+
+    .rpd-mobile-section { position: relative; }
+    .rpd-mobile-card-wrapper { padding: 60px 0; display: flex; flex-direction: column; gap: 30px; } 
+    .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; }
+    .rpd-pixel-right-mob { position: absolute; bottom: 0; right: 0; }
+
+    .rpd-mobile-card .h5 { margin-top: 20px; margin-bottom: 14px; }
+
+    .rare-logo-mob { width: 140px; }
+
+    .life-rpd-mob-card-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+
+    .life-rpd-mobile-card { width: 100%; background-color: #DEDEDE; }
+    .rpd-mobile-card-1 { height: 400px; }
+    .rpd-mobile-card-2 { height: 350px; }
+    .rpd-mobile-card-3 { height: 300px; }
+    .rpd-mobile-card-4 { height: 450px; }
+    .rpd-mobile-card-5 { height: 250px; }
 }
 
 @media (max-width: 439px) {
@@ -504,6 +523,8 @@
     h3, .h3 { font-size: 26px; line-height: 34px; }
     h4, .h4 { font-size: 26px; line-height: 34px; }
     body { font-size: 24px; }
+
+    .text-30 { font-size: 28px; line-height: 36px; }
     
     .service-item p { width: 82%; }
     
@@ -582,6 +603,12 @@
     .abt-our-values-pointer-right { width: calc( 100% - 50px ); }
 
     .our-values-image { width: 320px; }
+
+    .rpd-mobile-card-1 { height: 344px; }
+    .rpd-mobile-card-2 { height: 301px; }
+    .rpd-mobile-card-3 { height: 258px; }
+    .rpd-mobile-card-4 { height: 387px; }
+    .rpd-mobile-card-5 { height: 215px; }
 }
 
 @media (max-width: 400px) {
@@ -697,14 +724,14 @@
     .timeline-dot-1 { left: 20px; }
     .timeline-dot-3 { right: 20px; }
 
-    .abt-mis-vis-mobile-video { width: 200px; height: 200px; margin: 25px auto; }
+    /* .abt-mis-vis-mobile-video { width: 200px; height: 200px; margin: 25px auto; } */
     .about-hero-mask-title { height: 135px; }
     .timeline-image-mobile-wrapper { width: 180px; height: 180px; }
 
     .timeline-dot-1 { left: 20px; }
     .timeline-dot-3 { right: 20px; }
 
-    .abt-mis-vis-mobile-video { width: 200px; height: 200px; margin: 25px auto; }
+    /* .abt-mis-vis-mobile-video { width: 200px; height: 200px; margin: 25px auto; } */
 
     .abt-our-values-pointer-left { width: 34px; height: 34px; }
     .abt-our-values-pointer-left span img { width: 18px; height: 18px; }
@@ -722,6 +749,16 @@
     .why-rare-mobile-tree { width: 300px; }
     .why-rare-pointers span { margin-top: 7px; }
     .why-rare-pointers { padding: 14px; }
+
+    .rare-logo-mob { width: 120px; }
+    .pixels-logo-mob { width: 125px; } 
+    .design-logo-mob { width: 155px; }
+
+    .rpd-mobile-card-1 { height: 320px; }
+    .rpd-mobile-card-2 { height: 280px; }
+    .rpd-mobile-card-3 { height: 240px; }
+    .rpd-mobile-card-4 { height: 360px; }
+    .rpd-mobile-card-5 { height: 200px; }
 }
 
 @media (max-width: 374px) {
@@ -766,6 +803,16 @@
     .abt-our-values-hr { margin: 12px 0; }
 
     .why-rare-mobile-tree { width: 290px; margin: 20px auto; }
+
+    .pixels-logo-mob { width: 110px; }
+    .design-logo-mob { width: 135px; }
+    .rpd-mobile-card .h5 { margin-top: 16px; margin-bottom: 12px; }
+
+    .rpd-mobile-card-1 { height: 306px; }
+    .rpd-mobile-card-2 { height: 267px; }
+    .rpd-mobile-card-3 { height: 229px; }
+    .rpd-mobile-card-4 { height: 344px; }
+    .rpd-mobile-card-5 { height: 200px; }
 }
 
 @media (max-width: 359px) {

@@ -45,7 +45,7 @@ export default function AboutRpdSectionDesktop() {
                     <Image className="rpd-pixel-right" src="/images/aboutpage/about-rpd/rpd-right-pixel.svg" alt="pixel" width={167} height={211}></Image>
 
                     <div className="abt-rpd-strip">
-                        <p className="h2 text-sb">Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * </p>
+                        <p className="h2 text-sb">Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * </p>
                     </div>
                 </div>
             </section>

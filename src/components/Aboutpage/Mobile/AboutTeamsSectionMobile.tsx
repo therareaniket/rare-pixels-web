@@ -12,11 +12,12 @@ export default function AboutTeamsSectionMobile() {
             <section className="section" style={{ paddingTop: 0 }}>
                 <div className="container">
                     <div className="teams-mobile-title">
-                        <h2 className="text-sb">People Behind The Pixels</h2>
+                        <h2 className="text-sb text-30">People Behind The Pixels</h2>
 
-                        <Link href="#" title="Make it RARE" className="hero-link-cta text-md">
-                            Life at RPD <span className="icon-hero-cta-arrow cta-arrow"></span>
-                        </Link>
+                    <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn">
+                        <span className="text-20 text-md text-white">Life at RPD </span>
+                        <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
+                    </Link>
 
                         <div className="teams-mob-pixesl-top-left">
                             <Image src="/images/aboutpage/teams/teams-left-top-svg.svg" alt="" width={74} height={130}></Image>
