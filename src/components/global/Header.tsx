@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
+import { usePathname } from 'next/navigation';
 
 const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 
@@ -72,6 +73,12 @@ export default function Header() {
         };
     }, [isMenuOpen]);
 
+    const pathname = usePathname();
+    const isActive = (href: string) => pathname === href;
+    const linkStyle = (href: string) => ({
+        color: isActive(href) ? '#ED0180' : undefined,
+    });
+
     return (
         <>
             <header className="site-header" >
@@ -92,11 +99,24 @@ export default function Header() {
                     </nav >
 
                     <div className={`mega-menu-overlay ${isMenuOpen ? "active" : ""}`} />
-                    <div ref={menuRef} data-lenis-prevent className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""}`} >
+                    <div ref={menuRef} data-lenis-prevent onClick={(event) => {
+                        const link = (event.target as HTMLElement).closest("a");
+
+                        if (link) {
+                            const href = link.getAttribute("href");
+
+                            if (href?.startsWith("/") && !href.startsWith("/#")) {
+                                scrollPositionRef.current = 0;
+                            }
+
+                            setIsMenuOpen(false);
+                        }
+                    }} className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""}`}
+                    >
                         <div className="header-pages-link-wrapper header-links-for-desktop">
                             <ul className="header-menu-link-wrapper">
                                 <li className="menu-link">
-                                    <Link href="/">
+                                    <Link href="/" className={pathname === "/" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
@@ -108,7 +128,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="/About">
+                                    <Link href="/About" className={pathname === "/About" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>
@@ -120,7 +140,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="/Industries" className={pathname === "/Industries" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-business_center"></span>
                                         </div>
@@ -132,7 +152,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="/Projects" className={pathname === "/Projects" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-note_stack"></span>
                                         </div>
@@ -146,7 +166,7 @@ export default function Header() {
 
                             <ul className="header-menu-link-wrapper">
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="/Process" className={pathname === "/Process" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-conversion_path"></span>
                                         </div>
@@ -158,7 +178,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="#">
+                                    <Link href="#" >
                                         <div className="menu-link-icon">
                                             <span className="icon-crowdsource"></span>
                                         </div>
@@ -198,7 +218,7 @@ export default function Header() {
                         <div className="header-pages-link-wrapper header-links-for-tablet">
                             <ul className="header-menu-link-wrapper">
                                 <li className="menu-link">
-                                    <Link href="/">
+                                    <Link href="/" className={pathname === "/" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
@@ -210,7 +230,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="/About">
+                                    <Link href="/About" className={pathname === "/About" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>
@@ -464,7 +484,7 @@ export default function Header() {
                         <div className="header-links-wrapper-for-mobile">
                             <ul>
                                 <li className="menu-link">
-                                    <Link href="/">
+                                    <Link href="/" className={pathname === "/" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
@@ -475,7 +495,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="/About">
+                                    <Link href="/About" className={pathname === "/About" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>

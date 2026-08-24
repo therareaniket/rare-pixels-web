@@ -23,12 +23,13 @@ import { useEffect, useState } from "react";
 import AboutRpdSectionMobile from "../../components/Aboutpage/Mobile/AboutRpdSectionMobile";
 import AboutLifeAtRpdSectionDesktop from "@/components/Aboutpage/Desktop/AboutLifeAtRpdSectionDesktop";
 import AboutLifeAtRpdSectionMobile from "@/components/Aboutpage/Mobile/AboutLifeAtRpdSectionMobile";
+import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 
 export default function About() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
 
 	useEffect(() => {
-		const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479);};
+		const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479); };
 
 		window.addEventListener("resize", handleResize);
 		handleResize();
@@ -44,7 +45,7 @@ export default function About() {
 
 				{/* DESKTOP */}
 				<div className="hidden min-[480px]:block">
-                    <AboutHeroSectionDesktop/>
+					<AboutHeroSectionDesktop />
 					<AboutTimelineSectionDesktop />
 					<AboutMissionVisionDesktop />
 					<AboutRpdSectionDesktop />
@@ -53,11 +54,12 @@ export default function About() {
 					<WhyRarePixelsDesktop />
 					<AboutLifeAtRpdSectionDesktop />
 					<AboutFaqSectionDesktop />
+					<ScrollToTopButton />
 				</div>
 
 				{/* MOBILE */}
 				<div className="block min-[480px]:hidden">
-                    <AboutHeroSectionMobile />
+					<AboutHeroSectionMobile />
 					<AboutTimelineSectionMobile />
 					<AboutMissionVisionMobile />
 					<AboutRpdSectionMobile />
@@ -66,6 +68,7 @@ export default function About() {
 					<WhyRarePixelsMobile />
 					<AboutLifeAtRpdSectionMobile />
 					<AboutFaqSectionMobile />
+					<ScrollToTopButton />
 				</div>
 			</main>
 		</>

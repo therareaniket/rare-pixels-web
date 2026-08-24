@@ -6,7 +6,7 @@ import "@/assets/css/responsive/mobile-responsive.css";
 export default function AboutHeroSectionMobile() {
     return (
         <>
-            <section className="about-hero-section-mobile">
+            <section id="first-section" className="about-hero-section-mobile">
                 <div className="container">
                     <div className="section">
                         <div className="about-mobile-title-wrapper">

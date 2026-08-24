@@ -5,6 +5,7 @@
 /* h1 { text-transform: uppercase; } */
 .text-primary { color: #ED0180; }
 .text-black { color: #000000 }
+.bg-light-black { background-color: #01030D; }
 .text-grey { color: var(--text-grey); }
 
 .text-dark-grey{ color: #8C8B8C; }
@@ -108,6 +109,12 @@
 .header-links-wrapper { display: flex; align-items: flex-start; gap: 25px; padding: 0 14px;  padding-bottom: 30px; border-bottom: 1px solid #D9D9D9; margin-bottom: 30px; }
 
 .mega-links ul li a:hover { color: var(--primary); }
+.active-link p { color: var(--primary); }
+
+.active-link .menu-link-icon {
+  background-color: var(--primary);
+  color: white;
+}
 
 .brand-quote { display: flex; flex-direction: column; }
 .brand-quote a{ display: flex; align-items: center; gap: 6px; background-color: var(--primary); color: white; width: max-content; padding: 10px 20px; border-radius: 30px; }
@@ -402,13 +409,13 @@ body.menu-open {
 
 .hm-faq-title{ width: 780px; }
 .faq-accordion-wrapper{ margin-top: 60px; gap: 20px; width: 100%; }
-.faq-accordion{ width: 100%; border-bottom: navy; background-color: #F5F8F5; padding: 10px 20px; border-radius: 20px; }
+.faq-accordion{ width: 100%; border-bottom: navy; background-color: #F5F8F5; padding: 20px; border-radius: 20px; }
 .faq-accordion .h6, .faq-accordion h3{ margin-bottom: 0; width: 100%; text-decoration: none; }
 
-.faq-content{ width: 95%; padding-left: 30px; cursor: pointer; padding-top: 10px; padding-bottom: 0; }
+.faq-content{ width: 95%; padding-left: 30px; cursor: pointer; padding-top: 20px; padding-bottom: 0; }
 .accordion-number{ display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; background-color: #F5F8F5; color: #A5B4A5; border-radius: 20px; }
 .accordion-item-wrapper{ display: flex; align-items: flex-start; gap: 20px; }
-.faq-accordion-title{ display: flex; align-items: center; justify-content: space-between; width: 100%; cursor: pointer; }
+.faq-accordion-title{ display: flex; align-items: center; justify-content: space-between; width: 100%; cursor: pointer; padding: 0; }
 
 .speedometer-line { stroke: red; stroke-width: 4; stroke-linecap: round; transition: transform 0.5s ease; }
 .faq-btn-wrapper{ display: flex; flex-direction: column; align-items: flex-end; }
@@ -702,7 +709,7 @@ body.menu-open {
 .abt-timeline-tablet { display: none; }
 
 
-.abt-mis-vis-title-desktop-left { width: 945px; padding-top: 85px; padding-left: 44px; position: relative; }
+.abt-mis-vis-title-desktop-left { width: 952px; padding-top: 85px; padding-left: 44px; position: relative; }
 .abt-mis-vis-quote-desktop { position: absolute; top: 0; left: 0; }
 
 .abt-mis-vis-title-desktop { display: flex; align-items: flex-end; justify-content: space-between; }
@@ -758,7 +765,7 @@ body.menu-open {
 
 /* .abt-mis-vis-title-desktop h2 { margin-bottom: 40px; } */
 
-.abt-mis-vis-title-desktop-left { width: 945px; padding-top: 85px; padding-left: 44px; position: relative; }
+.abt-mis-vis-title-desktop-left { width: 952px; padding-top: 85px; padding-left: 44px; position: relative; }
 .abt-mis-vis-quote-desktop { position: absolute; top: 0; left: 0; }
 
 .abt-mis-vis-title-desktop { display: flex; align-items: flex-end; justify-content: space-between; }
@@ -840,3 +847,8 @@ body.menu-open {
 .rpd-card-8{ width: 540px; height: 353px; background-color: #DEDEDE; }
 
 .life-at-rpd-desktop-card-wrapper.tablet { display: none; }
+
+.why-rare-point { border: 1px solid rgba(132, 144, 132, 0.1); border-radius: 20px; }
+
+.rare-logo {  height: 100px; }
+/* .pixels-logo { height: 100px; } */

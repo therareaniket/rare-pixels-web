@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function AboutRpdSectionDesktop() {
     return (
         <>
-            <section className="section bg-black abt-rpd-section-desktop">
+            <section className="section bg-light-black abt-rpd-section-desktop">
                 <div className="container-sm">
                     <div className="about-rpd-desktop-content-wrapper">
                         <div className="abt-rpd-card abt-rpd-card-1">
@@ -45,7 +45,7 @@ export default function AboutRpdSectionDesktop() {
                     <Image className="rpd-pixel-right" src="/images/aboutpage/about-rpd/rpd-right-pixel.svg" alt="pixel" width={167} height={211}></Image>
                 </div>
             </section>
-            <div className="abt-strip-animation">
+            <div className="abt-strip-animation bg-light-black">
                 <div className="abt-rpd-strip">
                     <p className="h2 text-sb">Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * </p>
                 </div>

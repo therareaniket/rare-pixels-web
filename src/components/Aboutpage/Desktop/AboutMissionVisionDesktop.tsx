@@ -13,7 +13,7 @@ export default function AboutMissionVisionDesktop() {
                         <div className="abt-mis-vis-title-desktop-left">
                             <h2 className="text-sb text-80">RarePixels The Brand</h2>
 
-                            <p className="h3 text-sb">Vision gives direction, purpose creates momentum, and execution turns ideas into impact.</p>
+                            <p className="h3 text-sb">Vision Gives Direction, Purpose Creates Momentum, And Execution Turns Ideas Into Impact.</p>
 
                             <Image className="abt-mis-vis-quote-desktop" src="/images/aboutpage/about-mis-vis/mis-vis-bg-quote.svg" alt="bg-quote" width={307} height={327} ></Image>
                         </div>

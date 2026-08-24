@@ -12,7 +12,7 @@ export default function AboutMissionVisionMobile() {
                     <div className="abt-mis-vis-title-mobile">
                         <h2 className="text-sb text-30">RarePixels The Brand</h2>
 
-                        <p className="h6 text-sb">Vision gives direction, purpose creates momentum, and execution turns ideas into impact.</p>
+                        <p className="h6 text-sb">Vision Gives Direction, Purpose Creates Momentum, And Execution Turns Ideas Into Impact.</p>
 
                         <Image className="abt-mis-vis-quote" src="/images/aboutpage/about-mis-vis/mis-vis-bg-quote.svg" alt="bg-quote" width={130} height={139} ></Image>
                     </div>

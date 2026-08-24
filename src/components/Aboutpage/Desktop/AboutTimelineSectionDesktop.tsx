@@ -48,7 +48,7 @@ export default function AboutTimelineSectionDesktop() {
 
                                     <h6 className="text-sb text-upper-case text-white">The Launch of RarePixels</h6>
 
-                                    <p className="text-18 text-rg text-white">From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.</p>
+                                    <p className="text-18 text-rg text-light-grey">From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.</p>
                                 </div> */}
 
                                 {/* <div className="time-line-2025">
@@ -56,7 +56,7 @@ export default function AboutTimelineSectionDesktop() {
 
                                     <h6 className="text-sb text-upper-case text-white">Purposeful Growth</h6>
 
-                                    <p className="text-18 text-rg text-white">Every project brought new challenges, fresh perspectives, and valuable opportunities to grow. As RarePixels expanded its reach, we continued refining our approach and strengthening our expertise across multiple disciplines. The trust placed in us by growing brands allowed us to take on more ambitious projects, and create experiences that combined creativity, strategy, and technology.</p>
+                                    <p className="text-18 text-rg text-light-grey">Every project brought new challenges, fresh perspectives, and valuable opportunities to grow. As RarePixels expanded its reach, we continued refining our approach and strengthening our expertise across multiple disciplines. The trust placed in us by growing brands allowed us to take on more ambitious projects, and create experiences that combined creativity, strategy, and technology.</p>
                                 </div> */}
 
                                 <div className="time-line-2026">
@@ -64,7 +64,7 @@ export default function AboutTimelineSectionDesktop() {
 
                                     <h6 className="text-sb text-upper-case text-white">Shaping What&apos;s Next</h6>
 
-                                    <p className="text-18 text-rg text-white">Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.</p>
+                                    <p className="text-18 text-rg text-light-grey">Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.</p>
                                 </div>
                             </div>
                         </div>
@@ -89,19 +89,19 @@ export default function AboutTimelineSectionDesktop() {
                                 <div className="time-line-2024">
                                     <h6 className="text-sb text-upper-case text-white">The Launch of RarePixels</h6>
 
-                                    <p className="text-18 text-rg text-white">From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.</p>
+                                    <p className="text-18 text-rg text-light-grey">From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.</p>
                                 </div>
 
                                 {/* <div className="time-line-2025">
                                     <h6 className="text-sb text-upper-case text-white">Purposeful Growth</h6>
 
-                                    <p className="text-18 text-rg text-white">Every project brought new challenges, fresh perspectives, and valuable opportunities to grow. As RarePixels expanded its reach, we continued refining our approach and strengthening our expertise across multiple disciplines. The trust placed in us by growing brands allowed us to take on more ambitious projects, and create experiences that combined creativity, strategy, and technology.</p>
+                                    <p className="text-18 text-rg text-light-grey">Every project brought new challenges, fresh perspectives, and valuable opportunities to grow. As RarePixels expanded its reach, we continued refining our approach and strengthening our expertise across multiple disciplines. The trust placed in us by growing brands allowed us to take on more ambitious projects, and create experiences that combined creativity, strategy, and technology.</p>
                                 </div> */}
 
                                 {/* <div className="time-line-2026">
                                     <h6 className="text-sb text-upper-case text-white">Shaping What&apos;s Next</h6>
 
-                                    <p className="text-18 text-rg text-white">Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.</p>
+                                    <p className="text-18 text-rg text-light-grey">Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.</p>
                                 </div> */}
                             </div>
                         </div>

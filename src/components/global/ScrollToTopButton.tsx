@@ -2,25 +2,56 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollToTopButton() {
 
   const [showButton, setShowButton] = useState(false);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const firstSection = document.getElementById("first-section");
+
+  //     console.log("firstSection:", firstSection);
+
+  //     if (firstSection) {
+  //       // const firstSectionHeight = firstSection.offsetHeight;
+  //       const rect = firstSection.getBoundingClientRect();
+
+  //       setShowButton(rect.bottom < 0)
+
+  //       // setShowButton(window.scrollY > firstSectionHeight);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+  
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       const firstSection = document.getElementById("first-section");
 
       if (firstSection) {
-        const firstSectionHeight = firstSection.offsetHeight;
-
-        setShowButton(window.scrollY > firstSectionHeight);
+        const rect = firstSection.getBoundingClientRect();
+        setShowButton(rect.bottom < 0);
       }
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+  console.log("ScrollToTop mounted", pathname);
+}, [pathname]);
 
   const scrollToTop = () => {
     window.scrollTo({

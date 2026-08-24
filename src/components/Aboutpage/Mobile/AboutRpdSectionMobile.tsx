@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function AboutRpdSectionMobile() {
     return (
         <>
-            <section className="section bg-black rpd-mobile-section">
+            <section className="section bg-light-black rpd-mobile-section">
                 <div className="container">
                     <div className="rpd-mobile-card-wrapper">
                         <div className="rpd-mobile-card">
@@ -40,7 +40,7 @@ export default function AboutRpdSectionMobile() {
                 </div>
             </section>
 
-                        <div className="abt-strip-animation">
+            <div className="abt-strip-animation bg-light-black">
                 <div className="abt-rpd-strip">
                     <p className="h2 text-sb">Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * </p>
                 </div>

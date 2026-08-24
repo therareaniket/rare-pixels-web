@@ -5,7 +5,7 @@ import "@/assets/css/responsive/desktop-responsive.css";
 export default function AboutHeroSectionDesktop() {
     return (
         <>
-            <section className="about-hero-section-desktop">
+            <section id="first-section" className="about-hero-section-desktop">
                 <div className="container">
                     <div className="section">
                         <div className="container-sm">

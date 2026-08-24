@@ -18,7 +18,7 @@ export default function WhyRarePixelsMobile() {
 
                     <div className="abt-why-rare-desktop-pointers">
                         <div className="why-rare-point why-rare-point-1">
-                            <GlassEffect className="site-radius-20">
+                            <GlassEffect className="site-radius-210">
                                 <div className="why-rare-pointers why-rare-pointers-1">
                                     <span className="why-rare-pixel"></span>
 
@@ -32,7 +32,7 @@ export default function WhyRarePixelsMobile() {
                         </div>
 
                         <div className="why-rare-point why-rare-point-2">
-                            <GlassEffect className="site-radius-20">
+                            <GlassEffect className="site-radius-10">
                                 <div className="why-rare-pointers why-rare-pointers-2">
                                     <span className="why-rare-pixel"></span>
 
@@ -46,7 +46,7 @@ export default function WhyRarePixelsMobile() {
                         </div>
 
                         <div className="why-rare-point why-rare-point-3">
-                            <GlassEffect className="site-radius-20">
+                            <GlassEffect className="site-radius-10">
                                 <div className="why-rare-pointers why-rare-pointers-3">
                                     <span className="why-rare-pixel"></span>
 
@@ -60,7 +60,7 @@ export default function WhyRarePixelsMobile() {
                         </div>
 
                         <div className="why-rare-point why-rare-point-4">
-                            <GlassEffect className="site-radius-20">
+                            <GlassEffect className="site-radius-10">
                                 <div className="why-rare-pointers why-rare-pointers-4">
                                     <span className="why-rare-pixel"></span>
 
