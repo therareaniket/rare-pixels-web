@@ -233,7 +233,7 @@
     .teams-mob-pixesl-top-left { position: absolute; top: 0; left: 0; z-index: -1; }
     .teams-mob-pixesl-top-right { position: absolute; top: 0; right: 0; }
 
-    .teams-mobile-title{ position: relative; }
+    .teams-mobile-title{ position: relative; padding: 15px 0 0 15px; }
 
     .inquiry-mob-field input[type="checkbox"] {
         appearance: none;

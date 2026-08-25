@@ -32,9 +32,11 @@
 
 	.hm-testimonial-left-text p{ width: 760px; }
 	.testimonial-review-wrapper{ margin-top: 40px; }
-	.testimonial-cards-wrapper{ width: 760px; }
+	/* .testimonial-cards-wrapper{ width: 760px; } */
 	.testimonial-image-2{ width: 160px; height: 160px; }
-	.testimonialreview-main{ height: 440px; }
+	.testimonialreview-main{ height: 500px; }
+	.testimonial-review-video-wrapper { width: 600px; height: 500px; flex-shrink: 0; }
+	.testimonial-cards-wrapper { width: calc(100vw - 600px - 40px); flex-shrink: 0; }
 	.testimonial-client-text{ font-size: 16px; line-height: 24px; }
 	.client-initital .h6{ font-size: 20px; line-height: 28px; }
 
@@ -252,10 +254,12 @@
 	.hm-testimonial-left-text p{ width: 700px; }
 	.hm-testimonial-txt-wrapper{ justify-content: flex-start; gap: 100px; }
 
-	.testimonialreview-main{ height: 400px; }
+	.testimonialreview-main{ height: 480px; }
+	.testimonial-review-video-wrapper { width: 550px; height: 480px; flex-shrink: 0; }
+	.testimonial-cards-wrapper { width: calc(100vw - 550px - 40px); flex-shrink: 0; }
 	.testimonial-image-2{ width: 140px; height: 140px; }
 	.testimonial-image-3{ width: 100px; height: 100px; }
-	.testimonial-cards-wrapper{ width: 700px; }
+	/* .testimonial-cards-wrapper{ width: 700px; } */
 	.client-initital .h6{ font-size: 18px; line-height: 26px; }
 
 	.hm-abt-card-wrapper{ margin-top: 40px; }
@@ -347,7 +351,7 @@
 
 	.teams-pixels-top-right { width: 120px; }
 	.teams-quote-image { width: 340px; }
-	.teams-section-wrapper { padding-left: 80px; }
+	.teams-section-wrapper { padding-left: 80px; gap: 150px; }
 
 	.teams-author-image { width: 320px; right: -265px; }
 
@@ -457,11 +461,11 @@
 
 	.rare-logo { width: 205px; height: auto; object-fit: contain; }
 	.pixels-logo { width: 230px; height: auto; object-fit: contain; }
-	.design-logo { width: 267px; height: auto; object-fit: contain; }
+	.design-logo { width: 263px; height: auto; object-fit: contain; }
 	.abt-rpd-card { width: 337px; }
 
 	.rpd-pixel-right, .rpd-pixel-left { width: 120px; }
-	.abt-rpd-card-2 { transform: translateY(-162px) }
+	.abt-rpd-card-2 { transform: translateY(-165px) }
 	.abt-rpd-card-2 .abt-card-text { height: max-content; }
 	.abt-rpd-strip { font-size: 30px; line-height: 38px; bottom: -22px; }
 
@@ -476,6 +480,7 @@
 	.rpd-card-col-3 { transform: translateY(-190px); }
 
 	.about-rpd-desktop-content-wrapper { padding-top: 160px; }
+	.why-rare-title-desktop { width: 620px; }
 }
 
 @media (max-width: 1439px) {
@@ -496,7 +501,6 @@
 	.text-20 { font-size: 16px; line-height: 22px; }
 	.text-18 { font-size: 14px; line-height: 20px; }
 	.text-16 { font-size: 12px; line-height: 24px; }
-
 	.site-header { top: 16px; }
 
 	.hm-hero-stats-wrapper{ gap: 50px; }
@@ -524,7 +528,7 @@
 	/* testimonial */
 	.hm-testimonial-left-text h2{ width: 380px; }
 	.hm-testimonial-left-text p{ width: 625px; }
-	.testimonial-cards-wrapper{ width: 625px; }
+	/* .testimonial-cards-wrapper{ width: 625px; } */
 	.client-initital .h6{ font-size: 16px; line-height: 24px; }
 	.testimonial-svg{ width: 20px; height: 20px; }
 	.tst-swiper-arrow-wrapper{ margin-top: 30px; }
@@ -532,7 +536,9 @@
 	.client-initital span{ display: flex; align-items: center; justify-content: center; padding: 10px 12px; border-radius: 12px; }
 	.client-initital .h6{ font-size: 14px; line-height: 20px; }
 	.hm-testimonial-txt-wrapper{ gap: 55px; }
-	.testimonialreview-main{ height: 300px; }
+	.testimonialreview-main{ height: 400px; }
+	.testimonial-review-video-wrapper { width: 500px; height: 400px; flex-shrink: 0; }
+	.testimonial-cards-wrapper { width: calc(100vw - 500px - 40px); flex-shrink: 0; }
 	.testimonial-image-2{ width: 100px; height: 100px; }
 	.testimonial-image-3{ width: 80px; height: 80px; }
 
@@ -598,7 +604,7 @@
 
 	.teams-quote-image{ width: 280px; }
 	.teams-section-quote-text{ width: 260px; }
-	.teams-section-wrapper{ gap: 35px; padding-left: 40px; }
+	.teams-section-wrapper{ gap: 80px; padding-left: 40px; }
 	.teams-pixels-top-right{ width: 100px; }
 	.teams-pixels-top-left{ width: 100px; z-index: -1; }
 	.teams-pixels-bottom-left{ width: 120px; z-index: -1; }
@@ -711,6 +717,7 @@
 
 	.rpd-card-col-3 { transform: translateY(-175px); }
 	.rpd-pixel-right { bottom: -45px; }
+
 }
 
 @media (max-width: 1359px) {
@@ -727,6 +734,8 @@
 	h3, .h3 { font-size: 24px; line-height: 32px; }
 	h4, .h4 { font-size: 26px; line-height: 34px; }
 	h5, .h5 { font-size: 22px; line-height: 30px; }
+
+	.text-80 { font-size: 54px; line-height: 62px; margin-bottom: 20px; }
 	.text-20 { font-size: 16px; line-height: 20px; }
 	.text-14 { font-size: 12px; line-height: 20px; }
 
@@ -746,10 +755,10 @@
 
 	/* testimonial */
 	.hm-testimonial-left-text h2{ width: 350px; }
-	.hm-testimonial-left-text p, .testimonial-cards-wrapper{ width: 560px; }
+	.hm-testimonial-left-text p { width: 560px; }
 
 	.testimonial-client-text{ font-size: 12px; line-height: 20px; }
-	.testimonialreview-main{ height: 290px; }
+	/* .testimonialreview-main{ height: 290px; } */
 	.testimonial-image-2{ width: 80px; height: 80px; bottom: 40px; }
 	.testimonial-image-3{ width: 60px; height: 60px; top: 40px; }
 
@@ -820,7 +829,7 @@
 	.teams-pixels-bottom-left{ width: 140px; }
 	.teams-section-title{ width: 265px; }
 	.teams-author-image { width: 296px; right: -280px; }
-	.teams-section-wrapper{ padding-left: 40px; gap: 0; }
+	.teams-section-wrapper{ padding-left: 20px; gap: 20px; }
 
 	.teams-pixels-top-right { width: 85px; }
 	.website-header-logo { width: 135px; }
@@ -900,7 +909,6 @@
 	.timeline-hr { margin-top: 30px; margin-bottom: 20px; }
 	.timeline-dot { right: 310px; }
 
-	.text-80 { font-size: 58px; line-height: 66px; margin-bottom: 20px; }
 	.abt-mis-vis-title-desktop-left { width: 610px; }
 	.abt-mis-vis-content-desktop { width: 850px; }
 	.abt-mis-vis-content-left { width: 430px; }
@@ -988,9 +996,11 @@
 
 	.testimonial-review-wrapper{ flex-direction: column; align-items: center; }
 	.testimonial-cards-wrapper{ width: 100%; }
+	.testimonial-cards-wrapper{ width: 100vw; position: relative; right: 50%; transform: translateX(50%); }
+	.hm-blog-wrapper-swiper { display: flex; width: 100vw; position: relative; }
 	.client-initital span.h6{ font-size: 22px; line-height: 30px; }
 
-	.testimonial-review-video-wrapper { width: 100%; }
+	.testimonial-review-video-wrapper { width: 100%; height: max-content; }
 	.testimonialreview-main{ width: 80%; height: 350px; }
 	.testimonialreview-main img{ object-fit: cover; border-radius: 20px; object-position: top; }
 	.testimonial-image-2{ width: 140px; height: 140px; left: -60px; }
@@ -1099,10 +1109,12 @@
 
 	.blog-card-right-2{ width: 100%; align-items: center; text-align: center; margin-top: 30px; }
 
-	.teams-section-wrapper{ flex-direction: column; align-items: flex-start; gap: 50px; padding-left: 0;  }
+	.teams-section-wrapper{ flex-direction: column; align-items: flex-start; gap: 50px; padding-left: 0; }
+	.teams-section-left { padding: 20px 0 0 20px; }
 	.teams-section-title{ width: 485px; }
 	.teams-quote-image{ width: 400px; }
 	.teams-section-quote-text{ width: 330px; left: 15px; bottom: 15px; }
+	.teams-pixels-top-left { width: 160px; }
 
 	.teams-author-image{ width: 460px; right: -400px; }
 	.teams-pixels-top-right{ width: 215px; }
@@ -1147,7 +1159,7 @@
 	.hm-blog-card-right-desktop, .hm-blog-card-left-desktop { display: none; } 
 	.blog-card-right-3 { border: none; padding: 0; }
 
-	.hm-blog-wrapper-swiper { display: flex; }
+	/* .hm-blog-wrapper-swiper { display: flex; } */
 	.inquiry-form-contact-fields-desktop { display: none; }
 	.inquiry-form-contact-fields-tablet { display: flex; flex-direction: column; gap: 30px; margin-top: 30px; }
 	.inquiry-name-tab input{ outline: none; border-bottom: 1px solid var(--inquiry-form-border); width: max-content; margin-bottom: 0; padding: 0 10px; text-align: start; }
@@ -1280,6 +1292,8 @@
 	.abt-timeline-content-right p { font-size: 16px; line-height: 24px; }
 
 	.abt-timeline-content-left { width: 292px; height: 292px; }
+
+	.blog-section { overflow: hidden; } 
 } 
 
 @media (max-width: 1023px) {
@@ -1601,6 +1615,7 @@
 	.abt-timeline-tablet { display: block; }
 	.timeline-content-wrapper-tablet { width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 30px; }
 	.our-values-image { width: 500px; }
+	.teams-pixels-top-left { width: 120px; }
 }
 
 @media (max-width: 767px) {
@@ -1807,7 +1822,7 @@
 	/* about page */
 	.about-hero-mask-title { height: 120px; }
 
-	.text-80 { font-size: 50px; line-height: 68px; }
+	.text-80 { font-size: 50px; line-height: 58px; }
 	.abt-mis-vis-title-desktop-left .h3 { font-size: 22px; line-height: 30px; }
 	.abt-mis-vis-quote-desktop { width: 195px; }
 

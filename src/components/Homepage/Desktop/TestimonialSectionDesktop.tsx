@@ -158,10 +158,10 @@ export default function TestimonialSectionDesktop() {
                                 className="testimonial-swiper-wrapper"
                                 breakpoints={{
                                     0: { slidesPerView: 1.2, spaceBetween: 20 },
-                                    768: { slidesPerView: 1.6, spaceBetween: 20 },
-                                    1024: { slidesPerView: 1.5 },
+                                    768: { slidesPerView: 2, spaceBetween: 20 },
+                                    1024: { slidesPerView: 2 },
                                     1200: { slidesPerView: 1.6, spaceBetween: 20 },
-                                    1360: { slidesPerView: 2, spaceBetween: 30 }
+                                    1360: { slidesPerView: 2.3, spaceBetween: 30 }
                                 }}>
                                 <SwiperSlide>
                                     <div className="tesctimonial-card testimonial-card-1">

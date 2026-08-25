@@ -222,6 +222,7 @@ body.menu-open {
 /* About Section */
 
 .hm-about-main{ width: 100%; height: max-content; background-image: url(https://pub-ab3a45b6cf574e698e4911642d8b38de.r2.dev/images/homepage/about/abt-section-background-grid-desktop.png); background-repeat: repeat; }
+
 .hm-about-main{ padding: 40px; }
 .hm-abt-text-wrapper p{ display: flex; flex-direction: column; gap: 18px; }
 
@@ -566,7 +567,7 @@ body.menu-open {
 
 .website-btn { display: flex; align-items: center; gap: 6px; padding: 6px 20px; width: max-content; background-color: var(--primary); color: white; border-radius: 30px; }
 
-.faq-expand-wrapper { max-height: 650px;  overflow: hidden; transition: max-height 1s ease-in-out; }
+.faq-expand-wrapper { max-height: 800px;  overflow: hidden; transition: max-height 1s ease-in-out; }
 .faq-expand-wrapper.expanded { max-height: 2000px; }
 
 .footer-copyright-color { color: rgba(198, 198, 198, 50%); }
@@ -792,3 +793,10 @@ body.menu-open {
 
 .rare-logo {  height: 100px; }
 
+/* .hm-testimonial-section .container { background-color: red;  } */
+
+.hm-testimonial-section { overflow: hidden; }
+.hm-testimonial-section .container { overflow: visible; }
+.testimonial-review-video-wrapper { width: 690px; flex-shrink: 0; }
+
+.testimonial-cards-wrapper { width: calc(100vw - 690px - 40px); flex-shrink: 0; }

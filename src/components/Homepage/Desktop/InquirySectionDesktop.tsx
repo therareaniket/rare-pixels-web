@@ -62,7 +62,7 @@ export default function InquirySectionDesktop() {
                         <div className="inquiry-checkbox-wrapper">
                             <div className="inquiry-box-col">
                                 <div className="inquiry-form-desktop-select-project">
-                                    <input type="checkbox" id="uiux" name="uiux" value="ui-ux" />
+                                    <input type="checkbox" id="uiux" name="uiux" />
                                     <label htmlFor="uiux" className="text-rg h4">UI/UX Design</label>
                                 </div>
 

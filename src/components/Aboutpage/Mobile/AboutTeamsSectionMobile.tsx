@@ -9,7 +9,7 @@ export default function AboutTeamsSectionMobile() {
 
     return (
         <>
-            <section className="section" style={{ paddingTop: 0 }}>
+            <section className="section" style={{ paddingTop: '25px' }}>
                 <div className="container">
                     <div className="teams-mobile-title">
                         <h2 className="text-sb text-30">People Behind The Pixels</h2>

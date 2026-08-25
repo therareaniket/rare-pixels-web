@@ -15,7 +15,7 @@ const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 export default function BlogSectionDesktop() {
     return (
         <>
-            <section className="section" style={{ paddingBottom: 0 }} >
+            <section className="section blog-section" style={{ paddingBottom: 0 }} >
                 <div className="container">
                     <div className="hm-blog-text-wrapper">
                         <h2 className="text-sb">Our Blog</h2>
@@ -62,11 +62,14 @@ export default function BlogSectionDesktop() {
                             <Swiper
                                 modules={[Autoplay]}
                                 spaceBetween={30}
-                                slidesPerView={1.2}
+                                slidesPerView={1.5}
                                 loop={true}
                                 speed={2200}
                                 autoplay={{ delay: 4000 }}
-                            >
+                                breakpoints={{
+                                    0: { slidesPerView: 1.2, spaceBetween: 20 },
+                                    768: { slidesPerView: 1.4, spaceBetween: 20 },
+                                }}>
                                 <SwiperSlide>
                                     <div className="hm-blog-card-left">
                                         <div className="hm-blog-image site-radius-20">
@@ -220,7 +223,7 @@ export default function BlogSectionDesktop() {
                         <div className="hm-blog-card-right">
                             <div className="blog-card-right-3 hm-blog-card-right-desktop">
                                 <div className="blog-card-3-left site-radius-20">
-                                    <Image  src={`${CDN_URL}/images/homepage/blog/blog-image-2.png`} alt="blog-image" width={350} height={426}></Image>
+                                    <Image src={`${CDN_URL}/images/homepage/blog/blog-image-2.png`} alt="blog-image" width={350} height={426}></Image>
 
                                     <div className="blog-category-tag">
                                         <p className="text-16 text-sb text-white">UI/UX Design</p>

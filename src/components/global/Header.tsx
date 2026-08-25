@@ -22,8 +22,8 @@ export default function Header() {
             const currentScrollY = window.scrollY;
             const viewportHeight = window.innerHeight;
 
-            if (currentScrollY > viewportHeight && currentScrollY > lastScrollY.current) { setIsVisible(false); } 
-            else { setIsVisible(true);}
+            if (currentScrollY > viewportHeight && currentScrollY > lastScrollY.current) { setIsVisible(false); }
+            else { setIsVisible(true); }
 
             lastScrollY.current = currentScrollY;
         };
@@ -507,105 +507,107 @@ export default function Header() {
                                     </Link>
                                 </li>
 
-                                <Accordion className="menu-accordion">
-                                    <AccordionItem value="products">
-                                        <AccordionTrigger className="menu-link">
-                                            <div className="menu-link-icon">
-                                                <span className="icon-service"></span>
-                                            </div>
-                                            <div className="service-mobile-title">
-                                                <p className="text-18">Services</p>
-                                            </div>
-                                        </AccordionTrigger>
+                                <li>
+                                    <Accordion className="menu-accordion">
+                                        <AccordionItem value="products">
+                                            <AccordionTrigger className="menu-link">
+                                                <div className="menu-link-icon">
+                                                    <span className="icon-service"></span>
+                                                </div>
+                                                <div className="service-mobile-title">
+                                                    <p className="text-18">Services</p>
+                                                </div>
+                                            </AccordionTrigger>
 
-                                        <AccordionContent className="accordion-menu-content">
-                                            <Accordion >
-                                                <AccordionItem value="cat1" className="accordion-submenu">
-                                                    <AccordionTrigger className="text-16 text-rg submenu-mobile-title">
-                                                        <ul>
-                                                            <li>
-                                                                UI/UX Design
-                                                            </li>
-                                                        </ul>
-                                                    </AccordionTrigger>
-                                                    <AccordionContent className="accordion-submenu-links">
-                                                        <ul>
-                                                            <li> <Link href="#" title="experience strategy research" className="text-rg text-14"> <span className="text-sb">-</span> Experience Strategy & Research</Link></li>
-                                                            <li> <Link href="#" title="website design" className="text-rg text-14"> <span className="text-sb">-</span> Website Design</Link> </li>
-                                                            <li> <Link href="#" title="interface design" className="text-rg text-14"> <span className="text-sb">-</span> Interface Design</Link> </li>
-                                                            <li> <Link href="#" title="interaction motion design" className="text-rg text-14"> <span className="text-sb">-</span> Interaction & Motion Design</Link> </li>
-                                                            <li> <Link href="#" title="dashboard data experience" className="text-rg text-14"> <span className="text-sb">-</span> Dashboard & Data Experience</Link> </li>
-                                                            <li> <Link href="#" title="prototype validation" className="text-rg text-14"> <span className="text-sb">-</span> Prototype & Validation</Link> </li>
-                                                            <li> <Link href="#" title="design systems" className="text-rg text-14"> <span className="text-sb">-</span> Design Systems</Link> </li>
-                                                            <li> <Link href="#" title="product app design" className="text-rg text-14"> <span className="text-sb">-</span> Product & App Design</Link> </li>
-                                                        </ul>
-                                                    </AccordionContent>
-                                                </AccordionItem>
+                                            <AccordionContent className="accordion-menu-content">
+                                                <Accordion >
+                                                    <AccordionItem value="cat1" className="accordion-submenu">
+                                                        <AccordionTrigger className="text-16 text-rg submenu-mobile-title">
+                                                            <ul>
+                                                                <li>
+                                                                    UI/UX Design
+                                                                </li>
+                                                            </ul>
+                                                        </AccordionTrigger>
+                                                        <AccordionContent className="accordion-submenu-links">
+                                                            <ul>
+                                                                <li> <Link href="#" title="experience strategy research" className="text-rg text-14"> <span className="text-sb">-</span> Experience Strategy & Research</Link></li>
+                                                                <li> <Link href="#" title="website design" className="text-rg text-14"> <span className="text-sb">-</span> Website Design</Link> </li>
+                                                                <li> <Link href="#" title="interface design" className="text-rg text-14"> <span className="text-sb">-</span> Interface Design</Link> </li>
+                                                                <li> <Link href="#" title="interaction motion design" className="text-rg text-14"> <span className="text-sb">-</span> Interaction & Motion Design</Link> </li>
+                                                                <li> <Link href="#" title="dashboard data experience" className="text-rg text-14"> <span className="text-sb">-</span> Dashboard & Data Experience</Link> </li>
+                                                                <li> <Link href="#" title="prototype validation" className="text-rg text-14"> <span className="text-sb">-</span> Prototype & Validation</Link> </li>
+                                                                <li> <Link href="#" title="design systems" className="text-rg text-14"> <span className="text-sb">-</span> Design Systems</Link> </li>
+                                                                <li> <Link href="#" title="product app design" className="text-rg text-14"> <span className="text-sb">-</span> Product & App Design</Link> </li>
+                                                            </ul>
+                                                        </AccordionContent>
+                                                    </AccordionItem>
 
-                                                <AccordionItem value="cat2" className="accordion-submenu">
-                                                    <AccordionTrigger className="text-16 text-rg submenu-mobile-title">
-                                                        <ul>
-                                                            <li>
-                                                                Web & App Development
-                                                            </li>
-                                                        </ul>
-                                                    </AccordionTrigger>
-                                                    <AccordionContent className="accordion-submenu-links">
-                                                        <ul>
-                                                            <li> <Link href="#" title="Web & Platform Engineering" className="text-rg text-14"> <span className="text-sb">-</span> Web & Platform Engineering</Link></li>
-                                                            <li> <Link href="#" title="SaaS & Product Development" className="text-rg text-14"> <span className="text-sb">-</span> SaaS & Product Development</Link> </li>
-                                                            <li> <Link href="#" title="E-commerce & Marketplace Builds" className="text-rg text-14"> <span className="text-sb">-</span> E-commerce & Marketplace Builds</Link> </li>
-                                                            <li> <Link href="#" title="Mobile Application Development" className="text-rg text-14"> <span className="text-sb">-</span> Mobile Application Development</Link> </li>
-                                                            <li> <Link href="#" title="API & Systems Integration" className="text-rg text-14"> <span className="text-sb">-</span> API & Systems Integration</Link> </li>
-                                                            <li> <Link href="#" title="Progressive & Headless Web" className="text-rg text-14"> <span className="text-sb">-</span> Progressive & Headless Web</Link> </li>
-                                                        </ul>
-                                                    </AccordionContent>
-                                                </AccordionItem>
+                                                    <AccordionItem value="cat2" className="accordion-submenu">
+                                                        <AccordionTrigger className="text-16 text-rg submenu-mobile-title">
+                                                            <ul>
+                                                                <li>
+                                                                    Web & App Development
+                                                                </li>
+                                                            </ul>
+                                                        </AccordionTrigger>
+                                                        <AccordionContent className="accordion-submenu-links">
+                                                            <ul>
+                                                                <li> <Link href="#" title="Web & Platform Engineering" className="text-rg text-14"> <span className="text-sb">-</span> Web & Platform Engineering</Link></li>
+                                                                <li> <Link href="#" title="SaaS & Product Development" className="text-rg text-14"> <span className="text-sb">-</span> SaaS & Product Development</Link> </li>
+                                                                <li> <Link href="#" title="E-commerce & Marketplace Builds" className="text-rg text-14"> <span className="text-sb">-</span> E-commerce & Marketplace Builds</Link> </li>
+                                                                <li> <Link href="#" title="Mobile Application Development" className="text-rg text-14"> <span className="text-sb">-</span> Mobile Application Development</Link> </li>
+                                                                <li> <Link href="#" title="API & Systems Integration" className="text-rg text-14"> <span className="text-sb">-</span> API & Systems Integration</Link> </li>
+                                                                <li> <Link href="#" title="Progressive & Headless Web" className="text-rg text-14"> <span className="text-sb">-</span> Progressive & Headless Web</Link> </li>
+                                                            </ul>
+                                                        </AccordionContent>
+                                                    </AccordionItem>
 
-                                                <AccordionItem value="cat3" className="accordion-submenu">
-                                                    <AccordionTrigger className="text-16 text-rg submenu-mobile-title">
-                                                        <ul>
-                                                            <li>
-                                                                Brand Identity Design
-                                                            </li>
-                                                        </ul>
-                                                    </AccordionTrigger>
-                                                    <AccordionContent className="accordion-submenu-links">
-                                                        <ul>
-                                                            <li> <Link href="#" title="Brand Strategy & Positioning" className="text-rg text-14"> <span className="text-sb">-</span> Brand Strategy & Positioning</Link></li>
-                                                            <li> <Link href="#" title="Visual Identity Design" className="text-rg text-14"> <span className="text-sb">-</span> Visual Identity Design</Link> </li>
-                                                            <li> <Link href="#" title="Brand Architecture & Guidelines" className="text-rg text-14"> <span className="text-sb">-</span> Brand Architecture & Guidelines</Link> </li>
-                                                            <li> <Link href="#" title="Packaging & Product Design" className="text-rg text-14"> <span className="text-sb">-</span> Packaging & Product Design</Link> </li>
-                                                            <li> <Link href="#" title="Rebranding & Brand Evolution" className="text-rg text-14"> <span className="text-sb">-</span> Rebranding & Brand Evolution</Link> </li>
-                                                            <li> <Link href="#" title="Presentation & Collateral Design" className="text-rg text-14"> <span className="text-sb">-</span> Presentation & Collateral Design</Link> </li>
-                                                            <li> <Link href="#" title="Graphics & Print Media Design" className="text-rg text-14"> <span className="text-sb">-</span> Graphics & Print Media Design</Link> </li>
-                                                        </ul>
-                                                    </AccordionContent>
-                                                </AccordionItem>
+                                                    <AccordionItem value="cat3" className="accordion-submenu">
+                                                        <AccordionTrigger className="text-16 text-rg submenu-mobile-title">
+                                                            <ul>
+                                                                <li>
+                                                                    Brand Identity Design
+                                                                </li>
+                                                            </ul>
+                                                        </AccordionTrigger>
+                                                        <AccordionContent className="accordion-submenu-links">
+                                                            <ul>
+                                                                <li> <Link href="#" title="Brand Strategy & Positioning" className="text-rg text-14"> <span className="text-sb">-</span> Brand Strategy & Positioning</Link></li>
+                                                                <li> <Link href="#" title="Visual Identity Design" className="text-rg text-14"> <span className="text-sb">-</span> Visual Identity Design</Link> </li>
+                                                                <li> <Link href="#" title="Brand Architecture & Guidelines" className="text-rg text-14"> <span className="text-sb">-</span> Brand Architecture & Guidelines</Link> </li>
+                                                                <li> <Link href="#" title="Packaging & Product Design" className="text-rg text-14"> <span className="text-sb">-</span> Packaging & Product Design</Link> </li>
+                                                                <li> <Link href="#" title="Rebranding & Brand Evolution" className="text-rg text-14"> <span className="text-sb">-</span> Rebranding & Brand Evolution</Link> </li>
+                                                                <li> <Link href="#" title="Presentation & Collateral Design" className="text-rg text-14"> <span className="text-sb">-</span> Presentation & Collateral Design</Link> </li>
+                                                                <li> <Link href="#" title="Graphics & Print Media Design" className="text-rg text-14"> <span className="text-sb">-</span> Graphics & Print Media Design</Link> </li>
+                                                            </ul>
+                                                        </AccordionContent>
+                                                    </AccordionItem>
 
-                                                <AccordionItem value="cat4" className="accordion-submenu">
-                                                    <AccordionTrigger className="text-16 text-rg submenu-mobile-title">
-                                                        <ul>
-                                                            <li>
-                                                                Social Media Management
-                                                            </li>
-                                                        </ul>
-                                                    </AccordionTrigger>
-                                                    <AccordionContent className="accordion-submenu-links">
-                                                        <ul>
-                                                            <li> <Link href="#" title="Social Media Strategy" className="text-rg text-14"> <span className="text-sb">-</span> Social Media Strategy</Link></li>
-                                                            <li> <Link href="#" title="Content Creation & Design" className="text-rg text-14"> <span className="text-sb">-</span> Content Creation & Design</Link> </li>
-                                                            <li> <Link href="#" title="Paid Social & Performance Marketing" className="text-rg text-14"> <span className="text-sb">-</span> Paid Social & Performance Marketing</Link> </li>
-                                                            <li> <Link href="#" title="Video & Reels Production" className="text-rg text-14"> <span className="text-sb">-</span> Video & Reels Production </Link> </li>
-                                                            <li> <Link href="#" title="Community & Reputation Management" className="text-rg text-14"> <span className="text-sb">-</span> Community & Reputation Management</Link> </li>
-                                                            <li> <Link href="#" title="Analytics, Audit & Reporting" className="text-rg text-14"> <span className="text-sb">-</span> Analytics, Audit & Reporting</Link> </li>
-                                                        </ul>
-                                                    </AccordionContent>
-                                                </AccordionItem>
-                                            </Accordion>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
+                                                    <AccordionItem value="cat4" className="accordion-submenu">
+                                                        <AccordionTrigger className="text-16 text-rg submenu-mobile-title">
+                                                            <ul>
+                                                                <li>
+                                                                    Social Media Management
+                                                                </li>
+                                                            </ul>
+                                                        </AccordionTrigger>
+                                                        <AccordionContent className="accordion-submenu-links">
+                                                            <ul>
+                                                                <li> <Link href="#" title="Social Media Strategy" className="text-rg text-14"> <span className="text-sb">-</span> Social Media Strategy</Link></li>
+                                                                <li> <Link href="#" title="Content Creation & Design" className="text-rg text-14"> <span className="text-sb">-</span> Content Creation & Design</Link> </li>
+                                                                <li> <Link href="#" title="Paid Social & Performance Marketing" className="text-rg text-14"> <span className="text-sb">-</span> Paid Social & Performance Marketing</Link> </li>
+                                                                <li> <Link href="#" title="Video & Reels Production" className="text-rg text-14"> <span className="text-sb">-</span> Video & Reels Production </Link> </li>
+                                                                <li> <Link href="#" title="Community & Reputation Management" className="text-rg text-14"> <span className="text-sb">-</span> Community & Reputation Management</Link> </li>
+                                                                <li> <Link href="#" title="Analytics, Audit & Reporting" className="text-rg text-14"> <span className="text-sb">-</span> Analytics, Audit & Reporting</Link> </li>
+                                                            </ul>
+                                                        </AccordionContent>
+                                                    </AccordionItem>
+                                                </Accordion>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                </li>
 
                                 <li className="menu-link">
                                     <Link href="#">
@@ -744,8 +746,8 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
-                </div >
-            </header >
+                </div>
+            </header>
         </>
     )
 }

@@ -20,7 +20,7 @@ export default function Footer() {
 
     return (
         <>
-            <section className="section section-bg-blue footer">
+            <footer className="section section-bg-blue footer">
                 <div className="container">
                     <div className="footer-quote-wrapper">
                         <div className="footer-quote-right">
@@ -279,7 +279,7 @@ export default function Footer() {
                     <Image className="footer-pixel-2" src="/images/global/footer-pixel-2.svg" alt="footer-pixel-2" width={166} height={124}></Image>
                     <Image className="footer-pixel-3" src="/images/global/footer-pixel-3.svg" alt="footer-pixel-3" width={369} height={262}></Image>
                 </div>
-            </section>
+            </footer>
         </>
     );
 }
