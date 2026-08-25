@@ -111,7 +111,7 @@ export default function TestimonialSectionDesktop() {
                             <div className="testimonialreview-main testimonial-image">
                                 <video
                                     className="testimonial-video site-radius-20"
-                                    src={videos[activeVideoIndex]}
+                                    // src={videos[activeVideoIndex]}
                                     ref={mainVideoRef}
                                     width={480}
                                     height={480}

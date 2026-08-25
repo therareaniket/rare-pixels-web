@@ -19,7 +19,7 @@ export default function AboutMissionVisionDesktop() {
                         </div>
 
                         <div className="abt-mis-vis-title-desktop-right">
-                            <Image className="abt-mis-vis-original" src="/images/aboutpage/about-mis-vis/original-logo.png" alt="bg-quote" width={265} height={225} ></Image>
+                            <Image className="abt-mis-vis-original" src="/images/aboutpage/about-mis-vis/original-logo.webp" alt="bg-quote" width={265} height={225} ></Image>
                         </div>
                     </div>
 

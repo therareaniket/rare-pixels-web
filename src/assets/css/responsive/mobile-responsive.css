@@ -388,27 +388,9 @@
     /* about page */
     .about-hero-section-mobile .container { display: flex; flex-direction: column-reverse; }
     .about-mobile-title-wrapper p { display: flex; flex-direction: column; gap: 16px; }
-    .about-hero-mask-title {
-        position: relative;
-        height: 138px;
-        overflow: hidden;
-        text-align: center;
-        width: 100%;
-        margin-top: 0;
-    }
-
-    .about-text-mask {
-        display: block;
-        height: 100%;
-        width: 100%;
-    }
-
-    .masked-video {
-        display: block;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+    .about-hero-mask-title { position: relative; height: 138px; overflow: hidden; text-align: center; width: 100%; margin-top: 0; }
+    .about-text-mask { display: block; height: 100%; width: 100%; }
+    .masked-video { display: block; height: 100%; width: 100%; object-fit: cover; }
 
     .abt-timeline-mobile-title h3 { margin-top: 30px; margin-bottom: 14px; }
     .time-line-hr { width: 100%; height: 1px; background-color: rgba(198, 198, 198, 0.5); margin-top: 30px; margin-bottom: 10px; }
@@ -436,27 +418,9 @@
     /* about page */
     .about-hero-section-mobile .container { display: flex; flex-direction: column-reverse; }
     .about-mobile-title-wrapper p { display: flex; flex-direction: column; gap: 16px; }
-    .about-hero-mask-title {
-        position: relative;
-        height: 138px;
-        overflow: hidden;
-        text-align: center;
-        width: 100%;
-        margin-top: 0;
-    }
-
-    .about-text-mask {
-        display: block;
-        height: 100%;
-        width: 100%;
-    }
-
-    .masked-video {
-        display: block;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+    .about-hero-mask-title { position: relative; height: 138px; overflow: hidden; text-align: center; width: 100%; margin-top: 0; }
+    .about-text-mask { display: block; height: 100%; width: 100%; }
+    .masked-video { display: block; height: 100%; width: 100%; object-fit: cover; }
 
     .abt-timeline-mobile-title h3 { margin-top: 30px; margin-bottom: 14px; }
     .time-line-hr { width: 100%; height: 1px; background-color: rgba(198, 198, 198, 0.5); margin-top: 30px; margin-bottom: 10px; }
@@ -504,8 +468,8 @@
 
     .rpd-mobile-section { position: relative; }
     .rpd-mobile-card-wrapper { padding: 70px 0; display: flex; flex-direction: column; gap: 30px; } 
-    .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; }
-    .rpd-pixel-right-mob { position: absolute; bottom: -40px; right: 0; z-index: 2; }
+    .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; width: 60px; }
+    .rpd-pixel-right-mob { position: absolute; bottom: -40px; right: 0; z-index: 2; width: 60px; }
 
     .rpd-mobile-card .h5 { margin-top: 20px; margin-bottom: 14px; }
 
@@ -521,6 +485,7 @@
     .rpd-mobile-card-5 { height: 250px; }
 
     .why-rare-point { border: 1px solid rgba(132, 144, 132, 0.1); border-radius: 10px; }
+    .about-mobile-video-wrapper { padding-top: 60px; }
 }
 
 @media (max-width: 439px) {
@@ -603,8 +568,6 @@
     .process-card-mob-text p{ padding-top: 10px; }
     .process-vertical-line{ left: 18px; }
     .process-vertical-line-active{ left: 18px; }
-    
-    /* .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 170px; } */
 
     .abt-timeline-mobile-title h3 { margin-top: 20px; margin-bottom: 10px; }
     .timeline-image-mobile-wrapper { width: 200px; height: 200px; }
@@ -730,7 +693,6 @@
     .hm-abt-site-logo img{ margin: 30px auto; }
     .footer-add-country { gap: 20px; }
     .footer-copyright .text-16 { font-size: 14px; line-height: 22px; }
-    /* .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 150px; } */
     .footer-social-wrapper { gap: 14px; }
     .social-icon span { font-size: 25px; }
 
@@ -753,11 +715,7 @@
 
     .abt-our-values-pointer-right { width: calc( 100% - 46px ); }
 
-    .custom-cursor-box {
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-size: 16px;
-    }
+    .custom-cursor-box { padding: 6px 14px; border-radius: 20px; font-size: 16px; }
 
     .why-rare-mobile-tree { width: 300px; }
     .why-rare-pointers span { margin-top: 7px; }
@@ -842,13 +800,9 @@
 
     .teams-mob-pixesl-bottom-right{ width: 150px; bottom: 263px; }
     .process-card-mob-text{ width: 260px; }
-    
-    /* .footer-link-col:first-child, .footer-link-col:nth-child(2) { width: 140px; } */
-    /* .about-hero-section-mobile .container { margin-top: 85px; } */
 
     .timeline-content-wrapper { margin-top: 20px; }
     .timeline-mobile-content h3 { margin-top: 20px; }
-    /* .about-hero-section-mobile .container { margin-top: 85px; } */
 
     .timeline-content-wrapper { margin-top: 20px; }
     .timeline-mobile-content h3 { margin-top: 20px; }

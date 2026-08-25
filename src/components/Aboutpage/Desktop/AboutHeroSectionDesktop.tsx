@@ -65,15 +65,6 @@ export default function AboutHeroSectionDesktop() {
                         </svg>
                     </div>
 
-                    {/* <div className="about-desktop-video-wrapper">
-                        <div className="about-hero-video">
-                            <video className="about-banner-video" src="/images/aboutpage/about-hero/rare-second-anniversary.mp4" width={1600} height={800} autoPlay playsInline muted loop preload="auto"></video>
-                        </div>
-
-                        <div className="about-hero-mask-title">
-                            <span className="text-extra-bold">ABOUT US</span>
-                        </div>
-                    </div> */}
                 </div>
             </section>
         </>

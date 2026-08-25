@@ -112,7 +112,7 @@ export default function TestimonialSectionMobile() {
                                 <video
                                     className="testimonial-video site-radius-10"
                                     // src="/images/homepage/testimonialvideos/dummy-1.mp4"
-                                    src={videos[activeVideoIndex]}
+                                    // src={videos[activeVideoIndex]}
                                     ref={mainVideoRef}
                                     width={480}
                                     height={480}

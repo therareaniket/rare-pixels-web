@@ -184,7 +184,8 @@ export default function IndustriesSectionDesktop() {
                                 {industries.map((industry, index) => (
                                     <div className="industry-item" key={index}>
                                         <div className="industries-image-wrapper">
-                                            <video className="industries-video prev-video" autoPlay playsInline muted loop preload="auto" webkit-playsinline="true" src={industry.video} width={1000} height={600} />
+                                            {/* <video className="industries-video prev-video" autoPlay playsInline muted loop preload="auto" webkit-playsinline="true" src={industry.video} width={1000} height={600} /> */}
+                                            <div className="industries-video prev-video"/>
 
                                             <Image className="industries-desktop-pixel-1" src={`${CDN_URL}/images/homepage/industries/industries-pixel-desktop-1.svg`} alt="desktop pixel" width={170} height={150}></Image>
                                             <Image className="industries-desktop-pixel-2" src={`${CDN_URL}/images/homepage/industries/industries-pixel-desktop-2.svg`} alt="desktop pixel" width={132} height={100}></Image>

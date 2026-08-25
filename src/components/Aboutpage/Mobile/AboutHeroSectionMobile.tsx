@@ -21,9 +21,6 @@ export default function AboutHeroSectionMobile() {
                             </p>
                         </div>
                     </div>
-                    {/* <div className="about-mobile-video-wrapper">
-                        <span className="about-mobile-title text-extra-bold">ABOUT US</span>
-                    </div> */}
 
                     <div className="about-hero-mask-title text-extra-bold">
                         <svg

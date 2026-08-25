@@ -11,8 +11,6 @@ export default function ScrollToTopButton() {
     const handleScroll = () => {
       const firstSection = document.getElementById("first-section");
 
-      console.log("firstSection:", firstSection);
-
       if (firstSection) {
         const firstSectionHeight = firstSection.offsetHeight;
 
@@ -23,7 +21,7 @@ export default function ScrollToTopButton() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
 
   const scrollToTop = () => {
     window.scrollTo({

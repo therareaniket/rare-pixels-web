@@ -15,7 +15,7 @@ export default function AboutOurValuesSectionDesktop() {
 
                             <p>A journey shaped by creativity, collaboration, and continuous growth, reflecting the milestones, experiences, and values that have defined RarePixels from day one. A journey shaped by creativity, collaboration, and continuous growth, reflecting the milestones, experiences, and values that have defined RarePixels from day one.</p>
 
-                            <Image className="our-values-image" src="/images/aboutpage/abt-our-values/our-values.png" alt="our-values" width={692} height={458}></Image>
+                            <Image className="our-values-image" src="/images/aboutpage/abt-our-values/our-values.webp" alt="our-values" width={692} height={458}></Image>
                         </div>
 
                         <div className="abt-our-values-left">
