@@ -4,14 +4,10 @@ import gsap from "gsap";
 import { useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import Footer from "@/components/global/Footer";
 
 const faqs = [
     {
@@ -108,59 +104,31 @@ export default function AboutFaqSectionDesktop() {
     };
 
     return (
-        <section className="section">
-            <div className="container">
-                <div className="hm-faq-title">
-                    <h2 className="text-sb">FAQs</h2>
-                    <p className="text-18 text-rg">
-                        Answers to the most common questions helping you understand how we work,
-                        what we offer, and how we can support your next project.
-                    </p>
-                </div>
+        <>
+            <section className="section">
+                <div className="container">
+                    <div className="hm-faq-title">
+                        <h2 className="text-sb">FAQs</h2>
+                        <p className="text-18 text-rg">
+                            Answers to the most common questions helping you understand how we work,
+                            what we offer, and how we can support your next project.
+                        </p>
+                    </div>
 
-                <div className="container-sm">
-                    <div className={`faq-expand-wrapper ${expanded ? "expanded" : ""}`}>
-                        <Accordion
-                            defaultValue={["faq-1"]}
-                            className="faq-accordion-wrapper"
-                        >
-                            {faqs.slice(0, 5).map((faq, index) =>
-                                <div className="accordion-item-wrapper" key={index}>
-                                    <span className="accordion-number h6 text-sb">
-                                        {index + 1}
-                                    </span>
-
-                                    <AccordionItem
-                                        value={`faq-${index + 1}`}
-                                        className="faq-accordion"
-                                    >
-                                        <AccordionTrigger className="faq-accordion-title">
-                                            <h3 className="h6 text-sb text-black">
-                                                {faq.question}
-                                            </h3>
-                                        </AccordionTrigger>
-
-                                        <AccordionContent className="faq-content">
-                                            <p className="text-18 text-rg text-black">
-                                                {faq.answer}
-                                            </p>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </div>
-                            )}
-
-                            {showAll &&
-                                faqs.slice(5).map((faq, index) => (
-                                    <div
-                                        className="accordion-item-wrapper extra-faq"
-                                        key={index + 5}
-                                    >
+                    <div className="container-sm">
+                        <div className={`faq-expand-wrapper ${expanded ? "expanded" : ""}`}>
+                            <Accordion
+                                defaultValue={["faq-1"]}
+                                className="faq-accordion-wrapper"
+                            >
+                                {faqs.slice(0, 5).map((faq, index) =>
+                                    <div className="accordion-item-wrapper" key={index}>
                                         <span className="accordion-number h6 text-sb">
-                                            {index + 6}
+                                            {index + 1}
                                         </span>
 
                                         <AccordionItem
-                                            value={`faq-${index + 6}`}
+                                            value={`faq-${index + 1}`}
                                             className="faq-accordion"
                                         >
                                             <AccordionTrigger className="faq-accordion-title">
@@ -176,40 +144,72 @@ export default function AboutFaqSectionDesktop() {
                                             </AccordionContent>
                                         </AccordionItem>
                                     </div>
-                                ))
-                            }
-                        </Accordion>
+                                )}
 
-                        <div className="faq-btn-wrapper-arrow">
-                            {/* <button
-                                type="button"
-                                className="expand-faq"
-                                onClick={handleToggle}
-                            >
-                                <Image
-                                    src="/images/global/faq-down-arrow.svg"
-                                    alt="faq"
-                                    width={30}
-                                    height={52}
-                                    className={expanded ? 'rotate-180 transition-all' : 'transition-all'}
-                                />
-                            </button> */}
+                                {showAll &&
+                                    faqs.slice(5).map((faq, index) => (
+                                        <div
+                                            className="accordion-item-wrapper extra-faq"
+                                            key={index + 5}
+                                        >
+                                            <span className="accordion-number h6 text-sb">
+                                                {index + 6}
+                                            </span>
 
-                            <Link href="#" title="Ask Your Queries" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-btn website-btn" >
-                                <span className="text-20 text-md text-white">
-                                    Ask Your Queries
-                                </span>
-                                <Image
-                                    src="/images/global/faq-mic.svg"
-                                    alt="arrow-for-navigation"
-                                    width={24}
-                                    height={24}
-                                />
-                            </Link>
+                                            <AccordionItem
+                                                value={`faq-${index + 6}`}
+                                                className="faq-accordion"
+                                            >
+                                                <AccordionTrigger className="faq-accordion-title">
+                                                    <h3 className="h6 text-sb text-black">
+                                                        {faq.question}
+                                                    </h3>
+                                                </AccordionTrigger>
+
+                                                <AccordionContent className="faq-content">
+                                                    <p className="text-18 text-rg text-black">
+                                                        {faq.answer}
+                                                    </p>
+                                                </AccordionContent>
+                                            </AccordionItem>
+                                        </div>
+                                    ))
+                                }
+                            </Accordion>
+
+                            <div className="faq-btn-wrapper-arrow">
+                                {/* <button
+                                    type="button"
+                                    className="expand-faq"
+                                    onClick={handleToggle}
+                                >
+                                    <Image
+                                        src="/images/global/faq-down-arrow.svg"
+                                        alt="faq"
+                                        width={30}
+                                        height={52}
+                                        className={expanded ? 'rotate-180 transition-all' : 'transition-all'}
+                                    />
+                                </button> */}
+
+                                <Link href="#" title="Ask Your Queries" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-btn website-btn" >
+                                    <span className="text-20 text-md text-white">
+                                        Ask Your Queries
+                                    </span>
+                                    <Image
+                                        src="/images/global/faq-mic.svg"
+                                        alt="arrow-for-navigation"
+                                        width={24}
+                                        height={24}
+                                    />
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <Footer />
+        </>
     );
 }

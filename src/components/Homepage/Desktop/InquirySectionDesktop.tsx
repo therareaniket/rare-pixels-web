@@ -2,6 +2,7 @@
 
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import Footer from "@/components/global/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -96,6 +97,8 @@ export default function InquirySectionDesktop() {
                     </Link>
                 </div>
             </section>
+
+            <Footer />
         </>
     );
 }

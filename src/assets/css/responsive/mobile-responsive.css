@@ -618,6 +618,8 @@
     .hamburger-image, .mode-switching-toggle-button{ padding: 0 ; }
     .hm-abt-card-text p{ gap: 6px; }
     .navbar-links-wrapper{ align-items: center; gap: 20px; }
+    .header-squished { padding: 10px 18px; border-radius: 40px; }
+    .nav-hamburger img { width: 16px; height: 16px; }
 
     .mode-switching-toggle-button img, .hamburger-image img{ width: 18px; height: 18px; }
     .services-art-board{ width: 160px; height: 160px; }
@@ -659,7 +661,6 @@
     .mobile-autor-desi{ margin-top: 15px; padding-top: 15px; }
 
     .website-header-logo { width: 110px; }
-    .nav-hamburger { padding: 8px; }
 
     .header-mega-menu { width: calc(100% - 36px); }
 
@@ -679,9 +680,6 @@
     .footer-pixel-1 { width: 170px; } 
 
     .minimize-btn { width: 20px; height: 20px; bottom: 10px; right: 10px; }
-
-    .header-squished { padding: 2px 10px; }
-
     .process-card-mobile{ max-height: 32px; }
     .process-mob-icon{ width: 32px; height: 32px; font-size: 18px; }
     .process-card-mob-text{ width: 290px; }

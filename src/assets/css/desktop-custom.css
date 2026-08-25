@@ -73,7 +73,7 @@ nav.nav { position: relative; z-index: 999; }
     border-radius: 50px;
     transition: all 1s ease; 
 }
-.header-squished { width: 350px; padding: 10px 25px; background-color: rgba(242, 242, 242, 0.6); backdrop-filter: blur(6px); top: 20px; border: 1px solid rgba(123, 121, 118, 0.2); }
+.header-squished { width: 350px; padding: 10px 25px; background-color: rgba(242, 242, 242, 0.6); backdrop-filter: blur(6px); top: 20px; }
 .website-header-logo, .nav-hamburger { transition: all 0.8s ease; }
 
 .nav-hamburger{ cursor: pointer; }

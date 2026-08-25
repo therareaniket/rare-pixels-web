@@ -4,6 +4,7 @@ import Link from "next/link";
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
 import Image from "next/image";
+import Footer from "@/components/global/Footer";
 
 export default function InquirySectionMobile() {
     return (
@@ -80,6 +81,8 @@ export default function InquirySectionMobile() {
                     </Link>
                 </div>
             </section>
+
+            <Footer />
         </>
     );
 }
