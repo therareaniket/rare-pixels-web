@@ -428,7 +428,7 @@
 
     .abt-mis-vis-title-mobile { position: relative; margin-top: 30px; }
     .abt-mis-vis-quote { position: absolute; top: -30px; }
-    .abt-mis-vis-mobile-video { width: 300px; height: 300px; margin: 30px auto; }
+    .abt-mis-vis-mobile-video { width: 300px; height: 300px; margin: 40px auto; }
     .abt-mis-vis-mobile-video img{ width: 100%; height: 100%; object-fit: contain; }
 
     .abt-vis-mobile { margin-top: 20px; margin-bottom: 14px; }
@@ -481,10 +481,10 @@
     .abt-our-values-pointer-mobile { display: flex; align-items: flex-start; justify-content: space-between; } 
 
     .abt-our-values-pointer-left { width: 40px; height: 40px; }
-    .our-values-image { width: 100%; margin: 30px 0; }
+    .our-values-image { width: 100%; margin: 20px 0 40px 0; }
     .abt-our-values-pointer-right { width: calc( 100% - 55px ); }
 
-    .why-rare-mobile-tree { width: 340px; margin: 30px auto; }
+    .why-rare-mobile-tree { width: 340px; margin: 40px auto; }
     .why-rare-pointers span { width: 6px; height: 6px; margin-top: 10px; }
     .why-rare-desc .text-18 { margin-bottom: 6px; }
 
@@ -503,7 +503,7 @@
     .footer-link-col:nth-child(3) ul li { width: 196px; margin-bottom: 0;  }
 
     .rpd-mobile-section { position: relative; }
-    .rpd-mobile-card-wrapper { padding: 60px 0; display: flex; flex-direction: column; gap: 30px; } 
+    .rpd-mobile-card-wrapper { padding: 70px 0; display: flex; flex-direction: column; gap: 30px; } 
     .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; }
     .rpd-pixel-right-mob { position: absolute; bottom: -40px; right: 0; z-index: 2; }
 

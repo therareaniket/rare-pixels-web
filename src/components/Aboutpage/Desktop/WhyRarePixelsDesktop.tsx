@@ -61,9 +61,9 @@ export default function WhyRarePixelsDesktop() {
                                 </GlassEffect>
                             </div>
 
-                            <div className="why-rare-point why-rare-point-4">
+                            <div className="why-rare-point why-rare-point-4 ">
                                 <GlassEffect className="site-radius-20">
-                                    <div className="why-rare-pointers why-rare-pointers-4">
+                                    <div className="why-rare-pointers why-rare-pointers-4 glass">
                                         <span className="why-rare-pixel"></span>
 
                                         <div className="why-rare-desc why-rare-desc-4">
