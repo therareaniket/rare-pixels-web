@@ -80,13 +80,13 @@ nav.nav { position: relative; z-index: 999; }
 .header-mega-menu {
     position: fixed;
     right: -100%;
-    top: 100px;
+    top: 80px;
     transform: translateX(50%);
     width: 1600px;
     height: max-content;
     background: #FFFFFF;
     transition: right 1s ease;
-    z-index: 4;
+    z-index: 998;
     border-radius: 20px;
     padding: 30px 40px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 0px 10px 0 rgba(0, 0, 0, 0.1);
@@ -159,12 +159,11 @@ body.menu-open {
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 998;
-  height: 100vh;
+  height: calc(100vh + 20px);
   transform: translateY(-20px);
 }
 
 .mega-menu-overlay.active { opacity: 1; visibility: visible; }
-.header-mega-menu { z-index: 999; }
 
 /* testimonial section */
 .hm-testimonial-section{ position: relative; }

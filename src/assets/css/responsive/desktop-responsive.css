@@ -129,7 +129,7 @@
 
 	.menu-link a { width: 300px; }
 	.header-links-wrapper  { gap: 0; padding: 0; padding-bottom: 15px; }
-	.header-mega-menu { top: 100px; width: max-content; padding: 40px; }
+	.header-mega-menu { width: max-content; padding: 20px; top: 70px; }
 	.header-pages-link-wrapper ul { padding: 0; gap: 50px; }
 	.menu-link-icon, .mega-links-icon { width: 48px; height: 48px; font-size: 20px; border-radius: 14px; }
 	.menu-social-icons { font-size: 20px; }
@@ -362,7 +362,6 @@
 	.nav-hamburger img { width: 22px; height: 22px; }
 
 	.header-mega-links-wrapper { width: 315px; }
-	.header-mega-menu { padding: 20px; top: 90px; }
 	.menu-link a { width: 265px; }
 	.menu-link-icon, .mega-links-icon { width: 40px; height: 40px; border-radius: 12px; }
 	.header-links-wrapper { margin-bottom: 15px; }
@@ -617,7 +616,7 @@
 	.header-mega-links-wrapper { width: 280px; }
 
 	.menu-link-icon, .mega-links-icon { width: 40px; height: 40px; font-size: 18px; }
-	.header-mega-menu { top: 80px; }
+	.header-mega-menu { top: 70px; }
 	.menu-company-contact, .menu-social-icon { width: 230px; }
 	.header-contact-detail { gap: 30px; }
 	.menu-social-icons, .menu-company-contact .contact-phone span  { font-size: 14px; }
@@ -1118,13 +1117,14 @@
 	.menu-link { width: calc( 50% - 10px ); }
 	.menu-link a { width: 100%; }
 	.header-links-for-desktop { display: none; }
-	.header-mega-menu { width: 800px; }
-	.header-links-wrapper { flex-wrap: wrap; gap: 10px; }
-	.header-mega-links-wrapper { width: calc( 50% - 5px ); }
+	.header-mega-menu { width: 800px; padding: 30px; }
+	.header-links-wrapper { flex-wrap: wrap; gap: 20px; }
+	.header-mega-links-wrapper { width: calc( 50% - 10px); }
 	.header-pages-link-wrapper { flex-direction: row; flex-wrap: wrap; }
 
 	.header-website-detail { flex-direction: column; gap: 30px; }
-	.menu-company-contact, .menu-social-icon { width: 275px; }
+	.header-contact-detail { gap: 20px; }
+	.menu-company-contact, .menu-social-icon { width: 365px; }
 	.menu-link-icon, .mega-links-icon { width: 50px; height: 50px; font-size: 24px; }
 	.mega-links ul { padding-left: 65px; gap: 0; }
 	.menu-link a .text-18{ line-height: 18px; margin-bottom: 5px; }
@@ -1468,6 +1468,8 @@
 	h2, .h2 { font-size: 30px; line-height: 38px; }
 	h3, .h3 { font-size: 28px; line-height: 36px; }
 	h4, .h4 { font-size: 26px; line-height: 34px; }
+	
+	.menu-company-contact, .menu-social-icon { width: 280px; }
 
 	.hm-services-left{ width: 400px; height: 280px; }
 	.home-hero-banner-image{ width: 400px; height: 280px; }
@@ -1849,6 +1851,8 @@
 	.link-padding{ padding: 6px 12px; }
 	.hm-hero-paragraph-wrapper{ width: 100%; }
 	.menu-company-contact, .menu-social-icon { width: 100%; }
+
+	.header-mega-menu { top: 50px; }
 
 	.testimonialreview-main{ height: 250px; }
 	.testimonial-image-2{ width: 80px; height: 80px; left: 0; }
