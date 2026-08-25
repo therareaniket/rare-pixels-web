@@ -111,7 +111,7 @@ nav.nav { position: relative; z-index: 999; }
 .header-links-wrapper { display: flex; align-items: flex-start; gap: 25px; padding: 0 14px;  padding-bottom: 30px; border-bottom: 1px solid #D9D9D9; margin-bottom: 30px; }
 
 .mega-links ul li a:hover { color: var(--primary); }
-.active-link p { color: var(--primary); }
+/* .active-link p { color: var(--primary); } */
 
 .active-link .menu-link-icon {
   background-color: var(--primary);
@@ -771,6 +771,7 @@ body.menu-open {
 /* .abt-mis-vis-title-desktop h2 { margin-bottom: 40px; } */
 
 .abt-mis-vis-title-desktop-left { width: 952px; padding-top: 85px; padding-left: 44px; position: relative; }
+.abt-mis-vis-title-desktop-left p { margin-bottom: 0; }
 .abt-mis-vis-quote-desktop { position: absolute; top: 0; left: 0; }
 
 .abt-mis-vis-title-desktop { display: flex; align-items: flex-end; justify-content: space-between; }
