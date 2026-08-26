@@ -98,7 +98,7 @@ export default function InquirySectionDesktop() {
                 </div>
             </section>
 
-            <Footer />
+            <Footer /> 
         </>
     );
 }

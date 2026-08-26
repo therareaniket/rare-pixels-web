@@ -170,6 +170,13 @@ export default function FaqSectionDesktop() {
                         </Accordion>
 
                         <div className="faq-btn-wrapper-arrow">
+                            <button type="button" className="expand-faq" onClick={handleToggle} >
+                                {/* <Image src="/images/faq-down-arrow.svg" alt="faq" width={30} height={52} className={expanded ? 'rotate-180 transition-all' : 'transition-all'} /> */}
+                                <span className="text-18">
+                                    {expanded ? "Less FAQs" : "More FAQs"}
+                                </span>
+                            </button>
+                            
                             <Link href="#" title="Ask Your Queries" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-btn website-btn" >
                                 <span className="text-20 text-md text-white">
                                     Ask Your Queries
@@ -181,13 +188,6 @@ export default function FaqSectionDesktop() {
                                     height={24}
                                 />
                             </Link>
-
-                            <button type="button" className="expand-faq" onClick={handleToggle} >
-                                {/* <Image src="/images/faq-down-arrow.svg" alt="faq" width={30} height={52} className={expanded ? 'rotate-180 transition-all' : 'transition-all'} /> */}
-                                <span className="text-18">
-                                    {expanded ? "Less FAQs" : "More FAQs"}
-                                </span>
-                            </button>
                         </div>
                     </div>
                 </div>

@@ -9,11 +9,9 @@
 .bg-yellowish { background-color: #FBF9E9; }
 
 @media (max-width: 479px) {
-    :root { --project-card-width: 404px; --project-card-gap: 20px; }
-	.projects-lists { margin-top: 40px; }
-	.project-video { height: 280px; }
+    :root { --project-card-height: 280px; --project-card-gap: 30px; }
+	.project-list { border-radius: 20px; }
     .project-list.active { box-shadow: none; }
-    .project-title-wrapper span { padding-top: 10px; }
 
 
     .container { width: 100%; max-width: 100%; padding: 0 18px; }  
@@ -301,7 +299,7 @@
     .website-logo { width: 14px; height: auto; }
 
     /* process */
-    .process-section-sticky { position: relative; height: calc( 100vh * 7 ); }
+    .process-section-sticky { position: relative; height: calc( 100vh * 5 ); }
     .process-section-inner { position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; }
     .process-mob-icon { width: 40px; height: 40px; border-radius: 10px; background-color: #E8DB7D; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #000; }
     .process-section-mobile-wrapper { position: relative; margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
@@ -357,7 +355,7 @@
     .faq-expand-wrapper { max-height: 800px; }
 
     .faq-accordion-title { align-items: center; }
-    .faq-btn-wrapper-arrow { flex-direction: row-reverse; justify-content: flex-start; }
+    .faq-btn-wrapper-arrow { flex-direction: row-reverse; justify-content: flex-start; align-items: baseline; }
     .expand-faq { position: static; transform: translateX(0); } 
     .expand-faq span { text-decoration: underline; }
     .social-icon a { gap: 8px; }
@@ -512,11 +510,8 @@
 }
 
 @media (max-width: 439px) {
-    :root { --project-card-width: 100%; --project-card-gap: 20px; }
-    .project-title-wrapper span { font-size: 12px;  }
-    .project-video { height: 220px; }
-    .projects-lists { width: 100%; }
-    .project-list { flex-shrink: 0; }
+    :root { --project-card-height: 260px; --project-card-gap: 30px; }
+	.project-list { border-radius: 20px; }
     
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
     h1, .h1 { font-size: 30px; line-height: 38px; }
@@ -617,6 +612,10 @@
 }
 
 @media (max-width: 400px) {
+    :root { --project-card-height: 250px; --project-card-gap: 30px; }
+	.project-list { border-radius: 10px; }
+    .active-project-title { left: 0; }
+
     .container { width: 100%; max-width: 100%; }  
     .section   { padding: 40px 0px; }
     h1, .h1 { font-size: 28px; line-height: 34px; }
@@ -762,6 +761,9 @@
 }
 
 @media (max-width: 374px) {
+    :root { --project-card-height: 220px; --project-card-gap: 30px; }
+	.project-titles { margin-bottom: 30px; }
+
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
     h4, .h4 { font-size: 20px; line-height: 28px; }
     .text-20 { font-size: 14px; line-height: 22px; }

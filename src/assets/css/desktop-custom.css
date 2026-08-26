@@ -230,10 +230,12 @@ body.menu-open {
 .hm-abt-text-wrapper h2{ width: 632px; margin-bottom: 0; }
 .hm-abt-text-wrapper p{ width: 802px; }
 
+
 .hm-abt-card-wrapper{ display: flex; align-items: center; justify-content: space-between; margin-top: 60px; }
 
 .hm-abt-pointers-right{ width: 822px; display: flex; align-items: flex-start; gap: 30px; flex-wrap: wrap; }
 .hm-abt-card{ display: flex; gap: 10px; padding: 20px; width: 396px; }
+.hm-abt-card, .hm-abt-card-mobile { border: 1px solid rgba(132, 144, 132, 0.1); backdrop-filter: blur(6px); }
 .hm-abt-card-title{ width: 338px; }
 .hm-abt-logo-left{ margin-left: 65px; width: 273px; height: 349px; object-fit: contain; }
 .hm-abt-pixel{ width: 8px; height: 8; border-radius: 1px; background-color: #ED0180; margin-top: 12px; }
@@ -563,7 +565,7 @@ body.menu-open {
 .footer-social-icon-tablet { display: none; }
 
 .faq-btn-wrapper-arrow { position: relative; display: flex; align-items: center; width: 100%; justify-content: flex-end; margin-top: 30px; }
-.expand-faq { margin-left: 50px; cursor: pointer; color: var(--primary); }
+.expand-faq { margin-right: 40px; cursor: pointer; color: var(--primary); }
 
 .website-btn { display: flex; align-items: center; gap: 6px; padding: 6px 20px; width: max-content; background-color: var(--primary); color: white; border-radius: 30px; }
 
@@ -579,7 +581,7 @@ body.menu-open {
 
 .projects-section { overflow: hidden; }
 .project-titles { text-align: center;  }
-
+.mobile-project-nav { display: none; }
 .projects-lists-wrapper { overflow: hidden; width: 100%; }
 
 .projects-lists { 
@@ -592,8 +594,9 @@ body.menu-open {
 }
 
 .project-list { position: relative; overflow: hidden; width: var(--project-card-width); border-radius: 30px; cursor: none;  }
-.active-project-title { width: max-content; padding: 6px 18px; border-radius: 40px; background-color: #061651; color: white; margin-top: 20px; }
-.project-list.active { box-shadow: 8px 4px 10px 2px rgba(0, 0, 0, 0.25); }
+.active-project-title { position: absolute; bottom: 0; left: 20px; width: max-content; padding: 6px 18px; border-radius: 40px; }
+.project-list.active { box-shadow: 8px 0px 8px 0px rgba(0, 0, 0, 0.1); }
+.projects-slide-layout { display: none; }
 
 .custom-cursor-box {
     position: absolute;
@@ -606,9 +609,6 @@ body.menu-open {
     transform: translate(-50%, -50%);
     border-radius: 30px;
 }
-
-.project-title-wrapper span { color: #061651; display: none; }
-
 
 /* about page */
 

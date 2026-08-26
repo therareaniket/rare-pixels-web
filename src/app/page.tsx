@@ -49,12 +49,12 @@ export default function Home() {
 
 				{/* DESKTOP */}
 				<div className="hidden min-[480px]:block">
-					<TestimonialSectionDesktop />
+					{/* <TestimonialSectionDesktop /> */}
 					<AboutSectionDesktop />
 					<ServicesSectionDesktop />
 					<IndustriesSectionDesktop />
 					<WhyChooseUsSectionDesktop />
-					{/* <ProcessSectionDesktop /> */}
+					<ProcessSectionDesktop />
 					<ProjectsSectionDesktop />
 					<StatsSectionDesktop/>
 					<BlogSectionDesktop />
@@ -70,7 +70,7 @@ export default function Home() {
 					<ServicesSectionMobile />
 					<IndustriesSectionMobile />
 					<WhyChooseUsSectionMobile />
-					{/* <ProcessSectionMobile /> */}
+					<ProcessSectionMobile />
 					<ProjectsSectionDesktop />
 					<StatsSectionMobile />
 					<BlogSectionMobile />

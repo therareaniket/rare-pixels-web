@@ -6,6 +6,7 @@ import GlassEffect from "@/components/global/LiquideGlass";
 import Image from "next/image";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import PixelImageReveal from "@/components/global/PixelImageReveal";
 
 export default function AboutSectionDesktop() {
     
@@ -26,12 +27,11 @@ export default function AboutSectionDesktop() {
 
                             <div className="hm-abt-card-wrapper">
                                 <div className="hm-abt-logo-left">
-                                    <Image src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" width={276} height={350}></Image>
+                                    <PixelImageReveal src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" width={276} height={350} pixelSize={18} />
                                 </div>
 
                                 <div className="hm-abt-pointers-right">
-                                    <GlassEffect className="site-radius-20">
-                                        <div className="hm-abt-card">
+                                        <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
                                                 <h3 className="h6 text-primary text-sb">Design That Creates Clarity</h3>
@@ -42,10 +42,8 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </GlassEffect>
 
-                                    <GlassEffect className="site-radius-20">
-                                        <div className="hm-abt-card">
+                                        <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
                                                 <h3 className="h6 text-primary text-sb">Technology Built Around Growth</h3>
@@ -56,10 +54,8 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </GlassEffect>
 
-                                    <GlassEffect className="site-radius-20">
-                                        <div className="hm-abt-card">
+                                        <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
                                                 <h3 className="h6 text-primary text-sb">Creativity With Direction</h3>
@@ -70,10 +66,8 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </GlassEffect>
 
-                                    <GlassEffect className="site-radius-20">
-                                        <div className="hm-abt-card">
+                                        <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
                                                 <h3 className="h6 text-primary text-sb">Brands People Remember</h3>
@@ -84,7 +78,6 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </GlassEffect>
                                 </div>
                             </div>
                         </div>

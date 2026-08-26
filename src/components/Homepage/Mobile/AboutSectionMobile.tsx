@@ -27,8 +27,7 @@ export default function AboutSectionMobile() {
                             </div>
 
                             <div className="hm-abt-cards-wrapper">
-                                <GlassEffect className="site-radius-10">
-                                    <div className="hm-abt-card-mobile">
+                                    <div className="hm-abt-card-mobile site-radius-10">
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
@@ -40,10 +39,8 @@ export default function AboutSectionMobile() {
                                             </p>
                                         </div>
                                     </div>
-                                </GlassEffect>
 
-                                <GlassEffect className="site-radius-10">
-                                    <div className="hm-abt-card-mobile">
+                                    <div className="hm-abt-card-mobile site-radius-10">
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
@@ -55,10 +52,8 @@ export default function AboutSectionMobile() {
                                             </p>
                                         </div>
                                     </div>
-                                </GlassEffect>
-
-                                <GlassEffect className="site-radius-10">
-                                    <div className="hm-abt-card-mobile">
+                                    
+                                    <div className="hm-abt-card-mobile  site-radius-10">
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
@@ -70,10 +65,8 @@ export default function AboutSectionMobile() {
                                             </p>
                                         </div>
                                     </div>
-                                </GlassEffect>
-
-                                <GlassEffect className="site-radius-10">
-                                    <div className="hm-abt-card-mobile">
+                                    
+                                    <div className="hm-abt-card-mobile  site-radius-10">
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
@@ -85,7 +78,6 @@ export default function AboutSectionMobile() {
                                             </p>
                                         </div>
                                     </div>
-                                </GlassEffect>
                             </div>
                         </div>
                     </div>
