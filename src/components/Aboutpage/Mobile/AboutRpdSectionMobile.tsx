@@ -11,7 +11,10 @@ export default function AboutRpdSectionMobile() {
                 <div className="container">
                     <div className="rpd-mobile-card-wrapper">
                         <div className="rpd-mobile-card">
-                            <Image className="rare-logo-mob" src="/images/aboutpage/about-rpd/rare.svg" alt="rare" width={115} height={48}></Image>
+                            <div className="rare-mobile-text">
+                                <Image className="rare-logo-mob" src="/images/aboutpage/about-rpd/rare.svg" alt="rare" width={34} height={43}></Image>
+                                <span className="text-pop-sb text-white">are</span>
+                            </div>
 
                             <h2 className="h5 text-sb text-white">Results Before Recognition</h2>
 
@@ -19,7 +22,7 @@ export default function AboutRpdSectionMobile() {
                         </div>
 
                         <div className="rpd-mobile-card">
-                            <Image className="pixels-logo-mob" src="/images/aboutpage/about-rpd/pixels.svg" alt="rare" width={136} height={48}></Image>
+                            <span className="text-pop-sb text-white">Pixels</span>
 
                             <h3 className="h5 text-sb text-white">Precision in Every Detail</h3>
 
@@ -27,7 +30,7 @@ export default function AboutRpdSectionMobile() {
                         </div>
 
                         <div className="rpd-mobile-card">
-                            <Image className="design-logo-mob" src="/images/aboutpage/about-rpd/design.svg" alt="rare" width={165} height={48}></Image>
+                            <span className="text-pop-sb text-white">Design</span>
 
                             <h3 className="h5 text-sb text-white">Precision in Every Detail</h3>
 

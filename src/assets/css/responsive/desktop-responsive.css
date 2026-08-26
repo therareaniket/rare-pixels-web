@@ -61,8 +61,6 @@
 
 	.hm-abt-card-wrapper{ margin-top: 40px; }
 
-	.rare-logo-wrapper{ width: 160px; height: auto; }
-	.rare-logo-wrapper img{ width: 100%; height: 100%; object-fit: contain; }
 	.nav-theme-change-icon{ width: 50px; height: 50px; font-size: 30px; }
 	.light-mode-hover-icon, .dark-mode-hover-icon{ width: 30px; height: 30px; }
 	.navbar-hamburger-effect{ width: 55px; height: 55px; }
@@ -164,7 +162,8 @@
 
 	.abt-timeline-title-left { width: 670px; }
 	.abt-timeline-content-right { width: 445px; }
-	.abt-timeline-titledate { font-size: 76px; line-height: 84px; }
+
+	.abt-timeline-content-right span  { font-size: 76px; line-height: 84px; }
 	.abt-timeline-content-left { width: 280px; height: 260px; }
 	.abt-timeline-content-left img{ width: 100%; height: 100%; object-fit: contain; }
 	.abt-timeline-content-wrapper { gap: 70px; }
@@ -216,6 +215,10 @@
 
 	.pixels-logo { width: 270px; }
 	.design-logo { width: 330px; }
+
+	.abt-rpd-card span { font-size: 86px; line-height: 80px; }
+	.rare-logo { width: 60px; }
+	.abt-card-text h2 { margin-top: 30px; }
 }
 
 @media (max-width: 1599px) {
@@ -425,7 +428,7 @@
 	.about-hero-mask-title { font-size: 322px; height: 260px; }
 	.about-hero-section-title h1 { width: 510px; }
 	.timeline-hr { margin-top: 50px; margin-bottom: 45px; }
-	.abt-timeline-titledate { font-size: 74px; line-height: 82px; }
+	.abt-timeline-content-right span  { font-size: 74px; line-height: 82px; }
 	.abt-timeline-title-left { width: 635px; }
 	.abt-timeline-content-right { width: 400px; }
 	.abt-timeline-content-left { width: 240px; height: 240px; }
@@ -459,13 +462,12 @@
 	.why-rare-point-3 { bottom: 47px; left: 25px; }
 	.why-rare-point-4 { bottom: 79px; right: 23px; }
 
-	.rare-logo { width: 205px; height: auto; object-fit: contain; }
-	.pixels-logo { width: 230px; height: auto; object-fit: contain; }
-	.design-logo { width: 263px; height: auto; object-fit: contain; }
+	.abt-rpd-card span { font-size: 78px; line-height: 70px; }
+	.rare-logo { width: 55px; }
 	.abt-rpd-card { width: 337px; }
 
 	.rpd-pixel-right, .rpd-pixel-left { width: 120px; }
-	.abt-rpd-card-2 { transform: translateY(-165px) }
+	.abt-rpd-card-2 { transform: translateY(-162px) }
 	.abt-rpd-card-2 .abt-card-text { height: max-content; }
 	.abt-rpd-strip { font-size: 30px; line-height: 38px; bottom: -22px; }
 
@@ -565,7 +567,6 @@
 
 	.navbar-hamburger-effect{ width: 45px; height: 45px; }
 	.nav-theme-change-icon{ width: 38px; height: 38px; font-size: 28px; line-height: 28px; }
-	.rare-logo-wrapper{ width: 150px; }
 
 	.why-choose-us-card{ width: 310px; }
 	.why-choose-us-pointer-cards{ gap: 50px; }
@@ -662,7 +663,7 @@
 	.abt-timeline-content-right { width: 345px; }
 	.timeline-dot { right: 300px; }
 	.timeline-hr { margin-bottom: 30px; margin-top: 40px; }
-	.abt-timeline-titledate { font-size: 68px; line-height: 74px; }
+	.abt-timeline-content-right span  { font-size: 68px; line-height: 74px; }
 	.abt-timeline-title-right { width: 370px; }
 	.abt-timeline-title-left h3 { margin-top: 25px; }
 	.abt-timeline-content-left { width: 220px; height: 220px; }
@@ -698,11 +699,9 @@
 	.why-rare-desktop-content { padding-top: 95px; }
 
 	.abt-card-text h2 { font-size: 22px; line-height: 30px; margin: 15px 0; }
-	.rare-logo { height: 80px; }
-	.pixels-logo { width: 215px; height: 80px;  }
-	.design-logo { width: 260px; height: 80px; }
+
 	.abt-rpd-card { width: 287px; }
-	.abt-rpd-card-2 { transform: translateY(-158px); }
+	.abt-rpd-card-2 { transform: translateY(-150px); }
 	.about-rpd-desktop-content-wrapper { padding-top: 155px; }
 
 	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 350px; height: 344px; }
@@ -717,6 +716,10 @@
 
 	.rpd-card-col-3 { transform: translateY(-175px); }
 	.rpd-pixel-right { bottom: -45px; }
+
+	.abt-rpd-card span { font-size: 74px; line-height: 60px; }
+	.rare-logo { width: 50px; }
+	.abt-card-text h2 { margin-top: 25px; }
 
 }
 
@@ -880,7 +883,7 @@
 	.abt-timeline-title-left { width: 521px; }
 	.abt-timeline-title-right { width: 335px; }
 	.abt-timeline-title-left h3 { margin-top: 20px; }
-	.abt-timeline-titledate { font-size: 60px; line-height: 68px; }
+	.abt-timeline-content-right span  { font-size: 60px; line-height: 68px; }
 	.abt-timeline-content-left { width: 200px; height: 200px; }
 	.abt-timeline-content-wrapper { gap: 50px; }
 	.abt-timeline-content-right h6 { margin-top: 20px; }
@@ -902,7 +905,7 @@
 	.abt-timeline-title-left { width: 521px; }
 	.abt-timeline-title-right { width: 335px; }
 	.abt-timeline-title-left h3 { margin-top: 20px; }
-	.abt-timeline-titledate { font-size: 60px; line-height: 68px; }
+	.abt-timeline-content-right span  { font-size: 60px; line-height: 68px; }
 	.abt-timeline-content-left { width: 234px; height: 234px; }
 	.abt-timeline-content-wrapper { gap: 50px; }
 	.abt-timeline-content-right h6 { margin-top: 20px; }
@@ -935,14 +938,15 @@
 
 	.abt-card-text h2 { font-size: 20px; }
 	.abt-rpd-card { width: 260px; }
-	.about-rpd-desktop-content-wrapper { padding-top: 165px; }
-	.rare-logo { width: 170px;   }
-	.pixels-logo { width: 175px;  }
-	.design-logo { width: 215px; }
+	.about-rpd-desktop-content-wrapper { padding-top: 150px; }
+	.abt-rpd-card span { font-size: 66px; line-height: 56px; }
+	.rare-logo { width: 46px; }
+	.rpd-card-title-1 { gap: 5px; }
+	.abt-rpd-card-2 .abt-card-text h2 { margin-bottom: 10px; }
 	.abt-rpd-card-2 .abt-card-text { margin-bottom: 15px; }
 
 	.abt-rpd-card-2 .abt-card-text .abt-card-text h2 { margin-bottom: 10px; }
-	.abt-rpd-card-2 { transform: translateY(-170px); }
+	.abt-rpd-card-2 { transform: translateY(-155px); }
 
 	.abt-life-rpd-desktop-title h2 { margin-bottom: 15px; }
 	
@@ -1281,9 +1285,6 @@
 	.life-at-rpd-desktop-card-wrapper { height: max-content; }
 
 	.rpd-pixel-right { bottom: -50px; }
-	.rare-logo { width: 200px; height: auto; }
-	.pixels-logo { width: 230px; height: auto; }
-	.design-logo { width: 255px; height: auto; }
 
 	.abt-timeline-content-right { width: 305px; }
 
@@ -1294,6 +1295,9 @@
 	.abt-timeline-content-left { width: 292px; height: 292px; }
 
 	.blog-section { overflow: hidden; } 
+	.abt-rpd-card span { font-size: 80px; line-height: 70px; }
+	.rare-logo { width: 60px; }
+	.rpd-card-title-1 { gap: 8px; }
 } 
 
 @media (max-width: 1023px) {
@@ -1367,7 +1371,7 @@
 
 	.abt-timeline-content-left { width: 240px; height: 240px; }
 	.abt-timeline-content-right { width: 300px; }
-	.abt-timeline-titledate { font-size: 54px; line-height: 62px; }
+	.abt-timeline-content-right span { font-size: 54px; line-height: 62px; }
 	.timeline-dot { right: 250px; }
 
 	.text-80 { font-size: 66px; line-height: 74px; margin-bottom: 20px; }
@@ -1443,7 +1447,7 @@
 	.menu-link a .text-18 { margin-bottom: 3px; line-height: 16px; }
 
 	.timeline-hr { margin-top: 30px; }
-	.abt-timeline-titledate { font-size: 50px; line-height: 58px; }
+	.abt-timeline-content-right span  { font-size: 50px; line-height: 58px; }
 	.abt-timeline-content-right { width: 325px; }
 
 	.timeline-dot { right: 280px; }
@@ -1467,6 +1471,8 @@
 	.design-logo { width: 245px; }
 
 	.abt-timeline-content-left {  width: 220px; height: 220px;}
+	.abt-rpd-card span { font-size: 78px; }.rare-logo
+	.rare-logo { width: 57px; }
 }
 
 @media (max-width: 839px) {
@@ -1572,7 +1578,7 @@
 
 	.abt-timeline-title-left h3 { margin-top: 15px; }
 	.timeline-dot { right: 260px; }
-	.abt-timeline-titledate { font-size: 48px; line-height: 56px; }
+	.abt-timeline-content-right span { font-size: 48px; line-height: 56px; }
 
 	.text-80 { font-size: 58px; line-height: 66px; }
 	.abt-mis-vis-title-desktop-left { padding-left: 30px; padding-top: 30px; }
@@ -1583,9 +1589,8 @@
 	.abt-our-values-pointer-right { width: calc( 100% - 66px ); }
 
 	.about-rpd-desktop-content-wrapper { padding: 105px 0; }
-	.rare-logo { width: 150px; }
-	.pixels-logo { width: 160px; }
-	.design-logo { width: 200px; }
+	.abt-rpd-card span { font-size: 76px; line-height: 64px; }
+	.rare-logo { width: 58px; }
 
 	.life-at-rpd-desktop-card-wrapper.desktop { display: none; }
 	.life-at-rpd-desktop-card-wrapper.tablet { display: flex; }
@@ -1603,11 +1608,19 @@
 	.timeline-tablet-dates { display: flex; align-items: center; justify-content: space-between;  }
 	.timeline-tablet-dates span { color: #C6C6C6; opacity: 50%; }
 	.timeline-tablet-dates span.active { color: white; opacity: 100%; }
-	
-	.timeline-hr { margin-bottom: 20px; }
-	.timeline-dot { left: 20px; }
+
+	.abt-time-line-desktop-sticky { height: 250vh; }
+
+	.timeline-hr { position: relative; margin-bottom: 20px; }
+	.timeline-active-hr { position: absolute; height: 1px; top: 0; background-color: var(--primary); }
+	/* .timeline-dot { position: static; } */
+	.timeline-dot { left: 20px; right: auto; background-color: white; opacity: 50%; }
 	.tablet-dot-2 { left: 50%; transform: translateX(-50%); background-color: white; opacity: 50%; }
 	.tablet-dot-3 { left: calc(100% - 35px); background-color: white; opacity: 50%; }
+
+	.timeline-dot.active { background-color: var(--primary); opacity: 100%; }
+	.tablet-dot-2.active { background-color: var(--primary); opacity: 100%; }
+	.tablet-dot-3.active { background-color: var(--primary); opacity: 100%; }
 
 	.timeline-tablet-image-wrapper { width: 250px; height: 250px; }
 	.timeline-tablet-image-wrapper img{ width: 100%; height: 100%; object-fit: contain; }
@@ -1735,10 +1748,13 @@
 
 	.rpd-pixel-right, .rpd-pixel-left { width: 100px; }
 
-	.abt-rpd-card-2 .abt-card-text h2 { margin: 15px 0; }
-	.abt-card-text h2 { margin: 15px 0; }
+	.abt-rpd-card-2 .abt-card-text h2 { margin: 25px 0 15px 0;  }
+	.abt-card-text h2 { margin: 25px 0 15px 0; }
 
 	.about-rpd-desktop-content-wrapper { padding: 95px 0; }
+
+	.abt-rpd-card span { font-size: 70px; line-height: 60px; }
+	.rare-logo { width: 50px; }
 }
 
 @media (max-width: 639px) {
@@ -1840,6 +1856,7 @@
 	.rpd-card-8 { height: 170px; }
 
 	.life-at-rpd-desktop-card-wrapper { margin-top: 30px; }
+	.abt-rpd-card span { font-size: 68px; }
 }
 
 @media (max-width: 575px) {
@@ -2023,8 +2040,6 @@
 	.why-rare-pointers span { margin-top: 7px; }
 	.why-rare-desktop-content { gap: 25px; margin-top: 35px; }
 
-	.rare-logo { width: 150px; }
-	.design-logo { width: 180px; }
 
 	.rpd-card-1, .rpd-card-6, .rpd-card-7 { height: 208px; }
 	.rpd-card-2 { height: 183px; }
@@ -2034,4 +2049,7 @@
 	.rpd-card-8 { height: 139px; }
 
 	.teams-section-title { width: 300px; }
+
+	.abt-rpd-card span { font-size: 62px; line-height: 52px; }
+	.rare-logo { width: 48px; }
 }

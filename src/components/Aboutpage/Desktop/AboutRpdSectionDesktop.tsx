@@ -11,7 +11,10 @@ export default function AboutRpdSectionDesktop() {
                 <div className="container-sm">
                     <div className="about-rpd-desktop-content-wrapper">
                         <div className="abt-rpd-card abt-rpd-card-1">
-                            <Image className="rare-logo" src="/images/aboutpage/about-rpd/rare.svg" alt="rare" width={247} height={100}></Image>
+                            <div className="rpd-card-title-1">
+                                <Image className="rare-logo" src="/images/aboutpage/about-rpd/rare.svg" alt="rare" width={55} height={68}></Image>
+                                <span className="text-pop-sb text-white">are</span>
+                            </div>
 
                             <div className="abt-card-text">
                                 <h2 className="text-sb h5 text-white">Results Before Recognition</h2>
@@ -21,7 +24,8 @@ export default function AboutRpdSectionDesktop() {
                         </div>
 
                         <div className="abt-rpd-card abt-rpd-card-2">
-                            <Image className="pixels-logo" src="/images/aboutpage/about-rpd/pixels.svg" alt="rare" width={281} height={100}></Image>
+                            {/* <Image className="pixels-logo" src="/images/aboutpage/about-rpd/pixels.svg" alt="rare" width={281} height={100}></Image> */}
+                            <span className="text-pop-sb text-white">Pixels</span>
 
                             <div className="abt-card-text">
                                 <h2 className="text-sb h5 text-white">Precision in Every Detail</h2>
@@ -31,7 +35,8 @@ export default function AboutRpdSectionDesktop() {
                         </div>
 
                         <div className="abt-rpd-card abt-rpd-card-3">
-                            <Image className="design-logo" src="/images/aboutpage/about-rpd/design.svg" alt="rare" width={347} height={100}></Image>
+                            {/* <Image className="design-logo" src="/images/aboutpage/about-rpd/design.svg" alt="rare" width={347} height={100}></Image> */}
+                            <span className="text-pop-sb text-white">Design</span>
 
                             <div className="abt-card-text">
                                 <h2 className="text-sb h5 text-white">Direction Before Decoration</h2>
