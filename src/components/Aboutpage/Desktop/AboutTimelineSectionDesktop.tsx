@@ -67,15 +67,25 @@ export default function AboutTimelineSectionDesktop() {
                 onUpdate: (self) => {
                     const progress = self.progress;
 
+                    gsap.set(".tablet-dot-1", {
+                        left: `${2 + Math.min(progress / 0.33, 1) * 72}%`,
+                    });
+
+                    gsap.set(".tablet-dot-2", {
+                        left: `${2 + Math.max(0, Math.min((progress - 0.33) / 0.33, 1)) * 72}%`,
+                    });
+
+                    gsap.set(".tablet-dot-3", {
+                        left: `${2 + Math.max(0, Math.min((progress - 0.66) / 0.34, 1)) * 72}%`,
+                    });
+
                     const index = Math.min(
                         Math.floor(progress * timelineData.length),
                         timelineData.length - 1
                     );
 
-                    setActiveIndex((prev) =>
-                        prev !== index ? index : prev
-                    );
-                },
+                    setActiveIndex(index);
+                }
             });
 
             return () => trigger.kill();
@@ -126,21 +136,6 @@ export default function AboutTimelineSectionDesktop() {
     }, []);
 
     useEffect(() => {
-        gsap.fromTo(
-            ".timeline-date-1",
-            {
-                x: 0,
-                width: 100,
-                height: 40
-            },
-            {
-                x: 200,
-                height: 100,
-                right: 300,
-                duration: 3
-            }
-        );
-
         gsap.fromTo(
             contentRef.current,
             {
@@ -215,14 +210,9 @@ export default function AboutTimelineSectionDesktop() {
 
                             <div ref={tabletLineRef} className="timeline-active-hr"></div>
 
-                            <div className="timeline-dates-desktop">
-                                <span className="timeline-date-1 timeline-date-active"></span>
-                                <span className="timeline-date-2"></span>
-                                <span className="timeline-date-3"></span>
-                            </div>
-                            {/* <div className={`timeline-dot tablet-dot-1 ${activeIndex >= 0 ? "active" : ""}`}></div> */}
-                            {/* <div className={`timeline-dot tablet-dot-2 ${activeIndex >= 1 ? "active" : ""}`}></div> */}
-                            {/* <div className={`timeline-dot tablet-dot-3 ${activeIndex >= 2 ? "active" : ""}`}></div> */}
+                            <div className={`timeline-dot tablet-dot-1 ${activeIndex >= 0 ? "active" : ""}`}></div>
+                            <div className={`timeline-dot tablet-dot-2 ${activeIndex >= 1 ? "active" : ""}`}></div>
+                            <div className={`timeline-dot tablet-dot-3 ${activeIndex >= 2 ? "active" : ""}`}></div>
                         </div>
 
                         <div className="abt-timeline-desktop-wrapper">

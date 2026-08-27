@@ -651,8 +651,8 @@ body.menu-open {
 
 .time-line-hr-wrapper { position: relative; }
 
-.timeline-dot { width: 12px; height: 12px; border-radius: 50%; background-color: var(--primary); position: absolute; top: -5px; left: 2%; }
-.timeline-dot.active { left: 74%; }
+.timeline-dot { width: 12px; height: 12px; border-radius: 50%; background-color: rgba(198, 198, 198, 0.5); position: absolute; top: -5px; left: 2%; }
+.timeline-dot.active { left: red; }
 .abt-timeline-tablet { display: none; }
 
 
@@ -827,11 +827,13 @@ body.menu-open {
 .rpd-card-title-1 { display: flex; align-items: flex-end; gap: 10px; }
 
 .abt-time-line-desktop-sticky { height: 400vh; }
-.abt-timeline-desktop-inner { position: sticky; top: 100px; height: max-content; overflow: hidden; }
+.abt-timeline-desktop-inner { position: sticky; top: 100px; height: max-content; }
 
 
-.timeline-date-1 { width: 100px; height: 40px; background-color: red; position: absolute; z-index: 4; }
-.timeline-date-2 { width: 100px; height: 40px; background-color: green; position: absolute; z-index: 3; }
-.timeline-date-3 { width: 100px; height: 40px; background-color: yellow; position: absolute; z-index: 2; }
+.timeline-date-1 { width: 200px; height: max-content; background-color: var(--section-bg); position: absolute; z-index: 4; top: 0; }
+.timeline-date-2 { width: 200px; height: max-content; background-color: var(--section-bg);  position: absolute; z-index: 3; top: 0;  }
+.timeline-date-3 { width: 200px; height: max-content; background-color: var(--section-bg);  position: absolute; z-index: 2; top: 0;  }
 
 /* .timeline-date-1.timeline-date-active { width: 200px; height: 100px; right: 300px; } */
+
+/* .abt-timeline-content-left { position: relative; z-index: 30; } */
