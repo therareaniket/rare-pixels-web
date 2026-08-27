@@ -27,7 +27,8 @@ export default function AboutSectionDesktop() {
 
                             <div className="hm-abt-card-wrapper">
                                 <div className="hm-abt-logo-left">
-                                    <PixelImageReveal src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" width={276} height={350} pixelSize={18} />
+                                    {/* <PixelImageReveal src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" width={273} height={349} pixelSize={18} /> */}
+                                    <PixelImageReveal src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" pixelSize={18} />
                                 </div>
 
                                 <div className="hm-abt-pointers-right">

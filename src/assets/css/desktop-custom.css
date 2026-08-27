@@ -237,7 +237,7 @@ body.menu-open {
 .hm-abt-card{ display: flex; gap: 10px; padding: 20px; width: 396px; }
 .hm-abt-card, .hm-abt-card-mobile { border: 1px solid rgba(132, 144, 132, 0.1); backdrop-filter: blur(6px); }
 .hm-abt-card-title{ width: 338px; }
-.hm-abt-logo-left{ margin-left: 65px; width: 273px; height: 349px; object-fit: contain; }
+.hm-abt-logo-left { margin-left: 65px; width: 273px; height: 349px; object-fit: contain; }
 .hm-abt-pixel{ width: 8px; height: 8; border-radius: 1px; background-color: #ED0180; margin-top: 12px; }
 .hm-abt-card-title .h6{ margin-bottom: 10px; }
 .hm-abt-card-title p{ display: flex; flex-direction: column; gap: 20px; }

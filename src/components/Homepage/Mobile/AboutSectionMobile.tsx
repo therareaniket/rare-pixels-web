@@ -2,7 +2,7 @@
 
 const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 
-import GlassEffect from "@/components/global/LiquideGlass";
+import PixelImageReveal from "@/components/global/PixelImageReveal";
 import Image from "next/image";
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
@@ -23,7 +23,8 @@ export default function AboutSectionMobile() {
                             </p>
 
                             <div className="hm-abt-site-logo">
-                                <Image src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" width={197} height={250}></Image>
+                                {/* <Image src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" width={197} height={250}></Image> */}
+                                <PixelImageReveal src={`${CDN_URL}/images/homepage/about/rare-logo-white.png`} alt="rare-logo" pixelSize={15} />
                             </div>
 
                             <div className="hm-abt-cards-wrapper">
