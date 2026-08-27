@@ -49,7 +49,7 @@ export default function Home() {
 
 				{/* DESKTOP */}
 				<div className="hidden min-[480px]:block">
-					{/* <TestimonialSectionDesktop /> */}
+					<TestimonialSectionDesktop />
 					<AboutSectionDesktop />
 					<ServicesSectionDesktop />
 					<IndustriesSectionDesktop />

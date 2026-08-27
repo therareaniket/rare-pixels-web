@@ -3,8 +3,30 @@
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function AboutOurValuesSectionDesktop() {
+    const pointerWrapperRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const pointerWrapper = pointerWrapperRef.current;
+        if (!pointerWrapper) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0 }
+        );
+
+        observer.observe(pointerWrapper);
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
             <section className="section">
@@ -18,8 +40,8 @@ export default function AboutOurValuesSectionDesktop() {
                             <Image className="our-values-image" src="/images/aboutpage/abt-our-values/our-values.webp" alt="our-values" width={692} height={458}></Image>
                         </div>
 
-                        <div className="abt-our-values-left">
-                            <div className="abt-our-values-pointer">
+                        <div ref={pointerWrapperRef} className="abt-our-values-left">
+                            <div className={`abt-our-values-pointer ${isVisible ? "is-visible" : ""}`}>
                                 <div className="abt-our-values-pointer-left">
                                     <span>
                                         <Image src="/images/aboutpage/abt-our-values/creative-1.svg" alt="our-values" width={24} height={24}></Image>
@@ -32,9 +54,9 @@ export default function AboutOurValuesSectionDesktop() {
                                 </div>
                             </div>
 
-                            <div className="abt-our-values-hr"></div>
+                            <div className={`abt-our-values-hr ${isVisible ? "is-visible" : ""}`}></div>
 
-                            <div className="abt-our-values-pointer">
+                            <div className={`abt-our-values-pointer ${isVisible ? "is-visible" : ""}`}>
                                 <div className="abt-our-values-pointer-left">
                                     <span>
                                         <Image src="/images/aboutpage/abt-our-values/strategic-1.svg" alt="our-values" width={24} height={24}></Image>
@@ -47,9 +69,9 @@ export default function AboutOurValuesSectionDesktop() {
                                 </div>
                             </div>
 
-                            <div className="abt-our-values-hr"></div>
+                            <div className={`abt-our-values-hr ${isVisible ? "is-visible" : ""}`}></div>
 
-                            <div className="abt-our-values-pointer">
+                            <div className={`abt-our-values-pointer ${isVisible ? "is-visible" : ""}`}>
                                 <div className="abt-our-values-pointer-left">
                                     <span>
                                         <Image src="/images/aboutpage/abt-our-values/communications-1.svg" alt="our-values" width={24} height={24}></Image>
@@ -62,9 +84,9 @@ export default function AboutOurValuesSectionDesktop() {
                                 </div>
                             </div>
 
-                            <div className="abt-our-values-hr"></div>
+                            <div className={`abt-our-values-hr ${isVisible ? "is-visible" : ""}`}></div>
 
-                            <div className="abt-our-values-pointer">
+                            <div className={`abt-our-values-pointer ${isVisible ? "is-visible" : ""}`}>
                                 <div className="abt-our-values-pointer-left">
                                     <span>
                                         <Image src="/images/aboutpage/abt-our-values/ownership-1.svg" alt="our-values" width={24} height={24}></Image>

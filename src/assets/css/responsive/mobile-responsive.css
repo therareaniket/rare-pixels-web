@@ -445,7 +445,19 @@
     .abt-mis-vis-quote { position: absolute; top: -30px; }
 
     .abt-vis-mobile { margin-top: 20px; margin-bottom: 14px; }
-    .abt-our-values-pointer-mobile { display: flex; align-items: flex-start; justify-content: space-between; } 
+    .abt-our-values-pointer-mobile { display: flex; align-items: flex-start; justify-content: space-between; opacity: 0; transform: perspective(700px) translateY(-28px) rotateX(72deg); transform-origin: top center; transition: opacity .7s ease, transform .9s cubic-bezier(.22, 1, .36, 1); }
+    .abt-our-values-pointer-mobile:nth-of-type(1) { transition-delay: 1s; }
+    .abt-our-values-pointer-mobile:nth-of-type(3) { transition-delay: 2s; }
+    .abt-our-values-pointer-mobile:nth-of-type(5) { transition-delay: 3s; }
+    .abt-our-values-pointer-mobile:nth-of-type(7) { transition-delay: 4s; }
+    .abt-our-values-pointer-mobile.is-visible { opacity: 1; transform: perspective(700px) translateY(0) rotateX(0); }
+    .abt-our-values-hr { width: 0; transition: width 4s ease 4s; }
+    .abt-our-values-hr.is-visible { width: 100%; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .abt-our-values-pointer-mobile { opacity: 1; transform: none; transition: none; }
+        .abt-our-values-hr { width: 100%; transition: none; }
+    }
 
     .abt-our-values-pointer-left { width: 40px; height: 40px; }
     .our-values-image { width: 100%; margin: 20px 0 40px 0; }

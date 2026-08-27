@@ -1327,6 +1327,9 @@
 	.abt-rpd-card span { font-size: 80px; line-height: 70px; }
 	.rare-logo { width: 60px; }
 	.rpd-card-title-1 { gap: 8px; }
+
+	.why-rare-desktop-tree-image { overflow: hidden; }
+    .tree-reveal { clip-path: inset(100% 0 0 0); }
 } 
 
 @media (max-width: 1023px) {

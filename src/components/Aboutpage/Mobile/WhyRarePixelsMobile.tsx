@@ -19,27 +19,30 @@ export default function WhyRarePixelsMobile() {
                 clipPath: "inset(0% 0 0 0)",
                 ease: "none",
                 scrollTrigger: {
-                    trigger: ".why-rare-mobile-sticky",
-                    start: "top 10%",
-                    end: "top -15%",
-                    scrub: true,
+                    trigger: ".why-rare-mobile-tree",
+                    start: "top 80%",
+                    end: "bottom -15%",
+                    // scrub: true,
                 },
             }
         );
 
         gsap.fromTo(
-            ".why-rare-point",
+            ".why-rare-mobile-sticky .why-rare-point",
             {
-                y: 100,
+                y: 200,
+                opacity: 0,
             },
             {
                 y: 0,
-                ease: "none",
+                opacity: 1,
+                duration: 3,
+                stagger: 0.5,
+                ease: "power2.out",
                 scrollTrigger: {
-                    trigger: ".abt-why-rare-desktop-pointers",
-                    start: "top 10%",
-                    end: "top -15%",
-                    // scrub: true,
+                    trigger: ".why-rare-mobile-sticky .abt-why-rare-desktop-pointers",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
                 },
             }
         );
