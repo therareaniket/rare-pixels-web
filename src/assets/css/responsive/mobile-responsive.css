@@ -451,7 +451,7 @@
     .abt-our-values-pointer-mobile:nth-of-type(5) { transition-delay: 3s; }
     .abt-our-values-pointer-mobile:nth-of-type(7) { transition-delay: 4s; }
     .abt-our-values-pointer-mobile.is-visible { opacity: 1; transform: perspective(700px) translateY(0) rotateX(0); }
-    .abt-our-values-hr { width: 0; transition: width 4s ease 4s; }
+    .abt-our-values-hr { width: 0; transition: width 3.4s ease 3.4s; }
     .abt-our-values-hr.is-visible { width: 100%; }
 
     @media (prefers-reduced-motion: reduce) {

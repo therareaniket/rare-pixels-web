@@ -64,7 +64,6 @@ export default function AboutHeroSectionDesktop() {
                             </foreignObject>
                         </svg>
                     </div>
-
                 </div>
             </section>
         </>

@@ -40,7 +40,9 @@ export default function AboutTimelineSectionDesktop() {
     const imageRef = useRef(null);
     const tabletYearsRef = useRef<HTMLSpanElement[]>([]);
     const tabletLineRef = useRef<HTMLDivElement>(null);
-    const dotRef = useRef<HTMLDivElement>(null);
+    const desktopDotRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const desktopTargetRef = useRef<HTMLDivElement>(null);
+    const movingDotRef = useRef<HTMLDivElement>(null);
 
     const updateTabletYear = (index: number) => {
         tabletYearsRef.current.forEach((year) => {
@@ -52,43 +54,98 @@ export default function AboutTimelineSectionDesktop() {
         setActiveIndex(index);
     };
 
+
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
         const mm = gsap.matchMedia();
 
         mm.add("(min-width: 840px)", () => {
+            const firstDot = desktopDotRefs.current[0];
+            const secondDot = desktopDotRefs.current[1];
+            const thirdDot = desktopDotRefs.current[2];
+
+            if (!firstDot || !secondDot || !thirdDot) {
+                return;
+            }
+
+            let travelDistance = 0;
+
+            const calculateTravelDistance = () => {
+                gsap.set([secondDot, thirdDot], {
+                    x: 0,
+                });
+
+                const startRect = secondDot.getBoundingClientRect();
+                const endRect = firstDot.getBoundingClientRect();
+
+                travelDistance = endRect.left - startRect.left;
+            };
+
+            calculateTravelDistance();
+
+            const updateDots = (progress: number) => {
+                const secondDotProgress = gsap.utils.clamp(
+                    0,
+                    1,
+                    progress / 0.38
+                );
+
+                const thirdDotProgress = gsap.utils.clamp(
+                    0,
+                    1,
+                    (progress - 0.38) / (0.76 - 0.38)
+                );
+
+                gsap.set(secondDot, {
+                    x: travelDistance * secondDotProgress,
+                });
+
+                gsap.set(thirdDot, {
+                    x: travelDistance * thirdDotProgress,
+                });
+            };
+
             const trigger = ScrollTrigger.create({
                 trigger: sectionRef.current,
                 start: "top top",
                 end: "+=2000",
                 scrub: 2,
+                invalidateOnRefresh: true,
+
+                onRefresh: (self) => {
+                    calculateTravelDistance();
+                    updateDots(self.progress);
+                },
 
                 onUpdate: (self) => {
                     const progress = self.progress;
 
-                    gsap.set(".tablet-dot-1", {
-                        left: `${2 + Math.min(progress / 0.33, 1) * 72}%`,
-                    });
+                    updateDots(progress);
 
-                    gsap.set(".tablet-dot-2", {
-                        left: `${2 + Math.max(0, Math.min((progress - 0.33) / 0.33, 1)) * 72}%`,
-                    });
+                    let index = 0;
 
-                    gsap.set(".tablet-dot-3", {
-                        left: `${2 + Math.max(0, Math.min((progress - 0.66) / 0.34, 1)) * 72}%`,
-                    });
+                    if (progress >= 0.76) {
+                        index = 2;
+                    } else if (progress >= 0.38) {
+                        index = 1;
+                    }
 
-                    const index = Math.min(
-                        Math.floor(progress * timelineData.length),
-                        timelineData.length - 1
+                    setActiveIndex((previousIndex) =>
+                        previousIndex !== index
+                            ? index
+                            : previousIndex
                     );
-
-                    setActiveIndex(index);
-                }
+                },
             });
 
-            return () => trigger.kill();
+            return () => {
+                trigger.kill();
+
+                gsap.set([secondDot, thirdDot], {
+                    clearProps: "transform",
+                });
+            };
         });
 
         mm.add("(max-width: 839px)", () => {
@@ -109,6 +166,13 @@ export default function AboutTimelineSectionDesktop() {
                             duration: 1,
                             overwrite: true,
                         });
+
+                        gsap.to(movingDotRef.current, {
+                            left: "6%",
+                            duration: 1,
+                            overwrite: true,
+                        });
+
                     } else if (progress < 0.66) {
                         updateTabletYear(1);
 
@@ -117,16 +181,30 @@ export default function AboutTimelineSectionDesktop() {
                             duration: 1,
                             overwrite: true,
                         });
+
+                        gsap.to(movingDotRef.current, {
+                            left: "50%",
+                            duration: 1,
+                            overwrite: true,
+                        });
+
                     } else {
                         updateTabletYear(2);
 
                         gsap.to(tabletLineRef.current, {
-                            width: "100%",
+                            width: "94%",
+                            duration: 1,
+                            overwrite: true,
+                        });
+
+                        gsap.to(movingDotRef.current, {
+                            left: "94%",
                             duration: 1,
                             overwrite: true,
                         });
                     }
-                },
+                }
+
             });
 
             return () => trigger.kill();
@@ -208,17 +286,22 @@ export default function AboutTimelineSectionDesktop() {
                         <div className="time-line-hr-wrapper">
                             <div className="timeline-hr"></div>
 
-                            <div ref={tabletLineRef} className="timeline-active-hr"></div>
+                            <div ref={tabletLineRef} className="timeline-active-hr" ></div>
 
-                            <div className={`timeline-dot tablet-dot-1 ${activeIndex >= 0 ? "active" : ""}`}></div>
-                            <div className={`timeline-dot tablet-dot-2 ${activeIndex >= 1 ? "active" : ""}`}></div>
-                            <div className={`timeline-dot tablet-dot-3 ${activeIndex >= 2 ? "active" : ""}`}></div>
+                            <div ref={movingDotRef} className="timeline-dot-active" ></div>
+
+                            <div ref={desktopTargetRef} className="desktop-dot-target" ></div>
+                            <div ref={(el) => { desktopDotRefs.current[0] = el; }} className="timeline-dot desktop-timeline-dot active" ></div>
+                            <div ref={(el) => { desktopDotRefs.current[1] = el; }} className={`timeline-dot desktop-timeline-dot ${activeIndex >= 1 ? "reached" : ""}`} ></div>
+                            <div ref={(el) => { desktopDotRefs.current[2] = el; }} className={`timeline-dot desktop-timeline-dot ${activeIndex >= 2 ? "reached" : ""}`} ></div>
                         </div>
 
                         <div className="abt-timeline-desktop-wrapper">
                             <div className="abt-timeline-desktop-date">
                                 <span className="h3 abt-timeline-titledate text-sb active">
-                                    {timelineData[(activeIndex + 1) % timelineData.length].year}
+                                    {activeIndex < timelineData.length - 1
+                                        ? timelineData[activeIndex + 1].year
+                                        : null}
                                 </span>
                             </div>
 
