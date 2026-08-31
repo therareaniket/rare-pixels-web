@@ -47,6 +47,8 @@
 .btn-bg-primary{ background-color: #ED0180; }
 .section-bg-blue{ background-color: var(--section-bg); }
 
+.bg-light-black { background-color: #01030D; }
+
 .bg-purple-shade{ background-color: #D5D8E2; }
 .bg-light-yellow{ background-color: #FBF9E9; }
 .bg-light-pink{ background-color: #FCD4E9; }
