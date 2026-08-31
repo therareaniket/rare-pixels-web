@@ -75,21 +75,38 @@ export default function AboutRpdSectionDesktop() {
             .to(".abt-rpd-card", {
                 width: css.getPropertyValue("--card-final-width")
             }, 2)
+            .to(".abt-rpd-card", {
+                width: "100%"
+            }, 2)
 
             .fromTo(".abt-rpd-card-1",
                 {
-                    x: css.getPropertyValue("--card-1-start-x")
+                    x: css.getPropertyValue("--card-1-start-x"),
+                    y: css.getPropertyValue("--card-1-start-y")
                 },
                 {
-                    x: css.getPropertyValue("--card-1-x")
+                    x: css.getPropertyValue("--card-1-x"),
+                    y: css.getPropertyValue("--card-1-y")
                 }, 2)
+
+            // .fromTo(".abt-rpd-card-2",
+            //     {
+            //         x: css.getPropertyValue("--card-2-start-x"),
+            //         y: css.getPropertyValue("--card-2-start-y")
+            //     },
+            //     {
+            //         x: css.getPropertyValue("--card-2-x"),
+            //         y: css.getPropertyValue("--card-2-y")
+            //     }, 2)
 
             .fromTo(".abt-rpd-card-3",
                 {
-                    x: css.getPropertyValue("--card-3-start-x")
+                    x: css.getPropertyValue("--card-3-start-x"),
+                    y: css.getPropertyValue("--card-3-start-y")
                 },
                 {
-                    x: css.getPropertyValue("--card-3-x")
+                    x: css.getPropertyValue("--card-3-x"),
+                    y: css.getPropertyValue("--card-3-y")
                 }, 2)
 
             .fromTo(".abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text",
@@ -110,7 +127,7 @@ export default function AboutRpdSectionDesktop() {
                 {
                     opacity: 1,
                     y: 0
-                }, 3);
+                }, 3)
 
     }, []);
 

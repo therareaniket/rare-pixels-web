@@ -1013,6 +1013,27 @@
 
 @media (max-width: 1199px) {
 
+    :root{
+		--card-1-start-width: 50px;
+    	--card-2-start-width: 50px;
+    	--card-3-start-width: 55px;
+
+		--card-1-width: 220px;
+    	--card-2-width: 260px;
+    	--card-3-width: 290px;
+
+        --card-1-x: 0px;
+        --card-2-x: -265px;
+        --card-3-x: -530px;
+
+        --card-1-y: -450px;
+        --card-3-y: 390px;
+
+		--card-final-width: 403px;
+
+		--text-up-start: 80px;
+    }
+
 	.container { max-width: calc(800px + 36px); }  
 	.container-sm { max-width: calc(800px + 36px); }
 
@@ -1330,6 +1351,9 @@
 	.abt-card-text { height: max-content; }
 	.abt-rpd-card-2 .abt-card-text { margin-bottom: 0; }
 	.abt-rpd-card-2 .abt-card-text h2 { margin: 20px 0; } */
+
+	.abt-rpd-card-2 { flex-direction: column; }
+	.about-rpd-desktop-content-wrapper { padding-top: 0; }
 
 	.rpd-card-col-1 { padding-top: 0; }
 	.rpd-card-col-3 { transform: translateY(0); }
