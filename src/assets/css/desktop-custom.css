@@ -1,4 +1,36 @@
-:root { --project-card-width: 1000px; --project-card-gap: 40px; }
+:root { 
+    --project-card-width: 1000px; 
+    --project-card-gap: 40px; 
+
+
+    /* Initial */
+    --card-1-start-width: 60px;
+    --card-2-start-width: 58px;
+    --card-3-start-width: 62px;
+
+    --card-2-start-mt: 2px;
+    --card-3-start-mt: 8px;
+
+    --card-1-start-x: 0px;
+    --card-3-start-x: 0px;
+
+    /* Stage */
+    --card-1-width: 220px;
+    --card-2-width: 260px;
+    --card-3-width: 320px;
+
+    --card-2-mt: 0px;
+    --card-3-mt: 6px;
+
+    --card-final-width: 403px;
+
+    --card-1-x: -100px;
+    --card-3-x: 100px;
+
+    --text-up-start: -80px;
+    --text-down-start: 80px;
+
+}
 
 
 .text-white { color: white; }
@@ -775,11 +807,11 @@ body.menu-open {
 
 .card-reveal { position: absolute; inset: 0; background-color: #040e36; z-index: 10; }
 
-.about-rpd-desktop-content-wrapper { display: flex; align-items: flex-start; justify-content: space-between; padding-top: 192px; }
+.about-rpd-desktop-content-wrapper { display: flex; align-items: flex-start; padding-top: 192px; }
 .abt-rpd-card { display: flex; flex-direction: column; width: 403px; }
 
 .abt-rpd-card-2 { flex-direction: column-reverse; }
-.abt-card-text { height: 162px; }
+.abt-card-text { height: 165px; }
 .abt-card-text h2 { margin: 20px 0; }
 .abt-rpd-card-2 { transform: translateY(-180px); }
 .abt-rpd-card-2 .abt-card-text h2 { margin-top: 0; margin-bottom: 20px; }
@@ -883,3 +915,14 @@ body.menu-open {
     mix-blend-mode: screen;    
     /* margin-top: 200px; */
 }
+
+.rpd-pixel-right, .rpd-pixel-left { display: none; }
+
+.abt-rpd-section-desktop { height: 700vh; position: relative; }
+.abt-rpd-inner { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden;   }
+
+.about-rpd-desktop-content-wrapper { scale: 4; }
+.abt-rpd-card-1 { width: 60px; overflow: hidden; }
+.abt-rpd-card-2 { width: 58px; overflow: hidden; margin-top: 2px; }
+.abt-rpd-card-3 { width: 62px; overflow: hidden; margin-top: 8px; }
+.abt-card-text{ opacity: 0; }

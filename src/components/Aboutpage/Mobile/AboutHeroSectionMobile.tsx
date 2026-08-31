@@ -65,9 +65,9 @@ export default function AboutHeroSectionMobile() {
                         </svg>
                     </div> */}
 
-                                        <div className="about-video-text-practice">
+                    <div className="about-video-text-practice">
                         <div className="town">
-                            <video autoPlay muted loop>
+                            <video autoPlay playsInline muted loop>
                                 <source src="/images/aboutpage/about-hero/rare-second-anniversary.mp4" />
                             </video>
                             <h2 className="text-extra-bold">ABOUT US</h2>

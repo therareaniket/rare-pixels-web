@@ -7,7 +7,25 @@
 
 @media (max-width: 1799px) {
 
-	:root { --project-card-width: 900px; --project-card-gap: 40px; }
+	:root { 
+		--project-card-width: 900px; 
+		--project-card-gap: 40px;  
+
+		--card-2-start-mt: 0;
+    	--card-3-start-mt: 0;
+
+		--card-2-mt: 0px;
+    	--card-3-mt: 0px;
+
+		--card-2-start-width: 50px;
+    	--card-3-start-width: 62px;
+
+    	--card-2-width: 245px;
+
+		--card-final-width: 365px;
+		--card-1-x: 0px;
+    	--card-3-x: 0px;
+	}
 
 	.container { max-width: calc(1360px + 36px); }   
 	.section   { padding: 100px 0px; }
@@ -197,7 +215,7 @@
 	.why-rare-point-4 { bottom: 94px; right: 33px; }
 
 	.abt-card-text { height: 170px; }
-	.abt-rpd-card{ width: 365px; }
+	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 190px; }
 
 	.abt-rpd-card-2 { transform: translateY(-190px); }
 
@@ -221,7 +239,14 @@
 }
 
 @media (max-width: 1599px) {
-	:root { --project-card-width: 800px; --project-card-gap: 50px; }
+	:root { 
+		--project-card-width: 800px; 
+		--project-card-gap: 50px; 
+
+    	--card-2-start-width: 47px;
+    	--card-3-start-width: 55px;
+
+	}
 	.project-list { height: 430px; }
 
 	.container { max-width: calc(1248px + 36px); }   
@@ -469,8 +494,7 @@
 	.abt-rpd-card { width: 337px; }
 
 	.rpd-pixel-right, .rpd-pixel-left { width: 120px; }
-	.abt-rpd-card-2 { transform: translateY(-162px) }
-	.abt-rpd-card-2 .abt-card-text { height: max-content; }
+
 	.abt-rpd-strip { font-size: 30px; line-height: 38px; bottom: -22px; }
 
 	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 402px; height: 392px; }
