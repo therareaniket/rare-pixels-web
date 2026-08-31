@@ -102,7 +102,7 @@ export default function TestimonialSectionDesktop() {
                     <div className="hm-testimonial-txt-wrapper">
                         <div className="hm-testimonial-left-text">
                             <h2 className="text-sb">Proof Over Promises</h2>
-                            <p className="text-18 text-rg text-grey">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
+                            <p className="text-18 text-rg">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
                         </div>
                     </div>
 

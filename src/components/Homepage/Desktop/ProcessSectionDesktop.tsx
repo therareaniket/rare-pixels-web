@@ -105,8 +105,9 @@ export default function ProjectsSectionDesktop() {
                         start: "top top",
                         end: "+=6000",
                         scrub: 2,
-                        pin: true,
-                        anticipatePin: 1,
+                        // pin: true,
+                        // anticipatePin: 1,
+                        // refreshPriority: 1,
                     },
                 });
 
@@ -223,9 +224,9 @@ export default function ProjectsSectionDesktop() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="section section-yellow-background process-section-sticky">
+        <section ref={sectionRef} className="process-section-sticky">
             <div className="process-section-inner">
-                <div ref={containerRef} className="container-sm">
+                <div ref={containerRef} className=" section container-sm">
                     <div ref={titleRef} className="process-section-title active">
                         <h2 className="text-sb">Work Process We Follow</h2>
                         <p className="text-18 text-rg">

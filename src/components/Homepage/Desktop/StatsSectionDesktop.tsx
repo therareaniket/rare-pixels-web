@@ -2,6 +2,7 @@
 
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import AnimatedRadialRing from "@/components/global/AnimatedRadialRing";
 import Image from "next/image";
 
 const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
@@ -12,24 +13,25 @@ export default function StatsSectionDesktop() {
 
     return (
         <>
-            <section className="section section-bg-blue hm-stats-section">
+            <section className="section hm-stats-section">
                 <div className="container">
                     <div className="stats-wrapper stats-wrapper-for-desktop">
                         <div className="stats-card-row-1">
                             <div className="stats-card-1 stats-card">
-                                <h2 className="text-sb text-white">Impact</h2>
+                                <h2 className="text-sb  ">Impact</h2>
 
-                                <p className="text-18 text-rg text-white">Behind every number is a promise we&apos;ve kept.
+                                <p className="text-18 text-rg  ">Behind every number is a promise we&apos;ve kept.
                                     From long-term partnerships to measurable outcomes, these milestones reflect the trust we&apos;ve earned and the impact we&apos;ve created.
                                 </p>
                             </div>
 
                             <div className="stats-card-2 stats-card">
-                                <h3 className="h1 text-sb text-white">27+</h3>
+                                <h3 className="h1 text-sb  ">27+</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Specialised Solutions Crafted</p>
 
                                 <div className="stats-element-art-board">
                                     <Image src={`${CDN_URL}/images/homepage/stats/specialized-solution-crafted.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image>
+                                    {/* <AnimatedRadialRing width={200} height={200} /> */}
                                 </div>
 
                                 <p className="text-18 text-rg text-light-grey">Every solution is purpose-built.
@@ -38,7 +40,7 @@ export default function StatsSectionDesktop() {
                             </div>
 
                             <div className="stats-card-3 stats-card">
-                                <h3 className="h1 text-sb text-white">8+</h3>
+                                <h3 className="h1 text-sb  ">8+</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Industries Transformed Globally</p>
 
                                 <div className="stats-element-art-board">
@@ -51,7 +53,7 @@ export default function StatsSectionDesktop() {
                             </div>
 
                             <div className="stats-card-4 stats-card">
-                                <h3 className="h1 text-sb text-white">98%</h3>
+                                <h3 className="h1 text-sb  ">98%</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Client Trust Retained</p>
 
                                 <div className="stats-element-art-board">
@@ -65,7 +67,7 @@ export default function StatsSectionDesktop() {
 
                         <div className="stats-card-row-2">
                             <div className="stats-card-5 stats-card">
-                                <h3 className="h2 text-sb text-white">Beyond The Numbers</h3>
+                                <h3 className="h2 text-sb  ">Beyond The Numbers</h3>
                                 <p className="text-18 text-rg text-light-grey">
                                     <span>The greatest measure of our work is seeing brands grow with confidence, products perform with purpose, and clients choose to build with us again.
                                     </span>
@@ -81,7 +83,7 @@ export default function StatsSectionDesktop() {
 
                                 <div className="stats-global-text-wrapper">
                                     <div className="stats-global-left">
-                                        <h3 className="h1 text-sb text-white">7</h3>
+                                        <h3 className="h1 text-sb  ">7</h3>
                                         <p className="text-upper-case text-light-grey text-18 text-sb">Global Markets Served</p>
                                     </div>
 
@@ -93,9 +95,9 @@ export default function StatsSectionDesktop() {
                             </div>
 
                             <div className="stats-card-7 stats-card">
-                                <h3 className="h1 text-sb text-white">95%</h3>
+                                <h3 className="h1 text-sb  ">95%</h3>
 
-                                <p className="text-upper-case text-white text-light-grey text-18 text-sb stats-specification">Projects Delivered With Precision</p>
+                                <p className="text-upper-case   text-light-grey text-18 text-sb stats-specification">Projects Delivered With Precision</p>
 
                                 <div className="stats-element-art-board">
                                     <Image src={`${CDN_URL}/images/homepage/stats/project-delivered-with-precision.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image>
@@ -111,15 +113,15 @@ export default function StatsSectionDesktop() {
                     <div className="stats-section-for-tablet">
                         <div className="stats-section-card-row">
                             <div className="stats-tablet-card stats-tablet-card-1">
-                                <h2 className="text-sb text-white">Impact</h2>
+                                <h2 className="text-sb  ">Impact</h2>
 
-                                <p className="text-18 text-rg text-white">Behind every number is a promise we&apos;ve kept.
+                                <p className="text-18 text-rg  ">Behind every number is a promise we&apos;ve kept.
                                     From long-term partnerships to measurable outcomes, these milestones reflect the trust we&apos;ve earned and the impact we&apos;ve created.
                                 </p>
                             </div>
 
                             <div className="stats-tablet-card stats-tablet-card-2">
-                                <h3 className="h1 text-sb text-white">27+</h3>
+                                <h3 className="h1 text-sb  ">27+</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Specialised Solutions Crafted</p>
 
                                 <div className="stats-element-art-board">
@@ -134,7 +136,7 @@ export default function StatsSectionDesktop() {
 
                         <div className="stats-section-card-row">
                             <div className="stats-tablet-card stats-tablet-card-3">
-                                <h3 className="h1 text-sb text-white">8+</h3>
+                                <h3 className="h1 text-sb  ">8+</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Industries Transformed Globally</p>
 
                                 <div className="stats-element-art-board">
@@ -147,7 +149,7 @@ export default function StatsSectionDesktop() {
                             </div>
 
                             <div className="stats-tablet-card stats-tablet-card-4">
-                                <h3 className="h1 text-sb text-white">98%</h3>
+                                <h3 className="h1 text-sb  ">98%</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Client Trust Retained</p>
 
                                 <div className="stats-element-art-board">
@@ -162,7 +164,7 @@ export default function StatsSectionDesktop() {
 
                         <div className="stats-section-card-row">
                             <div className="stats-tablet-card stats-tablet-text stats-tablet-card-5">
-                                <h3 className="h2 text-sb text-white">Beyond The Numbers</h3>
+                                <h3 className="h2 text-sb  ">Beyond The Numbers</h3>
                                 <p className="text-18 text-rg text-light-grey">
                                     <span>The greatest measure of our work is seeing brands grow with confidence, products perform with purpose, and clients choose to build with us again.
                                     </span>
@@ -172,7 +174,7 @@ export default function StatsSectionDesktop() {
                             </div>
 
                             <div className="stats-tablet-card stats-tablet-card-6">
-                                <h3 className="h1 text-sb text-white">95%</h3>
+                                <h3 className="h1 text-sb  ">95%</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Projects Delivered With Precision</p>
 
                                 <div className="stats-element-art-board">
@@ -187,7 +189,7 @@ export default function StatsSectionDesktop() {
 
                         <div className="stats-section-card-row stats-tablet-card-7">
                             <div className="stats-tablet-card-map">
-                                <h3 className="h1 text-sb text-white">7</h3>
+                                <h3 className="h1 text-sb  ">7</h3>
                                 <p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Global Markets Served</p>
 
                                 <div className="stats-element-art-board element-map-wrapper">

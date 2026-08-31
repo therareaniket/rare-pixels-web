@@ -1,11 +1,7 @@
 :root { --project-card-width: 1000px; --project-card-gap: 40px; }
 
 
-.text-white { color: white; }
-/* h1 { text-transform: uppercase; } */
-.text-primary { color: #ED0180; }
-.text-black { color: #000000 }
-.bg-light-black { background-color: #01030D; }
+
 .text-grey { color: var(--text-grey); }
 
 .text-dark-grey{ color: #8C8B8C; }
@@ -252,6 +248,9 @@ body.menu-open {
 
 /* services */
 
+.services-section { position: relative; height: 200vh;  }
+.section-wrapper { position: sticky; top: 0; overflow: hidden; }
+
 .hm-services-title-wrapper{ text-align: center; }
 .services-card-wrapper{ display: flex; align-items: flex-start; gap: 20px; justify-content: space-between; margin-top: 60px; }
 .services-art-board{ width: 385px; height: 385px; overflow: hidden; display: flex; align-items: center; justify-content: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
@@ -287,6 +286,8 @@ body.menu-open {
 .industries-desktop-pixel-3 { position: absolute; bottom: 0; left: 0; } 
 
 /* process section */
+.process-section-sticky { height: calc(100vh * 8); }
+.process-section-inner { position: sticky; top: 0; height: max-content; overflow: hidden; }
 .process-section-title { width: 697px; margin: 0 auto; text-align: left; }
 .process-pointer-wrapper { display: flex; flex-direction: column; gap: 30px; margin-top: 30px; height: 600px; }
 
@@ -327,7 +328,7 @@ body.menu-open {
 .why-choose-us-content-wrapper{ position: relative; z-index: 10; }
 .why-choose-us-hand-image{ position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1; overflow: hidden; }
 .why-choose-us-tablet{ display: none; }
-.why-choose-us-image-wrapper {  position: relative; box-shadow: inset 0 -47px 22px 18px rgba(0, 0, 0);  }
+.why-choose-us-image-wrapper { position: relative; }
 
 /* stats section */
 
@@ -623,7 +624,7 @@ body.menu-open {
     font-size: 320px; 
     top: 0; 
     color: white; 
-    -webkit-background-clip: text; 
+    /* -webkit-background-clip: text;  */
     text-align: center; 
     width: 100%; 
 }
@@ -679,7 +680,7 @@ body.menu-open {
     font-size: 320px; 
     top: 0; 
     color: white; 
-    -webkit-background-clip: text; 
+    /* -webkit-background-clip: text;  */
     text-align: center; 
     width: 100%; 
 }
@@ -835,7 +836,6 @@ body.menu-open {
 .timeline-date-3 { width: 200px; height: max-content; background-color: var(--section-bg);  position: absolute; z-index: 2; top: 0;  }
 
 /* .timeline-date-1.timeline-date-active { width: 200px; height: 100px; right: 300px; } */
-
 /* .abt-timeline-content-left { position: relative; z-index: 30; } */
 
 .tree-reveal { display: none; }

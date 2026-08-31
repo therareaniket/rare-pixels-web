@@ -2,14 +2,13 @@
 
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
-import Footer from "@/components/global/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function InquirySectionDesktop() {
     return (
         <>
-            <section className="section section-yellow-background">
+            <section className="section">
                 <div className="container-sm">
                     <div className="inquiry-form-text-wrapper">
                         <h2 className="text-sb">Project Inquiry Form</h2>
@@ -97,8 +96,6 @@ export default function InquirySectionDesktop() {
                     </Link>
                 </div>
             </section>
-
-            <Footer /> 
         </>
     );
 }

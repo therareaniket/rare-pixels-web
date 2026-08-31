@@ -20,39 +20,39 @@ export default function Footer() {
 
     return (
         <>
-            <footer className="section section-bg-blue footer">
+            <footer className="section footer">
                 <div className="container">
                     <div className="footer-quote-wrapper">
                         <div className="footer-quote-right">
-                            <span className="text-md text-white h6">Unveiling Brilliance</span>
+                            <span className="text-md h6">Unveiling Brilliance</span>
 
-                            <h2 className="text-sb footer-quote-title text-white">Elevate Your Brand!</h2>
+                            <h2 className="text-sb footer-quote-title">Elevate Your Brand!</h2>
 
-                            <p className="text-18 text-rg text-light-grey">Whether you&apos;re launching a new brand, designing a digital product, or scaling an existing business, we&apos;d love to hear your vision. Tell us about your project, and we&apos;ll help transform ideas into impactful digital experiences.</p>
+                            <p className="text-18 text-rg">Whether you&apos;re launching a new brand, designing a digital product, or scaling an existing business, we&apos;d love to hear your vision. Tell us about your project, and we&apos;ll help transform ideas into impactful digital experiences.</p>
 
                             <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link inquiry-form-link website-btn">
-                                <span className="text-20 text-md text-white">Start Your Project </span>
+                                <span className="text-20 text-md">Start Your Project </span>
                                 <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                             </Link>
                         </div>
 
                         <div className="footer-social-wrapper footer-social-icon-desktop">
                             <div className="footer-social-row-1 footer-social-row">
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.linkedin.com/company/rarepixelsdesign/" title="linkedin" target="_blank">
                                         <span className="icon-linkedin"></span>
                                         <p className="text-upper-case text-18 text-rg">LinkedIn</p>
                                     </Link>
                                 </div>
 
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.instagram.com/rarepixelsdesign/" title="instagram" target="_blank">
                                         <span className="icon-instagram"></span>
                                         <p className="text-upper-case text-18 text-rg">Instagram</p>
                                     </Link>
                                 </div>
 
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.threads.com/@rarepixelsdesign" title="threads" target="_blank">
                                         <span className="icon-threads"></span>
                                         <p className="text-upper-case text-18 text-rg">Threads</p>
@@ -61,21 +61,21 @@ export default function Footer() {
                             </div>
 
                             <div className="footer-social-row-2 footer-social-row">
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.facebook.com/RarePixelsDesign" title="facebook" target="_blank">
                                         <span className="icon-facebook"></span>
                                         <p className="text-upper-case text-18 text-rg">Facebook</p>
                                     </Link>
                                 </div>
 
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://x.com/Rare_Pixels" title="X" target="_blank">
                                         <span className="icon-twitter"></span>
                                         <p className="text-upper-case text-18 text-rg">Twitter</p>
                                     </Link>
                                 </div>
 
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.youtube.com/@RarePixelsDesign" title="youtube" target="_blank">
                                         <span className="icon-youtube"></span>
                                         <p className="text-upper-case text-18 text-rg">Youtube</p>
@@ -86,14 +86,14 @@ export default function Footer() {
 
                         <div className="footer-social-icon-tablet">
                             <div className="footer-social-row-1 footer-social-row">
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.linkedin.com/company/rarepixelsdesign/" title="linkedin" target="_blank">
                                         <span className="icon-linkedin"></span>
                                         <p className="text-upper-case text-18 text-rg">LinkedIn</p>
                                     </Link>
                                 </div>
 
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://x.com/Rare_Pixels" title="X" target="_blank">
                                         <span className="icon-twitter"></span>
                                         <p className="text-upper-case text-18 text-rg">Twitter</p>
@@ -102,14 +102,14 @@ export default function Footer() {
                             </div>
 
                             <div className="footer-social-row-2 footer-social-row">
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.facebook.com/RarePixelsDesign" title="facebook" target="_blank">
                                         <span className="icon-facebook"></span>
                                         <p className="text-upper-case text-18 text-rg">Facebook</p>
                                     </Link>
                                 </div>
 
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.threads.com/@rarepixelsdesign" title="threads" target="_blank">
                                         <span className="icon-threads"></span>
                                         <p className="text-upper-case text-18 text-rg">Threads</p>
@@ -118,14 +118,14 @@ export default function Footer() {
                             </div>
 
                             <div className="footer-social-row-2 footer-social-row">
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.instagram.com/rarepixelsdesign/" title="instagram" target="_blank">
                                         <span className="icon-instagram"></span>
                                         <p className="text-upper-case text-18 text-rg">Instagram</p>
                                     </Link>
                                 </div>
 
-                                <div className="social-icon text-light-grey">
+                                <div className="social-icon">
                                     <Link href="https://www.youtube.com/@RarePixelsDesign" title="youtube" target="_blank">
                                         <span className="icon-youtube"></span>
                                         <p className="text-upper-case text-18 text-rg">Youtube</p>
@@ -138,8 +138,8 @@ export default function Footer() {
                     <div className="footer-detail-wrapper">
                         <div className="footer-links-wrapper">
                             <div className="footer-title">
-                                <p className="text-18 text-md text-white quick-link-services-title">Quick Links & Services</p>
-                                <p className="text-18 text-md text-white quick-link-only-title">Quick Links</p>
+                                <p className="text-18 text-md quick-link-services-title">Quick Links & Services</p>
+                                <p className="text-18 text-md quick-link-only-title">Quick Links</p>
                             </div>
 
                             <div className="footer-links">
@@ -168,7 +168,7 @@ export default function Footer() {
 
                                 <div className="footer-link-col">
                                     <div className="footer-title">
-                                        <p className="text-18 text-md text-white services-only-title">Services</p>
+                                        <p className="text-18 text-md services-only-title">Services</p>
                                     </div>
 
                                     <ul>
@@ -185,7 +185,7 @@ export default function Footer() {
 
                         <div className="footer-company-detail">
                             <div className="footer-title">
-                                <p className="text-18 text-md text-white">Location & Contact</p>
+                                <p className="text-18 text-md">Location & Contact</p>
                             </div>
 
                             <div className="footer-contact">
