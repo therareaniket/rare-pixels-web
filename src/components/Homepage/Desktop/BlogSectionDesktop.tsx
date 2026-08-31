@@ -15,12 +15,12 @@ const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 export default function BlogSectionDesktop() {
     return (
         <>
-            <section className="section blog-section" style={{ paddingBottom: 0 }} >
+            <section className="section blog-section" >
                 <div className="container">
                     <div className="hm-blog-text-wrapper">
                         <h2 className="text-sb">Our Blog</h2>
 
-                        <p className="text-18 text-rg text-grey">A collection of thoughts, learnings, and perspectives from our work in design, technology, and building impactful digital experiences.</p>
+                        <p className="text-18 text-rg">A collection of thoughts, learnings, and perspectives from our work in design, technology, and building impactful digital experiences.</p>
                     </div>
 
                     <div className="hm-blog-wrapper">

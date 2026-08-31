@@ -168,7 +168,7 @@ export default function IndustriesSectionDesktop() {
 
     return (
         <>
-            <section ref={sectionRef} className="industries-section-sticky section industries-section" style={{ backgroundColor: "#ffffff", transition: "background-color 0.6s ease" }}>
+            <section ref={sectionRef} className="industries-section-sticky section industries-section">
                 <div className="industirs-section-inner">
                     <div className="container">
                         <div className="industries-text-title">

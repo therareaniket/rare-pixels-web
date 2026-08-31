@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { ReactLenis } from 'lenis/react';
+import { useThemeTrigger } from "@/hooks/useThemeTrigger";
 
 import TestimonialSectionMobile from "@/components/Homepage/Mobile/TestimonialSectionMobile";
 import AboutSectionMobile from "@/components/Homepage/Mobile/AboutSectionMobile";
@@ -27,14 +28,17 @@ import StatsSectionDesktop from "@/components/Homepage/Desktop/StatsSectionDeskt
 import BlogSectionDesktop from "@/components/Homepage/Desktop/BlogSectionDesktop";
 import FaqSectionDesktop from "@/components/Homepage/Desktop/FaqSectionDesktop";
 import InquirySectionDesktop from "@/components/Homepage/Desktop/InquirySectionDesktop";
+import Footer from "@/components/global/Footer";
 
 
 export default function Home() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
 
+	// THEME TRIGGER FUNCTION CALL
+	useThemeTrigger();
+
 	useEffect(() => {
 		const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479);};
-
 		window.addEventListener("resize", handleResize);
 		handleResize();
 		return () => window.removeEventListener("resize", handleResize);
@@ -49,18 +53,54 @@ export default function Home() {
 
 				{/* DESKTOP */}
 				<div className="hidden min-[480px]:block">
-					<TestimonialSectionDesktop />
-					<AboutSectionDesktop />
-					<ServicesSectionDesktop />
-					<IndustriesSectionDesktop />
-					<WhyChooseUsSectionDesktop />
-					<ProcessSectionDesktop />
-					<ProjectsSectionDesktop />
-					<StatsSectionDesktop/>
-					<BlogSectionDesktop />
-					<FaqSectionDesktop />
-					<InquirySectionDesktop />
+					<div data-theme-color="white">
+						<TestimonialSectionDesktop />
+					</div>
+	
+					<div data-theme-color="navy">
+						<AboutSectionDesktop />
+					</div>
+
+					<div data-theme-color="white">
+						<ServicesSectionDesktop />
+					</div>
+					
+					<div data-theme-color="light-yellow">
+						<IndustriesSectionDesktop />
+					</div>
+
+					<div data-theme-color="black">
+						<WhyChooseUsSectionDesktop />
+					</div>
+					
+					<div data-theme-color="mid-yellow">
+						<ProcessSectionDesktop />
+					</div>
+
+					<div data-theme-color="white">
+						<ProjectsSectionDesktop />
+					</div>
+
+					<div data-theme-color="navy">
+						<StatsSectionDesktop/>
+					</div>
+
+					<div data-theme-color="white">
+						<BlogSectionDesktop />
+					</div>
+
+					<div data-theme-color="white">
+						<FaqSectionDesktop />
+					</div>
+
+					<div data-theme-color="mid-yellow">
+						<InquirySectionDesktop />
+					</div>
 					<ScrollToTopButton />
+
+					<div data-theme-color="navy">
+						<Footer />
+					</div>
 				</div>
 
 				{/* MOBILE */}
