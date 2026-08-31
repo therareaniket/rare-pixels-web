@@ -22,7 +22,7 @@ export default function AboutHeroSectionMobile() {
                         </div>
                     </div>
 
-                    <div className="about-hero-mask-title text-extra-bold">
+                    {/* <div className="about-hero-mask-title text-extra-bold">
                         <svg
                             viewBox="0 0 1600 500"
                             className="about-text-mask"
@@ -63,6 +63,15 @@ export default function AboutHeroSectionMobile() {
                                 </video>
                             </foreignObject>
                         </svg>
+                    </div> */}
+
+                                        <div className="about-video-text-practice">
+                        <div className="town">
+                            <video autoPlay muted loop>
+                                <source src="/images/aboutpage/about-hero/rare-second-anniversary.mp4" />
+                            </video>
+                            <h2 className="text-extra-bold">ABOUT US</h2>
+                        </div>
                     </div>
                 </div>
             </section>

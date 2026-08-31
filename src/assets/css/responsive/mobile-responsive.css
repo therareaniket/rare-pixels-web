@@ -510,8 +510,8 @@
 
     .rare-tree-mobile { width: 100%; }
 
-    .timeline-mobile-sticky { height: 300vh; }
-    .timeline-mobile-inner { position: sticky; top: 50px; height: max-content; overflow: hidden; }
+    .timeline-mobile-sticky { height: 350vh; }
+    .timeline-mobile-inner { position: sticky; top: 0; height: max-content; overflow: hidden; }
 
     .timeline-hr-mobile { position: relative; }
     .timeline-active-hr { width: 6%; height: 1px; background: var(--primary); position: absolute; top: 0; left: 0; }
@@ -519,6 +519,36 @@
 
     .why-rare-mobile-tree { overflow: hidden; }
     .tree-reveal { clip-path: inset(100% 0 0 0); }
+
+    .about-video-text-practice { position: relative; overflow: hidden;  width: 100% !important; height: 130px; }
+
+    .town{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .town video { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .town h2 { 
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        font-size: 18vw;
+        line-height: 95px;
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+        mix-blend-mode: screen;    
+        /* margin-top: 200px; */
+    }
 }
 
 @media (max-width: 439px) {

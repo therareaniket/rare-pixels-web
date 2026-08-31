@@ -426,7 +426,8 @@
 
 	/* about page */
 
-	.about-hero-mask-title { font-size: 322px; height: 260px; }
+	.town h2 { font-size: 16.3vw; line-height: 185px; }
+	.about-video-text-practice { height: 265px; }
 	.about-hero-section-title h1 { width: 510px; }
 	.timeline-hr { margin-top: 50px; margin-bottom: 45px; }
 	.abt-timeline-content-right span  { font-size: 74px; line-height: 82px; }
@@ -660,7 +661,8 @@
 
 	/* about page */
 	.about-hero-section-desktop .container { margin-top: 10px; }
-	.about-hero-mask-title { font-size: 322px; height: 220px; margin-top: 20px; }
+	.town h2 { font-size: 15.5vw; line-height: 165px; }
+	.about-video-text-practice { height: 240px; }
 	.about-hero-section-title h1 { width: 455px; }
 	.about-hero-section-title p { width: 395px; }
 
@@ -1254,7 +1256,9 @@
 
 
 	/* about page */
-	.about-hero-mask-title { font-size: 320px; top: 50px; height: 170px; }
+	.about-video-text-practice { height: 180px; }
+	.town { top: 50px; }
+	.town h2 { line-height: 124px; }
 	.about-hero-section-title { flex-direction: column; gap: 10px; }
 	.about-hero-section-title h1 { width: 100%; }
 	.about-hero-section-title p { width: 100%; }
@@ -1407,8 +1411,8 @@
 
 
 	/* about page */
-	.about-hero-mask-title { height: 150px; }
-	.about-hero-video { display: none; }
+	.town h2 { font-size: 13.8vw; }
+	.about-video-text-practice { height: 165px; }
 
 	.abt-timeline-content-left { width: 240px; height: 240px; }
 	.abt-timeline-content-right { width: 300px; }
@@ -1517,6 +1521,10 @@
 	.abt-timeline-content-left {  width: 220px; height: 220px;}
 	.abt-rpd-card span { font-size: 78px; }.rare-logo
 	.rare-logo { width: 57px; }
+
+	.town { top: 35px; }
+	.about-video-text-practice { height: 150px; }
+	.town h2 { font-size: 141px; }
 }
 
 @media (max-width: 839px) {
@@ -1684,7 +1692,11 @@
     	pointer-events: none;
 	}
 
-		.timeline-dot { display: none; }
+	.timeline-dot { display: none; }
+
+	.town h2 { font-size: 128px; }
+	.town { top: 70px; }
+	.about-video-text-practice { height: 190px; }
 }
 
 @media (max-width: 767px) {
@@ -1810,6 +1822,9 @@
 
 	.abt-rpd-card span { font-size: 70px; line-height: 60px; }
 	.rare-logo { width: 50px; }
+
+	.town h2 { font-size: 120px; }
+	.about-video-text-practice { height: 182px; }
 }
 
 @media (max-width: 639px) {
@@ -1910,6 +1925,10 @@
 
 	.life-at-rpd-desktop-card-wrapper { margin-top: 30px; }
 	.abt-rpd-card span { font-size: 68px; }
+
+	.town h2 { font-size: 17vw; line-height: 94px; }
+	.town { top: 60px; }
+	.about-video-text-practice { height: 155px; }
 }
 
 @media (max-width: 575px) {
@@ -2101,4 +2120,7 @@
 
 	.abt-rpd-card span { font-size: 62px; line-height: 52px; }
 	.rare-logo { width: 48px; }
+
+	.town h2 { font-size: 18vw; line-height: 94px; }
+	.about-video-text-practice { height: 150px; }
 }
