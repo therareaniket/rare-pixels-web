@@ -103,6 +103,7 @@ export default function AboutTimelineSectionDesktop() {
 
                 gsap.set(thirdDot, {
                     x: travelDistance * thirdDotProgress,
+                    opacity: progress >= 0.38 ? 1 : 0,
                 });
             };
 
@@ -218,12 +219,12 @@ export default function AboutTimelineSectionDesktop() {
             contentRef.current,
             {
                 opacity: 0,
-                y: 100,
+                scale: 0
             },
             {
                 opacity: 1,
-                y: 0,
-                duration: 1,
+                scale: 1,
+                duration: 2,
             }
         );
 
@@ -301,7 +302,7 @@ export default function AboutTimelineSectionDesktop() {
                                 <span className="h3 abt-timeline-titledate text-sb active">
                                     {activeIndex < timelineData.length - 1
                                         ? timelineData[activeIndex + 1].year
-                                        : null}
+                                        : timelineData[0].year}
                                 </span>
                             </div>
 
@@ -311,12 +312,12 @@ export default function AboutTimelineSectionDesktop() {
 
                                 </div>
 
-                                <div className="abt-timeline-content-right">
+                                <div ref={contentRef} className="abt-timeline-content-right">
                                     <span className="text-sb text-white">
                                         {timelineData[activeIndex].year}
                                     </span>
 
-                                    <div ref={contentRef} className="timeline-content">
+                                    <div className="timeline-content">
                                         <h6 className="text-sb text-upper-case text-white">
                                             {timelineData[activeIndex].title}
                                         </h6>

@@ -27,7 +27,7 @@ export default function WhyRarePixelsDesktop() {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".tree-section-desktop",
-                    start: "top top",
+                    start: "top 40%",
                     end: "+=3000",
                     scrub: 2,
                 },
@@ -92,7 +92,7 @@ export default function WhyRarePixelsDesktop() {
                     ease: "none",
                     scrollTrigger: {
                         trigger: ".why-rare-desktop-tree-image",
-                        start: "top 80%",
+                        start: "top 40%",
                         end: "bottom -15%",
                         // scrub: true,
                     },

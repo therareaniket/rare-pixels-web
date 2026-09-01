@@ -12,14 +12,14 @@ export default function AboutLifeAtRpdSectionMobile () {
                     </div>
 
                     <div className="life-rpd-mob-card-wrapper">
-                        <div className="life-rpd-mobile-card rpd-mobile-card-1"></div>
-                        <div className="life-rpd-mobile-card rpd-mobile-card-2"></div>
-                        <div className="life-rpd-mobile-card rpd-mobile-card-3"></div>
-                        <div className="life-rpd-mobile-card rpd-mobile-card-1"></div>
-                        <div className="life-rpd-mobile-card rpd-mobile-card-2"></div>
-                        <div className="life-rpd-mobile-card rpd-mobile-card-4"></div>
-                        <div className="life-rpd-mobile-card rpd-mobile-card-4"></div>
-                        <div className="life-rpd-mobile-card rpd-mobile-card-5"></div>
+                        <div className="life-rpd-mobile-card life-rpd-mobile-card-1"></div>
+                        <div className="life-rpd-mobile-card life-rpd-mobile-card-2"></div>
+                        <div className="life-rpd-mobile-card life-rpd-mobile-card-3"></div>
+                        <div className="life-rpd-mobile-card life-rpd-mobile-card-1"></div>
+                        <div className="life-rpd-mobile-card life-rpd-mobile-card-2"></div>
+                        <div className="life-rpd-mobile-card life-rpd-mobile-card-4"></div>
+                        <div className="life-rpd-mobile-card life-rpd-mobile-card-4"></div>
+                        <div className="life-rpd-mobile-card life-rpd-mobile-card-5"></div>
                     </div>
                 </div>
             </section>

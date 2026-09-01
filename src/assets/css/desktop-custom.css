@@ -870,7 +870,8 @@ body.menu-open {
 .timeline-date-3 { width: 200px; height: max-content; background-color: var(--section-bg);  position: absolute; z-index: 2; top: 0;  }
 
 /* .timeline-date-1.timeline-date-active { width: 200px; height: 100px; right: 300px; } */
-/* .abt-timeline-content-left { position: relative; z-index: 30; } */
+.abt-timeline-content-left { width: 291px; height: 278px; margin-top: 20px; }
+.abt-timeline-content-left img { width: 100%; height: 100%; object-fit: contain; }
 
 .tree-reveal { display: none; }
 
@@ -928,3 +929,6 @@ body.menu-open {
 .abt-rpd-card-2 { width: 58px; overflow: hidden; margin-top: 2px; }
 .abt-rpd-card-3 { width: 62px; overflow: hidden; margin-top: 8px; }
 .abt-card-text{ opacity: 0; }
+
+.abt-hero-video { height: calc( 100vh - 20px ); }
+.abt-hero-video video { width: 100%; height: 100%; object-fit: cover; }

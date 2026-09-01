@@ -10,124 +10,225 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutRpdSectionDesktop() {
-
     const rpdSectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".abt-rpd-section-desktop",
-                start: "top top",
-                end: "+=5000",
-                scrub: 2,
-                invalidateOnRefresh: true,
-            }
+        const mm = gsap.matchMedia();
+
+        mm.add("(min-width: 1200px)", () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".abt-rpd-section-desktop",
+                    start: "top top",
+                    end: "+=5000",
+                    scrub: 2,
+                    invalidateOnRefresh: true,
+                }
+            });
+
+            const css = getComputedStyle(document.documentElement);
+
+            gsap.set(
+                ".abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text",
+                {
+                    y: css.getPropertyValue("--text-up-start")
+                }
+            );
+
+            gsap.set(
+                ".abt-rpd-card-2 .abt-card-text",
+                {
+                    y: css.getPropertyValue("--text-down-start")
+                }
+            );
+
+            tl.to(".about-rpd-desktop-content-wrapper", {
+                scale: 1,
+            }, 0)
+
+                .fromTo(".abt-rpd-card-1",
+                    {
+                        width: css.getPropertyValue("--card-1-start-width")
+                    },
+                    {
+                        width: css.getPropertyValue("--card-1-width")
+                    }, 1)
+
+                .fromTo(".abt-rpd-card-2",
+                    {
+                        width: css.getPropertyValue("--card-2-start-width"),
+                        marginTop: css.getPropertyValue("--card-2-start-mt")
+                    },
+                    {
+                        width: css.getPropertyValue("--card-2-width"),
+                        marginTop: css.getPropertyValue("--card-2-mt")
+                    }, 1)
+
+                .fromTo(".abt-rpd-card-3",
+                    {
+                        width: css.getPropertyValue("--card-3-start-width"),
+                        marginTop: css.getPropertyValue("--card-3-start-mt")
+                    },
+                    {
+                        width: css.getPropertyValue("--card-3-width"),
+                        marginTop: css.getPropertyValue("--card-3-mt")
+                    }, 1)
+
+                .to(".abt-rpd-card", {
+                    width: css.getPropertyValue("--card-final-width")
+                }, 2)
+
+                .fromTo(".abt-rpd-card-1",
+                    {
+                        x: css.getPropertyValue("--card-1-start-x"),
+                        y: css.getPropertyValue("--card-1-start-y")
+                    },
+                    {
+                        x: css.getPropertyValue("--card-1-x"),
+                        y: css.getPropertyValue("--card-1-y")
+                    }, 2)
+
+                .fromTo(".abt-rpd-card-3",
+                    {
+                        x: css.getPropertyValue("--card-3-start-x"),
+                        y: css.getPropertyValue("--card-3-start-y")
+                    },
+                    {
+                        x: css.getPropertyValue("--card-3-x"),
+                        y: css.getPropertyValue("--card-3-y")
+                    }, 2)
+
+                .fromTo(".abt-rpd-card-1 .abt-card-text",
+                    {
+                        opacity: 0,
+                        y: css.getPropertyValue("--text-up-start")
+                    },
+                    {
+                        opacity: 1,
+                        y: 0
+                    }, 3)
+
+                .fromTo(".abt-rpd-card-2 .abt-card-text",
+                    {
+                        opacity: 0,
+                        y: css.getPropertyValue("--text-down-start")
+                    },
+                    {
+                        opacity: 1,
+                        y: 0
+                    }, 4)
+
+                .fromTo(".abt-rpd-card-3 .abt-card-text",
+                    {
+                        opacity: 0,
+                        y: css.getPropertyValue("--text-up-start")
+                    },
+                    {
+                        opacity: 1,
+                        y: 0
+                    }, 5)
         });
 
-        const css = getComputedStyle(document.documentElement);
+        mm.add("(max-width: 1199px)", () => {
 
-        gsap.set(
-            ".abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text",
-            {
-                y: css.getPropertyValue("--text-up-start")
-            }
-        );
+            const css = getComputedStyle(document.documentElement);
 
-        gsap.set(
-            ".abt-rpd-card-2 .abt-card-text",
-            {
-                y: css.getPropertyValue("--text-down-start")
-            }
-        );
+            gsap.set(".about-rpd-desktop-content-wrapper", {
+                scale: 4
+            });
 
-        tl.to(".about-rpd-desktop-content-wrapper", {
-            scale: 1,
-        }, 0)
+            gsap.set(".abt-card-text", {
+                opacity: 0,
+                y: 40
+            });
 
-            .fromTo(".abt-rpd-card-1",
-                {
-                    width: css.getPropertyValue("--card-1-start-width")
-                },
-                {
-                    width: css.getPropertyValue("--card-1-width")
-                }, 1)
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".abt-rpd-section-desktop",
+                    start: "top top",
+                    end: "+=6000",
+                    scrub: 2,
+                    invalidateOnRefresh: true,
+                }
+            });
 
-            .fromTo(".abt-rpd-card-2",
-                {
-                    width: css.getPropertyValue("--card-2-start-width"),
-                    marginTop: css.getPropertyValue("--card-2-start-mt")
-                },
-                {
-                    width: css.getPropertyValue("--card-2-width"),
-                    marginTop: css.getPropertyValue("--card-2-mt")
-                }, 1)
+            tl.to(".about-rpd-desktop-content-wrapper", {
+                scale: 1
+            }, 0)
 
-            .fromTo(".abt-rpd-card-3",
-                {
-                    width: css.getPropertyValue("--card-3-start-width"),
-                    marginTop: css.getPropertyValue("--card-3-start-mt")
-                },
-                {
-                    width: css.getPropertyValue("--card-3-width"),
-                    marginTop: css.getPropertyValue("--card-3-mt")
-                }, 1)
+                .fromTo(".abt-rpd-card-1",
+                    { width: css.getPropertyValue("--card-1-start-width") },
+                    { width: css.getPropertyValue("--card-1-width") }, 1
+                )
 
-            .to(".abt-rpd-card", {
-                width: css.getPropertyValue("--card-final-width")
-            }, 2)
-            .to(".abt-rpd-card", {
-                width: "100%"
-            }, 2)
+                .fromTo(".abt-rpd-card-2",
+                    {
+                        width: css.getPropertyValue("--card-2-start-width"),
+                        marginTop: css.getPropertyValue("--card-2-start-mt")
+                    },
+                    {
+                        width: css.getPropertyValue("--card-2-width"),
+                        marginTop: css.getPropertyValue("--card-2-mt")
+                    }, 1
+                )
 
-            .fromTo(".abt-rpd-card-1",
-                {
-                    x: css.getPropertyValue("--card-1-start-x"),
-                    y: css.getPropertyValue("--card-1-start-y")
-                },
-                {
-                    x: css.getPropertyValue("--card-1-x"),
-                    y: css.getPropertyValue("--card-1-y")
-                }, 2)
+                .fromTo(".abt-rpd-card-3",
+                    {
+                        width: css.getPropertyValue("--card-3-start-width"),
+                        marginTop: css.getPropertyValue("--card-3-start-mt")
+                    },
+                    {
+                        width: css.getPropertyValue("--card-3-width"),
+                        marginTop: css.getPropertyValue("--card-3-mt")
+                    }, 1
+                )
 
-            // .fromTo(".abt-rpd-card-2",
-            //     {
-            //         x: css.getPropertyValue("--card-2-start-x"),
-            //         y: css.getPropertyValue("--card-2-start-y")
-            //     },
-            //     {
-            //         x: css.getPropertyValue("--card-2-x"),
-            //         y: css.getPropertyValue("--card-2-y")
-            //     }, 2)
-
-            .fromTo(".abt-rpd-card-3",
-                {
-                    x: css.getPropertyValue("--card-3-start-x"),
-                    y: css.getPropertyValue("--card-3-start-y")
-                },
-                {
-                    x: css.getPropertyValue("--card-3-x"),
-                    y: css.getPropertyValue("--card-3-y")
-                }, 2)
-
-            .fromTo(".abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text",
-                {
+                .to(".abt-rpd-card, .about-rpd-desktop-content-wrapper", {
                     opacity: 0,
-                    y: css.getPropertyValue("--text-up-start")
-                },
-                {
+                    duration: 1.0
+                }, 3.0)
+
+                .set(".about-rpd-desktop-content-wrapper", {
+                    flexDirection: 'column',
+                    opacity: 1
+                }, 4.0)
+
+                .set(".abt-rpd-card", {
+                    width: "100%",
+                    marginTop: 0
+                }, 4.0)
+
+                .fromTo(".abt-rpd-card-1",
+                    { x: "-100%", opacity: 0 },
+                    { x: "0%", opacity: 1, immediateRender: false }, 4.3
+                )
+                .to(".abt-rpd-card-1 .abt-card-text", {
                     opacity: 1,
                     y: 0
-                }, 3)
+                }, 4.7)
 
-            .fromTo(".abt-rpd-card-2 .abt-card-text",
-                {
-                    opacity: 0,
-                    y: css.getPropertyValue("--text-down-start")
-                },
-                {
+                .fromTo(".abt-rpd-card-2",
+                    { x: "-100%", opacity: 0 },
+                    { x: "0%", opacity: 1, immediateRender: false }, 5.3
+                )
+                .to(".abt-rpd-card-2 .abt-card-text", {
+                    opacity: 1,
+                    alignItems: 'flex-end',
+                    y: 0
+                }, 5.7)
+
+                .fromTo(".abt-rpd-card-3",
+                    { x: "-100%", opacity: 0 },
+                    { x: "0%", opacity: 1, immediateRender: false }, 6.3
+                )
+                .to(".abt-rpd-card-3 .abt-card-text", {
                     opacity: 1,
                     y: 0
-                }, 3)
+                }, 6.7);
+
+        });
+
+        return () => mm.revert();
 
     }, []);
 

@@ -23,64 +23,6 @@ export default function AboutHeroSectionDesktop() {
                         </div>
                     </div>
 
-                    {/* <div className="about-hero-mask-title text-extra-bold">
-                        <svg
-                            viewBox="0 0 1600 500"
-                            className="about-text-mask"
-                        >
-                            <defs>
-                                <mask id="video-text-mask">
-                                    <rect width="100%" height="100%" fill="black" />
-
-                                    <text
-                                        x="50%"
-                                        y="50%"
-                                        dominantBaseline="middle"
-                                        textAnchor="middle"
-                                        fill="white"
-                                        className="mask-text"
-                                    >
-                                        ABOUT US
-                                    </text>
-                                </mask>
-                            </defs>
-
-                            <foreignObject
-                                width="100%"
-                                height="100%"
-                                mask="url(#video-text-mask)"
-                            >
-                                <video
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className="masked-video"
-                                >
-                                    <source
-                                        src="/images/aboutpage/about-hero/rare-second-anniversary.mp4"
-                                        type="video/mp4"
-                                    />
-                                </video>
-                            </foreignObject>
-                        </svg>
-                    </div> */}
-
-                    {/* <div className="about-video-text-practice">
-                        <video
-                            src="/images/aboutpage/about-hero/rare-second-anniversary.mp4"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className="video-bg"
-                        >
-                        </video>
-                        <div className="abt-video-copy">
-                            <h2 className="text-extra-bold">ABOUT US</h2>
-                        </div>
-                    </div> */}
-
                     <div className="about-video-text-practice">
                         <div className="town">
                             <video autoPlay playsInline muted loop>
@@ -88,6 +30,12 @@ export default function AboutHeroSectionDesktop() {
                             </video>
                             <h2 className="text-extra-bold">ABOUT US</h2>
                         </div>
+                    </div>
+
+                    <div className="abt-hero-video">
+                        <video autoPlay playsInline muted loop>
+                            <source src="/images/aboutpage/about-hero/rare-second-anniversary.mp4" />
+                        </video>
                     </div>
                 </div>
             </section>

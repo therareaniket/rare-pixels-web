@@ -9,7 +9,14 @@
 .bg-yellowish { background-color: #FBF9E9; }
 
 @media (max-width: 479px) {
-    :root { --project-card-height: 280px; --project-card-gap: 30px; }
+    :root { 
+        --project-card-height: 280px; 
+        --project-card-gap: 30px; 
+
+        --card-1-start-width: 34px;
+        --card-2-start-width: 29px;
+        --card-3-start-width: 34px;
+    }
 	.project-list { border-radius: 20px; }
     .project-list.active { box-shadow: none; }
 
@@ -482,9 +489,10 @@
     .footer-link-col:nth-child(3) ul li { width: 196px; margin-bottom: 0;  }
 
     .rpd-mobile-section { position: relative; }
-    .rpd-mobile-card-wrapper { padding: 70px 0; display: flex; flex-direction: column; gap: 30px; } 
-    .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; width: 60px; }
-    .rpd-pixel-right-mob { position: absolute; bottom: -40px; right: 0; z-index: 2; width: 60px; }
+    .rpd-mobile-card-wrapper { padding: 110px 0; display: flex; } 
+    .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { overflow: hidden; height: 220px; }
+    .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; width: 60px; display: none; }
+    .rpd-pixel-right-mob { position: absolute; bottom: -40px; right: 0; z-index: 2; width: 60px; display: none; }
 
     .rpd-mobile-card .h5 { margin-top: 20px; margin-bottom: 14px; }
 
@@ -492,11 +500,11 @@
     .life-rpd-mob-card-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
 
     .life-rpd-mobile-card { width: 100%; background-color: #DEDEDE; }
-    .rpd-mobile-card-1 { height: 400px; }
-    .rpd-mobile-card-2 { height: 350px; }
-    .rpd-mobile-card-3 { height: 300px; }
-    .rpd-mobile-card-4 { height: 450px; }
-    .rpd-mobile-card-5 { height: 250px; }
+    .life-rpd-mobile-card-1 { height: 400px; }
+    .life-rpd-mobile-card-2 { height: 350px; }
+    .life-rpd-mobile-card-3 { height: 300px; }
+    .life-rpd-mobile-card-4 { height: 450px; }
+    .life-rpd-mobile-card-5 { height: 250px; }
 
     .why-rare-point { border: 1px solid rgba(132, 144, 132, 0.1); border-radius: 10px; }
     .about-mobile-video-wrapper { padding-top: 60px; }
@@ -504,9 +512,9 @@
     /* .why-rare-mobile-sticky { height: 300vh; }
     .why-rare-mobile-inner { position: sticky; top: 50px; height: max-content; overflow: hidden; } */
 
-    .rpd-mobile-card span { font-size: 52px; line-height: 40px; }
+    .rpd-mobile-card span { font-size: 48px; line-height: 48px; }
     .rare-mobile-text { display: flex; align-items: flex-end; gap: 6px; }
-    .rare-logo-mob { width: 40px; } 
+    .rare-logo-mob { width: 37px; } 
 
     .rare-tree-mobile { width: 100%; }
 
@@ -549,10 +557,49 @@
         mix-blend-mode: screen;    
         /* margin-top: 200px; */
     }
+
+    .rpd-mobile-section {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .rpd-mobile-inner,
+    .rpd-mobile-section .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .rpd-mobile-card-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        transform-origin: center center;
+    }
 }
 
 @media (max-width: 439px) {
-    :root { --project-card-height: 260px; --project-card-gap: 30px; }
+    :root { 
+        --project-card-height: 260px; 
+        --project-card-gap: 30px; 
+
+        --card-2-start-width: 22px;
+        --card-3-start-width: 26px;
+
+        --card-1-width: 102px;
+        --card-2-width: 108px;
+        --card-3-width: 131px;
+    }
 	.project-list { border-radius: 20px; }
     
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
@@ -637,19 +684,19 @@
     .abt-our-values-pointer-left { width: 38px; height: 38px; }
     .abt-our-values-pointer-right { width: calc( 100% - 50px ); }
 
-    .rpd-mobile-card-1 { height: 344px; }
-    .rpd-mobile-card-2 { height: 301px; }
-    .rpd-mobile-card-3 { height: 258px; }
-    .rpd-mobile-card-4 { height: 387px; }
-    .rpd-mobile-card-5 { height: 215px; }
+    .life-rpd-mobile-card-1 { height: 344px; }
+    .life-rpd-mobile-card-2 { height: 301px; }
+    .life-rpd-mobile-card-3 { height: 258px; }
+    .life-rpd-mobile-card-4 { height: 387px; }
+    .life-rpd-mobile-card-5 { height: 215px; }
 
     .footer-link-col:nth-child(1), .footer-link-col:nth-child(2) {  width: 180px; }
     .footer-link-col:nth-child(3) { padding-top: 16px;  }
     .footer-link-col:nth-child(3) ul { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
     .footer-link-col:nth-child(3) ul li { width: 194; margin-bottom: 0;  }
 
-    .rpd-mobile-card span { font-size: 48px; }
-    .rare-logo-mob { width: 38px; }
+    .rpd-mobile-card span { font-size: 38px; line-height: 38px; }
+    .rare-logo-mob { width: 30px; }
 }
 
 @media (max-width: 400px) {
@@ -790,18 +837,27 @@
     .only-for-mobile-three-column { display: block; }
     .footer-link-col .services-only-title, .quick-link-only-title, .footer-title p { font-size: 18px; }
 
-    .rpd-mobile-card-1 { height: 320px; }
-    .rpd-mobile-card-2 { height: 280px; }
-    .rpd-mobile-card-3 { height: 240px; }
-    .rpd-mobile-card-4 { height: 360px; }
-    .rpd-mobile-card-5 { height: 200px; }
+    .life-rpd-mobile-card-1 { height: 320px; }
+    .life-rpd-mobile-card-2 { height: 280px; }
+    .life-rpd-mobile-card-3 { height: 240px; }
+    .life-rpd-mobile-card-4 { height: 360px; }
+    .life-rpd-mobile-card-5 { height: 200px; }
 
-    .rpd-mobile-card span { font-size: 44px; line-height: 36px; }
-    .rare-logo-mob { width: 34px; }
 }
 
 @media (max-width: 374px) {
-    :root { --project-card-height: 220px; --project-card-gap: 30px; }
+    :root { 
+        --project-card-height: 220px; 
+        --project-card-gap: 30px; 
+
+        --card-1-start-width: 24px;
+        --card-2-start-width: 19px;
+        --card-3-start-width: 23px;
+
+        --card-1-width: 80px;
+        --card-2-width: 92px;
+        --card-3-width: 112px;
+    }
 	.project-titles { margin-bottom: 30px; }
     
     .hm-abt-site-logo { width: 140px; height: 179px; margin: 30px auto; }
@@ -851,12 +907,17 @@
     .design-logo-mob { width: 135px; }
     .rpd-mobile-card .h5 { margin-top: 16px; margin-bottom: 12px; }
 
-    .rpd-mobile-card-1 { height: 306px; }
-    .rpd-mobile-card-2 { height: 267px; }
-    .rpd-mobile-card-3 { height: 229px; }
-    .rpd-mobile-card-4 { height: 344px; }
-    .rpd-mobile-card-5 { height: 200px; }
+    .life-rpd-mobile-card-1 { height: 306px; }
+    .life-rpd-mobile-card-2 { height: 267px; }
+    .life-rpd-mobile-card-3 { height: 229px; }
+    .life-rpd-mobile-card-4 { height: 344px; }
+    .life-rpd-mobile-card-5 { height: 200px; }
     .footer-link-col .services-only-title, .quick-link-only-title, .footer-title p { font-size: 16px; }
+
+    .rpd-mobile-card span { font-size: 32px; line-height: 29px; }
+    .rare-logo-mob { width: 22px; }
+
+    .rare-mobile-text { gap: 3px; }
 }
 
 @media (max-width: 359px) {
