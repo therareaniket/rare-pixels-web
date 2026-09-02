@@ -31,7 +31,7 @@ export default function About() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
 
 	// THEME TRIGGER FUNCTION CALL
-	useThemeTrigger(isSmallScreen);
+	useThemeTrigger();
 
 	useEffect(() => {
 		const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479); };
