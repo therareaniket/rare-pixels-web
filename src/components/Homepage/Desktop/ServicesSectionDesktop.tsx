@@ -23,46 +23,47 @@ export default function ServicesSectionDesktop() {
                 y: 0, 
                 scale: 1,
                 rotate: 0,
+                duration: 1,
                 scrollTrigger: {
                     trigger: '.section-wrapper',
-                    start: 'top 50%',
-                    end: 'top -20%',
-                    scrub: true
-                }
-            });
-
-            gsap.fromTo('.services-development', { y: 700, scale: 1.1, rotate: -10 },  { 
-                y: 0, 
-                scale: 1,
-                rotate: 0,
-                scrollTrigger: {
-                    trigger: '.section-wrapper',
-                    start: 'top 25%',
+                    start: 'top 80%',
                     end: 'top -25%',
                     scrub: true
                 }
             });
 
-            gsap.fromTo('.services-brand-identity', { y: 650, scale: 1.1, rotate: 30 },  { 
+            gsap.fromTo('.services-development', { y: 1200, scale: 1.1, rotate: -10 },  { 
                 y: 0, 
                 scale: 1,
                 rotate: 0,
                 scrollTrigger: {
                     trigger: '.section-wrapper',
-                    start: 'top top',
+                    start: 'top 80%',
                     end: 'top -40%',
                     scrub: true
                 }
             });
 
-            gsap.fromTo('.services-social-media', { y: 700, scale: 1.1, rotate: -30, },   { 
+            gsap.fromTo('.services-brand-identity', { y: 2400, scale: 1.1, rotate: 30 },  { 
+                y: 0, 
+                scale: 1,
+                rotate: 0,
+                scrollTrigger: {
+                    trigger: '.section-wrapper',
+                    start: 'top 80%',
+                    end: 'top -55%',
+                    scrub: true
+                }
+            });
+
+            gsap.fromTo('.services-social-media', { y: 3600, scale: 1.1, rotate: -30, },   { 
                 y: 0,
                 scale: 1,
                 rotate: 0,
                 scrollTrigger: {
                     trigger: '.section-wrapper',
-                    start: 'top -25%',
-                    end: 'top -55%',
+                    start: 'top 80%',
+                    end: 'top -70%',
                     scrub: true
                 }
             });

@@ -65,7 +65,7 @@ export default function ServicesSectionMobile() {
 
     return (
         <>
-            <section className="section services-mobile" style={{ paddingBottom: 0 }}>
+            <section className="section services-mobile" style={{ paddingBottom: 0, overflow: "hidden" }}>
                 <div className="container">
                     <div className="services-mobile-title">
                         <h2 className="text-sb">What Businesses Need. Not Just What We Do.</h2>

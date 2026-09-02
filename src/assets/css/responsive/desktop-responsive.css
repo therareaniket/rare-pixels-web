@@ -1271,18 +1271,6 @@
 	.process-text-wrapper-tablet p { width: 80%; }
 
 
-	/* PROJECTS SECTION */
-	/* :root { --project-card-gap: 2px; }
-	.projects-lists-wrapper { perspective: 1000px; }
-	.projects-lists { transform-style: preserve-3d; transform: translateX(calc(-1 * var(--active-index) * (var(--project-card-width) + var(--project-card-gap)))); background-color: transparent; }
-	.project-list { width: var(--project-card-width); flex-shrink: 0; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease; transform-origin: left center; opacity: 0.6; pointer-events: auto; }
-	.project-list.active { opacity: 1; transform: scale(0.9) rotateY(10deg); position: relative; z-index: 10; left: 10px; pointer-events: auto; }
-	.project-video { border-radius: 10px; } */
-
-	/* .projects-lists-wrapper { margin-left: 100px; } */
-	.projects-lists-wrapper { width: 100vw; }
-
-
 	.footer-links-wrapper { width: 100%; }
 	.footer-links { justify-content: space-between;}
 	.footer-address-wrapper { gap: 30px; width: 320px; }
@@ -1400,7 +1388,8 @@
 	.tree-section-inner { position: static; }
 	.tree-section-desktop { height: max-content; }
 
-	.projects-lists-wrapper { perspective: var(--project-card-width); }
+	
+	/* .projects-lists-wrapper { perspective: var(--project-card-width); }
 	.projects-lists { 
 		transform-style: preserve-3d;
 		transform: translateX(calc(-1 * var(--active-index) * (var(--project-card-width) + var(--project-card-gap))));
@@ -1415,7 +1404,43 @@
 		pointer-events: auto;
 	}
 	.project-list.active { transform: scale(1) rotateY(8deg); pointer-events: auto; position: relative; z-index: 11; }
-	.project-list video, .project-list .project-video { pointer-events: auto; }
+	.project-list video, .project-list .project-video { pointer-events: auto; } */
+
+
+	/* Ensure the wrapper allows 3D hit-testing */
+    .projects-lists-wrapper { 
+        perspective: 1000px; /* Fallback if var(--project-card-width) evaluates dynamically */
+        overflow: visible; /* Prevents 3D clipping issues */
+    }
+
+    .projects-lists { 
+        transform-style: preserve-3d;
+        transform: translateX(calc(-1 * var(--active-index) * (var(--project-card-width) + var(--project-card-gap))));
+    }
+
+    .project-list {
+        width: var(--project-card-width);
+        flex-shrink: 0;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
+        transform-origin: center center; /* Changed from left center to prevent extreme off-screen rotation */
+        transform-style: preserve-3d; /* Required for nested 3D elements */
+        transform: scale(0.9);
+        pointer-events: auto;
+        position: relative;
+    }
+
+    .project-list.active { 
+        /* translateZ brings the element forward so pointer events register properly */
+        transform: scale(1) rotateY(8deg) translateZ(20px); 
+        pointer-events: auto; 
+        position: relative; 
+        z-index: 99; 
+    }
+
+    .project-list video, 
+    .project-list .project-video { 
+        pointer-events: none; /* Prevents video element from capturing/intercepting clicks meant for the parent card */
+    }
 	
 } 
 
