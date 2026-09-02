@@ -43,7 +43,11 @@ export default function AboutTimelineSectionDesktop() {
     const desktopDotRefs = useRef<(HTMLDivElement | null)[]>([]);
     const desktopTargetRef = useRef<HTMLDivElement>(null);
     const movingDotRef = useRef<HTMLDivElement>(null);
+    const [showDesktopContent, setShowDesktopContent] = useState(false);
     const [yearIndex, setYearIndex] = useState(0);
+    const desktopLineRef = useRef<HTMLDivElement>(null);
+
+    const [completedStage, setCompletedStage] = useState(-1);
 
     const updateTabletYear = (index: number) => {
         tabletYearsRef.current.forEach((year) => {
@@ -78,7 +82,9 @@ export default function AboutTimelineSectionDesktop() {
                 });
 
                 const startRect = secondDot.getBoundingClientRect();
-                const endRect = firstDot.getBoundingClientRect();
+                const endRect = desktopTargetRef.current?.getBoundingClientRect();
+
+                if (!endRect) return;
 
                 travelDistance = endRect.left - startRect.left;
             };
@@ -86,25 +92,44 @@ export default function AboutTimelineSectionDesktop() {
             calculateTravelDistance();
 
             const updateDots = (progress: number) => {
+                const firstDotProgress = gsap.utils.clamp(
+                    0,
+                    1,
+                    progress / 0.33
+                );
+
                 const secondDotProgress = gsap.utils.clamp(
                     0,
                     1,
-                    progress / 0.38
+                    (progress - 0.33) / (0.66 - 0.33)
                 );
 
                 const thirdDotProgress = gsap.utils.clamp(
                     0,
                     1,
-                    (progress - 0.38) / (0.76 - 0.38)
+                    (progress - 0.66) / (1 - 0.66)
                 );
 
-                gsap.set(secondDot, {
-                    x: travelDistance * secondDotProgress,
+
+                gsap.to(firstDot, {
+                    x: travelDistance * firstDotProgress,
+                    duration: 1,
+                    ease: "power2.out",
+                    overwrite: true,
                 });
 
-                gsap.set(thirdDot, {
+                gsap.to(secondDot, {
+                    x: travelDistance * secondDotProgress,
+                    duration: 1,
+                    ease: "power2.out",
+                    overwrite: true,
+                });
+
+                gsap.to(thirdDot, {
                     x: travelDistance * thirdDotProgress,
-                    opacity: progress >= 0.38 ? 1 : 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    overwrite: true,
                 });
             };
 
@@ -112,7 +137,7 @@ export default function AboutTimelineSectionDesktop() {
                 trigger: sectionRef.current,
                 start: "top top",
                 end: "+=2000",
-                scrub: 2,
+                scrub: 4,
                 invalidateOnRefresh: true,
 
                 onRefresh: (self) => {
@@ -123,22 +148,88 @@ export default function AboutTimelineSectionDesktop() {
                 onUpdate: (self) => {
                     const progress = self.progress;
 
+                    const firstDotProgress = gsap.utils.clamp(
+                        0,
+                        1,
+                        progress / 0.33
+                    );
+
+                    const secondDotProgress = gsap.utils.clamp(
+                        0,
+                        1,
+                        (progress - 0.33) / (0.66 - 0.33)
+                    );
+
+                    const thirdDotProgress = gsap.utils.clamp(
+                        0,
+                        1,
+                        (progress - 0.66) / (1 - 0.66)
+                    );
+
                     updateDots(progress);
 
-                    let index = 0;
+                    gsap.to(firstDot, {
+                        opacity: progress > 0 ? 1 : 0,
+                        duration: 0.3,
+                    });
 
-                    if (progress >= 0.76) {
-                        index = 2;
-                    } else if (progress >= 0.38) {
-                        index = 1;
+                    gsap.to(secondDot, {
+                        opacity: progress >= 0.33 ? 1 : 0,
+                        duration: 0.3,
+                    });
+
+                    gsap.to(thirdDot, {
+                        opacity: progress >= 0.66 ? 1 : 0,
+                        duration: 0.3,
+                    });
+
+                    const wrapperRect =
+                        firstDot.parentElement?.getBoundingClientRect();
+
+                    if (wrapperRect && desktopLineRef.current) {
+
+                        const firstLeft =
+                            firstDot.getBoundingClientRect().left;
+
+                        const secondLeft =
+                            secondDot.getBoundingClientRect().left;
+
+                        const thirdLeft =
+                            thirdDot.getBoundingClientRect().left;
+
+                        const furthestLeft = Math.max(
+                            firstLeft,
+                            secondLeft,
+                            thirdLeft
+                        );
+
+                        gsap.set(desktopLineRef.current, {
+                            width: furthestLeft - wrapperRect.left,
+                        });
                     }
 
-                    setActiveIndex((previousIndex) =>
-                        previousIndex !== index
-                            ? index
-                            : previousIndex
-                    );
-                },
+                    if (firstDotProgress >= 1 && completedStage < 0) {
+                        setCompletedStage(0);
+
+                        setActiveIndex(0);
+                        setYearIndex(1);
+                        setShowDesktopContent(true);
+                    }
+
+                    if (secondDotProgress >= 1 && completedStage < 1) {
+                        setCompletedStage(1);
+
+                        setActiveIndex(1);
+                        setYearIndex(2);
+                    }
+
+                    if (thirdDotProgress >= 1 && completedStage < 2) {
+                        setCompletedStage(2);
+
+                        setActiveIndex(2);
+                        setYearIndex(0);
+                    }
+                }
             });
 
             return () => {
@@ -267,6 +358,8 @@ export default function AboutTimelineSectionDesktop() {
                 duration: 1,
             }
         );
+
+
     }, [activeIndex]);
 
     return (
@@ -287,48 +380,62 @@ export default function AboutTimelineSectionDesktop() {
 
                         <div className="time-line-hr-wrapper">
                             <div className="timeline-hr"></div>
+                            <div ref={desktopLineRef} className="timeline-desktop-hr"></div>
 
                             <div ref={tabletLineRef} className="timeline-active-hr" ></div>
 
                             <div ref={movingDotRef} className="timeline-dot-active" ></div>
 
                             <div ref={desktopTargetRef} className="desktop-dot-target" ></div>
-                            <div ref={(el) => { desktopDotRefs.current[0] = el; }} className="timeline-dot desktop-timeline-dot active" ></div>
-                            <div ref={(el) => { desktopDotRefs.current[1] = el; }} className={`timeline-dot desktop-timeline-dot ${activeIndex >= 1 ? "reached" : ""}`} ></div>
-                            <div ref={(el) => { desktopDotRefs.current[2] = el; }} className={`timeline-dot desktop-timeline-dot ${activeIndex >= 2 ? "reached" : ""}`} ></div>
+                            <div
+                                ref={(el) => { desktopDotRefs.current[0] = el; }}
+                                className={`timeline-dot desktop-timeline-dot ${showDesktopContent ? "reached" : ""
+                                    }`}
+                            />
+                            <div
+                                ref={(el) => { desktopDotRefs.current[1] = el; }}
+                                className={`timeline-dot desktop-timeline-dot ${activeIndex >= 1 ? "reached" : ""
+                                    }`}
+                            />
+
+                            <div
+                                ref={(el) => { desktopDotRefs.current[2] = el; }}
+                                className={`timeline-dot desktop-timeline-dot ${activeIndex >= 2 ? "reached" : ""
+                                    }`}
+                            />
                         </div>
 
                         <div className="abt-timeline-desktop-wrapper">
                             <div className="abt-timeline-desktop-date">
                                 <span className="h3 abt-timeline-titledate text-sb active">
-                                    {activeIndex < timelineData.length - 1
-                                        ? timelineData[activeIndex + 1].year
-                                        : timelineData[0].year}
+                                    {timelineData[yearIndex].year}
                                 </span>
                             </div>
 
-                            <div className="abt-timeline-content-wrapper">
-                                <div ref={imageRef} className="abt-timeline-content-left">
-                                    <Image src={timelineData[activeIndex].image} alt="timeline-img" width={291} height={278}></Image>
+                            {showDesktopContent && (
+                                <div className="abt-timeline-content-wrapper">
+                                    <div ref={imageRef} className="abt-timeline-content-left">
+                                        <Image src={timelineData[activeIndex].image} alt="timeline-img" width={291} height={278}></Image>
 
-                                </div>
+                                    </div>
 
-                                <div ref={contentRef} className="abt-timeline-content-right">
-                                    <span className="text-sb text-white">
-                                        {timelineData[activeIndex].year}
-                                    </span>
+                                    <div ref={contentRef} className="abt-timeline-content-right">
+                                        <span className="text-sb text-white">
+                                            {timelineData[activeIndex].year}
+                                        </span>
 
-                                    <div className="timeline-content">
-                                        <h6 className="text-sb text-upper-case text-white">
-                                            {timelineData[activeIndex].title}
-                                        </h6>
+                                        <div className="timeline-content">
+                                            <h6 className="text-sb text-upper-case text-white">
+                                                {timelineData[activeIndex].title}
+                                            </h6>
 
-                                        <p className="text-18 text-rg text-light-grey">
-                                            {timelineData[activeIndex].description}
-                                        </p>
+                                            <p className="text-18 text-rg text-light-grey">
+                                                {timelineData[activeIndex].description}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
 
 

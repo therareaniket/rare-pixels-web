@@ -16,8 +16,9 @@
 		--card-2-mt: 0px;
     	--card-3-mt: 0px;
 
-		--card-2-start-width: 50px;
-    	--card-3-start-width: 62px;
+    --card-1-start-width: 51px;
+    --card-2-start-width: 49px;
+    --card-3-start-width: 62px;
 
     	--card-2-width: 245px;
 
@@ -40,6 +41,9 @@
 	h6, .h6{ font-size: 22px; line-height: 30px; }
 
 	.text-20{ font-size: 18px; line-height: 26px; }
+
+	.abt-rpd-card-1 { width: 51px; }
+	.abt-rpd-card-2 { width: 50px; }
 
 	.hm-services-content-wrapper .h6{ font-size: 20px; line-height: 28px; }
 	.hm-services-content-wrapper{ width: 420px; }
@@ -234,6 +238,8 @@
 	.abt-rpd-card span { font-size: 86px; line-height: 80px; }
 	.rare-logo { width: 60px; }
 	.abt-card-text h2 { margin-top: 30px; }
+
+	.abt-timeline-title-right { width: 445px; }
 }
 
 @media (max-width: 1599px) {
@@ -487,7 +493,9 @@
 
 	.abt-rpd-card span { font-size: 78px; line-height: 70px; }
 	.rare-logo { width: 55px; }
-	.abt-rpd-card { width: 337px; }
+	.abt-rpd-card-1 { width: 51px; }
+	.abt-rpd-card-2 { width: 45px; }
+	.abt-rpd-card-3 { width: 55px; }
 
 	.rpd-pixel-right, .rpd-pixel-left { width: 120px; }
 
@@ -505,7 +513,7 @@
 	.why-rare-title-desktop { width: 620px; }
 
 	.tree-section-inner { top: -80px; }
-
+	.abt-timeline-title-right { width: 490px; }
 }
 
 @media (max-width: 1439px) {
@@ -690,7 +698,7 @@
 	.about-hero-section-title p { width: 395px; }
 
 	.abt-timeline-content-right { width: 445px; }
-	.timeline-dot.active { right: 360px; }
+	.desktop-dot-target { right: 340px; }
 	.timeline-hr { margin-bottom: 30px; margin-top: 40px; }
 	.abt-timeline-content-right span  { font-size: 68px; line-height: 74px; }
 	.abt-timeline-title-right { width: 370px; }
@@ -729,7 +737,8 @@
 
 	.abt-card-text h2 { font-size: 22px; line-height: 30px; margin: 15px 0; }
 
-	.abt-rpd-card { width: 287px; }
+	.abt-rpd-card-1 { width: 45px; }
+	.abt-rpd-card-3 { width: 53px; }
 
 	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 350px; height: 344px; }
 	.rpd-card-2 { width: 350px; height: 303px; }
@@ -971,7 +980,10 @@
 	.why-rare-desktop-content { margin-top: 70px; }
 
 	.abt-card-text h2 { font-size: 20px; }
-	.abt-rpd-card { width: 260px; }
+	.abt-rpd-card-1 { width: 40px; }
+	.abt-rpd-card-2 { width: 40px; }
+	.abt-rpd-card-3 { width: 46px; }
+
 	.abt-rpd-card span { font-size: 66px; line-height: 56px; }
 	.rare-logo { width: 46px; }
 	.rpd-card-title-1 { gap: 5px; }

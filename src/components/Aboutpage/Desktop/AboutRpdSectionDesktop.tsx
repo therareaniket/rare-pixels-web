@@ -46,33 +46,33 @@ export default function AboutRpdSectionDesktop() {
                 scale: 1,
             }, 0)
 
-                .fromTo(".abt-rpd-card-1",
-                    {
-                        width: css.getPropertyValue("--card-1-start-width")
-                    },
-                    {
-                        width: css.getPropertyValue("--card-1-width")
-                    }, 1)
+                // .fromTo(".abt-rpd-card-1",
+                //     {
+                //         width: css.getPropertyValue("--card-1-start-width")
+                //     },
+                //     {
+                //         width: css.getPropertyValue("--card-1-width")
+                //     }, 1)
 
-                .fromTo(".abt-rpd-card-2",
-                    {
-                        width: css.getPropertyValue("--card-2-start-width"),
-                        marginTop: css.getPropertyValue("--card-2-start-mt")
-                    },
-                    {
-                        width: css.getPropertyValue("--card-2-width"),
-                        marginTop: css.getPropertyValue("--card-2-mt")
-                    }, 1)
+                // .fromTo(".abt-rpd-card-2",
+                //     {
+                //         width: css.getPropertyValue("--card-2-start-width"),
+                //         marginTop: css.getPropertyValue("--card-2-start-mt")
+                //     },
+                //     {
+                //         width: css.getPropertyValue("--card-2-width"),
+                //         marginTop: css.getPropertyValue("--card-2-mt")
+                //     }, 1)
 
-                .fromTo(".abt-rpd-card-3",
-                    {
-                        width: css.getPropertyValue("--card-3-start-width"),
-                        marginTop: css.getPropertyValue("--card-3-start-mt")
-                    },
-                    {
-                        width: css.getPropertyValue("--card-3-width"),
-                        marginTop: css.getPropertyValue("--card-3-mt")
-                    }, 1)
+                // .fromTo(".abt-rpd-card-3",
+                //     {
+                //         width: css.getPropertyValue("--card-3-start-width"),
+                //         marginTop: css.getPropertyValue("--card-3-start-mt")
+                //     },
+                //     {
+                //         width: css.getPropertyValue("--card-3-width"),
+                //         marginTop: css.getPropertyValue("--card-3-mt")
+                //     }, 1)
 
                 .to(".abt-rpd-card", {
                     width: css.getPropertyValue("--card-final-width")
@@ -240,8 +240,8 @@ export default function AboutRpdSectionDesktop() {
                         <div className="about-rpd-desktop-content-wrapper">
                             <div className="abt-rpd-card abt-rpd-card-1">
                                 <div className="rpd-card-title-1">
-                                    <Image className="rare-logo" src="/images/aboutpage/about-rpd/rare.svg" alt="rare" width={55} height={68}></Image>
-                                    <span className="text-pop-sb text-white">are</span>
+                                    {/* <Image className="rare-logo" src="/images/aboutpage/about-rpd/rare.svg" alt="rare" width={55} height={68}></Image> */}
+                                    <span className="text-pop-sb text-white">Rare</span>
                                 </div>
 
                                 <div className="abt-card-text">

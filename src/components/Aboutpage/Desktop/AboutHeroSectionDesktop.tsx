@@ -32,7 +32,9 @@ export default function AboutHeroSectionDesktop() {
             //     0
             // )
 
-             tl.to(
+
+
+            tl.to(
                 ".abt-hero-video",
                 {
                     height: "var(--abt-hero-target-height)",
@@ -40,10 +42,21 @@ export default function AboutHeroSectionDesktop() {
                     duration: 2,
                     ease: "none",
                 },
-                ">"
+                0
             )
+                .fromTo(
+                    ".about-video-text-practice",
+                    {
+                        opacity: 0,
+                    },
+                    {
+                        opacity: 1,
+                        duration: 1.6, // 80% of video animation
+                        ease: "none",
+                    },
+                    0.4 // starts after 20% (0.4 / 2 = 20%)
+                );
 
-            .to({}, { duration: 1 });
         },
         { scope: containerRef }
     );

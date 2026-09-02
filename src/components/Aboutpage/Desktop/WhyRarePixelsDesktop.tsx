@@ -44,41 +44,49 @@ export default function WhyRarePixelsDesktop() {
 
             tl.to({}, { duration: 2 });
 
-            tl.set(".why-rare-point-1", {
+            tl.to(".why-rare-point-1", {
                 opacity: 1,
-            });
+                duration: 0.3,
+            }, ">");
 
             tl.to(".why-rare-point-1 .card-reveal", {
-                xPercent: -200,
-                duration: 5,
-            });
+                xPercent: -100,
+                duration: 4,
+                ease: "power2.inOut",
+            }, "<");
 
-            tl.set(".why-rare-point-2", {
+            tl.to(".why-rare-point-2", {
                 opacity: 1,
-            });
+                duration: 0.3,
+            }, ">");
 
             tl.to(".why-rare-point-2 .card-reveal", {
-                xPercent: 200,
-                duration: 5,
-            });
+                xPercent: 100,
+                duration: 4,
+                ease: "power2.inOut",
+            }, "<");
 
-            tl.set(".why-rare-point-3", {
+            tl.to(".why-rare-point-3", {
                 opacity: 1,
-            });
+                duration: 0.3,
+            }, ">");
 
             tl.to(".why-rare-point-3 .card-reveal", {
-                xPercent: -200,
-                duration: 5,
-            });
+                xPercent: -100,
+                duration: 4,
+                ease: "power2.inOut",
+            }, "<");
 
-            tl.set(".why-rare-point-4", {
+            tl.to(".why-rare-point-4", {
                 opacity: 1,
-            });
+                duration: 0.3,
+            }, ">");
 
             tl.to(".why-rare-point-4 .card-reveal", {
-                xPercent: 200,
-                duration: 5,
-            });
+                xPercent: 100,
+                duration: 4,
+                ease: "power2.inOut",
+            }, "<");
         });
 
         mm.add("(max-width: 1199px)", () => {
