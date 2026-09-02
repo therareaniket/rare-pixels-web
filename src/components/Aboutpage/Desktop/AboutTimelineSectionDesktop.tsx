@@ -43,6 +43,7 @@ export default function AboutTimelineSectionDesktop() {
     const desktopDotRefs = useRef<(HTMLDivElement | null)[]>([]);
     const desktopTargetRef = useRef<HTMLDivElement>(null);
     const movingDotRef = useRef<HTMLDivElement>(null);
+    const [yearIndex, setYearIndex] = useState(0);
 
     const updateTabletYear = (index: number) => {
         tabletYearsRef.current.forEach((year) => {

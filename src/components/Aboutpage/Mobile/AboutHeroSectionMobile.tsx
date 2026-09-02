@@ -1,69 +1,73 @@
 "use client";
 
-import "@/assets/css/mobile-custom.css";
-import "@/assets/css/responsive/mobile-responsive.css";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import "@/assets/css/desktop-custom.css";
+import "@/assets/css/responsive/desktop-responsive.css";
+
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function AboutHeroSectionMobile() {
+    const containerRef = useRef(null);
+
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                },
+            });
+
+            // tl.fromTo(
+            //     ".about-hero-section-title",
+            //     { y: 100, opacity: 0 },
+            //     { y: 0, opacity: 1, duration: 1, ease: "power1.out" },
+            //     0
+            // )
+
+            tl.to(
+                ".abt-hero-video",
+                {
+                    height: "var(--abt-hero-target-height)",
+                    opacity: 0,
+                    duration: 2,
+                    ease: "none",
+                },
+                ">"
+            )
+
+                .to({}, { duration: 1 });
+        },
+        { scope: containerRef }
+    );
+
     return (
-        <>
-            <section id="first-section" className="about-hero-section-mobile">
+        <section ref={containerRef} id="first-section" className="about-hero-section-desktop">
+            <div className="about-hero-inner">
                 <div className="container">
-                    <div className="section">
-                        <div className="about-mobile-title-wrapper">
+                    <div className="about-section section">
+                        <div className="about-hero-section-title">
                             <h1 className="text-sb">
                                 The People, Purpose, and Principles Behind RarePixels.
                             </h1>
 
-                            <p className="text-rg text-16">
-                                <span>RarePixels is more than a creative agency. It&apos;s a collective of thinkers, creators, and problem-solvers united by a passion for meaningful work. Through collaboration, innovation, and a commitment to excellence, we help transform ideas into experiences that leave a lasting impression.</span>
-
-                                <span>We believe that great work is built on strong partnerships, shared vision, and a genuine understanding of the people behind every brand. By bringing together diverse perspectives and expertise, we create solutions that are not only visually compelling but also purposeful, strategic, and designed to deliver long-term value.</span>
+                            <p className="text-16 text-rg">
+                                <span>
+                                    RarePixels is more than a creative agency. It&apos;s a collective of thinkers, creators, and problem-solvers united by a passion for meaningful work. Through collaboration, innovation, and a commitment to excellence, we help transform ideas into experiences that leave a lasting impression.
+                                </span>
+                                <span>
+                                    We believe that great work is built on strong partnerships, shared vision, and a genuine understanding of the people behind every brand. By bringing together diverse perspectives and expertise, we create solutions that are not only visually compelling but also purposeful, strategic, and designed to deliver long-term value.
+                                </span>
                             </p>
                         </div>
                     </div>
-
-                    {/* <div className="about-hero-mask-title text-extra-bold">
-                        <svg
-                            viewBox="0 0 1600 500"
-                            className="about-text-mask"
-                        >
-                            <defs>
-                                <mask id="video-text-mask-mobile">
-                                    <rect width="100%" height="100%" fill="black" />
-
-                                    <text
-                                        x="50%"
-                                        y="50%"
-                                        dominantBaseline="middle"
-                                        textAnchor="middle"
-                                        fill="white"
-                                        className="mask-text"
-                                    >
-                                        ABOUT US
-                                    </text>
-                                </mask>
-                            </defs>
-
-                            <foreignObject
-                                width="100%"
-                                height="100%"
-                                mask="url(#video-text-mask-mobile)"
-                            >
-                                <video
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className="masked-video"
-                                >
-                                    <source
-                                        src="/images/aboutpage/about-hero/rare-second-anniversary.mp4"
-                                        type="video/mp4"
-                                    />
-                                </video>
-                            </foreignObject>
-                        </svg>
-                    </div> */}
 
                     <div className="about-video-text-practice">
                         <div className="town">
@@ -73,8 +77,14 @@ export default function AboutHeroSectionMobile() {
                             <h2 className="text-extra-bold">ABOUT US</h2>
                         </div>
                     </div>
+
+                    <div className="abt-hero-video">
+                        <video autoPlay playsInline muted loop>
+                            <source src="/images/aboutpage/about-hero/rare-second-anniversary.mp4" />
+                        </video>
+                    </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 }
