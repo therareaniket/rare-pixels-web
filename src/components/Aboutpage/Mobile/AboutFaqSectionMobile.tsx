@@ -10,7 +10,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Footer from "@/components/global/Footer";
 
 const faqs = [
   {
@@ -207,8 +206,6 @@ export default function AboutFaqSectionMobile() {
 
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

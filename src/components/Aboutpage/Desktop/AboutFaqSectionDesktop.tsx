@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
-import Footer from "@/components/global/Footer";
 
 const faqs = [
     {
@@ -208,8 +207,6 @@ export default function AboutFaqSectionDesktop() {
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </>
     );
 }

@@ -45,11 +45,14 @@
 
 
     /* THEME COLOR SETUP */
-    --theme-navy-bg: #040E36;
-  	--theme-navy-text: #FFFFFF;
-
   	--theme-white-bg: #FFFFFF;
   	--theme-white-text: #000000;
+
+    --theme-black-bg: #000000;
+    --theme-black-text: #FFFFFF;
+
+    --theme-navy-bg: #040E36;
+  	--theme-navy-text: #FFFFFF;
 
   	--theme-light-yellow-bg: #F7F2EC;
   	--theme-light-yellow-text: #000000;
@@ -57,8 +60,6 @@
   	--theme-mid-yellow-bg: #FBF9E9;
   	--theme-mid-yellow-text: #000000;
 
-    --theme-black-bg: #000000;
-    --theme-black-text: #FFFFFF;
 
 
 
@@ -388,8 +389,23 @@ h6, .h6 { font-size: 22px; line-height: 32px; margin-bottom: 16px; }
 
 body { transition: background-color 1s ease-in-out, color 1s ease-in-out; }
 
-body[data-theme="navy"] { background-color: var(--theme-navy-bg); color: var(--theme-navy-text); }
 body[data-theme="white"] { background-color: var(--theme-white-bg); color: var(--theme-white-text); }
+body[data-theme="black"] { background-color: var(--theme-black-bg); color: var(--theme-black-text); }
+body[data-theme="navy"] { background-color: var(--theme-navy-bg); color: var(--theme-navy-text); }
 body[data-theme="light-yellow"] { background-color: var(--theme-light-yellow-bg); color: var(--theme-light-yellow-text); }
 body[data-theme="mid-yellow"] { background-color: var(--theme-mid-yellow-bg); color: var(--theme-mid-yellow-text); }
-body[data-theme="black"] { background-color: var(--theme-black-bg); color: var(--theme-black-text); }
+
+
+
+body[data-theme="white"] { --theme-bg: var(--theme-white-bg); }
+body[data-theme="black"] { --theme-bg: var(--theme-black-bg); }
+body[data-theme="navy"] { --theme-bg: var(--theme-navy-bg); }
+body[data-theme="light-yellow"] { --theme-bg: var(--theme-light-yellow-bg); }
+body[data-theme="mid-yellow"] { --theme-bg: var(--theme-mid-yellow-bg); }
+
+.industries-desktop-pixel-1,
+.industries-desktop-pixel-2,
+.industries-desktop-pixel-3 {
+  color: var(--theme-bg, currentColor);
+  transition: color 1s ease-in-out;
+}

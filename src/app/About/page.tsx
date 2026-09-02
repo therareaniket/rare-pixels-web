@@ -24,9 +24,14 @@ import AboutRpdSectionMobile from "../../components/Aboutpage/Mobile/AboutRpdSec
 import AboutLifeAtRpdSectionDesktop from "@/components/Aboutpage/Desktop/AboutLifeAtRpdSectionDesktop";
 import AboutLifeAtRpdSectionMobile from "@/components/Aboutpage/Mobile/AboutLifeAtRpdSectionMobile";
 import ScrollToTopButton from "@/components/global/ScrollToTopButton";
+import Footer from "@/components/global/Footer";
+import { useThemeTrigger } from "@/hooks/useThemeTrigger";
 
 export default function About() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
+
+	// THEME TRIGGER FUNCTION CALL
+	useThemeTrigger(isSmallScreen);
 
 	useEffect(() => {
 		const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479); };
@@ -45,29 +50,91 @@ export default function About() {
 
 				{/* DESKTOP */}
 				<div className="hidden min-[480px]:block">
-					<AboutHeroSectionDesktop />
-					<AboutTimelineSectionDesktop />
-					<AboutMissionVisionDesktop />
-					<AboutRpdSectionDesktop />
-					<AboutOurValuesSectionDesktop />
-					<AboutTeamsSectionDesktop />
-					<WhyRarePixelsDesktop />
-					<AboutLifeAtRpdSectionDesktop />
-					<AboutFaqSectionDesktop />
+					<div data-theme-color="white">
+						<AboutHeroSectionDesktop />
+					</div>
+					
+					<div data-theme-color="navy">
+						<AboutTimelineSectionDesktop />
+					</div>
+					
+					<div data-theme-color="white">
+						<AboutMissionVisionDesktop />
+					</div>
+	
+					<div data-theme-color="black">
+						<AboutRpdSectionDesktop />
+					</div>
+
+					<div data-theme-color="white">
+						<AboutOurValuesSectionDesktop />
+					</div>
+	
+					<div data-theme-color="white">
+						<AboutTeamsSectionDesktop />
+					</div>
+	
+					<div data-theme-color="navy">
+						<WhyRarePixelsDesktop />
+					</div>
+		
+					<div data-theme-color="white">
+						<AboutLifeAtRpdSectionDesktop />
+					</div>
+	
+					<div data-theme-color="white">
+						<AboutFaqSectionDesktop />
+					</div>
+
+					<div data-theme-color="navy">
+						<Footer />
+					</div>
+					
 					<ScrollToTopButton />
 				</div>
 
 				{/* MOBILE */}
 				<div className="block min-[480px]:hidden">
-					<AboutHeroSectionMobile />
-					<AboutTimelineSectionMobile />
-					<AboutMissionVisionMobile />
-					<AboutRpdSectionMobile />
-					<AboutOurValuesSectionMobile />
-					<AboutTeamsSectionMobile />
-					<WhyRarePixelsMobile />
-					<AboutLifeAtRpdSectionMobile />
-					<AboutFaqSectionMobile />
+					<div data-theme-color="white">
+						<AboutHeroSectionMobile />
+					</div>
+		
+					<div data-theme-color="navy">
+						<AboutTimelineSectionMobile />
+					</div>
+	
+					<div data-theme-color="white">
+						<AboutMissionVisionMobile />
+					</div>
+	
+					<div data-theme-color="black">
+						<AboutRpdSectionMobile />
+					</div>
+	
+					<div data-theme-color="white">
+						<AboutOurValuesSectionMobile />
+					</div>
+		
+					<div data-theme-color="white">
+						<AboutTeamsSectionMobile />
+					</div>
+	
+					<div data-theme-color="navy">
+						<WhyRarePixelsMobile />
+					</div>
+	
+					<div data-theme-color="white">
+						<AboutLifeAtRpdSectionMobile />
+					</div>
+	
+					<div data-theme-color="white">
+						<AboutFaqSectionMobile />
+					</div>
+
+					<div data-theme-color="navy">
+						<Footer />
+					</div>
+					
 					<ScrollToTopButton />
 				</div>
 			</main>
