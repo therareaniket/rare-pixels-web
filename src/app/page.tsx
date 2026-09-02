@@ -85,7 +85,7 @@ export default function Home() {
 						<StatsSectionDesktop/>
 					</div>
 
-					<div data-theme-color="white">
+					<div data-theme-color="navy">
 						<BlogSectionDesktop />
 					</div>
 
@@ -105,18 +105,55 @@ export default function Home() {
 
 				{/* MOBILE */}
 				<div className="block min-[480px]:hidden">
-					<TestimonialSectionMobile />
-					<AboutSectionMobile />
-					<ServicesSectionMobile />
-					<IndustriesSectionMobile />
-					<WhyChooseUsSectionMobile />
-					<ProcessSectionMobile />
-					<ProjectsSectionDesktop />
-					<StatsSectionMobile />
-					<BlogSectionMobile />
-					<FaqSectionMobile />
-					<InquirySectionMobile />
+					<div data-theme-color="white">
+						<TestimonialSectionMobile />
+					</div>
+
+					<div data-theme-color="navy">
+						<AboutSectionMobile />
+					</div>
+
+					<div data-theme-color="white">
+						<ServicesSectionMobile />
+					</div>
+
+					<div data-theme-color="light-yellow">
+						<IndustriesSectionMobile />
+					</div>
+
+					<div data-theme-color="black">
+						<WhyChooseUsSectionMobile />
+					</div>
+	
+					<div data-theme-color="mid-yellow">
+						<ProcessSectionMobile />
+					</div>
+
+					<div data-theme-color="white">
+						<ProjectsSectionDesktop />
+					</div>
+	
+					<div data-theme-color="navy">
+						<StatsSectionMobile />
+					</div>
+
+					<div data-theme-color="navy">
+						<BlogSectionMobile />
+					</div>
+
+					<div data-theme-color="white">
+						<FaqSectionMobile />
+					</div>
+	
+					<div data-theme-color="mid-yellow">
+						<InquirySectionMobile />
+					</div>
+					
 					<ScrollToTopButton />
+					
+					<div data-theme-color="navy">
+						<Footer />
+					</div>
 				</div>
 			</main>
 		</>

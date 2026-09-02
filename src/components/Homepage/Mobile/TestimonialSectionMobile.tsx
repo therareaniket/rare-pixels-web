@@ -104,28 +104,12 @@ export default function TestimonialSectionMobile() {
                         <div className="hm-testimonial-mob-text">
                             <h2 className="text-sb">Proof Over Promises </h2>
 
-                            <p className="text-16 text-rg text-grey">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
+                            <p className="text-16 text-rg">Anybody can talk about creativity. Our clients tell the story better. Behind every successful outcome is a partnership built on trust, collaboration, and shared ambition.</p>
                         </div>
 
                         <div className="testimonial-client-video-wrapper">
                             <div className="testimonial-client-video">
-                                <video
-                                    className="testimonial-video site-radius-10"
-                                    // src="/images/homepage/testimonialvideos/dummy-1.mp4"
-                                    // src={videos[activeVideoIndex]}
-                                    ref={mainVideoRef}
-                                    width={480}
-                                    height={480}
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    preload="true"
-                                    webkit-playsinline="true"
-                                    // onClick={handleFullscreen}
-                                    onClick={() => handleFullscreen(videos[activeVideoIndex])}
-                                >
-                                </video>
+                                <video className="testimonial-video site-radius-10" ref={mainVideoRef} width={480} height={480} autoPlay muted loop playsInline preload="true" webkit-playsinline="true" onClick={() => handleFullscreen(videos[activeVideoIndex])}></video>
 
                                 {isTransitioning && (
                                     <div className="pixel-overlay">
@@ -145,35 +129,16 @@ export default function TestimonialSectionMobile() {
                             </div>
                         </div>
 
-                        <Swiper
-                            modules={[Autoplay]}
-                            spaceBetween={20}
-                            slidesPerView={1.2}
-                            loop={true}
-                            speed={2200}
-                            autoplay={{ delay: 4000 }}
-                            allowTouchMove={true}
-                            grabCursor={true}
-                            simulateTouch={true}
-                            threshold={10}
-                            resistance={true}
-                            resistanceRatio={0.85}
-                            shortSwipes={true}
-                            longSwipes={true}
-                            longSwipesRatio={0.4}
-
-                            onSwiper={(swiper) => {
-                                swiperRef.current = swiper;
-                            }}
+                        <Swiper modules={[Autoplay]} spaceBetween={20} slidesPerView={1.2} loop={true} speed={2200} autoplay={{ delay: 4000 }} allowTouchMove={true} grabCursor={true} simulateTouch={true} threshold={10} resistance={true} resistanceRatio={0.85} shortSwipes={true} longSwipes={true} longSwipesRatio={0.4}
+                            onSwiper={(swiper) => { swiperRef.current = swiper; }}
                             className="testimonial-mobile-swiper"
-                            breakpoints={{
-                                0: { slidesPerView: 1.2 },
-                            }}
-                        >
+                            breakpoints={{ 0: { slidesPerView: 1.2 }, }} >
+
                             <SwiperSlide>
                                 <div className="hm-testimonial-mobile-card">
                                     <div className="text-rg text-16 hm-testimonial-card hm-testimonial-card-1">
                                         <p className="text-16 text-rg">Working with RarePixels over the last six months has been a consistently smooth and impressive experience. They have designed multiple digital products for us, and each one reflects deep understanding, creativity, and attention to detail. My recent visit to RarePixels left me genuinely impressed with the team, their culture, and the clarity behind their work. RarePixels has been handling all our UI/UX requirements with exceptional professionalism. Based on my experience so far, I look forward to exploring more of their services in the future.</p>
+                                        
                                         <div className="testimonial-stars">
                                             {Array.from({ length: 5 }).map((_, index) => (
                                                 <Image key={index} src={`${CDN_URL}/images/homepage/testimonialvideos/testimonial-star.svg`} alt="testimonial-review-star" width={24} height={24}></Image>
@@ -295,26 +260,13 @@ export default function TestimonialSectionMobile() {
             </section>
 
             {selectVideo && (
-                <div
-                    className="video-overlay"
-                    onClick={() => setSelectVideo(null)}
-                >
-                    <video
-                        src={selectVideo}
-                        className="video-fullscreen"
-                        loop
-                        autoPlay
-                        controls
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                    </video>
-                    <button
-                        className="video-close-btn"
-                        onClick={(e) => {
+                <div className="video-overlay" onClick={() => setSelectVideo(null)} >
+                    <video src={selectVideo} className="video-fullscreen" loop autoPlay controls onClick={(e) => e.stopPropagation()}></video>
+                    <button className="video-close-btn" onClick={(e) => {
                             e.stopPropagation();
                             setSelectVideo(null);
-                        }}
-                    >
+                        }}>
+                            
                         <span>✕</span>
                     </button>
                 </div>

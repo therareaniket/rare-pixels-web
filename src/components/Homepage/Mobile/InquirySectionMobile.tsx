@@ -9,7 +9,7 @@ import Footer from "@/components/global/Footer";
 export default function InquirySectionMobile() {
     return (
         <>
-            <section className="section-yellow-background section">
+            <section className="section">
                 <div className="container">
                     <h2 className="text-sb">Project Inquiry Form</h2>
 
@@ -82,7 +82,7 @@ export default function InquirySectionMobile() {
                 </div>
             </section>
 
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

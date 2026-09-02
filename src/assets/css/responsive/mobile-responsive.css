@@ -10,8 +10,9 @@
 
 @media (max-width: 479px) {
     :root { 
-        --project-card-height: 280px; 
-        --project-card-gap: 30px; 
+        --project-card-width: 340px; 
+        --project-card-gap: 20px; }
+    .project-video { height: 240px; 
 
         --card-1-start-width: 34px;
         --card-2-start-width: 29px;
@@ -19,6 +20,7 @@
     }
 	.project-list { border-radius: 20px; }
     .project-list.active { box-shadow: none; }
+    .process-section-inner { padding: 0; }
 
 
     .container { width: 100%; max-width: 100%; padding: 0 18px; }  
@@ -93,6 +95,10 @@
     .testimonial-swiper-left:hover .testimonial-arrow{ fill: var(--primary); }
     .testimonial-swiper-right:hover .testimonial-arrow{ fill: var(--primary); }
 
+    /* STATS SECTION */
+	.custom-pie-container { width: 180px; height: 180px; }
+	.custom-radar-container { width: 210px; height: 210PX; }
+
     .testimonial-stats{ width: 90px; }
 
     .client-initial-1{ background-color: var(--testimonial-card-1); }
@@ -165,20 +171,15 @@
         box-shadow: inset 0 -50px 36px -8px rgb(0, 0, 0);
         /* background-color: red; */
     }
-    .why-semicircle-1{ width: 71px; height: 71px;  }
-    .why-semicircle-2{ width: 115px; height: 115px; }
-    .why-semicircle-3{ width: 159px; height: 159px; }
-    .why-semicircle-4{ width: 203px; height: 203px; }
-    .why-semicircle-5{ width: 248px; height: 248px; }
-    .why-semicircle-6{ width: 292px; height: 292px; }
-    .why-semicircle-7{ width: 334px; height: 334px; }
-    .why-semicircle-8{ width: 379px; height: 379px; }
-    .why-semicircle-9{ width: 424px; height: 424px; }
-
+    
+    
     .why-semicircle{ position: absolute; left: 50%; transform: translateX(-50%); opacity: 100%; z-index: -1; }
     .why-choose-us-hand-image{ position: absolute; bottom: -5px; z-index: -1; }
-    .why-choose-us-hand-image img{ width: 200px; }
-
+    .wc-bg-lines { height: 140%; }
+    .why-choose-hand { width: 160px; }
+    .why-choose-us-image-wrapper { height: 258px; }
+    
+    
     .why-pointers-mob h3{ margin-bottom: 14px; }
     .why-choose-mob-pointer-wrapper{ display: flex; flex-direction: column; gap: 20px; }
     .why-pointers-mob{ padding-bottom: 20px; border-bottom: 1px solid #313131; }
@@ -518,8 +519,8 @@
 
     .rare-tree-mobile { width: 100%; }
 
-    .timeline-mobile-sticky { height: 350vh; }
-    .timeline-mobile-inner { position: sticky; top: 0; height: max-content; overflow: hidden; }
+    .timeline-mobile-sticky { height: 300vh; }
+    .timeline-mobile-inner { position: sticky; top: 50px; height: max-content; overflow: hidden; }
 
     .timeline-hr-mobile { position: relative; }
     .timeline-active-hr { width: 6%; height: 1px; background: var(--primary); position: absolute; top: 0; left: 0; }
@@ -527,6 +528,16 @@
 
     .why-rare-mobile-tree { overflow: hidden; }
     .tree-reveal { clip-path: inset(100% 0 0 0); }
+}
+
+@media (max-width: 439px) {
+    .project-list { border-radius: 14px; }
+
+    :root { --project-card-width: 330px; --project-card-gap: 20px; }
+    .project-video { height: 220px; }
+
+    .projects-lists { margin-top: 0px; }
+    
 
     .about-video-text-practice { position: relative; overflow: hidden;  width: 100% !important; height: 130px; }
 
@@ -635,18 +646,11 @@
     .testimonial-stars-mobile img{ width: 16px; height: 16px; }
     .testimonial-stars-mobile{ gap: 4px; margin-top: 12px; }
 
-    .why-semicircle-1{ width: 40px; height: 40px; }
-    .why-semicircle-2{ width: 80px; height: 80px; }
-    .why-semicircle-3{ width: 120px; height: 120px; }
-    .why-semicircle-4{ width: 160px; height: 160px; }
-    .why-semicircle-5{ width: 200px; height: 200px; }
-    .why-semicircle-6{ width: 240px; height: 240px; }
-    .why-semicircle-7{ width: 280px; height: 280px; }
-    .why-semicircle-8{ width: 320px; height: 320px; }
-    .why-semicircle-9{ width: 360px; height: 360px; }
-
     .why-choose-us-semi-circles{ height: 255px;}
     .why-choose-us-hand-image{ width: 155px; }
+    .why-choose-hand { width: 150px; }
+    .wc-bg-lines { height: 142%; }
+    .why-choose-us-image-wrapper { height: 240px; }
 
     .why-pointers-mob h3{ margin-bottom: 10px; }
     .why-choose-mob-pointer-wrapper{ gap: 15px; }
@@ -665,6 +669,10 @@
     .footer-quote-right h2 { font-size: 48px; line-height: 56px; }
     .footer-links { justify-content: start; }
     .footer-quote-right p { margin-bottom: 20px; }
+
+    /* STATS SECTION */
+	.custom-pie-container { width: 160px; height: 160px; }
+	.custom-radar-container { width: 180px; height: 180PX; }
 
     /* process */
 
@@ -700,9 +708,10 @@
 }
 
 @media (max-width: 400px) {
-    :root { --project-card-height: 250px; --project-card-gap: 30px; }
-	.project-list { border-radius: 10px; }
     .active-project-title { left: 0; }
+
+    :root { --project-card-width: 300px; --project-card-gap: 16px; }
+    .project-video { height: 200px; }
 
     .container { width: 100%; max-width: 100%; }  
     .section   { padding: 40px 0px; }
@@ -749,15 +758,9 @@
 
     .services-mobile-text-wrapper{ padding: 14px; }
 
-    .why-semicircle-1{ width: 40px; height: 40px; }
-    .why-semicircle-2{ width: 80px; height: 80px; }
-    .why-semicircle-3{ width: 80px; height: 80px; }
-    .why-semicircle-4{ width: 120px; height: 120px; }
-    .why-semicircle-5{ width: 160px; height: 160px; }
-    .why-semicircle-6{ width: 200px; height: 200px; }
-    .why-semicircle-7{ width: 240px; height: 240px; }
-    .why-semicircle-8{ width: 270px; height: 270px; }
-    .why-semicircle-9{ width: 310px; height: 310px; }
+    .why-choose-hand { width: 140px; }
+    .why-choose-us-image-wrapper { height: 224px; margin: 10px 0 22px 0; }
+
 
     .why-choose-us-semi-circles{ height: 205px; margin-top: 10px; }
     .why-choose-us-hand-image{ width: 125px; }
@@ -843,12 +846,18 @@
     .life-rpd-mobile-card-4 { height: 360px; }
     .life-rpd-mobile-card-5 { height: 200px; }
 
+
+    .rpd-mobile-card span { font-size: 44px; line-height: 36px; }
+    .rare-logo-mob { width: 34px; }
+
+    .projects-lists { margin-top: 20px; }
 }
 
 @media (max-width: 374px) {
     :root { 
-        --project-card-height: 220px; 
-        --project-card-gap: 30px; 
+        --project-card-width: 290px; 
+        --project-card-gap: 12px; }
+    .project-video { height: 200px; 
 
         --card-1-start-width: 24px;
         --card-2-start-width: 19px;
@@ -885,6 +894,7 @@
     
     .industries-mobile-video { max-width: 320px;  } 
     .industries-mobile-card-text { width: 320px; }
+    .why-choose-us-image-wrapper { margin: 20px 0; }
 
     .footer-quote-right .text-18, .footer-social-wrapper .text-18, .footer-links .text-18, .footer-social-row .text-18, .footer-contact .text-18{ font-size: 14px; line-height: 22px; }
     .footer-copyright .text-16 { font-size: 12px; line-height: 20px; }

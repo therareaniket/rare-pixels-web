@@ -14,51 +14,59 @@ export default function ServicesSectionDesktop() {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo('.services-ui-ux', { y: 500, scale: 1.1, },  { 
+        // gsap.set('.services-ui-ux', {  y: 600, scale: 1.1, rotate: 20 });
+        // gsap.set('.services-development', {  y: 700, scale: 1.1, rotate: -10 });
+        // gsap.set('.services-brand-identity', {  y: 650, scale: 1.1, rotate: 30 });
+        // gsap.set('.services-social-media', {  y: 700, scale: 1.1, rotate: -30 });
+
+        gsap.fromTo('.services-ui-ux', { y: 600, scale: 1.1, rotate: 20 },  { 
                 y: 0, 
                 scale: 1,
+                rotate: 0,
                 scrollTrigger: {
                     trigger: '.section-wrapper',
-                    start: 'top 70%',
-                    end: 'top -10%',
+                    start: 'top 50%',
+                    end: 'top -20%',
                     scrub: true
                 }
             });
 
-            gsap.fromTo('.services-development', { x: 400, y: 500, scale: 1.1, },  { 
-                x: 0,
+            gsap.fromTo('.services-development', { y: 700, scale: 1.1, rotate: -10 },  { 
                 y: 0, 
                 scale: 1,
+                rotate: 0,
                 scrollTrigger: {
                     trigger: '.section-wrapper',
-                    start: 'top 100%',
-                    end: 'top -30%',
+                    start: 'top 25%',
+                    end: 'top -25%',
                     scrub: true
                 }
             });
 
-            gsap.fromTo('.services-brand-identity', { x: 600, y: 300, scale: 1.1, },  { 
-                x: 0,
+            gsap.fromTo('.services-brand-identity', { y: 650, scale: 1.1, rotate: 30 },  { 
                 y: 0, 
                 scale: 1,
+                rotate: 0,
                 scrollTrigger: {
                     trigger: '.section-wrapper',
-                    start: 'top 110%',
+                    start: 'top top',
                     end: 'top -40%',
                     scrub: true
                 }
             });
 
-            gsap.fromTo('.services-social-media', { x: 700, scale: 1.1, },  { 
-                x: 0,
+            gsap.fromTo('.services-social-media', { y: 700, scale: 1.1, rotate: -30, },   { 
+                y: 0,
                 scale: 1,
+                rotate: 0,
                 scrollTrigger: {
                     trigger: '.section-wrapper',
-                    start: 'top 120%',
-                    end: 'top -50%',
+                    start: 'top -25%',
+                    end: 'top -55%',
                     scrub: true
                 }
             });
+            
     }, []);
 
     return (

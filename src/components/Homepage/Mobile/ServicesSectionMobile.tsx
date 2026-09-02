@@ -3,18 +3,74 @@
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
 import Image from "next/image";
+import { useEffect } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 
 export default function ServicesSectionMobile() {
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.fromTo('.services-ui-ux', { y: 600, scale: 1.5, rotate: 20 },  { 
+            y: 0,
+            scale: 1,
+            rotate: 0,
+            scrollTrigger: {
+                trigger: '.services-mobile',
+                start: 'top 70%',
+                end: 'top 20%',
+                scrub: true
+            }
+        });
+
+        gsap.fromTo('.services-development', { y: 600, scale: 1.5, rotate: -30 },  { 
+            y: 0,
+            scale: 1,
+            rotate: 0,
+            scrollTrigger: {
+                trigger: '.services-mobile',
+                start: 'top 50%',
+                end: 'top top',
+                scrub: true
+            }
+        });
+
+        gsap.fromTo('.services-brand-identity', { y: 600, scale: 1.5, rotate: 30 },  { 
+            y: 0,
+            scale: 1,
+            rotate: 0,
+            scrollTrigger: {
+                trigger: '.services-mobile',
+                start: 'top 20%',
+                end: 'top -40%',
+                scrub: true
+            }
+        });
+
+        gsap.fromTo('.services-social-media', { y: 600, scale: 1.5, rotate: -40 },  { 
+            y: 0,
+            scale: 1,
+            rotate: 0,
+            scrollTrigger: {
+                trigger: '.services-mobile',
+                start: 'top top',
+                end: 'top -60%',
+                scrub: true
+            }
+        });
+    }, []);
+
     return (
         <>
-            <section className="section" style={{ paddingBottom: 0 }}>
+            <section className="section services-mobile" style={{ paddingBottom: 0 }}>
                 <div className="container">
                     <div className="services-mobile-title">
                         <h2 className="text-sb">What Businesses Need. Not Just What We Do.</h2>
 
-                        <p className="text-rg text-16 text-grey"> Every business is trying to earn attention, build trust, and stay memorable. The tools may differ. The objective never does. We help brands create experiences, identities, platforms, and conversations that make them easier to choose in a crowded market.
+                        <p className="text-rg text-16"> Every business is trying to earn attention, build trust, and stay memorable. The tools may differ. The objective never does. We help brands create experiences, identities, platforms, and conversations that make them easier to choose in a crowded market.
                         </p>
                     </div>
 
@@ -55,7 +111,7 @@ export default function ServicesSectionMobile() {
                             </div>
                         </div>
 
-                        <div className="services-mobile-card servicesbrand-identity site-radius-10 bg-light-pink">
+                        <div className="services-mobile-card services-brand-identity site-radius-10 bg-light-pink">
                             <div className="services-art-board">
                                 <Image src={`${CDN_URL}/images/homepage/services/services-brand-identity.svg`} alt="services brand identity" width={385} height={285}></Image>
                             </div>

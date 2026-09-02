@@ -181,7 +181,7 @@ export default function IndustriesSectionDesktop() {
                                                 {industry.title}
                                             </span>
 
-                                            <p className="text-16 text-grey industry-detailtext">
+                                            <p className="text-16 industry-detailtext">
                                                 <span className="text-sb">{industry.desc3}</span>
                                                 <span className="text-rg"> {industry.desc1} </span>
                                                 <span className="text-rg"> {industry.desc2} </span>

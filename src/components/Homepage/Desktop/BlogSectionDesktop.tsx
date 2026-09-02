@@ -55,7 +55,7 @@ export default function BlogSectionDesktop() {
                                 </div>
                             </div>
 
-                            <p className="text-18 text-rg text-grey">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
+                            <p className="text-18 text-rg">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
                         </div>
 
                         <div className="hm-blog-wrapper-swiper">
@@ -102,7 +102,7 @@ export default function BlogSectionDesktop() {
                                             </div>
                                         </div>
 
-                                        <p className="text-18 text-rg text-grey">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
+                                        <p className="text-18 text-rg ">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
                                     </div>
                                 </SwiperSlide>
 
@@ -176,7 +176,7 @@ export default function BlogSectionDesktop() {
                                             </div>
                                         </div>
 
-                                        <p className="text-18 text-rg text-grey">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
+                                        <p className="text-18 text-rg ">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="go to blog" className="text-primary">Read More</Link></p>
                                     </div>
                                 </SwiperSlide>
 

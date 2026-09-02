@@ -16,7 +16,7 @@ export function useThemeTrigger() {
 
         ScrollTrigger.create({
           trigger: section,
-          start: 'top 50%',
+          start: 'top 30%',
           end: 'bottom 50%',
           onEnter: () => {
             if (theme) document.body.setAttribute('data-theme', theme);

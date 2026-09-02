@@ -4,6 +4,7 @@ const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 ;
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
+import GlassEffect from "@/components/global/LiquideGlass";
 import PixelImageReveal from "@/components/global/PixelImageReveal";
 import { useThemeTrigger } from "@/hooks/useThemeTrigger";
 
@@ -33,6 +34,7 @@ export default function AboutSectionDesktop() {
                                 </div>
 
                                 <div className="hm-abt-pointers-right">
+                                    {/* <GlassEffect> */}
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
@@ -44,6 +46,7 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
+                                    {/* </GlassEffect> */}
 
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>

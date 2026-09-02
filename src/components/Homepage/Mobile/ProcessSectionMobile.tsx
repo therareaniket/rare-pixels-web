@@ -86,7 +86,7 @@ export default function ProcessSectionMobile() {
 
     return (
         <>
-            <section ref={sectionRef} className="section section-yellow-background process-section-sticky">
+            <section ref={sectionRef} className="section process-section-sticky">
                 <div className="process-section-inner">
                     <div className="container">
 
