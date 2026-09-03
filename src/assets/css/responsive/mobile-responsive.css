@@ -12,15 +12,19 @@
     :root { 
         --project-card-width: 340px; 
         --project-card-gap: 20px; }
-    .project-video { height: 240px; 
+        .project-video { height: 240px; 
 
         --card-1-start-width: 34px;
         --card-2-start-width: 29px;
         --card-3-start-width: 34px;
+
+        --abt-hero-target-height: 250px;
+        
     }
 	.project-list { border-radius: 20px; }
     .project-list.active { box-shadow: none; }
     .process-section-inner { padding: 0; }
+    .about-video-text-practice { height: 250px; }
 
 
     .container { width: 100%; max-width: 100%; padding: 0 18px; }  
@@ -491,7 +495,7 @@
 
     .rpd-mobile-section { position: relative; }
     .rpd-mobile-card-wrapper { padding: 110px 0; display: flex; } 
-    .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { overflow: hidden; height: 220px; }
+    .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { overflow: hidden; height: 250px; }
 
 
     .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; width: 60px; display: none; }
@@ -570,7 +574,6 @@
     .project-video { height: 220px; }
 
     .projects-lists { margin-top: 0px; }
-    
 
 
 }
@@ -580,10 +583,11 @@
         --project-card-height: 260px; 
         --project-card-gap: 30px; 
 
+        --card-1-start-width: 24px;
         --card-2-start-width: 22px;
         --card-3-start-width: 26px;
 
-        --card-1-width: 102px;
+        --card-1-width: 89px;
         --card-2-width: 108px;
         --card-3-width: 131px;
 
@@ -690,7 +694,18 @@
 @media (max-width: 400px) {
     .active-project-title { left: 0; }
 
-    :root { --project-card-width: 300px; --project-card-gap: 16px; }
+    :root { 
+        --project-card-width: 300px; 
+        --project-card-gap: 16px; 
+
+        --card-1-start-width: 25px;
+        --card-2-start-width: 24px;
+        --card-3-start-width: 29px;
+
+        --card-1-width: 94px;
+        --card-2-width: 113px;
+        --card-3-width: 140px;
+    }
     .project-video { height: 200px; }
 
     .container { width: 100%; max-width: 100%; }  
@@ -827,10 +842,19 @@
     .life-rpd-mobile-card-5 { height: 200px; }
 
 
-    .rpd-mobile-card span { font-size: 44px; line-height: 36px; }
+    .rpd-mobile-card span { font-size: 40px; line-height: 36px; }
     .rare-logo-mob { width: 34px; }
 
     .projects-lists { margin-top: 20px; }
+
+    .timeline-mobile-sticky { height: 400vh; }
+
+    .abt-hero-video { height: calc( 100vh - 400px ); }
+    .timeline-mobile-inner { top: -150px; }
+
+    .rpd-mobile-card .h5 { margin-top: 12; margin-bottom: 10px; }
+
+    .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { height: 205px; }
 }
 
 @media (max-width: 374px) {
@@ -839,11 +863,11 @@
         --project-card-gap: 12px; 
         --abt-hero-target-height: 115px;
 
-        --card-1-start-width: 24px;
+        --card-1-start-width: 21px;
         --card-2-start-width: 19px;
         --card-3-start-width: 23px;
 
-        --card-1-width: 80px;
+        --card-1-width: 77px;
         --card-2-width: 92px;
         --card-3-width: 112px;
     }

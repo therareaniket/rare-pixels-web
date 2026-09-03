@@ -4,14 +4,14 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import "@/assets/css/desktop-custom.css";
-import "@/assets/css/responsive/desktop-responsive.css";
+import "@/assets/css/mobile-custom.css";
+import "@/assets/css/responsive/mobile-responsive.css";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 }
 
-export default function AboutHeroSectionMobile() {
+export default function AboutHeroSectionDesktop() {
     const containerRef = useRef(null);
 
     useGSAP(
@@ -32,6 +32,8 @@ export default function AboutHeroSectionMobile() {
             //     0
             // )
 
+
+
             tl.to(
                 ".abt-hero-video",
                 {
@@ -40,10 +42,24 @@ export default function AboutHeroSectionMobile() {
                     duration: 2,
                     ease: "none",
                 },
-                ">"
+                0
             )
+                .fromTo(
+                    ".about-video-text-practice",
+                    {
+                        opacity: 0,
+                    },
+                    {
+                        opacity: 1,
+                        duration: 1.6, // 80% of video animation
+                        ease: "none",
+                    },
+                    0.4 // starts after 20% (0.4 / 2 = 20%)
+                );
 
-                .to({}, { duration: 1 });
+            tl.to({}, { duration: 3 });
+
+
         },
         { scope: containerRef }
     );

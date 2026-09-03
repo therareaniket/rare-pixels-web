@@ -57,6 +57,9 @@ export default function AboutHeroSectionDesktop() {
                     0.4 // starts after 20% (0.4 / 2 = 20%)
                 );
 
+                tl.to({}, { duration: 1 });
+
+
         },
         { scope: containerRef }
     );

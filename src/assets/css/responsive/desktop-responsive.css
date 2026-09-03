@@ -16,17 +16,18 @@
 		--card-2-mt: 0px;
     	--card-3-mt: 0px;
 
-    --card-1-start-width: 51px;
-    --card-2-start-width: 49px;
-    --card-3-start-width: 62px;
+    	--card-1-start-width: 51px;
+    	--card-2-start-width: 49px;
+    	--card-3-start-width: 62px;
 
     	--card-2-width: 245px;
 
 		--card-final-width: 365px;
+		/* --card-final-width: 345px; */
 		--card-1-x: 0px;
     	--card-3-x: 0px;
 
-		--abt-hero-target-height: 300px;
+		--abt-hero-target-height: 480px;
 	}
 
 	.container { max-width: calc(1360px + 36px); }   
@@ -219,7 +220,7 @@
 	.abt-card-text { height: 170px; }
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 190px; }
 
-	.abt-rpd-card-2 { transform: translateY(-190px); }
+	.abt-rpd-card-2 { transform: translateY(-250px); }
 
 	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 445px; height: 437px; }
 	.rpd-card-2 { width: 445px; height: 385px; }
@@ -230,7 +231,7 @@
 
 	.life-at-rpd-desktop-card-wrapper { height: 1305px; }
 
-	.about-rpd-desktop-content-wrapper { padding-top: 185px; }
+	.about-rpd-desktop-content-wrapper { padding-top: 243px; }
 
 	.pixels-logo { width: 270px; }
 	.design-logo { width: 330px; }
@@ -240,6 +241,11 @@
 	.abt-card-text h2 { margin-top: 30px; }
 
 	.abt-timeline-title-right { width: 445px; }
+
+	/* .town { top: 45px; } */
+	.abt-card-text { width: 300px; height: 230px; }
+	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 280px; }
+ 
 }
 
 @media (max-width: 1599px) {
@@ -247,9 +253,13 @@
 		--project-card-width: 800px; 
 		--project-card-gap: 50px; 
 
+		/* --card-final-width: 365px; */
+		--card-final-width: 345px;
+
     	--card-2-start-width: 47px;
     	--card-3-start-width: 55px;
-		--abt-hero-target-height: 260px;
+		--abt-hero-target-height: 380px;
+
 	}
 
 	.project-list { height: 430px; }
@@ -453,8 +463,11 @@
 
 	/* about page */
 
+	.abt-time-line-desktop-sticky { height: 500vh; }
+
 	.town h2 { font-size: 16.3vw; line-height: 185px; }
-	.about-video-text-practice { height: 265px; }
+	.town { top: 180px; }
+	.about-video-text-practice { height: 390px; }
 	.about-hero-section-title h1 { width: 510px; }
 	.timeline-hr { margin-top: 50px; margin-bottom: 45px; }
 	.abt-timeline-content-right span  { font-size: 74px; line-height: 82px; }
@@ -514,6 +527,8 @@
 
 	.tree-section-inner { top: -80px; }
 	.abt-timeline-title-right { width: 490px; }
+	.abt-card-text { width: 290px; height: 210px; }
+	.abt-rpd-card-2 { transform: translateY(-230px); }
 }
 
 @media (max-width: 1439px) {
@@ -521,7 +536,7 @@
 		--project-card-width: 730px; 
 		--project-card-gap: 50px;
 
-		--card-1-start-width: 50px;
+		--card-1-start-width: 47px;
     	--card-2-start-width: 44px;
     	--card-3-start-width: 51px;
 
@@ -529,7 +544,7 @@
     	--card-2-width: 215px;
     	--card-3-width: 258px;
 
-		--abt-hero-target-height: 230px;
+		--abt-hero-target-height: 300px;
 	}
 	.project-list { height: auto; }
 
@@ -692,8 +707,9 @@
 
 	/* about page */
 	.about-hero-section-desktop .container { margin-top: 10px; }
+	.town { top: 150px; }
 	.town h2 { font-size: 15.5vw; line-height: 165px; }
-	.about-video-text-practice { height: 240px; }
+	.about-video-text-practice { height: 345px; }
 	.about-hero-section-title h1 { width: 455px; }
 	.about-hero-section-title p { width: 395px; }
 
@@ -758,8 +774,12 @@
 	.abt-card-text h2 { margin-top: 25px; }
 
 	.tree-section-inner { top: 0px; }
+	.abt-rpd-section-desktop { height: 800vh; }
 
-
+	.abt-card-text { width: 245px; height: 185px; }
+	.abt-rpd-card-2 { transform: translateY(-205px); }
+	.about-rpd-desktop-content-wrapper { padding-top: 200px; }
+	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 210px; }
 }
 
 @media (max-width: 1359px) {
@@ -767,7 +787,7 @@
 		--project-card-width: 650px; 
 		--project-card-gap: 40px; 
 
-		--card-1-start-width: 49px;
+		--card-1-start-width: 42px;
     	--card-2-start-width: 40px;
     	--card-3-start-width: 45px;
 
@@ -775,7 +795,7 @@
     	--card-2-width: 190px;
     	--card-3-width: 230px;
 
-		--abt-hero-target-height: 220px;
+		--abt-hero-target-height: 300px;
 	}
 	.project-video { height: 400px; object-fit: cover; }
 
@@ -943,17 +963,19 @@
 	.about-hero-mask-title { font-size: 322px; height: 200px; }
 	.about-hero-section-title h1 { width: 400px; }
 
-	.abt-timeline-title-left { width: 521px; }
+	.abt-timeline-title-left { width: 465px; }
 	.abt-timeline-title-right { width: 335px; }
+	.abt-timeline-content-right { width: 335px; }
 	.abt-timeline-title-left h3 { margin-top: 20px; }
 	.abt-timeline-content-right span  { font-size: 60px; line-height: 68px; }
 	.abt-timeline-content-left { width: 200px; height: 200px; }
 	.abt-timeline-content-wrapper { gap: 50px; }
 	.abt-timeline-content-right h6 { margin-top: 20px; }
 	.timeline-hr { margin-top: 30px; margin-bottom: 20px; }
-	.timeline-dot { right: 310px; }
+	.desktop-dot-target { right: 280px; }
 
 	.town h2 { font-size: 15vw; }
+
 
 	.abt-mis-vis-title-desktop-left { width: 610px; }
 	.abt-mis-vis-content-desktop { width: 850px; }
@@ -1005,6 +1027,12 @@
 	.rpd-card-col-3 { transform: translateY(-160px); }
 
 	.tree-section-inner { top: 50px; }
+	.abt-card-text { width: 220px; height: 190px; }
+	.abt-rpd-card-2 { transform: translateY(-210px); }
+	.about-rpd-desktop-content-wrapper { padding-top: 140px; }
+	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 220px; }
+	.abt-time-line-desktop-sticky { height: 600vh; }
+	.abt-rpd-section-desktop { height: 800vh; }
 }
 
 @media (max-width: 1199px) {
@@ -1045,7 +1073,7 @@
 
 		--text-up-start: 80px;
 
-		--abt-hero-target-height: 130px;
+		--abt-hero-target-height: 220px;
     }
 
 	.container { max-width: calc(800px + 36px); }  
@@ -1304,12 +1332,12 @@
 
 
 	/* about page */
-	.about-hero-section-desktop { height: 300vh; }
+	.about-hero-section-desktop { height: 200vh; }
 
-	.abt-hero-video { height: calc( 100vh - 300px ) ; }
+	.abt-hero-video { height: calc( 100vh - 600px ) ; }
 
-	.about-video-text-practice { height: 180px; }
-	.town { top: 50px; }
+	.about-video-text-practice { height: 300px; }
+	.town { top: 120px; }
 	.town h2 { line-height: 124px; }
 	.about-hero-section-title { flex-direction: column; gap: 10px; }
 	.about-hero-section-title h1 { width: 100%; }
@@ -1410,29 +1438,13 @@
 	.card-reveal { display: none; }
 	.tree-reveal-desktop { display: none; }
 	.why-rare-desktop-tree-image { overflow: hidden; }
-    .tree-reveal { display: block; clip-path: inset(100% 0 0 0); }
+
+    .tree-section-desktop .tree-reveal { display: flex; clip-path: inset(100% 0 0 0); will-change: clip-path; }
+    .tree-section-desktop .why-rare-point { opacity: 0; visibility: hidden; transform: translateY(200px); will-change: transform, opacity; }
+
 
 	.tree-section-inner { position: static; }
 	.tree-section-desktop { height: max-content; }
-
-	
-	/* .projects-lists-wrapper { perspective: var(--project-card-width); }
-	.projects-lists { 
-		transform-style: preserve-3d;
-		transform: translateX(calc(-1 * var(--active-index) * (var(--project-card-width) + var(--project-card-gap))));
-	}
-
-	.project-list {
-		width: var(--project-card-width);
-		flex-shrink: 0;
-		transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
-		transform-origin: left center;
-		transform: scale(0.9);
-		pointer-events: auto;
-	}
-	.project-list.active { transform: scale(1) rotateY(8deg); pointer-events: auto; position: relative; z-index: 11; }
-	.project-list video, .project-list .project-video { pointer-events: auto; } */
-
 
 	/* Ensure the wrapper allows 3D hit-testing */
     .projects-lists-wrapper { 
@@ -1469,19 +1481,22 @@
         pointer-events: none; /* Prevents video element from capturing/intercepting clicks meant for the parent card */
     }
 	
+	.abt-rpd-section-desktop { height: 600vh; }
+
+	.abt-card-text { width: 100%; }
 } 
 
 @media (max-width: 1023px) {
 
 	:root {
-		--card-1-start-width: 60px;
+		--card-1-start-width: 49px;
     	--card-2-start-width: 47px;
     	--card-3-start-width: 55px;
 
 		--card-1-width: 193px;
 		--card-3-width: 287px;
 
-		--abt-hero-target-height: 130px;
+		--abt-hero-target-height: 200px;
 	}
 
 	.container { max-width: calc(704px + 36px); }
@@ -1549,7 +1564,6 @@
 
 	/* about page */
 	.town h2 { font-size: 13.8vw; }
-	.about-video-text-practice { height: 185px; }
 
 	.abt-timeline-content-left { width: 240px; height: 240px; }
 	.abt-timeline-content-right { width: 500px; }
@@ -1570,7 +1584,7 @@
 
 	.abt-timeline-title-left h3 { margin-bottom: 20px; }
 
-	.town { top: 62px; }
+	.abt-rpd-section-desktop { height: 700vh; }
 }
 
 @media (max-width: 991px) {
@@ -1671,14 +1685,15 @@
 		--project-card-height: 400px; 
 		--project-card-gap: 30px; 
 		
-    	--card-1-start-width: 46px;
+    	--card-1-start-width: 44px;
     	--card-2-start-width: 40px;
     	--card-3-start-width: 47px;
 
-		--card-2-width: 215px; 
-		--card-3-width: 243px; 
+		--card-1-width: 159px; 
+		--card-2-width: 192px; 
+		--card-3-width: 236px; 
 
-		--abt-hero-target-height: 180px;
+		--abt-hero-target-height: 250px;
 	}
 	:root { --project-card-width: 600px; }
 
@@ -1846,8 +1861,7 @@
 	.timeline-dot { display: none; }
 
 	.town h2 { font-size: 128px; }
-	.town { top: 70px; }
-	.about-video-text-practice { height: 190px; }
+
 
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 165px; }
 	.abt-rpd-card-2 .abt-card-text { height: 165px; }
@@ -1859,6 +1873,10 @@
 		--project-card-width: 500px; --project-card-width: 500px; 
 		--project-card-gap: 30px; 
 		--card-3-width: 260px;
+
+		--card-1-start-width: 34px;
+    	--card-2-start-width: 35px;
+    	--card-3-start-width: 40px;
 
     	--abt-hero-target-height: 150px;
 
@@ -1914,8 +1932,6 @@
 	.why-choose-us-images{ height: 305px; }
 	.why-choose-hand { width: 192px; }
 	.why-choose-us-image-wrapper { height: 310px; }
-	
-	
 
 	.accordion-number{ width: 40px; height: 40px; }
 	.faq-accordion-title{ padding: 0; }
@@ -1980,6 +1996,9 @@
 
 	.about-rpd-desktop-content-wrapper { padding: 95px 0; }
 
+	.abt-time-line-desktop-sticky { height: 300vh; }
+	.abt-rpd-card span { font-size: 58px; }
+
 	.town { top: 45px; }
 	.town h2 { font-size: 108px; }
 	.about-video-text-practice { height: 182px; }
@@ -1992,10 +2011,12 @@
 		--project-card-width: 460px; 
 		--project-card-gap: 30px; 
 
-		--card-2-start-width: 36px;
+		--card-2-start-width: 34px;
     	--card-3-start-width: 41px;
 
-    	--card-1-width: 180px;
+    	--card-1-width: 138px;
+    	--card-2-width: 166px;
+    	--card-3-width: 203px;
 	}
 	.project-video { height: 300px; }
 
@@ -2110,8 +2131,8 @@
 		--project-card-width: 400px; 
 		--project-card-gap: 20px; 
 
-		--card-1-start-width: 35px;
-    	--card-2-start-width: 29px;
+		--card-1-start-width: 29px;
+    	--card-2-start-width: 28px;
     	--card-3-start-width: 33px;
 
 		--card-1-width: 123px;

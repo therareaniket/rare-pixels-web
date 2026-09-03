@@ -46,8 +46,11 @@ export default function AboutTimelineSectionDesktop() {
     const [showDesktopContent, setShowDesktopContent] = useState(false);
     const [yearIndex, setYearIndex] = useState(0);
     const desktopLineRef = useRef<HTMLDivElement>(null);
+    const line1Ref = useRef<HTMLDivElement>(null);
+    const line2Ref = useRef<HTMLDivElement>(null);
+    const line3Ref = useRef<HTMLDivElement>(null);
 
-    const [completedStage, setCompletedStage] = useState(-1);
+    const desktopStageRef = useRef(-1);
 
     const updateTabletYear = (index: number) => {
         tabletYearsRef.current.forEach((year) => {
@@ -70,174 +73,365 @@ export default function AboutTimelineSectionDesktop() {
             const secondDot = desktopDotRefs.current[1];
             const thirdDot = desktopDotRefs.current[2];
 
-            if (!firstDot || !secondDot || !thirdDot) {
+            const targetDot = desktopTargetRef.current;
+            const line1 = line1Ref.current;
+            const line2 = line2Ref.current;
+            const line3 = line3Ref.current;
+
+            if (
+                !firstDot ||
+                !secondDot ||
+                !thirdDot ||
+                !targetDot ||
+                !line1 ||
+                !line2 ||
+                !line3
+            ) {
                 return;
             }
 
             let travelDistance = 0;
+            let targetLineWidth = 0;
 
-            const calculateTravelDistance = () => {
-                gsap.set([secondDot, thirdDot], {
+            const firstMoveStart = 0;
+            const firstMoveEnd = 0.18;
+
+            const secondMoveStart = 0.36;
+            const secondMoveEnd = 0.54;
+
+            const thirdMoveStart = 0.72;
+            const thirdMoveEnd = 0.9;
+
+            const firstLineFadeStart = secondMoveStart - 0.06;
+            const secondLineFadeStart = thirdMoveStart - 0.06;
+
+            const getStageProgress = (
+                scrollProgress: number,
+                start: number,
+                end: number
+            ) => {
+                return gsap.utils.clamp(
+                    0,
+                    1,
+                    (scrollProgress - start) / (end - start)
+                );
+            };
+
+            const calculateDimensions = () => {
+                const firstX = gsap.getProperty(firstDot, "x");
+                const secondX = gsap.getProperty(secondDot, "x");
+                const thirdX = gsap.getProperty(thirdDot, "x");
+
+                gsap.set([firstDot, secondDot, thirdDot], {
                     x: 0,
                 });
 
-                const startRect = secondDot.getBoundingClientRect();
-                const endRect = desktopTargetRef.current?.getBoundingClientRect();
+                const startRect = firstDot.getBoundingClientRect();
+                const targetRect = targetDot.getBoundingClientRect();
+                const wrapperRect =
+                    firstDot.parentElement?.getBoundingClientRect();
 
-                if (!endRect) return;
+                travelDistance = targetRect.left - startRect.left;
 
-                travelDistance = endRect.left - startRect.left;
-            };
+                if (wrapperRect) {
+                    targetLineWidth = Math.max(
+                        0,
+                        targetRect.left - wrapperRect.left
+                    );
+                }
 
-            calculateTravelDistance();
-
-            const updateDots = (progress: number) => {
-                const firstDotProgress = gsap.utils.clamp(
-                    0,
-                    1,
-                    progress / 0.33
-                );
-
-                const secondDotProgress = gsap.utils.clamp(
-                    0,
-                    1,
-                    (progress - 0.33) / (0.66 - 0.33)
-                );
-
-                const thirdDotProgress = gsap.utils.clamp(
-                    0,
-                    1,
-                    (progress - 0.66) / (1 - 0.66)
-                );
-
-
-                gsap.to(firstDot, {
-                    x: travelDistance * firstDotProgress,
-                    duration: 1,
-                    ease: "power2.out",
-                    overwrite: true,
+                gsap.set(firstDot, {
+                    x: firstX,
                 });
 
-                gsap.to(secondDot, {
-                    x: travelDistance * secondDotProgress,
-                    duration: 1,
-                    ease: "power2.out",
-                    overwrite: true,
+                gsap.set(secondDot, {
+                    x: secondX,
                 });
 
-                gsap.to(thirdDot, {
-                    x: travelDistance * thirdDotProgress,
-                    duration: 1,
-                    ease: "power2.out",
-                    overwrite: true,
+                gsap.set(thirdDot, {
+                    x: thirdX,
                 });
             };
+
+            calculateDimensions();
+
+            const moveFirstDot = gsap.quickTo(firstDot, "x", {
+                duration: 0.8,
+                ease: "power2.out",
+            });
+
+            const moveSecondDot = gsap.quickTo(secondDot, "x", {
+                duration: 0.8,
+                ease: "power2.out",
+            });
+
+            const moveThirdDot = gsap.quickTo(thirdDot, "x", {
+                duration: 0.8,
+                ease: "power2.out",
+            });
+
+            const moveFirstDotOpacity = gsap.quickTo(
+                firstDot,
+                "opacity",
+                {
+                    duration: 0.25,
+                    ease: "power1.out",
+                }
+            );
+
+            const moveSecondDotOpacity = gsap.quickTo(
+                secondDot,
+                "opacity",
+                {
+                    duration: 0.25,
+                    ease: "power1.out",
+                }
+            );
+
+            const moveThirdDotOpacity = gsap.quickTo(
+                thirdDot,
+                "opacity",
+                {
+                    duration: 0.25,
+                    ease: "power1.out",
+                }
+            );
+
+            const moveLine1Width = gsap.quickTo(line1, "width", {
+                duration: 0.8,
+                ease: "power2.out",
+            });
+
+            const moveLine2Width = gsap.quickTo(line2, "width", {
+                duration: 0.8,
+                ease: "power2.out",
+            });
+
+            const moveLine3Width = gsap.quickTo(line3, "width", {
+                duration: 0.8,
+                ease: "power2.out",
+            });
+
+            const moveLine1Opacity = gsap.quickTo(line1, "opacity", {
+                duration: 0.25,
+                ease: "power1.out",
+            });
+
+            const moveLine2Opacity = gsap.quickTo(line2, "opacity", {
+                duration: 0.25,
+                ease: "power1.out",
+            });
+
+            const moveLine3Opacity = gsap.quickTo(line3, "opacity", {
+                duration: 0.25,
+                ease: "power1.out",
+            });
 
             const trigger = ScrollTrigger.create({
                 trigger: sectionRef.current,
                 start: "top top",
-                end: "+=2000",
+                end: "+=3600",
                 scrub: 4,
                 invalidateOnRefresh: true,
 
-                onRefresh: (self) => {
-                    calculateTravelDistance();
-                    updateDots(self.progress);
+                onRefresh: () => {
+                    calculateDimensions();
                 },
 
                 onUpdate: (self) => {
                     const progress = self.progress;
 
-                    const firstDotProgress = gsap.utils.clamp(
-                        0,
-                        1,
-                        progress / 0.33
+                    const firstDotProgress = getStageProgress(
+                        progress,
+                        firstMoveStart,
+                        firstMoveEnd
                     );
 
-                    const secondDotProgress = gsap.utils.clamp(
-                        0,
-                        1,
-                        (progress - 0.33) / (0.66 - 0.33)
+                    const secondDotProgress = getStageProgress(
+                        progress,
+                        secondMoveStart,
+                        secondMoveEnd
                     );
 
-                    const thirdDotProgress = gsap.utils.clamp(
-                        0,
-                        1,
-                        (progress - 0.66) / (1 - 0.66)
+                    const thirdDotProgress = getStageProgress(
+                        progress,
+                        thirdMoveStart,
+                        thirdMoveEnd
                     );
 
-                    updateDots(progress);
+                    moveFirstDot(
+                        travelDistance * firstDotProgress
+                    );
 
-                    gsap.to(firstDot, {
-                        opacity: progress > 0 ? 1 : 0,
-                        duration: 0.3,
-                    });
+                    moveSecondDot(
+                        travelDistance * secondDotProgress
+                    );
 
-                    gsap.to(secondDot, {
-                        opacity: progress >= 0.33 ? 1 : 0,
-                        duration: 0.3,
-                    });
+                    moveThirdDot(
+                        travelDistance * thirdDotProgress
+                    );
 
-                    gsap.to(thirdDot, {
-                        opacity: progress >= 0.66 ? 1 : 0,
-                        duration: 0.3,
-                    });
+                    let line1Width = 0;
+                    let line1Opacity = 0;
 
-                    const wrapperRect =
-                        firstDot.parentElement?.getBoundingClientRect();
+                    if (
+                        progress > firstMoveStart &&
+                        progress < firstMoveEnd
+                    ) {
+                        line1Width =
+                            targetLineWidth * firstDotProgress;
 
-                    if (wrapperRect && desktopLineRef.current) {
+                        line1Opacity = 1;
+                    } else if (
+                        progress >= firstMoveEnd &&
+                        progress < secondMoveStart
+                    ) {
+                        line1Width = targetLineWidth;
 
-                        const firstLeft =
-                            firstDot.getBoundingClientRect().left;
+                        if (progress < firstLineFadeStart) {
+                            line1Opacity = 1;
+                        } else {
+                            const line1FadeProgress =
+                                gsap.utils.clamp(
+                                    0,
+                                    1,
+                                    (progress - firstLineFadeStart) /
+                                    (
+                                        secondMoveStart -
+                                        firstLineFadeStart
+                                    )
+                                );
 
-                        const secondLeft =
-                            secondDot.getBoundingClientRect().left;
-
-                        const thirdLeft =
-                            thirdDot.getBoundingClientRect().left;
-
-                        const furthestLeft = Math.max(
-                            firstLeft,
-                            secondLeft,
-                            thirdLeft
-                        );
-
-                        gsap.set(desktopLineRef.current, {
-                            width: furthestLeft - wrapperRect.left,
-                        });
+                            line1Opacity =
+                                1 - line1FadeProgress;
+                        }
                     }
 
-                    if (firstDotProgress >= 1 && completedStage < 0) {
-                        setCompletedStage(0);
+                    moveLine1Width(line1Width);
+                    moveLine1Opacity(line1Opacity);
+                    moveFirstDotOpacity(line1Opacity);
 
-                        setActiveIndex(0);
-                        setYearIndex(1);
-                        setShowDesktopContent(true);
+                    let line2Width = 0;
+                    let line2Opacity = 0;
+
+                    if (
+                        progress >= secondMoveStart &&
+                        progress < secondMoveEnd
+                    ) {
+                        line2Width =
+                            targetLineWidth * secondDotProgress;
+
+                        line2Opacity = 1;
+                    } else if (
+                        progress >= secondMoveEnd &&
+                        progress < thirdMoveStart
+                    ) {
+                        line2Width = targetLineWidth;
+
+                        if (progress < secondLineFadeStart) {
+                            line2Opacity = 1;
+                        } else {
+                            const line2FadeProgress =
+                                gsap.utils.clamp(
+                                    0,
+                                    1,
+                                    (progress - secondLineFadeStart) /
+                                    (
+                                        thirdMoveStart -
+                                        secondLineFadeStart
+                                    )
+                                );
+
+                            line2Opacity =
+                                1 - line2FadeProgress;
+                        }
                     }
 
-                    if (secondDotProgress >= 1 && completedStage < 1) {
-                        setCompletedStage(1);
+                    moveLine2Width(line2Width);
+                    moveLine2Opacity(line2Opacity);
+                    moveSecondDotOpacity(line2Opacity);
 
-                        setActiveIndex(1);
-                        setYearIndex(2);
+                    let line3Width = 0;
+                    let line3Opacity = 0;
+
+                    if (
+                        progress >= thirdMoveStart &&
+                        progress < thirdMoveEnd
+                    ) {
+                        line3Width =
+                            targetLineWidth * thirdDotProgress;
+
+                        line3Opacity = 1;
+                    } else if (progress >= thirdMoveEnd) {
+                        line3Width = targetLineWidth;
+                        line3Opacity = 1;
                     }
 
-                    if (thirdDotProgress >= 1 && completedStage < 2) {
-                        setCompletedStage(2);
+                    moveLine3Width(line3Width);
+                    moveLine3Opacity(line3Opacity);
+                    moveThirdDotOpacity(line3Opacity);
 
-                        setActiveIndex(2);
-                        setYearIndex(0);
+                    let newStage = -1;
+
+                    if (progress >= thirdMoveEnd) {
+                        newStage = 2;
+                    } else if (progress >= secondMoveEnd) {
+                        newStage = 1;
+                    } else if (progress >= firstMoveEnd) {
+                        newStage = 0;
                     }
-                }
+
+                    if (desktopStageRef.current !== newStage) {
+                        desktopStageRef.current = newStage;
+
+                        if (newStage === -1) {
+                            setShowDesktopContent(false);
+                            setActiveIndex(0);
+                            setYearIndex(0);
+                        } else if (newStage === 0) {
+                            setShowDesktopContent(true);
+                            setActiveIndex(0);
+                            setYearIndex(1);
+                        } else if (newStage === 1) {
+                            setShowDesktopContent(true);
+                            setActiveIndex(1);
+                            setYearIndex(2);
+                        } else if (newStage === 2) {
+                            setShowDesktopContent(true);
+                            setActiveIndex(2);
+                            setYearIndex(0);
+                        }
+                    }
+                },
             });
 
             return () => {
                 trigger.kill();
 
-                gsap.set([secondDot, thirdDot], {
-                    clearProps: "transform",
-                });
+                desktopStageRef.current = -1;
+
+                gsap.killTweensOf([
+                    firstDot,
+                    secondDot,
+                    thirdDot,
+                    line1,
+                    line2,
+                    line3,
+                ]);
+
+                gsap.set(
+                    [
+                        firstDot,
+                        secondDot,
+                        thirdDot,
+                        line1,
+                        line2,
+                        line3,
+                    ],
+                    {
+                        clearProps: "transform,width,opacity",
+                    }
+                );
             };
         });
 
@@ -307,59 +501,69 @@ export default function AboutTimelineSectionDesktop() {
     }, []);
 
     useEffect(() => {
-        gsap.fromTo(
-            contentRef.current,
-            {
-                opacity: 0,
-                scale: 0
-            },
-            {
-                opacity: 1,
-                scale: 1,
-                duration: 2,
-            }
-        );
+        if (!showDesktopContent) return;
 
-        gsap.fromTo(
-            imageRef.current,
-            {
-                opacity: 0,
-                scale: 0.5,
-            },
-            {
-                opacity: 1,
-                scale: 1,
-                duration: 1,
-            }
-        );
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                contentRef.current,
+                {
+                    opacity: 0,
+                    scale: 0,
+                },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 2,
+                }
+            );
 
-        gsap.fromTo(
-            ".timeline-tablet-image-wrapper",
-            {
-                opacity: 0,
-                scale: 0.5,
-            },
-            {
-                opacity: 1,
-                scale: 1,
-                duration: 1,
-            }
-        );
+            gsap.fromTo(
+                imageRef.current,
+                {
+                    opacity: 0,
+                    scale: 0.5,
+                },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                }
+            );
+        }, sectionRef);
 
-        gsap.fromTo(
-            ".timeline-text-wrapper-desktop",
-            {
-                opacity: 0,
-                y: 30,
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-            }
-        );
+        return () => ctx.revert();
+    }, [activeIndex, showDesktopContent]);
 
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".timeline-tablet-image-wrapper",
+                {
+                    opacity: 0,
+                    scale: 0.5,
+                },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                }
+            );
 
+            gsap.fromTo(
+                ".timeline-text-wrapper-desktop",
+                {
+                    opacity: 0,
+                    y: 30,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                }
+            );
+        }, sectionRef);
+
+        return () => ctx.revert();
     }, [activeIndex]);
 
     return (
@@ -383,6 +587,9 @@ export default function AboutTimelineSectionDesktop() {
                             <div ref={desktopLineRef} className="timeline-desktop-hr"></div>
 
                             <div ref={tabletLineRef} className="timeline-active-hr" ></div>
+                            <div ref={line1Ref} className="timeline-line-active line-1"></div>
+                            <div ref={line2Ref} className="timeline-line-active line-2"></div>
+                            <div ref={line3Ref} className="timeline-line-active line-3"></div>
 
                             <div ref={movingDotRef} className="timeline-dot-active" ></div>
 

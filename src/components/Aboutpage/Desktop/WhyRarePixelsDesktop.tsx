@@ -5,18 +5,22 @@ import "@/assets/css/responsive/desktop-responsive.css";
 import GlassEffect from "@/components/global/LiquideGlass";
 import Image from "next/image";
 import gsap from "gsap";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function WhyRarePixelsDesktop() {
 
-    useEffect(() => {
+    useLayoutEffect(() => {
 
         const mm = gsap.matchMedia();
 
         mm.add("(min-width: 1200px)", () => {
+            const points = gsap.utils.toArray(
+                ".tree-section-desktop .why-rare-point"
+            );
+
             gsap.set("#treeReveal", {
                 attr: {
                     y: 500,
@@ -24,13 +28,17 @@ export default function WhyRarePixelsDesktop() {
                 },
             });
 
+            gsap.set(points, {
+                autoAlpha: 0,
+                y: 0,
+            });
+
+            gsap.set(".tree-section-desktop .card-reveal", {
+                xPercent: 0,
+            });
+
             const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".tree-section-desktop",
-                    start: "top 40%",
-                    end: "+=3000",
-                    scrub: 2,
-                },
+                paused: true,
             });
 
             tl.to("#treeReveal", {
@@ -42,91 +50,124 @@ export default function WhyRarePixelsDesktop() {
                 ease: "none",
             });
 
-            tl.to({}, { duration: 2 });
+            tl.to({}, {
+                duration: 2,
+            });
 
-            tl.to(".why-rare-point-1", {
-                opacity: 1,
-                duration: 0.3,
-            }, ">");
+            tl.set(".why-rare-point-1", {
+                autoAlpha: 1,
+                y: 0,
+            });
 
             tl.to(".why-rare-point-1 .card-reveal", {
                 xPercent: -100,
                 duration: 4,
                 ease: "power2.inOut",
-            }, "<");
+            });
 
-            tl.to(".why-rare-point-2", {
-                opacity: 1,
-                duration: 0.3,
-            }, ">");
+            tl.set(".why-rare-point-2", {
+                autoAlpha: 1,
+                y: 0,
+            });
 
             tl.to(".why-rare-point-2 .card-reveal", {
                 xPercent: 100,
                 duration: 4,
                 ease: "power2.inOut",
-            }, "<");
+            });
 
-            tl.to(".why-rare-point-3", {
-                opacity: 1,
-                duration: 0.3,
-            }, ">");
+            tl.set(".why-rare-point-3", {
+                autoAlpha: 1,
+                y: 0,
+            });
 
             tl.to(".why-rare-point-3 .card-reveal", {
                 xPercent: -100,
                 duration: 4,
                 ease: "power2.inOut",
-            }, "<");
+            });
 
-            tl.to(".why-rare-point-4", {
-                opacity: 1,
-                duration: 0.3,
-            }, ">");
+            tl.set(".why-rare-point-4", {
+                autoAlpha: 1,
+                y: 0,
+            });
 
             tl.to(".why-rare-point-4 .card-reveal", {
                 xPercent: 100,
                 duration: 4,
                 ease: "power2.inOut",
-            }, "<");
+            });
+
+            let highestProgress = 0;
+
+            const desktopTrigger = ScrollTrigger.create({
+                trigger: ".tree-section-desktop",
+                start: "top 40%",
+                end: "+=3000",
+                onUpdate: (self) => {
+                    if (self.progress > highestProgress) {
+                        highestProgress = self.progress;
+                        gsap.to(tl, {
+                            progress: highestProgress,
+                            duration: 0.3,
+                            ease: "power1.out",
+                            overwrite: true,
+                        });
+                    }
+                },
+            });
+
+            return () => {
+                desktopTrigger.kill();
+                tl.kill();
+            };
         });
 
-        mm.add("(max-width: 1199px)", () => {
-            gsap.fromTo(
-                ".tree-reveal",
-                {
-                    clipPath: "inset(100% 0 0 0)",
-                },
-                {
-                    clipPath: "inset(0% 0 0 0)",
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: ".why-rare-desktop-tree-image",
-                        start: "top 40%",
-                        end: "bottom -15%",
-                        // scrub: true,
-                    },
-                }
-            );
+mm.add("(max-width: 1199px)", () => {
+    const tree = ".tree-section-desktop .tree-reveal";
+    const points = ".tree-section-desktop .why-rare-point";
 
-            gsap.fromTo(
-                ".tree-section-desktop .why-rare-point",
-                {
-                    y: 200,
-                    opacity: 0,
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 3,
-                    stagger: 0.5,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: ".tree-section-desktop .abt-why-rare-desktop-pointers",
-                        start: "top 80%",
-                        toggleActions: "play none none none",
-                    },
-                }
-            );
-        });
+    gsap.set(tree, {
+        clipPath: "inset(100% 0 0 0)",
+    });
+
+    gsap.set(points, {
+        y: 200,
+        autoAlpha: 0,
+    });
+
+    const treeAnimation = gsap.to(tree, {
+        clipPath: "inset(0% 0 0 0)",
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".why-rare-desktop-tree-image",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+    });
+
+    const pointsAnimation = gsap.to(points, {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1.2,
+        stagger: 0.3,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".tree-section-desktop .abt-why-rare-desktop-pointers",
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+    });
+
+    return () => {
+        treeAnimation.scrollTrigger?.kill();
+        pointsAnimation.scrollTrigger?.kill();
+        treeAnimation.kill();
+        pointsAnimation.kill();
+    };
+});
+
         return () => mm.revert();
 
 
