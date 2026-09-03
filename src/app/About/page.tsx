@@ -37,7 +37,7 @@ export default function About() {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
-	useThemeTrigger();
+	useThemeTrigger(isSmallScreen);
 	
 	if (isSmallScreen === null) { return null; }
 
