@@ -10,7 +10,7 @@ import { useThemeTrigger } from "@/hooks/useThemeTrigger";
 
 export default function AboutSectionDesktop() {
 
-    useThemeTrigger();
+    // useThemeTrigger();
 
     return (
         <>
