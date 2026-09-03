@@ -220,7 +220,7 @@
 	.abt-card-text { height: 170px; }
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 190px; }
 
-	.abt-rpd-card-2 { transform: translateY(-250px); }
+	/* .abt-rpd-card-2 { transform: translateY(-250px); } */
 
 	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 445px; height: 437px; }
 	.rpd-card-2 { width: 445px; height: 385px; }
@@ -231,7 +231,7 @@
 
 	.life-at-rpd-desktop-card-wrapper { height: 1305px; }
 
-	.about-rpd-desktop-content-wrapper { padding-top: 243px; }
+	/* .about-rpd-desktop-content-wrapper { padding-top: 243px; } */
 
 	.pixels-logo { width: 270px; }
 	.design-logo { width: 330px; }
@@ -243,7 +243,7 @@
 	.abt-timeline-title-right { width: 445px; }
 
 	/* .town { top: 45px; } */
-	.abt-card-text { width: 300px; height: 230px; }
+	.abt-card-text { width: 300px; height: 280px; }
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 280px; }
  
 }
@@ -527,8 +527,8 @@
 
 	.tree-section-inner { top: -80px; }
 	.abt-timeline-title-right { width: 490px; }
-	.abt-card-text { width: 290px; height: 210px; }
-	.abt-rpd-card-2 { transform: translateY(-230px); }
+	.abt-card-text { width: 290px; height: 280px; }
+	/* .abt-rpd-card-2 { transform: translateY(-230px); } */
 }
 
 @media (max-width: 1439px) {
@@ -706,7 +706,7 @@
 	.process-section-title p { width: 80%; }
 
 	/* about page */
-	.about-hero-section-desktop .container { margin-top: 10px; }
+	/* .about-hero-section-desktop .container { margin-top: 10px; } */
 	.town { top: 150px; }
 	.town h2 { font-size: 15.5vw; line-height: 165px; }
 	.about-video-text-practice { height: 345px; }
@@ -776,10 +776,14 @@
 	.tree-section-inner { top: 0px; }
 	.abt-rpd-section-desktop { height: 800vh; }
 
-	.abt-card-text { width: 245px; height: 185px; }
-	.abt-rpd-card-2 { transform: translateY(-205px); }
-	.about-rpd-desktop-content-wrapper { padding-top: 200px; }
+	.abt-time-line-desktop-sticky { height: 600vh; }
+
+	.abt-card-text { width: 245px; height: 210px; }
+	/* .abt-rpd-card-2 { transform: translateY(-205px); } */
+	/* .about-rpd-desktop-content-wrapper { padding-top: 200px; } */
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 210px; }
+
+	.abt-timeline-content-wrapper { align-items: flex-end; }
 }
 
 @media (max-width: 1359px) {
@@ -1009,9 +1013,9 @@
 	.abt-rpd-card span { font-size: 66px; line-height: 56px; }
 	.rare-logo { width: 46px; }
 	.rpd-card-title-1 { gap: 5px; }
-	.abt-rpd-card-2 .abt-card-text h2 { margin-bottom: 10px; }
+	/* .abt-rpd-card-2 .abt-card-text h2 { margin-bottom: 10px; } */
 
-	.abt-rpd-card-2 .abt-card-text .abt-card-text h2 { margin-bottom: 10px; }
+	/* .abt-rpd-card-2 .abt-card-text .abt-card-text h2 { margin-bottom: 10px; } */
 
 	.abt-life-rpd-desktop-title h2 { margin-bottom: 15px; }
 	
@@ -1027,9 +1031,9 @@
 	.rpd-card-col-3 { transform: translateY(-160px); }
 
 	.tree-section-inner { top: 50px; }
-	.abt-card-text { width: 220px; height: 190px; }
-	.abt-rpd-card-2 { transform: translateY(-210px); }
-	.about-rpd-desktop-content-wrapper { padding-top: 140px; }
+	.abt-card-text { width: 220px; height: 220px; }
+	/* .abt-rpd-card-2 { transform: translateY(-210px); } */
+	/* .about-rpd-desktop-content-wrapper { padding-top: 140px; } */
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 220px; }
 	.abt-time-line-desktop-sticky { height: 600vh; }
 	.abt-rpd-section-desktop { height: 800vh; }
@@ -1342,14 +1346,14 @@
 	.about-hero-section-title { flex-direction: column; gap: 10px; }
 	.about-hero-section-title h1 { width: 100%; }
 	.about-hero-section-title p { width: 100%; }
-	.about-hero-section-desktop .container { margin-top: 40px; }
+	/* .about-hero-section-desktop .container { margin-top: 40px; } */
 
 	.abt-timeline-title-left { width: 100%; }
 	.abt-timeline-title-desktop { flex-direction: column; align-items: flex-start; gap: 30px; }
 	.abt-timeline-title-right { width: 100%; }
 
 	.timeline-hr { margin-top: 50px; margin-bottom: 40px; }
-	.abt-timeline-content-wrapper { align-items: center; gap: 40px; flex-direction: column; }
+	.abt-timeline-content-wrapper { align-items: flex-start; gap: 40px; flex-direction: column; }
 	/* .abt-timeline-content-right { width: 550px; } */
 	.timeline-dot.active { right: 230px; }
 
@@ -1378,7 +1382,7 @@
 
 	.why-rare-point { position: static; }
 	.why-rare-title-desktop { width: 100%; }
-	.why-rare-desktop-content { flex-direction: column-reverse; padding-top: 0; margin-top: 40px; gap: 40px; }
+	.why-rare-desktop-content { flex-direction: column-reverse; padding-top: 0; margin-top: 55px; gap: 40px; }
 	.why-rare-pointers { width: 100%; }
 	.abt-why-rare-desktop-pointers { display: flex; flex-direction: column; gap: 30px; }
 	.why-rare-desktop-tree-image { width: 500px; }

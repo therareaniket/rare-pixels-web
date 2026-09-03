@@ -824,14 +824,14 @@ body.menu-open {
 
 .card-reveal { position: absolute; inset: 0; background-color: #040e36; z-index: 10; will-change: transform; }
 
-.about-rpd-desktop-content-wrapper { display: flex; align-items: flex-start; padding-top: 192px; }
+.about-rpd-desktop-content-wrapper { display: flex; align-items: flex-start; }
 .abt-rpd-card { display: flex; flex-direction: column; width: 403px; }
 
-.abt-rpd-card-2 { flex-direction: column-reverse; transform: translateY(-185px);  }
+/* .abt-rpd-card-2 { flex-direction: column-reverse; transform: translateY(-185px);  } */
 .abt-card-text { height: 165px; }
 .abt-card-text h2 { margin: 20px 0; }
-.abt-rpd-card-2 .abt-card-text h2 { margin-top: 0; margin-bottom: 20px; }
-.abt-rpd-card-2 .abt-card-text { margin-bottom: 20px; }
+/* .abt-rpd-card-2 .abt-card-text h2 { margin-top: 0; margin-bottom: 20px; } */
+/* .abt-rpd-card-2 .abt-card-text { margin-bottom: 20px; } */
 
 .abt-rpd-section-desktop { position: relative; }
 

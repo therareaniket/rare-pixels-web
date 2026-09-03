@@ -123,53 +123,52 @@ export default function WhyRarePixelsDesktop() {
             };
         });
 
-mm.add("(max-width: 1199px)", () => {
-    const tree = ".tree-section-desktop .tree-reveal";
-    const points = ".tree-section-desktop .why-rare-point";
+        mm.add("(max-width: 1199px)", () => {
+            const tree = ".tree-section-desktop .tree-reveal";
+            const points = ".tree-section-desktop .why-rare-point";
 
-    gsap.set(tree, {
-        clipPath: "inset(100% 0 0 0)",
-    });
+            gsap.set(tree, {
+                clipPath: "inset(100% 0 0 0)",
+            });
 
-    gsap.set(points, {
-        y: 200,
-        autoAlpha: 0,
-    });
+            gsap.set(points, {
+                y: 200,
+                autoAlpha: 0,
+            });
 
-    const treeAnimation = gsap.to(tree, {
-        clipPath: "inset(0% 0 0 0)",
-        duration: 1.5,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".why-rare-desktop-tree-image",
-            start: "top 80%",
-            toggleActions: "play none none none",
-        },
-    });
+            const treeAnimation = gsap.to(tree, {
+                clipPath: "inset(0% 0 0 0)",
+                duration: 1.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".why-rare-desktop-tree-image",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+            });
 
-    const pointsAnimation = gsap.to(points, {
-        y: 0,
-        autoAlpha: 1,
-        duration: 1.2,
-        stagger: 0.3,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".tree-section-desktop .abt-why-rare-desktop-pointers",
-            start: "top 80%",
-            toggleActions: "play none none none",
-        },
-    });
+            const pointsAnimation = gsap.to(points, {
+                y: 0,
+                autoAlpha: 1,
+                duration: 1.2,
+                stagger: 0.3,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".tree-section-desktop .abt-why-rare-desktop-pointers",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+            });
 
-    return () => {
-        treeAnimation.scrollTrigger?.kill();
-        pointsAnimation.scrollTrigger?.kill();
-        treeAnimation.kill();
-        pointsAnimation.kill();
-    };
-});
+            return () => {
+                treeAnimation.scrollTrigger?.kill();
+                pointsAnimation.scrollTrigger?.kill();
+                treeAnimation.kill();
+                pointsAnimation.kill();
+            };
+        });
 
         return () => mm.revert();
-
 
     }, []);
 

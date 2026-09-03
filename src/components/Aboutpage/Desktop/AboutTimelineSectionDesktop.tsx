@@ -93,14 +93,16 @@ export default function AboutTimelineSectionDesktop() {
             let travelDistance = 0;
             let targetLineWidth = 0;
 
-            const firstMoveStart = 0;
-            const firstMoveEnd = 0.18;
+            const pinPauseEnd = 0.1;
 
-            const secondMoveStart = 0.36;
-            const secondMoveEnd = 0.54;
+            const firstMoveStart = pinPauseEnd;
+            const firstMoveEnd = 0.28;
 
-            const thirdMoveStart = 0.72;
-            const thirdMoveEnd = 0.9;
+            const secondMoveStart = 0.43;
+            const secondMoveEnd = 0.61;
+
+            const thirdMoveStart = 0.76;
+            const thirdMoveEnd = 0.94;
 
             const firstLineFadeStart = secondMoveStart - 0.06;
             const secondLineFadeStart = thirdMoveStart - 0.06;
@@ -118,9 +120,9 @@ export default function AboutTimelineSectionDesktop() {
             };
 
             const calculateDimensions = () => {
-                const firstX = gsap.getProperty(firstDot, "x");
-                const secondX = gsap.getProperty(secondDot, "x");
-                const thirdX = gsap.getProperty(thirdDot, "x");
+                const firstX = Number(gsap.getProperty(firstDot, "x")) || 0;
+                const secondX = Number(gsap.getProperty(secondDot, "x")) || 0;
+                const thirdX = Number(gsap.getProperty(thirdDot, "x")) || 0;
 
                 gsap.set([firstDot, secondDot, thirdDot], {
                     x: 0,
@@ -170,32 +172,20 @@ export default function AboutTimelineSectionDesktop() {
                 ease: "power2.out",
             });
 
-            const moveFirstDotOpacity = gsap.quickTo(
-                firstDot,
-                "opacity",
-                {
-                    duration: 0.25,
-                    ease: "power1.out",
-                }
-            );
+            const moveFirstDotOpacity = gsap.quickTo(firstDot, "opacity", {
+                duration: 0.25,
+                ease: "power1.out",
+            });
 
-            const moveSecondDotOpacity = gsap.quickTo(
-                secondDot,
-                "opacity",
-                {
-                    duration: 0.25,
-                    ease: "power1.out",
-                }
-            );
+            const moveSecondDotOpacity = gsap.quickTo(secondDot, "opacity", {
+                duration: 0.25,
+                ease: "power1.out",
+            });
 
-            const moveThirdDotOpacity = gsap.quickTo(
-                thirdDot,
-                "opacity",
-                {
-                    duration: 0.25,
-                    ease: "power1.out",
-                }
-            );
+            const moveThirdDotOpacity = gsap.quickTo(thirdDot, "opacity", {
+                duration: 0.25,
+                ease: "power1.out",
+            });
 
             const moveLine1Width = gsap.quickTo(line1, "width", {
                 duration: 0.8,
@@ -227,6 +217,33 @@ export default function AboutTimelineSectionDesktop() {
                 ease: "power1.out",
             });
 
+            const resetDesktopAnimation = () => {
+                moveFirstDot(0);
+                moveSecondDot(0);
+                moveThirdDot(0);
+
+                moveFirstDotOpacity(0);
+                moveSecondDotOpacity(0);
+                moveThirdDotOpacity(0);
+
+                moveLine1Width(0);
+                moveLine2Width(0);
+                moveLine3Width(0);
+
+                moveLine1Opacity(0);
+                moveLine2Opacity(0);
+                moveLine3Opacity(0);
+
+                if (desktopStageRef.current !== -1) {
+                    desktopStageRef.current = -1;
+                    setShowDesktopContent(false);
+                    setActiveIndex(0);
+                    setYearIndex(0);
+                }
+            };
+
+            resetDesktopAnimation();
+
             const trigger = ScrollTrigger.create({
                 trigger: sectionRef.current,
                 start: "top top",
@@ -240,6 +257,11 @@ export default function AboutTimelineSectionDesktop() {
 
                 onUpdate: (self) => {
                     const progress = self.progress;
+
+                    if (progress < pinPauseEnd) {
+                        resetDesktopAnimation();
+                        return;
+                    }
 
                     const firstDotProgress = getStageProgress(
                         progress,
@@ -259,28 +281,19 @@ export default function AboutTimelineSectionDesktop() {
                         thirdMoveEnd
                     );
 
-                    moveFirstDot(
-                        travelDistance * firstDotProgress
-                    );
-
-                    moveSecondDot(
-                        travelDistance * secondDotProgress
-                    );
-
-                    moveThirdDot(
-                        travelDistance * thirdDotProgress
-                    );
+                    moveFirstDot(travelDistance * firstDotProgress);
+                    moveSecondDot(travelDistance * secondDotProgress);
+                    moveThirdDot(travelDistance * thirdDotProgress);
 
                     let line1Width = 0;
                     let line1Opacity = 0;
 
                     if (
-                        progress > firstMoveStart &&
+                        progress >= firstMoveStart &&
                         progress < firstMoveEnd
                     ) {
                         line1Width =
                             targetLineWidth * firstDotProgress;
-
                         line1Opacity = 1;
                     } else if (
                         progress >= firstMoveEnd &&
@@ -302,8 +315,7 @@ export default function AboutTimelineSectionDesktop() {
                                     )
                                 );
 
-                            line1Opacity =
-                                1 - line1FadeProgress;
+                            line1Opacity = 1 - line1FadeProgress;
                         }
                     }
 
@@ -320,7 +332,6 @@ export default function AboutTimelineSectionDesktop() {
                     ) {
                         line2Width =
                             targetLineWidth * secondDotProgress;
-
                         line2Opacity = 1;
                     } else if (
                         progress >= secondMoveEnd &&
@@ -342,8 +353,7 @@ export default function AboutTimelineSectionDesktop() {
                                     )
                                 );
 
-                            line2Opacity =
-                                1 - line2FadeProgress;
+                            line2Opacity = 1 - line2FadeProgress;
                         }
                     }
 
@@ -360,7 +370,6 @@ export default function AboutTimelineSectionDesktop() {
                     ) {
                         line3Width =
                             targetLineWidth * thirdDotProgress;
-
                         line3Opacity = 1;
                     } else if (progress >= thirdMoveEnd) {
                         line3Width = targetLineWidth;
@@ -396,7 +405,7 @@ export default function AboutTimelineSectionDesktop() {
                             setShowDesktopContent(true);
                             setActiveIndex(1);
                             setYearIndex(2);
-                        } else if (newStage === 2) {
+                        } else {
                             setShowDesktopContent(true);
                             setActiveIndex(2);
                             setYearIndex(0);

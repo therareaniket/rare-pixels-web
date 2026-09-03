@@ -9,35 +9,35 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function WhyRarePixelsMobile() {
 
-useLayoutEffect(() => {
-  gsap.set(".tree-reveal", {
-    clipPath: "inset(100% 0 0 0)"
-  });
+    useLayoutEffect(() => {
+        gsap.set(".tree-reveal", {
+            clipPath: "inset(100% 0 0 0)"
+        });
 
-  gsap.set(".why-rare-point", {
-    opacity: 0,
-    y: 200
-  });
+        gsap.set(".why-rare-point", {
+            opacity: 0,
+            y: 200
+        });
 
-  gsap.to(".tree-reveal", {
-    clipPath: "inset(0% 0 0 0)",
-    scrollTrigger: {
-      trigger: ".why-rare-mobile-tree",
-      start: "top 80%",
-    }
-  });
+        gsap.to(".tree-reveal", {
+            clipPath: "inset(0% 0 0 0)",
+            scrollTrigger: {
+                trigger: ".why-rare-mobile-tree",
+                start: "top 80%",
+            }
+        });
 
-  gsap.to(".why-rare-point", {
-    y: 0,
-    opacity: 1,
-    duration: 3,
-    stagger: 0.5,
-    scrollTrigger: {
-      trigger: ".abt-why-rare-desktop-pointers",
-      start: "top 80%",
-    }
-  });
-}, []);
+        gsap.to(".why-rare-point", {
+            y: 0,
+            opacity: 1,
+            duration: 3,
+            stagger: 0.5,
+            scrollTrigger: {
+                trigger: ".abt-why-rare-desktop-pointers",
+                start: "top 80%",
+            }
+        });
+    }, []);
 
     return (
         <>

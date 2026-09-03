@@ -26,6 +26,7 @@
     .process-section-inner { padding: 0; }
     .about-video-text-practice { height: 250px; }
 
+    .our-values-mobile-section { overflow: hidden; }
 
     .container { width: 100%; max-width: 100%; padding: 0 18px; }  
     .section { padding: 50px 0px; } 
@@ -458,10 +459,10 @@
 
     .abt-vis-mobile { margin-top: 20px; margin-bottom: 14px; }
     .abt-our-values-pointer-mobile { display: flex; align-items: flex-start; justify-content: space-between; opacity: 0; transform: perspective(700px) translateY(-28px) rotateX(72deg); transform-origin: top center; transition: opacity .7s ease, transform .9s cubic-bezier(.22, 1, .36, 1); }
-    .abt-our-values-pointer-mobile:nth-of-type(1) { transition-delay: 1s; }
-    .abt-our-values-pointer-mobile:nth-of-type(3) { transition-delay: 2s; }
-    .abt-our-values-pointer-mobile:nth-of-type(5) { transition-delay: 3s; }
-    .abt-our-values-pointer-mobile:nth-of-type(7) { transition-delay: 4s; }
+    .abt-our-values-pointer-mobile:nth-of-type(1) { transition-delay: 0.8s; }
+    .abt-our-values-pointer-mobile:nth-of-type(3) { transition-delay: 1.2s; }
+    .abt-our-values-pointer-mobile:nth-of-type(5) { transition-delay: 1.8s; }
+    .abt-our-values-pointer-mobile:nth-of-type(7) { transition-delay: 2.2s; }
     .abt-our-values-pointer-mobile.is-visible { opacity: 1; transform: perspective(700px) translateY(0) rotateX(0); }
     .abt-our-values-hr { width: 0; transition: width 3.4s ease 3.4s; }
     .abt-our-values-hr.is-visible { width: 100%; }
@@ -532,9 +533,9 @@
     .timeline-active-hr { width: 6%; height: 1px; background: var(--primary); position: absolute; top: 0; left: 0; }
     .timeline-dot-active { position: absolute; top: -5px; left: 6%; transform: translateX(-50%); width: 10px; height: 10px; border-radius: 50%; background: var(--primary); }
 
-    .why-rare-mobile-tree { overflow: hidden; }
-    .tree-reveal { clip-path: inset(100% 0 0 0); }
-    .why-rare-point { opacity: 0; transform: translateY(200px); }
+    .tree-reveal { display: block; width: 100%; will-change: clip-path; }
+    .tree-reveal img { display: block; width: 100%; height: auto; }
+    .why-rare-point { will-change: transform, opacity; }
 
     .rpd-mobile-section {
         position: relative;
@@ -565,6 +566,8 @@
         justify-content: center;
         transform-origin: center center;
     }
+
+    .abt-hero-video { height: calc( 100vh - 470px ); }
 }
 
 @media (max-width: 439px) {
@@ -850,7 +853,7 @@
     .timeline-mobile-sticky { height: 400vh; }
 
     .abt-hero-video { height: calc( 100vh - 400px ); }
-    .timeline-mobile-inner { top: -150px; }
+    /* .timeline-mobile-inner { top: -150px; } */
 
     .rpd-mobile-card .h5 { margin-top: 12; margin-bottom: 10px; }
 

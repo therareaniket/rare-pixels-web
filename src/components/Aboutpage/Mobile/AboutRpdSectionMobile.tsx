@@ -15,7 +15,7 @@ useEffect(() => {
         const css = getComputedStyle(document.documentElement);
 
         gsap.set(".rpd-mobile-card-wrapper", {
-            scale: 2,
+            scale: 3.5,
             opacity: 1,
             flexDirection: "row",
             transformOrigin: "center center"
@@ -44,7 +44,6 @@ useEffect(() => {
 
         gsap.set(".rpd-mobile-card-text", {
             opacity: 0,
-            y: 40
         });
 
         const tl = gsap.timeline({
@@ -123,7 +122,6 @@ useEffect(() => {
 
         tl.to(".rpd-mobile-card-1 .rpd-mobile-card-text", {
             opacity: 1,
-            y: 0,
             duration: 0.4
         });
 
@@ -135,7 +133,6 @@ useEffect(() => {
 
         tl.to(".rpd-mobile-card-2 .rpd-mobile-card-text", {
             opacity: 1,
-            y: 0,
             duration: 0.4
         });
 
@@ -147,7 +144,6 @@ useEffect(() => {
 
         tl.to(".rpd-mobile-card-3 .rpd-mobile-card-text", {
             opacity: 1,
-            y: 0,
             duration: 0.4
         });
 

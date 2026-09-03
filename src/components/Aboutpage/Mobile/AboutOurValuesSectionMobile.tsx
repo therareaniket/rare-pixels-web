@@ -30,7 +30,7 @@ export default function AboutOurValuesSectionMobile() {
 
     return (
         <>
-            <section className="section">
+            <section className="section our-values-mobile-section">
                 <div className="container">
                     <h2 className="text-sb">Our Values</h2>
 
