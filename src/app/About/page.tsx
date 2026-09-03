@@ -30,17 +30,15 @@ import { useThemeTrigger } from "@/hooks/useThemeTrigger";
 export default function About() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
 
-	// THEME TRIGGER FUNCTION CALL
-	useThemeTrigger();
-
 	useEffect(() => {
 		const handleResize = () => { setIsSmallScreen(window.innerWidth <= 479); };
-
 		window.addEventListener("resize", handleResize);
 		handleResize();
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
+	useThemeTrigger();
+	
 	if (isSmallScreen === null) { return null; }
 
 	return (

@@ -1,75 +1,22 @@
-'use client';
-
-import { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
-export function useThemeTrigger() {
-  useEffect(() => {
-    const sections = document.querySelectorAll<HTMLElement>('[data-theme-color]');
-
-    const ctx = gsap.context(() => {
-      sections.forEach((section) => {
-        const theme = section.getAttribute('data-theme-color');
-
-        ScrollTrigger.create({
-          trigger: section,
-          start: 'top 30%',
-          end: 'bottom 50%',
-          onEnter: () => {
-            if (theme) document.body.setAttribute('data-theme', theme);
-          },
-          onEnterBack: () => {
-            if (theme) document.body.setAttribute('data-theme', theme);
-          },
-        });
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
-}
-
-
-
 // 'use client';
 
-// import { useLayoutEffect } from 'react';
+// import { useEffect } from 'react';
 // import gsap from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // gsap.registerPlugin(ScrollTrigger);
 
-// export function useThemeTrigger(dependency?: any) {
-//   useLayoutEffect(() => {
-//     // Select all potential theme wrapper elements
-//     const allSections = Array.from(
-//       document.querySelectorAll<HTMLElement>('main [data-theme-color]')
-//     );
-
-//     // Filter out sections inside hidden containers (display: none / hidden class)
-//     const visibleSections = allSections.filter((section) => {
-//       const style = window.getComputedStyle(section);
-//       return style.display !== 'none' && section.offsetParent !== null;
-//     });
-
-//     if (!visibleSections.length) return;
-
-//     // Immediately apply the theme of the very FIRST visible section
-//     const initialTheme = visibleSections[0].getAttribute('data-theme-color');
-//     if (initialTheme) {
-//       document.body.setAttribute('data-theme', initialTheme);
-//     }
+// export function useThemeTrigger() {
+//   useEffect(() => {
+//     const sections = document.querySelectorAll<HTMLElement>('[data-theme-color]');
 
 //     const ctx = gsap.context(() => {
-//       visibleSections.forEach((section) => {
+//       sections.forEach((section) => {
 //         const theme = section.getAttribute('data-theme-color');
 
 //         ScrollTrigger.create({
 //           trigger: section,
-//           start: 'top 40%',
+//           start: 'top 30%',
 //           end: 'bottom 50%',
 //           onEnter: () => {
 //             if (theme) document.body.setAttribute('data-theme', theme);
@@ -81,8 +28,66 @@ export function useThemeTrigger() {
 //       });
 //     });
 
-//     ScrollTrigger.refresh();
-
 //     return () => ctx.revert();
-//   }, [dependency]);
+//   }, []);
 // }
+
+
+
+
+
+
+// hooks/useThemeTrigger.ts
+'use client';
+
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+export function useThemeTrigger(isSmallScreen: boolean | null) {
+  useEffect(() => {
+    // Don't run triggers while initial screen check is null
+    if (isSmallScreen === null) return;
+
+    let ctx: gsap.Context;
+
+    // Use requestAnimationFrame / timeout to ensure Lenis & DOM have painted mobile layout
+    const timer = setTimeout(() => {
+      ctx = gsap.context(() => {
+        // Find all theme wrappers EXCEPT individual horizontal cards inside Industries
+        const sections = Array.from(
+          document.querySelectorAll<HTMLElement>('[data-theme-color]')
+        ).filter((el) => !el.classList.contains('industry-item'));
+
+        sections.forEach((section) => {
+          const theme = section.getAttribute('data-theme-color');
+
+          ScrollTrigger.create({
+            trigger: section,
+            // Fire trigger when top of section reaches 60% down the viewport
+            start: 'top 60%',
+            end: 'bottom 40%',
+            // Debugging: Set markers to true to visually verify triggers on screen
+            // markers: true, 
+            onEnter: () => {
+              if (theme) document.body.setAttribute('data-theme', theme);
+            },
+            onEnterBack: () => {
+              if (theme) document.body.setAttribute('data-theme', theme);
+            },
+          });
+        });
+      });
+
+      // Force GSAP to recalculate offsets after pinned spacers are created
+      ScrollTrigger.refresh();
+    }, 300);
+
+    return () => {
+      clearTimeout(timer);
+      if (ctx) ctx.revert();
+    };
+  }, [isSmallScreen]);
+}

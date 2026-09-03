@@ -6,7 +6,7 @@
  */
 
 .site-radius-10 { border-radius: 10px; }
-.bg-yellowish { background-color: #FBF9E9; }
+/* .bg-yellowish { background-color: #FBF9E9; } */
 
 @media (max-width: 479px) {
     :root { 
@@ -24,6 +24,7 @@
 	.project-list { border-radius: 20px; }
     .project-list.active { box-shadow: none; }
     .process-section-inner { padding: 0; }
+    .project-video { border-radius: 16px; }
     .about-video-text-practice { height: 250px; }
 
     .our-values-mobile-section { overflow: hidden; }
@@ -180,9 +181,10 @@
     
     .why-semicircle{ position: absolute; left: 50%; transform: translateX(-50%); opacity: 100%; z-index: -1; }
     .why-choose-us-hand-image{ position: absolute; bottom: -5px; z-index: -1; }
-    .wc-bg-lines { height: 140%; }
     .why-choose-hand { width: 160px; }
     .why-choose-us-image-wrapper { height: 258px; }
+    .wc-bg-lines { height: 120%; }
+    .wc-svg-lines-wrapper { height: 240px; }
     
     
     .why-pointers-mob h3{ margin-bottom: 14px; }
@@ -634,8 +636,8 @@
     .why-choose-us-semi-circles{ height: 255px;}
     .why-choose-us-hand-image{ width: 155px; }
     .why-choose-hand { width: 150px; }
-    .wc-bg-lines { height: 142%; }
     .why-choose-us-image-wrapper { height: 240px; }
+
 
     .why-pointers-mob h3{ margin-bottom: 10px; }
     .why-choose-mob-pointer-wrapper{ gap: 15px; }
@@ -758,6 +760,8 @@
 
     .why-choose-hand { width: 140px; }
     .why-choose-us-image-wrapper { height: 224px; margin: 10px 0 22px 0; }
+    .wc-bg-lines { height: 125%; }
+    .wc-svg-lines-wrapper { height: 220px; }
 
 
     .why-choose-us-semi-circles{ height: 205px; margin-top: 10px; }

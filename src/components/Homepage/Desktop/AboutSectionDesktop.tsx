@@ -34,7 +34,7 @@ export default function AboutSectionDesktop() {
                                 </div>
 
                                 <div className="hm-abt-pointers-right">
-                                    {/* <GlassEffect> */}
+                                    <GlassEffect>
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
@@ -46,8 +46,9 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-                                    {/* </GlassEffect> */}
+                                    </GlassEffect>
 
+                                    <GlassEffect>
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
@@ -59,7 +60,9 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
+                                    </GlassEffect>
 
+                                    <GlassEffect>
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
@@ -71,7 +74,9 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-
+                                    </GlassEffect>
+                                    
+                                    <GlassEffect>
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
@@ -83,6 +88,7 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
+                                    </GlassEffect>
                                 </div>
                             </div>
                         </div>

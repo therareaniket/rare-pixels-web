@@ -33,6 +33,7 @@ export default function StatsSectionDesktop() {
       gsap.to(".world-map-initial", {
         clipPath: "inset(0% 0% 0% 100%)",
         duration: 3,
+        delay: 2,
         ease: "power2.inOut",
       });
     },
