@@ -223,14 +223,94 @@
 
 	/* .abt-rpd-card-2 { transform: translateY(-250px); } */
 
-	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 445px; height: 437px; }
+	/* .rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 445px; height: 437px; }
 	.rpd-card-2 { width: 445px; height: 385px; }
 	.rpd-card-3 { width: 410px; height: 372px; }
 	.rpd-card-4 { width: 410px; height: 472px; }
 	.rpd-card-5 { width: 410px; height: 401px; }
-	.rpd-card-8 { width: 445px; height: 291px; }
+	.rpd-card-8 { width: 445px; height: 291px; } */
 
-	.life-at-rpd-desktop-card-wrapper { height: 1305px; }
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 {
+    	--card-start-x: -150px;
+    	--card-start-y: 0;
+    	--card-start-scale: 1.3;
+    	--card-start-height: 437px;
+    	--card-end-height: 400px;
+
+    	width: 445px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-2 {
+    	--card-start-x: -120;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.3;
+    	--card-start-height: 385px;
+    	--card-end-height: 350px;
+
+    	width: 445px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-3 {
+    	--card-start-x: 0;
+    	--card-start-y: -200;
+    	--card-start-scale: 1.3;
+    	--card-start-height: 372px;
+    	--card-end-height: 320px;
+
+    	width: 410px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-4 {
+    	--card-start-x: 0;
+    	--card-start-y: -50;
+    	--card-start-scale: 1.3;
+    	--card-start-height: 472px;
+    	--card-end-height: 420px;
+
+    	width: 410px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-5 {
+    	--card-start-x: 0;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.3;
+    	--card-start-height: 401px;
+    	--card-end-height: 360px;
+
+    	width: 410px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-6 {
+    	--card-start-x: 200;
+    	--card-start-y: -150;
+    	--card-start-scale: 1.3;
+    	--card-start-height: 437px;
+    	--card-end-height: 420px;
+
+    	width: 445px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-7 {
+    	--card-start-x: 150;
+    	--card-start-y: 0;
+    	--card-start-scale: 1.3;
+    	--card-start-height: 437px;
+    	--card-end-height: 420px;
+
+    	width: 445px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-8 {
+    	--card-start-x: 100;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.3;
+    	--card-start-height: 291px;
+    	--card-end-height: 353px;
+
+    	width: 445px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper { height: 1140px; }
 
 	/* .about-rpd-desktop-content-wrapper { padding-top: 243px; } */
 
@@ -516,14 +596,94 @@
 
 	.abt-rpd-strip { font-size: 30px; line-height: 38px; bottom: -22px; }
 
-	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 402px; height: 392px; }
+	/* .rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 402px; height: 392px; }
 	.rpd-card-2 { width: 402px; height: 348px; }
 	.rpd-card-3 { width: 380px; height: 344px; }
 	.rpd-card-4 { width: 380px; height: 438px; }
 	.rpd-card-5 { width: 380px; height: 372px; }
-	.rpd-card-8 { width: 402px; height: 263px; }
+	.rpd-card-8 { width: 402px; height: 263px; } */
 
-	.life-at-rpd-desktop-card-wrapper { height: 1214px; margin-top: 40px; }
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 {
+    	--card-start-x: -150px;
+    	--card-start-y: 0;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 392px;
+    	--card-end-height: 360px;
+
+    	width: 402px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-2 {
+    	--card-start-x: -120;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 348px;
+    	--card-end-height: 310px;
+
+    	width: 402px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-3 {
+    	--card-start-x: 0;
+    	--card-start-y: -200;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 344px;
+    	--card-end-height: 320px;
+
+    	width: 380px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-4 {
+    	--card-start-x: 0;
+    	--card-start-y: -50;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 438px;
+    	--card-end-height: 350px;
+
+    	width: 380px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-5 {
+    	--card-start-x: 0;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 401px;
+    	--card-end-height: 360px;
+
+    	width: 380px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-6 {
+    	--card-start-x: 200;
+    	--card-start-y: -150;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 392px;
+    	--card-end-height: 360px;
+
+    	width: 402px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-7 {
+    	--card-start-x: 150;
+    	--card-start-y: 0;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 392px;
+    	--card-end-height: 360px;
+
+    	width: 402px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-8 {
+    	--card-start-x: 100;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 291px;
+    	--card-end-height: 353px;
+
+    	width: 402px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper { height: 1095px; margin-top: 40px; }
 	.rpd-card-col-3 { transform: translateY(-190px); }
 	.why-rare-title-desktop { width: 620px; }
 
@@ -761,14 +921,94 @@
 	.abt-rpd-card-1 { width: 45px; }
 	.abt-rpd-card-3 { width: 53px; }
 
-	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 350px; height: 344px; }
+	/* .rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 350px; height: 344px; }
 	.rpd-card-2 { width: 350px; height: 303px; }
 	.rpd-card-3 { width: 315px; height: 286px; }
 	.rpd-card-4 { width: 315px; height: 363px; }
 	.rpd-card-5 { width: 315px; height: 308px; }
-	.rpd-card-8 { width: 350px; height: 229px; }
+	.rpd-card-8 { width: 350px; height: 229px; } */
 
-	.life-at-rpd-desktop-card-wrapper { gap: 20px; height: 997px; }
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 {
+    	--card-start-x: -150px;
+    	--card-start-y: 0;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 344px;
+    	--card-end-height: 300px;
+
+    	width: 350px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-2 {
+    	--card-start-x: -120;
+    	--card-start-y: 80;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 303px;
+    	--card-end-height: 280px;
+
+    	width: 350px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-3 {
+    	--card-start-x: 0;
+    	--card-start-y: -200;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 286px;
+    	--card-end-height: 260px;
+
+    	width: 315px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-4 {
+    	--card-start-x: 0;
+    	--card-start-y: -70;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 363px;
+    	--card-end-height: 320px;
+
+    	width: 315px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-5 {
+    	--card-start-x: 0;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 308px;
+    	--card-end-height: 280px;
+
+    	width: 315px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-6 {
+    	--card-start-x: 100;
+    	--card-start-y: -120;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 344px;
+    	--card-end-height: 300px;
+
+    	width: 350px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-7 {
+    	--card-start-x: 150;
+    	--card-start-y: -30;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 344px;
+    	--card-end-height: 300px;
+
+    	width: 350px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-8 {
+    	--card-start-x: 100;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 229px;
+    	--card-end-height: 210px;
+
+    	width: 350px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper { gap: 20px; height: 900px; }
 	.rpd-card-col { gap: 20px; }
 
 	.rpd-card-col-3 { transform: translateY(-175px); }
@@ -1025,12 +1265,92 @@
 
 	.abt-life-rpd-desktop-title h2 { margin-bottom: 15px; }
 	
-	.rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 320px; height: 314px; }
+	/* .rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 320px; height: 314px; }
 	.rpd-card-2 { width: 320px; height: 277px; }
 	.rpd-card-3 { width: 280px; height: 254px; }
 	.rpd-card-4 { width: 280px; height: 323px; }
 	.rpd-card-5 { width: 280px; height: 274px; }
-	.rpd-card-8 { width: 320px; height: 209px; }
+	.rpd-card-8 { width: 320px; height: 209px; } */
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 {
+    	--card-start-x: -150px;
+    	--card-start-y: 0;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 314px;
+    	--card-end-height: 290px;
+
+    	width: 320px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-2 {
+    	--card-start-x: -120;
+    	--card-start-y: 80;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 277px;
+    	--card-end-height: 280px;
+
+    	width: 320px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-3 {
+    	--card-start-x: 0;
+    	--card-start-y: -200;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 286px;
+    	--card-end-height: 260px;
+
+    	width: 280px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-4 {
+    	--card-start-x: 0;
+    	--card-start-y: -70;
+    	--card-start-scale: 1.4;
+    	--card-start-height: 363px;
+    	--card-end-height: 320px;
+
+    	width: 280px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-5 {
+    	--card-start-x: 0;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 308px;
+    	--card-end-height: 280px;
+
+    	width: 280px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-6 {
+    	--card-start-x: 100;
+    	--card-start-y: -120;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 344px;
+    	--card-end-height: 300px;
+
+    	width: 320px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-7 {
+    	--card-start-x: 150;
+    	--card-start-y: -30;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 344px;
+    	--card-end-height: 300px;
+
+    	width: 320px;
+	}
+
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-8 {
+    	--card-start-x: 100;
+    	--card-start-y: 100;
+    	--card-start-scale: 1.2;
+    	--card-start-height: 229px;
+    	--card-end-height: 210px;
+
+    	width: 320px;
+	}
 
 	.life-at-rpd-desktop-card-wrapper { height: 891px; }
 

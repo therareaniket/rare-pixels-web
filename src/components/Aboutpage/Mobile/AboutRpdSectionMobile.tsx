@@ -217,7 +217,7 @@ export default function AboutRpdSectionMobile() {
             </section>
 
             <div className="abt-strip-animation bg-light-black">
-                <div className="abt-rpd-strip">
+                <div className="abt-rpd-strip bg-light-black">
                     <p className="h2 text-sb">Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * Together, We’ll Make Waves In The World Of Design * </p>
                 </div>
             </div>

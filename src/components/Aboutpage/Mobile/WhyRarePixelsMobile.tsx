@@ -86,6 +86,7 @@ export default function WhyRarePixelsMobile() {
             });
         };
     }, []);
+    
     return (
         <section ref={sectionRef} className="section section-bg-blue why-rare-mobile-sticky" >
             <div className="why-rare-mobile-inner">

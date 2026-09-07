@@ -851,7 +851,7 @@ body.menu-open {
 
 .abt-life-rpd-desktop-title h2{ margin-bottom: 20px; }
 
-.life-at-rpd-desktop-card-wrapper { display: flex; align-items: flex-start; gap: 30px; margin-top: 60px; height: 1457px; }
+.life-at-rpd-desktop-card-wrapper { display: flex; align-items: flex-start; gap: 30px; margin-top: 60px; height: 1140px; }
 .rpd-card-col { display: flex; flex-direction: column; gap: 30px; }
 .rpd-card-col-1 { padding-top: 64px; }
 .rpd-card-col-3 { transform: translateY(-204px); }
@@ -1004,6 +1004,176 @@ body.menu-open {
 
 .abt-hero-video video { width: 100%; height: 100%; object-fit: cover; }
 
-.life-at-rpd-section { position: relative; height: 400vh;}
-.life-at-rpd-inner { position: sticky; top: 0; height: max-content; overflow: hidden; }
-.life-at-rpd-inner .container .life-at-rpd-desktop-card-wrapper.desktop { overflow: visible; background-color: red; width: 100%; }
+/* LIFE AT RPD SECTION */
+
+.life-at-rpd-section {
+    position: relative;
+    height: 400vh;
+    padding-bottom: 0;
+}
+
+.life-at-rpd-inner {
+    position: sticky;
+    top: -150px;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+}
+
+.life-at-rpd-inner .container {
+    position: relative;
+    height: 100%;
+}
+
+.abt-life-rpd-desktop-title {
+    position: relative;
+    z-index: 10;
+}
+
+.abt-life-rpd-desktop-title h2 {
+    margin-bottom: 20px;
+}
+
+.life-at-rpd-inner
+    .container
+    .life-at-rpd-desktop-card-wrapper.desktop {
+    width: 100%;
+    overflow: visible;
+}
+
+.life-at-rpd-desktop-card-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 60px;
+    height: 1140px;
+}
+
+.rpd-card-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.rpd-card-col-1 {
+    padding-top: 64px;
+}
+
+.rpd-card-col-3 {
+    transform: translateY(-204px);
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card {
+    --card-start-x: 0px;
+    --card-start-y: 0px;
+    --card-start-scale: 1;
+    --card-start-height: 0px;
+    --card-end-height: 0px;
+
+    --card-translate-x: var(--card-start-x);
+    --card-translate-y: var(--card-start-y);
+    --card-scale: var(--card-start-scale);
+    --card-current-height: var(--card-start-height);
+
+    height: var(--card-current-height);
+
+    transform:
+        translate3d(
+            var(--card-translate-x),
+            var(--card-translate-y),
+            0
+        )
+        scale(var(--card-scale));
+
+    transform-origin: center;
+    backface-visibility: hidden;
+    will-change: transform, height;
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 {
+    --card-start-x: -280px;
+    --card-start-y: 120px;
+    --card-start-scale: 1.3;
+    --card-start-height: 530px;
+    --card-end-height: 420px;
+
+    width: 540px;
+    /* background-color: red; */
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-2 {
+    --card-start-x: -180px;
+    --card-start-y: 420px;
+    --card-start-scale: 1.3;
+    --card-start-height: 467px;
+    --card-end-height: 400px;
+
+    width: 540px;
+    /* background-color: yellow; */
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-3 {
+    --card-start-x: 40px;
+    --card-start-y: -260px;
+    --card-start-scale: 1.3;
+    --card-start-height: 417px;
+    --card-end-height: 320px;
+
+    width: 460px;
+    /* background-color: green; */
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-4 {
+    --card-start-x: 100px;
+    --card-start-y: 180px;
+    --card-start-scale: 1.3;
+    --card-start-height: 530px;
+    --card-end-height: 380px;
+
+    width: 460px;
+    /* background-color: pink; */
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-5 {
+    --card-start-x: 180px;
+    --card-start-y: 460px;
+    --card-start-scale: 1.3;
+    --card-start-height: 450px;
+    --card-end-height: 380px;
+
+    width: 460px;
+    /* background-color: blue; */
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-6 {
+    --card-start-x: 300px;
+    --card-start-y: -220px;
+    --card-start-scale: 1.3;
+    --card-start-height: 530px;
+    --card-end-height: 420px;
+
+    width: 540px;
+    /* background-color: red; */
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-7 {
+    --card-start-x: 360px;
+    --card-start-y: 120px;
+    --card-start-scale: 1.3;
+    --card-start-height: 530px;
+    --card-end-height: 420px;
+
+    width: 540px;
+    /* background-color: red; */
+}
+
+.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-8 {
+    --card-start-x: 260px;
+    --card-start-y: 420px;
+    --card-start-scale: 1.3;
+    --card-start-height: 353px;
+    --card-end-height: 353px;
+
+    width: 540px;
+    /* background-color: orange; */
+}
