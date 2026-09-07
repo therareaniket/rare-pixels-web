@@ -16,7 +16,7 @@ const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 export default function BlogSectionMobile() {
     return (
         <>
-            <section className="section blog-section" style={{ paddingBottom: 0 }}>
+            <section className="section blog-section">
                 <div className="container">
                     <div className="hm-mob-blog-title">
                         <h2 className="text-sb">Our Blog</h2>

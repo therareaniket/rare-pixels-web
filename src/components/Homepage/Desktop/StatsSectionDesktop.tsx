@@ -47,7 +47,7 @@ export default function StatsSectionDesktop() {
 
     return (
       <>
-        <section className="section hm-stats-section">
+        <section className="section hm-stats-section" style={{ backgroundColor: "#040E36", color: "white" }}>
           <div className="container">
             <div className="stats-wrapper stats-wrapper-for-desktop">
               <div className="stats-card-row-1">

@@ -23,7 +23,7 @@ const industries = [
         desc3: "Complex products deserve experiences that feel simple.",
     },
     {
-        theme: "black",
+        theme: "light-yellow",
         video: `${CDN_URL}/images/homepage/industries/finance.mp4`,
         title: "Finance & FinTech",
         desc1: "Financial decisions begin with credibility, long before transactions happen.",
@@ -39,7 +39,7 @@ const industries = [
         desc3: "When people need clarity most, every interaction matters.",
     },
     {
-        theme: "black",
+        theme: "light-yellow",
         video: `${CDN_URL}/images/homepage/industries/e-commerce.mp4`,
         title: "E-commerce & Retail",
         desc1: "Every unnecessary click is a missed opportunity.",
@@ -55,7 +55,7 @@ const industries = [
         desc3: "Properties attract attention. Experiences create decisions.",
     },
     {
-        theme: "black",
+        theme: "light-yellow",
         video: `${CDN_URL}/images/homepage/industries/education-industry.mp4`,
         title: "Education & EdTech",
         desc1: "Great learning platforms feel effortless for every learner.",
@@ -71,7 +71,7 @@ const industries = [
         desc3: "The future moves fast. Great experiences help people keep up.",
     },
     {
-        theme: "black",
+        theme: "light-yellow",
         video: `${CDN_URL}/images/homepage/industries/food-industry.mp4`,
         title: "Food & Lifestyle",
         desc1: "People remember experiences before they remember products.",

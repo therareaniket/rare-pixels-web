@@ -106,7 +106,7 @@ export default function PixelImageCanvas({
                     gsap.to(tiles, {
                         scale: 1,
                         opacity: 1,
-                        duration: 0.35,
+                        duration: () => (window.innerWidth > 1024 ? 0.35 : 0.2),
                         ease: 'back.out(1.7)',
                         stagger: {
                             amount: 1.2,
@@ -115,7 +115,7 @@ export default function PixelImageCanvas({
                         onUpdate: draw,
                         scrollTrigger: {
                             trigger: container,
-                            start: () => (window.innerWidth > 1024 ? 'top 60%' : 'top 40%'),
+                            start: () => (window.innerWidth > 1024 ? 'top 60%' : 'top 70%'),
                             toggleActions: 'play none none reverse',
                         },
                     });

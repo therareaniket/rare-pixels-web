@@ -14,7 +14,7 @@ export default function AboutSectionDesktop() {
 
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ backgroundColor: "#040E36", color: "white" }}>
                 <div className="container">
                     <div className="abt-section-wrapper">
                         <div className="hm-about-main">

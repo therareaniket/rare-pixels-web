@@ -52,7 +52,7 @@ export default function About() {
 						<AboutHeroSectionDesktop />
 					</div>
 					
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<AboutTimelineSectionDesktop />
 					</div>
 					
@@ -60,7 +60,7 @@ export default function About() {
 						<AboutMissionVisionDesktop />
 					</div>
 	
-					<div data-theme-color="black">
+					<div data-theme-color="white">
 						<AboutRpdSectionDesktop />
 					</div>
 
@@ -72,7 +72,7 @@ export default function About() {
 						<AboutTeamsSectionDesktop />
 					</div>
 	
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<WhyRarePixelsDesktop />
 					</div>
 		
@@ -84,7 +84,7 @@ export default function About() {
 						<AboutFaqSectionDesktop />
 					</div>
 
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<Footer />
 					</div>
 					
@@ -97,7 +97,7 @@ export default function About() {
 						<AboutHeroSectionMobile />
 					</div>
 		
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<AboutTimelineSectionMobile />
 					</div>
 	
@@ -105,7 +105,7 @@ export default function About() {
 						<AboutMissionVisionMobile />
 					</div>
 	
-					<div data-theme-color="black">
+					<div data-theme-color="white">
 						<AboutRpdSectionMobile />
 					</div>
 	
@@ -117,7 +117,7 @@ export default function About() {
 						<AboutTeamsSectionMobile />
 					</div>
 	
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<WhyRarePixelsMobile />
 					</div>
 	
@@ -129,7 +129,7 @@ export default function About() {
 						<AboutFaqSectionMobile />
 					</div>
 
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<Footer />
 					</div>
 					

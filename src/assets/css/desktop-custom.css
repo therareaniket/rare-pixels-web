@@ -661,6 +661,8 @@ body.menu-open {
     pointer-events: none;
 }
 
+.project-title-visiblity { display: none; }
+
 .active-project-title { 
     position: absolute; 
     bottom: 0; 

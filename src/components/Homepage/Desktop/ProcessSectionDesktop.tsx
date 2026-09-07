@@ -224,7 +224,7 @@ export default function ProjectsSectionDesktop() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="process-section-sticky">
+        <section ref={sectionRef} className="process-section-sticky" style={{ backgroundColor: "#FBF9E9" }}>
             <div className="process-section-inner">
                 <div ref={containerRef} className=" section container-sm">
                     <div ref={titleRef} className="process-section-title active">

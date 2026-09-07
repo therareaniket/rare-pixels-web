@@ -134,7 +134,7 @@ export default function WhyChooseUsSectionDesktop() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="section why-choose-us-desktop">
+        <section ref={sectionRef} className="section why-choose-us-desktop" style={{ backgroundColor: "black", color: "white" }}>
             <div className="container">
                 <div className="why-choose-us-text-wrapper">
                     <h2 className="text-sb">Why Choose Us</h2>

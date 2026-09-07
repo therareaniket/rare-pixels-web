@@ -400,6 +400,8 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
             {isActive && (
                 <h3 className="h4 active-project-title text-md" style={{ color: project.foreGroundColor }}>{project.title}</h3>
             )}
+
+            {/* <h3 className="h4 active-project-title text-md project-title-visiblity" style={{ color: project.foreGroundColor }}>{project.title}</h3> */}
         </div>
     );
 });

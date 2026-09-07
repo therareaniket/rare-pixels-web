@@ -14,50 +14,50 @@ export default function ServicesSectionMobile() {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo('.services-ui-ux', { y: 600, scale: 1.5, rotate: 20 },  { 
+        gsap.fromTo('.services-ui-ux', { y: 600, scale: 1.2, rotate: 20 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
                 start: 'top 70%',
-                end: 'top 20%',
+                end: 'top -10%',
                 scrub: true
             }
         });
 
-        gsap.fromTo('.services-development', { y: 600, scale: 1.5, rotate: -30 },  { 
+        gsap.fromTo('.services-development', { y: 1200, scale: 1.2, rotate: -30 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
                 start: 'top 50%',
-                end: 'top top',
+                end: 'top -30%',
                 scrub: true
             }
         });
 
-        gsap.fromTo('.services-brand-identity', { y: 600, scale: 1.5, rotate: 30 },  { 
+        gsap.fromTo('.services-brand-identity', { y: 2400, scale: 1.2, rotate: 30 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
-                start: 'top 20%',
-                end: 'top -40%',
+                start: 'top 30%',
+                end: 'top -50%',
                 scrub: true
             }
         });
 
-        gsap.fromTo('.services-social-media', { y: 600, scale: 1.5, rotate: -40 },  { 
+        gsap.fromTo('.services-social-media', { y: 3600, scale: 1.2, rotate: -40 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
-                start: 'top top',
-                end: 'top -60%',
+                start: 'top 10%',
+                end: 'top -70%',
                 scrub: true
             }
         });
@@ -65,7 +65,7 @@ export default function ServicesSectionMobile() {
 
     return (
         <>
-            <section className="section services-mobile" style={{ paddingBottom: 0, overflow: "hidden" }}>
+            <section className="section services-mobile" style={{ overflow: "hidden" }}>
                 <div className="container">
                     <div className="services-mobile-title">
                         <h2 className="text-sb">What Businesses Need. Not Just What We Do.</h2>

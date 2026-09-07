@@ -54,8 +54,7 @@ export default function Home() {
 						<TestimonialSectionDesktop />
 					</div>
 
-
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<AboutSectionDesktop />
 					</div>
 
@@ -63,15 +62,15 @@ export default function Home() {
 						<ServicesSectionDesktop />
 					</div>
 					
-					<div data-theme-color="light-yellow">
+					<div data-theme-color="white">
 						<IndustriesSectionDesktop />
 					</div>
 
-					<div data-theme-color="black">
+					<div data-theme-color="white">
 						<WhyChooseUsSectionDesktop />
 					</div>
 					
-					<div data-theme-color="mid-yellow">
+					<div data-theme-color="white">
 						<ProcessSectionDesktop />
 					</div>
 
@@ -79,7 +78,7 @@ export default function Home() {
 						<ProjectsSectionDesktop />
 					</div>
 
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<StatsSectionDesktop/>
 					</div>
 
@@ -91,11 +90,11 @@ export default function Home() {
 						<FaqSectionDesktop />
 					</div>
 
-					<div data-theme-color="mid-yellow">
+					<div data-theme-color="white">
 						<InquirySectionDesktop />
 					</div>
 
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<Footer />
 					</div>
 					<ScrollToTopButton />
@@ -109,7 +108,7 @@ export default function Home() {
 						<TestimonialSectionMobile />
 					</div>
 
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<AboutSectionMobile />
 					</div>
 
@@ -121,11 +120,11 @@ export default function Home() {
 						<IndustriesSectionMobile />
 					</div>
 
-					<div data-theme-color="black">
+					<div data-theme-color="white">
 						<WhyChooseUsSectionMobile />
 					</div>
 	
-					<div data-theme-color="mid-yellow">
+					<div data-theme-color="white">
 						<ProcessSectionMobile />
 					</div>
 
@@ -133,7 +132,7 @@ export default function Home() {
 						<ProjectsSectionDesktop />
 					</div>
 	
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<StatsSectionMobile />
 					</div>
 
@@ -145,11 +144,11 @@ export default function Home() {
 						<FaqSectionMobile />
 					</div>
 	
-					<div data-theme-color="mid-yellow">
+					<div data-theme-color="white">
 						<InquirySectionMobile />
 					</div>
 					
-					<div data-theme-color="navy">
+					<div data-theme-color="white">
 						<Footer />
 					</div>
 					<ScrollToTopButton />

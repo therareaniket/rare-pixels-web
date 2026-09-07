@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function InquirySectionDesktop() {
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ backgroundColor: "#FBF9E9" }}>
                 <div className="container-sm">
                     <div className="inquiry-form-text-wrapper">
                         <h2 className="text-sb">Project Inquiry Form</h2>

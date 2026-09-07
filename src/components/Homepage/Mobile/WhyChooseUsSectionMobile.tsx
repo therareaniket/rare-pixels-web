@@ -306,7 +306,7 @@ export default function WhyChooseUsSectionMobile() {
                 ease: "power2.inOut",
                 scrollTrigger: {
                     trigger: sectionRef.current,
-                    start: "top 60%", // Adjusted trigger point for smaller screens
+                    start: "top 50%", // Adjusted trigger point for smaller screens
                     once: true,
                 },
                 onUpdate: () => {
@@ -326,7 +326,7 @@ export default function WhyChooseUsSectionMobile() {
                 ease: "power2.inOut",
                 scrollTrigger: {
                     trigger: sectionRef.current,
-                    start: "top 60%", // Adjusted trigger point for smaller screens
+                    start: "top 50%", // Adjusted trigger point for smaller screens
                     once: true,
                 },
                 onUpdate: () => {
@@ -348,7 +348,7 @@ export default function WhyChooseUsSectionMobile() {
                     ease: "power2.inOut",
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top 60%",
+                        start: "top 40%",
                         once: true,
                     },
                 });
@@ -359,7 +359,7 @@ export default function WhyChooseUsSectionMobile() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="section">
+        <section ref={sectionRef} className="section" style={{ backgroundColor: "black", color: "white" }}>
             <div className="container">
                 <h2 className="text-sb ">Why Choose Us</h2>
 

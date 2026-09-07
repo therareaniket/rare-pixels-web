@@ -9,7 +9,7 @@ import Footer from "@/components/global/Footer";
 export default function InquirySectionMobile() {
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ backgroundColor: "#FBF9E9" }}>
                 <div className="container">
                     <h2 className="text-sb">Project Inquiry Form</h2>
 

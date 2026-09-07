@@ -12,7 +12,7 @@ const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 export default function StatsSectionMobile() {
     return (
         <>
-            <section className="section ">
+            <section className="section" style={{ backgroundColor: "#040E36", color: "white" }}>
                 <div className="container">
                     <div className="stats-mob-wrapper">
                         <div className="stats-mob-card-1">

@@ -11,7 +11,7 @@ export default function AboutSectionMobile() {
 
     return (
         <>
-            <section className="section">
+            <section className="section" style={{ background: "#040E36", color: "white" }}>
                 <div className="container">
                     <div className="abt-mobile-section">
                         <div className="abt-mobile-bg">

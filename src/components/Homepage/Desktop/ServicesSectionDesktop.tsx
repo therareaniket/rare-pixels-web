@@ -28,44 +28,44 @@ export default function ServicesSectionDesktop() {
                 }
             });
 
-            gsap.fromTo('.services-development', { y: 1600, scale: 1.1, rotate: -10 },  {
-                y: 0, 
-                scale: 1,
-                rotate: 0,
-                scrollTrigger: {
-                    trigger: '.section-wrapper',
-                    start: 'top 70%',
-                    // end: 'top -70%',
-                    end: () => (window.innerWidth > 1199 ? 'top -70%' : 'top -40%'),
-                    scrub: true
-                }
-            });
+        gsap.fromTo('.services-development', { y: 1600, scale: 1.1, rotate: -10 },  {
+            y: 0, 
+            scale: 1,
+            rotate: 0,
+            scrollTrigger: {
+                trigger: '.section-wrapper',
+                start: 'top 70%',
+                // end: 'top -70%',
+                end: () => (window.innerWidth > 1199 ? 'top -70%' : 'top -40%'),
+                scrub: true
+            }
+        });
 
-            gsap.fromTo('.services-brand-identity', { y: 3200, scale: 1.1, rotate: 30 },  {
-                y: 0, 
-                scale: 1,
-                rotate: 0,
-                scrollTrigger: {
-                    trigger: '.section-wrapper',
-                    start: 'top 70%',
-                    // end: 'top -90%',
-                    end: () => (window.innerWidth > 1199 ? 'top -90%' : 'top -60%'),
-                    scrub: true
-                }
-            });
+        gsap.fromTo('.services-brand-identity', { y: 3200, scale: 1.1, rotate: 30 },  {
+            y: 0, 
+            scale: 1,
+            rotate: 0,
+            scrollTrigger: {
+                trigger: '.section-wrapper',
+                start: 'top 70%',
+                // end: 'top -90%',
+                end: () => (window.innerWidth > 1199 ? 'top -90%' : 'top -60%'),
+                scrub: true
+            }
+        });
 
-            gsap.fromTo('.services-social-media', { y: 4800, scale: 1.1, rotate: -40, },   {
-                y: 0,
-                scale: 1,
-                rotate: 0,
-                scrollTrigger: {
-                    trigger: '.section-wrapper',
-                    start: 'top 70%',
-                    // end: 'top -110%',
-                    end: () => (window.innerWidth > 1199 ? 'top -110%' : 'top -80%'),
-                    scrub: true
-                }
-            });
+        gsap.fromTo('.services-social-media', { y: 4800, scale: 1.1, rotate: -40, },   {
+            y: 0,
+            scale: 1,
+            rotate: 0,
+            scrollTrigger: {
+                trigger: '.section-wrapper',
+                start: 'top 70%',
+                // end: 'top -110%',
+                end: () => (window.innerWidth > 1199 ? 'top -110%' : 'top -80%'),
+                scrub: true
+            }
+        });
     }, []);
 
     return (
