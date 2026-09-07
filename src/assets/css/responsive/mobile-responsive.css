@@ -11,21 +11,23 @@
 @media (max-width: 479px) {
     :root { 
         --project-card-width: 340px; 
-        --project-card-gap: 20px; }
-        .project-video { height: 240px; 
+        --project-card-gap: 20px; 
 
-        --card-1-start-width: 34px;
-        --card-2-start-width: 29px;
+        --card-1-start-width: 28px;
+        --card-2-start-width: 27px;
         --card-3-start-width: 31px;
 
-        --abt-hero-target-height: 250px;
+        --abt-hero-target-height: 140px;
 
         --rpd-card-height: 250px;
 
         --rpd-card-row-height: 45px;
-        --rpd-card-column-height: 250px;
+        --card-1-height: 250px;
    
     }
+
+    
+    .project-video { height: 240px; }
 	.project-list { border-radius: 20px; }
     .project-list.active { box-shadow: none; }
     .process-section-inner { padding: 0; }
@@ -504,7 +506,7 @@
     .rpd-mobile-section { position: relative; }
     .rpd-mobile-card-wrapper { padding: 110px 0; display: flex; } 
     /* .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { overflow: hidden; height: 250px; } */
-    .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { overflow: hidden; height: 250px; }
+    .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { overflow: hidden; }
 
 
     .rpd-pixel-left-mob { position: absolute; top: 0; left: 0; width: 60px; display: none; }
@@ -570,7 +572,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        align-items: center;
+        /* align-items: center; */
         justify-content: center;
         transform-origin: center center;
     }
@@ -731,7 +733,7 @@
         --card-2-width: 113px;
         --card-3-width: 140px;
 
-        --rpd-card-height: 205px
+        --card-1-height: 205px
     }
     .project-video { height: 200px; }
 
@@ -882,7 +884,7 @@
 
     .rpd-mobile-card .h5 { margin-top: 12; margin-bottom: 10px; }
 
-    .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { height: 205px; }
+    /* .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { height: 205px; } */
 }
 
 @media (max-width: 374px) {

@@ -8,178 +8,169 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function AboutRpdSectionMobile() {
-    
-useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
-        const css = getComputedStyle(document.documentElement);
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-        gsap.set(".rpd-mobile-card-wrapper", {
-            scale: 3.5,
-            opacity: 1,
-            flexDirection: "row",
-            transformOrigin: "center center"
-        });
+        const ctx = gsap.context(() => {
+            const css = getComputedStyle(document.documentElement);
 
-        gsap.set(".rpd-mobile-card-1", {
-            width: css.getPropertyValue("--card-1-start-width").trim(),
-            height: css.getPropertyValue("--card-1-start-height").trim(),
-            marginTop: 0,
-            x: 0,
-            opacity: 1
-        });
+            gsap.set(".rpd-mobile-card-wrapper", {
+                scale: 3.5,
+                opacity: 1,
+                flexDirection: "row",
+                transformOrigin: "bottom center"
+            });
 
-        gsap.set(".rpd-mobile-card-2", {
-            width: css.getPropertyValue("--card-2-start-width").trim(),
-            height: css.getPropertyValue("--card-1-start-height").trim(),
-            marginTop: css.getPropertyValue("--card-2-start-mt").trim(),
-            x: 0,
-            opacity: 1
-        });
+            gsap.set(".rpd-mobile-card-1", {
+                width: css.getPropertyValue("--card-1-start-width").trim(),
+                height: css.getPropertyValue("--card-1-start-height").trim(),
+                marginTop: 0,
+                x: 0,
+                opacity: 1
+            });
 
-        gsap.set(".rpd-mobile-card-3", {
-            width: css.getPropertyValue("--card-3-start-width").trim(),
-            height: css.getPropertyValue("--card-1-start-height").trim(),
-            marginTop: css.getPropertyValue("--card-3-start-mt").trim(),
-            x: 0,
-            opacity: 1
-        });
+            gsap.set(".rpd-mobile-card-2", {
+                width: css.getPropertyValue("--card-2-start-width").trim(),
+                height: css.getPropertyValue("--card-1-start-height").trim(),
+                marginTop: css.getPropertyValue("--card-2-start-mt").trim(),
+                x: 0,
+                opacity: 1
+            });
 
-        gsap.set(".rpd-mobile-card-text", {
-            opacity: 0,
-        });
+            gsap.set(".rpd-mobile-card-3", {
+                width: css.getPropertyValue("--card-3-start-width").trim(),
+                height: css.getPropertyValue("--card-1-start-height").trim(),
+                marginTop: css.getPropertyValue("--card-3-start-mt").trim(),
+                x: 0,
+                opacity: 1
+            });
 
-        const tl = gsap.timeline({
-            paused: true,
-            defaults: {
-                ease: "none"
-            }
-        });
+            gsap.set(".rpd-mobile-card-text", {
+                display: "none",
+            });
 
-        tl.to(".rpd-mobile-card-wrapper", {
-            scale: 1,
-            duration: 0.8
-        });
-
-        tl.to({}, {
-            duration: 0.2
-        });
-
-        tl.addLabel("mobileCardExpansion");
-
-        tl.to(
-            ".rpd-mobile-card-1",
-            {
-                width: css.getPropertyValue("--card-1-width").trim(),
-                duration: 1
-            },
-            "mobileCardExpansion"
-        );
-
-        tl.to(
-            ".rpd-mobile-card-2",
-            {
-                width: css.getPropertyValue("--card-2-width").trim(),
-                marginTop: css.getPropertyValue("--card-2-mt").trim(),
-                duration: 1
-            },
-            "mobileCardExpansion"
-        );
-
-        tl.to(
-            ".rpd-mobile-card-3",
-            {
-                width: css.getPropertyValue("--card-3-width").trim(),
-                marginTop: css.getPropertyValue("--card-3-mt").trim(),
-                duration: 1
-            },
-            "mobileCardExpansion"
-        );
-
-        tl.to({}, {
-            duration: 0.2
-        });
-
-        tl.to(".rpd-mobile-card, .rpd-mobile-card-wrapper", {
-            opacity: 0,
-            duration: 0.6
-        });
-
-        tl.set(".rpd-mobile-card-wrapper", {
-            flexDirection: "column",
-            opacity: 1
-        });
-
-        tl.set(".rpd-mobile-card", {
-            width: "100%",
-            marginTop: 0,
-            x: "-100%",
-            opacity: 0
-        });
-
-        tl.to(".rpd-mobile-card-1", {
-            x: "0%",
-            opacity: 1,
-            duration: 0.7
-        });
-
-        tl.to(".rpd-mobile-card-1 .rpd-mobile-card-text", {
-            opacity: 1,
-            duration: 0.4
-        });
-
-        tl.to(".rpd-mobile-card-2", {
-            x: "0%",
-            opacity: 1,
-            duration: 0.7
-        });
-
-        tl.to(".rpd-mobile-card-2 .rpd-mobile-card-text", {
-            opacity: 1,
-            duration: 0.4
-        });
-
-        tl.to(".rpd-mobile-card-3", {
-            x: "0%",
-            opacity: 1,
-            duration: 0.7
-        });
-
-        tl.to(".rpd-mobile-card-3 .rpd-mobile-card-text", {
-            opacity: 1,
-            duration: 0.4
-        });
-
-        let highestProgress = 0;
-
-        ScrollTrigger.create({
-            trigger: ".rpd-mobile-section",
-            start: "top top",
-            end: "+=4000",
-            pin: true,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-
-            onUpdate: (self) => {
-                if (self.progress <= highestProgress) {
-                    return;
+            const tl = gsap.timeline({
+                paused: true,
+                defaults: {
+                    ease: "none"
                 }
+            });
 
-                highestProgress = self.progress;
+            tl.to(".rpd-mobile-card-wrapper", {
+                scale: 1,
+                duration: 0.8
+            });
 
-                gsap.to(tl, {
-                    progress: highestProgress,
-                    duration: 0.35,
-                    ease: "power1.out",
-                    overwrite: true
-                });
-            }
+            tl.to({}, {
+                duration: 0.2
+            });
+
+            tl.addLabel("mobileCardExpansion");
+
+            tl.to(
+                ".rpd-mobile-card-1",
+                {
+                    width: css.getPropertyValue("--card-1-width").trim(),
+                    duration: 1
+                },
+                "mobileCardExpansion"
+            );
+
+            tl.to(
+                ".rpd-mobile-card-2",
+                {
+                    width: css.getPropertyValue("--card-2-width").trim(),
+                    marginTop: css.getPropertyValue("--card-2-mt").trim(),
+                    duration: 1
+                },
+                "mobileCardExpansion"
+            );
+
+            tl.to(
+                ".rpd-mobile-card-3",
+                {
+                    width: css.getPropertyValue("--card-3-width").trim(),
+                    marginTop: css.getPropertyValue("--card-3-mt").trim(),
+                    duration: 1
+                },
+                "mobileCardExpansion"
+            );
+
+            tl.to({}, {
+                duration: 0.2
+            });
+
+            tl.to(".rpd-mobile-card, .rpd-mobile-card-wrapper", {
+                opacity: 0,
+                duration: 0.6
+            });
+
+            tl.set(".rpd-mobile-card-wrapper", {
+                flexDirection: "column",
+                opacity: 1
+            });
+
+            tl.set(".rpd-mobile-card", {
+                width: "100%",
+                height: "var(--card-1-height)",
+                marginTop: 0,
+                x: "-100%",
+                opacity: 0
+            });
+
+            tl.to(".rpd-mobile-card-text", {
+                display: "block",
+                width: "100%"
+            });
+
+            tl.to(".rpd-mobile-card-1", {
+                x: "0%",
+                opacity: 1,
+                duration: 0.7
+            });
+
+            tl.to(".rpd-mobile-card-2", {
+                x: "0%",
+                opacity: 1,
+                duration: 0.7
+            });
+
+            tl.to(".rpd-mobile-card-3", {
+                x: "0%",
+                opacity: 1,
+                duration: 0.7
+            });
+
+            let highestProgress = 0;
+
+            ScrollTrigger.create({
+                trigger: ".rpd-mobile-section",
+                start: "top top",
+                end: "+=4000",
+                pin: true,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+
+                onUpdate: (self) => {
+                    if (self.progress <= highestProgress) {
+                        return;
+                    }
+
+                    highestProgress = self.progress;
+
+                    gsap.to(tl, {
+                        progress: highestProgress,
+                        duration: 0.35,
+                        ease: "power1.out",
+                        overwrite: true
+                    });
+                }
+            });
         });
-    });
 
-    return () => ctx.revert();
-}, []);
+        return () => ctx.revert();
+    }, []);
 
     return (
         <>

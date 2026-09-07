@@ -1003,3 +1003,7 @@ body.menu-open {
 .desktop-timeline-dot { opacity: 0; }
 
 .abt-hero-video video { width: 100%; height: 100%; object-fit: cover; }
+
+.life-at-rpd-section { position: relative; height: 400vh;}
+.life-at-rpd-inner { position: sticky; top: 0; height: max-content; overflow: hidden; }
+.life-at-rpd-inner .container .life-at-rpd-desktop-card-wrapper.desktop { overflow: visible; background-color: red; width: 100%; }
