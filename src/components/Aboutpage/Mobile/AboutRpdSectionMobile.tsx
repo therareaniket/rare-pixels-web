@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function AboutRpdSectionMobile() {
+    
 useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +24,7 @@ useEffect(() => {
 
         gsap.set(".rpd-mobile-card-1", {
             width: css.getPropertyValue("--card-1-start-width").trim(),
+            height: css.getPropertyValue("--card-1-start-height").trim(),
             marginTop: 0,
             x: 0,
             opacity: 1
@@ -30,6 +32,7 @@ useEffect(() => {
 
         gsap.set(".rpd-mobile-card-2", {
             width: css.getPropertyValue("--card-2-start-width").trim(),
+            height: css.getPropertyValue("--card-1-start-height").trim(),
             marginTop: css.getPropertyValue("--card-2-start-mt").trim(),
             x: 0,
             opacity: 1
@@ -37,6 +40,7 @@ useEffect(() => {
 
         gsap.set(".rpd-mobile-card-3", {
             width: css.getPropertyValue("--card-3-start-width").trim(),
+            height: css.getPropertyValue("--card-1-start-height").trim(),
             marginTop: css.getPropertyValue("--card-3-start-mt").trim(),
             x: 0,
             opacity: 1

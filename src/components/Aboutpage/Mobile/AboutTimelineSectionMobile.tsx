@@ -62,13 +62,13 @@ export default function AboutTimelineSectionMobile() {
 
                     gsap.to(activeLineRef.current, {
                         width: "6%",
-                        duration: 1,
+                        duration: 0.6,
                         overwrite: true
                     });
 
                     gsap.to(movingDotRef.current, {
                         left: "6%",
-                        duration: 1,
+                        duration: 0.6,
                         overwrite: true
                     });
 
@@ -77,13 +77,13 @@ export default function AboutTimelineSectionMobile() {
 
                     gsap.to(activeLineRef.current, {
                         width: "50%",
-                        duration: 1,
+                        duration: 0.6,
                         overwrite: true
                     });
 
                     gsap.to(movingDotRef.current, {
                         left: "50%",
-                        duration: 1,
+                        duration: 0.6,
                         overwrite: true
                     });
 
@@ -92,13 +92,13 @@ export default function AboutTimelineSectionMobile() {
 
                     gsap.to(activeLineRef.current, {
                         width: "94%",
-                        duration: 1,
+                        duration: 0.6,
                         overwrite: true
                     });
 
                     gsap.to(movingDotRef.current, {
                         left: "94%",
-                        duration: 1,
+                        duration: 0.6,
                         overwrite: true
                     });
                 }
@@ -111,12 +111,12 @@ export default function AboutTimelineSectionMobile() {
             ".timeline-image-mobile-wrapper",
             {
                 opacity: 0,
-                scale: 0.5
+                scale: 0.3
             },
             {
                 opacity: 1,
                 scale: 1,
-                duration: 1
+                duration: 0.6
             }
         );
 
@@ -129,7 +129,7 @@ export default function AboutTimelineSectionMobile() {
             {
                 opacity: 1,
                 y: 0,
-                duration: 1
+                duration: 0.6
             }
         );
     }, [activeIndex]);
