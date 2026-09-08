@@ -1726,7 +1726,7 @@
 	.abt-rpd-card.absolute-mode{ position: absolute; margin-top: 0 !important; }
 
 	.abt-rpd-card-2 .abt-card-text { text-align: left; margin-top: 25px; }
-	.abt-rpd-card { height: 285px; }
+	/* .abt-rpd-card { height: 285px; } */
 
 	.abt-rpd-card.absolute-mode .abt-rpd-card-1{ left: 0; }
 	.abt-rpd-card.absolute-mode .abt-rpd-card-2{ left: 50%; }
@@ -1761,7 +1761,7 @@
 	.abt-timeline-content-left { width: 292px; height: 292px; }
 
 	.blog-section { overflow: hidden; } 
-	.abt-rpd-card span { font-size: 80px; line-height: 70px; }
+	.abt-rpd-card span { font-size: 80px; line-height: 110px; }
 	.rare-logo { width: 60px; }
 	.rpd-card-title-1 { gap: 8px; }
 	
@@ -1816,6 +1816,8 @@
 	.abt-rpd-section-desktop { height: 600vh; }
 
 	.abt-card-text { width: 100%; }
+
+	.abt-time-line-desktop-sticky { height: 400vh; }
 } 
 
 @media (max-width: 1023px) {
@@ -1920,6 +1922,8 @@
 	.abt-timeline-title-left h3 { margin-bottom: 20px; }
 
 	.abt-rpd-section-desktop { height: 700vh; }
+
+	.abt-card-text h2 { margin-top: 20px; }
 }
 
 @media (max-width: 991px) {
@@ -2143,7 +2147,7 @@
 	.abt-our-values-pointer-right { width: calc( 100% - 66px ); }
 
 	.about-rpd-desktop-content-wrapper { padding: 105px 0; }
-	.abt-rpd-card span { font-size: 68px; line-height: 64px; }
+	.abt-rpd-card span { font-size: 68px; line-height: 90px; }
 	.rare-logo { width: 46px; }
 
 	.life-at-rpd-desktop-card-wrapper.desktop { display: none; }
@@ -2204,7 +2208,10 @@
 
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 165px; }
 	.abt-rpd-card-2 .abt-card-text { height: 165px; }
-	.abt-rpd-card { height: 250px; }
+	/* .abt-rpd-card { height: 250px; } */
+
+	.abt-rpd-card-2 .abt-card-text { margin-top: 0; }
+	.abt-time-line-desktop-sticky { height: 300vh; }
 }
 
 @media (max-width: 767px) {

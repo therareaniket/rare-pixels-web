@@ -15,175 +15,175 @@ export default function AboutRpdSectionDesktop() {
     useEffect(() => {
         const mm = gsap.matchMedia();
 
-mm.add("(min-width: 1200px)", () => {
-    const css = getComputedStyle(document.documentElement);
+        mm.add("(min-width: 1200px)", () => {
+            const css = getComputedStyle(document.documentElement);
 
-    const card1Text = document.querySelector<HTMLElement>(
-        ".abt-rpd-card-1 .abt-card-text"
-    );
+            const card1Text = document.querySelector<HTMLElement>(
+                ".abt-rpd-card-1 .abt-card-text"
+            );
 
-    const card2Text = document.querySelector<HTMLElement>(
-        ".abt-rpd-card-2 .abt-card-text"
-    );
+            const card2Text = document.querySelector<HTMLElement>(
+                ".abt-rpd-card-2 .abt-card-text"
+            );
 
-    const card3Text = document.querySelector<HTMLElement>(
-        ".abt-rpd-card-3 .abt-card-text"
-    );
+            const card3Text = document.querySelector<HTMLElement>(
+                ".abt-rpd-card-3 .abt-card-text"
+            );
 
-    if (!card1Text || !card2Text || !card3Text) return;
+            if (!card1Text || !card2Text || !card3Text) return;
 
-    const card1TextHeight = getComputedStyle(card1Text).height;
-    const card2TextHeight = getComputedStyle(card2Text).height;
-    const card3TextHeight = getComputedStyle(card3Text).height;
+            const card1TextHeight = getComputedStyle(card1Text).height;
+            const card2TextHeight = getComputedStyle(card2Text).height;
+            const card3TextHeight = getComputedStyle(card3Text).height;
 
-    gsap.set(".abt-rpd-card-1", {
-        width: css.getPropertyValue("--card-1-start-width").trim(),
-        x: css.getPropertyValue("--card-1-start-x").trim(),
-        y: css.getPropertyValue("--card-1-start-y").trim()
-    });
+            gsap.set(".abt-rpd-card-1", {
+                width: css.getPropertyValue("--card-1-start-width").trim(),
+                x: css.getPropertyValue("--card-1-start-x").trim(),
+                y: css.getPropertyValue("--card-1-start-y").trim()
+            });
 
-    gsap.set(".abt-rpd-card-2", {
-        width: css.getPropertyValue("--card-2-start-width").trim(),
-        marginTop: css.getPropertyValue("--card-2-start-mt").trim()
-    });
+            gsap.set(".abt-rpd-card-2", {
+                width: css.getPropertyValue("--card-2-start-width").trim(),
+                marginTop: css.getPropertyValue("--card-2-start-mt").trim()
+            });
 
-    gsap.set(".abt-rpd-card-3", {
-        width: css.getPropertyValue("--card-3-start-width").trim(),
-        marginTop: css.getPropertyValue("--card-3-start-mt").trim(),
-        x: css.getPropertyValue("--card-3-start-x").trim(),
-        y: css.getPropertyValue("--card-3-start-y").trim()
-    });
+            gsap.set(".abt-rpd-card-3", {
+                width: css.getPropertyValue("--card-3-start-width").trim(),
+                marginTop: css.getPropertyValue("--card-3-start-mt").trim(),
+                x: css.getPropertyValue("--card-3-start-x").trim(),
+                y: css.getPropertyValue("--card-3-start-y").trim()
+            });
 
-    gsap.set(card1Text, {
-        height: 0,
-        overflow: "hidden",
-        opacity: 0,
-        y: css.getPropertyValue("--text-up-start").trim()
-    });
+            gsap.set(card1Text, {
+                height: 0,
+                overflow: "hidden",
+                opacity: 0,
+                y: css.getPropertyValue("--text-up-start").trim()
+            });
 
-    gsap.set(card2Text, {
-        height: 0,
-        overflow: "hidden",
-        opacity: 0,
-        y: css.getPropertyValue("--text-down-start").trim()
-    });
+            gsap.set(card2Text, {
+                height: 0,
+                overflow: "hidden",
+                opacity: 0,
+                y: css.getPropertyValue("--text-down-start").trim()
+            });
 
-    gsap.set(card3Text, {
-        height: 0,
-        overflow: "hidden",
-        opacity: 0,
-        y: css.getPropertyValue("--text-up-start").trim()
-    });
+            gsap.set(card3Text, {
+                height: 0,
+                overflow: "hidden",
+                opacity: 0,
+                y: css.getPropertyValue("--text-up-start").trim()
+            });
 
-    const tl = gsap.timeline({
-        defaults: {
-            ease: "none"
-        },
-        scrollTrigger: {
-            trigger: ".abt-rpd-section-desktop",
-            start: "top top",
-            end: "+=5000",
-            scrub: 2,
-            invalidateOnRefresh: true
-        }
-    });
+            const tl = gsap.timeline({
+                defaults: {
+                    ease: "none"
+                },
+                scrollTrigger: {
+                    trigger: ".abt-rpd-section-desktop",
+                    start: "top top",
+                    end: "+=5000",
+                    scrub: 2,
+                    invalidateOnRefresh: true
+                }
+            });
 
-    tl.to(".about-rpd-desktop-content-wrapper", {
-        scale: 1,
-        duration: 1
-    });
+            tl.to(".about-rpd-desktop-content-wrapper", {
+                scale: 1,
+                duration: 1
+            });
 
-    tl.to({}, {
-        duration: 1
-    });
+            tl.to({}, {
+                duration: 1
+            });
 
-    tl.addLabel("cardExpansion");
+            tl.addLabel("cardExpansion");
 
-    tl.to(
-        ".abt-rpd-card-1",
-        {
-            width: css.getPropertyValue("--card-final-width").trim(),
-            x: css.getPropertyValue("--card-1-x").trim(),
-            y: css.getPropertyValue("--card-1-y").trim(),
-            duration: 2
-        },
-        "cardExpansion"
-    );
+            tl.to(
+                ".abt-rpd-card-1",
+                {
+                    width: css.getPropertyValue("--card-final-width").trim(),
+                    x: css.getPropertyValue("--card-1-x").trim(),
+                    y: css.getPropertyValue("--card-1-y").trim(),
+                    duration: 2
+                },
+                "cardExpansion"
+            );
 
-    tl.to(
-        ".abt-rpd-card-2",
-        {
-            width: css.getPropertyValue("--card-final-width").trim(),
-            marginTop: 0,
-            duration: 2
-        },
-        "cardExpansion"
-    );
+            tl.to(
+                ".abt-rpd-card-2",
+                {
+                    width: css.getPropertyValue("--card-final-width").trim(),
+                    marginTop: 0,
+                    duration: 2
+                },
+                "cardExpansion"
+            );
 
-    tl.to(
-        ".abt-rpd-card-3",
-        {
-            width: css.getPropertyValue("--card-final-width").trim(),
-            marginTop: css.getPropertyValue("--card-3-mt").trim(),
-            x: css.getPropertyValue("--card-3-x").trim(),
-            y: css.getPropertyValue("--card-3-y").trim(),
-            duration: 2
-        },
-        "cardExpansion"
-    );
+            tl.to(
+                ".abt-rpd-card-3",
+                {
+                    width: css.getPropertyValue("--card-final-width").trim(),
+                    marginTop: css.getPropertyValue("--card-3-mt").trim(),
+                    x: css.getPropertyValue("--card-3-x").trim(),
+                    y: css.getPropertyValue("--card-3-y").trim(),
+                    duration: 2
+                },
+                "cardExpansion"
+            );
 
-    tl.to(
-        card1Text,
-        {
-            height: card1TextHeight,
-            duration: 1
-        },
-        "cardExpansion+=1"
-    );
+            tl.to(
+                card1Text,
+                {
+                    height: card1TextHeight,
+                    duration: 1
+                },
+                "cardExpansion+=1"
+            );
 
-    tl.to(
-        card2Text,
-        {
-            height: card2TextHeight,
-            duration: 1
-        },
-        "cardExpansion+=1"
-    );
+            tl.to(
+                card2Text,
+                {
+                    height: card2TextHeight,
+                    duration: 1
+                },
+                "cardExpansion+=1"
+            );
 
-    tl.to(
-        card3Text,
-        {
-            height: card3TextHeight,
-            duration: 1
-        },
-        "cardExpansion+=1"
-    );
+            tl.to(
+                card3Text,
+                {
+                    height: card3TextHeight,
+                    duration: 1
+                },
+                "cardExpansion+=1"
+            );
 
-    tl.to(card1Text, {
-        opacity: 1,
-        y: 0,
-        overflow: "visible",
-        duration: 1
-    });
+            tl.to(card1Text, {
+                opacity: 1,
+                y: 0,
+                overflow: "visible",
+                duration: 1
+            });
 
-    tl.to(card2Text, {
-        opacity: 1,
-        y: 0,
-        overflow: "visible",
-        duration: 1
-    });
+            tl.to(card2Text, {
+                opacity: 1,
+                y: 0,
+                overflow: "visible",
+                duration: 1
+            });
 
-    tl.to(card3Text, {
-        opacity: 1,
-        y: 0,
-        overflow: "visible",
-        duration: 1
-    });
+            tl.to(card3Text, {
+                opacity: 1,
+                y: 0,
+                overflow: "visible",
+                duration: 1
+            });
 
-    return () => {
-        tl.kill();
-    };
-});
+            return () => {
+                tl.kill();
+            };
+        });
 
         mm.add("(max-width: 1199px)", () => {
             const css = getComputedStyle(document.documentElement);
@@ -191,7 +191,8 @@ mm.add("(min-width: 1200px)", () => {
             gsap.set(".about-rpd-desktop-content-wrapper", {
                 scale: 4,
                 opacity: 1,
-                flexDirection: "row"
+                flexDirection: "row",
+                // transformOrigin: "bottom center"
             });
 
             gsap.set(".abt-rpd-card-1", {
@@ -216,6 +217,7 @@ mm.add("(min-width: 1200px)", () => {
             });
 
             gsap.set(".abt-card-text", {
+                display: "none",
                 opacity: 0,
                 y: 40
             });
@@ -275,13 +277,17 @@ mm.add("(min-width: 1200px)", () => {
                 opacity: 1
             });
 
-            tl.set(".abt-rpd-card", {
+            tl.set(".abt-card-text", {
+                display: "block",
                 width: "100%",
-                marginTop: 0
+                opacity: 1,
+                y: 0
             });
 
-            tl.set(".abt-rpd-card-2 .abt-card-text", {
-                alignItems: "flex-end"
+            tl.set(".abt-rpd-card", {
+                width: "100%",
+                height: "var(--rpd-card-height)",
+                marginTop: 0
             });
 
             tl.fromTo(
@@ -298,12 +304,6 @@ mm.add("(min-width: 1200px)", () => {
                 }
             );
 
-            tl.to(".abt-rpd-card-1 .abt-card-text", {
-                opacity: 1,
-                y: 0,
-                duration: 0.7
-            });
-
             tl.fromTo(
                 ".abt-rpd-card-2",
                 {
@@ -318,12 +318,6 @@ mm.add("(min-width: 1200px)", () => {
                 }
             );
 
-            tl.to(".abt-rpd-card-2 .abt-card-text", {
-                opacity: 1,
-                y: 0,
-                duration: 0.7
-            });
-
             tl.fromTo(
                 ".abt-rpd-card-3",
                 {
@@ -337,12 +331,6 @@ mm.add("(min-width: 1200px)", () => {
                     immediateRender: false
                 }
             );
-
-            tl.to(".abt-rpd-card-3 .abt-card-text", {
-                opacity: 1,
-                y: 0,
-                duration: 0.7
-            });
         });
 
         return () => mm.revert();

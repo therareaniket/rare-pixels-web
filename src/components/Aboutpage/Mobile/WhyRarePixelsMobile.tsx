@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useLayoutEffect, useRef } from "react";
 
 export default function WhyRarePixelsMobile() {
-
     const sectionRef = useRef<HTMLElement | null>(null);
 
     useLayoutEffect(() => {
@@ -18,14 +17,20 @@ export default function WhyRarePixelsMobile() {
             section.querySelectorAll<HTMLElement>(".why-rare-point")
         );
 
-        if (!tree || !points.length) return;
+        if (!tree || points.length === 0) return;
+
+        const timeoutIds: number[] = [];
 
         tree.style.clipPath = "inset(100% 0 0 0)";
-        tree.style.setProperty("-webkit-clip-path", "inset(100% 0 0 0)");
+        tree.style.setProperty(
+            "-webkit-clip-path",
+            "inset(100% 0 0 0)"
+        );
         tree.style.transform = "scaleY(0)";
         tree.style.transformOrigin = "bottom center";
         tree.style.transition =
-            "clip-path 1.8s cubic-bezier(0.22, 1, 0.36, 1), transform 1.8s cubic-bezier(0.22, 1, 0.36, 1)";
+            "clip-path 1.8s cubic-bezier(0.22, 1, 0.36, 1), " +
+            "transform 1.8s cubic-bezier(0.22, 1, 0.36, 1)";
         tree.style.willChange = "clip-path, transform";
 
         points.forEach((point) => {
@@ -42,25 +47,29 @@ export default function WhyRarePixelsMobile() {
                 if (!entry.isIntersecting) return;
 
                 tree.style.clipPath = "inset(0% 0 0 0)";
-                tree.style.setProperty("-webkit-clip-path", "inset(0% 0 0 0)");
+                tree.style.setProperty(
+                    "-webkit-clip-path",
+                    "inset(0% 0 0 0)"
+                );
                 tree.style.transform = "scaleY(1)";
 
                 const treeDuration = 1800;
-                const pauseAfterTree = 200;
-                const pointerDelay = 500;
+                const pointerStagger = 200;
 
                 points.forEach((point, index) => {
-                    window.setTimeout(() => {
+                    const timeoutId = window.setTimeout(() => {
                         point.style.visibility = "visible";
                         point.style.opacity = "1";
                         point.style.transform = "translateY(0)";
-                    }, treeDuration + pauseAfterTree + index * pointerDelay);
+                    }, treeDuration + index * pointerStagger);
+
+                    timeoutIds.push(timeoutId);
                 });
 
                 observer.unobserve(section);
             },
             {
-                threshold: 0.2,
+                threshold: 0.1,
                 rootMargin: "0px 0px -10% 0px",
             }
         );
@@ -69,6 +78,10 @@ export default function WhyRarePixelsMobile() {
 
         return () => {
             observer.disconnect();
+
+            timeoutIds.forEach((timeoutId) => {
+                window.clearTimeout(timeoutId);
+            });
 
             tree.style.removeProperty("clip-path");
             tree.style.removeProperty("-webkit-clip-path");
@@ -86,9 +99,12 @@ export default function WhyRarePixelsMobile() {
             });
         };
     }, []);
-    
+
     return (
-        <section ref={sectionRef} className="section section-bg-blue why-rare-mobile-sticky" >
+        <section
+            ref={sectionRef}
+            className="section section-bg-blue why-rare-mobile-sticky"
+        >
             <div className="why-rare-mobile-inner">
                 <div className="container">
                     <h2 className="text-sb text-white">
@@ -96,21 +112,23 @@ export default function WhyRarePixelsMobile() {
                     </h2>
 
                     <p className="text-16 text-rg text-light-grey">
-                        A journey shaped by creativity, collaboration, and continuous
-                        growth, reflecting the milestones, experiences, and values that
-                        have defined RarePixels from day one.
+                        A journey shaped by creativity, collaboration, and
+                        continuous growth, reflecting the milestones,
+                        experiences, and values that have defined RarePixels
+                        from day one.
                     </p>
 
                     <div className="why-rare-mobile-tree">
                         <div className="tree-reveal">
                             <Image src="/images/aboutpage/abt-why-rare/rare-tree.svg" alt="rare-tree" width={525} height={500}></Image>
+
                         </div>
                     </div>
 
                     <div className="abt-why-rare-desktop-pointers">
                         <div className="why-rare-point why-rare-point-1">
                             <div className="why-rare-pointers why-rare-pointers-1">
-                                <span className="why-rare-pixel"></span>
+                                <span className="why-rare-pixel" />
 
                                 <div className="why-rare-desc why-rare-desc-1">
                                     <h3 className="text-sb text-18">
@@ -118,9 +136,11 @@ export default function WhyRarePixelsMobile() {
                                     </h3>
 
                                     <p className="text-rg text-16 text-white">
-                                        We take the work seriously not ourselves. Our studio is
-                                        built on creative freedom, good energy, and a culture
-                                        where ideas flow without ego getting in the way.
+                                        We take the work seriously, not
+                                        ourselves. Our studio is built on
+                                        creative freedom, good energy, and a
+                                        culture where ideas flow without ego
+                                        getting in the way.
                                     </p>
                                 </div>
                             </div>
@@ -128,7 +148,7 @@ export default function WhyRarePixelsMobile() {
 
                         <div className="why-rare-point why-rare-point-2">
                             <div className="why-rare-pointers why-rare-pointers-2">
-                                <span className="why-rare-pixel"></span>
+                                <span className="why-rare-pixel" />
 
                                 <div className="why-rare-desc why-rare-desc-2">
                                     <h3 className="text-sb text-18">
@@ -136,9 +156,11 @@ export default function WhyRarePixelsMobile() {
                                     </h3>
 
                                     <p className="text-rg text-16 text-white">
-                                        We hire people we believe in, then let them do their
-                                        thing. No micromanagement, no hand-holding just clear
-                                        goals and the autonomy to reach them your way.
+                                        We hire people we believe in, then let
+                                        them do their thing. No
+                                        micromanagement, no hand-holding, just
+                                        clear goals and the autonomy to reach
+                                        them your way.
                                     </p>
                                 </div>
                             </div>
@@ -146,7 +168,7 @@ export default function WhyRarePixelsMobile() {
 
                         <div className="why-rare-point why-rare-point-3">
                             <div className="why-rare-pointers why-rare-pointers-3">
-                                <span className="why-rare-pixel"></span>
+                                <span className="why-rare-pixel" />
 
                                 <div className="why-rare-desc why-rare-desc-3">
                                     <h3 className="text-sb text-18">
@@ -154,9 +176,10 @@ export default function WhyRarePixelsMobile() {
                                     </h3>
 
                                     <p className="text-rg text-16 text-white">
-                                        The best idea wins, regardless of who it comes from.
-                                        Whether you&apos;re a junior designer or a senior
-                                        strategist, your voice has weight here.
+                                        The best idea wins, regardless of who
+                                        it comes from. Whether you&apos;re a
+                                        junior designer or a senior strategist,
+                                        your voice has weight here.
                                     </p>
                                 </div>
                             </div>
@@ -164,7 +187,7 @@ export default function WhyRarePixelsMobile() {
 
                         <div className="why-rare-point why-rare-point-4">
                             <div className="why-rare-pointers why-rare-pointers-4">
-                                <span className="why-rare-pixel"></span>
+                                <span className="why-rare-pixel" />
 
                                 <div className="why-rare-desc why-rare-desc-4">
                                     <h3 className="text-sb text-18">
@@ -172,9 +195,10 @@ export default function WhyRarePixelsMobile() {
                                     </h3>
 
                                     <p className="text-rg text-16 text-white">
-                                        Systems exist to support people, not the other way
-                                        around. We adapt, we listen, and we make sure the humans
-                                        on our team always come first.
+                                        Systems exist to support people, not
+                                        the other way around. We adapt, we
+                                        listen, and we make sure the humans on
+                                        our team always come first.
                                     </p>
                                 </div>
                             </div>

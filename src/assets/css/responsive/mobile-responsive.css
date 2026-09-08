@@ -11,12 +11,11 @@
 @media (max-width: 479px) {
     :root { 
         --project-card-width: 340px; 
-        --project-card-gap: 20px; }
-        .project-video { height: 560px; 
+        --project-card-gap: 20px; 
 
-        --card-1-start-width: 34px;
-        --card-2-start-width: 29px;
-        --card-3-start-width: 34px;
+        --card-1-start-width: 26px;
+        --card-2-start-width: 27px;
+        --card-3-start-width: 31px;
 
         --rpd-card-height: 250px;
 
