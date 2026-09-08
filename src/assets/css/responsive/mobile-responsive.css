@@ -521,7 +521,7 @@
     .rpd-mobile-card .h5 { margin-top: 20px; margin-bottom: 14px; }
 
 
-    .life-rpd-mob-card-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+    .life-rpd-mob-card-wrapper { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; overflow: hidden; }
 
     .life-rpd-mobile-card { position: relative; width: 100%; overflow: hidden; background-color: #dedede; transform-origin: center center; backface-visibility: hidden; }
     .life-rpd-mobile-card-1 { height: 400px; }
@@ -885,12 +885,13 @@
 
     .projects-lists { margin-top: 20px; }
 
-    .timeline-mobile-sticky { height: 350vh; }
+    .timeline-mobile-sticky { height: 400vh; }
 
     .abt-hero-video { height: calc( 100vh - 400px ); }
     /* .timeline-mobile-inner { top: -150px; } */
 
     .rpd-mobile-card .h5 { margin-top: 12; margin-bottom: 10px; }
+    .rpd-mobile-section { height: 800vh; }
 
     /* .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { height: 205px; } */
 }

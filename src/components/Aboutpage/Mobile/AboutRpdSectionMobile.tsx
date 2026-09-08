@@ -19,6 +19,7 @@ export default function AboutRpdSectionMobile() {
 
             gsap.set(".rpd-mobile-card-wrapper", {
                 scale: 3.5,
+                y: 80,
                 opacity: 1,
                 flexDirection: "row",
                 transformOrigin: "bottom center"
@@ -61,6 +62,7 @@ export default function AboutRpdSectionMobile() {
 
             tl.to(".rpd-mobile-card-wrapper", {
                 scale: 1,
+                y: 0,
                 duration: 0.8
             });
 
