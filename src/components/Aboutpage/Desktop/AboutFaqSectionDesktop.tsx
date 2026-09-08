@@ -77,53 +77,9 @@ export default function AboutFaqSectionDesktop() {
         }
     };
 
-    const sectionRef = useRef<HTMLElement | null>(null);
-
-    useEffect(() => {
-        const section = sectionRef.current;
-
-        if (!section) return;
-
-        const faqItems = section.querySelectorAll(
-            '.accordion-item-wrapper'
-        );
-
-        gsap.set(faqItems, {
-            opacity: 0,
-            y: 80,
-        });
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) return;
-
-                gsap.to(faqItems, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    stagger: 0.8,
-                    ease: 'power3.out',
-                    clearProps: 'transform',
-                });
-
-                observer.unobserve(section);
-            },
-            {
-                threshold: 0.2,
-            }
-        );
-
-        observer.observe(section);
-
-        return () => {
-            observer.disconnect();
-            gsap.killTweensOf(faqItems);
-        };
-    }, []);
-
     return (
         <>
-            <section ref={sectionRef} className="section" style={{ paddingTop: 0 }}>
+            <section className="section">
                 <div className="container">
                     <div className="hm-faq-title">
                         <h2 className="text-sb">FAQs</h2>

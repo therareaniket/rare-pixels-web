@@ -62,13 +62,13 @@ export default function AboutTimelineSectionMobile() {
 
                     gsap.to(activeLineRef.current, {
                         width: "6%",
-                        duration: 0.6,
+                        duration: 0.8,
                         overwrite: true
                     });
 
                     gsap.to(movingDotRef.current, {
                         left: "6%",
-                        duration: 0.6,
+                        duration: 0.8,
                         overwrite: true
                     });
 
@@ -77,13 +77,13 @@ export default function AboutTimelineSectionMobile() {
 
                     gsap.to(activeLineRef.current, {
                         width: "50%",
-                        duration: 0.6,
+                        duration: 0.8,
                         overwrite: true
                     });
 
                     gsap.to(movingDotRef.current, {
                         left: "50%",
-                        duration: 0.6,
+                        duration: 0.8,
                         overwrite: true
                     });
 
@@ -92,13 +92,13 @@ export default function AboutTimelineSectionMobile() {
 
                     gsap.to(activeLineRef.current, {
                         width: "94%",
-                        duration: 0.6,
+                        duration: 0.8,
                         overwrite: true
                     });
 
                     gsap.to(movingDotRef.current, {
                         left: "94%",
-                        duration: 0.6,
+                        duration: 0.8,
                         overwrite: true
                     });
                 }

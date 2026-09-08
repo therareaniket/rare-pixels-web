@@ -12,6 +12,8 @@ export default function AboutRpdSectionMobile() {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
+        let mobileScrollTrigger: ScrollTrigger | null = null;
+
         const ctx = gsap.context(() => {
             const css = getComputedStyle(document.documentElement);
 
@@ -19,7 +21,7 @@ export default function AboutRpdSectionMobile() {
                 scale: 3.5,
                 opacity: 1,
                 flexDirection: "row",
-                // transformOrigin: "bottom center"
+                transformOrigin: "bottom center"
             });
 
             gsap.set(".rpd-mobile-card-1", {
@@ -47,7 +49,7 @@ export default function AboutRpdSectionMobile() {
             });
 
             gsap.set(".rpd-mobile-card-text", {
-                display: "none",
+                display: "none"
             });
 
             const tl = gsap.timeline({
@@ -63,7 +65,7 @@ export default function AboutRpdSectionMobile() {
             });
 
             tl.to({}, {
-                duration: 0.2
+                duration: 0.6
             });
 
             tl.addLabel("mobileCardExpansion");
@@ -97,8 +99,15 @@ export default function AboutRpdSectionMobile() {
                 "mobileCardExpansion"
             );
 
+
+            tl.to(".rpd-mobile-card-wrapper", {
+                width: "100%",
+                justifyContent: "space-between",
+                duration: 0.8
+            });
+
             tl.to({}, {
-                duration: 0.2
+                duration: 1
             });
 
             tl.to(".rpd-mobile-card, .rpd-mobile-card-wrapper", {
@@ -119,7 +128,7 @@ export default function AboutRpdSectionMobile() {
                 opacity: 0
             });
 
-            tl.to(".rpd-mobile-card-text", {
+            tl.set(".rpd-mobile-card-text", {
                 display: "block",
                 width: "100%"
             });
@@ -142,39 +151,34 @@ export default function AboutRpdSectionMobile() {
                 duration: 0.7
             });
 
-            let highestProgress = 0;
-
-            ScrollTrigger.create({
+            mobileScrollTrigger = ScrollTrigger.create({
                 trigger: ".rpd-mobile-section",
                 start: "top top",
                 end: "+=4000",
-                pin: true,
-                anticipatePin: 1,
+                // pin: true,
+                // anticipatePin: 1,
                 invalidateOnRefresh: true,
 
                 onUpdate: (self) => {
-                    if (self.progress <= highestProgress) {
-                        return;
-                    }
-
-                    highestProgress = self.progress;
-
                     gsap.to(tl, {
-                        progress: highestProgress,
+                        progress: self.progress,
                         duration: 0.35,
                         ease: "power1.out",
                         overwrite: true
                     });
-                }
+                },
             });
         });
 
-        return () => ctx.revert();
+        return () => {
+            mobileScrollTrigger?.kill(true);
+            ctx.revert();
+        };
     }, []);
 
     return (
         <>
-            <section className="bg-light-black rpd-mobile-section">
+            <section className="bg-light-black rpd-mobile-section setion" style={{ paddingBottom: 0 }}>
                 <div className="rpd-mobile-inner">
                     <div className="container">
                         <div className="rpd-mobile-card-wrapper">

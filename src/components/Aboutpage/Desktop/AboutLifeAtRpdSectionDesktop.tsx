@@ -302,6 +302,7 @@ export default function AboutLifeAtRpdSectionDesktop() {
         );
 
         let tabletContext: gsap.Context | null = null;
+        let refreshFrame: number | null = null;
 
         const startTabletAnimation = (): void => {
             if (!tabletMediaQuery.matches) return;
@@ -324,23 +325,32 @@ export default function AboutLifeAtRpdSectionDesktop() {
                             'rpd-card-col-1'
                         );
 
+                    gsap.set(card, {
+                        transformOrigin: 'center center',
+                        force3D: true,
+                        willChange: 'transform, opacity',
+                    });
+
                     gsap.fromTo(
                         card,
                         {
                             y: 180,
                             opacity: 0,
+                            scale: 1.12,
                             rotate: isLeftColumn ? -4 : 4,
                         },
                         {
                             y: 0,
                             opacity: 1,
+                            scale: 1,
                             rotate: 0,
                             ease: 'power2.out',
+                            force3D: true,
                             scrollTrigger: {
                                 trigger: card,
                                 start: 'top 100%',
-                                end: 'top 70%',
-                                scrub: 0.8,
+                                end: 'top 65%',
+                                scrub: 2,
                                 invalidateOnRefresh: true,
                             },
                         }
@@ -348,12 +358,18 @@ export default function AboutLifeAtRpdSectionDesktop() {
                 });
             }, tabletWrapper);
 
-            window.requestAnimationFrame(() => {
+            refreshFrame = window.requestAnimationFrame(() => {
                 ScrollTrigger.refresh();
+                refreshFrame = null;
             });
         };
 
         const stopTabletAnimation = (): void => {
+            if (refreshFrame !== null) {
+                window.cancelAnimationFrame(refreshFrame);
+                refreshFrame = null;
+            }
+
             if (tabletContext) {
                 tabletContext.revert();
                 tabletContext = null;
@@ -363,7 +379,7 @@ export default function AboutLifeAtRpdSectionDesktop() {
                 tabletWrapper.querySelectorAll('.rpd-card'),
                 {
                     clearProps:
-                        'transform,opacity,visibility',
+                        'transform,opacity,visibility,willChange,transformOrigin',
                 }
             );
         };
@@ -398,7 +414,7 @@ export default function AboutLifeAtRpdSectionDesktop() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="section life-at-rpd-section">
+        <section ref={sectionRef} className="section life-at-rpd-section" style={{ paddingBottom: 0 }}>
             <div className="life-at-rpd-inner">
                 <div className="container">
                     <div className="abt-life-rpd-desktop-title">

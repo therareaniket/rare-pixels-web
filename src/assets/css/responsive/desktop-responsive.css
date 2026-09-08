@@ -1362,7 +1362,7 @@
 	/* .about-rpd-desktop-content-wrapper { padding-top: 140px; } */
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 220px; }
 	.abt-time-line-desktop-sticky { height: 600vh; }
-	.abt-rpd-section-desktop { height: 800vh; }
+	.abt-rpd-section-desktop { height: 1000vh; }
 }
 
 @media (max-width: 1199px) {
@@ -1372,9 +1372,9 @@
     	--card-2-start-width: 50px;
     	--card-3-start-width: 55px;
 
-		--card-1-width: 205px;
-    	--card-2-width: 235px;
-    	--card-3-width: 275px;
+		--card-1-width: 188px;
+    	--card-2-width: 232px;
+    	--card-3-width: 280px;
 
         --card-1-x: 0px;
         --card-2-x: -265px;

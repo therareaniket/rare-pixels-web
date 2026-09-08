@@ -188,149 +188,269 @@ export default function AboutRpdSectionDesktop() {
         mm.add("(max-width: 1199px)", () => {
             const css = getComputedStyle(document.documentElement);
 
-            gsap.set(".about-rpd-desktop-content-wrapper", {
+            const wrapper = document.querySelector<HTMLElement>(
+                ".about-rpd-desktop-content-wrapper"
+            );
+
+            const card1 = document.querySelector<HTMLElement>(
+                ".abt-rpd-card-1"
+            );
+
+            const card2 = document.querySelector<HTMLElement>(
+                ".abt-rpd-card-2"
+            );
+
+            const card3 = document.querySelector<HTMLElement>(
+                ".abt-rpd-card-3"
+            );
+
+            const cardTexts = gsap.utils.toArray<HTMLElement>(
+                ".abt-card-text"
+            );
+
+            if (
+                !wrapper ||
+                !card1 ||
+                !card2 ||
+                !card3 ||
+                cardTexts.length === 0
+            ) {
+                return;
+            }
+
+            const card1StartWidth = css
+                .getPropertyValue("--card-1-start-width")
+                .trim();
+
+            const card2StartWidth = css
+                .getPropertyValue("--card-2-start-width")
+                .trim();
+
+            const card3StartWidth = css
+                .getPropertyValue("--card-3-start-width")
+                .trim();
+
+            const card2StartMarginTop = css
+                .getPropertyValue("--card-2-start-mt")
+                .trim();
+
+            const card3StartMarginTop = css
+                .getPropertyValue("--card-3-start-mt")
+                .trim();
+
+            const card1ExpandedWidth = css
+                .getPropertyValue("--card-1-width")
+                .trim();
+
+            const card2ExpandedWidth = css
+                .getPropertyValue("--card-2-width")
+                .trim();
+
+            const card3ExpandedWidth = css
+                .getPropertyValue("--card-3-width")
+                .trim();
+
+            const card2ExpandedMarginTop = css
+                .getPropertyValue("--card-2-mt")
+                .trim();
+
+            const card3ExpandedMarginTop = css
+                .getPropertyValue("--card-3-mt")
+                .trim();
+
+            gsap.set(wrapper, {
                 scale: 4,
                 opacity: 1,
+                width: "",
                 flexDirection: "row",
-                // transformOrigin: "bottom center"
+                justifyContent: "",
+                transformOrigin: "center center"
             });
 
-            gsap.set(".abt-rpd-card-1", {
-                width: css.getPropertyValue("--card-1-start-width").trim(),
+            gsap.set(card1, {
+                width: card1StartWidth,
+                height: "",
                 marginTop: 0,
                 x: 0,
                 opacity: 1
             });
 
-            gsap.set(".abt-rpd-card-2", {
-                width: css.getPropertyValue("--card-2-start-width").trim(),
-                marginTop: css.getPropertyValue("--card-2-start-mt").trim(),
+            gsap.set(card2, {
+                width: card2StartWidth,
+                height: "",
+                marginTop: card2StartMarginTop,
                 x: 0,
                 opacity: 1
             });
 
-            gsap.set(".abt-rpd-card-3", {
-                width: css.getPropertyValue("--card-3-start-width").trim(),
-                marginTop: css.getPropertyValue("--card-3-start-mt").trim(),
+            gsap.set(card3, {
+                width: card3StartWidth,
+                height: "",
+                marginTop: card3StartMarginTop,
                 x: 0,
                 opacity: 1
             });
 
-            gsap.set(".abt-card-text", {
+            gsap.set(cardTexts, {
                 display: "none",
+                width: "",
                 opacity: 0,
                 y: 40
             });
 
             const tl = gsap.timeline({
+                paused: true,
                 defaults: {
                     ease: "none"
-                },
-                scrollTrigger: {
-                    trigger: ".abt-rpd-section-desktop",
-                    start: "top top",
-                    end: "+=6000",
-                    scrub: 2,
-                    invalidateOnRefresh: true
                 }
             });
 
-            tl.to(".about-rpd-desktop-content-wrapper", {
+            tl.to(wrapper, {
                 scale: 1,
-                duration: 1
+                duration: 0.8
             });
 
             tl.to({}, {
-                duration: 0.7
+                duration: 0.6
             });
 
             tl.addLabel("cardExpansion");
 
-            tl.to(".abt-rpd-card-1", {
-                width: css.getPropertyValue("--card-1-width").trim(),
-                duration: 2
-            }, "cardExpansion");
+            tl.to(
+                card1,
+                {
+                    width: card1ExpandedWidth,
+                    duration: 1
+                },
+                "cardExpansion"
+            );
 
-            tl.to(".abt-rpd-card-2", {
-                width: css.getPropertyValue("--card-2-width").trim(),
-                marginTop: css.getPropertyValue("--card-2-mt").trim(),
-                duration: 2
-            }, "cardExpansion");
+            tl.to(
+                card2,
+                {
+                    width: card2ExpandedWidth,
+                    marginTop: card2ExpandedMarginTop,
+                    duration: 1
+                },
+                "cardExpansion"
+            );
 
-            tl.to(".abt-rpd-card-3", {
-                width: css.getPropertyValue("--card-3-width").trim(),
-                marginTop: css.getPropertyValue("--card-3-mt").trim(),
-                duration: 2
-            }, "cardExpansion");
+            tl.to(
+                card3,
+                {
+                    width: card3ExpandedWidth,
+                    marginTop: card3ExpandedMarginTop,
+                    duration: 1
+                },
+                "cardExpansion"
+            );
 
-            tl.to({}, {
-                duration: 0.5
+            tl.to(wrapper, {
+                width: "100%",
+                justifyContent: "space-between",
+                duration: 0.8
             });
 
-            tl.to(".abt-rpd-card, .about-rpd-desktop-content-wrapper", {
-                opacity: 0,
+            tl.to({}, {
                 duration: 1
             });
 
-            tl.set(".about-rpd-desktop-content-wrapper", {
+            tl.to([card1, card2, card3, wrapper], {
+                opacity: 0,
+                duration: 0.6
+            });
+
+            tl.set(wrapper, {
                 flexDirection: "column",
+                justifyContent: "flex-start",
                 opacity: 1
             });
 
-            tl.set(".abt-card-text", {
+            tl.set([card1, card2, card3], {
+                width: "100%",
+                height: "var(--rpd-card-height)",
+                marginTop: 0,
+                x: "-100%",
+                opacity: 0
+            });
+
+            tl.set(cardTexts, {
                 display: "block",
                 width: "100%",
                 opacity: 1,
                 y: 0
             });
 
-            tl.set(".abt-rpd-card", {
-                width: "100%",
-                height: "var(--rpd-card-height)",
-                marginTop: 0
+            tl.to(card1, {
+                x: "0%",
+                opacity: 1,
+                duration: 0.7
             });
 
-            tl.fromTo(
-                ".abt-rpd-card-1",
-                {
-                    x: "-100%",
-                    opacity: 0
-                },
-                {
-                    x: "0%",
-                    opacity: 1,
-                    duration: 1,
-                    immediateRender: false
-                }
-            );
+            tl.to(card2, {
+                x: "0%",
+                opacity: 1,
+                duration: 0.7
+            });
 
-            tl.fromTo(
-                ".abt-rpd-card-2",
-                {
-                    x: "-100%",
-                    opacity: 0
-                },
-                {
-                    x: "0%",
-                    opacity: 1,
-                    duration: 1,
-                    immediateRender: false
-                }
-            );
+            tl.to(card3, {
+                x: "0%",
+                opacity: 1,
+                duration: 0.7
+            });
 
-            tl.fromTo(
-                ".abt-rpd-card-3",
-                {
-                    x: "-100%",
-                    opacity: 0
+            const tabletScrollTrigger = ScrollTrigger.create({
+                trigger: ".abt-rpd-section-desktop",
+                start: "top top",
+                end: "+=6000",
+                // pin: true,
+                // anticipatePin: 1,
+                invalidateOnRefresh: true,
+
+                onUpdate: (self) => {
+                    gsap.to(tl, {
+                        progress: self.progress,
+                        duration: 0.35,
+                        ease: "power1.out",
+                        overwrite: true
+                    });
                 },
-                {
-                    x: "0%",
-                    opacity: 1,
-                    duration: 1,
-                    immediateRender: false
+
+                onLeave: () => {
+                    gsap.killTweensOf(tl);
+                    tl.progress(1);
+                },
+
+                onEnterBack: (self) => {
+                    gsap.killTweensOf(tl);
+
+                    gsap.set(tl, {
+                        progress: self.progress
+                    });
                 }
-            );
+            });
+
+            return () => {
+                gsap.killTweensOf(tl);
+
+                tabletScrollTrigger.kill(true);
+                tl.kill();
+
+                gsap.set(wrapper, {
+                    clearProps:
+                        "transform,opacity,width,flexDirection,justifyContent,transformOrigin"
+                });
+
+                gsap.set([card1, card2, card3], {
+                    clearProps:
+                        "transform,opacity,width,height,marginTop"
+                });
+
+                gsap.set(cardTexts, {
+                    clearProps:
+                        "display,width,opacity,transform"
+                });
+            };
         });
 
         return () => mm.revert();
