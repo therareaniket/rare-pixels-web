@@ -1,16 +1,47 @@
 'use client';
 
 const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
-;
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
 import GlassEffect from "@/components/global/LiquideGlass";
 import PixelImageReveal from "@/components/global/PixelImageReveal";
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useThemeTrigger } from "@/hooks/useThemeTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSectionDesktop() {
 
     // useThemeTrigger();
+
+    useLayoutEffect(() => {
+
+        gsap.set(".hm-abt-card-anim:nth-child(1)", { xPercent: 50, yPercent: 50, })
+        gsap.set(".hm-abt-card-anim:nth-child(2)", { xPercent: -50, yPercent: 50, })
+        gsap.set(".hm-abt-card-anim:nth-child(3)", { xPercent: 50, yPercent: -50, })
+        gsap.set(".hm-abt-card-anim:nth-child(4)", { xPercent: -50, yPercent: -50, })
+
+        gsap.fromTo(".hm-abt-card-anim",
+        {
+            opacity: 0,
+            scale: 0.5,
+        }, {
+            opacity: 1,
+            xPercent: 0,
+            yPercent: 0,
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.5,
+            delay: 0.2,
+            scrollTrigger: {
+                trigger: ".abt-section-wrapper",
+                start: "top 20%",
+            }
+        } );
+        
+    }, []);
 
     return (
         <>
@@ -19,7 +50,7 @@ export default function AboutSectionDesktop() {
                     <div className="abt-section-wrapper">
                         <div className="hm-about-main">
                             <div className="hm-abt-text-wrapper">
-                                <h2 className="text-sb ">Making Businesses Easier To Notice, Trust, And Remember.</h2>
+                                <h2 className="text-sb">Making Businesses Easier To Notice, Trust, And Remember.</h2>
 
                                 <p className="text-18 text-rg ">
                                     <span>At RarePixels, we bring together strategy, creativity, and technology to create brands and digital experiences that leave a lasting impact. Everything we build is designed with purpose, shaped by insight, and aligned with business growth. Nothing generic. Nothing without intent.</span>
@@ -34,21 +65,21 @@ export default function AboutSectionDesktop() {
                                 </div>
 
                                 <div className="hm-abt-pointers-right">
-                                    <GlassEffect>
+                                    <div className="hm-abt-card-anim">
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
                                                 <h3 className="h6 text-primary text-sb">Design That Creates Clarity</h3>
 
-                                                <p className="text-18 ">
+                                                <p className="text-18">
                                                     <span>Great experiences don&apos;t happen by accident.</span>
                                                     <span>We believe every interaction should feel natural, every journey should feel effortless, and every decision should help users move forward with confidence.</span>
                                                 </p>
                                             </div>
                                         </div>
-                                    </GlassEffect>
+                                    </div>
 
-                                    <GlassEffect>
+                                    <div className="hm-abt-card-anim">
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
@@ -60,9 +91,9 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </GlassEffect>
+                                    </div>
 
-                                    <GlassEffect>
+                                    <div className="hm-abt-card-anim">
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
@@ -74,9 +105,9 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </GlassEffect>
-                                    
-                                    <GlassEffect>
+                                    </div>
+
+                                    <div className="hm-abt-card-anim">
                                         <div className="hm-abt-card site-radius-20">
                                             <span className="hm-abt-pixel"></span>
                                             <div className="hm-abt-card-title">
@@ -88,7 +119,7 @@ export default function AboutSectionDesktop() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </GlassEffect>
+                                    </div>
                                 </div>
                             </div>
                         </div>

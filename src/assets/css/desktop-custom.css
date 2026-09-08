@@ -1179,3 +1179,20 @@ body.menu-open {
     width: 540px;
     /* background-color: orange; */
 }
+
+
+.hm-abt-card {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    width: 396px;    
+    background-color: rgba(4, 14, 54, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.hm-abt-card-mobile {
+    background-color: rgba(4, 14, 54, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
+}

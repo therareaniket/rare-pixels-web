@@ -110,7 +110,6 @@ export default function WhyChooseUsSectionDesktop() {
                 },
             });
 
-
             if (handImageRef.current) {
                 gsap.fromTo(handImageRef.current, 
                     {
@@ -119,7 +118,7 @@ export default function WhyChooseUsSectionDesktop() {
                     },{
                     scale: 1,
                     opacity: 1,
-                    duration: 3, // Matches the path animation duration
+                    duration: 2,
                     ease: "power3.inOut",
                     scrollTrigger: {
                         trigger: sectionRef.current,
