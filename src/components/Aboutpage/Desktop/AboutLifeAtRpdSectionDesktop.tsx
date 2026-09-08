@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '@/assets/css/desktop-custom.css';
 import '@/assets/css/responsive/desktop-responsive.css';
@@ -16,6 +18,7 @@ interface CardCssConfig {
 export default function AboutLifeAtRpdSectionDesktop() {
     const sectionRef = useRef<HTMLElement | null>(null);
     const desktopWrapperRef = useRef<HTMLDivElement | null>(null);
+    const tabletWrapperRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         const section = sectionRef.current;
@@ -23,12 +26,17 @@ export default function AboutLifeAtRpdSectionDesktop() {
 
         if (!section || !wrapper) return;
 
+        const desktopMediaQuery = window.matchMedia(
+            '(min-width: 840px)'
+        );
+
         const cards = Array.from(
             wrapper.querySelectorAll<HTMLDivElement>('.rpd-card')
         );
 
         let cardCssConfigs: CardCssConfig[] = [];
         let animationFrame: number | null = null;
+        let desktopAnimationActive = false;
 
         const clamp = (
             value: number,
@@ -96,6 +104,8 @@ export default function AboutLifeAtRpdSectionDesktop() {
         const updateCards = (): void => {
             animationFrame = null;
 
+            if (!desktopMediaQuery.matches) return;
+
             const sectionRect = section.getBoundingClientRect();
 
             const scrollableDistance =
@@ -118,7 +128,7 @@ export default function AboutLifeAtRpdSectionDesktop() {
                 const floatAmount =
                     Math.sin(
                         window.scrollY * 0.006 +
-                            index * 1.4
+                        index * 1.4
                     ) *
                     18 *
                     remainingProgress;
@@ -133,13 +143,15 @@ export default function AboutLifeAtRpdSectionDesktop() {
                 const scale =
                     config.startScale +
                     (1 - config.startScale) *
-                        easedProgress;
+                    easedProgress;
 
                 const height =
                     config.startHeight +
-                    (config.endHeight -
-                        config.startHeight) *
-                        easedProgress;
+                    (
+                        config.endHeight -
+                        config.startHeight
+                    ) *
+                    easedProgress;
 
                 card.style.setProperty(
                     '--card-translate-x',
@@ -164,6 +176,8 @@ export default function AboutLifeAtRpdSectionDesktop() {
         };
 
         const requestUpdate = (): void => {
+            if (!desktopAnimationActive) return;
+            if (!desktopMediaQuery.matches) return;
             if (animationFrame !== null) return;
 
             animationFrame =
@@ -171,36 +185,13 @@ export default function AboutLifeAtRpdSectionDesktop() {
         };
 
         const handleResize = (): void => {
+            if (!desktopMediaQuery.matches) return;
+
             readCardCssConfigs();
             requestUpdate();
         };
 
-        readCardCssConfigs();
-        updateCards();
-
-        window.addEventListener('scroll', requestUpdate, {
-            passive: true,
-        });
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener(
-                'scroll',
-                requestUpdate
-            );
-
-            window.removeEventListener(
-                'resize',
-                handleResize
-            );
-
-            if (animationFrame !== null) {
-                window.cancelAnimationFrame(
-                    animationFrame
-                );
-            }
-
+        const clearDesktopCardStyles = (): void => {
             cards.forEach((card) => {
                 card.style.removeProperty(
                     '--card-translate-x'
@@ -219,13 +210,195 @@ export default function AboutLifeAtRpdSectionDesktop() {
                 );
             });
         };
+
+        const startDesktopAnimation = (): void => {
+            if (desktopAnimationActive) return;
+            if (!desktopMediaQuery.matches) return;
+
+            desktopAnimationActive = true;
+
+            readCardCssConfigs();
+            updateCards();
+
+            window.addEventListener(
+                'scroll',
+                requestUpdate,
+                {
+                    passive: true,
+                }
+            );
+
+            window.addEventListener(
+                'resize',
+                handleResize
+            );
+        };
+
+        const stopDesktopAnimation = (): void => {
+            if (!desktopAnimationActive) return;
+
+            desktopAnimationActive = false;
+
+            window.removeEventListener(
+                'scroll',
+                requestUpdate
+            );
+
+            window.removeEventListener(
+                'resize',
+                handleResize
+            );
+
+            if (animationFrame !== null) {
+                window.cancelAnimationFrame(
+                    animationFrame
+                );
+
+                animationFrame = null;
+            }
+
+            clearDesktopCardStyles();
+        };
+
+        const handleDesktopBreakpointChange = (
+            event: MediaQueryListEvent
+        ): void => {
+            if (event.matches) {
+                startDesktopAnimation();
+            } else {
+                stopDesktopAnimation();
+            }
+        };
+
+        if (desktopMediaQuery.matches) {
+            startDesktopAnimation();
+        }
+
+        desktopMediaQuery.addEventListener(
+            'change',
+            handleDesktopBreakpointChange
+        );
+
+        return () => {
+            desktopMediaQuery.removeEventListener(
+                'change',
+                handleDesktopBreakpointChange
+            );
+
+            stopDesktopAnimation();
+            clearDesktopCardStyles();
+        };
+    }, []);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tabletWrapper = tabletWrapperRef.current;
+
+        if (!tabletWrapper) return;
+
+        const tabletMediaQuery = window.matchMedia(
+            '(max-width: 839px)'
+        );
+
+        let tabletContext: gsap.Context | null = null;
+
+        const startTabletAnimation = (): void => {
+            if (!tabletMediaQuery.matches) return;
+            if (tabletContext) return;
+
+            tabletContext = gsap.context(() => {
+                const tabletCards = Array.from(
+                    tabletWrapper.querySelectorAll<HTMLDivElement>(
+                        '.rpd-card'
+                    )
+                );
+
+                tabletCards.forEach((card) => {
+                    const cardColumn = card.closest(
+                        '.rpd-card-col'
+                    );
+
+                    const isLeftColumn =
+                        cardColumn?.classList.contains(
+                            'rpd-card-col-1'
+                        );
+
+                    gsap.fromTo(
+                        card,
+                        {
+                            y: 180,
+                            opacity: 0,
+                            rotate: isLeftColumn ? -4 : 4,
+                        },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            rotate: 0,
+                            ease: 'power2.out',
+                            scrollTrigger: {
+                                trigger: card,
+                                start: 'top 100%',
+                                end: 'top 70%',
+                                scrub: 0.8,
+                                invalidateOnRefresh: true,
+                            },
+                        }
+                    );
+                });
+            }, tabletWrapper);
+
+            window.requestAnimationFrame(() => {
+                ScrollTrigger.refresh();
+            });
+        };
+
+        const stopTabletAnimation = (): void => {
+            if (tabletContext) {
+                tabletContext.revert();
+                tabletContext = null;
+            }
+
+            gsap.set(
+                tabletWrapper.querySelectorAll('.rpd-card'),
+                {
+                    clearProps:
+                        'transform,opacity,visibility',
+                }
+            );
+        };
+
+        const handleTabletBreakpointChange = (
+            event: MediaQueryListEvent
+        ): void => {
+            if (event.matches) {
+                startTabletAnimation();
+            } else {
+                stopTabletAnimation();
+            }
+        };
+
+        if (tabletMediaQuery.matches) {
+            startTabletAnimation();
+        }
+
+        tabletMediaQuery.addEventListener(
+            'change',
+            handleTabletBreakpointChange
+        );
+
+        return () => {
+            tabletMediaQuery.removeEventListener(
+                'change',
+                handleTabletBreakpointChange
+            );
+
+            stopTabletAnimation();
+        };
     }, []);
 
     return (
-        <section
-            ref={sectionRef}
-            className="section life-at-rpd-section"
-        >
+        <section ref={sectionRef} className="section life-at-rpd-section">
             <div className="life-at-rpd-inner">
                 <div className="container">
                     <div className="abt-life-rpd-desktop-title">
@@ -238,10 +411,7 @@ export default function AboutLifeAtRpdSectionDesktop() {
                         </h3>
                     </div>
 
-                    <div
-                        ref={desktopWrapperRef}
-                        className="life-at-rpd-desktop-card-wrapper desktop"
-                    >
+                    <div ref={desktopWrapperRef} className="life-at-rpd-desktop-card-wrapper desktop" >
                         <div className="rpd-card-col-1 rpd-card-col">
                             <div className="rpd-card rpd-card-1" />
                             <div className="rpd-card rpd-card-2" />
@@ -260,7 +430,7 @@ export default function AboutLifeAtRpdSectionDesktop() {
                         </div>
                     </div>
 
-                    <div className="life-at-rpd-desktop-card-wrapper tablet">
+                    <div ref={tabletWrapperRef} className="life-at-rpd-desktop-card-wrapper tablet">
                         <div className="rpd-card-col-1 rpd-card-col">
                             <div className="rpd-card rpd-card-1" />
                             <div className="rpd-card rpd-card-2" />

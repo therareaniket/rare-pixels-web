@@ -36,31 +36,6 @@ const faqs = [
     question: "Can RarePixels help build a brand from scratch?",
     answer: "Absolutely. We create complete brand identities, visual systems, messaging, and digital experiences."
   }
-
-//   {
-//     question: "Do you manage social media for businesses?",
-//     answer: "Yes. We create content strategies, creative assets, and campaigns that help brands grow."
-//   },
-
-//   {
-//     question: "How do you approach a new project?",
-//     answer: "Every project begins with understanding your business, users, and goals."
-//   },
-
-//   {
-//     question: "Can RarePixels redesign an existing website or product?",
-//     answer: "Yes. We redesign websites and products to improve usability, performance, and business results."
-//   },
-
-//   {
-//     question: "Do you work with businesses outside India?",
-//     answer: "Yes. We collaborate with businesses across multiple countries."
-//   },
-
-//   {
-//     question: "How do I get started with RarePixels?",
-//     answer: "Simply reach out through our contact page and we'll discuss the right approach."
-//   }
 ];
 
 export default function AboutFaqSectionMobile() {
@@ -161,19 +136,48 @@ export default function AboutFaqSectionMobile() {
               what we offer, and how we can support your next project.
             </p>
           </div>
-            <div className={`faq-expand-wrapper ${expanded ? "expanded" : ""}`}>
-              <Accordion
-                defaultValue={["faq-1"]}
-                className="faq-accordion-wrapper"
-              >
-                {faqs.slice(0, 5).map((faq, index) =>
-                  <div className="accordion-item-wrapper" key={index}>
+          <div className={`faq-expand-wrapper ${expanded ? "expanded" : ""}`}>
+            <Accordion
+              defaultValue={["faq-1"]}
+              className="faq-accordion-wrapper"
+            >
+              {faqs.slice(0, 5).map((faq, index) =>
+                <div className="accordion-item-wrapper" key={index}>
+                  <span className="accordion-number text-16 text-sb">
+                    {index + 1}
+                  </span>
+
+                  <AccordionItem
+                    value={`faq-${index + 1}`}
+                    className="faq-accordion"
+                  >
+                    <AccordionTrigger className="faq-accordion-title">
+                      <h3 className="text-16 text-sb text-black">
+                        {faq.question}
+                      </h3>
+                    </AccordionTrigger>
+
+                    <AccordionContent className="faq-content">
+                      <p className="text-14 text-rg text-black">
+                        {faq.answer}
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </div>
+              )}
+
+              {showAll &&
+                faqs.slice(5).map((faq, index) => (
+                  <div
+                    className="accordion-item-wrapper extra-faq"
+                    key={index + 5}
+                  >
                     <span className="accordion-number text-16 text-sb">
-                      {index + 1}
+                      {index + 6}
                     </span>
 
                     <AccordionItem
-                      value={`faq-${index + 1}`}
+                      value={`faq-${index + 6}`}
                       className="faq-accordion"
                     >
                       <AccordionTrigger className="faq-accordion-title">
@@ -189,41 +193,12 @@ export default function AboutFaqSectionMobile() {
                       </AccordionContent>
                     </AccordionItem>
                   </div>
-                )}
+                ))
+              }
+            </Accordion>
 
-                {showAll &&
-                  faqs.slice(5).map((faq, index) => (
-                    <div
-                      className="accordion-item-wrapper extra-faq"
-                      key={index + 5}
-                    >
-                      <span className="accordion-number text-16 text-sb">
-                        {index + 6}
-                      </span>
-
-                      <AccordionItem
-                        value={`faq-${index + 6}`}
-                        className="faq-accordion"
-                      >
-                        <AccordionTrigger className="faq-accordion-title">
-                          <h3 className="text-16 text-sb text-black">
-                            {faq.question}
-                          </h3>
-                        </AccordionTrigger>
-
-                        <AccordionContent className="faq-content">
-                          <p className="text-14 text-rg text-black">
-                            {faq.answer}
-                          </p>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </div>
-                  ))
-                }
-              </Accordion>
-
-              <div className="faq-btn-wrapper-arrow">
-                {/* <button
+            <div className="faq-btn-wrapper-arrow">
+              {/* <button
                   type="button"
                   className="expand-faq"
                   onClick={handleToggle}
@@ -237,17 +212,17 @@ export default function AboutFaqSectionMobile() {
                   />
 
                 </button> */}
-                <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-mobile-btn website-btn">
-                  <span className="text-20 text-md text-white">Ask Your Queries </span>
-                  <Image
-                    src="/images/global/faq-mic.svg"
-                    alt="arrow-for-navigation"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
-              </div>
+              <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary hm-hero-redirect-link faq-mobile-btn website-btn">
+                <span className="text-20 text-md text-white">Ask Your Queries </span>
+                <Image
+                  src="/images/global/faq-mic.svg"
+                  alt="arrow-for-navigation"
+                  width={24}
+                  height={24}
+                />
+              </Link>
             </div>
+          </div>
 
         </div>
       </section>

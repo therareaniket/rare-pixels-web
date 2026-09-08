@@ -33,31 +33,6 @@ const faqs = [
         question: "Can RarePixels help build a brand from scratch?",
         answer: "Absolutely. We create complete brand identities, visual systems, messaging, and digital experiences."
     },
-
-    // {
-    //     question: "Do you manage social media for businesses?",
-    //     answer: "Yes. We create content strategies, creative assets, and campaigns that help brands grow."
-    // },
-
-    // {
-    //     question: "How do you approach a new project?",
-    //     answer: "Every project begins with understanding your business, users, and goals."
-    // },
-
-    // {
-    //     question: "Can RarePixels redesign an existing website or product?",
-    //     answer: "Yes. We redesign websites and products to improve usability, performance, and business results."
-    // },
-
-    // {
-    //     question: "Do you work with businesses outside India?",
-    //     answer: "Yes. We collaborate with businesses across multiple countries."
-    // },
-
-    // {
-    //     question: "How do I get started with RarePixels?",
-    //     answer: "Simply reach out through our contact page and we'll discuss the right approach."
-    // }
 ];
 
 export default function AboutFaqSectionDesktop() {
@@ -78,8 +53,8 @@ export default function AboutFaqSectionDesktop() {
                     {
                         opacity: 1,
                         y: 0,
-                        duration: 0.6,
-                        stagger: 0.08,
+                        duration: 1,
+                        stagger: 0.8,
                         ease: "power3.out",
                     }
                 );
@@ -148,7 +123,7 @@ export default function AboutFaqSectionDesktop() {
 
     return (
         <>
-            <section ref={sectionRef} className="section">
+            <section ref={sectionRef} className="section" style={{ paddingTop: 0 }}>
                 <div className="container">
                     <div className="hm-faq-title">
                         <h2 className="text-sb">FAQs</h2>
