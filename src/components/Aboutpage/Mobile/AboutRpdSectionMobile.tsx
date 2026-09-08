@@ -19,7 +19,7 @@ export default function AboutRpdSectionMobile() {
                 scale: 3.5,
                 opacity: 1,
                 flexDirection: "row",
-                transformOrigin: "bottom center"
+                // transformOrigin: "bottom center"
             });
 
             gsap.set(".rpd-mobile-card-1", {
