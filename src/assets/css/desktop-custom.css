@@ -842,8 +842,6 @@ body.menu-open {
 /* .abt-rpd-card-2 .abt-card-text h2 { margin-top: 0; margin-bottom: 20px; } */
 /* .abt-rpd-card-2 .abt-card-text { margin-bottom: 20px; } */
 
-.abt-rpd-section-desktop { position: relative; }
-
 .rpd-pixel-left { position: absolute; top: 0; left: 0; }
 .rpd-pixel-right { position: absolute; bottom: -55px; right: 0; z-index:3; }
 

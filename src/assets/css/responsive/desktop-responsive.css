@@ -1357,7 +1357,7 @@
 	.rpd-card-col-3 { transform: translateY(-160px); }
 
 	.tree-section-inner { top: 50px; }
-	.abt-card-text { width: 220px; height: 220px; }
+	.abt-card-text { width: 200px; height: 220px; }
 	/* .abt-rpd-card-2 { transform: translateY(-210px); } */
 	/* .about-rpd-desktop-content-wrapper { padding-top: 140px; } */
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 220px; }
