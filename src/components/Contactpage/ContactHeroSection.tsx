@@ -10,7 +10,7 @@ import "@/assets/css/responsive/mobile-responsive.css";
 export default function ContactHeroSection() {
     return (
         <>
-            <section className="contact-hero-section">
+            <section id="first-section" className="contact-hero-section">
                 <div className="container">
                     <div className="contact-hero-wrapper">
                         <h1 className="contact-hero-title text-sb">Start Your Design & Development Project</h1>
