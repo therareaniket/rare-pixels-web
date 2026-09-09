@@ -47,7 +47,7 @@ export default function ContactFormSection() {
                             <span className="h3 text-rg">Hello! My name is <input type="text" placeholder="your full name" /></span>
                             <span className="h3 text-rg">and I want to discuss a potential project.</span>
                             <span className="h3 text-rg">You can email me at <input type="email" name="" id="" placeholder=" your@email.com" /></span>
-                            <span className="h3 text-rg">or reach me on  <input type="number" name="" id="" placeholder="your phone" /> </span>
+                            <span className="h3 text-rg">or reach me on  <input type="text" name="" id="" placeholder="your phone" /> </span>
 
                             <div className="cnct-form-select-interest">
                                 <h5 className="text-rg h3">I’m interested in (select one or more)</h5>

@@ -712,6 +712,16 @@
 	.contact-hero-title { font-size: 86px; line-height: 96px; width: 699px; }
 	.contact-hero-image { width: 450px; height: 400px; }
 	.cnct-hero-bg-image { top: 70px; }
+
+	.contact-form-left { width: 495px; }
+	.contact-form-right { width: 665px; }
+	.cnct-prefer-to-talk { padding: 25px; height: 380px; }
+	.cnct-form-checkbox-option label, .cnct-upload-button { padding: 16px 28px; }
+	.cnct-prefer-right { width: 180px; right: 25px; bottom: 25px; }
+	.cnct-prefer-left p { width: 250px; }
+	.contact-form-right span { margin-bottom: 18px; }
+	.cnct-project-detail input { margin-top: 18px; }
+	.cnct-form-checkbox-option label span, .cnct-upload-button span, .cnct-right-link span { margin-bottom: 0 !important; }
 }
 
 @media (max-width: 1439px) {
@@ -1058,6 +1068,15 @@
 	.contact-hero-title { font-size: 72px; line-height: 86px; width: 585px; }
 	.contact-hero-image { width: 390px; height: 350px; }
 	.cnct-hero-bg-image { top: 40px; }
+
+	.contact-form-right span input { width: 275px; }
+	.contact-form-right { width: 567px; }
+	.contact-form-left { width: 440px; }
+	.cnct-prefer-to-talk { margin-top: 30px; height: 355px; }
+	.cnct-prefer-left p { width: 205px; }
+	.cnct-prefer-right { width: 170px; }
+	.cnct-form-checkbox { gap: 15px; }
+	.contact-prefer-title span { font-size: 24px; line-height: 24px; }
 }
 
 @media (max-width: 1359px) {
