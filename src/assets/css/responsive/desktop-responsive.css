@@ -594,13 +594,14 @@
 	.abt-our-values-hr { margin: 20px 0; }
 	.abt-our-values-pointer-right h3 { line-height: 34px; margin-bottom: 10px; }
 
-	.why-rare-desktop-content { margin-top: 40px; padding-top: 120px; }
+	.why-rare-desktop-content { margin-top: 80px; }
 	.why-rare-desktop-tree-image { width: 460px; }
 
 	.why-rare-pointers { width: 370px; }
 	.why-rare-pointers span { margin-top: 10px; }
-	.why-rare-point-1 { left: 120px; }
-	.why-rare-point-2 { right: 110px; }
+
+	.why-rare-point-1 { left: 40px; top: -20px; }
+	.why-rare-point-2 { right: 10px; }
 	.why-rare-point-3 { bottom: 47px; left: 25px; }
 	.why-rare-point-4 { bottom: 79px; right: 23px; }
 
@@ -705,7 +706,6 @@
 	.rpd-card-col-3 { transform: translateY(-190px); }
 	.why-rare-title-desktop { width: 620px; }
 
-	.tree-section-inner { top: -80px; }
 	.abt-timeline-title-right { width: 490px; }
 	.abt-card-text { width: 290px; height: 280px; }
 	/* .abt-rpd-card-2 { transform: translateY(-230px); } */
@@ -954,11 +954,10 @@
 	.why-rare-desktop-tree-image { width: 420px; }
 
 	.why-rare-pointers { padding: 15px; width: 320px; }
-	.why-rare-point-1 { left: 87px; }
-	.why-rare-point-2 { right: 75px; }
+	.why-rare-point-1 { left: 12px; }
+	.why-rare-point-2 { top: -10; right: 10px; }
 	.why-rare-point-3 { bottom: 47px; left: 0; }
-	.why-rare-point-4 { bottom: 85px; right: 0; }
-	.why-rare-desktop-content { padding-top: 95px; }
+	.why-rare-point-4 { bottom: 50px; right: 0px; }
 
 	.abt-card-text h2 { font-size: 22px; line-height: 30px; margin: 15px 0; }
 
@@ -1062,7 +1061,6 @@
 	.rare-logo { width: 50px; }
 	.abt-card-text h2 { margin-top: 25px; }
 
-	.tree-section-inner { top: 0px; }
 	.abt-rpd-section-desktop { height: 800vh; }
 
 	.abt-time-line-desktop-sticky { height: 600vh; }
@@ -1312,10 +1310,10 @@
 	.why-rare-pointers { width: 310px; }
 	.why-rare-desktop-tree-image { width: 340px; }
 
-	.why-rare-point-1 { left: 73px; top: -2px; }
-	.why-rare-point-2 { right: 62px; top: -40px; }
+	.why-rare-point-1 { left: 10px; top: -40px; }
+	.why-rare-point-2 { right: 10px; top: -60px; }
 	.why-rare-point-3 { bottom: 10px; }
-	.why-rare-point-4 { bottom: 50px; }
+	.why-rare-point-4 { bottom: 40px; }
 	.why-rare-desktop-content { margin-top: 70px; }
 
 	.abt-card-text h2 { font-size: 20px; }
@@ -1423,7 +1421,6 @@
 
 	.rpd-card-col-3 { transform: translateY(-160px); }
 
-	.tree-section-inner { top: 50px; }
 	.abt-card-text { width: 200px; height: 220px; }
 	/* .abt-rpd-card-2 { transform: translateY(-210px); } */
 	/* .about-rpd-desktop-content-wrapper { padding-top: 140px; } */

@@ -1,31 +1,36 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-
+import { useEffect } from "react";
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutOurValuesSectionMobile() {
-    const pointerWrapperRef = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        const pointerWrapper = pointerWrapperRef.current;
-        if (!pointerWrapper) return;
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0 }
-        );
-
-        observer.observe(pointerWrapper);
-        return () => observer.disconnect();
+        gsap.fromTo(".abt-our-values-pointer-mobile", 
+            { 
+                opacity: 0,
+                scale: 0.5,
+                y: 10,
+            },  { 
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                stagger: 0.5,
+                duration: 1,
+                scrollTrigger: { 
+                    trigger: ".our-values-mobile-section", 
+                    start: "top 10%",
+                    end: "top -70%",
+                    scrub: true,
+                    once: true,
+                } 
+            })
     }, []);
 
     return (
@@ -38,8 +43,8 @@ export default function AboutOurValuesSectionMobile() {
 
                     <Image className="our-values-image" src="/images/aboutpage/abt-our-values/our-values.webp" alt="our-values" width={692} height={458}></Image>
 
-                    <div ref={pointerWrapperRef} className="abt-our-values-left">
-                        <div className={`abt-our-values-pointer-mobile ${isVisible ? "is-visible" : ""}`}>
+                    <div className="abt-our-values-left">
+                        <div className="abt-our-values-pointer-mobile">
                             <div className="abt-our-values-pointer-left">
                                 <span>
                                     <Image src="/images/aboutpage/abt-our-values/creative-1.svg" alt="our-values" width={24} height={24}></Image>
@@ -52,9 +57,9 @@ export default function AboutOurValuesSectionMobile() {
                             </div>
                         </div>
 
-                        <div className={`abt-our-values-hr ${isVisible ? "is-visible" : ""}`}></div>
+                        <div className={`abt-our-values-hr`}></div>
 
-                        <div className={`abt-our-values-pointer-mobile ${isVisible ? "is-visible" : ""}`}>
+                        <div className={`abt-our-values-pointer-mobile`}>
                             <div className="abt-our-values-pointer-left">
                                 <span>
                                     <Image src="/images/aboutpage/abt-our-values/strategic-1.svg" alt="our-values" width={24} height={24}></Image>
@@ -67,9 +72,9 @@ export default function AboutOurValuesSectionMobile() {
                             </div>
                         </div>
 
-                        <div className={`abt-our-values-hr ${isVisible ? "is-visible" : ""}`}></div>
+                        <div className={`abt-our-values-hr`}></div>
 
-                        <div className={`abt-our-values-pointer-mobile ${isVisible ? "is-visible" : ""}`}>
+                        <div className={`abt-our-values-pointer-mobile`}>
                             <div className="abt-our-values-pointer-left">
                                 <span>
                                     <Image src="/images/aboutpage/abt-our-values/communications-1.svg" alt="our-values" width={24} height={24}></Image>
@@ -82,9 +87,9 @@ export default function AboutOurValuesSectionMobile() {
                             </div>
                         </div>
 
-                        <div className={`abt-our-values-hr ${isVisible ? "is-visible" : ""}`}></div>
+                        <div className={`abt-our-values-hr`}></div>
 
-                        <div className={`abt-our-values-pointer-mobile ${isVisible ? "is-visible" : ""}`}>
+                        <div className={`abt-our-values-pointer-mobile`}>
                             <div className="abt-our-values-pointer-left">
                                 <span>
                                     <Image src="/images/aboutpage/abt-our-values/ownership-1.svg" alt="our-values" width={24} height={24}></Image>

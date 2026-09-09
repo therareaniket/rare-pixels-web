@@ -26,6 +26,7 @@ import AboutLifeAtRpdSectionMobile from "@/components/Aboutpage/Mobile/AboutLife
 import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 import Footer from "@/components/global/Footer";
 import { useThemeTrigger } from "@/hooks/useThemeTrigger";
+import AboutTimeline from "@/components/Aboutpage/Desktop/TimelineSection";
 
 export default function About() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
@@ -49,11 +50,12 @@ export default function About() {
 				{/* DESKTOP */}
 				<div className="hidden min-[480px]:block">
 					<div data-theme-color="white">
-						<AboutHeroSectionDesktop />
+						{/* <AboutHeroSectionDesktop /> */}
 					</div>
 					
 					<div data-theme-color="white">
-						<AboutTimelineSectionDesktop />
+						{/* <AboutTimelineSectionDesktop /> */}
+						<AboutTimeline />
 					</div>
 					
 					<div data-theme-color="white">
@@ -96,7 +98,11 @@ export default function About() {
 					<div data-theme-color="white">
 						<AboutHeroSectionMobile />
 					</div>
-		
+
+					<div data-theme-color="white">
+						<AboutRpdSectionMobile />
+					</div>
+
 					<div data-theme-color="white">
 						<AboutTimelineSectionMobile />
 					</div>

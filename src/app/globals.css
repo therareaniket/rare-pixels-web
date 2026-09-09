@@ -391,7 +391,7 @@ h6, .h6 { font-size: 22px; line-height: 32px; margin-bottom: 16px; }
     --sidebar-accent: oklch(0.269 0 0);
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --sidebar-ring: oklch(0.5561/ 0 0);
 }
 
 

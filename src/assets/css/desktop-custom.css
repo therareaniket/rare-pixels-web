@@ -819,16 +819,7 @@ body.menu-open {
 .abt-our-values-pointer-right { width: calc( 100% - 72px ); }
 .abt-our-values-pointer-right h3 { margin-bottom: 6px; }
 
-.abt-our-values-hr { width: 100%; height: 1px; background-color: #C6C6C6; margin: 30px 0; }
-
-.abt-our-values-pointer { opacity: 0; transform: perspective(700px) translateY(-28px) rotateX(72deg); transform-origin: top center; transition: opacity .7s ease, transform .9s cubic-bezier(.22, 1, .36, 1); }
-.abt-our-values-pointer:nth-of-type(1) { transition-delay: 1s; }
-.abt-our-values-pointer:nth-of-type(3) { transition-delay: 1.4s; }
-.abt-our-values-pointer:nth-of-type(5) { transition-delay: 1.8s; }
-.abt-our-values-pointer:nth-of-type(7) { transition-delay: 2.2s; }
-.abt-our-values-pointer.is-visible { opacity: 1; transform: perspective(700px) translateY(0) rotateX(0); }
-.abt-our-values-hr { width: 0; transition: width 1.8s ease 1.8s; }
-.abt-our-values-hr.is-visible { width: 100%; }
+.abt-our-values-hr { width: 100%; height: 1px; background-color: transparent; margin: 30px 0; }
 
 @media (prefers-reduced-motion: reduce) {
     .abt-our-values-pointer { opacity: 1; transform: none; transition: none; }
@@ -855,27 +846,24 @@ body.menu-open {
 
 .why-rare-desc { width: calc( 100% - 18px ); } 
 
-.why-rare-desktop-content { display: flex; align-items: center; justify-content: center; margin-top: 60px; padding-top: 135px; position: relative; }
+.why-rare-desktop-content { display: flex; align-items: center; justify-content: center; margin-top: 60px; position: relative; }
 .why-rare-point {  position: absolute; opacity: 0;  }
-.why-rare-point-1 { top: 20px; left: 254px; }
-.why-rare-point-2 { top: 0; right: 239px; }
-.why-rare-point-3 { bottom: 70px; left: 141px;  }
-.why-rare-point-4 { bottom:114px; right: 140px; }
+.why-rare-point-1 { top: 0; left: 150px; }
+.why-rare-point-2 { top: -60px; right: 150px; }
+.why-rare-point-3 { bottom: 50px; left: 140px;  }
+.why-rare-point-4 { bottom: 100px; right: 130px; }
 .tree-svg { width: 100%; height: 100%; object-fit: contain; }
 
 .tree-section-desktop { height: 400vh; }
-.tree-section-inner { position: sticky; top: -100px; height: max-content; overflow: hidden; }
+.tree-section-inner { position: sticky; top: 0px; height: max-content; overflow: hidden; }
 
 .card-reveal { position: absolute; inset: 0; background-color: #040e36; z-index: 10; will-change: transform; }
 
 .about-rpd-desktop-content-wrapper { display: flex; align-items: flex-start; }
 .abt-rpd-card { display: flex; flex-direction: column; width: 403px; }
 
-/* .abt-rpd-card-2 { flex-direction: column-reverse; transform: translateY(-185px);  } */
 .abt-card-text { height: 165px; }
 .abt-card-text h2 { margin: 20px 0; }
-/* .abt-rpd-card-2 .abt-card-text h2 { margin-top: 0; margin-bottom: 20px; } */
-/* .abt-rpd-card-2 .abt-card-text { margin-bottom: 20px; } */
 
 .rpd-pixel-left { position: absolute; top: 0; left: 0; }
 .rpd-pixel-right { position: absolute; bottom: -55px; right: 0; z-index:3; }
@@ -1232,6 +1220,19 @@ body.menu-open {
 
 
 .stats-global-element svg { max-width: 100%; height: fit-content; }
+
+
+/* ABOUT-US PAGE TIMELINE */
+
+.timeline-titles h2, .bold-subtitle { width: 700px; }
+.timeline-subtitles { display: flex; align-items: flex-start; justify-content: space-between; margin-top: 40px; }
+.regular-subtitle { width: 480px; }
+.year-timeline-line { margin-top: 150px; }
+.tl-baseline { width: 100%; height: 1px; position: relative; background-color: red; }
+.years-dot { width: max-content; height: max-content; position: absolute; bottom: 0; margin-bottom: 0; }
+.the-dot { display: block; width: 10px; height: 10px; background-color: orange; border-radius: 50%; transform: translate(0%, 50%); }
+
+
 
 
 /* CONTACT US PAGE */
