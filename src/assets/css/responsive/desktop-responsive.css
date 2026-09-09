@@ -340,6 +340,11 @@
 	.cnct-upload-button { padding: 18px 28px; }
 	.cnct-prefer-to-talk { height: 410px; }
 	.contact-form-right span input { width: 330px; }
+
+	.cnct-what-happens-text { width: 380px; }
+	.cnct-what-happens.active { width: 600px; }
+	.cnct-what-happens span { font-size: 144px; line-height: 144px; }
+	.cnct-what-happens { width: 175px; }
 }
 
 @media (max-width: 1599px) {
@@ -722,6 +727,14 @@
 	.contact-form-right span { margin-bottom: 18px; }
 	.cnct-project-detail input { margin-top: 18px; }
 	.cnct-form-checkbox-option label span, .cnct-upload-button span, .cnct-right-link span { margin-bottom: 0 !important; }
+
+	.contact-what-happens-title { width: 440px; }
+	.cnct-what-happens span { font-size: 138px; line-height: 138px; }
+	.cnct-what-happens-text { width: 340px; }
+	.cnct-what-happens.active { width: 555px; }
+	.cnct-what-happens { width: 165px; }
+
+	.cnct-what-happens-pointer-wrapper { margin-top: 40px; }
 }
 
 @media (max-width: 1439px) {
@@ -1077,6 +1090,11 @@
 	.cnct-prefer-right { width: 170px; }
 	.cnct-form-checkbox { gap: 15px; }
 	.contact-prefer-title span { font-size: 24px; line-height: 24px; }
+
+	.cnct-what-happens span { font-size: 130px; line-height: 130px; }
+	.cnct-what-happens.active { width: 460px; }
+	.cnct-what-happens-text { width: 270px; }
+	.cnct-what-happens { width: 157px; }
 }
 
 @media (max-width: 1359px) {
@@ -1177,6 +1195,7 @@
 	.faq-accordion-title{ padding: 0; }
 	.accordion-number{ width: 40px; height: 40px; border-radius: 15px; }
 	.hm-faq-title{ width: 550px; }
+	.faq-content { padding-left: 10px; padding-top: 15px; }
 
 	.hm-blog-author-icon-wrapper{ flex-direction: column; gap: 15px; align-items: flex-start; }
 	.hm-blog-social, .hm-blog-social-icons{ font-size: 18px; }
@@ -1418,6 +1437,24 @@
 
 	.contact-hero-title { font-size: 64px; line-height: 78px; width: 520px; }
 	.contact-hero-wrapper { padding-bottom: 30px; }
+
+	.contact-form-right { width: 505px; }
+	.contact-form-left { width: 400px; }
+	.contact-prefer-title h4 { width: 255px; }
+	.cnct-prefer-to-talk { height: 375px; }
+	.cnct-prefer-left p { width: 185px; }
+	.cnct-form-checkbox-option label, .cnct-upload-button { padding: 12px 28px; }
+	.contact-prefer-title span { font-size: 22px; line-height: 22px; }
+	.cnct-form-checkbox { gap: 15px 20px; }
+	.cnct-form-left-text { margin-top: 16px; margin-bottom: 20px; }
+
+	.cnct-what-happens span { font-size: 110px; line-height: 95px; }
+	.cnct-what-happens-text { width: 235px; }
+	.cnct-what-happens.active { width: 395px; }
+	.cnct-what-happens { width: 132px; }
+
+	.cnct-what-happens-text h3 { margin-bottom: 12px; }
+
 }
 
 @media (max-width: 1199px) {
@@ -1954,6 +1991,26 @@
 	.contact-hero-title { font-size: 56px; line-height: 68px; width: 455px; }
 	.contact-hero-image { width: 310px; height: 280px; }
 	.cnct-hero-bg-image { top: 55px; }
+
+	.contact-form-wrapper { flex-direction: column; gap: 40px; }
+	.contact-form-left { width: 100%; }
+	.cnct-prefer-left p { width: 425px; }
+	.contact-form-right { width: 100%; }
+	.contact-form-right span input { width: max-content; }
+	.cnct-prefer-right { width: 240px; height: 240px; }
+	.cnct-prefer-right img { width: 100%; height: 100%; object-fit: contain; }
+	.cnct-form-checkbox-option label, .cnct-upload-button { padding: 20px 30px; }
+	.contact-form-right span { margin-bottom: 24px; }
+	.cnct-project-detail input { margin-top: 24px; }
+
+	.cnct-what-happens-pointer-wrapper { flex-direction: column; height: max-content; gap: 50px; margin-top: 60px; }
+	.cnct-what-happens.active { width: 100%; border-top: 0; border-left: 1px solid #E8DB7D; padding-top: 0; padding-left: 20px; }
+	.cnct-what-happens span { font-size: 150px; line-height: 150px; }
+	.cnct-what-happens-text { width: 70%; }
+
+	.contact-what-happens-title { width: 575px; }
+	.cnct-what-happens { width: 100%; opacity: 100%; border-top: 0; border-left: 1px solid #E8DB7D; padding-top: 0; padding-left: 20px; }
+	.cnct-what-happens-2 .cnct-what-happens-text, .cnct-what-happens-3 .cnct-what-happens-text, .cnct-what-happens-4 .cnct-what-happens-text { display: block; }
 } 
 
 @media (max-width: 1023px) {
@@ -2146,6 +2203,14 @@
 	.contact-hero-image { width: 270px; height: 245px; }
 	.cnct-hero-bg-image { top: 50px; }
 	.contact-hero-wrapper { padding-top: 95px; }
+
+	.cnct-prefer-right { width: 210px; height: 210px; }
+	.cnct-prefer-to-talk { height: 315px; }
+	.contact-form-right span input { width: 330px; }
+	.cnct-form-checkbox-option label, .cnct-upload-button { padding: 16px 30px; }
+
+	.cnct-what-happens span { font-size: 132px; line-height: 132px; }
+	.cnct-what-happens-pointer-wrapper { margin-top: 40px; gap: 40px; }
 }
 
 @media (max-width: 991px) {
@@ -2243,6 +2308,7 @@
 
 	.town h2 { font-size: 141px; }
 	.global-map-wrapper svg { max-width: 100%; height: max-content; }
+
 }
 
 @media (max-width: 839px) {
@@ -2507,6 +2573,15 @@
 	.contact-hero-image { width: 245px; height: 220px; }
 	.cnct-hero-bg-image { top: 65px; }
 	.contact-hero-wrapper { padding-bottom: 0; }
+
+	.contact-form-right span { margin-bottom: 20px; }
+	.cnct-form-checkbox { margin: 20px 0; }
+	.cnct-project-detail input { margin-top: 20px; }
+	.cnct-form-checkbox-option label, .cnct-upload-button { padding: 12px 26px; }
+	.cnct-form-checkbox { gap: 15px; }
+	.cnct-prefer-right { width: 170px; height: 170px; }
+
+	.cnct-what-happens span { font-size: 120px; line-height: 120px; }
 }
 
 @media (max-width: 767px) {
@@ -2657,6 +2732,20 @@
 	.contact-hero-image { width: 230px; height: 205px; }
 	.contact-hero-wrapper { padding-top: 75px; }
 	.cnct-hero-bg-image { top: 70px; }
+
+	.cnct-prefer-left p { width: 305px; }
+	.contact-form-right span input { width: 272px; }
+	.cnct-upload-button img{ width: 28px; height: 28px; }
+	.cnct-form-checkbox-option label, .cnct-upload-button { padding: 10px 24px; }
+
+	.contact-form-wrapper, .contact-hero-section { overflow: hidden; }
+
+	.cnct-what-happens-text { width: 65%; }
+	.cnct-what-happens span { font-size: 116px; line-height: 116px; }
+	.contact-what-happens-title { width: 100%; }
+	
+	.cnct-form-checkbox-option input { width: max-content !important; }
+	.cnct-what-happens-pointer-wrapper { gap: 35px; margin-top: 30px; }
 }
 
 @media (max-width: 639px) {
@@ -3006,4 +3095,13 @@
 
 	.cnct-hero-bg-image { scale: 2.3; rotate: -20deg; top: 200px; }
 	.contact-hero-section { overflow: hidden; }
+
+	.cnct-prefer-left p { width: 220px; }
+	.contact-form-right span input { margin-top: 10px; }
+
+	.cnct-prefer-to-talk { height: 320px; }
+	.contact-prefer-title h4 { width: 230px; }
+
+	.cnct-what-happens span { font-size: 80px; line-height: 80px; }
+	.cnct-what-happens-text { width: 70%; }
 }

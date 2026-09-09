@@ -1261,7 +1261,7 @@ body.menu-open {
 
 .contact-form-right { display: flex; flex-direction: column; }
 .contact-form-right span { margin-bottom: 24px; }
-.contact-form-right span input { margin-left: 5px; border-bottom: 2px solid #8C8B8C; color: #8C8B8C; padding: 0 20px; width: max-content; outline: none; }
+.contact-form-right span input { margin-left: 5px; border-bottom: 1px solid #8C8B8C; color: #8C8B8C; padding: 0 20px; width: max-content; outline: none; }
 
 .cnct-form-checkbox { display: flex; flex-wrap: wrap; gap: 20px; margin: 24px 0; }
 .cnct-form-checkbox-option { margin-bottom: 0 !important; }
@@ -1281,3 +1281,17 @@ body.menu-open {
 .cnct-upload-button span { margin-bottom: 0; }
 .cnct-project-detail input { border-bottom: 1px solid #8C8B8C; outline: none; margin-top: 24px; margin-bottom: 0; }
 .cnct-right-link span { margin-bottom: 0; cursor: pointer; }
+
+.cnct-prefer-to-talk.tablet { display: none; }
+.contact-form-section { overflow: hidden !important; }
+
+.contact-what-happens-title { width: 478px; }
+.cnct-what-happens { display: flex; align-items: flex-start; justify-content: space-between; padding-top: 20px; border-top: 1px solid #E8DB7D; width: 180px; overflow: hidden; opacity: 50%; }
+
+.cnct-what-happens.active { width: 630px; display: flex; align-items: flex-start; justify-content: space-between; padding-top: 20px; border-top: 1px solid #E8DB7D; opacity: 100%; }
+.cnct-what-happens span { font-size: 150px; line-height: 150px; color: #424242; }
+.cnct-what-happens-text { width: 410px; }
+
+.cnct-what-happens-pointer-wrapper { display: flex; align-items: flex-start; justify-content: space-between; margin-top: 60px; height: 228px; }
+
+.cnct-what-happens-2 .cnct-what-happens-text, .cnct-what-happens-3 .cnct-what-happens-text, .cnct-what-happens-4 .cnct-what-happens-text { display: none; }

@@ -605,6 +605,33 @@
     .contact-hero-title { font-size: 36px; line-height: 46px; }
     .cnct-hero-bg-image { top: 170px; }
     .cnct-hero-bg-image-for-mobile { display: block; position: absolute; bottom: 28px; width: 100%; scale: 1.7; rotate: -15deg; z-index: -2; }
+
+    .cnct-project-detail { display: flex; flex-direction: column; }
+    .cnct-prefer-to-talk { height: max-content; }
+    .cnct-project-detail input { margin-top: 20px; }
+    .contact-form-right span { margin-bottom: 20px; }
+    .cnct-project-detail span { margin-bottom: 0; }
+
+    .cnct-prefer-to-talk.desktop { display: none; }
+    .cnct-prefer-to-talk.tablet { display: flex; }
+    .cnct-prefer-right { position: static; }
+    .cnct-prefer-left p { width: 100%; }
+    .contact-prefer-title h4 { width: 100%; }
+    .cnct-form-link { margin-top: 0; }
+
+    .cnct-prefer-right { margin: 20px auto; }
+    .contact-prefer-title h4 { width: 82%; }
+
+    .contact-hero-section { overflow: hidden; }
+    .cnct-form-checkbox { overflow: hidden; }
+    .contact-form-right span input { width: max-content; }
+
+    .contact-form-left .text-18, .contact-what-happens-title .text-18, .cnct-what-happens-text .text-18 { font-size: 16px; line-height: 22px; }
+
+    .contact-form-faq .container-sm { padding: 0; }
+    .contact-form-faq .text-18 { font-size: 16px; line-height: 24px; }
+
+    .contact-form-faq .faq-accordion .text-18 { font-size: 14px; line-height: 22px; }
 }
 
 @media (max-width: 439px) {
@@ -633,7 +660,7 @@
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
     h1, .h1 { font-size: 30px; line-height: 38px; }
     h2, .h2 { font-size: 28px; line-height: 36px; }
-    h3, .h3 { font-size: 26px; line-height: 34px; }
+    h3, .h3 { font-size: 24px; line-height: 34px; }
     h4, .h4 { font-size: 26px; line-height: 34px; }
     body { font-size: 24px; }
 
@@ -730,6 +757,19 @@
     .cnct-hero-bg-image { top: 150px; }
 
     .cnct-hero-bg-image-for-mobile { rotate: -7deg; }
+    .cnct-form-checkbox-option label, .cnct-upload-button { padding: 8px 24px; }
+
+    .cnct-prefer-to-talk { padding: 15px; }
+
+    .cnct-form-checkbox-option label, .cnct-upload-button { padding: 6px 20px; }
+
+    .cnct-what-happens { flex-direction: column; gap: 20px; }
+    .cnct-what-happens-text { width: 100%; }
+    .cnct-what-happens span { font-size: 72px; line-height: 72px; }
+    .cnct-what-happens-text h3 { margin-bottom: 10px; }
+
+    .cnct-upload-button img { width: 20px; height: 20px; }
+    .cnct-upload-button { gap: 14px; }
 }   
 
 @media (max-width: 400px) {
@@ -756,10 +796,10 @@
     .section   { padding: 40px 0px; }
     h1, .h1 { font-size: 28px; line-height: 34px; }
     h2, .h2 { font-size: 26px; line-height: 32px; }
-    h3, .h3 { font-size: 24px; line-height: 32px; }
+    h3, .h3 { font-size: 22px; line-height: 32px; }
     h4, .h4 { font-size: 22px; line-height: 30px; }
     h5, .h5 { font-size: 20px; line-height: 26px; }
-    h6, .h6 { font-size: 18px; line-height: 26px; }
+    /* h6, .h6 { font-size: 18px; line-height: 26px; } */
 
     .text-18 { font-size: 16px; line-height: 22px; }
 
@@ -909,6 +949,21 @@
     .cnct-hero-bg-image-for-mobile { rotate: -16deg; bottom: 40px; }
 
     .contact-hero-wrapper { padding-top: 75px; }
+
+    .cnct-prefer-right { width: 150px; height: 150px; }
+    .cnct-upload-button { margin: 30px 0; }
+    .cnct-upload-button img { width: 20px; }
+    .cnct-upload-button { gap: 10px; }  
+    .contact-form-right span input { padding: 0 10px; }
+
+    .cnct-form-checkbox-option label, .cnct-upload-button { padding: 5px 18px; }
+    .cnct-form-checkbox { gap: 10px 8px; }
+    .cnct-form-checkbox { margin: 25px 0; }
+
+    .cnct-what-happens span { font-size: 66px; line-height: 66px; }
+
+    .cnct-what-happens-pointer-wrapper { gap: 30px; }
+    .contact-form-faq .text-18 { font-size: 16px; line-height: 22px; }
 }
 
 @media (max-width: 374px) {
@@ -996,6 +1051,11 @@
     /* CONTACT PAGE */
 
     .contact-hero-title { line-height: 40px; }
+    .contact-form-left .text-18, .contact-what-happens-title .text-18, .cnct-what-happens-text .text-18 { font-size: 14px; line-height: 20px; }
+
+    .contact-form-faq .text-18 { font-size: 14px; line-height: 20px; }
+    .faq-accordion .h6, .faq-accordion h3 { font-size: 14px; line-height: 20px; }
+    .contact-form-faq .faq-accordion .text-18 { font-size: 12px; line-height: 20px; }
 }
 
 @media (max-width: 359px) {
