@@ -204,7 +204,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="/Contact">
+                                    <Link href="/Contact" className={pathname === "/Contact" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-support_agent"></span>
                                         </div>
@@ -304,7 +304,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="/Contact">
+                                    <Link href="/Contact" className={pathname === "/Contact" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-support_agent"></span>
                                         </div>
@@ -665,7 +665,7 @@ export default function Header() {
                                 </li>
 
                                 <li className="menu-link">
-                                    <Link href="/Contact">
+                                    <Link href="/Contact" className={pathname === "/Contact" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
                                             <span className="icon-support_agent"></span>
                                         </div>
