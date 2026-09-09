@@ -6,9 +6,67 @@ import PixelImageReveal from "@/components/global/PixelImageReveal";
 import Image from "next/image";
 import "@/assets/css/mobile-custom.css";
 import "@/assets/css/responsive/mobile-responsive.css";
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSectionMobile() {
 
+        // useLayoutEffect(() => {
+    
+        //     gsap.fromTo(".hm-abt-card-mobile",
+        //     {
+        //         opacity: 0,
+        //         scale: 0.5,
+        //         xPercent: 50,
+        //     }, {
+        //         opacity: 1,
+        //         xPercent: 0,
+        //         scale: 1,
+        //         duration: 0.8,
+        //         delay: 0.2,
+        //         scrollTrigger: {
+        //             trigger: ".hm-abt-card-mobile",
+        //             start: "top 80%",
+        //         }
+        //     } );
+            
+        // }, []);
+    
+        useLayoutEffect(() => {
+        // Create a GSAP Context for proper cleanup in React/Next.js
+        const ctx = gsap.context(() => {
+            // Target each card individually
+            const cards = gsap.utils.toArray<HTMLElement>(".hm-abt-card-mobile");
+
+            cards.forEach((card) => {
+                gsap.fromTo(
+                    card,
+                    {
+                        opacity: 0,
+                        scale: 0.5,
+                        yPercent: -50,
+                    },
+                    {
+                        opacity: 1,
+                        yPercent: 0,
+                        scale: 1,
+                        duration: 0.8,
+                        delay: 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 70%",
+                            toggleActions: "play none none none",
+                        },
+                    }
+                );
+            });
+        });
+
+        return () => ctx.revert(); // Clean up triggers on component unmount
+    }, []);
     return (
         <>
             <section className="section" style={{ background: "#040E36", color: "white" }}>
@@ -17,7 +75,7 @@ export default function AboutSectionMobile() {
                         <div className="abt-mobile-bg">
                             <h2 className="text-sb hm-abt-title ">Making Businesses Easier To Notice, Trust, And Remember.</h2>
 
-                            <p className="text-16 text-rg ">
+                            <p className="text-16 text-rg">
                                 <span>At RarePixels, we bring together strategy, creativity, and technology to create brands and digital experiences that leave a lasting impact. Everything we build is designed with purpose, shaped by insight, and aligned with business growth. Nothing generic. Nothing without intent.</span>
                                 <span>Because being noticed gets you seen. Being remembered gets you chosen.</span>
                             </p>
@@ -54,7 +112,7 @@ export default function AboutSectionMobile() {
                                         </div>
                                     </div>
                                     
-                                    <div className="hm-abt-card-mobile  site-radius-10">
+                                    <div className="hm-abt-card-mobile site-radius-10">
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">
@@ -67,7 +125,7 @@ export default function AboutSectionMobile() {
                                         </div>
                                     </div>
                                     
-                                    <div className="hm-abt-card-mobile  site-radius-10">
+                                    <div className="hm-abt-card-mobile site-radius-10">
                                         <span className="hm-abt-pixel"></span>
 
                                         <div className="hm-abt-card-text">

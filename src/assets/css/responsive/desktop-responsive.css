@@ -691,6 +691,8 @@
 	.abt-timeline-title-right { width: 490px; }
 	.abt-card-text { width: 290px; height: 280px; }
 	/* .abt-rpd-card-2 { transform: translateY(-230px); } */
+
+	.speed-chart { width: 96%; }
 }
 
 @media (max-width: 1439px) {
@@ -1363,6 +1365,8 @@
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 220px; }
 	.abt-time-line-desktop-sticky { height: 600vh; }
 	.abt-rpd-section-desktop { height: 1000vh; }
+
+	.speed-chart { width: 100%; }
 }
 
 @media (max-width: 1199px) {
@@ -2174,6 +2178,7 @@
 	.rare-logo { width: 57px; }
 
 	.town h2 { font-size: 141px; }
+	.global-map-wrapper svg { max-width: 100%; height: max-content; }
 }
 
 @media (max-width: 839px) {
@@ -2912,4 +2917,6 @@
 
 	.town h2 { font-size: 18vw; line-height: 94px; }
 	.about-video-text-practice { height: 150px; }
+
+	.speed-chart-tab { height: 150px; }
 }

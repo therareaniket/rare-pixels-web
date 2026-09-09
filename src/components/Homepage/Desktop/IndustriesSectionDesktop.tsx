@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const industries = [
     {
-        theme: "light-yellow",
+        theme: "white",
         video: `${CDN_URL}/images/homepage/industries/technology-and-saas.mp4`,
         title: "Technology & SaaS",
         desc1: "The best software makes sense at a glance and feels natural from the start.",
@@ -23,7 +23,7 @@ const industries = [
         desc3: "Complex products deserve experiences that feel simple.",
     },
     {
-        theme: "light-yellow",
+        theme: "white",
         video: `${CDN_URL}/images/homepage/industries/finance.mp4`,
         title: "Finance & FinTech",
         desc1: "Financial decisions begin with credibility, long before transactions happen.",
@@ -31,7 +31,7 @@ const industries = [
         desc3: "Trust isn't optional when every click involves confidence.",
     },
     {
-        theme: "light-yellow",
+        theme: "white",
         video: `${CDN_URL}/images/homepage/industries/healthcare.mp4`,
         title: "Healthcare & MedTech",
         desc1: "Healthcare experiences should reduce uncertainty, not create it.",
@@ -39,7 +39,7 @@ const industries = [
         desc3: "When people need clarity most, every interaction matters.",
     },
     {
-        theme: "light-yellow",
+        theme: "white",
         video: `${CDN_URL}/images/homepage/industries/e-commerce.mp4`,
         title: "E-commerce & Retail",
         desc1: "Every unnecessary click is a missed opportunity.",
@@ -47,7 +47,7 @@ const industries = [
         desc3: "The shortest path from browsing to buying wins.",
     },
     {
-        theme: "light-yellow",
+        theme: "white",
         video: `${CDN_URL}/images/homepage/industries/real-estate.mp4`,
         title: "Real Estate & PropTech",
         desc1: "People invest in confidence before they invest in property.",
@@ -55,7 +55,7 @@ const industries = [
         desc3: "Properties attract attention. Experiences create decisions.",
     },
     {
-        theme: "light-yellow",
+        theme: "white",
         video: `${CDN_URL}/images/homepage/industries/education-industry.mp4`,
         title: "Education & EdTech",
         desc1: "Great learning platforms feel effortless for every learner.",
@@ -63,7 +63,7 @@ const industries = [
         desc3: "Learning works best when technology stays out of the way.",
     },
     {
-        theme: "light-yellow",
+        theme: "white",
         video: `${CDN_URL}/images/homepage/industries/ai-industry.mp4`,
         title: "AI & Emerging Tech",
         desc1: "Innovation succeeds when people know how to use it.",
@@ -71,7 +71,7 @@ const industries = [
         desc3: "The future moves fast. Great experiences help people keep up.",
     },
     {
-        theme: "light-yellow",
+        theme: "white",
         video: `${CDN_URL}/images/homepage/industries/food-industry.mp4`,
         title: "Food & Lifestyle",
         desc1: "People remember experiences before they remember products.",

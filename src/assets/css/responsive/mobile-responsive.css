@@ -1,12 +1,11 @@
 /*
  * RPD
  * Date: 2026-06-09
- * Generated: 2026-06-09T09:54:31.727Z
+ * Generated: 2026-06-09 T09:54:31.727Z
  * Responsive Design System — RarePixels
  */
 
 .site-radius-10 { border-radius: 10px; }
-/* .bg-yellowish { background-color: #FBF9E9; } */
 
 @media (max-width: 479px) {
     :root { 
@@ -28,9 +27,8 @@
         --card-1-height: 250px;
    
     }
-
     
-    .project-video { height: 240px; }
+    .project-video { height: 500px; }
 	.project-list { border-radius: 20px; }
     .project-list.active { box-shadow: none; }
     .process-section-inner { padding: 0; }
@@ -608,8 +606,6 @@
     .project-list { border-radius: 14px; }
     :root { --project-card-width: 330px; --project-card-gap: 20px; }
     .projects-lists { margin-top: 30px; }
-
-
 }
 
 @media (max-width: 439px) {

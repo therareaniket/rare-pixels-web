@@ -407,8 +407,43 @@ body.menu-open {
 .custom-pie-container { width: 220px; height: 220px; aspect-ratio: 1 / 1; margin: 0 auto; }
 .custom-radar-container { width: 250px; height: 250PX; aspect-ratio: 1 / 1; margin: 0 auto; }
 .stats-card-4 .stats-element-art-board { position: relative; }
-.needle-speed { position: absolute; bottom: 20px; left: 48%;  }
 
+
+/* @keyframes speed-rotate {
+    0% { transform: rotate(-180deg); }
+    100% { transform: rotate(0deg); }
+}
+.speed-graph { position: relative; }
+.needle-speed { position: absolute; bottom: 20px; left: 48%; animation: speed-rotate 10s linear infinite;  } */
+
+.stats-element-art-board {
+  position: relative;
+}
+
+.speed-graph { 
+  position: relative; 
+}
+
+.needle-speed { 
+  position: absolute; 
+  bottom: 20px; 
+  left: 48%; 
+  /* Forces the needle to pivot from its bottom base circle rather than its center */
+  transform-origin: bottom center; 
+  animation: speedometer-sweep 4s ease-in-out infinite; 
+}
+
+@keyframes speedometer-sweep {
+  0% {
+    transform: rotate(-90deg); /* Starts at the far left of the gauge */
+  }
+  50% {
+    transform: rotate(90deg);  /* Accelerates smoothly to the far right */
+  }
+  100% {
+    transform: rotate(-90deg); /* Sweeps back to the start */
+  }
+}
 
 /* FAQ Section */
 
@@ -1194,3 +1229,6 @@ body.menu-open {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px); 
 }
+
+
+.stats-global-element svg { max-width: 100%; height: fit-content; }

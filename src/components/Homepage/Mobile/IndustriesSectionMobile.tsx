@@ -414,7 +414,7 @@ export default function IndustriesSectionMobile() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="industries-section-sticky section industries-section" style={{ minHeight: "100vh" }}>
+        <section ref={sectionRef} className="industries-section-sticky section industries-section" style={{ minHeight: "100vh", backgroundColor: "#f7f2ec" }}>
             <div className="industirs-section-inner" style={{ height: "100%" }}>
                 <div className="container" style={{ height: "100%" }}>
                     <div className="industries-text-title">

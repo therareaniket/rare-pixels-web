@@ -6,10 +6,24 @@ import "@/assets/css/responsive/mobile-responsive.css";
 import PieYellow from "@/components/global/stats-graph/PieYellow";
 import RadarChart from "@/components/global/stats-graph/RadarChart";
 import PieGray from "@/components/global/stats-graph/PieGray";
+import { useEffect, useRef } from "react";
+import GlobalMap from "@/components/global/stats-graph/GlobalMap";
+import { animateMap } from "@/lib/animateMap";
+import SpeedChart from "@/components/global/stats-graph/SpeedChart";
 
 const CDN_URL = process.env.NEXT_PUBLIC_CLOUDFLARE_ASSETS_CDN;
 
 export default function StatsSectionMobile() {
+
+    const mobileMapRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        animateMap(
+            mobileMapRef.current,
+            ".stats-mob-card-6"
+        );
+        }, []);
+    
     return (
         <>
             <section className="section" style={{ backgroundColor: "#040E36", color: "white" }}>
@@ -56,7 +70,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case text-light-grey">Client Trust Retained</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src={`${CDN_URL}/images/homepage/stats/client-trust-retained.svg`} alt="specialized-solution-crafted" width={236} height={150}></Image>
+                                <SpeedChart />
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -69,7 +83,7 @@ export default function StatsSectionMobile() {
                             <p className="text-16 text-upper-case text-light-grey">Global Markets Served</p>
 
                             <div className="stats-mob-art-board">
-                                <Image src={`${CDN_URL}/images/homepage/stats/global-market-served.svg`} alt="specialized-solution-crafted" width={396} height={150}></Image>
+                                <GlobalMap ref={mobileMapRef} />
                             </div>
 
                             <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
