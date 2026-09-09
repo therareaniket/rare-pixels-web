@@ -43,7 +43,7 @@ export default function PieGray() {
   const [isInView, setIsInView] = useState(false)
 
   // Configure your delay duration in seconds
-  const ANIMATION_DELAY = 3
+  const ANIMATION_DELAY = 5
 
   useEffect(() => {
     const element = containerRef.current

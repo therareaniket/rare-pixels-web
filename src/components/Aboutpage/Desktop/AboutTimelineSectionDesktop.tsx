@@ -13,22 +13,19 @@ const timelineData = [
         year: "2024",
         title: "The Launch of RarePixels",
         image: "/images/aboutpage/about-timeline/timeline-2024.svg",
-        description:
-            "From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.",
+        description: "From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.",
     },
     {
         year: "2025",
         title: "Purposeful Growth",
         image: "/images/aboutpage/about-timeline/timeline-2025.svg",
-        description:
-            "Every project brought new challenges, fresh perspectives, and valuable opportunities to grow. As RarePixels expanded its reach, we continued refining our approach and strengthening our expertise across multiple disciplines. The trust placed in us by growing brands allowed us to take on more ambitious projects, and create experiences that combined creativity, strategy, and technology.",
+        description: "Every project brought new challenges, fresh perspectives, and valuable opportunities to grow. As RarePixels expanded its reach, we continued refining our approach and strengthening our expertise across multiple disciplines. The trust placed in us by growing brands allowed us to take on more ambitious projects, and create experiences that combined creativity, strategy, and technology.",
     },
     {
         year: "2026",
         title: "Shaping What's Next",
         image: "/images/aboutpage/about-timeline/timeline-2026.svg",
-        description:
-            "Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.",
+        description: "Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.",
     },
 ];
 
@@ -53,12 +50,8 @@ export default function AboutTimelineSectionDesktop() {
     const desktopStageRef = useRef(-1);
 
     const updateTabletYear = (index: number) => {
-        tabletYearsRef.current.forEach((year) => {
-            year?.classList.remove("active");
-        });
-
+        tabletYearsRef.current.forEach((year) => { year?.classList.remove("active"); });
         tabletYearsRef.current[index]?.classList.add("active");
-
         setActiveIndex(index);
     };
 
@@ -78,15 +71,7 @@ export default function AboutTimelineSectionDesktop() {
             const line2 = line2Ref.current;
             const line3 = line3Ref.current;
 
-            if (
-                !firstDot ||
-                !secondDot ||
-                !thirdDot ||
-                !targetDot ||
-                !line1 ||
-                !line2 ||
-                !line3
-            ) {
+            if ( !firstDot || !secondDot || !thirdDot || !targetDot || !line1 || !line2 || !line3 ) {
                 return;
             }
 
@@ -107,16 +92,8 @@ export default function AboutTimelineSectionDesktop() {
             const firstLineFadeStart = secondMoveStart - 0.06;
             const secondLineFadeStart = thirdMoveStart - 0.06;
 
-            const getStageProgress = (
-                scrollProgress: number,
-                start: number,
-                end: number
-            ) => {
-                return gsap.utils.clamp(
-                    0,
-                    1,
-                    (scrollProgress - start) / (end - start)
-                );
+            const getStageProgress = ( scrollProgress: number, start: number, end: number ) => {
+                return gsap.utils.clamp( 0, 1, (scrollProgress - start) / (end - start) );
             };
 
             const calculateDimensions = () => {
@@ -124,31 +101,21 @@ export default function AboutTimelineSectionDesktop() {
                 const secondX = Number(gsap.getProperty(secondDot, "x")) || 0;
                 const thirdX = Number(gsap.getProperty(thirdDot, "x")) || 0;
 
-                gsap.set([firstDot, secondDot, thirdDot], {
-                    x: 0,
-                });
+                gsap.set([firstDot, secondDot, thirdDot], { x: 0, });
 
                 const startRect = firstDot.getBoundingClientRect();
                 const targetRect = targetDot.getBoundingClientRect();
-                const wrapperRect =
-                    firstDot.parentElement?.getBoundingClientRect();
+                const wrapperRect = firstDot.parentElement?.getBoundingClientRect();
 
                 travelDistance = targetRect.left - startRect.left;
 
                 if (wrapperRect) {
-                    targetLineWidth = Math.max(
-                        0,
-                        targetRect.left - wrapperRect.left
-                    );
+                    targetLineWidth = Math.max( 0, targetRect.left - wrapperRect.left );
                 }
 
-                gsap.set(firstDot, {
-                    x: firstX,
-                });
+                gsap.set(firstDot, { x: firstX, });
 
-                gsap.set(secondDot, {
-                    x: secondX,
-                });
+                gsap.set(secondDot, { x: secondX,});
 
                 gsap.set(thirdDot, {
                     x: thirdX,
@@ -308,11 +275,7 @@ export default function AboutTimelineSectionDesktop() {
                                 gsap.utils.clamp(
                                     0,
                                     1,
-                                    (progress - firstLineFadeStart) /
-                                    (
-                                        secondMoveStart -
-                                        firstLineFadeStart
-                                    )
+                                    (progress - firstLineFadeStart) / ( secondMoveStart - firstLineFadeStart )
                                 );
 
                             line1Opacity = 1 - line1FadeProgress;
@@ -419,24 +382,10 @@ export default function AboutTimelineSectionDesktop() {
 
                 desktopStageRef.current = -1;
 
-                gsap.killTweensOf([
-                    firstDot,
-                    secondDot,
-                    thirdDot,
-                    line1,
-                    line2,
-                    line3,
-                ]);
+                gsap.killTweensOf([ firstDot, secondDot, thirdDot, line1, line2, line3,]);
 
                 gsap.set(
-                    [
-                        firstDot,
-                        secondDot,
-                        thirdDot,
-                        line1,
-                        line2,
-                        line3,
-                    ],
+                    [ firstDot, secondDot, thirdDot, line1, line2, line3, ],
                     {
                         clearProps: "transform,width,opacity",
                     }
@@ -456,53 +405,21 @@ export default function AboutTimelineSectionDesktop() {
 
                     if (progress < 0.33) {
                         updateTabletYear(0);
-
-                        gsap.to(tabletLineRef.current, {
-                            width: "6%",
-                            duration: 1,
-                            overwrite: true,
-                        });
-
-                        gsap.to(movingDotRef.current, {
-                            left: "6%",
-                            duration: 1,
-                            overwrite: true,
-                        });
+                        gsap.to(tabletLineRef.current, { width: "6%", duration: 1, overwrite: true,});
+                        gsap.to(movingDotRef.current, { left: "6%", duration: 1, overwrite: true, });
 
                     } else if (progress < 0.66) {
                         updateTabletYear(1);
-
-                        gsap.to(tabletLineRef.current, {
-                            width: "50%",
-                            duration: 1,
-                            overwrite: true,
-                        });
-
-                        gsap.to(movingDotRef.current, {
-                            left: "50%",
-                            duration: 1,
-                            overwrite: true,
-                        });
+                        gsap.to(tabletLineRef.current, { width: "50%", duration: 1, overwrite: true, });
+                        gsap.to(movingDotRef.current, { left: "50%", duration: 1, overwrite: true,});
 
                     } else {
                         updateTabletYear(2);
-
-                        gsap.to(tabletLineRef.current, {
-                            width: "94%",
-                            duration: 1,
-                            overwrite: true,
-                        });
-
-                        gsap.to(movingDotRef.current, {
-                            left: "94%",
-                            duration: 1,
-                            overwrite: true,
-                        });
+                        gsap.to(tabletLineRef.current, { width: "94%", duration: 1, overwrite: true, });
+                        gsap.to(movingDotRef.current, { left: "94%", duration: 1, overwrite: true,});
                     }
                 }
-
             });
-
             return () => trigger.kill();
         });
 
@@ -517,12 +434,12 @@ export default function AboutTimelineSectionDesktop() {
                 contentRef.current,
                 {
                     opacity: 0,
-                    scale: 0,
+                    scale: 0.5,
                 },
                 {
                     opacity: 1,
                     scale: 1,
-                    duration: 2,
+                    duration: 1,
                 }
             );
 

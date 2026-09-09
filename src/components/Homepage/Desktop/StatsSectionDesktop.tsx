@@ -428,7 +428,7 @@ export default function StatsSectionDesktop() {
   		ScrollTrigger.create({ trigger: triggerElement, start: "top 80%", once: true,
 
 		onEnter: () => {
-			gsap.delayedCall(3, () => {
+			gsap.delayedCall(4, () => {
 				const tl = gsap.timeline();
 
 				countries.forEach((country) => {
