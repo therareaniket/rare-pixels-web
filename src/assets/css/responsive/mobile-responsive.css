@@ -927,7 +927,7 @@
     /* .timeline-mobile-inner { top: -150px; } */
 
     .rpd-mobile-card .h5 { margin-top: 12; margin-bottom: 10px; }
-    .rpd-mobile-section { height: 800vh; }
+    .rpd-mobile-section { height: 1400vh; }
 
     /* .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { height: 205px; } */
 
@@ -1035,7 +1035,7 @@
 
     .town { top: 45px; }
 
-    .rpd-mobile-section { position: relative; width: 100%; height: 700vh; }
+    .rpd-mobile-section { position: relative; width: 100%; height: 1400vh; }
 
     /* CONTACT PAGE */
 
