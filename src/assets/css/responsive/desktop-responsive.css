@@ -333,6 +333,13 @@
 	.contact-hero-title { font-size: 92px; line-height: 102px; width: 748px; }
 	.contact-hero-image { width: 500px; height: 450px; }
 	.contact-hero-image img { width: 100%; height: 100%; object-fit: contain; }
+
+	.contact-form-right { width: 715px; }
+	.contact-form-left { width: 540px; }
+	.cnct-form-checkbox-option label { padding: 18px 28px; }
+	.cnct-upload-button { padding: 18px 28px; }
+	.cnct-prefer-to-talk { height: 410px; }
+	.contact-form-right span input { width: 330px; }
 }
 
 @media (max-width: 1599px) {

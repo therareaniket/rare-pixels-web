@@ -31,7 +31,7 @@ export default function ContactFormSection() {
 
                                     <p className="text-18 text-rg">Book a free 30-minute discovery call directly in our calendar and we will come prepared with questions, ideas, and an honest assessment of how we can help. </p>
 
-                                    <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary cnct-form-link website-btn">
+                                    <Link href="#" title="Book A Call" className="link-padding site-radius-30 btn-bg-primary cnct-form-link website-btn">
                                         <span className="text-20 text-md text-white">Book A Call </span>
                                         <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                     </Link>
@@ -85,10 +85,10 @@ export default function ContactFormSection() {
                                 </label>
                             </div>
 
-                            <Link href="#" title="make it rare" className="link-padding site-radius-30 btn-bg-primary cnct-right-link website-btn">
+                            <button className="link-padding site-radius-30 btn-bg-primary cnct-right-link website-btn">
                                 <span className="text-20 text-md text-white">Submit </span>
                                 <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

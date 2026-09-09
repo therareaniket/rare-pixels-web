@@ -1280,4 +1280,4 @@ body.menu-open {
 
 .cnct-upload-button span { margin-bottom: 0; }
 .cnct-project-detail input { border-bottom: 1px solid #8C8B8C; outline: none; margin-top: 24px; margin-bottom: 0; }
-.cnct-right-link span { margin-bottom: 0; }
+.cnct-right-link span { margin-bottom: 0; cursor: pointer; }
