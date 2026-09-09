@@ -326,7 +326,13 @@
 	/* .town { top: 45px; } */
 	.abt-card-text { width: 300px; height: 280px; }
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 280px; }
- 
+	
+
+	/* CONTACT PAGE */
+	.contact-hero-wrapper { padding-top: 110px; }
+	.contact-hero-title { font-size: 92px; line-height: 102px; width: 748px; }
+	.contact-hero-image { width: 500px; height: 450px; }
+	.contact-hero-image img { width: 100%; height: 100%; object-fit: contain; }
 }
 
 @media (max-width: 1599px) {
@@ -693,6 +699,12 @@
 	/* .abt-rpd-card-2 { transform: translateY(-230px); } */
 
 	.speed-chart { width: 96%; }
+
+	/* CONTACT PAGE */
+
+	.contact-hero-title { font-size: 86px; line-height: 96px; width: 699px; }
+	.contact-hero-image { width: 450px; height: 400px; }
+	.cnct-hero-bg-image { top: 70px; }
 }
 
 @media (max-width: 1439px) {
@@ -1031,6 +1043,14 @@
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 210px; }
 
 	.abt-timeline-content-wrapper { align-items: flex-end; }
+
+
+	/* CONTACT PAGE */
+
+	.contact-hero-wrapper { padding-top: 85px; }
+	.contact-hero-title { font-size: 72px; line-height: 86px; width: 585px; }
+	.contact-hero-image { width: 390px; height: 350px; }
+	.cnct-hero-bg-image { top: 40px; }
 }
 
 @media (max-width: 1359px) {
@@ -1367,6 +1387,11 @@
 	.abt-rpd-section-desktop { height: 1000vh; }
 
 	.speed-chart { width: 100%; }
+
+	/* CONTACT PAGE */
+
+	.contact-hero-title { font-size: 64px; line-height: 78px; width: 520px; }
+	.contact-hero-wrapper { padding-bottom: 30px; }
 }
 
 @media (max-width: 1199px) {
@@ -1897,6 +1922,12 @@
 
 	.abt-time-line-desktop-sticky { height: 400vh; }
 	.life-at-rpd-inner { top: 50px; }
+
+	/* CONTACT PAGE */
+
+	.contact-hero-title { font-size: 56px; line-height: 68px; width: 455px; }
+	.contact-hero-image { width: 310px; height: 280px; }
+	.cnct-hero-bg-image { top: 55px; }
 } 
 
 @media (max-width: 1023px) {
@@ -2082,6 +2113,13 @@
 	.abt-rpd-section-desktop { height: 700vh; }
 
 	.abt-card-text h2 { margin-top: 20px; }
+
+	/* CONTACT PAGE */
+
+	.contact-hero-title { font-size: 48px; line-height: 60px; width: 390px; }
+	.contact-hero-image { width: 270px; height: 245px; }
+	.cnct-hero-bg-image { top: 50px; }
+	.contact-hero-wrapper { padding-top: 95px; }
 }
 
 @media (max-width: 991px) {
@@ -2436,6 +2474,13 @@
 
 	.abt-rpd-card-2 .abt-card-text { margin-top: 0; }
 	.abt-time-line-desktop-sticky { height: 300vh; }
+
+	/* CONTACT PAGE */
+
+	.contact-hero-title { font-size: 44px; line-height: 58px; width: 358px; }
+	.contact-hero-image { width: 245px; height: 220px; }
+	.cnct-hero-bg-image { top: 65px; }
+	.contact-hero-wrapper { padding-bottom: 0; }
 }
 
 @media (max-width: 767px) {
@@ -2579,6 +2624,13 @@
 	.about-video-text-practice { height: 182px; }
 
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text, .abt-rpd-card-2 .abt-card-text { margin-top: 0; }
+
+	/* CONTACT PAGE */
+
+	.contact-hero-title { font-size: 38px; line-height: 50px; }
+	.contact-hero-image { width: 230px; height: 205px; }
+	.contact-hero-wrapper { padding-top: 75px; }
+	.cnct-hero-bg-image { top: 70px; }
 }
 
 @media (max-width: 639px) {
@@ -2919,4 +2971,13 @@
 	.about-video-text-practice { height: 150px; }
 
 	.speed-chart-tab { height: 150px; }
+
+	/* CONTACT PAGE */
+
+	.contact-hero-wrapper { flex-direction: column; align-items: center; }
+	.contact-hero-title { width: 100%; font-size: 40px; line-height: 52px; text-align: center;  }
+	.contact-hero-image { width: 320px; height: 270px; }
+
+	.cnct-hero-bg-image { scale: 2.3; rotate: -20deg; top: 200px; }
+	.contact-hero-section { overflow: hidden; }
 }

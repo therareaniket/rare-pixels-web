@@ -1232,3 +1232,27 @@ body.menu-open {
 
 
 .stats-global-element svg { max-width: 100%; height: fit-content; }
+
+
+/* CONTACT US PAGE */
+
+.contact-hero-title { font-size: 98px; line-height: 108px; width: 838px; }
+.contact-hero-section { position: relative; }
+.contact-hero-wrapper {display: flex; justify-content: space-between; padding-top: 152px; padding-bottom: 40px; }
+.cnct-hero-bg-image { position: absolute; top: 92px; left: 0; z-index: -1; }
+.cnct-hero-bg-image-for-mobile { opacity: 10%; display: none; }
+
+.contact-form-left { width: 562px; }
+
+.cnct-prefer-to-talk { position: relative; background-color: #FBF9E9; width: 100%; height: 422px; padding: 30px; border-radius: 20px; display: flex; margin-top: 54px; }
+.contact-prefer-title h4{  width: 300px; }
+
+.contact-prefer-title span { font-size: 30px; line-height: 30px; }
+.cnct-prefer-left p { width: 268px; }
+
+.cnct-form-left-text { margin-top: 20px; margin-bottom: 24px; }
+
+.cnct-prefer-right { position: absolute; right: 30px; bottom: 30px; }
+.cnct-form-link { margin-top: 46px; }
+
+.contact-form-right { width: 893px; }

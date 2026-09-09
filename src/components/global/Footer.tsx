@@ -162,7 +162,7 @@ export default function Footer() {
                                         <li className="text-18 text-rg text-light-grey"><Link href="#" title="process">Process</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"><Link href="#" title="life at rpd">Life at RPD</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"><Link href="#" title="articles">Articles</Link> </li>
-                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="contact">Contact</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="/Contact" title="contact">Contact</Link> </li>
                                     </ul>
                                 </div>
 

@@ -600,6 +600,11 @@
 
     .why-rare-mobile-tree .tree-reveal img { display: block; width: 100%; height: auto; }
 
+    /* CONTACT PAGE */
+
+    .contact-hero-title { font-size: 36px; line-height: 46px; }
+    .cnct-hero-bg-image { top: 170px; }
+    .cnct-hero-bg-image-for-mobile { display: block; position: absolute; bottom: 28px; width: 100%; scale: 1.7; rotate: -15deg; z-index: -2; }
 }
 
 @media (max-width: 439px) {
@@ -718,8 +723,14 @@
     .rpd-mobile-card span { font-size: 34px; line-height: 34px; }
     .rare-logo-mob { width: 30px; }
 
-    
-}
+    /* CONTACT PAGE */
+
+    .contact-hero-title { font-size: 32px; line-height: 44px; }
+    .contact-hero-wrapper { padding-top: 70px; }
+    .cnct-hero-bg-image { top: 150px; }
+
+    .cnct-hero-bg-image-for-mobile { rotate: -7deg; }
+}   
 
 @media (max-width: 400px) {
     .active-project-title { left: 0; }
@@ -890,6 +901,14 @@
     .rpd-mobile-section { height: 800vh; }
 
     /* .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { height: 205px; } */
+
+    /* CONTACT PAGE */
+
+    .contact-hero-image { width: 100%; height: max-content; }
+    .contact-hero-title { margin-bottom: 25px; }
+    .cnct-hero-bg-image-for-mobile { rotate: -16deg; bottom: 40px; }
+
+    .contact-hero-wrapper { padding-top: 75px; }
 }
 
 @media (max-width: 374px) {
@@ -973,6 +992,10 @@
     .town { top: 45px; }
 
     .rpd-mobile-section { position: relative; width: 100%; height: 700vh; }
+
+    /* CONTACT PAGE */
+
+    .contact-hero-title { line-height: 40px; }
 }
 
 @media (max-width: 359px) {
