@@ -26,38 +26,38 @@ export default function ServicesSectionMobile() {
             }
         });
 
-        gsap.fromTo('.services-development', { y: 1200, scale: 1.2, rotate: -30 },  { 
+        gsap.fromTo('.services-development', { y: 1000, scale: 1.2, rotate: -30 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
-                start: 'top 50%',
-                end: 'top -30%',
+                start: 'top 55%',
+                end: 'top -35%',
                 scrub: true
             }
         });
 
-        gsap.fromTo('.services-brand-identity', { y: 2400, scale: 1.2, rotate: 30 },  { 
+        gsap.fromTo('.services-brand-identity', { y: 2000, scale: 1.2, rotate: 30 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
-                start: 'top 30%',
-                end: 'top -50%',
+                start: 'top 35%',
+                end: 'top -55%',
                 scrub: true
             }
         });
 
-        gsap.fromTo('.services-social-media', { y: 3600, scale: 1.2, rotate: -40 },  { 
+        gsap.fromTo('.services-social-media', { y: 3000, scale: 1.2, rotate: -40 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
-                start: 'top 10%',
-                end: 'top -70%',
+                start: 'top 15%',
+                end: 'top -75%',
                 scrub: true
             }
         });
