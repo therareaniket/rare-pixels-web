@@ -88,7 +88,7 @@ export default function ContactHeroSection() {
             <section id="first-section" className="contact-hero-section">
                 <div className="container">
                     <div className="contact-hero-wrapper">
-                        <h1 className="contact-hero-title text-sb">Start Your Design & Development Project</h1>
+                        <h1 className="contact-hero-title text-sb">Tell Us What You Need. We Know How To Build It.</h1>
 
                         <div className="contact-hero-image">
                             <Image src="/images/contactpage/contacthero/contact-hero-image.svg" alt="contact-hero" width={560} height={485}></Image>
@@ -105,15 +105,7 @@ export default function ContactHeroSection() {
                             </g>
                         </svg> */}
 
-                        <svg
-                            ref={waveSvgRef}
-                            className="cnct-hero-bg-image"
-                            viewBox="0 0 1920 585"
-                            preserveAspectRatio="xMidYMid meet"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true"
-                        >
+                        <svg ref={waveSvgRef} className="cnct-hero-bg-image" viewBox="0 0 1920 585" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" >
                             <defs>
                                 <filter
                                     id="contact-wave-flow-filter"
