@@ -462,10 +462,12 @@ body.menu-open {
 
 
 .inquiry-form-text-wrapper{ width: 775px; }
-.inquiry-form-contact-fields{ margin-top: 60px; }
-.inquiry-form-contact-fields input{ outline: none; border-bottom: 1px solid var(--inquiry-form-border); width: max-content; margin: 10px; padding: 0 10px; text-align: center; }
+.inquiry-form-contact-fields{ margin-top: 40px; }
+.inquiry-form-contact-fields input{ outline: none; border-bottom: 1px solid var(--inquiry-form-border); width: max-content; margin: 10px; padding: 0 10px; }
+.inquiry-form-contact-fields textarea{ outline: none; border-bottom: 1px solid var(--inquiry-form-border); height: 90px; width: 55%; margin-top: 10px; padding: 0 10px; text-align: left; }
+.inquiry-form-contact-fields textarea{ margin-bottom: 0; }
 .inquiry-form-contact-fields h3{ margin-bottom: 0; }
-.inquiry-form-project-field{ margin-top: 40px; padding-top: 40px; border-top: 2px solid var(--inquiry-form-border); }
+.inquiry-form-project-field{ margin-top: 60px; }
 .inquiry-form-desktop-select-project{ padding: 6px 20px; border-radius: 50px; display: flex; align-items: center; gap: 20px; width: max-content; cursor: pointer; }
 
 
@@ -1245,7 +1247,7 @@ body.menu-open {
 
 .contact-form-left { width: 562px; }
 
-.cnct-prefer-to-talk { position: relative; background-color: #FBF9E9; width: 100%; height: 422px; padding: 30px; border-radius: 20px; display: flex; margin-top: 54px; }
+.cnct-prefer-to-talk { position: relative; background-color: #FBF9E9; width: 100%; height: 460px; padding: 30px; border-radius: 20px; display: flex; margin-top: 54px; }
 .contact-prefer-title h4{  width: 300px; }
 
 .contact-prefer-title span { font-size: 30px; line-height: 30px; font-family: 'sunrise-rg'; }
@@ -1262,12 +1264,13 @@ body.menu-open {
 
 .contact-form-right { display: flex; flex-direction: column; }
 .contact-form-right span { margin-bottom: 24px; }
-.contact-form-right span input { margin-left: 5px; border-bottom: 1px solid #8C8B8C; color: #8C8B8C; padding: 0 20px; width: max-content; outline: none; }
+.contact-form-right span input { margin-left: 5px; border-bottom: 1px solid #8C8B8C; color: #8C8B8C; padding: 0 10px; width: max-content; outline: none; }
 
 .cnct-form-checkbox { display: flex; flex-wrap: wrap; gap: 20px; margin: 24px 0; }
 .cnct-form-checkbox-option { margin-bottom: 0 !important; }
 .cnct-form-checkbox-option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
-.cnct-form-checkbox-option label { display: inline-flex; align-items: center; padding: 20px 30px; border: 1px solid #B8B8B8; border-radius: 50px; cursor: pointer; transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease; }
+/* .cnct-form-checkbox-option label { display: inline-flex; align-items: center; padding: 20px 30px; border: 1px solid #B8B8B8; border-radius: 50px; cursor: pointer; transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease; margin-bottom: 0; } */
+.cnct-form-checkbox-option label { display: inline-flex; align-items: center; padding: 12px 20px; border: 1px solid #B8B8B8; border-radius: 50px; cursor: pointer; transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease; margin-bottom: 0; }
 .cnct-form-checkbox-option label:hover { border-color: #222; }
 .cnct-form-checkbox-option input:focus-visible + label { outline: 2px solid #ED0180; outline-offset: 3px; }
 .cnct-form-checkbox-option input:checked + label { background-color: #222; border-color: #222; color: #fff; }
@@ -1280,19 +1283,184 @@ body.menu-open {
 .cnct-upload-input:focus-visible + .cnct-upload-button { outline: 2px solid #ED0180; outline-offset: 3px; }
 
 .cnct-upload-button span { margin-bottom: 0; }
-.cnct-project-detail input { border-bottom: 1px solid #8C8B8C; outline: none; margin-top: 24px; margin-bottom: 0; }
+.cnct-project-detail textarea { border-bottom: 1px solid #8C8B8C; color: #8c8b8c; outline: none; margin-top: 24px; margin-bottom: 0; padding: 0 10px; }
 .cnct-right-link span { margin-bottom: 0; cursor: pointer; }
 
 .cnct-prefer-to-talk.tablet { display: none; }
 .contact-form-section { overflow: hidden !important; }
 
-.contact-what-happens-title { width: 478px; }
+/* .contact-what-happens-title { width: 478px; }
 .cnct-what-happens { display: flex; align-items: flex-start; justify-content: space-between; padding-top: 20px; border-top: 1px solid #E8DB7D; width: 180px; overflow: hidden; opacity: 50%; }
 
 .cnct-what-happens.active { width: 630px; display: flex; align-items: flex-start; justify-content: space-between; padding-top: 20px; border-top: 1px solid #E8DB7D; opacity: 100%; }
 .cnct-what-happens span { font-size: 150px; line-height: 150px; color: #424242; }
-.cnct-what-happens-text { width: 410px; }
+.cnct-what-happens-text { width: 410px; } */
+
+/* .cnct-what-happens-pointer-wrapper { display: flex; align-items: flex-start; justify-content: space-between; margin-top: 60px; height: 228px; } */
+
+/* .cnct-what-happens-2 .cnct-what-happens-text, .cnct-what-happens-3 .cnct-what-happens-text, .cnct-what-happens-4 .cnct-what-happens-text { display: none; } */
+
+.contact-field-for-mobile { display: none; }
+
+.inquiry-form-check-option label { padding: 12px 26px; }
+
+.cnct-form-select-interest { margin-bottom: 20px; }
+.cnct-project-detail textarea { width: 80%; height: 95px; }
+
+.inquiry-text-area-field { margin-top: 15px; }
+.cnct-form-checkbox-option label { padding: 12px 20px; }
+
+.contact-what-happens-title { width: 478px; }
 
 .cnct-what-happens-pointer-wrapper { display: flex; align-items: flex-start; justify-content: space-between; margin-top: 60px; height: 228px; }
 
-.cnct-what-happens-2 .cnct-what-happens-text, .cnct-what-happens-3 .cnct-what-happens-text, .cnct-what-happens-4 .cnct-what-happens-text { display: none; }
+.cnct-what-happens {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 180px;
+    padding-top: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    cursor: pointer;
+    border-top: 1px solid #e8db7d;
+
+    transition:
+        width 1s ease,
+        opacity 0.8s ease;
+}
+
+.cnct-what-happens::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e8db7d;
+}
+
+.cnct-what-happens.active { width: 630px; opacity: 1; border-top: 0; }
+.cnct-what-happens.active::before { animation: contactLineProgress 10s linear forwards; }
+
+.cnct-what-happens span {
+    flex-shrink: 0;
+    font-size: 150px;
+    line-height: 150px;
+    color: #424242;
+
+    transition:
+        color 0.8s ease,
+        opacity 0.8s ease;
+}
+
+.cnct-what-happens.active span { color: #424242; }
+
+.cnct-what-happens-text {
+    width: 410px;
+    flex-shrink: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(25px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease 0s,
+        transform 0.4s ease 0s,
+        visibility 0s linear 0.8s;
+}
+
+.cnct-what-happens.active .cnct-what-happens-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+
+    transition:
+        opacity 0.5s ease 0.45s,
+        transform 0.5s ease 0.45s,
+        visibility 0s linear 0.45s;
+}
+
+@keyframes contactLineProgress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+.contact-hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero-wrapper {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 152px;
+    padding-bottom: 40px;
+}
+
+.contact-hero-title {
+    position: relative;
+    z-index: 2;
+    width: 838px;
+    font-size: 98px;
+    line-height: 108px;
+}
+
+.contact-hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cnct-hero-bg-image {
+    position: absolute;
+    top: 92px;
+    left: -2%;
+    z-index: 0;
+    display: block;
+    width: 104%;
+    height: 585px;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.animated-wave-group {
+    will-change: transform;
+}
+
+.contact-wave-path {
+    transform-box: fill-box;
+    transform-origin: center;
+    will-change: transform;
+}
+
+.cnct-hero-bg-image-for-mobile {
+    display: none;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-wave-path {
+        transform: none !important;
+    }
+
+    .cnct-hero-bg-image animate {
+        display: none;
+    }
+}

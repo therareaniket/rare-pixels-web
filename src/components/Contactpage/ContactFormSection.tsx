@@ -63,13 +63,9 @@ export default function ContactFormSection() {
                         </div>
 
                         <div className="contact-form-right">
-                            <span className="h3 text-rg">Hello! My name is <input type="text" placeholder="your full name" /></span>
-                            <span className="h3 text-rg">and I want to discuss a potential project.</span>
-                            <span className="h3 text-rg">You can email me at <input type="email" name="" id="" placeholder=" your@email.com" /></span>
-                            <span className="h3 text-rg">or reach me on  <input type="text" name="" id="" placeholder="your phone" /> </span>
 
-                            <div className="cnct-form-select-interest">
-                                <h5 className="text-rg h3">I’m interested in (select one or more)</h5>
+                                                        <div className="cnct-form-select-interest">
+                                <h5 className="text-rg h3">Hello! I’m interested in (select one or more)</h5>
 
                                 <div className="cnct-form-checkbox" role="group" aria-label="Project type">
                                     {['Website', 'Mobile App', 'Desktop App', 'UX/UI Design', 'Visual Design'].map((option) => {
@@ -78,16 +74,23 @@ export default function ContactFormSection() {
                                         return (
                                             <span className="cnct-form-checkbox-option" key={option}>
                                                 <input type="checkbox" id={optionId} name="projectType" value={option} />
-                                                <label htmlFor={optionId} className="text-rg h5">{option}</label>
+                                                <label htmlFor={optionId} className="text-rg text-18">{option}</label>
                                             </span>
                                         );
                                     })}
                                 </div>
                             </div>
 
+                            <span className="h3 text-rg">My name is <input type="text" placeholder="your full name*" className="text-rg h6" /></span>
+                            <span className="h3 text-rg contact-field-for-desktop">and I want to discuss a potential project.</span>
+                            <span className="h3 text-rg contact-field-for-desktop"> You can email me at <input type="email" name="" id="" placeholder=" your@email.com*" className="text-rg h6" /></span>
+                            <span className="h3 text-rg contact-field-for-mobile">and I want to discuss a potential project. You can email me at <input type="email" name="" id="" placeholder=" your@email.com*" className="text-rg h6" /></span>
+                            <span className="h3 text-rg">or reach me on  <input type="text" name="" id="" placeholder="your phone*" className="text-rg h6" /> </span>
+
                             <div className="cnct-project-detail">
                                 <span className="h3 text-rg">Here are some details about my project</span>
-                                <input className="h3 text-rg" type="text" name="" id="" placeholder="My project is about...." />
+                                {/* <input className="h3 text-rg" type="text" name="" id="" placeholder="My project is about...." /> */}
+                                <textarea className="h6 text-rg" name="" id="" placeholder="my project is about...."></textarea>
                             </div>
 
                             <div className="cnct-upload-file">
