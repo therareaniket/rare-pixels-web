@@ -48,10 +48,7 @@ export default function ContactWhatHappensSection() {
       const responsive = mediaQuery.matches;
 
       setIsResponsive(responsive);
-
-      if (!responsive) {
-        setIsSectionVisible(false);
-      }
+      setIsSectionVisible(false);
     };
 
     handleBreakpointChange();
@@ -75,7 +72,7 @@ export default function ContactWhatHappensSection() {
     return () => {
       window.clearInterval(interval);
     };
-  }, [activeStep, isResponsive]);
+  }, [isResponsive]);
 
   useEffect(() => {
     if (!isResponsive) return;
@@ -84,14 +81,74 @@ export default function ContactWhatHappensSection() {
 
     if (!pointerWrapper) return;
 
+    let isEffectActive = true;
+
+    const contactItems = Array.from(
+      pointerWrapper.querySelectorAll<HTMLElement>(".cnct-what-happens"),
+    );
+
     setIsSectionVisible(false);
 
+    contactItems.forEach((item) => {
+      item.getAnimations().forEach((animation) => {
+        animation.cancel();
+      });
+
+      item.style.height = "120px";
+      item.style.overflow = "hidden";
+    });
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
+      async ([entry]) => {
+        if (!entry.isIntersecting || !isEffectActive) return;
+
+        observer.unobserve(pointerWrapper);
+
+        if (document.fonts?.ready) {
+          await document.fonts.ready;
+        }
+
+        if (!isEffectActive) return;
 
         setIsSectionVisible(true);
-        observer.unobserve(entry.target);
+
+        contactItems.forEach((item, index) => {
+          item.getAnimations().forEach((animation) => {
+            animation.cancel();
+          });
+
+          item.style.height = "max-content";
+          item.style.overflow = "hidden";
+
+          const expandedHeight = item.scrollHeight;
+
+          item.style.height = "120px";
+          item.style.overflow = "hidden";
+
+          const animation = item.animate(
+            [
+              {
+                height: "120px",
+              },
+              {
+                height: `${expandedHeight}px`,
+              },
+            ],
+            {
+              duration: 1200,
+              delay: 200 + index * 450,
+              easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+              fill: "none",
+            },
+          );
+
+          animation.onfinish = () => {
+            if (!isEffectActive) return;
+
+            item.style.height = "max-content";
+            item.style.overflow = "visible";
+          };
+        });
       },
       {
         threshold: 0,
@@ -102,7 +159,18 @@ export default function ContactWhatHappensSection() {
     observer.observe(pointerWrapper);
 
     return () => {
+      isEffectActive = false;
+
       observer.disconnect();
+
+      contactItems.forEach((item) => {
+        item.getAnimations().forEach((animation) => {
+          animation.cancel();
+        });
+
+        item.style.removeProperty("height");
+        item.style.removeProperty("overflow");
+      });
     };
   }, [isResponsive]);
 
@@ -132,27 +200,29 @@ export default function ContactWhatHappensSection() {
             isSectionVisible ? "items-visible" : ""
           }`}
         >
-          {contactSteps.map((step, index) => (
-            <div
-              key={step.number}
-              onClick={() => handleStepClick(index)}
-              className={`cnct-what-happens cnct-what-happens-${
-                index + 1
-              } ${
-                !isResponsive && activeStep === index ? "active" : ""
-              }`}
-            >
-              <span className="text-sb">{step.number}</span>
+          {contactSteps.map((step, index) => {
+            const isActive = !isResponsive && activeStep === index;
 
-              <div className="cnct-what-happens-text">
-                <h3 className="text-sb text-white">{step.title}</h3>
+            return (
+              <div
+                key={step.number}
+                onClick={() => handleStepClick(index)}
+                className={`cnct-what-happens cnct-what-happens-${
+                  index + 1
+                } ${isActive ? "active" : ""}`}
+              >
+                <span className="text-sb">{step.number}</span>
 
-                <p className="text-18 text-rg text-white">
-                  {step.description}
-                </p>
+                <div className="cnct-what-happens-text">
+                  <h3 className="text-sb text-white">{step.title}</h3>
+
+                  <p className="text-18 text-rg text-white">
+                    {step.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

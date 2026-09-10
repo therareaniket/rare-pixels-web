@@ -1464,3 +1464,13 @@ body.menu-open {
         display: none;
     }
 }
+
+.animated-wave-group {
+    will-change: transform;
+}
+
+.contact-wave-path {
+    transform-box: fill-box;
+    transform-origin: center;
+    will-change: transform;
+}
