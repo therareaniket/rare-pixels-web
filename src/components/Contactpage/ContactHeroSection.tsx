@@ -88,7 +88,7 @@ export default function ContactHeroSection() {
             <section id="first-section" className="contact-hero-section">
                 <div className="container">
                     <div className="contact-hero-wrapper">
-                        <h1 className="contact-hero-title text-sb">Tell Us What You Need. We Know How To Build It.</h1>
+                        <h1 className="contact-hero-title text-sb">Tell Us What You Need. We Know How To Build.</h1>
 
                         <div className="contact-hero-image">
                             <Image src="/images/contactpage/contacthero/contact-hero-image.svg" alt="contact-hero" width={560} height={485}></Image>
