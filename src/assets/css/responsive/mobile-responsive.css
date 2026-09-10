@@ -409,6 +409,7 @@
     .faq-toggle { font-size: 14px; line-height: 22px; }
 
     /* about page */
+    .about-section .container-sm { padding: 0; }
     .about-hero-section-mobile .container { display: flex; flex-direction: column-reverse; }
     .about-mobile-title-wrapper p { display: flex; flex-direction: column; gap: 16px; }
     .about-hero-mask-title { position: relative; height: 138px; overflow: hidden; text-align: center; width: 100%; margin-top: 0; }
@@ -587,6 +588,10 @@
     .why-rare-mobile-tree .tree-reveal.tree-visible { clip-path: inset(0% 0 0 0); -webkit-clip-path: inset(0% 0 0 0); }
     .why-rare-mobile-tree .tree-reveal img { display: block; width: 100%; height: auto; }
     .pink-letter span { color: #ED0180 !important; }
+    .about-hero-txt { font-size: 80px; line-height: 80px; }
+
+
+
 
     /* CONTACT PAGE */
 
@@ -747,6 +752,7 @@
 
     .rpd-mobile-card span { font-size: 34px; line-height: 34px; }
     .rare-logo-mob { width: 30px; }
+    .about-hero-txt { font-size: 76px; line-height: 76px; padding-top: 20px; }
 
     /* CONTACT PAGE */
 
@@ -781,9 +787,9 @@
         --card-2-start-width: 21px;
         --card-3-start-width: 24px;
 
-        --card-1-width: 80px;
-        --card-2-width: 98px;
-        --card-3-width: 118px;
+        --card-1-width: 95px;
+        --card-2-width: 115px;
+        --card-3-width: 135px;
 
         --card-1-height: 205px
     }
@@ -937,9 +943,11 @@
     /* .timeline-mobile-inner { top: -150px; } */
 
     .rpd-mobile-card .h5 { margin-top: 12; margin-bottom: 10px; }
-    .rpd-mobile-section { height: 1400vh; }
+    .rpd-mobile-section { height: 900vh; }
 
-    /* .rpd-mobile-card-1, .rpd-mobile-card-2, .rpd-mobile-card-3 { height: 205px; } */
+    .about-hero-txt { font-size: 70px; line-height: 70px; padding-top: 10px; }
+
+    
 
     /* CONTACT PAGE */
 
@@ -1047,7 +1055,7 @@
 
     .town { top: 45px; }
 
-    .rpd-mobile-section { position: relative; width: 100%; height: 1400vh; }
+    .rpd-mobile-section { position: relative; width: 100%; height: 700vh; }
 
     /* CONTACT PAGE */
 
@@ -1073,5 +1081,7 @@
 
     .timeline-content-wrapper { margin-top: 20px; }
     .timeline-mobile-content h3 { margin-top: 20px; }
+
+    .about-hero-txt { font-size: 64px; line-height: 64px; padding-top: 0px; }
 
 }

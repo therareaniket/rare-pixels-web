@@ -12,61 +12,66 @@ if (typeof window !== "undefined") {
 }
 
 export default function AboutHeroSectionDesktop() {
-    const containerRef = useRef(null);
 
-    useGSAP(
-        () => {
-            const tl = gsap.timeline({
+    const targetHeight = window.innerWidth < 480? "15vh" : window.innerWidth < 1200 ? "15vh" : "15vh";
+
+    useGSAP(() => {
+        gsap.fromTo(".abt-hero-video",
+            { height: "100vh" },
+            { 
+                height: targetHeight, 
+                ease: "power3.out",
                 scrollTrigger: {
-                    trigger: containerRef.current,
+                    trigger: ".about-hero-section-desktop",
                     start: "top top",
-                    end: "bottom bottom",
-                    scrub: 1,
-                },
-            });
-
-            // tl.fromTo(
-            //     ".about-hero-section-title",
-            //     { y: 100, opacity: 0 },
-            //     { y: 0, opacity: 1, duration: 1, ease: "power1.out" },
-            //     0
-            // )
+                    end: "top -1600px",
+                    scrub: true,
+                }
+            }
+        );
 
 
-
-            tl.to(
-                ".abt-hero-video",
-                {
-                    height: "var(--abt-hero-target-height)",
-                    opacity: 0,
-                    duration: 2,
-                    ease: "none",
-                },
-                0
-            )
-                .fromTo(
-                    ".about-video-text-practice",
-                    {
-                        opacity: 0,
-                    },
-                    {
-                        opacity: 1,
-                        duration: 1.6, // 80% of video animation
-                        ease: "none",
-                    },
-                    0.4 // starts after 20% (0.4 / 2 = 20%)
-                );
-
-                tl.to({}, { duration: 1 });
+        gsap.fromTo(".abt-hero-video",
+            { opacity: 1 },
+            { 
+                opacity: 0, 
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".about-hero-section-desktop",
+                    start: "top -300px",
+                    end: "top -600px",
+                    scrub: true,
+                }
+            }
+        );
 
 
-        },
-        { scope: containerRef }
-    );
+        gsap.fromTo(".about-hero-txt",
+            { "--bg-opacity": 1 },
+            { 
+                "--bg-opacity": 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".about-hero-section-desktop",
+                    start: "top -300px",
+                    end: "top -600px",
+                    scrub: true,
+                }
+            }
+        );
+    });
 
     return (
-        <section ref={containerRef} id="first-section" className="about-hero-section-desktop">
+        <section id="first-section" className="about-hero-section-desktop">
             <div className="about-hero-inner">
+                <div className="abt-hero-video">
+                    <video src="/images/aboutpage/about-hero/rare-second-anniversary.mp4" autoPlay playsInline muted loop></video>
+                </div>
+
+                <div className="about-text-vid-clip">
+                    <span className="h2 text-extra-bold about-hero-txt">ABOUT US</span>
+                </div>
+
                 <div className="container">
                     <div className="about-section section">
                         <div className="container-sm">
@@ -85,21 +90,6 @@ export default function AboutHeroSectionDesktop() {
                                 </p>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="about-video-text-practice">
-                        <div className="town">
-                            <video autoPlay playsInline muted loop>
-                                <source src="/images/aboutpage/about-hero/rare-second-anniversary.mp4" />
-                            </video>
-                            <h2 className="text-extra-bold">ABOUT US</h2>
-                        </div>
-                    </div>
-
-                    <div className="abt-hero-video">
-                        <video autoPlay playsInline muted loop>
-                            <source src="/images/aboutpage/about-hero/rare-second-anniversary.mp4" />
-                        </video>
                     </div>
                 </div>
             </div>
