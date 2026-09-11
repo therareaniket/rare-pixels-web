@@ -26,12 +26,18 @@ export default function ContactFormSection() {
                             <div className="cnct-prefer-to-talk desktop">
                                 <div className="cnct-prefer-left">
                                     <div className="contact-prefer-title">
-                                        <h4 className="h2 text-sb">Prefer to Talk First? <span className="text-sun-rg">Skip the form. </span></h4>
+                                        <h4 className="h2 text-sb">
+                                            Prefer to Talk First?{" "}
+                                            <span className="text-sun-rg animated-middle-line">
+                                                Skip the form.
+                                            </span>
+                                        </h4>
+
                                     </div>
 
                                     <p className="text-18 text-rg">Book a free 30-minute discovery call directly in our calendar and we will come prepared with questions, ideas, and an honest assessment of how we can help.</p>
 
-                                    <Link href="#" title="Book A Call" className="link-padding site-radius-30 btn-bg-primary cnct-form-link website-btn">
+                                    <Link href="https://outlook.office.com/book/RarePixelsDesign@rarepixelsdesign.com/" target="_blank" rel="noopener noreferrer" title="Book A Call" className="link-padding site-radius-30 btn-bg-primary cnct-form-link website-btn">
                                         <span className="text-20 text-md text-white">Book A Call </span>
                                         <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                     </Link>
@@ -45,7 +51,12 @@ export default function ContactFormSection() {
                             <div className="cnct-prefer-to-talk tablet">
                                 <div className="cnct-prefer-left">
                                     <div className="contact-prefer-title">
-                                        <h4 className="h2 text-sb">Prefer to Talk First? <span className="text-sun-rg">Skip the form. </span></h4>
+                                        <h4 className="h2 text-sb">
+                                            Prefer to Talk First?{" "}
+                                            <span className="text-sun-rg animated-middle-line">
+                                                Skip the form.
+                                            </span>
+                                        </h4>
                                     </div>
 
                                     <p className="text-18 text-rg">Book a free 30-minute discovery call directly in our calendar and we will come prepared with questions, ideas, and an honest assessment of how we can help.</p>
@@ -54,7 +65,7 @@ export default function ContactFormSection() {
                                         <Image src="/images/contactpage/contactform/prefer-call.svg" alt="skip-the-form" width={208} height={219} ></Image>
                                     </div>
 
-                                    <Link href="#" title="Book A Call" className="link-padding site-radius-30 btn-bg-primary cnct-form-link website-btn">
+                                    <Link href="https://outlook.office.com/book/RarePixelsDesign@rarepixelsdesign.com/" target="_blank" rel="noopener noreferrer" title="Book A Call" className="link-padding site-radius-30 btn-bg-primary cnct-form-link website-btn">
                                         <span className="text-20 text-md text-white">Book A Call </span>
                                         <Image src="/images/global/homeHeroArrow.svg" alt="arrow-for-navigation" width={24} height={24}></Image>
                                     </Link>
@@ -64,7 +75,7 @@ export default function ContactFormSection() {
 
                         <div className="contact-form-right">
 
-                                                        <div className="cnct-form-select-interest">
+                            <div className="cnct-form-select-interest">
                                 <h5 className="text-rg h3">Hello! I’m interested in (select one or more)</h5>
 
                                 <div className="cnct-form-checkbox" role="group" aria-label="Project type">

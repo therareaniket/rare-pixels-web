@@ -1286,7 +1286,7 @@ body.menu-open {
 }
 
 .cnct-what-happens.active { width: 630px; opacity: 1; border-top: 0; }
-.cnct-what-happens.active::before { animation: contactLineProgress 10s linear forwards; }
+.cnct-what-happens.active::before { animation: contactLineProgress 5s linear forwards; }
 
 .cnct-what-happens span {
     flex-shrink: 0;
@@ -1338,38 +1338,11 @@ body.menu-open {
 }
 
 
-.contact-hero-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-hero-wrapper {
-    /* position: relative; */
-    display: flex;
-    justify-content: space-between;
-    padding-top: 152px;
-    padding-bottom: 40px;
-}
-
-.contact-hero-title {
-    position: relative;
-    z-index: 2;
-    width: 838px;
-    font-size: 98px;
-    line-height: 108px;
-}
-
-.contact-hero-image {
-    position: relative;
-    z-index: 2;
-}
-
-.contact-hero-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
+.contact-hero-section { position: relative; overflow: hidden; }
+.contact-hero-wrapper { display: flex; justify-content: space-between; padding-top: 152px; padding-bottom: 40px; }
+.contact-hero-title { position: relative; z-index: 2; width: 838px; font-size: 98px; line-height: 108px; }
+.contact-hero-image { position: relative; z-index: 2; }
+.contact-hero-image img { display: block; width: 100%; height: auto; }
 .cnct-hero-bg-image {
     position: absolute;
     top: 92px;
@@ -1381,39 +1354,101 @@ body.menu-open {
     overflow: visible;
     pointer-events: none;
 }
+.contact-wave-source { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.animated-wave-group {
-    will-change: transform;
-}
-
-.contact-wave-path {
-    transform-box: fill-box;
-    transform-origin: center;
-    will-change: transform;
-}
-
-.cnct-hero-bg-image-for-mobile {
-    display: none;
-    opacity: 0.1;
+.contact-wave-animated {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
     pointer-events: none;
 }
 
+.cnct-hero-bg-image-for-mobile { display: none; opacity: 0.1; pointer-events: none; }
+
 @media (prefers-reduced-motion: reduce) {
-    .contact-wave-path {
+    .contact-wave-animated {
         transform: none !important;
     }
+}
 
-    .cnct-hero-bg-image animate {
-        display: none;
+/* skip the form line */
+
+.animated-middle-line {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-middle-line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    pointer-events: none;
+
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left center;
+    opacity: 1;
+
+    animation: grow-middle-line 5s linear infinite;
+}
+
+@keyframes grow-middle-line {
+    0% {
+        transform: translateY(-50%) scaleX(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(-50%) scaleX(1);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateY(-50%) scaleX(1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-50%) scaleX(0);
+        opacity: 0;
     }
 }
 
-.animated-wave-group {
-    will-change: transform;
+.project-list {
+    position: relative;
+    cursor: none;
 }
 
-.contact-wave-path {
-    transform-box: fill-box;
-    transform-origin: center;
-    will-change: transform;
+.project-card-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    padding: 12px 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(237, 1, 128, 0.7);
+    border-radius: 30px;
+    color: white;
+    translate: -50% -50%;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    z-index: 999;
+    will-change: left, top, transform, opacity;
+}
+
+.project-card-hover span {
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+    margin-bottom: 0;
 }

@@ -35,6 +35,7 @@ const contactSteps = [
 ];
 
 export default function ContactWhatHappensSection() {
+  const sectionRef = useRef<HTMLElement | null>(null);
   const pointerWrapperRef = useRef<HTMLDivElement | null>(null);
 
   const [activeStep, setActiveStep] = useState(0);
@@ -49,6 +50,7 @@ export default function ContactWhatHappensSection() {
 
       setIsResponsive(responsive);
       setIsSectionVisible(false);
+      setActiveStep(0);
     };
 
     handleBreakpointChange();
@@ -63,16 +65,40 @@ export default function ContactWhatHappensSection() {
   useEffect(() => {
     if (isResponsive) return;
 
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSectionVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.35,
+      }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+      setIsSectionVisible(false);
+    };
+  }, [isResponsive]);
+
+  useEffect(() => {
+    if (isResponsive || !isSectionVisible) return;
+
     const interval = window.setInterval(() => {
       setActiveStep((previousStep) => {
         return (previousStep + 1) % contactSteps.length;
       });
-    }, 10000);
+    }, 4000);
 
     return () => {
       window.clearInterval(interval);
     };
-  }, [isResponsive]);
+  }, [isResponsive, isSectionVisible]);
 
   useEffect(() => {
     if (!isResponsive) return;
@@ -84,79 +110,78 @@ export default function ContactWhatHappensSection() {
     let isEffectActive = true;
 
     const contactItems = Array.from(
-      pointerWrapper.querySelectorAll<HTMLElement>(".cnct-what-happens"),
+      pointerWrapper.querySelectorAll<HTMLElement>(".cnct-what-happens")
     );
 
-    setIsSectionVisible(false);
-
     contactItems.forEach((item) => {
-      item.getAnimations().forEach((animation) => {
-        animation.cancel();
-      });
-
-      item.style.height = "120px";
       item.style.overflow = "hidden";
+      item.classList.remove("is-expanding", "is-expanded");
     });
 
     const observer = new IntersectionObserver(
-      async ([entry]) => {
-        if (!entry.isIntersecting || !isEffectActive) return;
+      async (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting || !isEffectActive) continue;
 
-        observer.unobserve(pointerWrapper);
+          const item = entry.target as HTMLElement;
 
-        if (document.fonts?.ready) {
-          await document.fonts.ready;
-        }
+          observer.unobserve(item);
 
-        if (!isEffectActive) return;
+          if (document.fonts?.ready) {
+            await document.fonts.ready;
+          }
 
-        setIsSectionVisible(true);
+          if (!isEffectActive) return;
 
-        contactItems.forEach((item, index) => {
-          item.getAnimations().forEach((animation) => {
-            animation.cancel();
-          });
+          const collapsedHeight = item.getBoundingClientRect().height;
 
           item.style.height = "max-content";
-          item.style.overflow = "hidden";
 
           const expandedHeight = item.scrollHeight;
 
-          item.style.height = "120px";
+          item.style.height = `${collapsedHeight}px`;
           item.style.overflow = "hidden";
+
+          item.getBoundingClientRect();
+
+          item.classList.add("is-expanding");
 
           const animation = item.animate(
             [
               {
-                height: "120px",
+                height: `${collapsedHeight}px`,
               },
               {
                 height: `${expandedHeight}px`,
               },
             ],
             {
-              duration: 1200,
-              delay: 200 + index * 450,
+              duration: 2200,
               easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-              fill: "none",
-            },
+              fill: "forwards",
+            }
           );
 
           animation.onfinish = () => {
             if (!isEffectActive) return;
 
+            item.classList.remove("is-expanding");
+            item.classList.add("is-expanded");
+
             item.style.height = "max-content";
             item.style.overflow = "visible";
           };
-        });
+        }
       },
       {
-        threshold: 0,
-        rootMargin: "0px 0px -20% 0px",
-      },
+        threshold: 1,
+        rootMargin: "0px 0px -10% 0px",
+      }
     );
 
-    observer.observe(pointerWrapper);
+    contactItems.forEach((item) => {
+      observer.observe(item);
+    });
 
     return () => {
       isEffectActive = false;
@@ -168,6 +193,7 @@ export default function ContactWhatHappensSection() {
           animation.cancel();
         });
 
+        item.classList.remove("is-expanding", "is-expanded");
         item.style.removeProperty("height");
         item.style.removeProperty("overflow");
       });
@@ -181,7 +207,10 @@ export default function ContactWhatHappensSection() {
   };
 
   return (
-    <section className="section bg-light-black contact-what-happens-section">
+    <section
+      ref={sectionRef}
+      className="section bg-light-black contact-what-happens-section"
+    >
       <div className="container">
         <div className="contact-what-happens-title">
           <h2 className="text-sb text-white">
@@ -196,9 +225,8 @@ export default function ContactWhatHappensSection() {
 
         <div
           ref={pointerWrapperRef}
-          className={`cnct-what-happens-pointer-wrapper ${
-            isSectionVisible ? "items-visible" : ""
-          }`}
+          className={`cnct-what-happens-pointer-wrapper ${isSectionVisible ? "items-visible" : ""
+            }`}
         >
           {contactSteps.map((step, index) => {
             const isActive = !isResponsive && activeStep === index;
@@ -207,9 +235,8 @@ export default function ContactWhatHappensSection() {
               <div
                 key={step.number}
                 onClick={() => handleStepClick(index)}
-                className={`cnct-what-happens cnct-what-happens-${
-                  index + 1
-                } ${isActive ? "active" : ""}`}
+                className={`cnct-what-happens cnct-what-happens-${index + 1
+                  } ${isActive ? "active" : ""}`}
               >
                 <span className="text-sb">{step.number}</span>
 

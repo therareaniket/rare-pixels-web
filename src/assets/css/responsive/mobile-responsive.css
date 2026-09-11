@@ -635,6 +635,29 @@
 
     .contact-form-right span input { margin-bottom: 0; }
     .cnct-project-detail textarea {  width: 90%; height: 60px; }
+
+	.contact-wave-animated { stroke-width: 0.2px; }
+
+
+    .cnct-hero-bg-image {
+        display: block;
+    }
+
+    .cnct-hero-bg-image-for-mobile {
+        position: absolute;
+        left: 0;
+        top: auto;
+        bottom: 28px;
+        z-index: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        pointer-events: none;
+        opacity: 1;
+        transform: scale(1.7) rotate(-15deg);
+        transform-origin: center;
+    }
 }
 
 @media (max-width: 439px) {
@@ -973,6 +996,8 @@
     .contact-form-faq .text-18 { font-size: 16px; line-height: 22px; }
 
     .contact-form-section { padding-top: 60px !important; }
+
+    .cnct-what-happens, .cnct-what-happens.active { height: 67px; }
 }
 
 @media (max-width: 374px) {
