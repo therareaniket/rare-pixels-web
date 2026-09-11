@@ -71,7 +71,7 @@ export default function AboutRpdSectionMobile() {
                             {/* Card 1 */}
                             <div className="rpd-mobile-card rpd-mobile-card-1">
                                 <div className="rare-mobile-text">
-                                    <span className="text-pop-sb text-white pink-letter"><span>R</span>are</span>
+                                    <span className="text-sb text-white pink-letter"><span>R</span>are</span>
                                 </div>
                                 <div className="rpd-mobile-card-text">
                                     <h2 className="h5 text-sb text-white">Results Before Recognition</h2>
@@ -81,7 +81,7 @@ export default function AboutRpdSectionMobile() {
 
                             {/* Card 2 */}
                             <div className="rpd-mobile-card rpd-mobile-card-2">
-                                <span className="text-pop-sb text-white pink-letter"><span>P</span>ixels</span>
+                                <span className="text-sb text-white pink-letter"><span>P</span>ixels</span>
                                 <div className="rpd-mobile-card-text">
                                     <h3 className="h5 text-sb text-white">Precision in Every Detail</h3>
                                     <p className="text-16 text-rg text-white">We are not chasing awards or industry validation. We are chasing outcomes. Every project is measured by what it achieves for the business not how it looks in a portfolio.</p>
@@ -90,7 +90,7 @@ export default function AboutRpdSectionMobile() {
 
                             {/* Card 3 */}
                             <div className="rpd-mobile-card rpd-mobile-card-3">
-                                <span className="text-pop-sb text-white pink-letter"><span>D</span>esign</span>
+                                <span className="text-sb text-white pink-letter"><span>D</span>esign</span>
                                 <div className="rpd-mobile-card-text">
                                     <h3 className="h5 text-sb text-white">Precision in Every Detail</h3>
                                     <p className="text-16 text-rg text-white">We are not chasing awards or industry validation. We are chasing outcomes. Every project is measured by what it achieves for the business not how it looks in a portfolio.</p>

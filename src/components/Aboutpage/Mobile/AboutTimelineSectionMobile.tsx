@@ -48,59 +48,24 @@ export default function AboutTimelineSectionMobile() {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        ScrollTrigger.create({
-            trigger: sectionRef.current,
-            start: "top top",
-            end: "+=2000",
-            scrub: 2,
-
+        ScrollTrigger.create({ trigger: sectionRef.current, start: "top top", end: "+=2000", scrub: 1,
             onUpdate: (self) => {
                 const progress = self.progress;
 
                 if (progress < 0.33) {
                     updateActiveYear(0);
-
-                    gsap.to(activeLineRef.current, {
-                        width: "6%",
-                        duration: 0.8,
-                        overwrite: true
-                    });
-
-                    gsap.to(movingDotRef.current, {
-                        left: "6%",
-                        duration: 0.8,
-                        overwrite: true
-                    });
+                    gsap.to(activeLineRef.current, { width: "6%", duration: 1, overwrite: true });
+                    gsap.to(movingDotRef.current, { left: "6%", duration: 1, overwrite: true });
 
                 } else if (progress < 0.66) {
                     updateActiveYear(1);
-
-                    gsap.to(activeLineRef.current, {
-                        width: "50%",
-                        duration: 0.8,
-                        overwrite: true
-                    });
-
-                    gsap.to(movingDotRef.current, {
-                        left: "50%",
-                        duration: 0.8,
-                        overwrite: true
-                    });
+                    gsap.to(activeLineRef.current, { width: "50%", duration: 1, overwrite: true });
+                    gsap.to(movingDotRef.current, { left: "50%", duration: 1, overwrite: true });
 
                 } else {
                     updateActiveYear(2);
-
-                    gsap.to(activeLineRef.current, {
-                        width: "94%",
-                        duration: 0.8,
-                        overwrite: true
-                    });
-
-                    gsap.to(movingDotRef.current, {
-                        left: "94%",
-                        duration: 0.8,
-                        overwrite: true
-                    });
+                    gsap.to(activeLineRef.current, { width: "94%", duration: 1, overwrite: true });
+                    gsap.to(movingDotRef.current, { left: "94%", duration: 1, overwrite: true });
                 }
             }
         });
@@ -109,35 +74,21 @@ export default function AboutTimelineSectionMobile() {
     useEffect(() => {
         gsap.fromTo(
             ".timeline-image-mobile-wrapper",
-            {
-                opacity: 0,
-                scale: 0.3
-            },
-            {
-                opacity: 1,
-                scale: 1,
-                duration: 0.6
-            }
+            { opacity: 0, scale: 0.5 },
+            { opacity: 1, scale: 1, duration: 1, }
         );
 
         gsap.fromTo(
             ".timeline-mobile-content",
-            {
-                opacity: 0,
-                y: 30
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.6
-            }
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 1 }
         );
     }, [activeIndex]);
 
     return (
         <>
-            <section ref={sectionRef} className="section section-bg-blue timeline-mobile-sticky">
-                <div className="timeline-mobile-inner">
+            <section ref={sectionRef} className="section-bg-blue timeline-mobile-sticky">
+                <div className="section timeline-mobile-inner">
                     <div className="container">
                         <div className="abt-timeline-mobile-title">
                             <h2 className="text-sb text-white">Our story is more than a timeline of milestones. </h2>

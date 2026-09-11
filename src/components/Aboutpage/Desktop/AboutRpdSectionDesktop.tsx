@@ -466,7 +466,7 @@ export default function AboutRpdSectionDesktop() {
                             <div className="abt-rpd-card abt-rpd-card-1">
                                 <div className="rpd-card-title-1">
                                     {/* <Image className="rare-logo" src="/images/aboutpage/about-rpd/rare.svg" alt="rare" width={55} height={68}></Image> */}
-                                    <span className="text-pop-sb text-white">Rare</span>
+                                    <span className="text-sb text-white"><span className="desk-pink-letter">R</span>are</span>
                                 </div>
 
                                 <div className="abt-card-text">
@@ -478,7 +478,7 @@ export default function AboutRpdSectionDesktop() {
 
                             <div className="abt-rpd-card abt-rpd-card-2">
                                 {/* <Image className="pixels-logo" src="/images/aboutpage/about-rpd/pixels.svg" alt="rare" width={281} height={100}></Image> */}
-                                <span className="text-pop-sb text-white">Pixels</span>
+                                <span className="text-sb text-white"><span className="desk-pink-letter">P</span>ixels</span>
 
                                 <div className="abt-card-text">
                                     <h2 className="text-sb h5 text-white">Precision in Every Detail</h2>
@@ -489,7 +489,7 @@ export default function AboutRpdSectionDesktop() {
 
                             <div className="abt-rpd-card abt-rpd-card-3">
                                 {/* <Image className="design-logo" src="/images/aboutpage/about-rpd/design.svg" alt="rare" width={347} height={100}></Image> */}
-                                <span className="text-pop-sb text-white">Design</span>
+                                <span className="text-sb text-white"><span className="desk-pink-letter">D</span>esign</span>
 
                                 <div className="abt-card-text">
                                     <h2 className="text-sb h5 text-white">Direction Before Decoration</h2>

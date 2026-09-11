@@ -19,8 +19,8 @@ export default function AboutHeroSectionDesktop() {
         gsap.fromTo(".abt-hero-video",
             { height: "100vh" },
             { 
-                height: targetHeight, 
-                ease: "power3.out",
+                height: targetHeight,
+                duration: 1,
                 scrollTrigger: {
                     trigger: ".about-hero-section-desktop",
                     start: "top top",
@@ -35,7 +35,7 @@ export default function AboutHeroSectionDesktop() {
             { opacity: 1 },
             { 
                 opacity: 0, 
-                ease: "power3.out",
+                duration: 1,
                 scrollTrigger: {
                     trigger: ".about-hero-section-desktop",
                     start: "top -300px",
@@ -50,7 +50,7 @@ export default function AboutHeroSectionDesktop() {
             { "--bg-opacity": 1 },
             { 
                 "--bg-opacity": 0,
-                ease: "none",
+                duration: 1,
                 scrollTrigger: {
                     trigger: ".about-hero-section-desktop",
                     start: "top -300px",
