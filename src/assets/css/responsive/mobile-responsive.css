@@ -596,8 +596,8 @@
     /* CONTACT PAGE */
 
     .contact-hero-title { font-size: 36px; line-height: 46px; }
-    .cnct-hero-bg-image { top: -95px; }
-    .cnct-hero-bg-image-for-mobile { display: block; position: absolute; bottom: 28px; width: 100%; scale: 1.7; rotate: -15deg; z-index: -2; }
+    .cnct-hero-bg-image { top: -126px; }
+    .cnct-hero-bg-image-for-mobile { display: block; position: absolute; bottom: 0px; width: 100%; scale: 1; rotate: 160deg; z-index: -2; }
 
     .cnct-project-detail { display: flex; flex-direction: column; }
     .cnct-prefer-to-talk { height: max-content; }
@@ -636,7 +636,7 @@
     .contact-form-right span input { margin-bottom: 0; }
     .cnct-project-detail textarea {  width: 90%; height: 60px; }
 
-	.contact-wave-animated { stroke-width: 0.2px; }
+	.contact-wave-animated { stroke-width: 0.3px; }
 
 
     .cnct-hero-bg-image {
@@ -647,7 +647,7 @@
         position: absolute;
         left: 0;
         top: auto;
-        bottom: 28px;
+        bottom: -39px;
         z-index: 0;
         display: block;
         width: 100%;
@@ -655,7 +655,7 @@
         overflow: visible;
         pointer-events: none;
         opacity: 1;
-        transform: scale(1.7) rotate(-15deg);
+        transform: scale(1.7) rotate(11deg);
         transform-origin: center;
     }
 }
@@ -783,7 +783,7 @@
     .contact-hero-wrapper { padding-top: 70px; }
     .cnct-hero-bg-image { top: -75px; }
 
-    .cnct-hero-bg-image-for-mobile { rotate: -7deg; }
+    .cnct-hero-bg-image-for-mobile { rotate: -23deg; bottom: 30px; }
     /* .cnct-form-checkbox-option label, .cnct-upload-button { padding: 8px 24px; } */
 
     .cnct-prefer-to-talk { padding: 15px; }
@@ -984,7 +984,8 @@
     .cnct-upload-button { margin: 30px 0; }
     .cnct-upload-button img { width: 20px; }
     .cnct-upload-button { gap: 10px; }  
-    .contact-form-right span input { padding: 0 10px; }
+    .contact-form-right span input { padding: 0; }
+    .cnct-project-detail textarea { padding: 0; }
 
     .cnct-form-checkbox-option label, .cnct-upload-button { padding: 5px 18px; }
     .cnct-form-checkbox { gap: 15px 8px; }
