@@ -100,7 +100,6 @@ export default function ContactFormSection() {
 
                             <div className="cnct-project-detail">
                                 <span className="h3 text-rg">Here are some details about my project</span>
-                                {/* <input className="h3 text-rg" type="text" name="" id="" placeholder="My project is about...." /> */}
                                 <textarea className="h6 text-rg" name="" id="" placeholder="my project is about...."></textarea>
                             </div>
 

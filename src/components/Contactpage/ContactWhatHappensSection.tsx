@@ -93,7 +93,7 @@ export default function ContactWhatHappensSection() {
       setActiveStep((previousStep) => {
         return (previousStep + 1) % contactSteps.length;
       });
-    }, 4000);
+    }, 10000);
 
     return () => {
       window.clearInterval(interval);
@@ -174,7 +174,7 @@ export default function ContactWhatHappensSection() {
         }
       },
       {
-        threshold: 1,
+        threshold: 0.85,
         rootMargin: "0px 0px -10% 0px",
       }
     );
