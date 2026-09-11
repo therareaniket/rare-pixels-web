@@ -326,7 +326,11 @@
 	.about-hero-txt { font-size: 310px; line-height: 310px; }
 	.abt-card-text { width: 300px; height: 280px; }
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 280px; }
-	
+
+
+	/* TIMELINE SECTION */
+	.details-info-text { width: 770px; }
+
 
 	/* CONTACT PAGE */
 	.contact-hero-wrapper { padding-top: 110px; }
@@ -717,6 +721,9 @@
 
 	.speed-chart { width: 96%; }
 
+	/* TIMELINE SECTION */
+
+
 	/* CONTACT PAGE */
 
 	.contact-hero-title { font-size: 86px; line-height: 96px; width: 699px; }
@@ -1085,6 +1092,10 @@
 	.abt-timeline-content-wrapper { align-items: flex-end; }
 	.about-hero-txt { font-size: 260px; line-height: 260px; }
 
+	/* TIMELINE SECTION */
+	.timeline-titles h2, .bold-subtitle { width: 570px; }
+	.regular-subtitle, .details-info-text p { width: 400px; }
+
 
 	/* CONTACT PAGE */
 
@@ -1445,8 +1456,10 @@
 	.abt-rpd-section-desktop { height: 1000vh; }
 
 	.about-hero-txt { font-size: 230px; line-height: 230px; }
-
 	.speed-chart { width: 100%; }
+
+	/* TIMELINE SECTION */
+	.details-info-text { width: 840px; }
 
 	/* CONTACT PAGE */
 
@@ -1480,6 +1493,13 @@
 	.cnct-upload-button { margin: 30px 0; }
 	.inquiry-form-contact-fields { margin-top: 0; }
 	.faq-accordion-wrapper { margin-top: 40px; }
+
+}
+
+/* FOR ABOUT-US TIMELINE SECTION DELL LAPTOP OG SCREEN WITH LOW HEIGHT */
+@media (max-width: 1359px) and (max-height: 600px) {
+	.year-timeline-line { margin-top: 100px; }
+	.timeline-subtitles { margin-top: 25px; }
 }
 
 @media (max-width: 1199px) {
@@ -2014,6 +2034,17 @@
 	.about-hero-txt { font-size: 200px; line-height: 230px; }
 
 
+	/* TIMELINE SECTION */
+	.timeline-section { height: 300vh; }
+	.timeline-subtitles { flex-direction: column; gap: 20px; }
+	.timeline-titles h2, .bold-subtitle { width: 100%; }
+	.regular-subtitle, .details-info-text p { width: 100%; }
+	.year-description-tablet { display: block; height: 320px; }
+
+	.year-description-desktop { display: none; }
+	.details-info-text { width: 100%; }
+	.details-info-text div { width: 450px; }
+	.the-dot { margin-top: 10px; }
 
 
 
@@ -2342,6 +2373,9 @@
 	.abt-card-text h2 { margin-top: 20px; }
 	.about-hero-txt { font-size: 180px; line-height: 180px; }
 
+	/* TIMELINE SECTION */
+	.timeline-subtitles { width: 70%; }
+	.years-dot { bottom: 2px; }
 
 	/* CONTACT PAGE */
 
@@ -2719,6 +2753,11 @@
 	.abt-rpd-card-2 .abt-card-text { margin-top: 0; }
 	.abt-time-line-desktop-sticky { height: 300vh; }
 
+	/* TIMELINE SECTION */
+	.details-info-text div { width: 400px; }
+	.the-dot { transform: translateY(60%); }
+	
+
 
 	/* CONTACT PAGE */
 
@@ -2885,6 +2924,11 @@
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text, .abt-rpd-card-2 .abt-card-text { margin-top: 0; }
 	.about-hero-txt { font-size: 120px; line-height: 120px; }
 
+	/* TIMELINE SECTION */
+	.details-info-text div { width: 300px; }
+
+
+
 	/* CONTACT PAGE */
 
 	.contact-hero-title { font-size: 38px; line-height: 50px; }
@@ -2926,7 +2970,7 @@
 	.project-video { height: 300px; }
 
 	.process-section-inner { padding: 0 36px; }
-	.container { max-width: calc(608px + 36px); } 
+	.container { max-width: calc(608px + 36px); padding-left: 18px; padding-right: 18px; } 
 	.container-sm { max-width: calc(608px + 36px); }   
 
 	h3, .h3 { font-size: 26px; line-height: 34px; }
@@ -3050,8 +3094,9 @@
 	.project-list { border-radius: 20px; }
 	.project-video { height: 270px; }
 	
-	.container { max-width: calc(528px + 36px); }   
+	.container { max-width: calc(528px + 36px);  }   
 	.container-sm { max-width: calc(528px + 36px); }
+	.timeline-section .container { padding-left: 18px; padding-right: 18px; }
 	.section { padding: 50px 0px; }
 	.process-text-wrapper-tablet p { width: 100%; }
 	
@@ -3071,6 +3116,7 @@
 	.menu-company-contact, .menu-social-icon { width: 100%; }
 
 	.header-mega-menu { top: 50px; }
+	.abt-mis-vis-title-desktop-left { padding-left: 0; }
 
 	.testimonialreview-main{ height: 250px; }
 	.testimonial-image-2{ width: 80px; height: 80px; left: 0; }
@@ -3248,8 +3294,18 @@
 
 	.about-video-text-practice { height: 150px; }
 	.about-hero-txt { font-size: 90px; line-height: 90px; }
-
 	.speed-chart-tab { height: 150px; }
+
+	/* TIMELINE SECTION */
+	.timeline-subtitles { width: 100%; margin-top: 20px; }	
+	.year-timeline-line { margin-top: 100px; }
+	.timeline-subtitles { gap: 10px; }
+	.details-info-text { width: 300px; flex-direction: column-reverse; justify-content: start; align-items: flex-start; gap: 30px; margin-left: auto; }
+	.year-description-tablet { height: 480px; }
+	.year-detail-info .h4 { margin-bottom: 10px; }
+	.years-dot.h1 { line-height: 30px; }
+	.year-detail-info { margin-top: 20px; }
+
 
 	/* CONTACT PAGE */
 

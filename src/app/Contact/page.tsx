@@ -10,9 +10,13 @@ export default function Contact() {
     return(
         <>
             <ContactHeroSection />
+            
             <ContactFormSection />
+            
             <ContactWhatHappensSection />
+            
             <ContactFaqSection />
+            
             <Footer />
 
             <ScrollToTopButton />

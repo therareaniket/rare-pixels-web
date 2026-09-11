@@ -14,17 +14,16 @@ export default function AboutOurValuesSectionDesktop() {
         gsap.fromTo(".abt-our-values-pointer", {
             opacity: 0,
             scale: 0.5,
-            y: 100,
+            y: 50,
         }, {
             opacity: 1,
             scale: 1,
             y: 0,
-            stagger: 0.5,
+            stagger: 1,
             scrollTrigger: {
                 trigger: ".our-values-section",
                 start: "top 60%",
-                end: "top -10%",
-                scrub: true,
+                end: "top -40%",
                 once: true,
             }
         })

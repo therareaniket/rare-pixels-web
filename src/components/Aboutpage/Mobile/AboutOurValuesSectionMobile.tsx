@@ -22,12 +22,9 @@ export default function AboutOurValuesSectionMobile() {
                 scale: 1,
                 y: 0,
                 stagger: 0.5,
-                duration: 1,
                 scrollTrigger: { 
                     trigger: ".our-values-mobile-section", 
                     start: "top 10%",
-                    end: "top -70%",
-                    scrub: true,
                     once: true,
                 } 
             })

@@ -605,6 +605,7 @@ body.menu-open {
 
 /* footer */
 
+.section.footer { padding-bottom: 40px; }
 .footer-quote-right h2 { font-size: 80px; line-height: 90px; }
 
 .footer-quote-wrapper { display: flex; align-items: center; justify-content: space-between; }
@@ -721,7 +722,7 @@ body.menu-open {
 
 .about-hero-section-desktop { height: 300vh; position: relative; }
 .abt-hero-video { width: 100%;}
-.abt-hero-video video { object-fit: cover; object-position: top top; width: 100%; height: 100%; }
+.abt-hero-video video { object-fit: cover; width: 100%; height: 100%; }
 .about-hero-inner { position: sticky; top: 0; }
 
 .about-text-vid-clip { height: 100%; position: relative; overflow: hidden; }
@@ -782,6 +783,8 @@ body.menu-open {
 .abt-mis-vis-content-desktop { width: 1200px; margin: 0 auto; margin-top: 60px; display: flex; align-items: center; justify-content: space-between; }
 .abt-mis-vis-content-left { width: 507px; }
 .abt-mis-desktop { margin: 30px 0; }
+
+.desk-pink-letter { color: #ED0180; }
 
 
 
@@ -1155,7 +1158,7 @@ body.menu-open {
 
 /* ABOUT-US PAGE TIMELINE */
 
-.timeline-section { height: 300vh; position: relative; }
+.timeline-section { height: 360vh; position: relative; }
 .timeline-section .container { position: sticky; top: 0; }
 
 .timeline-titles h2, .bold-subtitle { width: 700px; }
@@ -1163,9 +1166,9 @@ body.menu-open {
 .regular-subtitle { width: 500px; }
 .year-timeline-line { margin-top: 150px; }
 
-.tl-baseline { width: 100%; height: 1px; position: relative; background-color: red; }
+.tl-baseline { width: 100%; height: 1px; position: relative; background-color: rgba(198, 198, 198, 0.5); }
 .years-dot { width: max-content; height: max-content; transform: translateX(100%); position: absolute; bottom: 1px; right: auto; margin-bottom: 0; background-color: #040E36; color: rgba(253, 253, 253, 0.2); }
-.the-dot { display: block; width: 10px; height: 10px; background-color: orange; border-radius: 50%; transform: translate(0%, 50%); }
+.the-dot { display: block; width: 10px; height: 10px; border-radius: 50%; transform: translate(0%, 50%); }
 .years-dot.active { right: 500px; color: rgba(253, 253, 253, 1); }
 .years-dot.active .the-dot { background-color: #ED0180; }
 
@@ -1173,7 +1176,10 @@ body.menu-open {
 .years-dot-2025 { z-index: 3; }
 .years-dot-2026 { z-index: 2; }
 
-.year-detail-info { display: flex; justify-content: space-between; gap: 120px; margin-top: 50px; }
+.year-description { position: relative; height: 250px; }
+.year-description-tablet { display: none; }
+
+.year-detail-info { width: 100%; height: 100%; display: flex; justify-content: space-between; gap: 120px; margin-top: 50px; position: absolute; top: 0; }
 .year-detail-info .h4 { text-transform: uppercase; }
 .details-info-text { display: flex; align-items: start; justify-content: space-between; width: 850px; }
 .details-info-text p { width: 500px; color: #C6C6C6; }

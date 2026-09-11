@@ -12,7 +12,7 @@
         --project-card-width: 340px; 
         --project-card-gap: 20px; 
 
-        --card-1-start-width: 26px;
+        --card-1-start-width: 30px;
         --card-2-start-width: 27px;
         --card-3-start-width: 31px;
 
@@ -408,7 +408,8 @@
 
     .faq-toggle { font-size: 14px; line-height: 22px; }
 
-    /* about page */
+    /* ABOUT PAGE */
+    .about-hero-section-desktop { height: 210vh; }
     .about-section .container-sm { padding: 0; }
     .about-hero-section-mobile .container { display: flex; flex-direction: column-reverse; }
     .about-mobile-title-wrapper p { display: flex; flex-direction: column; gap: 16px; }
@@ -530,7 +531,7 @@
 
     .rare-tree-mobile { width: 100%; }
 
-    .timeline-mobile-sticky { height: 300vh; }
+    .timeline-mobile-sticky { height: 500vh; }
     .timeline-mobile-inner { position: sticky; top: 0px; height: max-content; overflow: hidden; }
 
     .timeline-hr-mobile { position: relative; }
@@ -541,7 +542,7 @@
     .tree-reveal img { display: block; width: 100%; height: auto; }
     .why-rare-point { will-change: transform, opacity; }
 
-    .rpd-mobile-section { position: relative; width: 100%; height: 600vh; }
+    .rpd-mobile-section { position: relative; width: 100%; height: 700vh; }
 
     .rpd-mobile-inner {
         position: sticky;
@@ -671,13 +672,13 @@
         --project-card-height: 260px; 
         --project-card-gap: 30px; 
 
-        --card-1-start-width: 21px;
-        --card-2-start-width: 20px;
+        --card-1-start-width: 24px;
+        --card-2-start-width: 22px;
         --card-3-start-width: 24px;
 
-        --card-1-width: 80px;
-        --card-2-width: 98px;
-        --card-3-width: 119px;
+        --card-1-width: 90px;
+        --card-2-width: 110px;
+        --card-3-width: 130px;
 
         --abt-hero-target-height: 140px;
     }
@@ -806,8 +807,8 @@
         --project-card-width: 300px; 
         --project-card-gap: 16px; 
 
-        --card-1-start-width: 21px;
-        --card-2-start-width: 21px;
+        --card-1-start-width: 24px;
+        --card-2-start-width: 22px;
         --card-3-start-width: 24px;
 
         --card-1-width: 95px;
@@ -960,7 +961,7 @@
 
     .projects-lists { margin-top: 20px; }
 
-    .timeline-mobile-sticky { height: 400vh; }
+    .timeline-mobile-sticky { height: 380vh; }
 
     .abt-hero-video { height: calc( 100vh - 400px ); }
     /* .timeline-mobile-inner { top: -150px; } */
@@ -1007,13 +1008,13 @@
         --project-card-gap: 12px; 
         --abt-hero-target-height: 115px;
 
-        --card-1-start-width: 21px;
-        --card-2-start-width: 19px;
+        --card-1-start-width: 22px;
+        --card-2-start-width: 20px;
         --card-3-start-width: 23px;
 
-        --card-1-width: 76px;
-        --card-2-width: 92px;
-        --card-3-width: 111px;
+        --card-1-width: 82px;
+        --card-2-width: 100px;
+        --card-3-width: 120px;
     }
 	.project-titles { margin-bottom: 30px; }
     .project-video { height: 500px; } 
@@ -1081,7 +1082,7 @@
 
     .town { top: 45px; }
 
-    .rpd-mobile-section { position: relative; width: 100%; height: 700vh; }
+    .rpd-mobile-section { position: relative; width: 100%; height: 900vh; }
 
     /* CONTACT PAGE */
 
