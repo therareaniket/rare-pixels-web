@@ -7,17 +7,12 @@ import AboutOurValuesSectionDesktop from "@/components/Aboutpage/Desktop/AboutOu
 import AboutRpdSectionDesktop from "@/components/Aboutpage/Desktop/AboutRpdSectionDesktop";
 
 import AboutTeamsSectionDesktop from "@/components/Aboutpage/Desktop/AboutTeamsSectionDesktop";
-import AboutTimelineSectionDesktop from "@/components/Aboutpage/Desktop/AboutTimelineSectionDesktop";
 import WhyRarePixelsDesktop from "@/components/Aboutpage/Desktop/WhyRarePixelsDesktop";
 import AboutFaqSectionMobile from "@/components/Aboutpage/Mobile/AboutFaqSectionMobile";
-import AboutHeroSectionMobile from "@/components/Aboutpage/Mobile/AboutHeroSectionMobile";
 import AboutMissionVisionMobile from "@/components/Aboutpage/Mobile/AboutMissionVisionMobile";
 import AboutOurValuesSectionMobile from "@/components/Aboutpage/Mobile/AboutOurValuesSectionMobile";
 import AboutTeamsSectionMobile from "@/components/Aboutpage/Mobile/AboutTeamsSectionMobile";
-import AboutTimelineSectionMobile from "@/components/Aboutpage/Mobile/AboutTimelineSectionMobile";
 import WhyRarePixelsMobile from "@/components/Aboutpage/Mobile/WhyRarePixelsMobile";
-import WhyChooseUsSectionDesktop from "@/components/Homepage/Desktop/WhyChooseUsSectionDesktop";
-import WhyChooseUsSectionMobile from "@/components/Homepage/Mobile/WhyChooseUsSectionMobile";
 import ReactLenis from "lenis/react";
 import { useEffect, useState } from "react";
 import AboutRpdSectionMobile from "../../components/Aboutpage/Mobile/AboutRpdSectionMobile";
@@ -28,6 +23,7 @@ import Footer from "@/components/global/Footer";
 import { useThemeTrigger } from "@/hooks/useThemeTrigger";
 import AboutTimeline from "@/components/Aboutpage/Desktop/TimelineSection";
 import AboutTimelineMobile from "@/components/Aboutpage/Mobile/AbouTimelineMobiles";
+import AboutTeamDesktop from "@/components/Aboutpage/Desktop/AboutTeamsDesktop";
 
 export default function About() {
 	const [isSmallScreen, setIsSmallScreen] = useState<boolean | null>(null);
@@ -49,12 +45,13 @@ export default function About() {
 				<ReactLenis root />
 
 				{/* DESKTOP */}
-				<div className="hidden min-[480px]:block">
+				<div className="hidden min-[480px]:block">					
 					<div data-theme-color="white">
 						<AboutHeroSectionDesktop />
 					</div>
 					
 					<div data-theme-color="white">
+						{/* <AboutTimelineSectionDesktop /> */}
 						<AboutTimeline />
 					</div>
 					
@@ -96,10 +93,12 @@ export default function About() {
 				{/* MOBILE */}
 				<div className="block min-[480px]:hidden">
 					<div data-theme-color="white">
+						{/* <AboutHeroSectionMobile /> */}
 						<AboutHeroSectionDesktop />
 					</div>
 
 					<div data-theme-color="white">
+						{/* <AboutTimelineSectionMobile /> */}
 						<AboutTimelineMobile />
 					</div>
 	

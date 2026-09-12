@@ -1185,6 +1185,11 @@ body.menu-open {
 .details-info-text p { width: 500px; color: #C6C6C6; }
 
 
+/* ABOUTPAGE - TEAMS SECTION */
+.team-section-wrapper { width: 100%; height: 585px; position: relative; }
+.team-sec-content { width: 100%; height: 100%; padding: 0 135px; }
+.team-heading { width: 285px; height: 442px; background-color: red; }
+
 
 /* CONTACT US PAGE */
 
