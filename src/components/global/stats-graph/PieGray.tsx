@@ -22,13 +22,13 @@ const chartConfig = {
     label: "Visitors",
   },
   chrome: {
-    color: "#CDC9C4",
+    color: "rgba(205, 201, 196, 0.5)",
   },
   safari: {
     color: "#CDC9C4",
   },
   firefox: {
-    color: "rgba(205, 201, 196, 0.5)",
+    color: "#CDC9C4",
   },
   edge: {
     color: "#CDC9C4",

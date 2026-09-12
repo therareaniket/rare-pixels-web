@@ -55,7 +55,6 @@ export default function About() {
 					</div>
 					
 					<div data-theme-color="white">
-						{/* <AboutTimelineSectionDesktop /> */}
 						<AboutTimeline />
 					</div>
 					
@@ -97,12 +96,10 @@ export default function About() {
 				{/* MOBILE */}
 				<div className="block min-[480px]:hidden">
 					<div data-theme-color="white">
-						{/* <AboutHeroSectionMobile /> */}
 						<AboutHeroSectionDesktop />
 					</div>
 
 					<div data-theme-color="white">
-						{/* <AboutTimelineSectionMobile /> */}
 						<AboutTimelineMobile />
 					</div>
 	

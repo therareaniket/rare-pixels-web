@@ -362,8 +362,8 @@
 
 		/* --card-final-width: 365px; */
 		--card-final-width: 345px;
-
-    	--card-2-start-width: 47px;
+		
+    	--card-2-start-width: 50px;
     	--card-3-start-width: 55px;
 		--abt-hero-target-height: 380px;
 
@@ -569,6 +569,7 @@
 
 	.process-pointer-text p { padding-top: 5px; }
 	.hm-about-main { padding: 30px; }
+	.process-section-sticky { height: calc(100vh * 9); }
 
 	/* about page */
 
@@ -623,6 +624,8 @@
 	.rpd-pixel-right, .rpd-pixel-left { width: 120px; }
 
 	.abt-rpd-strip { font-size: 30px; line-height: 38px; bottom: -22px; }
+	.abt-rpd-section-desktop { height: 850vh; }
+	.tree-section-desktop { height: 500vh; }
 
 	/* .rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 402px; height: 392px; }
 	.rpd-card-2 { width: 402px; height: 348px; }

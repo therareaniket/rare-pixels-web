@@ -41,17 +41,17 @@ export default function BlogSectionDesktop() {
                                 </div>
 
                                 <div className="hm-blog-social">
-                                    <span className="icon-linkedin text-dark-grey"></span>
+                                    <Link href="#" className="icon-linkedin text-dark-grey"></Link>
 
-                                    <span className="icon-instagram text-dark-grey"></span>
+                                    <Link href="#" className="icon-instagram text-dark-grey"></Link>
 
-                                    <span className="icon-threads text-dark-grey"></span>
+                                    <Link href="#" className="icon-threads text-dark-grey"></Link>
 
-                                    <span className="icon-facebook text-dark-grey"></span>
+                                    <Link href="#" className="icon-facebook text-dark-grey"></Link>
 
-                                    <span className="icon-twitter text-dark-grey"></span>
+                                    <Link href="#" className="icon-twitter text-dark-grey"></Link>
 
-                                    <span className="icon-youtube text-dark-grey"></span>
+                                    <Link href="#" className="icon-youtube text-dark-grey"></Link>
                                 </div>
                             </div>
 
@@ -88,17 +88,17 @@ export default function BlogSectionDesktop() {
                                             </div>
 
                                             <div className="hm-blog-social">
-                                                <span className="icon-linkedin text-dark-grey"></span>
+                                                <Link href="#" className="icon-linkedin text-dark-grey"></Link>
 
-                                                <span className="icon-instagram text-dark-grey"></span>
+                                                <Link href="#" className="icon-instagram text-dark-grey"></Link>
 
-                                                <span className="icon-threads text-dark-grey"></span>
+                                                <Link href="#" className="icon-threads text-dark-grey"></Link>
 
-                                                <span className="icon-facebook text-dark-grey"></span>
+                                                <Link href="#" className="icon-facebook text-dark-grey"></Link>
 
-                                                <span className="icon-twitter text-dark-grey"></span>
+                                                <Link href="#" className="icon-twitter text-dark-grey"></Link>
 
-                                                <span className="icon-youtube text-dark-grey"></span>
+                                                <Link href="#" className="icon-youtube text-dark-grey"></Link>
                                             </div>
                                         </div>
 
@@ -124,17 +124,17 @@ export default function BlogSectionDesktop() {
                                             </div>
 
                                             <div className="hm-blog-social-icons">
-                                                <span className="icon-linkedin text-dark-grey"></span>
+                                                <Link href="#" className="icon-linkedin text-dark-grey"></Link>
 
-                                                <span className="icon-instagram text-dark-grey"></span>
+                                                <Link href="#" className="icon-instagram text-dark-grey"></Link>
 
-                                                <span className="icon-threads text-dark-grey"></span>
+                                                <Link href="#" className="icon-threads text-dark-grey"></Link>
 
-                                                <span className="icon-facebook text-dark-grey"></span>
+                                                <Link href="#" className="icon-facebook text-dark-grey"></Link>
 
-                                                <span className="icon-twitter text-dark-grey"></span>
+                                                <Link href="#" className="icon-twitter text-dark-grey"></Link>
 
-                                                <span className="icon-youtube text-dark-grey"></span>
+                                                <Link href="#" className="icon-youtube text-dark-grey"></Link>
                                             </div>
 
                                             <div className="hm-blog-read-detail">
@@ -162,17 +162,17 @@ export default function BlogSectionDesktop() {
                                             </div>
 
                                             <div className="hm-blog-social">
-                                                <span className="icon-linkedin text-dark-grey"></span>
+                                                <Link href="#" className="icon-linkedin text-dark-grey"></Link>
 
-                                                <span className="icon-instagram text-dark-grey"></span>
+                                                <Link href="#" className="icon-instagram text-dark-grey"></Link>
 
-                                                <span className="icon-threads text-dark-grey"></span>
+                                                <Link href="#" className="icon-threads text-dark-grey"></Link>
 
-                                                <span className="icon-facebook text-dark-grey"></span>
+                                                <Link href="#" className="icon-facebook text-dark-grey"></Link>
 
-                                                <span className="icon-twitter text-dark-grey"></span>
+                                                <Link href="#" className="icon-twitter text-dark-grey"></Link>
 
-                                                <span className="icon-youtube text-dark-grey"></span>
+                                                <Link href="#" className="icon-youtube text-dark-grey"></Link>
                                             </div>
                                         </div>
 
@@ -198,17 +198,17 @@ export default function BlogSectionDesktop() {
                                             </div>
 
                                             <div className="hm-blog-social-icons">
-                                                <span className="icon-linkedin text-dark-grey"></span>
+                                                <Link href="#" className="icon-linkedin text-dark-grey"></Link>
 
-                                                <span className="icon-instagram text-dark-grey"></span>
+                                                <Link href="#" className="icon-instagram text-dark-grey"></Link>
 
-                                                <span className="icon-threads text-dark-grey"></span>
+                                                <Link href="#" className="icon-threads text-dark-grey"></Link>
 
-                                                <span className="icon-facebook text-dark-grey"></span>
+                                                <Link href="#" className="icon-facebook text-dark-grey"></Link>
 
-                                                <span className="icon-twitter text-dark-grey"></span>
+                                                <Link href="#" className="icon-twitter text-dark-grey"></Link>
 
-                                                <span className="icon-youtube text-dark-grey"></span>
+                                                <Link href="#" className="icon-youtube text-dark-grey"></Link>
                                             </div>
 
                                             <div className="hm-blog-read-detail">
@@ -238,17 +238,17 @@ export default function BlogSectionDesktop() {
                                     </div>
 
                                     <div className="hm-blog-social-icons">
-                                        <span className="icon-linkedin text-dark-grey"></span>
+                                        <Link href="#" className="icon-linkedin text-dark-grey"></Link>
 
-                                        <span className="icon-instagram text-dark-grey"></span>
+                                        <Link href="#" className="icon-instagram text-dark-grey"></Link>
 
-                                        <span className="icon-threads text-dark-grey"></span>
+                                        <Link href="#" className="icon-threads text-dark-grey"></Link>
 
-                                        <span className="icon-facebook text-dark-grey"></span>
+                                        <Link href="#" className="icon-facebook text-dark-grey"></Link>
 
-                                        <span className="icon-twitter text-dark-grey"></span>
+                                        <Link href="#" className="icon-twitter text-dark-grey"></Link>
 
-                                        <span className="icon-youtube text-dark-grey"></span>
+                                        <Link href="#" className="icon-youtube text-dark-grey"></Link>
                                     </div>
 
                                     <div className="hm-blog-read-detail">

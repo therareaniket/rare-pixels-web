@@ -476,8 +476,6 @@ export default function StatsSectionDesktop() {
 							<p className="text-upper-case text-light-grey text-18 text-sb stats-specification">Specialised Solutions Crafted</p>
 
 							<div className="stats-element-art-board">
-								{/* <Image src={`${CDN_URL}/images/homepage/stats/specialized-solution-crafted.svg`} alt="specialized-solution-crafted" width={200} height={200}></Image> */}
-								{/* <AnimatedRadialRing width={200} height={200} /> */}
 								<PieYellow />
 							</div>
 

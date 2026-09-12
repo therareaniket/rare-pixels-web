@@ -54,8 +54,6 @@ export default function Home() {
 						<TestimonialSectionDesktop />
 					</div>
 
-					
-
 					<div data-theme-color="white">
 						<AboutSectionDesktop />
 					</div>
