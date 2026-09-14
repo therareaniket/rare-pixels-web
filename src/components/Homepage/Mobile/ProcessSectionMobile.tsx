@@ -65,7 +65,7 @@ export default function ProcessSectionMobile() {
         ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
-            end: "+=4000",
+            end: "+=4100",
             // pin: true,
             scrub: 2,
 
@@ -174,7 +174,8 @@ export default function ProcessSectionMobile() {
 
                                     <p className="text-16 text-rg">
                                         <span>Built for the real world.</span>
-                                        <span>We develop scalable, high-performing systems where design and functionality come together seamlessly.</span>
+                                        {/* <span>We develop scalable, high-performing systems where design and functionality come together seamlessly.</span> */}
+                                        <span>We develop scalable, high-performing systems where design and functionality come together seamlessly, ensuring your digital presence remains visually compelling and architecturally robust.</span>
                                     </p>
                                 </div>
                             </div>
@@ -195,7 +196,8 @@ export default function ProcessSectionMobile() {
 
                                     <p className="text-16 text-rg">
                                         <span>The details shape the experience.</span>
-                                        <span>We test, improve, and fine-tune every interaction because the smallest refinements often make the biggest difference.</span>
+                                        {/* <span>We test, improve, and fine-tune every interaction because the smallest refinements often make the biggest difference.</span> */}
+                                        <span>We test, improve, and carefully fine-tune every single interaction because the smallest refinements often make the biggest difference.</span>
                                     </p>
                                 </div>
                             </div>

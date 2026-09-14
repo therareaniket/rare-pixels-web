@@ -144,7 +144,7 @@ export default function PixelImageCanvas({
                 height: '100%',
                 overflow: 'hidden',
             }}
-            aria-label={alt}
+            // aria-label="R-Logo-Pixels-Distribution"
         >
             <canvas
                 ref={canvasRef}

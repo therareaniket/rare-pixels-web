@@ -714,8 +714,10 @@ body.menu-open {
 .project-list.active { box-shadow: 8px 0px 8px 0px rgba(0, 0, 0, 0.1); }
 .projects-slide-layout { display: none; }
 
-
-
+.project-controls { width: max-content; padding: 6px; border-radius: 20px; font-size: 12px; line-height: 1; background-color: #ededed; margin-top: 20px; }
+.project-control-btn { padding: 8px 12px; border-radius: 14px; }
+.project-control-btn.prev-btn { transform: rotate(-180deg); }
+.project-control-btn:hover { background-color: #f6f6f6; }
 
 
 /* ABOUT-PAGE STARTS HERE */
@@ -845,7 +847,7 @@ body.menu-open {
 .why-rare-desc { width: calc( 100% - 18px ); } 
 
 .why-rare-desktop-content { display: flex; align-items: center; justify-content: center; margin-top: 60px; position: relative; }
-.why-rare-point {  position: absolute; opacity: 0;  }
+.why-rare-point {  position: absolute;  }
 .why-rare-point-1 { top: 0; left: 150px; }
 .why-rare-point-2 { top: -60px; right: 150px; }
 .why-rare-point-3 { bottom: 50px; left: 140px;  }
@@ -1251,17 +1253,6 @@ body.menu-open {
 .cnct-prefer-to-talk.tablet { display: none; }
 .contact-form-section { overflow: hidden !important; }
 
-/* .contact-what-happens-title { width: 478px; }
-.cnct-what-happens { display: flex; align-items: flex-start; justify-content: space-between; padding-top: 20px; border-top: 1px solid #E8DB7D; width: 180px; overflow: hidden; opacity: 50%; }
-
-.cnct-what-happens.active { width: 630px; display: flex; align-items: flex-start; justify-content: space-between; padding-top: 20px; border-top: 1px solid #E8DB7D; opacity: 100%; }
-.cnct-what-happens span { font-size: 150px; line-height: 150px; color: #424242; }
-.cnct-what-happens-text { width: 410px; } */
-
-/* .cnct-what-happens-pointer-wrapper { display: flex; align-items: flex-start; justify-content: space-between; margin-top: 60px; height: 228px; } */
-
-/* .cnct-what-happens-2 .cnct-what-happens-text, .cnct-what-happens-3 .cnct-what-happens-text, .cnct-what-happens-4 .cnct-what-happens-text { display: none; } */
-
 .contact-field-for-mobile { display: none; }
 
 .inquiry-form-check-option label { padding: 12px 26px; }
@@ -1275,7 +1266,6 @@ body.menu-open {
 .contact-what-happens-title { width: 478px; }
 
 .cnct-what-happens-pointer-wrapper { display: flex; align-items: flex-start; justify-content: space-between; margin-top: 60px; height: 228px; }
-
 .cnct-what-happens {
     position: relative;
     display: flex;
@@ -1287,35 +1277,21 @@ body.menu-open {
     overflow: hidden;
     opacity: 0.5;
     cursor: pointer;
-    border-top: 1px solid #e8db7d;
-
-    transition:
-        width 1s ease,
-        opacity 0.8s ease;
+    transition: width 1s ease, opacity 0.8s ease;
 }
 
-.cnct-what-happens::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #e8db7d;
-}
+.cnct-what-happens::before { content: ""; position: absolute; top: -1px; left: 0; width: 0%; height: 2px; background-color: #e8db7d; }
 
 .cnct-what-happens.active { width: 630px; opacity: 1; border-top: 0; }
 .cnct-what-happens.active::before { animation: contactLineProgress 5s linear forwards; }
+
 
 .cnct-what-happens span {
     flex-shrink: 0;
     font-size: 150px;
     line-height: 150px;
     color: #424242;
-
-    transition:
-        color 0.8s ease,
-        opacity 0.8s ease;
+    transition: color 0.8s ease, opacity 0.8s ease;
 }
 
 .cnct-what-happens.active span { color: #424242; }
@@ -1327,11 +1303,7 @@ body.menu-open {
     opacity: 0;
     transform: translateX(25px);
     pointer-events: none;
-
-    transition:
-        opacity 0.4s ease 0s,
-        transform 0.4s ease 0s,
-        visibility 0s linear 0.8s;
+    transition: opacity 0.4s ease 0s, transform 0.4s ease 0s, visibility 0s linear 0.8s;
 }
 
 .cnct-what-happens.active .cnct-what-happens-text {
@@ -1339,11 +1311,7 @@ body.menu-open {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
-
-    transition:
-        opacity 0.5s ease 0.45s,
-        transform 0.5s ease 0.45s,
-        visibility 0s linear 0.45s;
+    transition: opacity 0.5s ease 0.45s, transform 0.5s ease 0.45s, visibility 0s linear 0.45s;
 }
 
 @keyframes contactLineProgress {
@@ -1406,7 +1374,7 @@ body.menu-open {
     top: 50%;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 3px;
     background-color: black;
     pointer-events: none;
 
@@ -1414,7 +1382,7 @@ body.menu-open {
     transform-origin: left center;
     opacity: 1;
 
-    animation: grow-middle-line 5s linear infinite;
+    animation: grow-middle-line 1s linear infinite;
 }
 
 @keyframes grow-middle-line {

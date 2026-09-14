@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect, forwardRef } from "react";
 import gsap from "gsap";
 import "@/assets/css/desktop-custom.css";
 import "@/assets/css/responsive/desktop-responsive.css";
@@ -31,32 +31,31 @@ export default function ProjectsSectionDesktop() {
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
     const prevIndexRef = useRef<number>(0);
 
-    // const cursorRef = useRef<HTMLDivElement>(null);
-
-    // const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    //     const rect = e.currentTarget.getBoundingClientRect();
-
-    //     gsap.to(cursorRef.current, {
-    //         x: e.clientX - rect.left,
-    //         y: e.clientY - rect.top,
-    //         duration: 0.2,
-    //         ease: "power3.out",
-    //     });
-    // };
-
     const handleNext = () => {
         setActiveIndex((prev) => {
-            // Reached the end: bounce back to previous
-            if (prev >= PROJECT_DATA.length - 1) {
-                setDirection(-1);
-                return prev - 1;
-            }
-            // Reached the beginning: move forward
+            // if (prev >= PROJECT_DATA.length - 1) {
+            //     setDirection(-1);
+            //     return prev - 1;
+            // }
             if (prev <= 0) {
                 setDirection(1);
                 return prev + 1;
             }
             return prev + direction;
+        });
+    };
+
+    const handlePrev = () => {
+        setActiveIndex((prev) => {
+            if (prev <= 0) {
+                setDirection(1);
+                return prev + 1;
+            }
+            // if (prev >= PROJECT_DATA.length - 1) {
+            //     setDirection(-1);
+            //     return prev - 1;
+            // }
+            return prev - direction;
         });
     };
 
@@ -69,7 +68,6 @@ export default function ProjectsSectionDesktop() {
 
         setActiveIndex(index);
 
-        // Adjust direction edge cases
         if (index === PROJECT_DATA.length - 1) {
             setDirection(-1);
         } else if (index === 0) {
@@ -77,14 +75,12 @@ export default function ProjectsSectionDesktop() {
         }
     };
 
-    // Staggered Wave Animation with GSAP
     useEffect(() => {
         if (cardRefs.current.length === 0) return;
 
         const previousIndex = prevIndexRef.current;
         const isMovingForward = activeIndex >= previousIndex;
 
-        // Dynamically compute offset distance from the first card and gap
         const firstCard = cardRefs.current[0];
         if (!firstCard) return;
 
@@ -113,7 +109,6 @@ export default function ProjectsSectionDesktop() {
 
             const tiltAngle = isMovingForward ? -3 : 3;
 
-            // Kill active animations on this card before starting a new sequence
             gsap.killTweensOf(card);
 
             gsap.timeline({ delay })
@@ -137,26 +132,36 @@ export default function ProjectsSectionDesktop() {
         <section className="section projects-section">
             <div className="container">
                 <div className="project-titles">
-                    <h2 className="text-sb">Our Projects</h2>
-                    <p className="text-18">A curated selection of work that reflects how we design, build, and deliver impactful digital experiences.</p>
+                        <h2 className="text-sb">Our Projects</h2>
+                        <p className="text-18">A curated selection of work that reflects how we design, build, and deliver impactful digital experiences.</p>
                 </div>
 
                 <div className="projects-lists-wrapper">
                     <div className="projects-lists">
                         {PROJECT_DATA.map((project, index) => (
-                            <ProjectCard
-                                key={project.id}
-                                ref={(el) => { cardRefs.current[index] = el; }}
-                                project={project}
-                                index={index}
-                                isActive={index === activeIndex}
-                                isLast={activeIndex === PROJECT_DATA.length - 1}
-                                direction={direction}
-                                onNext={handleNext}
-                                onSetActive={handleSetActive}
-                            />
+                                <ProjectCard
+                                    key={project.id}
+                                    ref={(el) => { cardRefs.current[index] = el; }}
+                                    project={project}
+                                    index={index}
+                                    isActive={index === activeIndex}
+                                    isLast={activeIndex === PROJECT_DATA.length - 1}
+                                    direction={direction}
+                                    onNext={handleNext}
+                                    onSetActive={handleSetActive}
+                                />
                         ))}
                     </div>
+                </div>
+
+                <div className="project-controls" style={{ display: "flex",}}>  
+                    <button  onClick={handlePrev} disabled={activeIndex === 0} className="project-control-btn prev-btn" style={{ cursor: activeIndex === 0 ? "not-allowed" : "pointer", opacity: activeIndex === 0 ? 0.5 : 1 }}>
+                        <span className="icon-hero-cta-arrow"></span>
+                    </button>
+
+                    <button onClick={handleNext} disabled={activeIndex === PROJECT_DATA.length - 1} className="project-control-btn next-btn" style={{ cursor: activeIndex === PROJECT_DATA.length - 1 ? "not-allowed" : "pointer", opacity: activeIndex === PROJECT_DATA.length - 1 ? 0.5 : 1 }}>
+                        <span className="icon-hero-cta-arrow"></span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -173,8 +178,6 @@ interface ProjectCardProps {
     onSetActive: (index: number) => void;
 }
 
-import { forwardRef } from "react";
-
 const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
     project,
     index,
@@ -185,100 +188,48 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
     onSetActive
 }, ref) => {
     const videoRef = useRef<HTMLVideoElement>(null);
-    // const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const cursorRef = useRef<HTMLDivElement>(null);
-
 
     const cursorXTo = useRef<ReturnType<typeof gsap.quickTo> | null>(null);
     const cursorYTo = useRef<ReturnType<typeof gsap.quickTo> | null>(null);
-
     const [isHovering, setIsHovering] = useState(false);
-
-
-    const [cursorPosition, setCursorPosition] = useState({
-        x: 0,
-        y: 0,
-    });
+    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0, });
 
     useEffect(() => {
         if (!videoRef.current) return;
-        if (isActive) {
-            videoRef.current.play().catch(() => { });
-        } else {
-            videoRef.current.pause();
-            videoRef.current.currentTime = 0;
-        }
+        if (isActive) { videoRef.current.play().catch(() => { }); }
+        else { videoRef.current.pause(); videoRef.current.currentTime = 0; }
     }, [isActive]);
 
     useLayoutEffect(() => {
         const cursor = cursorRef.current;
-
         if (!isHovering || !cursor) return;
 
-        cursorXTo.current = gsap.quickTo(cursor, "left", {
-            duration: 0.6,
-            ease: "power3.out",
-        });
-
-        cursorYTo.current = gsap.quickTo(cursor, "top", {
-            duration: 0.6,
-            ease: "power3.out",
-        });
+        cursorXTo.current = gsap.quickTo(cursor, "left", { duration: 0.6, ease: "power3.out", });
+        cursorYTo.current = gsap.quickTo(cursor, "top", { duration: 0.6, ease: "power3.out", });
 
         gsap.fromTo(
             cursor,
-            {
-                opacity: 0,
-                scale: 0.75,
-            },
-            {
-                opacity: 1,
-                scale: 1,
-                duration: 0.25,
-                ease: "power3.out",
-                overwrite: "auto",
-            }
+            { opacity: 0, scale: 0.75, },
+            { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out", overwrite: "auto", }
         );
 
         return () => {
             gsap.killTweensOf(cursor);
-
             cursorXTo.current = null;
             cursorYTo.current = null;
         };
     }, [isHovering]);
 
-    // const handleMouseMove = (e: React.MouseEvent) => {
-    //     if (!ref || typeof ref === "function" || !ref.current) return;
-    //     const rect = ref.current.getBoundingClientRect();
-    //     setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-    // };
-
-    // const handleMouseMove = (e: React.MouseEvent) => {
-    //     setMousePos({ x: e.clientX, y: e.clientY });
-    // };
-
-    const handleMouseEnter = (
-        event: React.MouseEvent<HTMLDivElement>
-    ) => {
+    const handleMouseEnter = ( event: React.MouseEvent<HTMLDivElement> ) => {
         const cardRect = event.currentTarget.getBoundingClientRect();
-
         const mouseX = event.clientX - cardRect.left;
         const mouseY = event.clientY - cardRect.top;
 
         const cursor = cursorRef.current;
 
-        /*
-         * The cursor still exists while the leave animation
-         * is running. Cancel that animation and show it again.
-         */
         if (cursor) {
             gsap.killTweensOf(cursor);
-
-            /*
-             * Update the quickTo position immediately.
-             * This prevents the previous position from being reused.
-             */
             cursorXTo.current?.(mouseX);
             cursorYTo.current?.(mouseY);
 
@@ -292,79 +243,40 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
 
             return;
         }
-
-        /*
-         * Cursor is not mounted yet.
-         * Render it directly at the entry point.
-         */
-        setCursorPosition({
-            x: mouseX,
-            y: mouseY,
-        });
-
+        setCursorPosition({ x: mouseX, y: mouseY,});
         setIsHovering(true);
     };
 
-
-    const handleMouseMove = (
-        event: React.MouseEvent<HTMLDivElement>
-    ) => {
+    const handleMouseMove = ( event: React.MouseEvent<HTMLDivElement> ) => {
         const cursor = cursorRef.current;
-
         if (!cursor) return;
 
         const cardRect = event.currentTarget.getBoundingClientRect();
-
         const mouseX = event.clientX - cardRect.left;
         const mouseY = event.clientY - cardRect.top;
 
-        if (cursorXTo.current && cursorYTo.current) {
-            cursorXTo.current(mouseX);
-            cursorYTo.current(mouseY);
-        } else {
-            /*
-             * Fallback for the first frame before quickTo
-             * has been initialized.
-             */
-            gsap.set(cursor, {
-                left: mouseX,
-                top: mouseY,
-            });
-        }
+        if (cursorXTo.current && cursorYTo.current) { cursorXTo.current(mouseX); cursorYTo.current(mouseY); } 
+        else { gsap.set(cursor, { left: mouseX, top: mouseY, }); }
     };
 
     const handleMouseLeave = () => {
         const cursor = cursorRef.current;
+        if (!cursor) { setIsHovering(false); return; }
 
-        if (!cursor) {
-            setIsHovering(false);
-            return;
-        }
-
-        /*
-         * Do not clear cursorXTo or cursorYTo here.
-         * They may still be needed if the mouse quickly re-enters.
-         */
         gsap.killTweensOf(cursor);
-
         gsap.to(cursor, {
             opacity: 0,
             scale: 0.75,
             duration: 0.2,
             ease: "power2.out",
             overwrite: "auto",
-            onComplete: () => {
-                setIsHovering(false);
-            },
+            onComplete: () => { setIsHovering(false); },
         });
     };
 
     const handleClick = () => {
-        if (isActive) {
-            onNext();
-        } else {
-            onSetActive(index);
-        }
+        if (isActive) { onNext(); } 
+        else { onSetActive(index); }
     };
 
     const getCursorLabel = () => {
@@ -374,25 +286,13 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
     };
 
     return (
-        <div
-            ref={ref}
-            className={`project-list ${isActive ? "active" : ""
-                }`}
+        <div ref={ref} className={`project-list ${isActive ? "active" : ""}`}
             onMouseEnter={handleMouseEnter}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            onClick={handleClick}
-        >
+            onClick={handleClick} >
             {isHovering && (
-                <div
-                    ref={cursorRef}
-                    className="project-card-hover"
-                    style={{
-                        left: cursorPosition.x,
-                        top: cursorPosition.y,
-                    }}
-                    aria-hidden="true"
-                >
+                <div ref={cursorRef} className="project-card-hover" style={{ left: cursorPosition.x, top: cursorPosition.y, }} aria-hidden="true">
                     <span className="text-sb h6">
                         {getCursorLabel()}
                     </span>
@@ -402,47 +302,12 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
             <video ref={videoRef} className="project-video" src={project.videoSrc} loop muted autoPlay playsInline></video>
 
             {isActive && (
-                <h3
-                    className="h4 active-project-title text-md"
-                    style={{
-                        color: project.foreGroundColor,
-                    }}
-                >
+                <h3 className="h4 active-project-title text-md" style={{ color: project.foreGroundColor, }}>
                     {project.title}
                 </h3>
             )}
         </div>
     );
-
-    // return (
-    //     <div
-    //         ref={ref}
-    //         className={`project-list ${isActive ? "active" : ""}`}
-    //         onMouseEnter={handleMouseEnter}
-    //         onMouseLeave={handleMouseLeave}
-    //         onMouseMove={handleMouseMove}
-    //         onClick={handleClick}
-    //     >
-    //         {isHovering && (
-    //             <div
-    //                 ref={cursorRef}
-    //                 className="project-card-hover"
-    //             >
-    //                 <span className="text-sb">
-    //                     {getCursorLabel()}
-    //                 </span>
-    //             </div>
-    //         )}
-
-    //         <video ref={videoRef} className="project-video" src={project.videoSrc} loop muted autoPlay playsInline></video>
-
-    //         {isActive && (
-    //             <h3 className="h4 active-project-title text-md" style={{ color: project.foreGroundColor }}>{project.title}</h3>
-    //         )}
-
-    //         {/* <h3 className="h4 active-project-title text-md project-title-visiblity" style={{ color: project.foreGroundColor }}>{project.title}</h3> */}
-    //     </div>
-    // );
 });
 
 ProjectCard.displayName = "ProjectCard";

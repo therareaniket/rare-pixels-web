@@ -324,7 +324,7 @@
     .website-logo { width: 14px; height: auto; }
 
     /* process */
-    .process-section-sticky { position: relative; height: calc( 100vh * 5 ); }
+    .process-section-sticky { position: relative; height: calc( 100vh * 5.2 ); }
     .process-section-inner { position: sticky; top: 50px; height: max-content; transition: 1s all ease-in; }
     .process-mob-icon { width: 40px; height: 40px; border-radius: 10px; background-color: #E8DB7D; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #000; }
     .process-section-mobile-wrapper { position: relative; margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }

@@ -41,17 +41,17 @@ export default function BlogSectionDesktop() {
                                 </div>
 
                                 <div className="hm-blog-social">
-                                    <Link href="#" className="icon-linkedin text-dark-grey"></Link>
+                                    <Link href="#" title="Share on Linkedin" className="icon-linkedin text-dark-grey"></Link>
 
-                                    <Link href="#" className="icon-instagram text-dark-grey"></Link>
+                                    <Link href="#" title="Share on Instagram" className="icon-instagram text-dark-grey"></Link>
 
-                                    <Link href="#" className="icon-threads text-dark-grey"></Link>
+                                    <Link href="#" title="Share on Threads" className="icon-threads text-dark-grey"></Link>
 
-                                    <Link href="#" className="icon-facebook text-dark-grey"></Link>
+                                    <Link href="#" title="Share on Facebook" className="icon-facebook text-dark-grey"></Link>
 
-                                    <Link href="#" className="icon-twitter text-dark-grey"></Link>
+                                    <Link href="#" title="Share on Twitter" className="icon-twitter text-dark-grey"></Link>
 
-                                    <Link href="#" className="icon-youtube text-dark-grey"></Link>
+                                    <Link href="#" title="Share on YouTube" className="icon-youtube text-dark-grey"></Link>
                                 </div>
                             </div>
 
@@ -88,17 +88,17 @@ export default function BlogSectionDesktop() {
                                             </div>
 
                                             <div className="hm-blog-social">
-                                                <Link href="#" className="icon-linkedin text-dark-grey"></Link>
+                                                <Link title="Share on LinkedIn" href="#" className="icon-linkedin text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-instagram text-dark-grey"></Link>
+                                                <Link title="Share on Instagram" href="#" className="icon-instagram text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-threads text-dark-grey"></Link>
+                                                <Link title="Share on Threads" href="#" className="icon-threads text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-facebook text-dark-grey"></Link>
+                                                <Link title="Share on Facebook" href="#" className="icon-facebook text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-twitter text-dark-grey"></Link>
+                                                <Link title="Share on Twitter" href="#" className="icon-twitter text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-youtube text-dark-grey"></Link>
+                                                <Link title="Share on YouTube" href="#" className="icon-youtube text-dark-grey"></Link>
                                             </div>
                                         </div>
 
@@ -124,17 +124,17 @@ export default function BlogSectionDesktop() {
                                             </div>
 
                                             <div className="hm-blog-social-icons">
-                                                <Link href="#" className="icon-linkedin text-dark-grey"></Link>
+                                                <Link href="#" title="Share on LinkedIn" className="icon-linkedin text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-instagram text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Instagram" className="icon-instagram text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-threads text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Threads" className="icon-threads text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-facebook text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Facebook" className="icon-facebook text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-twitter text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Twitter" className="icon-twitter text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-youtube text-dark-grey"></Link>
+                                                <Link href="#" title="Share on YouTube" className="icon-youtube text-dark-grey"></Link>
                                             </div>
 
                                             <div className="hm-blog-read-detail">
@@ -162,17 +162,17 @@ export default function BlogSectionDesktop() {
                                             </div>
 
                                             <div className="hm-blog-social">
-                                                <Link href="#" className="icon-linkedin text-dark-grey"></Link>
+                                                <Link href="#" title="Share on LinkedIn" className="icon-linkedin text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-instagram text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Instagram" className="icon-instagram text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-threads text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Threads" className="icon-threads text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-facebook text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Facebook" className="icon-facebook text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-twitter text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Twitter" className="icon-twitter text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-youtube text-dark-grey"></Link>
+                                                <Link href="#" title="Share on YouTube" className="icon-youtube text-dark-grey"></Link>
                                             </div>
                                         </div>
 
@@ -198,17 +198,17 @@ export default function BlogSectionDesktop() {
                                             </div>
 
                                             <div className="hm-blog-social-icons">
-                                                <Link href="#" className="icon-linkedin text-dark-grey"></Link>
+                                                <Link href="#" title="Share on LinkedIn" className="icon-linkedin text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-instagram text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Instagram" className="icon-instagram text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-threads text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Threads" className="icon-threads text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-facebook text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Facebook" className="icon-facebook text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-twitter text-dark-grey"></Link>
+                                                <Link href="#" title="Share on Twitter" className="icon-twitter text-dark-grey"></Link>
 
-                                                <Link href="#" className="icon-youtube text-dark-grey"></Link>
+                                                <Link href="#" title="Share on YouTube" className="icon-youtube text-dark-grey"></Link>
                                             </div>
 
                                             <div className="hm-blog-read-detail">
@@ -238,17 +238,17 @@ export default function BlogSectionDesktop() {
                                     </div>
 
                                     <div className="hm-blog-social-icons">
-                                        <Link href="#" className="icon-linkedin text-dark-grey"></Link>
+                                        <Link href="#" title="Share on LinkedIn" className="icon-linkedin text-dark-grey"></Link>
 
-                                        <Link href="#" className="icon-instagram text-dark-grey"></Link>
+                                        <Link href="#" title="Share on Instagram" className="icon-instagram text-dark-grey"></Link>
 
-                                        <Link href="#" className="icon-threads text-dark-grey"></Link>
+                                        <Link href="#" title="Share on Threads" className="icon-threads text-dark-grey"></Link>
 
-                                        <Link href="#" className="icon-facebook text-dark-grey"></Link>
+                                        <Link href="#" title="Share on Facebook" className="icon-facebook text-dark-grey"></Link>
 
-                                        <Link href="#" className="icon-twitter text-dark-grey"></Link>
+                                        <Link href="#" title="Share on Twitter" className="icon-twitter text-dark-grey"></Link>
 
-                                        <Link href="#" className="icon-youtube text-dark-grey"></Link>
+                                        <Link href="#" title="Share on YouTube" className="icon-youtube text-dark-grey"></Link>
                                     </div>
 
                                     <div className="hm-blog-read-detail">

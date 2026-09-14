@@ -22,7 +22,9 @@
 .mob-timeline-years { display: flex; justify-content: space-between; height: 50px; }
 .mob-tl-year { position: relative; padding-top: 10px; }
 .mob-tl-dot { position: absolute; top: 0; left: 50%; width: 10px; height: 10px; background-color: #656A7E; transform: translate(-50%, -50%); border-radius: 50%; }
-.mob-tl-detls { margin-top: 20px; }
+.mob-tl-detls { margin-top: 20px; position: absolute; top: 0; background-color: #040E36; min-height: 200px; }
 .mob-tl-detls .h5 { text-transform: uppercase; margin-bottom: 10px; }
-.mob-timeline-details { position: relative; height: 450px; margin-top: 50px; }
-.mob-tl-detls { position: absolute; top: 0; }
+.mob-timeline-details { position: relative; height: 450px; margin-top: 50px;  }
+.mob-tl-detls-2024 { z-index: 4; }
+.mob-tl-detls-2025 { z-index: 5; }
+.mob-tl-detls-2026 { z-index: 6; }

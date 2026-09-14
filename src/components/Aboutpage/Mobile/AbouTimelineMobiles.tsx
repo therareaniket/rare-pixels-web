@@ -19,19 +19,19 @@ export default function AboutTimelineMobile(){
         // ANIMATION OF YEAR 2026
         gsap.fromTo(".mob-tl-dot-2026", { backgroundColor: "#656A7E" }, { backgroundColor: "#ED0180", scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -150%", end: "top -170%", scrub: true }})
         gsap.fromTo(".mob-tl-year-2026", { color: "#656A7E" }, {  color: "#FFFFFF", scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -150%", end: "top -170%", scrub: true }})
-        gsap.fromTo(".mob-tl-detls-2025", { scale: 1, opacity: 1, y:0 }, { scale: 0.5, opacity: 0, y:-50, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -130%", end: "top -150%", scrub: true }})
-        gsap.fromTo(".mob-tl-detls-2026", { scale: 0.5, opacity: 0, y: 50 }, { scale: 1, opacity: 1, y: 0, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -150%", end: "top -170%", scrub: true }})
+        // gsap.fromTo(".mob-tl-detls-2025", { scale: 1, opacity: 1, y:0 }, { scale: 0.5, opacity: 0, y:-50, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -130%", end: "top -150%", scrub: true }})
+        gsap.fromTo(".mob-tl-detls-2026", { scale: 1, opacity: 0, y: 150 }, { scale: 1, opacity: 1, y: 0, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -150%", end: "top -170%", scrub: true }})
 
         // ANIMATION OF YEAR 2025
         gsap.fromTo(".mob-tl-dot-2025", { backgroundColor: "#656A7E" }, { backgroundColor: "#ED0180", scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -100%", end: "top -120%", scrub: true }})
         gsap.fromTo(".mob-tl-year-2025", { color: "#656A7E" }, {  color: "#FFFFFF", scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -100%", end: "top -120%", scrub: true }})
-        gsap.fromTo(".mob-tl-detls-2024", { scale: 1, opacity: 1, y:0 }, { scale: 0.5, opacity: 0, y:-50, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -80%", end: "top -100%", scrub: true }})
-        gsap.fromTo(".mob-tl-detls-2025", { scale: 0.5, opacity: 0, y:50 }, { scale: 1, opacity: 1, y:0, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -100%", end: "top -120%", scrub: true }})
+        // gsap.fromTo(".mob-tl-detls-2024", { scale: 1, opacity: 1, y:0 }, { scale: 0.5, opacity: 0, y:-50, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -80%", end: "top -100%", scrub: true }})
+        gsap.fromTo(".mob-tl-detls-2025", { scale: 1, opacity: 0, y: 150 }, { scale: 1, opacity: 1, y:0, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -100%", end: "top -120%", scrub: true }})
 
         // ANIMATION OF YEAR 2024
         gsap.fromTo(".mob-tl-dot-2024", { backgroundColor: "#656A7E" }, { backgroundColor: "#ED0180", scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -50%", end: "top -70%", scrub: true }})
         gsap.fromTo(".mob-tl-year-2024", { color: "#656A7E" }, {  color: "#FFFFFF", scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -50%", end: "top -70%", scrub: true }})
-        gsap.fromTo(".mob-tl-detls-2024", { scale: 0.5, opacity: 0, y:50 }, { scale: 1, opacity: 1, y:0, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -50%", end: "top -70%", scrub: true }})
+        gsap.fromTo(".mob-tl-detls-2024", { scale: 1, opacity: 0, y: 150 }, { scale: 1, opacity: 1, y:0, scrollTrigger: { trigger: ".about-timeline-mobile", start: "top -50%", end: "top -70%", scrub: true }})
 
     })
 
