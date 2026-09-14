@@ -68,7 +68,8 @@ export default function About() {
 					</div>
 	
 					<div data-theme-color="white">
-						<AboutTeamsSectionDesktop />
+						{/* <AboutTeamsSectionDesktop /> */}
+						<AboutTeamDesktop />
 					</div>
 	
 					<div data-theme-color="white">
@@ -115,7 +116,8 @@ export default function About() {
 					</div>
 		
 					<div data-theme-color="white">
-						<AboutTeamsSectionMobile />
+						{/* <AboutTeamsSectionMobile /> */}
+						<AboutTeamDesktop />
 					</div>
 	
 					<div data-theme-color="white">

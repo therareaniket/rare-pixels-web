@@ -331,6 +331,13 @@
 	/* TIMELINE SECTION */
 	.details-info-text { width: 770px; }
 
+	/* TEAMS SECTION */
+	.team-sec-content { padding: 0 90px; }
+	.founder-img { width: 320px; }
+	.team-details { width: 360px; padding: 30px 40px; }
+	.foundr-msg-hr { margin: 16px 0; }
+	.team-section-wrapper { height: 500px; }
+
 
 	/* CONTACT PAGE */
 	.contact-hero-wrapper { padding-top: 110px; }
@@ -1098,6 +1105,14 @@
 	/* TIMELINE SECTION */
 	.timeline-titles h2, .bold-subtitle { width: 570px; }
 	.regular-subtitle, .details-info-text p { width: 400px; }
+
+	/* TEAMS SECTION */
+	.team-sec-content { padding: 0 70px; }
+	.founder-img { width: 300px; }
+	.team-details { width: 300px; padding: 25px 35px; }
+	.team-section-wrapper { height: 460px; }
+	
+	
 
 
 	/* CONTACT PAGE */
@@ -2049,7 +2064,15 @@
 	.details-info-text div { width: 450px; }
 	.the-dot { margin-top: 10px; }
 
+	/* TEAMS SECTION */
+	.team-section-wrapper { height: max-content; }
+	.team-sec-content { flex-direction: column; align-items: start; }
+	.team-heading { width: 100%; padding: 30px 0 0 0; z-index: 5; }
+	.team-details { width: 420px; transform: translateX(0); }
+	.founder-img { transform: translateX(-50px); }
+	.teams-pixels-bottom-right { display: none; }
 
+	
 
 	/* CONTACT PAGE */
 
@@ -2497,6 +2520,10 @@
 
 	.inquiry-form-project-field { margin-top: 40px !important; }
 
+	/* TEAMS SECTION */
+	.team-details { width: 380px; }
+	
+
 }
 
 @media (max-width: 839px) {
@@ -2759,6 +2786,9 @@
 	/* TIMELINE SECTION */
 	.details-info-text div { width: 400px; }
 	.the-dot { transform: translateY(60%); }
+
+	/* TEAMS SECTION */
+	.team-details { width: 320px; border-radius: 10px 10px 10px 70px; }
 	
 
 
@@ -2930,6 +2960,12 @@
 	/* TIMELINE SECTION */
 	.details-info-text div { width: 300px; }
 
+	/* TEAMS SECTION */
+	.team-details { width: 280px; }
+	.founder-img { width: 260px; }
+	.team-addesing { margin-top: 40px; }
+	.team-section-final { overflow: hidden; }
+
 
 
 	/* CONTACT PAGE */
@@ -3079,6 +3115,13 @@
 	.nav-hamburger { width: 16px; }
 
 	.inquiry-name-tab textarea { width: 87%; }
+	
+	/* TEAMS SECTION */
+	.team-sec-content { padding: 0 30px; }
+	.founder-img { transform: translate(0, 0); width: 250px; }
+	.founder-img img { margin: 0 auto; }
+	.team-details { width: 100%; padding: 15px 25px; padding-bottom: 30px; }
+	.team-addesing { flex-direction: column-reverse; align-items: center; justify-content: center; }
 }
 
 @media (max-width: 575px) {
@@ -3171,7 +3214,7 @@
 
 	.teams-pixels-bottom-right { bottom: 325px; }
 
-	.teams-pixels-bottom-left { top: 200px; width: 95px; }
+	.teams-pixels-bottom-left { width: 95px; }
 
 	.teams-pixels-top-right { width: 115px; }
 

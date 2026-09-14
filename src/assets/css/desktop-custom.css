@@ -488,7 +488,7 @@ body.menu-open {
 .teams-section-title{ width: 287px; margin-bottom: 0; }
 
 .teams-section-desktop{ position: relative !important; }
-.teams-pixels{ position: absolute;  }
+.teams-pixels{ position: absolute; z-index: 4; }
 .teams-pixels-top-left{ top: 0; left: 0; z-index: -1; }
 .teams-pixels-bottom-left{ bottom: 0; left: 0; z-index: -1; }
 .teams-pixels-top-right{ top: 0; right: 0; }
@@ -1188,7 +1188,15 @@ body.menu-open {
 /* ABOUTPAGE - TEAMS SECTION */
 .team-section-wrapper { width: 100%; height: 585px; position: relative; }
 .team-sec-content { width: 100%; height: 100%; padding: 0 135px; }
-.team-heading { width: 285px; height: 442px; background-color: red; }
+.team-heading { width: 285px; padding: 72px 0; }
+/* .founder-msg { width: 400px; } */
+.team-sec-content { display: flex; align-items: end; justify-content: space-between; }
+.team-details { width: 400px; padding: 35px 45px; background-color: var(--primary); color: white; border-radius: 10px 10px 10px 80px; transform: translateX(40px); position: relative; z-index: 2; }
+.foundr-msg-hr { display: block; width: 100%; height: 1px; background-color: #F8F8F8; opacity: 35%; margin: 20px 0; }
+.team-addesing { display: flex; align-items: end; }
+.founder-img { position: relative; z-index: 3; }
+
+
 
 
 /* CONTACT US PAGE */

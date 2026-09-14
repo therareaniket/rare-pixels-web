@@ -591,7 +591,14 @@
     .pink-letter span { color: #ED0180 !important; }
     .about-hero-txt { font-size: 80px; line-height: 80px; }
 
-
+    /* TEAMS SECTION */
+    .team-section-wrapper { margin-top: 30px; }
+    .team-sec-content { padding: 0 10px; }
+    .team-heading h2 { margin-bottom: 0; padding-top: 10px; }
+    .team-addesing { margin-top: 20px; }
+    .team-details .text-18 { font-size: 16px; line-height: 24px; }
+    .teams-pixels-bottom-left { display: none; }
+    
 
 
     /* CONTACT PAGE */
@@ -970,6 +977,16 @@
     .rpd-mobile-section { height: 900vh; }
 
     .about-hero-txt { font-size: 70px; line-height: 70px; padding-top: 10px; }
+
+    /* TEAMS SECTION */
+    .team-details { padding: 20px 10px 20px 20px; border-radius: 10px 10px 70px 10px; }
+    .team-designation { margin: 0; padding: 0; }
+    .team-sec-content { padding: 0; }
+    .team-heading { padding: 0; }
+    .team-details .text-18 { font-size: 14px; line-height: 20px; }
+    .teams-designation-block { display: flex; flex-direction: column; }
+    .team-heading h2 { width: 90%; }
+    
 
     
 
