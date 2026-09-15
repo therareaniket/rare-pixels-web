@@ -198,7 +198,7 @@ export default function IndustriesSectionDesktop() {
                                         key={index} 
                                         data-theme-color={industry.theme}>
                                         <div className="industries-image-wrapper">
-                                            <div className="industries-video prev-video"/>
+                                            <video src={industry.video} autoPlay muted loop className="industries-video prev-video" />
 
                                             <svg className="industries-desktop-pixel-1" width="170" height="150" viewBox="0 0 170 150" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <rect width="50" height="50" fill="currentColor"/>

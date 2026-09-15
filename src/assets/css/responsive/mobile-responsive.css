@@ -108,6 +108,7 @@
     .testimonial-swiper-left:hover { background-color: #061651; }
     .testimonial-swiper-left:hover .testimonial-arrow{ fill: var(--primary); }
     .testimonial-swiper-right:hover .testimonial-arrow{ fill: var(--primary); }
+    .industry-item
 
     /* STATS SECTION */
 	.custom-pie-container { width: 180px; height: 180px; }
@@ -287,18 +288,16 @@
     .project-card-mobile { position: absolute; width: 100%; height: 250px; border-radius: 10px; overflow: hidden; }
     .project-card-mobile-video { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
     .project-mobile-desc { width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.55); backdrop-filter: blur(20px); color: white; position: absolute; top: 0; left: 0; text-align: center; padding-top: 15px; opacity: 0; }
-    
-    /* .active-project-title { display: none; }
-    .active-project-title.project-title-visiblity { display: block; position: relative; color: black !important; margin-top: 20px; font-size: 30px; } */
 
     .header-mega-menu { padding-bottom: 30px; }
     .back-top-pointer { width: 16px; height: 16px; }
 
     .industries-card-wrapper { gap: 30px; }
+    .industries-image-wrapper { height: 380px; }
     .industry-item { gap: 20px; }
     .industries-image-wrapper { border-radius: 0 0 50px 0; }
     .industries-text-wrapper p { width: 100%; }
-    .industries-text-wrapper { gap: 15px; }
+    .industries-text-wrapper { gap: 15px; justify-content: start; height: 250px; }
 
     .footer-quote-right { width: 100%; }
     .footer-quote-right h2 { font-size: 50px; line-height: 58px; }
@@ -405,8 +404,9 @@
     .footer-social-row { flex-direction: row; gap: 30px; width: 100%; }
     .social-icon span { font-size: 30px; }
     .social-icon p { display: none; }
-
     .faq-toggle { font-size: 14px; line-height: 22px; }
+
+
 
     /* ABOUT PAGE */
     .about-hero-section-desktop { height: 210vh; }
