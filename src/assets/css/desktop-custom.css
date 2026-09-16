@@ -1439,3 +1439,18 @@ body.menu-open {
     pointer-events: none;
     margin-bottom: 0;
 }
+
+
+
+
+/* OUR-SERVICES PAGE */
+
+.serv-hero-wrapper { display: flex; align-items: center; justify-content: space-between; }
+.serv-hero-contn { max-width: 740px; }
+.serv-hero-vid { width: 790px; height: 760px; background-color: #040E36; }
+.serv-hero-span, .serv-stat span { color: var(--primary); }
+.serv-hero-subttl { margin-top: 100px; }
+
+.serv-hero-stats { display: flex; gap: 60px; margin-top: 40px; }
+.serv-stat { width: 200px; }
+.serv-stat span { display: flex; gap: 20px; }

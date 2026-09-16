@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/global/Header";
-import Footer from "@/components/global/Footer";
 import { useThemeTrigger } from "@/hooks/useThemeTrigger";
 
 
