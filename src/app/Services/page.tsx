@@ -1,13 +1,18 @@
 import Footer from "@/components/global/Footer";
 import ServicesHero from "@/components/Servicespage/ServicesHero";
 import "@/assets/css/desktop-custom.css";
+import ServicesWhyBusinessChooseRare from "@/components/Servicespage/ServicesWhyBusinessChooseRare";
+import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 
-export default function Services(){
-    return(
+export default function Services() {
+    return (
         <>
             <ServicesHero />
+            <ServicesWhyBusinessChooseRare />
 
             <Footer />
+
+            <ScrollToTopButton />
         </>
     )
 }

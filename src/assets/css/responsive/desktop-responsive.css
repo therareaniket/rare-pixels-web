@@ -360,6 +360,13 @@
 	/* .inquiry-form-contact-fields textarea { width: 45%; } */
 
 	.cnct-hero-bg-image { top: 35px; }
+
+	/* services page */
+
+	.services-why-choose-rare-1 { width: 350px; height: 525px; }
+	.services-why-choose-rare-2 { width: 350px; height: 262px; transform: translateY(-80px); }
+	.services-why-choose-rare-3 { width: 350px; height: 395px; }
+
 }
 
 @media (max-width: 1599px) {
@@ -764,6 +771,17 @@
 	.inquiry-checkbox-wrapper { margin-top: 0 !important; }
 	.inquiry-form-project-field h3 { margin-bottom: 0; }
 	.inquiry-form-contact-fields textarea { height: 80px; }
+
+	/* services page */
+
+	.services-why-choose-rare-card-wrapper { margin-top: 40px; }
+	.services-why-rare-card-1 { gap: 40px; }
+	.services-why-rare-card-1-text { width: 302px; margin-right: 40px; }
+	/* .services-why-rare-card-1-text { width: 302px; margin-right: 40px; display: none; } */
+
+	.services-why-choose-rare-1 { width: 320px; height: 450px; }
+	.services-why-choose-rare-2 { width: 320px; height: 239px; transform: translateY(-65px); border-radius: 0 0 0 180px; }
+	.services-why-choose-rare-3 { width: 320px; height: 362px; }
 }
 
 @media (max-width: 1439px) {
@@ -1139,6 +1157,12 @@
 	.inquiry-form-contact-fields textarea { width: 57%; }
 	.inquiry-form-project-field h3 { margin-bottom: 0; } 
 	.inquiry-checkbox-wrapper { margin-top: 0; }
+
+	.services-why-choose-rare-1 { width: 300px; height: 450px; }
+	.services-why-choose-rare-2 { width: 300px; height: 224px; transform: translateY(-65px); border-radius: 0 0 0 180px; }
+	.services-why-choose-rare-3 { width: 300px; height: 339px; border-radius: 80px; }
+
+	.services-why-rare-card-1-text { width: 260px; }
 
 }
 
@@ -2092,121 +2116,13 @@
 	.cnct-project-detail textarea { margin-top: 24px; }
 
 	.contact-what-happens-title { width: 575px; max-width: 100%; }
-	.cnct-what-happens-pointer-wrapper {
-  		display: flex;
-  		flex-direction: column;
-  		align-items: stretch;
-  		justify-content: flex-start;
-  		height: max-content;
-  		gap: 50px;
-  		margin-top: 60px;
-	}
+	.cnct-what-happens-tablet { width: 100%; padding-left: 20px; border-left: 1px solid #E8DB7D; height: 130px; overflow: hidden; }
+	/* .cnct-what-happens-tablet:nth-child(1) { height: max-content; } */
+	.cnct-what-happens-pointer-wrapper-tablet { margin-top: 40px; display: flex; flex-direction: column; gap: 50px; align-items: flex-start; }
+	.cnct-what-happens-tablet span { font-size: 150px; line-height: 130px; color: #424242; }
+	.cnct-what-happens-text-tablet { padding-top: 30px; } 
 
-	.cnct-what-happens,
-	.cnct-what-happens.active {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  gap: 30px;
-  padding-top: 0;
-  padding-left: 20px;
-  overflow: hidden;
-  opacity: 1;
-  visibility: visible;
-  cursor: default;
-  border-top: 0;
-  border-left: 1px solid #e8db7d;
-  transform: none;
-  transition: border-left-color 0.2s ease;
-  animation: none;
-}
-
-.cnct-what-happens::before,
-.cnct-what-happens.active::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: block;
-  width: 1px;
-  background-color: #e8db7d;
-  opacity: 0;
-  pointer-events: none;
-  transform: scaleY(0);
-  transform-origin: top center;
-  will-change: transform, opacity;
-}
-
-.cnct-what-happens.is-expanding,
-.cnct-what-happens.is-expanded {
-  border-left-color: transparent;
-}
-
-.cnct-what-happens.is-expanding::before {
-  opacity: 1;
-  transform: scaleY(1);
-  transition:
-    transform 2.2s cubic-bezier(0.25, 0.1, 0.25, 1),
-    opacity 0.2s ease;
-}
-
-.cnct-what-happens.is-expanded::before {
-  height: 100%;
-  opacity: 1;
-  transform: scaleY(1);
-  transition: none;
-}
-
-.cnct-what-happens span,
-.cnct-what-happens.active span {
-  position: relative;
-  z-index: 2;
-  flex-shrink: 0;
-  /* font-size: 130px; */
-  /* line-height: 130px; */
-  color: #424242;
-  opacity: 1;
-  transform: none;
-  transition: none;
-}
-
-.cnct-what-happens-text,
-.cnct-what-happens.active .cnct-what-happens-text {
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: 100%;
-  flex-shrink: 0;
-  visibility: visible;
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
-  transition: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cnct-what-happens,
-  .cnct-what-happens.active {
-    height: auto;
-    overflow: visible;
-    border-left-color: #e8db7d;
-    transition: none;
-    animation: none;
-  }
-
-  .cnct-what-happens::before,
-  .cnct-what-happens.active::before {
-    display: none;
-    animation: none;
-    transition: none;
-  }
-}
-
-.cnct-what-happens { width: 100% !important; height: 100%; }
+	.cnct-what-happens-pointer-wrapper-desktop { display: none; }
 
 	.inquiry-name-tab textarea { border-bottom: 1px solid var(--inquiry-form-border); height: 80px; width: 80%; }
 
@@ -2415,10 +2331,9 @@
 	.contact-form-right span input { width: 330px; }
 	.cnct-upload-button { padding: 16px 30px; }
 
-	.cnct-what-happens span { font-size: 132px; line-height: 132px; }
-	.cnct-what-happens-pointer-wrapper { margin-top: 40px; gap: 40px; }
-
 	.inquiry-name-tab textarea { width: 87%; }
+
+	.cnct-what-happens-pointer-wrapper-tablet { gap: 40px; }
 }
 
 @media (max-width: 991px) {
@@ -2523,6 +2438,9 @@
 	/* TEAMS SECTION */
 	.team-details { width: 380px; }
 	
+	/* contact page */
+
+	.cnct-what-happens-tablet span { font-size: 130px; line-height: 130px; }
 
 }
 
@@ -2883,7 +2801,6 @@
 	.why-choose-us-pointer-wrapper { margin-top: 10px; }
 	
 	
-
 	.accordion-number{ width: 40px; height: 40px; }
 	.faq-accordion-title{ padding: 0; }
 	.hm-faq-title{ width: 550px; }
@@ -2992,6 +2909,9 @@
 	.website-header-logo { width: 100px; }
 	.header-squished {width: 240px; }
 	.nav-hamburger { width: 18px; }
+
+	.cnct-what-happens-tablet span { font-size: 124px; line-height: 124px; }
+	.cnct-what-happens-text-tablet { padding-top: 20px; }
 }
 
 @media (max-width: 639px) {
@@ -3374,4 +3294,7 @@
 	.inquiry-name-tab textarea { width: 98%; }
 
 	/* .cnct-what-happens, .cnct-what-happens.active { height: 85px; } */
+
+	.cnct-what-happens-tablet span { font-size: 110px; line-height: 110px; }
+	.cnct-what-happens-pointer-wrapper-tablet { gap: 40px; }
 }
