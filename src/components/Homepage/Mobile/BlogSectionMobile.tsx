@@ -29,7 +29,7 @@ export default function BlogSectionMobile() {
                             modules={[Autoplay]}
                             spaceBetween={20}
                             slidesPerView={1.2}
-                            loop={true}
+                            // loop={true}
                             speed={1000}
                             autoplay={{ delay: 2500 }}
                             allowTouchMove={true}
@@ -72,7 +72,7 @@ export default function BlogSectionMobile() {
                                 </div>
                             </SwiperSlide>
 
-                            <SwiperSlide>
+                            {/* <SwiperSlide>
                                 <div className="hm-blog-mobile-card-1">
                                     <div className="hm-blog-image-mob">
                                         <Image  src={`${CDN_URL}/images/homepage/blog/blog-image-1.png`} alt="blog-image" width={424} height={250}></Image>
@@ -85,7 +85,6 @@ export default function BlogSectionMobile() {
                                     <p className="text-rg text-16">Two years of ideas turning into brands. Two years of challenges turning into opportunities. Two years of helping businesses become easier to notice, trust, and remember. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
                                 </div>
                             </SwiperSlide>
-                            {/* <div className="hm-blog-mob-hr"></div> */}
 
                             <SwiperSlide>
                                 <div className="hm-blog-mobile-card-2">
@@ -100,7 +99,7 @@ export default function BlogSectionMobile() {
                                     <p className="text-rg text-16">A visually attractive interface may convince users to explore your platform once. But whether they stay, engage, and return depends entirely on experience. <Link href="#" title="read more" className="text-primary">Read More</Link></p>
 
                                 </div>
-                            </SwiperSlide>
+                            </SwiperSlide> */}
                         </Swiper>
 
                         <div className="hm-blog-mob-hr"></div>

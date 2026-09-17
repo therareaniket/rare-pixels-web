@@ -14,50 +14,50 @@ export default function ServicesSectionMobile() {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo('.services-ui-ux', { y: 600, scale: 1.2, rotate: 20 },  { 
+        gsap.fromTo('.services-ui-ux', { y: 700, scale: 1.2, rotate: 20 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
                 start: 'top 70%',
-                end: 'top -10%',
+                end: 'top -20%',
                 scrub: true
             }
         });
 
-        gsap.fromTo('.services-development', { y: 1000, scale: 1.2, rotate: -30 },  { 
+        gsap.fromTo('.services-development', { y: 700, scale: 1.2, rotate: -30 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
                 start: 'top 55%',
-                end: 'top -35%',
+                end: 'top -40%',
                 scrub: true
             }
         });
 
-        gsap.fromTo('.services-brand-identity', { y: 2000, scale: 1.2, rotate: 30 },  { 
+        gsap.fromTo('.services-brand-identity', { y: 700, scale: 1.2, rotate: 30 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
                 start: 'top 35%',
-                end: 'top -55%',
+                end: 'top -70%',
                 scrub: true
             }
         });
 
-        gsap.fromTo('.services-social-media', { y: 3000, scale: 1.2, rotate: -40 },  { 
+        gsap.fromTo('.services-social-media', { y: 700, scale: 1.2, rotate: -40 },  { 
             y: 0,
             scale: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: '.services-mobile',
-                start: 'top 15%',
-                end: 'top -75%',
+                start: 'top 5%',
+                end: 'top -100%',
                 scrub: true
             }
         });

@@ -13,27 +13,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSectionMobile() {
-
-        // useLayoutEffect(() => {
-    
-        //     gsap.fromTo(".hm-abt-card-mobile",
-        //     {
-        //         opacity: 0,
-        //         scale: 0.5,
-        //         xPercent: 50,
-        //     }, {
-        //         opacity: 1,
-        //         xPercent: 0,
-        //         scale: 1,
-        //         duration: 0.8,
-        //         delay: 0.2,
-        //         scrollTrigger: {
-        //             trigger: ".hm-abt-card-mobile",
-        //             start: "top 80%",
-        //         }
-        //     } );
-            
-        // }, []);
     
         useLayoutEffect(() => {
         // Create a GSAP Context for proper cleanup in React/Next.js

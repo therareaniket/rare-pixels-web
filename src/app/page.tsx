@@ -45,11 +45,13 @@ export default function Home() {
 
 	return (
 		<main>
-			<ReactLenis root />
+			{/* <ReactLenis root /> */}
 
 			{/* DESKTOP */}
 			{!isSmallScreen && (
 				<div>
+					<ReactLenis root />
+					
 					<div data-theme-color="white">
 						<TestimonialSectionDesktop />
 					</div>

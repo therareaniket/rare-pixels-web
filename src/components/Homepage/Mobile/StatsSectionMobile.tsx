@@ -18,12 +18,9 @@ export default function StatsSectionMobile() {
     const mobileMapRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        animateMap(
-            mobileMapRef.current,
-            ".stats-mob-card-6"
-        );
-        }, []);
-    
+        animateMap(mobileMapRef.current, ".stats-mob-card-6");
+    }, []);
+
     return (
         <>
             <section className="section" style={{ backgroundColor: "#040E36", color: "white" }}>
@@ -46,7 +43,7 @@ export default function StatsSectionMobile() {
                                 <PieYellow />
                             </div>
 
-                            <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p className=" text-light-grey text-16 text-rg">Every solution is purpose-built. Never recycled. Always intentional.</p>
                         </div>
 
                         <div className="stats-mob-hr"></div>
@@ -60,7 +57,7 @@ export default function StatsSectionMobile() {
                                 <RadarChart />
                             </div>
 
-                            <p className="text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p className="text-light-grey text-16 text-rg">From startups to enterprises. Solutions shaped for every sector.</p>
                         </div>
 
                         <div className="stats-mob-hr"></div>
@@ -73,7 +70,7 @@ export default function StatsSectionMobile() {
                                 <SpeedChart />
                             </div>
 
-                            <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p className=" text-light-grey text-16 text-rg">Relationships built on results. Trust earned through consistency.</p>
                         </div>
 
                         <div className="stats-mob-hr"></div>
@@ -86,7 +83,7 @@ export default function StatsSectionMobile() {
                                 <GlobalMap ref={mobileMapRef} />
                             </div>
 
-                            <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p className=" text-light-grey text-16 text-rg">Ideas built without borders. Creating impact across markets.</p>
                         </div>
 
                         <div className="stats-mob-hr"></div>
@@ -100,7 +97,7 @@ export default function StatsSectionMobile() {
                                 <PieGray />
                             </div>
 
-                            <p className=" text-light-grey text-16 text-rg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                            <p className=" text-light-grey text-16 text-rg">Precision in every milestone. Delivered when it matters most.</p>
                         </div>
 
                         <div className="stats-mob-hr"></div>
