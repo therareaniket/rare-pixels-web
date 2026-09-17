@@ -22,6 +22,8 @@ export default function AboutTimeline () {
         gsap.set(".year-detail-info .h4, .details-info-text img,  .details-info-text p", { opacity: 0, scale: 0.5 });
 
 
+
+
         // FOR TIMELINE OF YEAR 2024
         gsap.to(".years-dot-2024",
             {   right: dotPosition,
@@ -65,6 +67,9 @@ export default function AboutTimeline () {
             }
         )
 
+                    gsap.to({}, {
+                duration: 3
+            });
 
         // FOR TIMELINE OF YEAR 2025
         gsap.to(".years-dot-2025",
@@ -218,7 +223,7 @@ export default function AboutTimeline () {
 
                         <div className="timeline-subtitles">
                             <div className="bold-subtitle">
-                                <p className="h5 text-sb text-white">It's a journey of learning, growing, and continuously evolving to create work that truly matters.</p>
+                                <p className="h5 text-sb text-white">It&aps;s a journey of learning, growing, and continuously evolving to create work that truly matters.</p>
                             </div>
 
                             <div className="regular-subtitle">
@@ -257,7 +262,7 @@ export default function AboutTimeline () {
                         </div>
 
                         <div className="year-detail-info year-detail-info-2026">
-                            <h3 className="h4 text-sb text-white">Shaping What's Next</h3>
+                            <h3 className="h4 text-sb text-white">Shaping What&apos;s Next</h3>
 
                             <div className="details-info-text"> 
                                 <Image src="/images/aboutpage/about-timeline/timeline-2026.svg" alt="timeline-2024" width={200} height={260} className="timeline-image"></Image>
@@ -297,7 +302,7 @@ export default function AboutTimeline () {
                                 <Image src="/images/aboutpage/about-timeline/timeline-2026.svg" alt="timeline-2024" width={200} height={260} className="timeline-image"></Image>
 
                                 <div>
-                                    <h3 className="h4 text-sb text-white">Shaping What's Next</h3>
+                                    <h3 className="h4 text-sb text-white">Shaping What&apos;s Next</h3>
 
                                     <p className="text-18 text-white">From the very beginning, our focus extended beyond aesthetics. Every project was approached with a commitment to understanding business goals, user needs, and long-term growth opportunities. This foundation shaped the way we work today combining creativity with execution to deliver experiences that are both visually compelling and strategically effective.</p>
                                 </div>

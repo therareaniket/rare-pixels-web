@@ -297,9 +297,7 @@ export default function AboutLifeAtRpdSectionDesktop() {
 
         if (!tabletWrapper) return;
 
-        const tabletMediaQuery = window.matchMedia(
-            '(max-width: 839px)'
-        );
+        const tabletMediaQuery = window.matchMedia('(max-width: 839px)');
 
         let tabletContext: gsap.Context | null = null;
         let refreshFrame: number | null = null;
@@ -308,22 +306,12 @@ export default function AboutLifeAtRpdSectionDesktop() {
             if (!tabletMediaQuery.matches) return;
             if (tabletContext) return;
 
-            tabletContext = gsap.context(() => {
-                const tabletCards = Array.from(
-                    tabletWrapper.querySelectorAll<HTMLDivElement>(
-                        '.rpd-card'
-                    )
-                );
+            tabletContext = gsap.context(() => { 
+                
+                const tabletCards = Array.from( tabletWrapper.querySelectorAll<HTMLDivElement>( '.rpd-card' ));
 
-                tabletCards.forEach((card) => {
-                    const cardColumn = card.closest(
-                        '.rpd-card-col'
-                    );
-
-                    const isLeftColumn =
-                        cardColumn?.classList.contains(
-                            'rpd-card-col-1'
-                        );
+                tabletCards.forEach((card) => { const cardColumn = card.closest('.rpd-card-col' );
+                    const isLeftColumn = cardColumn?.classList.contains( 'rpd-card-col-1' );
 
                     gsap.set(card, {
                         transformOrigin: 'center center',
@@ -398,10 +386,7 @@ export default function AboutLifeAtRpdSectionDesktop() {
             startTabletAnimation();
         }
 
-        tabletMediaQuery.addEventListener(
-            'change',
-            handleTabletBreakpointChange
-        );
+        tabletMediaQuery.addEventListener( 'change', handleTabletBreakpointChange );
 
         return () => {
             tabletMediaQuery.removeEventListener(

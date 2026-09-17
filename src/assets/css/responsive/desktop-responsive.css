@@ -1331,6 +1331,10 @@
 	.process-element { width: 220px; height: 220px; }
 	.process-element img{ width: 100%; height: 100%; object-fit: contain; }
 
+	/* project section */
+
+		.process-section-sticky { height: calc(100vh * 11); }
+
 
 	/* about page */
 
@@ -2131,6 +2135,22 @@
 	.cnct-form-checkbox-option label { padding: 10px 20px !important; }
 
 	.contact-wave-animated { stroke-width: 1px; }
+
+	.services-why-rare-card-1-text { display: none; }
+	.services-why-rare-text h3 { font-size: 26px; line-height: 32px; }
+
+	.services-why-choose-rare-1 .services-why-rare-text { width: 170px; left: 30px; bottom: 30px; }
+
+	.services-why-choose-rare-card-wrapper { justify-content: center; }
+	.services-why-choose-rare-2 { transform: translateY(-50px); }
+
+	.services-why-rare-card-1 { gap: 30px; }
+	.services-why-rare-card-1-text { margin-right: 30px; }
+
+	.services-why-choose-rare-1 { width: 260px; height: 390px; }
+	.services-why-choose-rare-2 { width: 260px; height: 194px; }
+	.services-why-choose-rare-3 { width: 260px; height: 294px; border-radius: 70px; }
+	.services-why-choose-rare-2 .services-why-rare-text { width: 194px; left: 30px; top: 30px; }
 } 
 
 @media (max-width: 1023px) {
@@ -2334,6 +2354,21 @@
 	.inquiry-name-tab textarea { width: 87%; }
 
 	.cnct-what-happens-pointer-wrapper-tablet { gap: 40px; }
+
+	.services-why-choose-rare-1 { width: 220px; height: 330px; }
+	.services-why-choose-rare-2 { width: 220px; height: 164px; transform: translateY(-40px); }
+	.services-why-choose-rare-3 { width: 220px; height: 249px; }
+
+	.services-why-rare-text h3 { font-size: 22px; line-height: 30px; }
+
+	.services-why-choose-rare-2 .services-why-rare-text { width: 164px; left: 40px; }
+	.services-why-choose-rare-3 .services-why-rare-text { width: 130px; }
+
+	/* .services-why-rare-card-1-text { display: flex; }
+	.services-why-choose-rare-card-wrapper { justify-content: flex-start; } */
+
+	.services-why-rare-card-1-text { width: 227px; }
+
 }
 
 @media (max-width: 991px) {
@@ -2730,6 +2765,15 @@
 	.cnct-form-checkbox-option input { width: max-content !important; }
 
 	/* .cnct-what-happens, .cnct-what-happens.active { height: 110px; } */
+
+	.services-why-choose-rare-1 { width: 200px; height: 300px; }
+	.services-why-choose-rare-2 { width: 200px; height: 150px; }
+	.services-why-choose-rare-3 { width: 200px; height: 226px; border-radius: 65px; }
+
+	.services-why-rare-text h3 { font-size: 22px; line-height: 28px; }
+
+	.services-why-choose-rare-1 .services-why-rare-text { bottom: 20px; left: 20px; }
+	.services-why-choose-rare-2 .services-why-rare-text { top: 20px; }
 }
 
 @media (max-width: 767px) {

@@ -17,101 +17,42 @@ export default function WhyRarePixelsDesktop() {
         const mm = gsap.matchMedia();
 
         mm.add("(min-width: 1200px)", () => {
-            const points = gsap.utils.toArray( ".tree-section-desktop .why-rare-point");
+            const points = gsap.utils.toArray(".tree-section-desktop .why-rare-point");
 
-            gsap.set("#treeReveal", {
-                attr: {
-                    y: 500,
-                    height: 0,
-                },
-            });
+            gsap.set("#treeReveal", { attr: { y: 500, height: 0, }, });
+            gsap.set(points, { autoAlpha: 0, y: 0, });
+            gsap.set(".tree-section-desktop .card-reveal", { xPercent: 0, });
 
-            gsap.set(points, {
-                autoAlpha: 0,
-                y: 0,
-            });
+            const tl = gsap.timeline({ paused: true, });
 
-            gsap.set(".tree-section-desktop .card-reveal", {
-                xPercent: 0,
-            });
+            tl.to("#treeReveal", { attr: { y: 0, height: 500, }, duration: 5, ease: "none", });
 
-            const tl = gsap.timeline({
-                paused: true,
-            });
+            tl.to({}, { duration: 2, });
 
-            tl.to("#treeReveal", {
-                attr: {
-                    y: 0,
-                    height: 500,
-                },
-                duration: 5,
-                ease: "none",
-            });
+            tl.set(".why-rare-point-1", { autoAlpha: 1, y: 0, });
+            tl.to(".why-rare-point-1 .card-reveal", { xPercent: -100, duration: 4, ease: "power2.inOut", });
 
-            tl.to({}, {
-                duration: 2,
-            });
+            tl.set(".why-rare-point-2", { autoAlpha: 1, y: 0, });
+            tl.to(".why-rare-point-2 .card-reveal", { xPercent: 100, duration: 4, ease: "power2.inOut", });
 
-            tl.set(".why-rare-point-1", {
-                autoAlpha: 1,
-                y: 0,
-            });
+            tl.set(".why-rare-point-3", { autoAlpha: 1, y: 0, });
+            tl.to(".why-rare-point-3 .card-reveal", { xPercent: -100, duration: 4, ease: "power2.inOut", });
 
-            tl.to(".why-rare-point-1 .card-reveal", {
-                xPercent: -100,
-                duration: 4,
-                ease: "power2.inOut",
-            });
-
-            tl.set(".why-rare-point-2", {
-                autoAlpha: 1,
-                y: 0,
-            });
-
-            tl.to(".why-rare-point-2 .card-reveal", {
-                xPercent: 100,
-                duration: 4,
-                ease: "power2.inOut",
-            });
-
-            tl.set(".why-rare-point-3", {
-                autoAlpha: 1,
-                y: 0,
-            });
-
-            tl.to(".why-rare-point-3 .card-reveal", {
-                xPercent: -100,
-                duration: 4,
-                ease: "power2.inOut",
-            });
-
-            tl.set(".why-rare-point-4", {
-                autoAlpha: 1,
-                y: 0,
-            });
-
-            tl.to(".why-rare-point-4 .card-reveal", {
-                xPercent: 100,
-                duration: 4,
-                ease: "power2.inOut",
-            });
-
-            let highestProgress = 0;
+            tl.set(".why-rare-point-4", { autoAlpha: 1, y: 0, });
+            tl.to(".why-rare-point-4 .card-reveal", { xPercent: 100, duration: 4, ease: "power2.inOut", });
 
             const desktopTrigger = ScrollTrigger.create({
                 trigger: ".tree-section-desktop",
                 start: "top 40%",
                 end: "+=3000",
+                scrub: true,
                 onUpdate: (self) => {
-                    if (self.progress > highestProgress) {
-                        highestProgress = self.progress;
-                        gsap.to(tl, {
-                            progress: highestProgress,
-                            duration: 0.3,
-                            ease: "power1.out",
-                            overwrite: true,
-                        });
-                    }
+                    gsap.to(tl, {
+                        progress: self.progress,
+                        duration: 0.3,
+                        ease: "power1.out",
+                        overwrite: true,
+                    });
                 },
             });
 

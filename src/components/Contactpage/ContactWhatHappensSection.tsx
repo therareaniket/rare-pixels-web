@@ -85,8 +85,6 @@ export default function ContactWhatHappensSection() {
         const mm = gsap.matchMedia();
 
         mm.add("(max-width: 1199px)", () => {
-            const cards = gsap.utils.toArray<HTMLDivElement>(".cnct-what-happens-tablet");
-
             gsap.to(".cnct-what-happens-tablet-1", {
                 height: "auto",
                 duration: 2,
@@ -105,7 +103,7 @@ export default function ContactWhatHappensSection() {
                 ease: "power3.inOut",
                 scrollTrigger: {
                     trigger: ".cnct-what-happens-tablet-2",
-                    start: "top 30%",
+                    start: "top 60%",
                     once: true,
                     invalidateOnRefresh: true,
                 }
@@ -117,7 +115,7 @@ export default function ContactWhatHappensSection() {
                 ease: "power3.inOut",
                 scrollTrigger: {
                     trigger: ".cnct-what-happens-tablet-3",
-                    start: "top 30%",
+                    start: "top 40%",
                     once: true,
                     invalidateOnRefresh: true,
                 }
@@ -129,18 +127,11 @@ export default function ContactWhatHappensSection() {
                 ease: "power3.inOut",
                 scrollTrigger: {
                     trigger: ".cnct-what-happens-tablet-4",
-                    start: "top 30%",
+                    start: "top 20%",
                     once: true,
                     invalidateOnRefresh: true,
                 }
             })
-
-
-            return () => {
-                gsap.set(cards, {
-                    clearProps: "height,transform",
-                });
-            };
         });
 
         return () => mm.revert();

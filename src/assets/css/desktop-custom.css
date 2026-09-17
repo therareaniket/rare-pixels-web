@@ -716,7 +716,8 @@ body.menu-open {
 
 .project-controls {  width: max-content; padding: 6px; border-radius: 20px; font-size: 12px; line-height: 1; background-color: #ededed; margin: 0 auto; margin-top: 30px; }
 .project-control-btn { padding: 8px 12px; border-radius: 14px; }
-.project-control-btn.prev-btn { transform: rotate(-180deg); }
+.project-control-btn.prev-btn { transform: rotate(-180deg); display: block; }
+.icon-hero-cta-arrow:before { display: block; }
 .project-control-btn:hover { background-color: #f6f6f6; }
 
 

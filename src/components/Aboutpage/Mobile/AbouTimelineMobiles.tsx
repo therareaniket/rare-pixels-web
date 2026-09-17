@@ -43,7 +43,7 @@ export default function AboutTimelineMobile(){
                         <div className="mob-tl-headings">
                             <h2 className="text-sb">Our story is more than a timeline of milestones. </h2>
 
-                            <p className="bold-subtitle text-md">It's a journey of learning, growing, and continuously evolving to create work that truly matters.</p>
+                            <p className="bold-subtitle text-md">It&apos;s a journey of learning, growing, and continuously evolving to create work that truly matters.</p>
 
                             <p className="">A journey shaped by creativity, collaboration, and continuous growth, reflecting the milestones, experiences, and values that have defined RarePixels from day one.</p>
                         </div>
@@ -72,7 +72,7 @@ export default function AboutTimelineMobile(){
                             </div>
 
                             <div className="mob-tl-detls mob-tl-detls-2026">
-                                <h3 className="h5 text-sb">Shaping What's Next</h3>
+                                <h3 className="h5 text-sb">Shaping What&apos;s Next</h3>
 
                                 <p>Today, RarePixels continues to evolve as a creative and technology partner for ambitious brands. We remain focused on helping businesses create meaningful experiences through innovation, collaboration, and purposeful execution. Every project we take on reflects our commitment to quality, creativity, and delivering value that extends far beyond the final deliverable.</p>
                             </div>
