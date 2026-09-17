@@ -96,7 +96,6 @@ export default function IndustriesSectionMobile() {
             const cards = gsap.utils.toArray<HTMLDivElement>(".industry-item");
             if (!cards.length) return;
 
-            // Pre-position slides inside GSAP instead of inline dynamic styles
             cards.forEach((card, i) => {
                 gsap.set(card, {
                     position: "absolute",
@@ -109,7 +108,6 @@ export default function IndustriesSectionMobile() {
                 });
             });
 
-            // Master timeline for scrubbing stacked slides
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
@@ -131,7 +129,6 @@ export default function IndustriesSectionMobile() {
                     const nextCard = cards[i + 1];
                     const nextTheme = nextCard.getAttribute("data-theme-color");
 
-                    // Slide active+1 up to overlay active slide
                     tl.to(
                         nextCard,
                         {
@@ -175,7 +172,7 @@ export default function IndustriesSectionMobile() {
                                 style={{ backgroundColor: industry.cardBg }}
                             >
                                 <div className="industries-image-wrapper" >
-                                    <video src={industry.video} autoPlay loop muted className="industries-video prev-video" />
+                                    <video src={industry.video} autoPlay loop muted playsInline className="industries-video prev-video" />
 
                                     <svg className="industries-desktop-pixel-1" width="170" height="150" viewBox="0 0 170 150" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="50" height="50" fill="currentColor"/>

@@ -32,47 +32,26 @@ export default function ProjectsSectionDesktop() {
     const prevIndexRef = useRef<number>(0);
 
     const handleNext = () => {
-        setActiveIndex((prev) => {
-            // if (prev >= PROJECT_DATA.length - 1) {
-            //     setDirection(-1);
-            //     return prev - 1;
-            // }
-            if (prev <= 0) {
-                setDirection(1);
-                return prev + 1;
-            }
-            return prev + direction;
-        });
+        setDirection(1);
+
+        setActiveIndex((prev) =>
+            Math.min(prev + 1, PROJECT_DATA.length - 1)
+        );
     };
 
     const handlePrev = () => {
-        setActiveIndex((prev) => {
-            if (prev <= 0) {
-                setDirection(1);
-                return prev + 1;
-            }
-            // if (prev >= PROJECT_DATA.length - 1) {
-            //     setDirection(-1);
-            //     return prev - 1;
-            // }
-            return prev - direction;
-        });
+        setDirection(-1);
+
+        setActiveIndex((prev) =>
+            Math.max(prev - 1, 0)
+        );
     };
 
     const handleSetActive = (index: number) => {
-        if (index > activeIndex) {
-            setDirection(1);
-        } else if (index < activeIndex) {
-            setDirection(-1);
-        }
+        if (index === activeIndex) return;
 
+        setDirection(index > activeIndex ? 1 : -1);
         setActiveIndex(index);
-
-        if (index === PROJECT_DATA.length - 1) {
-            setDirection(-1);
-        } else if (index === 0) {
-            setDirection(1);
-        }
     };
 
     useEffect(() => {
@@ -132,30 +111,31 @@ export default function ProjectsSectionDesktop() {
         <section className="section projects-section">
             <div className="container">
                 <div className="project-titles">
-                        <h2 className="text-sb">Our Projects</h2>
-                        <p className="text-18">A curated selection of work that reflects how we design, build, and deliver impactful digital experiences.</p>
+                    <h2 className="text-sb">Our Projects</h2>
+                    <p className="text-18">A curated selection of work that reflects how we design, build, and deliver impactful digital experiences.</p>
                 </div>
 
                 <div className="projects-lists-wrapper">
                     <div className="projects-lists">
                         {PROJECT_DATA.map((project, index) => (
-                                <ProjectCard
-                                    key={project.id}
-                                    ref={(el) => { cardRefs.current[index] = el; }}
-                                    project={project}
-                                    index={index}
-                                    isActive={index === activeIndex}
-                                    isLast={activeIndex === PROJECT_DATA.length - 1}
-                                    direction={direction}
-                                    onNext={handleNext}
-                                    onSetActive={handleSetActive}
-                                />
+                            <ProjectCard
+                                key={project.id}
+                                ref={(el) => { cardRefs.current[index] = el; }}
+                                project={project}
+                                index={index}
+                                isActive={index === activeIndex}
+                                isLast={activeIndex === PROJECT_DATA.length - 1}
+                                direction={direction}
+                                onNext={handleNext}
+                                onPrev={handlePrev}
+                                onSetActive={handleSetActive}
+                            />
                         ))}
                     </div>
                 </div>
 
-                <div className="project-controls" style={{ display: "flex",}}>  
-                    <button  onClick={handlePrev} disabled={activeIndex === 0} className="project-control-btn prev-btn" style={{ cursor: activeIndex === 0 ? "not-allowed" : "pointer", opacity: activeIndex === 0 ? 0.5 : 1 }}>
+                <div className="project-controls" style={{ display: "flex", }}>
+                    <button onClick={handlePrev} disabled={activeIndex === 0} className="project-control-btn prev-btn" style={{ cursor: activeIndex === 0 ? "not-allowed" : "pointer", opacity: activeIndex === 0 ? 0.5 : 1 }}>
                         <span className="icon-hero-cta-arrow"></span>
                     </button>
 
@@ -175,6 +155,7 @@ interface ProjectCardProps {
     isLast: boolean;
     direction: 1 | -1;
     onNext: () => void;
+    onPrev: () => void;
     onSetActive: (index: number) => void;
 }
 
@@ -183,8 +164,8 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
     index,
     isActive,
     isLast,
-    direction,
     onNext,
+    onPrev,
     onSetActive
 }, ref) => {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -221,7 +202,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
         };
     }, [isHovering]);
 
-    const handleMouseEnter = ( event: React.MouseEvent<HTMLDivElement> ) => {
+    const handleMouseEnter = (event: React.MouseEvent<HTMLDivElement>) => {
         const cardRect = event.currentTarget.getBoundingClientRect();
         const mouseX = event.clientX - cardRect.left;
         const mouseY = event.clientY - cardRect.top;
@@ -243,11 +224,11 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
 
             return;
         }
-        setCursorPosition({ x: mouseX, y: mouseY,});
+        setCursorPosition({ x: mouseX, y: mouseY, });
         setIsHovering(true);
     };
 
-    const handleMouseMove = ( event: React.MouseEvent<HTMLDivElement> ) => {
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         const cursor = cursorRef.current;
         if (!cursor) return;
 
@@ -255,7 +236,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
         const mouseX = event.clientX - cardRect.left;
         const mouseY = event.clientY - cardRect.top;
 
-        if (cursorXTo.current && cursorYTo.current) { cursorXTo.current(mouseX); cursorYTo.current(mouseY); } 
+        if (cursorXTo.current && cursorYTo.current) { cursorXTo.current(mouseX); cursorYTo.current(mouseY); }
         else { gsap.set(cursor, { left: mouseX, top: mouseY, }); }
     };
 
@@ -275,13 +256,23 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
     };
 
     const handleClick = () => {
-        if (isActive) { onNext(); } 
-        else { onSetActive(index); }
+        if (!isActive) {
+            onSetActive(index);
+            return;
+        }
+
+        if (isLast) {
+            onPrev();
+            return;
+        }
+
+        onNext();
     };
 
     const getCursorLabel = () => {
         if (!isActive) return "View";
-        if (isLast || direction === -1) return "Prev";
+        if (isLast) return "Prev";
+
         return "Next";
     };
 
