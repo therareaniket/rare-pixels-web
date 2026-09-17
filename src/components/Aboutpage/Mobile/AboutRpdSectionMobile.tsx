@@ -26,15 +26,11 @@ export default function AboutRpdSectionMobile() {
             const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
 
             tl.to(".rpd-mobile-card-wrapper", { scale: 1, y: 0, duration: 4 });
-            // tl.to({}, { duration: 0.6 });
 
             tl.addLabel("mobileCardExpansion");
             tl.to(".rpd-mobile-card-1", { width: css.getPropertyValue("--card-1-width").trim(), duration: 2 }, "mobileCardExpansion" );
             tl.to(".rpd-mobile-card-2", { width: css.getPropertyValue("--card-2-width").trim(), marginTop: css.getPropertyValue("--card-2-mt").trim(), duration: 2 }, "mobileCardExpansion");
             tl.to(".rpd-mobile-card-3", { width: css.getPropertyValue("--card-3-width").trim(), marginTop: css.getPropertyValue("--card-3-mt").trim(), duration: 2 }, "mobileCardExpansion");
-
-            // tl.to(".rpd-mobile-card-wrapper", { width: "100%", justifyContent: "space-between", duration: 0.5 });
-            // tl.to({}, { duration: 0.5 });
             tl.to(".rpd-mobile-card, .rpd-mobile-card-wrapper", { opacity: 0, duration: 0.6 });
 
             tl.set(".rpd-mobile-card-wrapper", { flexDirection: "column", opacity: 1 });

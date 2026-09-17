@@ -245,34 +245,34 @@ export default function ProcessSectionMobile() {
     useGSAP(() => {
         gsap.set(".procs-card-ttl img", { opacity: 0 });
 
-        gsap.fromTo(".procs-mob-card-1", 
-            { height: "35px" }, 
-            { height: "175px", duration: 0.8, ease: "power3.inOut", scrollTrigger: { trigger: ".process-section-mobile", start: "top 200px", end: "top top" } }
+        gsap.fromTo(".procs-mob-card-1",
+            { height: "35px" },
+            { height: "175px", duration: 1.2, ease: "power3.inOut", scrollTrigger: { trigger: ".process-section-mobile", start: "top 50%", } }
         );
 
-        gsap.fromTo(".procs-mob-card-2", 
-            { height: "35px" }, 
-            { height: "175px", duration: 0.8, ease: "power3.inOut", delay: 0.5, scrollTrigger: { trigger: ".process-section-mobile", start: "top -100px", end: "top -300px" } }
+        gsap.fromTo(".procs-mob-card-2",
+            { height: "35px" },
+            { height: "175px", duration: 1.2, ease: "power3.inOut",  scrollTrigger: { trigger: ".process-section-mobile", start: "top 30%",  } }
         );
 
         gsap.fromTo(".procs-mob-card-3", 
-            { height: "35px" }, 
-            { height: "175px", duration: 0.8, ease: "power3.inOut", delay: 0.5, scrollTrigger: { trigger: ".process-section-mobile", start: "top -300px",  end: "top -500px" } }
+            { height: "35px" },
+            { height: "175px", duration: 1.2, ease: "power3.inOut",  scrollTrigger: { trigger: ".process-section-mobile", start: "top -50px", } }
         );
 
         gsap.fromTo(".procs-mob-card-4", 
             { height: "35px" }, 
-            { height: "175px", duration: 0.8, ease: "power3.inOut", delay: 0.5, scrollTrigger: { trigger: ".process-section-mobile", start: "top -500px",  end: "top -700px" } }
+            { height: "175px", duration: 1.2, ease: "power3.inOut", scrollTrigger: { trigger: ".process-section-mobile", start: "top -200px", } }
         );
         
         gsap.fromTo(".procs-mob-card-5", 
             { height: "35px" }, 
-            { height: "150px", duration: 0.8, ease: "power3.inOut", delay: 0.5, scrollTrigger: { trigger: ".process-section-mobile", start: "top -700px",  end: "top -900px"} }
+            { height: "150px", duration: 1.2, ease: "power3.inOut",  scrollTrigger: { trigger: ".process-section-mobile", start: "top -450px", } }
         );
 
         gsap.fromTo(".procs-mob-card-6", 
             { height: "35px" },
-            { height: "175px", duration: 0.8, ease: "power3.inOut", delay: 0.5, scrollTrigger: { trigger: ".process-section-mobile", start: "top -900px",  end: "top -1100px"} }
+            { height: "175px", duration: 1.2, ease: "power3.inOut", scrollTrigger: { trigger: ".process-section-mobile", start: "top -650px",} }
         );
 
         gsap.to(".procs-mob-card-1 .procs-card-ttl img", { opacity: 1, delay: 1, duration: 0.5,  scrollTrigger: { trigger: ".process-section-mobile", start: "top 200px", }  })

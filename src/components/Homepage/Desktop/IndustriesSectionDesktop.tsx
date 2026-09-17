@@ -92,10 +92,7 @@ export default function IndustriesSectionDesktop() {
         if (!section || !track) return;
 
         const ctx = gsap.context(() => {
-            const container =
-                section.querySelector<HTMLDivElement>(
-                    ".industries-scroll-container"
-                );
+            const container = section.querySelector<HTMLDivElement>( ".industries-scroll-container");
 
             if (!container) return;
 
