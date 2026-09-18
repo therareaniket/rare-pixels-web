@@ -367,13 +367,9 @@
 	.services-why-choose-rare-2 { width: 350px; height: 262px; transform: translateY(-80px); }
 	.services-why-choose-rare-3 { width: 350px; height: 395px; }
 
-	.services-how-we-work .tab-header { width: 225px; height: 65px; }
+	.services-how-we-work-cards { height: 705px; }
 
-	.services-how-we-work-2 .tab-header { left: 225px; }
-	.services-how-we-work-3 .tab-header { left: 450px; }
-	.services-how-we-work-4 .tab-header { left: 675px; }
-	.services-how-we-work-5 .tab-header { left: 900px; }
-	.services-how-we-work-6 .tab-header { left: 1135px; }
+	.services-how-we-work .card-body h3 { font-size: 60px; line-height: 68px; }
 
 }
 
@@ -791,21 +787,18 @@
 	.services-why-choose-rare-2 { width: 320px; height: 239px; transform: translateY(-65px); border-radius: 0 0 0 180px; }
 	.services-why-choose-rare-3 { width: 320px; height: 362px; }
 
-	.services-how-we-work-1 { height: 705px; }
-	.services-how-we-work-2 { height: 640px; }
-	.services-how-we-work-3 { height: 575px; }
-	.services-how-we-work-4 { height: 510px; }
-	.services-how-we-work-5 { height: 445px; }
-	.services-how-we-work-6 { height: 380px; }
+	.services-how-we-work .tab-header { height: 55px; }
 
-	.services-how-we-work .tab-header { width: 205px; }
+	.services-how-we-work-2 { top: 50px; }
+	.services-how-we-work-3 { top: 100px; }
+	.services-how-we-work-4 { top: 150px; }
+	.services-how-we-work-5 { top: 200px; }
+	.services-how-we-work-6 { top: 250px; }
 
-	.services-how-we-work-2 .tab-header { left: 215px; }
-	.services-how-we-work-3 .tab-header { left: 425px; }
-	.services-how-we-work-4 .tab-header { left: 635px; }
-	.services-how-we-work-5 .tab-header { left: 840px; }
-	.services-how-we-work-6 .tab-header { left: 1043px; }
+	.services-how-we-work-cards { height: 570px; }
 
+	.services-how-we-work .card-body h3 { font-size: 52px; line-height: 52px; }
+	.services-how-we-work .card-body { padding: 60px 40px 40px; }
 }
 
 @media (max-width: 1439px) {
@@ -1188,6 +1181,11 @@
 
 	.services-why-rare-card-1-text { width: 260px; }
 
+	.services-how-we-work-cards { --card-movement-distance: 220px; height: 545px; }
+	.services-how-we-work .card-body h3 { font-size: 48px; line-height: 48px; }
+	.services-how-we-work .card-body { padding: 45px 40px 40px; }
+	.services-how-we-work p { width: 710px; }
+
 }
 
 @media (max-width: 1359px) {
@@ -1569,6 +1567,20 @@
 	/* project section */
 
 	.process-section-sticky { height: calc(100vh * 12); }
+	.services-how-we-work .card-body h3 { font-size: 38px; line-height: 38px; }
+
+	.services-how-we-work .tab-header { width: 210px; height: 40px; }
+	.services-how-we-work .card-body { padding: 45px 30px 30px; }
+
+	.services-how-we-work-2 { top: 40px; }
+	.services-how-we-work-3 { top: calc( 40px * 2 ); }
+	.services-how-we-work-4 { top: calc( 40px * 3 ); }
+	.services-how-we-work-5 { top: calc( 40px * 4 ); }
+	.services-how-we-work-6 { top: calc( 40px * 5 ); }
+
+	.services-how-we-work-cards { height: 460px; }
+	.services-how-we-work-inner { top: -90px; }
+
 }
 
 @media (max-width: 1199px) {
@@ -2174,6 +2186,16 @@
 	.services-why-choose-rare-2 { width: 260px; height: 194px; }
 	.services-why-choose-rare-3 { width: 260px; height: 294px; border-radius: 70px; }
 	.services-why-choose-rare-2 .services-why-rare-text { width: 194px; left: 30px; top: 30px; }
+
+	.services-how-we-work-cards { --card-movement-distance: 290px; height: 690px; margin-top: 40px; }
+	.services-how-we-work .card-body { padding: 60px; }
+	.services-how-we-work .tab-header { width: 290px; height: 72px; }
+
+	.services-how-we-work-2 { top: 65px; }
+	.services-how-we-work-3 { top: calc( 65px * 2 ); }
+	.services-how-we-work-4 { top: calc( 65px * 3 ); }
+	.services-how-we-work-5 { top: calc( 65px * 4 ); }
+	.services-how-we-work-6 { top: calc( 65px * 5 ); }
 } 
 
 @media (max-width: 1023px) {
@@ -2392,6 +2414,10 @@
 
 	.services-why-rare-card-1-text { width: 227px; }
 
+	.services-how-we-work p { width: 100%; }
+	.services-how-we-work-cards { height: 710px; }
+	.services-how-we-work .card-body { padding: 60px 50px 50px; }
+	.services-how-we-work-title p { width: 80%; }
 }
 
 @media (max-width: 991px) {
@@ -2797,6 +2823,19 @@
 
 	.services-why-choose-rare-1 .services-why-rare-text { bottom: 20px; left: 20px; }
 	.services-why-choose-rare-2 .services-why-rare-text { top: 20px; }
+
+	.services-how-we-work .card-body h3 { font-size: 46px; line-height: 46px; }
+
+	.services-how-we-work-title p { width: 100%; }
+
+	.services-how-we-work .tab-header { height: 60px; }
+	.services-how-we-work-2 { top: 55px; }
+	.services-how-we-work-3 { top: calc( 55px * 2 ); }
+	.services-how-we-work-4 { top: calc( 55px * 3 ); }
+	.services-how-we-work-5 { top: calc( 55px * 4 ); }
+	.services-how-we-work-6 { top: calc( 55px * 5 ); }
+
+	.services-how-we-work-cards { height: 630px; }
 }
 
 @media (max-width: 767px) {
@@ -2823,7 +2862,6 @@
 	h2, .h2 { font-size: 30px; line-height: 38px; }
 	h3, .h3 { font-size: 28px; line-height: 36px; }
 	h4, .h4 { font-size: 26px; line-height: 34px; }
-	h5, .h5 { font-size: 24px; }
 	h6, .h6 { font-size: 18px; line-height: 26px; }
 
 	.text-18{ font-size: 14px; line-height: 22px; }
@@ -2979,6 +3017,17 @@
 
 	.cnct-what-happens-tablet span { font-size: 124px; line-height: 124px; }
 	.cnct-what-happens-text-tablet { padding-top: 20px; }
+
+	.services-how-we-work .card-body h3 { font-size: 42px; line-height: 42px; }
+	.services-how-we-work .card-body { padding: 50px 40px 40px; }
+
+	.services-how-we-work-2 { top: 50px; }
+	.services-how-we-work-3 { top: calc( 50px * 2 ); }
+	.services-how-we-work-4 { top: calc( 50px * 3 ); }
+	.services-how-we-work-5 { top: calc( 50px * 4 ); }
+	.services-how-we-work-6 { top: calc( 50px * 5 ); }
+
+	.services-how-we-work-cards { height: 575px; }
 }
 
 @media (max-width: 639px) {
@@ -3109,6 +3158,8 @@
 	.founder-img img { margin: 0 auto; }
 	.team-details { width: 100%; padding: 15px 25px; padding-bottom: 30px; }
 	.team-addesing { flex-direction: column-reverse; align-items: center; justify-content: center; }
+
+	.services-how-we-work-cards { --card-movement-distance: 230px; }
 }
 
 @media (max-width: 575px) {
@@ -3364,4 +3415,18 @@
 
 	.cnct-what-happens-tablet span { font-size: 110px; line-height: 110px; }
 	.cnct-what-happens-pointer-wrapper-tablet { gap: 40px; }
+
+	.services-how-we-work .tab-header { width: 190px; height: 45px; }
+
+	.services-how-we-work-2 { top: 40px; }
+	.services-how-we-work-3 { top: calc( 40px * 2 ); }
+	.services-how-we-work-4 { top: calc( 40px * 3 ); }
+	.services-how-we-work-5 { top: calc( 40px * 4 ); }
+	.services-how-we-work-6 { top: calc( 40px * 5 ); }
+
+	.services-how-we-work .card-body h3 { font-size: 36px; line-height: 36px; margin-bottom: 16px; }
+
+	.services-how-we-work .card-body { padding:40px 30px 30px; }
+
+	.services-how-we-work-cards { height: 475px; }
 }

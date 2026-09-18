@@ -1499,8 +1499,6 @@ body.menu-open {
     justify-content: center;
     align-self: flex-end;
     margin-left: auto;
-    left: auto;
-    right: inherit;
 }
 
 /* services-how we work-card-1 */
@@ -1633,3 +1631,5 @@ body.menu-open {
 
 .services-how-we-work-section { position: relative; height: calc(100vh * 7); }
 .services-how-we-work-inner { position: sticky; top: 0; height: max-content; }
+
+.services-how-we-work .card-body h3 { font-size: 64px; line-height: 70px; }

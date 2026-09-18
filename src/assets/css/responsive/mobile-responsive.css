@@ -669,6 +669,21 @@
 
     .cnct-what-happens-tablet { height: 100px; }
 
+    .services-how-we-work-title .text-18, .services-how-we-work .tab-header .text-18, .services-how-we-work .card-body .text-18 { font-size: 16px; line-height: 22px; }
+    .services-how-we-work .card-body span { font-size: 18px; line-height: 28px !important; display: block; }
+    .services-how-we-work-title p { gap: 16px; } 
+
+    .services-how-we-work-cards { height: 550px; margin-top: 25px; }
+    .services-how-we-work .tab-header { height: 50px; }
+    .serv-hero-contn { width: 100%; }
+
+    .services-how-we-work-2 { top: 44px; }
+    .services-how-we-work-3 { top: calc( 44px * 2 ); }
+    .services-how-we-work-4 { top: calc( 44px * 3 ); }
+    .services-how-we-work-5 { top: calc( 44px * 4 ); }
+    .services-how-we-work-6 { top: calc( 44px * 5 ); }
+
+    .services-how-we-work .card-body h3 { font-size: 32px; line-height: 32px; }
 }
 
 @media (max-width: 439px) {
@@ -810,6 +825,8 @@
     .cnct-upload-button { gap: 14px; }
 
     .cnct-what-happens-tablet span { font-size: 100px; line-height: 100px; }
+
+    .services-how-we-work-cards { --card-movement-distance: 280px; }
 }   
 
 @media (max-width: 400px) {
@@ -1024,6 +1041,9 @@
     .cnct-what-happens, .cnct-what-happens.active { height: 67px; }
 
     .cnct-what-happens-tablet span { font-size: 100px; line-height: 90px; }
+
+    .services-how-we-work .tab-header { width: 165px; height: 40px; }
+    .services-how-we-work .card-body span { font-size: 16px; line-height: 24px !important; }
 }
 
 @media (max-width: 374px) {
@@ -1117,6 +1137,11 @@
     .contact-form-faq .text-18 { font-size: 14px; line-height: 20px; }
     .faq-accordion .h6, .faq-accordion h3 { font-size: 14px; line-height: 20px; }
     .contact-form-faq .faq-accordion .text-18 { font-size: 12px; line-height: 20px; }
+
+    .services-how-we-work .card-body h3 { font-size: 28px; line-height: 28px; margin-bottom: 10px; }
+
+    .services-how-we-work .card-body span { font-size: 16px; line-height: 24px;  }
+    .services-how-we-work-title .text-18, .services-how-we-work .tab-header .text-18, .services-how-we-work .card-body .text-18 { font-size: 14px; line-height: 20px; }
 }
 
 @media (max-width: 359px) {

@@ -4,6 +4,11 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import "@/assets/css/desktop-custom.css";
+import "@/assets/css/responsive/desktop-responsive.css";
+import "@/assets/css/mobile-custom.css";
+import "@/assets/css/responsive/mobile-responsive.css";
+
 const workSteps = [
     {
         number: "STEP 01",
