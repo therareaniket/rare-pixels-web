@@ -1481,3 +1481,155 @@ body.menu-open {
 .services-why-choose-rare-card-wrapper { width: 100%; }
 
 .services-why-rare-card-2-text, .services-why-rare-card-3-text { display: none; }
+
+
+.services-how-we-work-title p { display: flex; flex-direction: column; gap: 18px; width: 687px; }
+
+.services-how-we-work-cards { --card-movement-distance: 270px; margin-top: 0px; position: relative; height: 705px; }
+
+.services-how-we-work .card-body { flex: 1; border-radius: 20px 0 20px 20px; padding: 60px; }
+.services-how-we-work .tab-header {  
+    width: 267px; 
+    height: 72px; 
+    border-top-left-radius: 16px; 
+    border-top-right-radius: 16px; 
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    margin-left: auto;
+    left: auto;
+    right: inherit;
+}
+
+/* services-how we work-card-1 */
+
+.services-how-we-work-1 { width: 100%; height: max-content; position: relative; display: flex; flex-direction: column; }
+.services-how-we-work-1 .tab-header { background-color: #FBF9E9; }
+
+.services-how-we-work-1 .tab-header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(
+        circle at top left,
+        transparent 20px,
+        #FBF9E9 20px
+    );
+}
+
+.services-how-we-work-1 .card-body { background-color: #FBF9E9; }
+
+.services-how-we-work p { width: 871px; padding-top: 14px; }
+
+/* services-how-we-work-card-2 */
+
+.services-how-we-work-2 { width: 100%; height: max-content; position: absolute; display: flex; flex-direction: column; top: 65px; }
+.services-how-we-work-2 .tab-header { background-color: #FCD4E9; }
+
+.services-how-we-work-2 .tab-header::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(
+        circle at top left,
+        transparent 20px,
+        #FCD4E9 20px
+    );
+}
+
+.services-how-we-work-2 .card-body { background-color: #FCD4E9; }
+
+/* services-how-we-work-card-3 */
+
+.services-how-we-work-3 { width: 100%; height: max-content; position: absolute; display: flex; flex-direction: column; top: 130px; }
+.services-how-we-work-3 .tab-header { background-color: #F5F8F5; }
+
+.services-how-we-work-3 .tab-header::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(
+        circle at top left,
+        transparent 20px,
+        #F5F8F5 20px
+    );
+}
+
+.services-how-we-work-3 .card-body { background-color: #F5F8F5; }
+
+/* services-how-we-work-card-4 */
+
+.services-how-we-work-4 { width: 100%; height: max-content; position: absolute; display: flex; flex-direction: column; top: 195px; }
+.services-how-we-work-4 .tab-header { background-color: #D5D8E2; }
+
+.services-how-we-work-4 .tab-header::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(
+        circle at top left,
+        transparent 20px,
+        #D5D8E2 20px
+    );
+}
+
+.services-how-we-work-4 .card-body { background-color: #D5D8E2; }
+
+/* services-how-we-work-card-5 */
+
+.services-how-we-work-5 { width: 100%; height: max-content; position: absolute; display: flex; flex-direction: column; top: 260px; }
+.services-how-we-work-5 .tab-header {   background-color: #FBF9E9; }
+
+.services-how-we-work-5 .tab-header::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(
+        circle at top left,
+        transparent 20px,
+        #FBF9E9 20px
+    );
+}
+
+.services-how-we-work-5 .card-body { background-color: #FBF9E9; }
+
+/* services-how-we-work-card-6 */
+
+.services-how-we-work-6 { width: 100%; height: max-content; position: absolute; display: flex; flex-direction: column; top: 325px; }
+.services-how-we-work-6 .tab-header {   background-color: #FCD4E9; }
+
+.services-how-we-work-6 .tab-header::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(
+        circle at top left,
+        transparent 20px,
+        #FCD4E9 20px
+    );
+}
+
+.services-how-we-work-6 .card-body { background-color: #FCD4E9; }
+
+.services-how-we-work-section { position: relative; height: calc(100vh * 7); }
+.services-how-we-work-inner { position: sticky; top: 0; height: max-content; }

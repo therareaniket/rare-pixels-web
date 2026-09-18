@@ -4,11 +4,14 @@ import "@/assets/css/desktop-custom.css";
 import ServicesWhyBusinessChooseRare from "@/components/Servicespage/ServicesWhyBusinessChooseRare";
 import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 import ServicesFaqSection from "@/components/Servicespage/ServicesFaqSection";
+import ServicesHowWeWorkSection from "@/components/Servicespage/ServicesHowWeWorkSection";
 
 export default function Services() {
     return (
         <>
             <ServicesHero />
+
+            <ServicesHowWeWorkSection />
 
             <ServicesWhyBusinessChooseRare />
 
