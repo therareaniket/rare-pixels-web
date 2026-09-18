@@ -1044,6 +1044,16 @@
 
     .services-how-we-work .tab-header { width: 165px; height: 40px; }
     .services-how-we-work .card-body span { font-size: 16px; line-height: 24px !important; }
+
+    .services-how-we-work-2 { top: 38px; }
+    .services-how-we-work-3 { top: calc( 38px * 2 ); }
+    .services-how-we-work-4 { top: calc( 38px * 3 ); }
+    .services-how-we-work-5 { top: calc( 38px * 4 ); }
+    .services-how-we-work-6 { top: calc( 38px * 5 ); }
+
+    .services-how-we-work-cards { margin-top: 10px; }
+
+    .services-how-we-work .card-body h3 { font-size: 28px; line-height: 28px; }
 }
 
 @media (max-width: 374px) {
