@@ -1045,15 +1045,24 @@
     .services-how-we-work .tab-header { width: 165px; height: 40px; }
     .services-how-we-work .card-body span { font-size: 16px; line-height: 24px !important; }
 
-    .services-how-we-work-2 { top: 38px; }
-    .services-how-we-work-3 { top: calc( 38px * 2 ); }
-    .services-how-we-work-4 { top: calc( 38px * 3 ); }
-    .services-how-we-work-5 { top: calc( 38px * 4 ); }
-    .services-how-we-work-6 { top: calc( 38px * 5 ); }
+    .services-how-we-work-2 { top: 36px; }
+    .services-how-we-work-3 { top: calc( 36px * 2 ); }
+    .services-how-we-work-4 { top: calc( 36px * 3 ); }
+    .services-how-we-work-5 { top: calc( 36px * 4 ); }
+    .services-how-we-work-6 { top: calc( 36px * 5 ); }
 
-    .services-how-we-work-cards { margin-top: 10px; }
+    .services-how-we-work-cards { margin-top: 20px; }
 
-    .services-how-we-work .card-body h3 { font-size: 28px; line-height: 28px; }
+    .services-how-we-work .card-body { padding: 33px 20px 30px; }
+
+    .services-how-we-work .card-body h3 { font-size: 26px; line-height: 26px; }
+    .services-how-we-work p { padding-top: 8px; }
+
+    .services-how-we-work-cards { height: 480px; }
+
+    .services-how-we-work .tab-header { width: 65px; }
+
+    .services-how-we-work-section { height: calc( 100vh * 6 ); }
 }
 
 @media (max-width: 374px) {

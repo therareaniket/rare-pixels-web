@@ -1186,6 +1186,7 @@
 	.services-how-we-work .card-body { padding: 45px 40px 40px; }
 	.services-how-we-work p { width: 710px; }
 
+	.services-how-we-work .tab-header { width: 180px; }
 }
 
 @media (max-width: 1359px) {
@@ -1570,16 +1571,19 @@
 	.services-how-we-work .card-body h3 { font-size: 38px; line-height: 38px; }
 
 	.services-how-we-work .tab-header { width: 210px; height: 40px; }
-	.services-how-we-work .card-body { padding: 45px 30px 30px; }
+	.services-how-we-work .card-body { padding: 30px 30px 30px; }
 
-	.services-how-we-work-2 { top: 40px; }
-	.services-how-we-work-3 { top: calc( 40px * 2 ); }
-	.services-how-we-work-4 { top: calc( 40px * 3 ); }
-	.services-how-we-work-5 { top: calc( 40px * 4 ); }
-	.services-how-we-work-6 { top: calc( 40px * 5 ); }
+	.services-how-we-work-2 { top: 35px; }
+	.services-how-we-work-3 { top: calc( 35px * 2 ); }
+	.services-how-we-work-4 { top: calc( 35px * 3 ); }
+	.services-how-we-work-5 { top: calc( 35px * 4 ); }
+	.services-how-we-work-6 { top: calc( 35px * 5 ); }
 
-	.services-how-we-work-cards { height: 460px; }
-	.services-how-we-work-inner { top: -90px; }
+	.services-how-we-work-cards { --card-movement-distance: 180px; height: 410px; }
+	.services-how-we-work-inner { top: -60px; }
+
+	.services-how-we-work p { padding-top: 8px; }
+	.services-how-we-work .card-body h3 { margin-bottom: 15px; }
 
 }
 
@@ -2189,7 +2193,7 @@
 
 	.services-how-we-work-cards { --card-movement-distance: 290px; height: 690px; margin-top: 40px; }
 	.services-how-we-work .card-body { padding: 60px; }
-	.services-how-we-work .tab-header { width: 290px; height: 72px; }
+	.services-how-we-work .tab-header { width: 215px; height: 72px; }
 
 	.services-how-we-work-2 { top: 65px; }
 	.services-how-we-work-3 { top: calc( 65px * 2 ); }
@@ -2836,6 +2840,8 @@
 	.services-how-we-work-6 { top: calc( 55px * 5 ); }
 
 	.services-how-we-work-cards { height: 630px; }
+
+	.services-how-we-work .tab-header { width: 180px; }
 }
 
 @media (max-width: 767px) {
@@ -2987,7 +2993,6 @@
 	.founder-img { width: 260px; }
 	.team-addesing { margin-top: 40px; }
 	.team-section-final { overflow: hidden; }
-
 
 
 	/* CONTACT PAGE */
@@ -3416,7 +3421,7 @@
 	.cnct-what-happens-tablet span { font-size: 110px; line-height: 110px; }
 	.cnct-what-happens-pointer-wrapper-tablet { gap: 40px; }
 
-	.services-how-we-work .tab-header { width: 190px; height: 45px; }
+	.services-how-we-work .tab-header { width: 140px; height: 45px; }
 
 	.services-how-we-work-2 { top: 40px; }
 	.services-how-we-work-3 { top: calc( 40px * 2 ); }

@@ -11,42 +11,42 @@ import "@/assets/css/responsive/mobile-responsive.css";
 
 const workSteps = [
     {
-        number: "STEP 01",
+        number: "01",
         title: "Discover",
         subtitle: "Good solutions begin with good questions.",
         description:
             "We research your business, your audience, and your competitors before a single pixel is placed or a line of code is written. Every project starts with understanding - not assumptions.",
     },
     {
-        number: "STEP 02",
+        number: " 02",
         title: "Strategies",
         subtitle: "Every direction needs a reason.",
         description:
             "We define goals, audience, positioning, and success metrics before any creative or technical work begins. Strategy is not a phase we skip to get to the work - it is the work.",
     },
     {
-        number: "STEP 03",
+        number: "03",
         title: "Create",
         subtitle: "Where thinking becomes something visible.",
         description:
             "Design, brand concepts, content frameworks, and interaction models - all conceived specifically for this project. Nothing carried over from previous work.",
     },
     {
-        number: "STEP 04",
+        number: "04",
         title: "Engineer",
         subtitle: "Built specifically - never assembled from parts.",
         description:
             "Every platform, application, and digital product is engineered from the ground up. Clean, performant, scalable code that passes every quality standard before it reaches a single user.",
     },
     {
-        number: "STEP 05",
+        number: "05",
         title: "Refine",
         subtitle: "Improved until it performs exactly as designed.",
         description:
             "We test, gather feedback, and iterate until every element performs the way it was designed to. Great work is not assumed - it is earned through refinement.",
     },
     {
-        number: "STEP 06",
+        number: " 06",
         title: "Deliver",
         subtitle: "Launch is the beginning, not the end.",
         description:
