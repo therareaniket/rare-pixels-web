@@ -111,10 +111,6 @@ export default function Home() {
 					</div>
 
 					<div data-theme-color="white">
-						<ProcessSectionMobile />
-					</div>
-
-					<div data-theme-color="white">
 						<AboutSectionMobile />
 					</div>
 

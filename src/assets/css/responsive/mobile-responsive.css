@@ -436,7 +436,7 @@
     .abt-mis-vis-title-mobile { position: relative; margin-top: 30px; }
     .abt-mis-vis-quote { position: absolute; top: -30px; }
     .abt-mis-vis-mobile-video { width: 300px; height: 300px; margin: 40px auto; }
-    .abt-mis-vis-mobile-video img{ width: 100%; height: 100%; object-fit: contain; }
+    .abt-mis-vis-mobile-video video{ width: 100%; height: 100%; object-fit: contain; }
 
     .abt-vis-mobile { margin-top: 20px; margin-bottom: 14px; }
 
@@ -1027,8 +1027,8 @@
     .contact-form-right span input { padding: 0; }
     .cnct-project-detail textarea { padding: 0; }
 
-    .cnct-form-checkbox-option label, .cnct-upload-button { padding: 5px 18px; }
-    .cnct-form-checkbox { gap: 15px 8px; }
+    .cnct-form-checkbox-option label, .cnct-upload-button { padding: 5px 12px !important; font-size: 14px; line-height: 22px;}
+    .cnct-form-checkbox { gap: 10px; }
     .cnct-form-checkbox { margin: 25px 0; }
 
     .cnct-what-happens span { font-size: 66px; line-height: 66px; }

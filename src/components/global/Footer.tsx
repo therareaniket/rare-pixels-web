@@ -159,7 +159,7 @@ export default function Footer() {
                                         <li className="text-18 text-rg text-light-grey only-for-mobile-three-column"><Link href="#" title="industries">Industries</Link> </li>
                                         <li className="text-18 text-rg text-light-grey only-for-mobile-three-column"><Link href="#" title="projects">Projects</Link> </li>
 
-                                        <li className="text-18 text-rg text-light-grey"><Link href="#" title="process">Process</Link> </li>
+                                        <li className="text-18 text-rg text-light-grey"><Link href="/Services" title="services">Services</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"><Link href="#" title="life at rpd">Life at RPD</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"><Link href="#" title="articles">Articles</Link> </li>
                                         <li className="text-18 text-rg text-light-grey"><Link href="/Contact" title="contact" style={linkStyle('/Contact')}>Contact</Link> </li>

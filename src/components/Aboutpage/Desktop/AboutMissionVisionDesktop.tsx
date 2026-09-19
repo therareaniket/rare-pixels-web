@@ -25,7 +25,7 @@ export default function AboutMissionVisionDesktop() {
 
                     <div className="abt-mis-vis-content-desktop">
                         <div className="abt-mis-vis-content-right">
-                            <Image className="abt-mis-vis-img-desktop" src="/images/aboutpage/about-mis-vis/mis-vis-img.svg" alt="bg-quote" width={528} height={580} ></Image>
+                            <video className="abt-mis-vis-img-desktop" src="/images/aboutpage/about-mis-vis/mis-vis-vid.mp4" autoPlay loop muted playsInline width={530} height={590} ></video>
                         </div>
 
                         <div className="abt-mis-vis-content-left">

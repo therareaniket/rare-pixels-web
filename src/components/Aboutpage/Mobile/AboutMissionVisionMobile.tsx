@@ -18,7 +18,7 @@ export default function AboutMissionVisionMobile() {
                     </div>
 
                     <div className="abt-mis-vis-mobile-video">
-                        <Image src="/images/aboutpage/about-mis-vis/mis-vis-img.svg" alt="bg-quote" width={228} height={250} ></Image>
+                        <video src="/images/aboutpage/about-mis-vis/mis-vis-vid.mp4" autoPlay muted loop playsInline width={228} height={250} ></video>
                     </div>
 
                     <h3 className="h5 text-sb text-primary">Our Vision & Mission</h3>
