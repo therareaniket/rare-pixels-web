@@ -1667,8 +1667,10 @@
 	.testimonial-review-wrapper{ flex-direction: column; align-items: center; }
 	.testimonial-cards-wrapper{ width: 100%; }
 	.testimonial-cards-wrapper{ width: 100vw; position: relative; right: 50%; transform: translateX(50%); }
-	.hm-blog-wrapper-swiper { display: flex; width: 100vw; position: relative; }
+	.hm-blog-wrapper-swiper { display: flex; position: relative; width: calc(100% + ((100vw - 100%) / 2 )); }
 	.client-initital span.h6{ font-size: 22px; line-height: 30px; }
+
+	.hm-blog-card-right { border-top: 1px solid #c6c6c6; margin-top: 20px; }
 
 	.testimonial-review-video-wrapper { width: 100%; height: max-content; }
 	.testimonialreview-main{ width: 100%; height: 450px; }

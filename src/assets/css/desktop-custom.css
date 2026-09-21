@@ -1639,7 +1639,7 @@ body.menu-open {
 /* Services-ui-ux */
 .services-ui-ux-svg { width: 100%; height: 100%; object-fit: contain;}
 .services-ui-ux-svg path {
-    fill: rgb(164, 171, 199);
+    fill: rgba(164, 171, 199, 0.5);
     stroke: rgba(164, 171, 199, 0.5);
     stroke-width: 0.5px;
     stroke-dasharray: 1;
@@ -1650,21 +1650,31 @@ body.menu-open {
 .services-ui-ux:hover .services-ui-ux-svg path { animation: draw-ui-ux-line 5s ease-in-out forwards; }
 
 @keyframes draw-ui-ux-line {
-    0% { fill: rgba(164, 171, 199, 0); stroke: rgba(164, 171, 199, 0.9); stroke-dashoffset: 1; }
-    70% {  fill: rgba(164, 171, 199, 0); stroke: rgba(164, 171, 199, 0.9); stroke-dashoffset: 0; }
+    0% { fill: rgba(164, 171, 199, 0); stroke: rgba(164, 171, 199, 0.5); stroke-dashoffset: 1; }
+    70% {  fill: rgba(164, 171, 199, 0.5); stroke: rgba(164, 171, 199, 0.5); stroke-dashoffset: 0; }
     100% {  fill: rgba(164, 171, 199, 0.5); stroke: rgba(164, 171, 199, 0); stroke-dashoffset: 0; }
 }
 
 /* Services Development */
 
-.services-development-svg { width: 100%; height: 100%; object-fit: contain;  }
-.services-development-svg path { fill: #efe7a8; fill-opacity: 1; stroke: transparent; stroke-width: 0.65; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
-.services-development:hover .services-development-svg path { animation: draw-development-svg 50s ease-in-out forwards; }
+.services-development-svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.services-development-svg path {
+    fill: rgba(239, 231, 168, 0.5);
+    fill-opacity: 1;
+    stroke: rgba(239, 231, 168, 0.5);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+}
+
+.services-development:hover .services-development-svg path { animation: draw-development-svg 30s ease-in-out forwards; }
 @keyframes draw-development-svg {
-    0% { fill: #efe7a8; fill-opacity: 0; stroke: #EFE7A8; stroke-opacity: 1; stroke-dashoffset: 1; }
-    55% { fill: #efe7a8; fill-opacity: 0; stroke: #EFE7A8; stroke-opacity: 1; stroke-dashoffset: 0; }
-    75% { fill: #efe7a8; fill-opacity: 0.55; stroke: #EFE7A8; stroke-opacity: 0.75; stroke-dashoffset: 0; }
-    100% { fill: #efe7a8; fill-opacity: 1; stroke: #EFE7A8; stroke-opacity: 0; stroke-dashoffset: 0; }
+    0% { fill: rgba(239, 231, 168, 0.5); fill-opacity: 0; stroke: rgba(239, 231, 168, 0.5); stroke-opacity: 1; stroke-dasharray: 1; stroke-dashoffset: 1; }
+    55% { fill: rgba(239, 231, 168, 0.5); fill-opacity: 0; stroke: rgba(239, 231, 168, 0.5); stroke-opacity: 1; stroke-dashoffset: 0; }
+    80% { fill: rgba(239, 231, 168, 0.5); fill-opacity: 1; stroke: rgba(239, 231, 168, 0.5); stroke-opacity: 1; stroke-dashoffset: 0; }
+    100% { fill: rgba(239, 231, 168, 0.5); fill-opacity: 1; stroke: rgba(239, 231, 168, 0.5); stroke-opacity: 0; stroke-dashoffset: 0; }
 }
 
 /* Services-brand-identity */
@@ -1680,7 +1690,7 @@ body.menu-open {
     stroke-dashoffset: 0;
 }
 
-.services-brand-identity:hover .services-brand-identity-svg path { animation: draw-brand-identity-svg 5s ease-in-out forwards; }
+.services-brand-identity:hover .services-brand-identity-svg path { animation: draw-brand-identity-svg 2s ease-in-out forwards; }
 @keyframes draw-brand-identity-svg {
     0% {  fill: rgba(249, 170, 212, 0.5); fill-opacity: 0; stroke: rgba(249, 170, 212, 0.5); stroke-opacity: 1; stroke-dashoffset: 1; }
     55% { fill: rgba(249, 170, 212, 0.5); fill-opacity: 0; stroke: rgba(249, 170, 212, 0.5); stroke-opacity: 1; stroke-dashoffset: 0; }
