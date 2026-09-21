@@ -2185,8 +2185,8 @@
 	.services-how-we-work-6 { top: calc( 65px * 5 ); }
 
 	@keyframes contact-hero-animation {
-    	0% { transform: translate(20px, 20px); }
-    	100% { transform: translate(-10px, -10px); }
+    	0% { transform: translate(0); }
+    	100% { transform: translate(-20px, -20px); }
 	}
 } 
 
