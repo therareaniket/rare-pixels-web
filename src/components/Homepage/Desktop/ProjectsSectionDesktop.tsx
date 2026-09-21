@@ -11,17 +11,18 @@ type ProjectItem = {
     id: string;
     title: string;
     videoSrc: string;
+    thumbNail: string;
     foreGroundColor: "black" | "white";
 };
 
 const PROJECT_DATA: ProjectItem[] = [
-    { id: "proj-1", title: "DJK", videoSrc: `${CDN_URL}/images/homepage/projects/djk-project.mp4`, foreGroundColor: "black" },
-    { id: "proj-2", title: "A.U.T.O.B.O.T", videoSrc: `${CDN_URL}/images/homepage/projects/autobot-project.mp4`, foreGroundColor: "white" },
-    { id: "proj-3", title: "Cameriz", videoSrc: `${CDN_URL}/images/homepage/projects/cameriz-project.mp4`, foreGroundColor: "black" },
-    { id: "proj-4", title: "RA", videoSrc: `${CDN_URL}/images/homepage/projects/ra-project.mp4`, foreGroundColor: "white" },
-    { id: "proj-5", title: "steamOvap", videoSrc: `${CDN_URL}/images/homepage/projects/steamovap-project.mp4`, foreGroundColor: "black" },
-    { id: "proj-6", title: "DJK", videoSrc: `${CDN_URL}/images/homepage/projects/djk-project.mp4`, foreGroundColor: "black" },
-    { id: "proj-7", title: "RA", videoSrc: `${CDN_URL}/images/homepage/projects/ra-project.mp4`, foreGroundColor: "white" },
+    { id: "proj-1", title: "DJK", videoSrc: `${CDN_URL}/images/homepage/projects/djk-project.mp4`, thumbNail: `${CDN_URL}/images/homepage/projects/djk-project-tmbn.png`, foreGroundColor: "black" },
+    { id: "proj-2", title: "A.U.T.O.B.O.T", videoSrc: `${CDN_URL}/images/homepage/projects/autobot-project.mp4`, thumbNail: `${CDN_URL}/images/homepage/projects/autobot-project-tmbn.png`, foreGroundColor: "white" },
+    { id: "proj-3", title: "Cameriz", videoSrc: `${CDN_URL}/images/homepage/projects/cameriz-project.mp4`, thumbNail: `${CDN_URL}/images/homepage/projects/cameriz-project-tmbn.png`, foreGroundColor: "black" },
+    { id: "proj-4", title: "Portal", videoSrc: `${CDN_URL}/images/homepage/projects/ra-project.mp4`, thumbNail: `${CDN_URL}/images/homepage/projects/ra-project-tmbn.png`, foreGroundColor: "white" },
+    { id: "proj-5", title: "steamOvap", videoSrc: `${CDN_URL}/images/homepage/projects/steamovap-project.mp4`, thumbNail: `${CDN_URL}/images/homepage/projects/steamovap-project-tmbn.png`, foreGroundColor: "black" },
+    { id: "proj-6", title: "Mugoray", videoSrc: `${CDN_URL}/images/homepage/projects/mugoray-project.mp4`, thumbNail: `${CDN_URL}/images/homepage/projects/mugoray-project-tmbn.png`, foreGroundColor: "white" },
+    { id: "proj-7", title: "Lalita", videoSrc: `${CDN_URL}/images/homepage/projects/lalita-project.mp4`, thumbNail: `${CDN_URL}/images/homepage/projects/lalita-project-tmbn.png`, foreGroundColor: "white" },
 ];
 
 export default function ProjectsSectionDesktop() {
@@ -33,18 +34,12 @@ export default function ProjectsSectionDesktop() {
 
     const handleNext = () => {
         setDirection(1);
-
-        setActiveIndex((prev) =>
-            Math.min(prev + 1, PROJECT_DATA.length - 1)
-        );
+        setActiveIndex((prev) => Math.min(prev + 1, PROJECT_DATA.length - 1));
     };
 
     const handlePrev = () => {
         setDirection(-1);
-
-        setActiveIndex((prev) =>
-            Math.max(prev - 1, 0)
-        );
+        setActiveIndex((prev) => Math.max(prev - 1, 0));
     };
 
     const handleSetActive = (index: number) => {
@@ -86,7 +81,7 @@ export default function ProjectsSectionDesktop() {
                 }
             }
 
-            const tiltAngle = isMovingForward ? -3 : 3;
+            const tiltAngle = isMovingForward ? -5 : 5;
 
             gsap.killTweensOf(card);
 
@@ -126,15 +121,13 @@ export default function ProjectsSectionDesktop() {
                                 isActive={index === activeIndex}
                                 isLast={activeIndex === PROJECT_DATA.length - 1}
                                 direction={direction}
-                                onNext={handleNext}
-                                onPrev={handlePrev}
                                 onSetActive={handleSetActive}
                             />
                         ))}
                     </div>
                 </div>
 
-                <div className="project-controls" style={{ display: "flex", }}>
+                <div className="project-controls" style={{ display: "flex" }}>
                     <button onClick={handlePrev} disabled={activeIndex === 0} className="project-control-btn prev-btn" style={{ cursor: activeIndex === 0 ? "not-allowed" : "pointer", opacity: activeIndex === 0 ? 0.5 : 1 }}>
                         <span className="icon-hero-cta-arrow"></span>
                     </button>
@@ -154,8 +147,6 @@ interface ProjectCardProps {
     isActive: boolean;
     isLast: boolean;
     direction: 1 | -1;
-    onNext: () => void;
-    onPrev: () => void;
     onSetActive: (index: number) => void;
 }
 
@@ -164,8 +155,6 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
     index,
     isActive,
     isLast,
-    onNext,
-    onPrev,
     onSetActive
 }, ref) => {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -174,25 +163,41 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
     const cursorXTo = useRef<ReturnType<typeof gsap.quickTo> | null>(null);
     const cursorYTo = useRef<ReturnType<typeof gsap.quickTo> | null>(null);
     const [isHovering, setIsHovering] = useState(false);
-    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0, });
+    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
     useEffect(() => {
         if (!videoRef.current) return;
-        if (isActive) { videoRef.current.play().catch(() => { }); }
-        else { videoRef.current.pause(); videoRef.current.currentTime = 0; }
+
+        if (isActive) {
+            const playPromise = videoRef.current.play();
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        setIsVideoPlaying(true);
+                    })
+                    .catch(() => {
+                        setIsVideoPlaying(false);
+                    });
+            }
+        } else {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0;
+            setIsVideoPlaying(false);
+        }
     }, [isActive]);
 
     useLayoutEffect(() => {
         const cursor = cursorRef.current;
         if (!isHovering || !cursor) return;
 
-        cursorXTo.current = gsap.quickTo(cursor, "left", { duration: 0.6, ease: "power3.out", });
-        cursorYTo.current = gsap.quickTo(cursor, "top", { duration: 0.6, ease: "power3.out", });
+        cursorXTo.current = gsap.quickTo(cursor, "left", { duration: 0.6, ease: "power3.out" });
+        cursorYTo.current = gsap.quickTo(cursor, "top", { duration: 0.6, ease: "power3.out" });
 
         gsap.fromTo(
             cursor,
-            { opacity: 0, scale: 0.75, },
-            { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out", overwrite: "auto", }
+            { opacity: 0, scale: 0.75 },
+            { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out", overwrite: "auto" }
         );
 
         return () => {
@@ -224,7 +229,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
 
             return;
         }
-        setCursorPosition({ x: mouseX, y: mouseY, });
+        setCursorPosition({ x: mouseX, y: mouseY });
         setIsHovering(true);
     };
 
@@ -236,8 +241,12 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
         const mouseX = event.clientX - cardRect.left;
         const mouseY = event.clientY - cardRect.top;
 
-        if (cursorXTo.current && cursorYTo.current) { cursorXTo.current(mouseX); cursorYTo.current(mouseY); }
-        else { gsap.set(cursor, { left: mouseX, top: mouseY, }); }
+        if (cursorXTo.current && cursorYTo.current) { 
+            cursorXTo.current(mouseX); 
+            cursorYTo.current(mouseY); 
+        } else { 
+            gsap.set(cursor, { left: mouseX, top: mouseY }); 
+        }
     };
 
     const handleMouseLeave = () => {
@@ -258,42 +267,38 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(({
     const handleClick = () => {
         if (!isActive) {
             onSetActive(index);
-            return;
         }
-
-        if (isLast) {
-            onPrev();
-            return;
-        }
-
-        onNext();
-    };
-
-    const getCursorLabel = () => {
-        if (!isActive) return "View";
-        if (isLast) return "Prev";
-
-        return "Next";
     };
 
     return (
         <div ref={ref} className={`project-list ${isActive ? "active" : ""}`}
+            style={{ position: "relative", overflow: "hidden" }}
             onMouseEnter={handleMouseEnter}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             onClick={handleClick} >
-            {isHovering && (
-                <div ref={cursorRef} className="project-card-hover" style={{ left: cursorPosition.x, top: cursorPosition.y, }} aria-hidden="true">
-                    <span className="text-sb h6">
-                        {getCursorLabel()}
-                    </span>
-                </div>
+
+            {/* Native HTML poster attribute for initial load */}
+            <video  ref={videoRef}  className="project-video"  src={project.videoSrc}  poster={project.thumbNail} loop  muted  playsInline />
+
+            {/* Thumbnail Overlay when video is paused/inactive */}
+            {!isVideoPlaying && (
+                <img src={project.thumbNail} alt={project.title} 
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        zIndex: 1,
+                        pointerEvents: "none"
+                    }}
+                />
             )}
 
-            <video ref={videoRef} className="project-video" src={project.videoSrc} loop muted autoPlay playsInline></video>
-
             {isActive && (
-                <h3 className="h4 active-project-title text-md" style={{ color: project.foreGroundColor, }}>
+                <h3 className="h4 active-project-title text-md" style={{ color: project.foreGroundColor, zIndex: 2 }}>
                     {project.title}
                 </h3>
             )}
