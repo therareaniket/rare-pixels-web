@@ -1071,10 +1071,12 @@
 
     .serv-stat:nth-child(2) p, .serv-stat { width: 155px; }
 
-    .services-hero-section { padding-top: 90px; }
+    .services-hero-section { padding-top: 70px; }
     .serv-hero-subttl { margin-top: 20px; }
     .serv-hero-stats { justify-content: space-between; }
     .serv-stat span img { width: 20px; height: 20px; }
+
+    .serv-hero-vid { height: 250px; }
 }
 
 @media (max-width: 374px) {
