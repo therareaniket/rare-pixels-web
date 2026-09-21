@@ -1731,7 +1731,9 @@ body.menu-open {
     100% { transform: translate(-40px, 10px) rotate(-4deg);;  }
 }
 
-.contact-hero-image {
-    display: block;
-    animation: contact-hero-animation 2s ease-in-out infinite alternate;
-}
+.contact-hero-image { display: block; animation: contact-hero-animation 2s ease-in-out infinite alternate; }
+
+.services-hero-section { position: relative; overflow: hidden; }
+
+.services-strip-animation { position: absolute; bottom: 0; width: 100%; overflow: hidden; }
+.services-strip { width: max-content; animation: scroll-left 25s linear infinite; background-color: black; }
