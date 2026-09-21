@@ -2,6 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export default function AboutTeamDesktop() {
     return (
@@ -20,25 +24,51 @@ export default function AboutTeamDesktop() {
                                 </Link>
                             </div>
 
-                            <div className="team-addesing">
-                                <div className="team-details">
-                                    <div className="founder-msg">
-                                        <p className="text-18 text-rg">At RarePixels, great work starts with great people. We are a multidisciplinary team of designers, developers, strategists, branding specialists, and creative thinkers who share a passion for building meaningful digital experiences.</p>
+                            <Swiper modules={[Autoplay]} spaceBetween={30} slidesPerView={1} speed={2200} autoplay={{ delay: 4000 }}>
+                                <SwiperSlide>
+                                    <div className="team-addesing">
+                                        <div className="team-details">
+                                            <div className="founder-msg">
+                                                <p className="text-18 text-rg">At RarePixels, great work starts with great people. We are a multidisciplinary team of designers, developers, strategists, branding specialists, and creative thinkers who share a passion for building meaningful digital experiences.</p>
 
-                                        <span className="foundr-msg-hr"></span>
+                                                <span className="foundr-msg-hr"></span>
 
-                                        <div className="teams-designation-block">
-                                            <p className="h5 text-sb">Bina Yogesh</p>
+                                                <div className="teams-designation-block">
+                                                    <p className="h5 text-sb">Bina Yogesh</p>
 
-                                            <span className="text-18 team-designation">Founder, Creative Director</span>
+                                                    <span className="text-18 team-designation">Founder, Creative Director</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="founder-img">
+                                            <Image src="/images/aboutpage/teams/updated-team-image.png" alt="founder image" width={417} height={516} />
                                         </div>
                                     </div>
-                                </div>
+                                </SwiperSlide>
 
-                                <div className="founder-img">
-                                    <Image src="/images/aboutpage/teams/updated-team-image.png" alt="founder image" width={417} height={516} />
-                                </div>
-                            </div>
+                                <SwiperSlide>
+                                    <div className="team-addesing">
+                                        <div className="team-details">
+                                            <div className="founder-msg">
+                                                <p className="text-18 text-rg">At RarePixels, great work starts with great people. We are a multidisciplinary team of designers, developers, strategists, branding specialists, and creative thinkers who share a passion for building meaningful digital experiences.</p>
+
+                                                <span className="foundr-msg-hr"></span>
+
+                                                <div className="teams-designation-block">
+                                                    <p className="h5 text-sb">Yogesh Patel</p>
+
+                                                    <span className="text-18 team-designation">Co-Founder, Funcional Director</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="founder-img">
+                                            <Image src="/images/aboutpage/teams/updated-team-image.png" alt="founder image" width={417} height={516} />
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
                         </div>
 
                         <div className="teams-pixels-top-left teams-pixels">

@@ -1200,7 +1200,7 @@ body.menu-open {
 .team-sec-content { display: flex; align-items: end; justify-content: space-between; }
 .team-details { width: 400px; padding: 35px 45px; background-color: var(--primary); color: white; border-radius: 10px 10px 10px 80px; transform: translateX(40px); position: relative; z-index: 2; }
 .foundr-msg-hr { display: block; width: 100%; height: 1px; background-color: #F8F8F8; opacity: 35%; margin: 20px 0; }
-.team-addesing { display: flex; align-items: end; }
+.team-addesing { display: flex; align-items: end; justify-content: flex-end; }
 .founder-img { position: relative; z-index: 3; }
 
 
@@ -1629,7 +1629,7 @@ body.menu-open {
 
 .services-how-we-work-6 .card-body { background-color: #FCD4E9; }
 
-.services-how-we-work-section { position: relative; height: calc(100vh * 7); }
+.services-how-we-work-section { position: relative; height: calc(100vh * 5); }
 .services-how-we-work-inner { position: sticky; top: 0; height: max-content; }
 
 .services-how-we-work .card-body h3 { font-size: 64px; line-height: 70px; }
@@ -1724,8 +1724,8 @@ body.menu-open {
 /* contact-hero-image */
 
 @keyframes contact-hero-animation {
-    0% { transform: translate(0); }
-    100% { transform: translate(-80px, -40px);  }
+    0% { transform: translate(0) rotate(0deg); }
+    100% { transform: translate(-40px, 10px) rotate(-4deg);;  }
 }
 
 .contact-hero-image {

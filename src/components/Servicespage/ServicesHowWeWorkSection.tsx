@@ -98,7 +98,7 @@ export default function ServicesHowWeWorkSection() {
                 scrollTrigger: {
                     trigger: section,
                     start: "top top",
-                    end: "bottom +=1500",
+                    end: "bottom +=1200",
                     scrub: 1,
                     invalidateOnRefresh: true,
                 },

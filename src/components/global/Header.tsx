@@ -98,7 +98,7 @@ export default function Header() {
                                 </div>
                             </div>
                         </div>
-                    </nav >
+                    </nav>
 
                     <div className={`mega-menu-overlay ${isMenuOpen ? "active" : ""}`} />
                     <div ref={menuRef} data-lenis-prevent onClick={(event) => {
@@ -107,14 +107,11 @@ export default function Header() {
                         if (link) {
                             const href = link.getAttribute("href");
 
-                            if (href?.startsWith("/") && !href.startsWith("/#")) {
-                                scrollPositionRef.current = 0;
-                            }
+                            if (href?.startsWith("/") && !href.startsWith("/#")) { scrollPositionRef.current = 0; }
 
                             setIsMenuOpen(false);
                         }
-                    }} className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""}`}
-                    >
+                    }} className={`header-mega-menu ${isMenuOpen ? "header-mega-menu-open" : ""}`}>
                         <div className="header-pages-link-wrapper header-links-for-desktop">
                             <ul className="header-menu-link-wrapper">
                                 <li className="menu-link">
