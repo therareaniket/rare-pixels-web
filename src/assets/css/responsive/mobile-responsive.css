@@ -1051,14 +1051,12 @@
     .services-how-we-work-5 { top: calc( 36px * 4 ); }
     .services-how-we-work-6 { top: calc( 36px * 5 ); }
 
-    .services-how-we-work-cards { margin-top: 20px; }
-
     .services-how-we-work .card-body { padding: 33px 20px 30px; }
 
     .services-how-we-work .card-body h3 { font-size: 26px; line-height: 26px; }
     .services-how-we-work p { padding-top: 8px; }
 
-    .services-how-we-work-cards { height: 480px; }
+    .services-how-we-work-cards { --card-movement-distance: 250px; height: 480px; margin-top: 20px; }
 
     .services-how-we-work .tab-header { width: 65px; }
 
@@ -1161,6 +1159,8 @@
 
     .services-how-we-work .card-body span { font-size: 16px; line-height: 24px;  }
     .services-how-we-work-title .text-18, .services-how-we-work .tab-header .text-18, .services-how-we-work .card-body .text-18 { font-size: 14px; line-height: 20px; }
+
+    .services-how-we-work-cards { height: 455px; }
 }
 
 @media (max-width: 359px) {

@@ -5,10 +5,13 @@ import ServicesWhyBusinessChooseRare from "@/components/Servicespage/ServicesWhy
 import ScrollToTopButton from "@/components/global/ScrollToTopButton";
 import ServicesFaqSection from "@/components/Servicespage/ServicesFaqSection";
 import ServicesHowWeWorkSection from "@/components/Servicespage/ServicesHowWeWorkSection";
+import ReactLenis from "lenis/react";
 
 export default function Services() {
     return (
         <>
+			<ReactLenis root />
+
             <ServicesHero />
 
             <ServicesHowWeWorkSection />

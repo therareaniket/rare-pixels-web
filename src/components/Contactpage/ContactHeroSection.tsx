@@ -37,9 +37,7 @@ export default function ContactHeroSection() {
         if (!mainSvgElement || !mobileSvgElement) return;
 
         const mobileMedia = window.matchMedia("(max-width: 479px)");
-        const reducedMotionMedia = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        );
+        const reducedMotionMedia = window.matchMedia( "(prefers-reduced-motion: reduce)" );
 
         let ctx: gsap.Context | null = null;
 
@@ -69,15 +67,11 @@ export default function ContactHeroSection() {
                 const currentPoint = points[index];
                 const nextPoint = points[index + 1];
 
-                const middleX =
-                    (currentPoint.x + nextPoint.x) / 2;
+                const middleX = (currentPoint.x + nextPoint.x) / 2;
 
-                const middleY =
-                    (currentPoint.y + nextPoint.y) / 2;
+                const middleY = (currentPoint.y + nextPoint.y) / 2;
 
-                pathData +=
-                    ` Q ${currentPoint.x} ${currentPoint.y}` +
-                    ` ${middleX} ${middleY}`;
+                pathData += ` Q ${currentPoint.x} ${currentPoint.y}` + ` ${middleX} ${middleY}`;
             }
 
             const lastPoint = points[points.length - 1];
@@ -91,15 +85,11 @@ export default function ContactHeroSection() {
             svgElement: SVGSVGElement
         ) => {
             const sourcePaths = Array.from(
-                svgElement.querySelectorAll<SVGPathElement>(
-                    ".contact-wave-source"
-                )
+                svgElement.querySelectorAll<SVGPathElement>( ".contact-wave-source" )
             );
 
             const animatedPaths = Array.from(
-                svgElement.querySelectorAll<SVGPathElement>(
-                    ".contact-wave-animated"
-                )
+                svgElement.querySelectorAll<SVGPathElement>( ".contact-wave-animated" )
             );
 
             sourcePaths.forEach((sourcePath, index) => {
@@ -107,14 +97,10 @@ export default function ContactHeroSection() {
 
                 if (!animatedPath) return;
 
-                const originalPathData =
-                    sourcePath.getAttribute("d");
+                const originalPathData = sourcePath.getAttribute("d");
 
                 if (originalPathData) {
-                    animatedPath.setAttribute(
-                        "d",
-                        originalPathData
-                    );
+                    animatedPath.setAttribute( "d", originalPathData );
                 }
             });
         };
@@ -123,17 +109,9 @@ export default function ContactHeroSection() {
             svgElement: SVGSVGElement,
             isExtraMobileSvg: boolean
         ): AnimatedWave[] => {
-            const sourcePaths = Array.from(
-                svgElement.querySelectorAll<SVGPathElement>(
-                    ".contact-wave-source"
-                )
-            );
+            const sourcePaths = Array.from( svgElement.querySelectorAll<SVGPathElement>( ".contact-wave-source" ) );
 
-            const animatedPaths = Array.from(
-                svgElement.querySelectorAll<SVGPathElement>(
-                    ".contact-wave-animated"
-                )
-            );
+            const animatedPaths = Array.from( svgElement.querySelectorAll<SVGPathElement>( ".contact-wave-animated" ) );
 
             return sourcePaths
                 .map((sourcePath, pathIndex) => {
@@ -142,8 +120,7 @@ export default function ContactHeroSection() {
 
                     if (!animatedPath) return null;
 
-                    const totalLength =
-                        sourcePath.getTotalLength();
+                    const totalLength = sourcePath.getTotalLength();
 
                     if (!Number.isFinite(totalLength)) {
                         return null;
@@ -155,8 +132,7 @@ export default function ContactHeroSection() {
 
                     const searchSteps = 500;
 
-                    const startingPoint =
-                        sourcePath.getPointAtLength(0);
+                    const startingPoint = sourcePath.getPointAtLength(0);
 
                     let maximumHorizontalDistance = 0;
                     let firstEdgeLength = totalLength;
@@ -166,16 +142,11 @@ export default function ContactHeroSection() {
                         searchIndex <= searchSteps;
                         searchIndex++
                     ) {
-                        const searchProgress =
-                            searchIndex / searchSteps;
+                        const searchProgress = searchIndex / searchSteps;
 
-                        const searchLength =
-                            searchProgress * totalLength;
+                        const searchLength = searchProgress * totalLength;
 
-                        const searchPoint =
-                            sourcePath.getPointAtLength(
-                                searchLength
-                            );
+                        const searchPoint = sourcePath.getPointAtLength( searchLength );
 
                         const horizontalDistance =
                             Math.abs(

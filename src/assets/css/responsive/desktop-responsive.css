@@ -1570,8 +1570,8 @@
 	.process-section-sticky { height: calc(100vh * 12); }
 	.services-how-we-work .card-body h3 { font-size: 38px; line-height: 38px; }
 
-	.services-how-we-work .tab-header { width: 210px; height: 40px; }
-	.services-how-we-work .card-body { padding: 30px 30px 30px; }
+	.services-how-we-work .tab-header { width: 160px; height: 40px; }
+	.services-how-we-work .card-body { padding: 33px 30px 30px; }
 
 	.services-how-we-work-2 { top: 35px; }
 	.services-how-we-work-3 { top: calc( 35px * 2 ); }
@@ -1963,19 +1963,11 @@
 	.rpd-card-col-1 { padding-top: 0; }
 	.rpd-card-col-3 { transform: translateY(0); }
 
-	/* .rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 260px; height: 255px; }
-	.rpd-card-2 { width: 260px; height: 225px; }
-	.rpd-card-3 { width: 240px; height: 218px; }
-	.rpd-card-4 { width: 240px; height: 277px; }
-	.rpd-card-5 { width: 240px; height: 235px; }
-	.rpd-card-8 { width: 260px; height: 170px; } */
-	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 {
-        --card-start-x: -150px;
+	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 { --card-start-x: -150px;
         --card-start-y: 0;
         --card-start-scale: 1.2;
         --card-start-height: 255px;
         --card-end-height: 290px;
-
         width: 260px;
     }
 
@@ -1985,7 +1977,6 @@
         --card-start-scale: 1.2;
         --card-start-height: 225px;
         --card-end-height: 280px;
-
         width: 260px;
     }
 
@@ -1995,7 +1986,6 @@
         --card-start-scale: 1.2;
         --card-start-height: 218px;
         --card-end-height: 260px;
-
         width: 240px;
     }
 
@@ -2005,7 +1995,6 @@
         --card-start-scale: 1.4;
         --card-start-height: 277px;
         --card-end-height: 320px;
-
         width: 240px;
     }
 
@@ -2015,7 +2004,6 @@
         --card-start-scale: 1.2;
         --card-start-height: 308px;
         --card-end-height: 280px;
-
         width: 240px;
     }
 
@@ -2025,7 +2013,6 @@
         --card-start-scale: 1.2;
         --card-start-height: 344px;
         --card-end-height: 300px;
-        
 		width: 260px;
     }
 
@@ -2035,7 +2022,6 @@
         --card-start-scale: 1.2;
         --card-start-height: 344px;
         --card-end-height: 300px;
-        
 		width: 260px;
     }
 
@@ -2045,7 +2031,6 @@
         --card-start-scale: 1.2;
         --card-start-height: 229px;
         --card-end-height: 210px;
-
         width: 260px;
     }
 
@@ -2139,8 +2124,6 @@
 	.founder-img { transform: translateX(-50px); }
 	.teams-pixels-bottom-right { display: none; }
 
-	
-
 	/* CONTACT PAGE */
 
 	.contact-hero-title { font-size: 56px; line-height: 68px; width: 455px; }
@@ -2200,6 +2183,11 @@
 	.services-how-we-work-4 { top: calc( 65px * 3 ); }
 	.services-how-we-work-5 { top: calc( 65px * 4 ); }
 	.services-how-we-work-6 { top: calc( 65px * 5 ); }
+
+	@keyframes contact-hero-animation {
+    	0% { transform: translate(20px, 20px); }
+    	100% { transform: translate(-10px, -10px); }
+	}
 } 
 
 @media (max-width: 1023px) {

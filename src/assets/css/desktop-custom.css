@@ -286,10 +286,11 @@ body.menu-open {
 .services-section { position: relative; height: 250vh;  }
 .section-wrapper { position: sticky; top: 0; overflow: hidden; }
 
+.services-card  { cursor: pointer; }
 .hm-services-title-wrapper{ text-align: center; }
 .services-card-wrapper{ display: flex; align-items: flex-start; gap: 20px; justify-content: space-between; margin-top: 60px; }
-.services-art-board{ width: 385px; height: 385px; overflow: hidden; display: flex; align-items: center; justify-content: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
-.services-art-board img{ object-fit: contain; }
+.services-art-board{ width: 300px; height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); cursor: pointer; }
+.services-art-board img{ width: 100%; height: 100%; object-fit: contain; }
 .services-card{ width: 385px; height: 450px; position: relative; overflow: hidden; }
 .services-text{ width: 100%; height: 100%; padding: 30px; position: absolute; z-index: 2; }
 .services-subtitle p{ display: flex; flex-direction: column; }
@@ -1633,3 +1634,92 @@ body.menu-open {
 .services-how-we-work-inner { position: sticky; top: 0; height: max-content; }
 
 .services-how-we-work .card-body h3 { font-size: 64px; line-height: 70px; }
+
+/* services card animation */
+
+/* Services-ui-ux */
+.services-ui-ux-svg { width: 100%; height: 100%; object-fit: contain;}
+.services-ui-ux-svg path {
+    fill: rgb(164, 171, 199);
+    stroke: rgba(164, 171, 199, 0.5);
+    stroke-width: 0.5px;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    transition: fill 0.3s ease, stroke 0.3s ease, stroke-dashoffset 0.3s ease;
+}
+
+.services-ui-ux:hover .services-ui-ux-svg path { animation: draw-ui-ux-line 5s ease-in-out forwards; }
+
+@keyframes draw-ui-ux-line {
+    0% { fill: rgba(164, 171, 199, 0); stroke: rgba(164, 171, 199, 0.9); stroke-dashoffset: 1; }
+    70% {  fill: rgba(164, 171, 199, 0); stroke: rgba(164, 171, 199, 0.9); stroke-dashoffset: 0; }
+    100% {  fill: rgba(164, 171, 199, 0.5); stroke: rgba(164, 171, 199, 0); stroke-dashoffset: 0; }
+}
+
+/* Services Development */
+
+.services-development-svg { width: 100%; height: 100%; object-fit: contain;  }
+.services-development-svg path { fill: #efe7a8; fill-opacity: 1; stroke: transparent; stroke-width: 0.65; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
+.services-development:hover .services-development-svg path { animation: draw-development-svg 50s ease-in-out forwards; }
+@keyframes draw-development-svg {
+    0% { fill: #efe7a8; fill-opacity: 0; stroke: #EFE7A8; stroke-opacity: 1; stroke-dashoffset: 1; }
+    55% { fill: #efe7a8; fill-opacity: 0; stroke: #EFE7A8; stroke-opacity: 1; stroke-dashoffset: 0; }
+    75% { fill: #efe7a8; fill-opacity: 0.55; stroke: #EFE7A8; stroke-opacity: 0.75; stroke-dashoffset: 0; }
+    100% { fill: #efe7a8; fill-opacity: 1; stroke: #EFE7A8; stroke-opacity: 0; stroke-dashoffset: 0; }
+}
+
+/* Services-brand-identity */
+
+.services-brand-identity-svg { width: 100%; height: 100%; object-fit: contain; }
+.services-brand-identity-svg path {
+    fill: rgba(249, 170, 212, 0.5);
+    stroke: transparent;
+    stroke-width: 0.65;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+}
+
+.services-brand-identity:hover .services-brand-identity-svg path { animation: draw-brand-identity-svg 5s ease-in-out forwards; }
+@keyframes draw-brand-identity-svg {
+    0% {  fill: rgba(249, 170, 212, 0.5); fill-opacity: 0; stroke: rgba(249, 170, 212, 0.5); stroke-opacity: 1; stroke-dashoffset: 1; }
+    55% { fill: rgba(249, 170, 212, 0.5); fill-opacity: 0; stroke: rgba(249, 170, 212, 0.5); stroke-opacity: 1; stroke-dashoffset: 0; }
+    75% { fill: rgba(249, 170, 212, 0.5); fill-opacity: 0.25; stroke: rgba(249, 170, 212, 0.5); stroke-opacity: 0.65; stroke-dashoffset: 0; }
+    100% { fill: rgba(249, 170, 212, 0.5); fill-opacity: 0.5; stroke: rgba(249, 170, 212, 0.5); stroke-opacity: 0; stroke-dashoffset: 0; }
+}
+
+/* Services-sm-management */
+
+.services-sm-management-svg { width: 100%; height: 100%; object-fit: contain; }
+.services-sm-management-svg path { 
+    fill: #CFDFCF; 
+    fill-opacity: 1; 
+    stroke: transparent; 
+    stroke-width: 0.65; 
+    stroke-linecap: round; 
+    stroke-linejoin: round; 
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+}
+
+.services-social-media:hover .services-sm-management-svg path { animation: draw-sm-management-svg 5s ease-in-out forwards; }
+
+@keyframes draw-sm-management-svg {
+    0% { fill: #CFDFCF; fill-opacity: 0; stroke: #CFDFCF; stroke-opacity: 1; stroke-dashoffset: 1; }
+    45% { fill: #CFDFCF; fill-opacity: 0.08; stroke: #CFDFCF; stroke-opacity: 1; stroke-dashoffset: 0.35; }
+    70% { fill: #CFDFCF; fill-opacity: 0.6; stroke: #CFDFCF; stroke-opacity: 0.65; stroke-dashoffset: 0; }
+    100% { fill: #CFDFCF; fill-opacity: 1; stroke: #CFDFCF; stroke-opacity: 0; stroke-dashoffset: 0; }
+}
+
+/* contact-hero-image */
+
+@keyframes contact-hero-animation {
+    0% { transform: translate(0); }
+    100% { transform: translate(-80px, -40px);  }
+}
+
+.contact-hero-image {
+    display: block;
+    animation: contact-hero-animation 2s ease-in-out infinite alternate;
+}
