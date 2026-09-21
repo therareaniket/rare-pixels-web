@@ -1028,6 +1028,7 @@
     .cnct-project-detail textarea { padding: 0; }
 
     .cnct-form-checkbox-option label, .cnct-upload-button { padding: 5px 12px !important; font-size: 14px; line-height: 22px;}
+    .cnct-upload-button .text-18 { font-size: 14px; line-height: 22px; }
     .cnct-form-checkbox { gap: 10px; }
     .cnct-form-checkbox { margin: 25px 0; }
 

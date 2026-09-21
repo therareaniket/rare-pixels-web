@@ -112,7 +112,7 @@ export default function ContactFormSection() {
                                     onChange={(event) => setFileName(event.target.files?.[0]?.name ?? "")}
                                 />
                                 <label htmlFor="myfile" className="cnct-upload-button">
-                                    <span className="cnct-upload-label-text text-rg h5">{fileName || "Attach Your Document"}</span>
+                                    <span className="cnct-upload-label-text text-rg text-18">{fileName || "Attach Your Document"}</span>
                                     <Image src="/images/contactpage/contactform/attach-icon.svg" alt="attach-icon" width={32} height={32}></Image>
                                 </label>
                             </div>

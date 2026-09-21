@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ServicesHero() {
     return(
         <>
-            <section className="section text-white" style={{ backgroundColor: "black" }}>
+            <section id="first-section" className="services-hero-section section text-white" style={{ backgroundColor: "black" }}>
                 <div className="container">
                     <div className="serv-hero-wrapper">
                         <div className="serv-hero-contn">

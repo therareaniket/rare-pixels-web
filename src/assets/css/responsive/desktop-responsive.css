@@ -221,15 +221,6 @@
 	.abt-card-text { height: 170px; }
 	.abt-rpd-card-1 .abt-card-text, .abt-rpd-card-3 .abt-card-text { height: 190px; }
 
-	/* .abt-rpd-card-2 { transform: translateY(-250px); } */
-
-	/* .rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 445px; height: 437px; }
-	.rpd-card-2 { width: 445px; height: 385px; }
-	.rpd-card-3 { width: 410px; height: 372px; }
-	.rpd-card-4 { width: 410px; height: 472px; }
-	.rpd-card-5 { width: 410px; height: 401px; }
-	.rpd-card-8 { width: 445px; height: 291px; } */
-
 	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 {
     	--card-start-x: -150px;
     	--card-start-y: 0;
@@ -312,7 +303,6 @@
 
 	.life-at-rpd-desktop-card-wrapper { height: 1140px; }
 
-	/* .about-rpd-desktop-content-wrapper { padding-top: 243px; } */
 
 	.pixels-logo { width: 270px; }
 	.design-logo { width: 330px; }
@@ -348,7 +338,6 @@
 	.contact-form-right { width: 715px; }
 	.contact-form-left { width: 540px; }
 	.inquiry-form-contact-fields { margin-top: 20px; }
-	.cnct-upload-button { padding: 18px 28px; }
 	.cnct-prefer-to-talk { height: 410px; }
 	.contact-form-right span input { width: 330px; }
 
@@ -370,6 +359,10 @@
 	.services-how-we-work-cards { height: 705px; }
 
 	.services-how-we-work .card-body h3 { font-size: 60px; line-height: 68px; }
+
+	.serv-hero-contn { max-width: 680px; }
+	.serv-hero-subttl { margin-top: 75px; }
+	.serv-hero-vid { width: 640px; height: 615px; }
 
 }
 
@@ -566,7 +559,6 @@
 	.active-project-title { margin-bottom: 10px; left: 10px; }
 
 	/* process */
-	
 
 	.process-section-title { width: 700px; }
 	.process-section-title p { width: 90%; }
@@ -644,13 +636,6 @@
 	.abt-rpd-strip { font-size: 30px; line-height: 38px; bottom: -22px; }
 	.abt-rpd-section-desktop { height: 850vh; }
 	.tree-section-desktop { height: 500vh; }
-
-	/* .rpd-card-1, .rpd-card-6, .rpd-card-7 { width: 402px; height: 392px; }
-	.rpd-card-2 { width: 402px; height: 348px; }
-	.rpd-card-3 { width: 380px; height: 344px; }
-	.rpd-card-4 { width: 380px; height: 438px; }
-	.rpd-card-5 { width: 380px; height: 372px; }
-	.rpd-card-8 { width: 402px; height: 263px; } */
 
 	.life-at-rpd-desktop-card-wrapper.desktop .rpd-card-1 {
     	--card-start-x: -150px;
@@ -754,7 +739,6 @@
 	.contact-form-left { width: 495px; }
 	.contact-form-right { width: 665px; }
 	.cnct-prefer-to-talk { padding: 25px; height: 380px; }
-	.cnct-upload-button { padding: 16px 28px; }
 	.cnct-prefer-right { width: 180px; right: 25px; bottom: 25px; }
 	.cnct-prefer-left p { width: 250px; }
 	.contact-form-right span { margin-bottom: 18px; }
@@ -799,6 +783,15 @@
 
 	.services-how-we-work .card-body h3 { font-size: 52px; line-height: 52px; }
 	.services-how-we-work .card-body { padding: 60px 40px 40px; }
+
+	.serv-hero-contn { width: 590px; }
+	.serv-hero-vid { width: 620px; height: 600px; }
+	.serv-stat:first-child p { width: 130px; }
+	.serv-stat:nth-child(2) p { width: 160px; }
+	.serv-hero-subttl { margin-top: 55px; }
+	.serv-hero-stats { margin-top: 30px; }
+	.serv-stat span img { width: 28px; height: 28px; }
+	.serv-stat span { align-items: center; margin-bottom: 10px; }
 }
 
 @media (max-width: 1439px) {
@@ -1187,6 +1180,11 @@
 	.services-how-we-work p { width: 710px; }
 
 	.services-how-we-work .tab-header { width: 180px; }
+
+	.serv-hero-contn { width: 515px; }
+
+	.serv-hero-vid { width: 500px; height: 480px; }
+	.serv-stat { width: 160px; }
 }
 
 @media (max-width: 1359px) {
@@ -1537,7 +1535,6 @@
 	.contact-prefer-title h4 { width: 255px; }
 	.cnct-prefer-to-talk { height: 375px; }
 	.cnct-prefer-left p { width: 165px; }
-	.cnct-upload-button { padding: 12px 28px; }
 	.contact-prefer-title span { font-size: 22px; line-height: 22px; }
 	.cnct-form-checkbox { gap: 15px 20px; }
 	.cnct-form-left-text { margin-top: 16px; margin-bottom: 20px; }
@@ -1557,6 +1554,12 @@
 	.cnct-upload-button { margin: 30px 0; }
 	.inquiry-form-contact-fields { margin-top: 0; }
 	.faq-accordion-wrapper { margin-top: 40px; }
+
+	.serv-hero-contn { width: 450px; }
+	.serv-hero-vid { width: 460px; height: 440px; }
+	.serv-hero-subttl { margin-top: 45px; }
+
+	.serv-stat span img { width: 24px; height: 24px; }
 
 }
 
@@ -1585,6 +1588,10 @@
 	.services-how-we-work p { padding-top: 8px; }
 	.services-how-we-work .card-body h3 { margin-bottom: 15px; }
 
+
+	/* project section */
+
+	.process-section-sticky { height: calc(100vh * 12); }
 }
 
 @media (max-width: 1199px) {
@@ -2139,7 +2146,6 @@
 	.contact-form-right span input { width: max-content; }
 	.cnct-prefer-right { width: 240px; height: 240px; }
 	.cnct-prefer-right img { width: 100%; height: 100%; object-fit: contain; }
-	.cnct-upload-button { padding: 20px 30px; }
 	.contact-form-right span { margin-bottom: 24px; }
 	.cnct-project-detail textarea { margin-top: 24px; }
 
@@ -2157,6 +2163,7 @@
 	.cnct-project-detail textarea {  color: #8c8b8c; }
 
 	.cnct-form-checkbox-option label { padding: 10px 20px !important; }
+	.cnct-upload-button { padding: 10px 20px ; }
 
 	.contact-wave-animated { stroke-width: 1px; }
 
@@ -2190,6 +2197,15 @@
     	0% { transform: translate(0); }
     	100% { transform: translate(-20px, -20px); }
 	}
+
+	.serv-hero-wrapper { flex-direction: column; gap: 60px; }
+
+	.serv-hero-contn { width: 100%; }
+
+	.serv-stat { width: 180px; }
+	.serv-stat:nth-child(2) p { width: 185px; }
+	.services-hero-section { padding-top: 130px; }
+	.serv-hero-vid { width: 600px; height: 580px; }
 } 
 
 @media (max-width: 1023px) {
@@ -2388,7 +2404,6 @@
 	.cnct-prefer-right { width: 210px; height: 210px; }
 	.cnct-prefer-to-talk { height: 315px; }
 	.contact-form-right span input { width: 330px; }
-	.cnct-upload-button { padding: 16px 30px; }
 
 	.inquiry-name-tab textarea { width: 87%; }
 
@@ -2412,6 +2427,8 @@
 	.services-how-we-work-cards { height: 710px; }
 	.services-how-we-work .card-body { padding: 60px 50px 50px; }
 	.services-how-we-work-title p { width: 80%; }
+
+	.serv-hero-subttl { margin-top: 40px; }
 }
 
 @media (max-width: 991px) {
@@ -2798,7 +2815,6 @@
 	.contact-form-right span { margin-bottom: 20px; }
 	.cnct-form-checkbox { margin: 20px 0; }
 	.cnct-project-detail textarea { margin-top: 20px; }
-	.cnct-upload-button { padding: 12px 26px; }
 	.cnct-form-checkbox { gap: 15px; }
 	.cnct-prefer-right { width: 170px; height: 170px; }
 
@@ -2832,6 +2848,8 @@
 	.services-how-we-work-cards { height: 630px; }
 
 	.services-how-we-work .tab-header { width: 180px; }
+
+	.serv-hero-vid { width: 500px; height: 480px; }
 }
 
 @media (max-width: 767px) {
@@ -2995,7 +3013,6 @@
 	.cnct-prefer-left p { width: 305px; }
 	.contact-form-right span input { width: 272px; }
 	.cnct-upload-button img{ width: 28px; height: 28px; }
-	.cnct-upload-button { padding: 10px 24px; }
 
 	.contact-form-wrapper, .contact-hero-section { overflow: hidden; }
 

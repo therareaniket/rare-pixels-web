@@ -1246,7 +1246,8 @@ body.menu-open {
 
 /* .cnct-upload-file { margin-top: 8px; } */
 .cnct-upload-input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-.cnct-upload-button { padding: 20px 30px; border: 1px solid #8C8B8C; border-radius: 50px; display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; overflow: hidden; margin: 40px 0; }
+.cnct-upload-button { padding: 12px 20px; border: 1px solid #8C8B8C; border-radius: 50px; display: inline-flex; align-items: center; justify-content: space-between; gap: 14px; cursor: pointer; overflow: hidden; margin: 40px 0; }
+.cnct-upload-button img { width: 24px; height: 24px; }
 .cnct-upload-label-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cnct-upload-button:hover { border-color: #222; }
 .cnct-upload-input:focus-visible + .cnct-upload-button { outline: 2px solid #ED0180; outline-offset: 3px; }
@@ -1447,7 +1448,8 @@ body.menu-open {
 
 /* OUR-SERVICES PAGE */
 
-.serv-hero-wrapper { display: flex; align-items: center; justify-content: space-between; }
+.serv-hero-wrapper { display: flex; flex-direction: row-reverse; align-items: center; justify-content: space-between; }
+/* .serv-hero-wrapper { display: flex; align-items: center; justify-content: space-between; } */
 .serv-hero-contn { max-width: 740px; }
 .serv-hero-vid { width: 790px; height: 760px; background-color: #040E36; }
 .serv-hero-span, .serv-stat span { color: var(--primary); }
@@ -1456,6 +1458,7 @@ body.menu-open {
 .serv-hero-stats { display: flex; gap: 60px; margin-top: 40px; }
 .serv-stat { width: 200px; }
 .serv-stat span { display: flex; gap: 20px; }
+.serv-stat:nth-child(1) p { width: 156px; }
 
 .sevices-why-choose-rare-title { text-align: center; }
 
@@ -1659,9 +1662,9 @@ body.menu-open {
 
 .services-development-svg { width: 100%; height: 100%; display: block; overflow: visible; }
 .services-development-svg path {
-    fill: rgba(239, 231, 168, 0.5);
+    fill: rgba(239, 231, 168, 0.4);
     fill-opacity: 1;
-    stroke: rgba(239, 231, 168, 0.5);
+    stroke: rgba(239, 231, 168, 0.4);
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -1671,10 +1674,10 @@ body.menu-open {
 
 .services-development:hover .services-development-svg path { animation: draw-development-svg 30s ease-in-out forwards; }
 @keyframes draw-development-svg {
-    0% { fill: rgba(239, 231, 168, 0.5); fill-opacity: 0; stroke: rgba(239, 231, 168, 0.5); stroke-opacity: 1; stroke-dasharray: 1; stroke-dashoffset: 1; }
-    55% { fill: rgba(239, 231, 168, 0.5); fill-opacity: 0; stroke: rgba(239, 231, 168, 0.5); stroke-opacity: 1; stroke-dashoffset: 0; }
-    80% { fill: rgba(239, 231, 168, 0.5); fill-opacity: 1; stroke: rgba(239, 231, 168, 0.5); stroke-opacity: 1; stroke-dashoffset: 0; }
-    100% { fill: rgba(239, 231, 168, 0.5); fill-opacity: 1; stroke: rgba(239, 231, 168, 0.5); stroke-opacity: 0; stroke-dashoffset: 0; }
+    0% { fill: rgba(239, 231, 168, 0.4); fill-opacity: 0; stroke: rgba(239, 231, 168, 0.4); stroke-opacity: 1; stroke-dasharray: 1; stroke-dashoffset: 1; }
+    55% { fill: rgba(239, 231, 168, 0.4); fill-opacity: 0; stroke: rgba(239, 231, 168, 0.4); stroke-opacity: 1; stroke-dashoffset: 0; }
+    80% { fill: rgba(239, 231, 168, 0.4); fill-opacity: 1; stroke: rgba(239, 231, 168, 0.4); stroke-opacity: 1; stroke-dashoffset: 0; }
+    100% { fill: rgba(239, 231, 168, 0.4); fill-opacity: 1; stroke: rgba(239, 231, 168, 0.4); stroke-opacity: 0; stroke-dashoffset: 0; }
 }
 
 /* Services-brand-identity */
