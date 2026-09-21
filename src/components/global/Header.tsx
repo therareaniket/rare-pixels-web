@@ -122,7 +122,7 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
-                                        <div className="">
+                                        <div className="the-link-name">
                                             <p className="text-18 text-sb">Home</p>
                                             <p className="text-16 text-rg text-dark-grey">Explore ideas built for impact</p>
                                         </div>
@@ -134,9 +134,21 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>
-                                        <div className="">
+                                        <div className="the-link-name">
                                             <p className="text-18 text-sb">About</p>
                                             <p className="text-16 text-rg text-dark-grey">The thinking behind RarePixels</p>
+                                        </div>
+                                    </Link>
+                                </li>
+
+                                <li className="menu-link">
+                                    <Link href="/Services" className={pathname === "/Services" ? "active-link" : ""}>
+                                        <div className="menu-link-icon">
+                                            <span className="icon-conversion_path"></span>
+                                        </div>
+                                        <div className="the-link-name">
+                                            <p className="text-18 text-sb">Services</p>
+                                            <p className="text-16 text-rg text-dark-grey">How we turn vision into reality</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -146,21 +158,9 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-business_center"></span>
                                         </div>
-                                        <div className="">
+                                        <div className="the-link-name">
                                             <p className="text-18 text-sb">Industries</p>
                                             <p className="text-16 text-rg text-dark-grey">Experience across evolving industries</p>
-                                        </div>
-                                    </Link>
-                                </li>
-
-                                <li className="menu-link">
-                                    <Link href="/Projects" className={pathname === "/Projects" ? "active-link" : ""}>
-                                        <div className="menu-link-icon">
-                                            <span className="icon-note_stack"></span>
-                                        </div>
-                                        <div className="">
-                                            <p className="text-18 text-sb">Projects</p>
-                                            <p className="text-16 text-rg text-dark-grey">Ideas transformed into digital experiences</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -168,13 +168,13 @@ export default function Header() {
 
                             <ul className="header-menu-link-wrapper">
                                 <li className="menu-link">
-                                    <Link href="/Process" className={pathname === "/Process" ? "active-link" : ""}>
+                                    <Link href="/Projects" className={pathname === "/Projects" ? "active-link" : ""}>
                                         <div className="menu-link-icon">
-                                            <span className="icon-conversion_path"></span>
+                                            <span className="icon-note_stack"></span>
                                         </div>
-                                        <div className="">
-                                            <p className="text-18 text-sb">Process</p>
-                                            <p className="text-16 text-rg text-dark-grey">How we turn vision into reality</p>
+                                        <div className="the-link-name">
+                                            <p className="text-18 text-sb">Projects</p>
+                                            <p className="text-16 text-rg text-dark-grey">Ideas transformed into digital experiences</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -208,7 +208,7 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-support_agent"></span>
                                         </div>
-                                        <div className="">
+                                        <div className="the-link-name">
                                             <p className="text-18 text-sb">Contact</p>
                                             <p className="text-16 text-rg text-dark-grey">Let’s create something meaningful</p>
                                         </div>
@@ -224,7 +224,7 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
-                                        <div className="">
+                                        <div className="the-link-name">
                                             <p className="text-18 text-sb">Home</p>
                                             <p className="text-16 text-rg text-dark-grey">Explore ideas built for impact</p>
                                         </div>
@@ -236,9 +236,21 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>
-                                        <div className="">
+                                        <div className="the-link-name">
                                             <p className="text-18 text-sb">About</p>
                                             <p className="text-16 text-rg text-dark-grey">The thinking behind RarePixels</p>
+                                        </div>
+                                    </Link>
+                                </li>
+
+                                <li className="menu-link">
+                                    <Link href="/Services" className={pathname === "/Services" ? "active-link" : ""}>
+                                        <div className="menu-link-icon">
+                                            <span className="icon-conversion_path"></span>
+                                        </div>
+                                        <div className="the-link-name">
+                                            <p className="text-18 text-sb">Services</p>
+                                            <p className="text-16 text-rg text-dark-grey">How we turn vision into reality</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -263,18 +275,6 @@ export default function Header() {
                                         <div className="">
                                             <p className="text-18 text-sb">Projects</p>
                                             <p className="text-16 text-rg text-dark-grey">Ideas transformed into digital experiences</p>
-                                        </div>
-                                    </Link>
-                                </li>
-
-                                <li className="menu-link">
-                                    <Link href="#">
-                                        <div className="menu-link-icon">
-                                            <span className="icon-conversion_path"></span>
-                                        </div>
-                                        <div className="">
-                                            <p className="text-18 text-sb">Process</p>
-                                            <p className="text-16 text-rg text-dark-grey">How we turn vision into reality</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -308,7 +308,7 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-support_agent"></span>
                                         </div>
-                                        <div className="">
+                                        <div className="the-link-name">
                                             <p className="text-18 text-sb">Contact</p>
                                             <p className="text-16 text-rg text-dark-grey">Let’s create something meaningful</p>
                                         </div>
@@ -490,8 +490,8 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-other_houses"></span>
                                         </div>
-                                        <div className="">
-                                            <p className="text-18 text-rg">Home</p>
+                                        <div className="the-link-name">
+                                            <p className="text-18 text-md">Home</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -501,8 +501,19 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-info"></span>
                                         </div>
-                                        <div className="">
-                                            <p className="text-18 text-rg">About</p>
+                                        <div className="the-link-name">
+                                            <p className="text-18 text-md">About</p>
+                                        </div>
+                                    </Link>
+                                </li>
+
+                                <li className="menu-link">
+                                    <Link href="/Services" className={pathname === "/Services" ? "active-link" : ""}>
+                                        <div className="menu-link-icon">
+                                            <span className="icon-conversion_path"></span>
+                                        </div>
+                                        <div className="the-link-name">
+                                            <p className="text-18 text-md">Services</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -515,7 +526,7 @@ export default function Header() {
                                                     <span className="icon-service"></span>
                                                 </div>
                                                 <div className="service-mobile-title">
-                                                    <p className="text-18">Services</p>
+                                                    <p className="text-18 text-md">List of Services</p>
                                                 </div>
                                             </AccordionTrigger>
 
@@ -615,7 +626,7 @@ export default function Header() {
                                             <span className="icon-business_center"></span>
                                         </div>
                                         <div className="">
-                                            <p className="text-18 text-rg">Industries</p>
+                                            <p className="text-18 text-md">Industries</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -626,18 +637,7 @@ export default function Header() {
                                             <span className="icon-note_stack"></span>
                                         </div>
                                         <div className="">
-                                            <p className="text-18 text-rg">Projects</p>
-                                        </div>
-                                    </Link>
-                                </li>
-
-                                <li className="menu-link">
-                                    <Link href="#">
-                                        <div className="menu-link-icon">
-                                            <span className="icon-conversion_path"></span>
-                                        </div>
-                                        <div className="">
-                                            <p className="text-18 text-rg">Process</p>
+                                            <p className="text-18 text-md">Projects</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -648,7 +648,7 @@ export default function Header() {
                                             <span className="icon-crowdsource"></span>
                                         </div>
                                         <div className="">
-                                            <p className="text-18 text-rg">Life at RPD</p>
+                                            <p className="text-18 text-md">Life at RPD</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -659,7 +659,7 @@ export default function Header() {
                                             <span className="icon-newsmode"></span>
                                         </div>
                                         <div className="">
-                                            <p className="text-18 text-rg">Articles</p>
+                                            <p className="text-18 text-md">Articles</p>
                                         </div>
                                     </Link>
                                 </li>
@@ -669,8 +669,8 @@ export default function Header() {
                                         <div className="menu-link-icon">
                                             <span className="icon-support_agent"></span>
                                         </div>
-                                        <div className="">
-                                            <p className="text-18 text-rg">Contact</p>
+                                        <div className="the-link-name">
+                                            <p className="text-18 text-md">Contact</p>
                                         </div>
                                     </Link>
                                 </li>
