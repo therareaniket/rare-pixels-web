@@ -20,7 +20,7 @@ export default function InquirySectionDesktop() {
 
                         <div className="inquiry-checkbox-wrapper">
                             <div className="cnct-form-checkbox" role="group" aria-label="Project type">
-                                {['UI/UX Design', 'Web & App Development', 'Brand Identity Design', 'Social Media Management', 'AI Driven Solutions'].map((option) => {
+                                {['UI/UX Design', 'Web & App Development', 'Brand Identity Design', 'AI Driven Solutions', 'Social Media Management'].map((option) => {
                                     const optionId = `project-${option.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 
                                     return (

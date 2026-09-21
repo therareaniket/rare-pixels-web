@@ -79,7 +79,7 @@ export default function ContactFormSection() {
                                 <h5 className="text-rg h3">Hello! I’m interested in (select one or more)</h5>
 
                                 <div className="cnct-form-checkbox" role="group" aria-label="Project type">
-                                    {['Website', 'Mobile App', 'Desktop App', 'UX/UI Design', 'Visual Design'].map((option) => {
+                                    {['UI/UX Design', 'Web & App Development', 'Brand Identity Design', 'AI Driven Solutions', 'Social Media Management' ].map((option) => {
                                         const optionId = `project-${option.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 
                                         return (
