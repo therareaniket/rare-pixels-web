@@ -47,7 +47,7 @@
     h5, .h5 { font-size: 22px; line-height: 28px; margin-bottom: 0; }
     h6, .h6 { font-size: 16px; line-height: 22px; }
     .text-30 { font-size: 30px; line-height: 36px; margin-bottom: 14px; }
-    .text-18 { font-size: 18px; line-height: 26px; }
+    .text-18 { font-size: 16px; line-height: 22px; }
     .text-16{ font-size: 16px; line-height: 22px; }
     .text-14 { font-size: 14px; line-height: 20px; }
     .text-12 { font-size: 12px; line-height: 20px; }
@@ -647,10 +647,7 @@
 	.contact-wave-animated { stroke-width: 0.3px; }
 
 
-    .cnct-hero-bg-image {
-        display: block;
-    }
-
+    .cnct-hero-bg-image { display: block; }
     .cnct-hero-bg-image-for-mobile {
         position: absolute;
         left: 0;
@@ -684,6 +681,13 @@
     .services-how-we-work-6 { top: calc( 44px * 5 ); }
 
     .services-how-we-work .card-body h3 { font-size: 32px; line-height: 32px; }
+    .serv-stat:nth-child(2) p { width: 175px; }
+    .serv-stat { width: 175px; }
+    .services-hero-section { padding-top: 90px; }
+
+    .serv-hero-wrapper { gap: 30px; }
+    .serv-hero-vid { height: 300px; }
+    .serv-hero-stats { gap: 0;  }
 }
 
 @media (max-width: 439px) {
@@ -827,6 +831,10 @@
     .cnct-what-happens-tablet span { font-size: 100px; line-height: 100px; }
 
     .services-how-we-work-cards { --card-movement-distance: 280px; }
+
+    .services-hero-section { padding-top: 90px; }
+    .serv-stat span { gap: 15px; }
+
 }   
 
 @media (max-width: 400px) {
@@ -1010,8 +1018,6 @@
     .team-heading h2 { width: 90%; }
     
 
-    
-
     /* CONTACT PAGE */
 
     .contact-hero-image { width: 80%; height: max-content; }
@@ -1062,6 +1068,13 @@
     .services-how-we-work .tab-header { width: 65px; }
 
     .services-how-we-work-section { height: calc( 100vh * 6 ); }
+
+    .serv-stat:nth-child(2) p, .serv-stat { width: 155px; }
+
+    .services-hero-section { padding-top: 90px; }
+    .serv-hero-subttl { margin-top: 20px; }
+    .serv-hero-stats { justify-content: space-between; }
+    .serv-stat span img { width: 20px; height: 20px; }
 }
 
 @media (max-width: 374px) {
@@ -1087,7 +1100,7 @@
     .container { width: 100%; max-width: 100%; }  .section   { padding: 40px 0px; }
     h4, .h4 { font-size: 20px; line-height: 28px; }
     .text-20 { font-size: 14px; line-height: 22px; }
-    .text-18{ font-size: 16px; line-height: 22px; }
+    .text-18{ font-size: 14px; line-height: 20px; }
     .text-16{ font-size: 14px; line-height: 20px; }
     .text-14{ font-size: 12px; line-height: 20px; }
 
@@ -1162,6 +1175,8 @@
     .services-how-we-work-title .text-18, .services-how-we-work .tab-header .text-18, .services-how-we-work .card-body .text-18 { font-size: 14px; line-height: 20px; }
 
     .services-how-we-work-cards { height: 455px; }
+
+    .services-hero-section { padding-top: 90px; }
 }
 
 @media (max-width: 359px) {
@@ -1180,5 +1195,6 @@
     .timeline-mobile-content h3 { margin-top: 20px; }
 
     .about-hero-txt { font-size: 64px; line-height: 64px; padding-top: 0px; }
+    .services-hero-section { padding-top: 90px; }
 
 }
