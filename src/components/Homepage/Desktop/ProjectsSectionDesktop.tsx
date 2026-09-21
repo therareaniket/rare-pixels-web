@@ -128,11 +128,11 @@ export default function ProjectsSectionDesktop() {
                 </div>
 
                 <div className="project-controls" style={{ display: "flex" }}>
-                    <button onClick={handlePrev} disabled={activeIndex === 0} className="project-control-btn prev-btn" style={{ cursor: activeIndex === 0 ? "not-allowed" : "pointer", opacity: activeIndex === 0 ? 0.5 : 1 }}>
+                    <button aria-label="Previous slide" onClick={handlePrev} disabled={activeIndex === 0} className="project-control-btn prev-btn" style={{ cursor: activeIndex === 0 ? "not-allowed" : "pointer", opacity: activeIndex === 0 ? 0.5 : 1 }}>
                         <span className="icon-hero-cta-arrow"></span>
                     </button>
 
-                    <button onClick={handleNext} disabled={activeIndex === PROJECT_DATA.length - 1} className="project-control-btn next-btn" style={{ cursor: activeIndex === PROJECT_DATA.length - 1 ? "not-allowed" : "pointer", opacity: activeIndex === PROJECT_DATA.length - 1 ? 0.5 : 1 }}>
+                    <button aria-label="Next slide" onClick={handleNext} disabled={activeIndex === PROJECT_DATA.length - 1} className="project-control-btn next-btn" style={{ cursor: activeIndex === PROJECT_DATA.length - 1 ? "not-allowed" : "pointer", opacity: activeIndex === PROJECT_DATA.length - 1 ? 0.5 : 1 }}>
                         <span className="icon-hero-cta-arrow"></span>
                     </button>
                 </div>
