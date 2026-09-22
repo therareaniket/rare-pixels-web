@@ -792,6 +792,9 @@
 	.serv-hero-stats { margin-top: 30px; }
 	.serv-stat span img { width: 28px; height: 28px; }
 	.serv-stat span { align-items: center; margin-bottom: 10px; }
+
+	.services-dock { padding-bottom: 10px; padding-top: 40px; }
+	.serv-hero-wrapper { margin-bottom: 50px; }
 }
 
 @media (max-width: 1439px) {
@@ -1560,6 +1563,7 @@
 	.serv-hero-subttl { margin-top: 45px; }
 
 	.serv-stat span img { width: 24px; height: 24px; }
+	.services-dock { padding-top: 15px; gap: 25px; padding-left: 30px; }
 
 }
 
@@ -1592,6 +1596,8 @@
 	/* project section */
 
 	.process-section-sticky { height: calc(100vh * 12); }
+	.serv-hero-wrapper { margin-bottom: 20px; }
+	.serv-hero-vid { height: 420px; }
 }
 
 @media (max-width: 1199px) {
@@ -2205,7 +2211,7 @@
 	.serv-stat { width: 180px; }
 	.serv-stat:nth-child(2) p { width: 185px; }
 	.services-hero-section { padding-top: 130px; }
-	.serv-hero-vid { width: 600px; height: 580px; }
+	.serv-hero-vid { width: 100%; height: 580px; }
 } 
 
 @media (max-width: 1023px) {
@@ -3181,6 +3187,8 @@
 	.serv-hero-subttl { margin-top: 30px; }
 	.serv-stat { width: 145px; }
 	.serv-hero-vid { height: 350px; }
+
+	.services-dock { gap: 20px; }
 }
 
 @media (max-width: 575px) {

@@ -1734,6 +1734,19 @@ body.menu-open {
 .contact-hero-image { display: block; animation: contact-hero-animation 2s ease-in-out infinite alternate; }
 
 .services-hero-section { position: relative; overflow: hidden; }
+.services-strip-animation { position: absolute; left: 0; bottom: 0; width: 100%; overflow: hidden; padding-top: 50px; }
+.services-dock {
+    display: flex;
+    width: max-content;
+    min-width: 100%;
+    gap: 30px;
+    margin: 0;
+    padding: 20px 0 20px 40px;
+    white-space: nowrap;
+    cursor: default;
+}
 
-.services-strip-animation { position: absolute; bottom: 0; width: 100%; overflow: hidden; }
-.services-strip { width: max-content; animation: scroll-left 25s linear infinite; background-color: black; }
+.dock-item { position: relative; display: inline-block; flex-shrink: 0; transform-origin: 50% 120%; will-change: transform; pointer-events: none; }
+.services-strip { width: max-content; min-width: 100%; }
+.dock-star
+.dock-item { pointer-events: none; }
